@@ -1,0 +1,9 @@
+﻿.context section[role=main] > div {
+    margin-left: 120px;
+}
+
+.context section[role=main] > div > h2 {
+    margin-top: 12px; 
+    color: bisque;
+    font-weight: bold;
+}

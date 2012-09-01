@@ -1,0 +1,19 @@
+﻿.boxprops section[role=main] > div {
+    margin-left: 120px;
+    height: 600px;
+    column-width: 300px;
+    column-fill: auto;
+    overflow-x: scroll;
+}
+
+.boxprops section[role=main] > div h2 {
+    margin-top: 12px; 
+    color: bisque;
+    font-weight: bold;
+}
+
+.boxprops .box {
+    width: 120px;
+    height: 40px;
+    border: solid 1px white;
+}

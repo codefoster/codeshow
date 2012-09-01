@@ -1,0 +1,33 @@
+﻿.homepage section[role=main] {
+}
+
+    .homepage section[role=main] #list {
+        height: 100%;    
+        margin-left: 120px;
+    }
+
+    .homepage section[role=main] #list .win-groupheader h2 {
+        width: 200px;
+    }
+
+    .homepage section[role=main] .win-item .tile {
+        width: 180px;
+        height: 70px;
+        background-color: slategrey;
+        padding: 12px;
+    }
+
+        .homepage section[role=main] .win-item h3 {
+            font-size: 22px;
+        }
+@media screen and (-ms-view-state: snapped) {
+    .homepage section[role=main] {
+        margin-left: 20px;
+    }
+}
+
+@media screen and (-ms-view-state: portrait) {
+    .homepage section[role=main] {
+        margin-left: 100px;
+    }
+}

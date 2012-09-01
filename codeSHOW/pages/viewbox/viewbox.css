@@ -1,0 +1,20 @@
+﻿.viewbox .win-viewbox div {
+    width:500px;
+    padding: 30px;
+}
+
+    .viewbox .win-viewbox div img {
+        width: 60px;
+        height: 60px;
+        float:left;
+        margin:10px;
+    }
+
+@media screen and (-ms-view-state: fullscreen-landscape) {
+}
+
+@media screen and (-ms-view-state: snapped) {
+}
+
+@media screen and (-ms-view-state: fullscreen-portrait) {
+}

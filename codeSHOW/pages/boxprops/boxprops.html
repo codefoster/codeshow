@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>boxprops</title>
+
+    <!-- WinJS references -->
+    <link href="//Microsoft.WinJS.1.0/css/ui-dark.css" rel="stylesheet" />
+    <script src="//Microsoft.WinJS.1.0/js/base.js"></script>
+    <script src="//Microsoft.WinJS.1.0/js/ui.js"></script>
+    
+    <link href="boxprops.css" rel="stylesheet" />
+    <script src="boxprops.js"></script>
+</head>
+<body>
+    <div class="boxprops fragment">
+        <header aria-label="Header content" role="banner">
+            <button class="win-backbutton" aria-label="Back" disabled></button>
+            <h1 class="titlearea win-type-ellipsis">
+                <span class="pagetitle">Welcome to boxprops</span>
+            </h1>
+        </header>
+        <section aria-label="Main content" role="main">
+            <div>
+
+                <h2>Border</h2>
+                <div class="box" style="border: solid 1px white;">
+                    border: solid 1px white
+                </div>
+                <div class="box" style="border: dashed 3px white;">
+                    border: dashed 3px white
+                </div>
+                <div class="box" style="border:ridge 10px white;">
+                    ridge 10px white
+                </div>
+
+                <h2>Margin</h2>
+                <div class="box border" style="margin: 20px;">
+                    margin: 20px
+                </div>
+
+                <div class="box border" style="margin: 10px 30px 20px -10px;">
+                    margin: 10px 30px 20px -10px
+                </div>
+                
+                <h2>Padding</h2>
+                <div class="box border" style="padding: 20px 150px 5px 10px;">
+                    padding: 20px 150px 5px 10px
+                </div>
+
+            </div>
+        </section>
+    </div>
+</body>
+</html>

@@ -1,0 +1,18 @@
+﻿.cameracap section[role=main] > div {
+    margin-left: 120px;
+}
+
+.cameracap .item {
+    display: -ms-grid;
+    -ms-grid-columns: 300px 30px 340px;
+}
+
+    .cameracap .item :nth-child(1) {
+        
+    }
+
+    .cameracap .item :nth-child(2) {
+        width: 320px;
+        height: 180px;
+        -ms-grid-column: 3;
+    }

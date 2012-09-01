@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>cameracap</title>
+
+    <!-- WinJS references -->
+    <link href="//Microsoft.WinJS.1.0/css/ui-dark.css" rel="stylesheet" />
+    <script src="//Microsoft.WinJS.1.0/js/base.js"></script>
+    <script src="//Microsoft.WinJS.1.0/js/ui.js"></script>
+    
+    <link href="cameracap.css" rel="stylesheet" />
+    <script src="cameracap.js"></script>
+</head>
+<body>
+    <div class="cameracap fragment">
+        <header aria-label="Header content" role="banner">
+            <button class="win-backbutton" aria-label="Back" disabled></button>
+            <h1 class="titlearea win-type-ellipsis">
+                <span class="pagetitle">Welcome to cameracap</span>
+            </h1>
+        </header>
+        <section aria-label="Main content" role="main">
+            <div class="item still">
+                <button>Capture a still image</button>
+                <img id="capturedImage" />
+            </div>
+            <div class="item video">
+                <button>Capture a video</button>
+                <img id="capturedVideo" />
+            </div>
+        </section>
+    </div>
+</body>
+</html>

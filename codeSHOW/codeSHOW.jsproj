@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|AnyCPU">
+      <Configuration>Debug</Configuration>
+      <Platform>AnyCPU</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|ARM">
+      <Configuration>Debug</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x86">
+      <Configuration>Debug</Configuration>
+      <Platform>x86</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|AnyCPU">
+      <Configuration>Release</Configuration>
+      <Platform>AnyCPU</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|ARM">
+      <Configuration>Release</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x86">
+      <Configuration>Release</Configuration>
+      <Platform>x86</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>939b75d0-97ce-40b4-9ec7-39a56b6aee3b</ProjectGuid>
+    <SccProjectName>SAK</SccProjectName>
+    <SccProvider>SAK</SccProvider>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\$(WMSJSProjectDirectory)\Microsoft.VisualStudio.$(WMSJSProject).Default.props" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\$(WMSJSProjectDirectory)\Microsoft.VisualStudio.$(WMSJSProject).props" />
+  <PropertyGroup>
+    <TargetPlatformIdentifier>Windows</TargetPlatformIdentifier>
+    <TargetPlatformVersion>8.0</TargetPlatformVersion>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <PackageCertificateKeyFile>codeSHOW_TemporaryKey.pfx</PackageCertificateKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppxManifest Include="package.appxmanifest">
+      <SubType>Designer</SubType>
+    </AppxManifest>
+    <Content Include="css\default.css" />
+    <Content Include="images\logo.png" />
+    <Content Include="images\smalllogo.png" />
+    <Content Include="images\splashscreen.png" />
+    <Content Include="images\storelogo.png" />
+    <Content Include="images\widelogo.png" />
+    <Content Include="images\win8logo.png" />
+    <Content Include="js\data.js" />
+    <Content Include="js\default.js" />
+    <Content Include="js\navigator.js" />
+    <Content Include="js\ocho.js" />
+    <Content Include="packages.config" />
+    <Content Include="pages\arrayFcts\arrayFcts.css" />
+    <Content Include="pages\arrayFcts\arrayFcts.html" />
+    <Content Include="pages\arrayFcts\arrayFcts.js" />
+    <Content Include="pages\boxprops\boxprops.css" />
+    <Content Include="pages\boxprops\boxprops.html" />
+    <Content Include="pages\boxprops\boxprops.js" />
+    <Content Include="pages\cameracap\cameracap.css" />
+    <Content Include="pages\cameracap\cameracap.html" />
+    <Content Include="pages\cameracap\cameracap.js" />
+    <Content Include="pages\classes\classes.css" />
+    <Content Include="pages\classes\classes.html" />
+    <Content Include="pages\classes\classes.js" />
+    <Content Include="pages\context\context.css" />
+    <Content Include="pages\context\context.html" />
+    <Content Include="pages\context\context.js" />
+    <Content Include="pages\context\helloworld.html" />
+    <Content Include="pages\csscolumns\csscolumns.css" />
+    <Content Include="pages\csscolumns\csscolumns.html" />
+    <Content Include="pages\csscolumns\csscolumns.js" />
+    <Content Include="pages\custom_promise\custom_promise.css" />
+    <Content Include="pages\custom_promise\custom_promise.html" />
+    <Content Include="pages\custom_promise\custom_promise.js" />
+    <Content Include="pages\datejs\date.js" />
+    <Content Include="pages\datejs\datejs.css" />
+    <Content Include="pages\datejs\datejs.html" />
+    <Content Include="pages\datejs\datejs.js" />
+    <Content Include="pages\devices\devices.css" />
+    <Content Include="pages\devices\devices.html" />
+    <Content Include="pages\devices\devices.js" />
+    <Content Include="pages\eventHandlers\eventHandlers.css" />
+    <Content Include="pages\eventHandlers\eventHandlers.html" />
+    <Content Include="pages\eventHandlers\eventHandlers.js" />
+    <Content Include="pages\flexboxwrap\flexboxwrap.css" />
+    <Content Include="pages\flexboxwrap\flexboxwrap.html" />
+    <Content Include="pages\flexboxwrap\flexboxwrap.js" />
+    <Content Include="pages\flexbox\flexbox.css" />
+    <Content Include="pages\flexbox\flexbox.html" />
+    <Content Include="pages\flexbox\flexbox.js" />
+    <Content Include="pages\grid\grid.css" />
+    <Content Include="pages\grid\grid.html" />
+    <Content Include="pages\grid\grid.js" />
+    <Content Include="pages\home\home.css" />
+    <Content Include="pages\home\home.html" />
+    <Content Include="pages\home\home.js" />
+    <Content Include="default.html" />
+    <Content Include="pages\html5audio\html5audio.css" />
+    <Content Include="pages\html5audio\html5audio.html" />
+    <Content Include="pages\html5audio\html5audio.js" />
+    <Content Include="pages\html5audio\kickdrumheart.mp3" />
+    <Content Include="pages\html5video\butterfly.mp4" />
+    <Content Include="pages\html5video\html5video.css" />
+    <Content Include="pages\html5video\html5video.html" />
+    <Content Include="pages\html5video\html5video.js" />
+    <Content Include="pages\jsonFcts\jsonFcts.css" />
+    <Content Include="pages\jsonFcts\jsonFcts.html" />
+    <Content Include="pages\jsonFcts\jsonFcts.js" />
+    <Content Include="pages\local\local.css" />
+    <Content Include="pages\local\local.html" />
+    <Content Include="pages\local\local.js" />
+    <Content Include="pages\mediaqueries\mediaqueries.css" />
+    <Content Include="pages\mediaqueries\mediaqueries.html" />
+    <Content Include="pages\mediaqueries\mediaqueries.js" />
+    <Content Include="pages\netflix10\netflix10.css" />
+    <Content Include="pages\netflix10\netflix10.html" />
+    <Content Include="pages\netflix10\netflix10.js" />
+    <Content Include="pages\netflixTrickle\netflixTrickle.css" />
+    <Content Include="pages\netflixTrickle\netflixTrickle.html" />
+    <Content Include="pages\netflixTrickle\netflixTrickle.js" />
+    <Content Include="pages\netflix\netflix.css" />
+    <Content Include="pages\netflix\netflix.html" />
+    <Content Include="pages\netflix\netflix.js" />
+    <Content Include="pages\properties\properties.css" />
+    <Content Include="pages\properties\properties.html" />
+    <Content Include="pages\properties\properties.js" />
+    <Content Include="pages\semanticzoom\semanticzoom.css" />
+    <Content Include="pages\semanticzoom\semanticzoom.html" />
+    <Content Include="pages\semanticzoom\semanticzoom.js" />
+    <Content Include="pages\share_simple\share_simple.css" />
+    <Content Include="pages\share_simple\share_simple.html" />
+    <Content Include="pages\share_simple\share_simple.js" />
+    <Content Include="pages\simple\simple.css" />
+    <Content Include="pages\simple\simple.html" />
+    <Content Include="pages\simple\simple.js" />
+    <Content Include="pages\snappoints\snappoints.css" />
+    <Content Include="pages\snappoints\snappoints.html" />
+    <Content Include="pages\snappoints\snappoints.js" />
+    <Content Include="pages\template\template.css" />
+    <Content Include="pages\template\template.html" />
+    <Content Include="pages\template\template.js" />
+    <Content Include="pages\textprops\textprops.css" />
+    <Content Include="pages\textprops\textprops.html" />
+    <Content Include="pages\textprops\textprops.js" />
+    <Content Include="pages\viewbox\viewbox.css" />
+    <Content Include="pages\viewbox\viewbox.html" />
+    <Content Include="pages\viewbox\viewbox.js" />
+    <Content Include="Scripts\datajs-1.0.3.js" />
+    <Content Include="Scripts\datajs-1.0.3.min.js" />
+    <None Include="codeSHOW_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <SDKReference Include="Microsoft.WinJS.1.0, Version=1.0" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\$(WMSJSProjectDirectory)\Microsoft.VisualStudio.$(WMSJSProject).targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

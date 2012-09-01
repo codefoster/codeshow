@@ -1,0 +1,9 @@
+﻿.local #list {
+    margin-left: 120px;
+    height: 100%;
+}
+
+.local #list .img {
+    width: 280px;
+    height: 210px;
+}
