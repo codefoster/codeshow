@@ -1,0 +1,17 @@
+﻿.templateItems section[role=main] > * {
+    margin-left: 120px;
+}
+
+.templateItems section[role=main] > div {
+    display: -ms-flexbox;
+    border: 1px solid white;
+    -ms-flex-wrap: wrap;
+}
+
+.templateItems section[role=main] > div > div {
+    width:110px;
+    height:110px;
+    background: gray;
+    margin:10px;
+    padding: 10px;
+}
