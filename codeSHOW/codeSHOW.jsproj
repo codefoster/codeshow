@@ -152,6 +152,9 @@
     <Content Include="pages\snappoints\snappoints.css" />
     <Content Include="pages\snappoints\snappoints.html" />
     <Content Include="pages\snappoints\snappoints.js" />
+    <Content Include="pages\templateItems\templateItems.css" />
+    <Content Include="pages\templateItems\templateItems.html" />
+    <Content Include="pages\templateItems\templateItems.js" />
     <Content Include="pages\template\template.css" />
     <Content Include="pages\template\template.html" />
     <Content Include="pages\template\template.js" />

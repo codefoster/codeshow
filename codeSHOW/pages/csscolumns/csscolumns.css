@@ -4,13 +4,9 @@
 
 
 .csscolumns .columns {
-    column-count: 2;
-    
+    columns: 400px;
     overflow-x: scroll;
     height: 600px;
+    padding: 20px;
 }
 
-.csscolumns .doublewide {
-    column-span: 2;
-    border: solid 1px lightgray;
-}

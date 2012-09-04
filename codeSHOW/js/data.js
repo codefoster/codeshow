@@ -9,7 +9,6 @@
         { key: "viewbox", name: "Viewbox", group: "HTML", tags: "html, layout", difficulty: 0 },
         { key: "semanticzoom", name: "Semantic Zoom", group: "HTML", tags: "html, data", difficulty: 0 },
 
-
         //CSS
         { key: "textprops", name: "Text and Font Properties", group: "CSS", tags: "css", difficulty: 0 },
         { key: "boxprops", name: "Box Properties", group: "CSS", tags: "css", difficulty: 0 },
@@ -36,7 +35,8 @@
         { key: "template", name: "Templates", group: "JavaScript", tags: "javascript", difficulty: 0 },
         { key: "share_simple", name: "Sharing text data", group: "JavaScript", tags: "javascript, sharing", difficulty: 0 },
         { key: "devices", name: "Devices", group: "JavaScript", tags: "javascript", difficulty: 0 },
-        { key: "cameracap", name: "Camera Capture", group: "JavaScript", tags: "javascript, camera", difficulty: 0 }
+        { key: "cameracap", name: "Camera Capture", group: "JavaScript", tags: "javascript, camera", difficulty: 0 },
+        { key: "templateItems", name: "Adding Template Items", group: "JavaScript", tags: "html, flexbox, template", difficulty: 6 }
     ];
 
     //TODO: use colors like a heat map indicating how advanced (difficult) the sample is (green=easy, red=hard)
