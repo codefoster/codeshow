@@ -16,70 +16,6 @@ TODO:
 
 (function () {
 
-    WinJS.Namespace.define("Ocho.Array", {
-        
-    });
-    
-    WinJS.Namespace.define("Ocho.AppBar", {
-        defineAppBarButtons: function (appbar, buttons, options) {
-            //TODO: pass appbar in as an option
-            //TODO: pass the buttons in as an options too
-            //TODO: if the appbar is not passed in, then look for a div with the id of 'appbar' and use it, if that's not found then create one
-            //TODO: default some of these properties (like extraClass and tooltip)
-            
-            if (!options) {
-                options = {};
-                options.clearFirst = true;
-            }
-
-            if (options.clearFirst) {
-                var eb = q("button", appbar, { forceArray: true });
-                if (eb) eb.forEach(function (button) { appbar.removeChild(button); });
-            }
-
-            if (buttons.length > 0) {
-                var b, ab;
-                buttons.forEach(function (i) {
-                    if (!i.options) i.options = {};
-
-                    b = document.createElement("button");
-                    b.onclick = i.click;
-                    if (i.options.onSelectionOf) {
-                        i.options.onSelectionOf.winControl.onselectionchanged = function (args) {
-                            b.style.display = i.options.onSelectionOf.winControl.selection.count() > 0 ? "block" : "none";
-                        };
-                        i.options.onSelectionOf.winControl.onselectionchanged();
-                    }
-                    ab = new WinJS.UI.AppBarCommand(b, {
-                        id: i.id,
-                        label: i.label,
-                        icon: i.icon,
-                        section: i.section,
-                        extraClass: i.extraClass ? i.extraClass : null,
-                        tooltip: i.tooltip ? i.tooltip : null
-                    });
-                    appbar.appendChild(b);
-                });
-            }
-        },
-    });
-
-    WinJS.Namespace.define("Ocho.Navigation", {
-        go: function (page, context) {
-            WinJS.Navigation.navigate("/pages/" + page + "/" + page + ".html", context);
-        },
-    });
-
-    WinJS.Namespace.define("Ocho.Logging", {
-        clearLog: function() { document.querySelector("div#log").innerHTML = ""; },
-        log: function (msg) {
-            msg = msg != undefined ? msg : "";
-            //TODO: if a div#log does not exist then create one and put it at the end of the body
-            //TODO: allow a selector to specify what element(s) will be logged to but default to div#log
-            document.querySelector("div#log").innerHTML += msg + "<br/>";
-        },
-    });
-    
     WinJS.Namespace.define("Ocho.Utilities", {
         createGuid: function () {
             return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
@@ -116,6 +52,108 @@ TODO:
         }
 
     });
+
+    WinJS.Namespace.define("Ocho.Array", {
+        
+    });
+    
+    var q = Ocho.Utilities.query; //make this available to the rest of the library
+
+    WinJS.Namespace.define("Ocho.AppBar", {
+        defineAppBarButtons: function (options) {
+            options = options || {};
+            options.clearFirst = options.clearFirst || true;
+            options.buttons = options.buttons || [];
+
+            // create an appbar if the caller didn't reference one
+            if (!options.appbar) {
+                var existingAppBar = q("#appbar");
+                if (existingAppBar)
+                    options.appbar = existingAppBar;
+                else {
+                    var divAppBar = document.createElement("div")
+                    divAppBar.id = "appbar";
+                    q("body").appendChild(divAppBar);
+                    options.appbar = new WinJS.UI.AppBar(q("body #appbar"));
+                }
+            }
+
+            //clearFirst will clear the appbar and recreate (defaults to true)
+            if (options.clearFirst) {
+                var eb = q("button", appbar, { forceArray: true });
+                if (eb) eb.forEach(function (button) { appbar.removeChild(button); });
+            }
+
+            //programmatically add buttons to the appbar
+            var ab;
+            options.buttons.forEach(function (i, index) {
+                i.options = i.options || {};
+                i.id = i.id || "button" + index;
+                i.label = i.label || "button" + index;
+                i.section = i.section || "global";
+                i.extraClass = i.extraClass || '';
+                i.tooltip = i.tooltip || i.label;
+                i.icon = i.icon || 'cancel';
+
+                var b = document.createElement("button");
+                if (i.click)
+                    b.onclick = i.click;
+                else if(i.flyout) {
+                    b.onclick = function () {
+                        //flyout.element.winControl.show(b);
+                        //flyout.script.call();
+                        //TODO: finish implementing this... accept a flyout in the form of...
+                        //  flyout: { element: q("#whatever"), script: function() { //what to do to set up the flyout }}
+                    };
+                }
+
+                //onSelectionOf can be passed in with the dom element of a listview (or any other control with a numeric
+                //'selection' property and the button will only be visible when that control has a selection
+                if (i.options.onSelectionOf) {
+                    i.options.onSelectionOf.winControl.addEventListener("selectionchanged", function (args) {
+                        if (i.options.onSelectionOf.winControl.selection.count() > 0) {
+                            b.style.display = "block";
+                            appbar.winControl.sticky = true;
+                            appbar.winControl.show();
+                        }
+                        else 
+                            b.style.display = "none";
+                    });
+                    //i.options.onSelectionOf.winControl.selectionchanged();
+                }
+
+                //TODO: consider add a visibleIf option that would encapsulate the onSelectionOf but also allow
+                //any visibility logic by accepting a function that evaluates to true/false
+
+                ab = new WinJS.UI.AppBarCommand(b, {
+                    id: i.id,
+                    label: i.label,
+                    icon: i.icon,
+                    section: i.section,
+                    extraClass: i.extraClass,
+                    tooltip: i.tooltip
+                });
+                appbar.appendChild(b);
+            });
+        },
+    });
+
+    WinJS.Namespace.define("Ocho.Navigation", {
+        go: function (page, context) {
+            WinJS.Navigation.navigate("/pages/" + page + "/" + page + ".html", context);
+        },
+    });
+
+    WinJS.Namespace.define("Ocho.Logging", {
+        clearLog: function() { document.querySelector("div#log").innerHTML = ""; },
+        log: function (msg) {
+            msg = msg != undefined ? msg : "";
+            //TODO: if a div#log does not exist then create one and put it at the end of the body
+            //TODO: allow a selector to specify what element(s) will be logged to but default to div#log
+            document.querySelector("div#log").innerHTML += msg + "<br/>";
+        },
+    });
+    
 })();
 
 //TODO: create a function that will run this and make it take effect
