@@ -81,6 +81,9 @@
     <Content Include="pages\cameracap\cameracap.css" />
     <Content Include="pages\cameracap\cameracap.html" />
     <Content Include="pages\cameracap\cameracap.js" />
+    <Content Include="pages\canvasball\canvasball.css" />
+    <Content Include="pages\canvasball\canvasball.html" />
+    <Content Include="pages\canvasball\canvasball.js" />
     <Content Include="pages\classes\classes.css" />
     <Content Include="pages\classes\classes.html" />
     <Content Include="pages\classes\classes.js" />

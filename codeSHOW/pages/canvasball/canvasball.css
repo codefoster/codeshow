@@ -1,0 +1,7 @@
+﻿.canvasball section[role=main] > * {
+    margin-left: 120px;
+}
+
+.canvasball #canvas {
+    border: 1px solid white;
+}
