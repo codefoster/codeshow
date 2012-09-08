@@ -48,6 +48,8 @@
             log();
             var sum = a.reduce(function (previous, current) { return previous + current; });
             log(format("reduce (previous + current): {0}", sum));
+
+            //TODO: add 'sort' function
         }
     });
 

@@ -37,7 +37,11 @@
         app.sessionState.history = nav.history;
     };
 
+    app.onready = function(e) {
+    };
+
     app.start();
 })();
 
+var demos = [];
 var q = Ocho.Utilities.query;

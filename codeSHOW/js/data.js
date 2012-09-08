@@ -36,7 +36,12 @@
         { key: "share_simple", name: "Sharing text data", group: "JavaScript", tags: "javascript, sharing", difficulty: 0 },
         { key: "devices", name: "Devices", group: "JavaScript", tags: "javascript", difficulty: 0 },
         { key: "cameracap", name: "Camera Capture", group: "JavaScript", tags: "javascript, camera", difficulty: 0 },
-        { key: "templateItems", name: "Adding Template Items", group: "JavaScript", tags: "html, flexbox, template", difficulty: 6 }
+        { key: "templateItems", name: "Adding Template Items", group: "JavaScript", tags: "html, flexbox, template", difficulty: 6 },
+        { key: "templateItems2", name: "Adding Template Items 2", group: "JavaScript", tags: "html, flexbox, template", difficulty: 6 },
+        
+        //Other
+        { key: "basicad", name: "Basic Ad", group: "Other", tags: "html, javascript, ads", difficulty: 0 },
+        { key: "adtypes", name: "Ad Types", group: "Other", tags: "html, javascript, ads", difficulty: 0 }
     ];
 
     //TODO: use colors like a heat map indicating how advanced (difficult) the sample is (green=easy, red=hard)

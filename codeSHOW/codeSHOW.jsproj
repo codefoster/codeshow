@@ -66,9 +66,15 @@
     <Content Include="js\navigator.js" />
     <Content Include="js\ocho.js" />
     <Content Include="packages.config" />
+    <Content Include="pages\adtypes\adtypes.css" />
+    <Content Include="pages\adtypes\adtypes.html" />
+    <Content Include="pages\adtypes\adtypes.js" />
     <Content Include="pages\arrayFcts\arrayFcts.css" />
     <Content Include="pages\arrayFcts\arrayFcts.html" />
     <Content Include="pages\arrayFcts\arrayFcts.js" />
+    <Content Include="pages\basicad\basicad.css" />
+    <Content Include="pages\basicad\basicad.html" />
+    <Content Include="pages\basicad\basicad.js" />
     <Content Include="pages\boxprops\boxprops.css" />
     <Content Include="pages\boxprops\boxprops.html" />
     <Content Include="pages\boxprops\boxprops.js" />
@@ -152,6 +158,9 @@
     <Content Include="pages\snappoints\snappoints.css" />
     <Content Include="pages\snappoints\snappoints.html" />
     <Content Include="pages\snappoints\snappoints.js" />
+    <Content Include="pages\templateItems2\templateItems2.css" />
+    <Content Include="pages\templateItems2\templateItems2.html" />
+    <Content Include="pages\templateItems2\templateItems2.js" />
     <Content Include="pages\templateItems\templateItems.css" />
     <Content Include="pages\templateItems\templateItems.html" />
     <Content Include="pages\templateItems\templateItems.js" />
@@ -169,7 +178,9 @@
     <None Include="codeSHOW_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
+    <SDKReference Include="LiveSDKHTML, Version=5.0" />
     <SDKReference Include="Microsoft.WinJS.1.0, Version=1.0" />
+    <SDKReference Include="MSAdvertisingJS, Version=6.1" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\$(WMSJSProjectDirectory)\Microsoft.VisualStudio.$(WMSJSProject).targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

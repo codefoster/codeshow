@@ -1,0 +1,13 @@
+﻿.adtypes section[role=main] > * {
+    margin-left: 120px;
+}
+
+.adtypes #list {
+    display:-ms-flexbox;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+
+.adtypes #list > div {
+    margin: 10px;
+}
