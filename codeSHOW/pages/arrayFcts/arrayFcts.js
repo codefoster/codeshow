@@ -49,8 +49,16 @@
             var sum = a.reduce(function (previous, current) { return previous + current; });
             log(format("reduce (previous + current): {0}", sum));
 
-            //TODO: add 'sort' function
+            //sort
+            log();
+            log("a reversed");
+            var aReversed = a.reverse();
+            log(aReversed);
+            log("sort");
+            var sorted = aReversed.sort();
+            log(sorted.join(","));
         }
+
     });
 
 })();
