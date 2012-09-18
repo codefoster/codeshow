@@ -1,0 +1,44 @@
+﻿.swipeSections section[role=main] {
+    margin-left: 120px;
+}
+
+.swipeSections section[role=main] {
+    display: -ms-flexbox;
+    -ms-scroll-snap-x: mandatory snapInterval(0, 100%);
+    overflow-x: scroll;
+}
+
+.swipeSections section.swiper {
+    width:100%;
+}
+
+.swipeSections #sectionOne > div {
+    display: -ms-grid;
+    -ms-grid-rows: 2fr 6fr 2fr;
+    -ms-grid-columns: 1fr 5fr 4fr;
+    height: calc(100% - 60px);
+    width: calc(100% - 130px);
+}
+    .swipeSections #sectionOne > div > div {
+        border: 1px solid white;
+        margin: 5px;
+    }
+
+    .swipeSections #sectionOne > div > div:nth-of-type(1) {
+        -ms-grid-column-span: 2;        
+    }
+    .swipeSections #sectionOne > div > div:nth-of-type(2) {
+        -ms-grid-column: 3;
+        -ms-grid-row-span: 2;
+    }
+    .swipeSections #sectionOne > div > div:nth-of-type(3) {
+        -ms-grid-row: 2;
+    }
+    .swipeSections #sectionOne > div > div:nth-of-type(4) {
+        -ms-grid-row: 2;
+        -ms-grid-column: 2;
+    }
+    .swipeSections #sectionOne > div > div:nth-of-type(5) {
+        -ms-grid-row: 3;
+        -ms-grid-column-span: 3;
+    }
