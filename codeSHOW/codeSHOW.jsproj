@@ -104,6 +104,9 @@
     <Content Include="pages\devices\devices.css" />
     <Content Include="pages\devices\devices.html" />
     <Content Include="pages\devices\devices.js" />
+    <Content Include="pages\errors\errors.css" />
+    <Content Include="pages\errors\errors.html" />
+    <Content Include="pages\errors\errors.js" />
     <Content Include="pages\eventHandlers\eventHandlers.css" />
     <Content Include="pages\eventHandlers\eventHandlers.html" />
     <Content Include="pages\eventHandlers\eventHandlers.js" />
