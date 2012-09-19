@@ -12,7 +12,6 @@
             for (var i = 65; i <= 90; i++) letters.push(String.fromCharCode(i));
 
             letters.forEach(function (l) {
-
                 var e = document.createElement("div");
                 var template = document.querySelector("#template").winControl;
                 template.render({ name: l }, e).then(function (item) {
