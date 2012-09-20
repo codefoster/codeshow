@@ -54,7 +54,18 @@ TODO:
     });
 
     WinJS.Namespace.define("Ocho.Array", {
-        
+        contains: function (elem) {
+            for (var i = 0, length = this.length; i < length; i++)
+                if (this[i] === elem) return true;
+            return false;
+        }
+
+    });
+
+    WinJS.Namespace.define("Ocho.String", {
+        startsWith: function(str) { return (this.match("^" + str) == str); },
+        endsWith: function(str) { return (this.match(str + "$") == str); },
+        trim: function() { return (this.replace(/^[\s\xA0]+/, "").replace(/[\s\xA0]+$/, "")); }
     });
     
     var q = Ocho.Utilities.query; //make this available to the rest of the library
