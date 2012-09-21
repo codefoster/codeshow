@@ -72,6 +72,9 @@
     <Content Include="pages\adtypes\adtypes.css" />
     <Content Include="pages\adtypes\adtypes.html" />
     <Content Include="pages\adtypes\adtypes.js" />
+    <Content Include="pages\appbar\appbar.css" />
+    <Content Include="pages\appbar\appbar.html" />
+    <Content Include="pages\appbar\appbar.js" />
     <Content Include="pages\arrayFcts\arrayFcts.css" />
     <Content Include="pages\arrayFcts\arrayFcts.html" />
     <Content Include="pages\arrayFcts\arrayFcts.js" />

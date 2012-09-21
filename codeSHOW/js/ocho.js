@@ -85,24 +85,34 @@ TODO:
 
     var q = Ocho.Utilities.query; //make this available to the rest of the library
 
+    // Application bar
+    function make() {
+        var result;
+        var existingAppBar = q("#appbar");
+        if (existingAppBar)
+            result = existingAppBar;
+        else {
+            var divAppBar = document.createElement("div");
+            divAppBar.id = "appbar";
+            q("body").appendChild(divAppBar);
+            var appBar = new WinJS.UI.AppBar(q("body #appbar"));
+            result = q("body #appbar");
+        }
+        return result;
+    }
+    
+    
     WinJS.Namespace.define("Ocho.AppBar", {
-        defineAppBarButtons: function (options) {
+        set: function (options) {
+            
+            //TODO: put sample method call here
+
             options = options || {};
             options.clearFirst = options.clearFirst || true;
             options.buttons = options.buttons || [];
 
             // create an appbar if the caller didn't reference one
-            if (!options.appbar) {
-                var existingAppBar = q("#appbar");
-                if (existingAppBar)
-                    options.appbar = existingAppBar;
-                else {
-                    var divAppBar = document.createElement("div")
-                    divAppBar.id = "appbar";
-                    q("body").appendChild(divAppBar);
-                    options.appbar = new WinJS.UI.AppBar(q("body #appbar"));
-                }
-            }
+            var appbar = (options.appbar ? options.appbar : make());
 
             //clearFirst will clear the appbar and recreate (defaults to true)
             if (options.clearFirst) {
@@ -161,6 +171,9 @@ TODO:
                 });
                 appbar.appendChild(b);
             });
+            
+            //disable the appbar if it has no buttons
+            appbar.disabled = (options.buttons.length == 0);
         },
     });
 
