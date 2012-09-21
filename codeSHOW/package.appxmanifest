@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/2010/manifest">
-  <Identity Name="939b75d0-97ce-40b4-9ec7-39b56b6aee3b" Version="1.0.0.0" Publisher="CN=Jeremy" />
+  <Identity Name="36805codefoster.codeSHOW" Version="1.0.0.0" Publisher="CN=603A18C8-7F37-48CF-B16C-FED79B9AEA66" />
   <Properties>
     <DisplayName>codeSHOW</DisplayName>
-    <PublisherDisplayName>Jeremy</PublisherDisplayName>
+    <PublisherDisplayName>codefoster</PublisherDisplayName>
     <Logo>images\storelogo.png</Logo>
   </Properties>
   <Prerequisites>
@@ -34,6 +34,7 @@
             </SupportedFileTypes>
           </FileSavePicker>
         </Extension>
+        <Extension Category="windows.search" />
       </Extensions>
     </Application>
   </Applications>

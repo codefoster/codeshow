@@ -48,12 +48,14 @@
     <TargetPlatformIdentifier>Windows</TargetPlatformIdentifier>
     <TargetPlatformVersion>8.0</TargetPlatformVersion>
     <DefaultLanguage>en-US</DefaultLanguage>
-    <PackageCertificateKeyFile>codeSHOW_TemporaryKey.pfx</PackageCertificateKeyFile>
+    <PackageCertificateKeyFile>codeSHOW_StoreKey.pfx</PackageCertificateKeyFile>
+    <PackageCertificateThumbprint>9EA50C041309030C2072092E879B4C243E44971F</PackageCertificateThumbprint>
   </PropertyGroup>
   <ItemGroup>
     <AppxManifest Include="package.appxmanifest">
       <SubType>Designer</SubType>
     </AppxManifest>
+    <None Include="codeSHOW_StoreKey.pfx" />
     <Content Include="css\default.css" />
     <Content Include="images\logo.png" />
     <Content Include="images\smalllogo.png" />
@@ -65,6 +67,7 @@
     <Content Include="js\default.js" />
     <Content Include="js\navigator.js" />
     <Content Include="js\ocho.js" />
+    <None Include="Package.StoreAssociation.xml" />
     <Content Include="packages.config" />
     <Content Include="pages\adtypes\adtypes.css" />
     <Content Include="pages\adtypes\adtypes.html" />
@@ -72,6 +75,9 @@
     <Content Include="pages\arrayFcts\arrayFcts.css" />
     <Content Include="pages\arrayFcts\arrayFcts.html" />
     <Content Include="pages\arrayFcts\arrayFcts.js" />
+    <Content Include="pages\authentication\authentication.css" />
+    <Content Include="pages\authentication\authentication.html" />
+    <Content Include="pages\authentication\authentication.js" />
     <Content Include="pages\basicad\basicad.css" />
     <Content Include="pages\basicad\basicad.html" />
     <Content Include="pages\basicad\basicad.js" />
@@ -165,6 +171,9 @@
     <Content Include="pages\properties\properties.css" />
     <Content Include="pages\properties\properties.html" />
     <Content Include="pages\properties\properties.js" />
+    <Content Include="pages\pushscroll\pushscroll.css" />
+    <Content Include="pages\pushscroll\pushscroll.html" />
+    <Content Include="pages\pushscroll\pushscroll.js" />
     <Content Include="pages\semanticzoom\semanticzoom.css" />
     <Content Include="pages\semanticzoom\semanticzoom.html" />
     <Content Include="pages\semanticzoom\semanticzoom.js" />
@@ -183,9 +192,6 @@
     <Content Include="pages\swipeSections\swipeSections.css" />
     <Content Include="pages\swipeSections\swipeSections.html" />
     <Content Include="pages\swipeSections\swipeSections.js" />
-    <Content Include="pages\templateItems2\templateItems2.css" />
-    <Content Include="pages\templateItems2\templateItems2.html" />
-    <Content Include="pages\templateItems2\templateItems2.js" />
     <Content Include="pages\templateItems\templateItems.css" />
     <Content Include="pages\templateItems\templateItems.html" />
     <Content Include="pages\templateItems\templateItems.js" />
@@ -198,6 +204,9 @@
     <Content Include="pages\viewbox\viewbox.css" />
     <Content Include="pages\viewbox\viewbox.html" />
     <Content Include="pages\viewbox\viewbox.js" />
+    <Content Include="pages\xhr\xhr.css" />
+    <Content Include="pages\xhr\xhr.html" />
+    <Content Include="pages\xhr\xhr.js" />
     <Content Include="Scripts\datajs-1.0.3.js" />
     <Content Include="Scripts\datajs-1.0.3.min.js" />
     <None Include="codeSHOW_TemporaryKey.pfx" />

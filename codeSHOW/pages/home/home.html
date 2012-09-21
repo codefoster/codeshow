@@ -25,14 +25,15 @@
         <section aria-label="Main content" role="main">
             <div id="list" data-win-control="WinJS.UI.ListView"></div>
         </section>
-    </div>
-    
-    <!--Templates-->
-    <div id="itemTemplate" data-win-control="WinJS.Binding.Template">
-        <div class="tile" data-win-bind="onclick:click;style.backgroundColor:tileColor;">
-            <h3 data-win-bind="innerText:name;"></h3>
+
+        <!--Templates-->
+        <div id="itemTemplate" data-win-control="WinJS.Binding.Template">
+            <div class="tile" data-win-bind="onclick:click;style.backgroundColor:tileColor;">
+                <h3 data-win-bind="innerText:name;"></h3>
+            </div>
         </div>
     </div>
+    
     
     <div id="headerTemplate" data-win-control="WinJS.Binding.Template">
         <h2 data-win-bind="onclick:click;innerText:this"></h2>

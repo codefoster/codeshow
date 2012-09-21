@@ -12,6 +12,8 @@ TODO:
  - when setting up a ListView I should be able to set the itemtemplate and header template referencing
    an html fragment instead of a template on the page. The html fragment shouldn't need the Binding.Template
    wrapping it either, just html.
+ - create a function that will run this and make it take effect
+   like - Ocho.applyExtensions(["array_all", "array_remove", string_format])
 */
 
 (function () {
@@ -40,14 +42,14 @@ TODO:
                 return typeof args[number] != 'undefined' ? args[number] : match;
             });
         },
-        
+
         mix: function () {
             //TODO: test this... I just modified it from http://stackoverflow.com/questions/11197247/javascript-equivalent-of-jquerys-extend-method
             var result = {};
-            for(var i = 0; i < arguments.length; i++)
-            for(var key in arguments[i])
-                if(arguments[i].hasOwnProperty(key))
-                    result[key] = arguments[i][key];
+            for (var i = 0; i < arguments.length; i++)
+                for (var key in arguments[i])
+                    if (arguments[i].hasOwnProperty(key))
+                        result[key] = arguments[i][key];
             return result;
         }
 
@@ -58,16 +60,29 @@ TODO:
             for (var i = 0, length = this.length; i < length; i++)
                 if (this[i] === elem) return true;
             return false;
+        },
+        distinct: function (keyFct) {
+            var result = [];
+            if (!keyFct) keyFct = function (d) { return d; };
+            for (var i = 1; i < this.length; i++) {
+                var that = this;
+                if (!result.some(function (item) { return keyFct(item) === keyFct(that[i]); }))
+                    result.push(that[i]);
+            }
+            return result;
+        },
+        remove: function (id) {
+            for (var i = 0; i < this.length; i++)
+                if (this[i].id === id) return this.splice(i, 1);
         }
-
     });
 
     WinJS.Namespace.define("Ocho.String", {
-        startsWith: function(str) { return (this.match("^" + str) == str); },
-        endsWith: function(str) { return (this.match(str + "$") == str); },
-        trim: function() { return (this.replace(/^[\s\xA0]+/, "").replace(/[\s\xA0]+$/, "")); }
+        startsWith: function (str) { return (this.match("^" + str) == str); },
+        endsWith: function (str) { return (this.match(str + "$") == str); },
+        trim: function () { return (this.replace(/^[\s\xA0]+/, "").replace(/[\s\xA0]+$/, "")); }
     });
-    
+
     var q = Ocho.Utilities.query; //make this available to the rest of the library
 
     WinJS.Namespace.define("Ocho.AppBar", {
@@ -109,7 +124,7 @@ TODO:
                 var b = document.createElement("button");
                 if (i.click)
                     b.onclick = i.click;
-                else if(i.flyout) {
+                else if (i.flyout) {
                     b.onclick = function () {
                         //flyout.element.winControl.show(b);
                         //flyout.script.call();
@@ -127,7 +142,7 @@ TODO:
                             appbar.winControl.sticky = true;
                             appbar.winControl.show();
                         }
-                        else 
+                        else
                             b.style.display = "none";
                     });
                     //i.options.onSelectionOf.winControl.selectionchanged();
@@ -156,7 +171,7 @@ TODO:
     });
 
     WinJS.Namespace.define("Ocho.Logging", {
-        clearLog: function() { document.querySelector("div#log").innerHTML = ""; },
+        clearLog: function () { document.querySelector("div#log").innerHTML = ""; },
         log: function (msg) {
             msg = msg != undefined ? msg : "";
             //TODO: if a div#log does not exist then create one and put it at the end of the body
@@ -164,24 +179,22 @@ TODO:
             document.querySelector("div#log").innerHTML += msg + "<br/>";
         },
     });
-    
+
+    WinJS.Namespace.define("Ocho.Misc", {
+        //TODO: consider making this an extension method on the ListView control
+        //BUG: the pushscroll does not work well on the left side of the screen. i suspect because the last pixel does not belong to the "window" object and so is not being captured
+        addPushScroll: function (listview) {
+            var timer = null;
+            window.onmousemove = function (ev) {
+                if (listview.lastScreenX) {
+                    if (ev.screenX >= listview.lastScreenX && ev.screenX >= ev.view.innerWidth - 3)
+                        listview.winControl.scrollPosition += 30;
+                    else if (ev.screenX <= listview.lastScreenX && ev.screenX < 3)
+                        listview.winControl.scrollPosition -= 30;
+                }
+                listview.lastScreenX = ev.screenX;
+
+            };
+        }
+    });
 })();
-
-//TODO: create a function that will run this and make it take effect
-//  like - Ocho.applyExtensions(["array_all", "array_remove", string_format])
-
-Array.prototype.distinct = function (keyFct) {
-    var result = [];
-    if (!keyFct) keyFct = function(d) { return d; };
-    for (var i = 1; i < this.length; i++) {
-        var that = this;
-        if (!result.some(function (item) { return keyFct(item) === keyFct(that[i]); }))
-            result.push(that[i]);
-    }
-    return result;
-};
-
-Array.prototype.remove = function (id) {
-    for (var i = 0; i < this.length; i++)
-        if (this[i].id === id) return this.splice(i, 1);
-};

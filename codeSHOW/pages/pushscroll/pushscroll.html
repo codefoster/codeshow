@@ -2,28 +2,33 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <title>Errors</title>
-    <meta name="keywords" content="error errors handle handling" />
+    <title>Push Scroll</title>
+    <meta name="keywords" content="push scroll pushscroll list grid"/>
 
     <!-- WinJS references -->
     <link href="//Microsoft.WinJS.1.0/css/ui-dark.css" rel="stylesheet" />
     <script src="//Microsoft.WinJS.1.0/js/base.js"></script>
     <script src="//Microsoft.WinJS.1.0/js/ui.js"></script>
 
-    <link href="errors.css" rel="stylesheet" />
-    <script src="errors.js"></script>
+    <link href="pushscroll.css" rel="stylesheet" />
+    <script src="pushscroll.js"></script>
 </head>
 <body>
-    <div class="errors fragment">
+    <div class="pushscroll fragment">
         <header aria-label="Header content" role="banner">
             <button class="win-backbutton" aria-label="Back" disabled type="button"></button>
             <h1 class="titlearea win-type-ellipsis">
-                <span class="pagetitle">Handling errors</span>
+                <span class="pagetitle">Welcome to pushscroll</span>
             </h1>
         </header>
         <section aria-label="Main content" role="main">
-            <p>Content goes here.</p>
+            <div data-win-control="WinJS.UI.ListView"></div>
         </section>
+        
+        <!--Templates-->
+        <div data-win-control="WinJS.Binding.Template">
+            <div data-win-bind="innerText:this;"></div>
+        </div>
     </div>
 </body>
 </html>
