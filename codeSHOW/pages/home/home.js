@@ -3,13 +3,21 @@
 
     WinJS.UI.Pages.define("/pages/home/home.html", {
         ready: function (element, options) {
-            bindList();
+            bindList(options);
         }
     });
 
-    function bindList() {
+    function bindList(options) {
+        var data = App.demosList;
+        options = options || { };
+        if (options.queryText)
+            data = data.createFiltered(function(i) {
+                var result = i.tags && i.tags.split(" ").contains(options.queryText);
+                return result;
+            });
+
         var list = q(".homepage #list").winControl;
-        list.itemDataSource = App.demosList.dataSource;
+        list.itemDataSource = data.dataSource;
         list.itemTemplate = q(".homepage #itemTemplate");
     }
 

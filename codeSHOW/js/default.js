@@ -71,16 +71,16 @@
             
             searchPane.onsuggestionsrequested = function (e) {
                 e.request.searchSuggestionCollection.appendQuerySuggestions(
-                    tags.filter(function (t) { return t.startsWith(e.queryText); })
+                    tags.distinct().filter(function (t) { return t.startsWith(e.queryText); })
                 );
             };
 
             searchPane.onquerysubmitted = function (e) {
-                App.demosList = App.demosList.createFiltered(function (i) {
-                    var result = i.tags && i.tags.split(" ").contains(e.queryText);
-                    return result;
-                });
-                App.demosList.notifyReload();
+                //App.demosList = App.demosList.createFiltered(function (i) {
+                //    var result = i.tags && i.tags.split(" ").contains(e.queryText);
+                //    return result;
+                //});
+                WinJS.Navigation.navigate("/pages/home/home.html", { queryText: e.queryText });
             };
             
         });
@@ -138,3 +138,4 @@ String.prototype.startsWith = Ocho.String.startsWith;
 String.prototype.endsWith = Ocho.String.endsWith;
 String.prototype.trim = Ocho.String.trim;
 Array.prototype.contains = Ocho.Array.contains;
+Array.prototype.distinct = Ocho.Array.distinct;
