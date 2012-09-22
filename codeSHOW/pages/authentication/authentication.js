@@ -1,39 +1,24 @@
-﻿(function () {
+﻿/// <reference path="///LiveSDKHTML/js/wl.js" />
+/// <reference path="///js/ocho.js" />
+
+(function () {
     "use strict";
 
     WinJS.UI.Pages.define("/pages/authentication/authentication.html", {
         ready: function (element, options) {
+            WL.init();
+
+            WL.Event.subscribe("auth.login", function () {
+                if (WL.getSession()) log("You are signed in!");
+            });
+
+            WL.Event.subscribe("auth.sessionChange", function () {
+                if (WL.getSession()) log("Your session has changed.");
+            });
+
             q(".authentication #btn").onclick = function (e) {
-                WL.init({ client_id: "00000000480D3B4B", redirect_uri: "http://www.codeshow.info"});
-                WL.Event.subscribe("auth.login", onLogin);
-                WL.Event.subscribe("auth.sessionChange", onSessionChange);
-
-                var session = WL.getSession();
-                if (session) {
-                    log("You are already signed in!");
-                } else {
-                    //TODO: this isn't working... invalide request error being thrown
-                    WL.login({ scope: "wl.signin" })
-                        .then(
-                            function (e) { debugger; },
-                            function (e) { debugger; }
-                        );
-                }
-
-                function onLogin() {
-                    var session = WL.getSession();
-                    if (session) {
-                        log("You are signed in!");
-                    }
-                }
-
-                function onSessionChange() {
-                    var session = WL.getSession();
-                    if (session) {
-                        log("Your session has changed.");
-                    }
-                }
-
+                if (WL.getSession()) log("You are already signed in!");
+                else WL.login({ scope: "wl.signin" });
             };
 
             function log(message) {
