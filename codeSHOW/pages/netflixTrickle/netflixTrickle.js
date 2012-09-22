@@ -25,10 +25,10 @@
                 WinJS.xhr({ url: "http://odata.netflix.com/Catalog/Titles?$format=json&$filter=startswith(ShortName,'" + l + "')&$top=10&$select=ShortName,BoxArt", headers: { "Cache-Control": "no-cache"}})
                     .then(function(xhr) {
                         var titles = JSON.parse(xhr.response).d;
-                        titles.forEach(function(i) {
+                        titles.forEach(function(t) {
                             titlesListGrouped.push({
-                                name: i.ShortName,
-                                image: i.BoxArt.LargeUrl
+                                name: t.ShortName,
+                                image: t.BoxArt.LargeUrl
                             });
                         });
                     });

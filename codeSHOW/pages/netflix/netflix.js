@@ -22,7 +22,7 @@
             WinJS.xhr({ url: "http://odata.netflix.com/Catalog/Titles?$format=json&$top=100"    })
                 .then(
                     function (xhr) {
-                        var titles = JSON.parse(xhr.response).d.results;
+                        var titles = JSON.parse(xhr.response).d;
                         titles.forEach(function (i) {
                             titlesListGrouped.push({
                                 name: i.ShortName,
