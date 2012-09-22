@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Selectors</title>
+    <meta name="keywords" content="selector selectors css"/>
+
+    <!-- WinJS references -->
+    <link href="//Microsoft.WinJS.1.0/css/ui-dark.css" rel="stylesheet" />
+    <script src="//Microsoft.WinJS.1.0/js/base.js"></script>
+    <script src="//Microsoft.WinJS.1.0/js/ui.js"></script>
+
+    <link href="selectors.css" rel="stylesheet" />
+    <script src="selectors.js"></script>
+</head>
+<body>
+    <div class="selectors fragment">
+        <header aria-label="Header content" role="banner">
+            <button class="win-backbutton" aria-label="Back" disabled type="button"></button>
+            <h1 class="titlearea win-type-ellipsis">
+                <span class="pagetitle">Welcome to selectors</span>
+            </h1>
+        </header>
+        <section aria-label="Main content" role="main">
+            <style id="styleSection"></style>
+            <div id="grid">
+                <div id="labelCSS" class="label">CSS</div>
+                <div id="input" class="section" contenteditable>
+                    selector { property: value; }
+                </div>
+
+                <div id="labelHTML" class="label">HTML</div>
+                <div id="html" class="section">
+                    <pre contenteditable>
+&lt;div id=&quot;html&quot;&gt;
+    Lorum ipsum
+    &lt;ul&gt;
+        &lt;li&gt;dolar&lt;/li&gt;
+        &lt;li&gt;sit&lt;/li&gt;
+        &lt;li&gt;amet&lt;/li&gt;
+    &lt;/ul&gt;
+    
+    &lt;table id="myTable"&gt;
+        &lt;tr&gt;&lt;td&gt;2012&lt;/td&gt;&lt;td&gt;75&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr&gt;&lt;td&gt;2011&lt;/td&gt;&lt;td&gt;67&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr&gt;&lt;td&gt;2010&lt;/td&gt;&lt;td&gt;58&lt;/td&gt;&lt;/tr&gt;
+    &lt;/table&gt;
+&lt;/div&gt;
+                </pre>
+                </div>
+
+                <div id="labelRender" class="label">Result</div>
+                <div id="render" class="section">
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

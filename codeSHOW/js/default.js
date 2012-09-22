@@ -8,10 +8,11 @@
     var nav = WinJS.Navigation;
     WinJS.strictProcessing();
 
-    window.onkeyup = function(e) {
+    window.onkeyup = function (e) {
+        //TODO: check to be sure we're not in an input box before we capture some keystrokes (like home and backspace)
         switch(e.key) {
             case "Home": WinJS.Navigation.navigate("/pages/home/home.html"); break;
-            case "BrowserBack": case "Backspace": WinJS.Navigation.back(); break;
+            case "BrowserBack": WinJS.Navigation.back(); break;
             case "BrowserForward": WinJS.Navigation.forward(); break;
         }
     };

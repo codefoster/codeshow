@@ -5,6 +5,9 @@
 
     WinJS.UI.Pages.define("/pages/appbar/appbar.html", {
         ready: function (element, options) {
+            if (!q("#appbar")) Ocho.AppBar.set();
+            q(".appbar #sticky").checked = q("#appbar").winControl.sticky;
+            
             //wire up the onchange event of all radio buttons to the same event
             q(".appbar input[type='radio']").forEach(function (i) { i.onchange = manageAppBar; });
             
@@ -17,7 +20,6 @@
             //when the user checks or unchecks the "sticky" checkbox, call Ocho.AppBar.set() to make sure
             //the appbar exists yet and then set its sticky property
             q(".appbar #sticky").onchange = function (e) {
-                if (!q("#appbar")) Ocho.AppBar.set();
                 q("#appbar").winControl.sticky = e.target.checked;
             };
         }

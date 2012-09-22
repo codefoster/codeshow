@@ -1,0 +1,43 @@
+﻿.selectors section[role=main] > * {
+    margin-left: 120px;
+}
+
+.selectors #grid {
+    display: -ms-grid;
+    -ms-grid-columns: 1fr 1fr;
+    -ms-grid-rows: 100px 1fr;
+}
+
+.selectors #grid > div.section {
+    border: 2px solid #404040;
+    padding: 10px;
+    margin: 3px;
+}
+
+.selectors #grid .label {
+    position: relative;
+    font-size: 80px;
+    font-weight: bold;
+    color: rgba(255,255,255,0.01);
+    top: -8px;
+    left: 14px;
+    z-index: -100;
+}
+
+.selectors #grid #input {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+}
+
+.selectors #grid #labelHTML,
+.selectors #grid #html {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+}
+
+.selectors #grid #labelRender,
+.selectors #grid #render {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+}

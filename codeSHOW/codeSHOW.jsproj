@@ -177,6 +177,9 @@
     <Content Include="pages\pushscroll\pushscroll.css" />
     <Content Include="pages\pushscroll\pushscroll.html" />
     <Content Include="pages\pushscroll\pushscroll.js" />
+    <Content Include="pages\selectors\selectors.css" />
+    <Content Include="pages\selectors\selectors.html" />
+    <Content Include="pages\selectors\selectors.js" />
     <Content Include="pages\semanticzoom\semanticzoom.css" />
     <Content Include="pages\semanticzoom\semanticzoom.html" />
     <Content Include="pages\semanticzoom\semanticzoom.js" />
