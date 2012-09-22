@@ -43,6 +43,11 @@
         width: 100%;
     }
 
+    .explanation {
+        font-size: larger;
+        color: slateblue;
+        margin-bottom: 20px;
+    }
 @media screen and (-ms-view-state: snapped) {
     .fragment header[role=banner] {
         -ms-grid-columns: auto 1fr;

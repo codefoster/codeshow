@@ -57,13 +57,13 @@
     </AppxManifest>
     <None Include="codeSHOW_StoreKey.pfx" />
     <Content Include="css\default.css" />
+    <Content Include="images\headerlogo.png" />
     <Content Include="images\logo.png" />
     <Content Include="images\smalllogo.png" />
     <Content Include="images\splashscreen.png" />
     <Content Include="images\storelogo.png" />
     <Content Include="images\widelogo.png" />
     <Content Include="images\win8logo.png" />
-    <Content Include="js\data.js" />
     <Content Include="js\default.js" />
     <Content Include="js\navigator.js" />
     <Content Include="js\ocho.js" />
@@ -180,9 +180,9 @@
     <Content Include="pages\semanticzoom\semanticzoom.css" />
     <Content Include="pages\semanticzoom\semanticzoom.html" />
     <Content Include="pages\semanticzoom\semanticzoom.js" />
-    <Content Include="pages\share_simple\share_simple.css" />
-    <Content Include="pages\share_simple\share_simple.html" />
-    <Content Include="pages\share_simple\share_simple.js" />
+    <Content Include="pages\share\share.css" />
+    <Content Include="pages\share\share.html" />
+    <Content Include="pages\share\share.js" />
     <Content Include="pages\simple\simple.css" />
     <Content Include="pages\simple\simple.html" />
     <Content Include="pages\simple\simple.js" />

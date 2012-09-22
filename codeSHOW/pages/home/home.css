@@ -10,11 +10,15 @@
         width: 200px;
     }
 
+    .homepage .pagetitle img {
+        height: 70px;
+    }
     .homepage section[role=main] .win-item .tile {
         width: 180px;
-        height: 70px;
+        height: 68px;
         background-color: slategrey;
         padding: 12px;
+        color: white;
     }
 
         .homepage section[role=main] .win-item h3 {

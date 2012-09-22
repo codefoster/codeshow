@@ -8,6 +8,14 @@
     var nav = WinJS.Navigation;
     WinJS.strictProcessing();
 
+    window.onkeyup = function(e) {
+        switch(e.key) {
+            case "Home": WinJS.Navigation.navigate("/pages/home/home.html"); break;
+            case "BrowserBack": case "Backspace": WinJS.Navigation.back(); break;
+            case "BrowserForward": WinJS.Navigation.forward(); break;
+        }
+    };
+    
     app.addEventListener("activated", function (args) {
 
         //set up the demos list (empty for now)
@@ -115,12 +123,8 @@
                     WinJS.Promise.join(promises).then(function () {
                         var colors = ["#0098ab", "#0070a9", "#d9532c", "#a400ac", "#009086", "#5838b4", "#ae193e", "#2c86ee", "#009c00"];
                         result.forEach(function (i) {
-                            i.tileColor = "gray"; //colors[Math.floor(Math.random() * colors.length)];
-                            i.click = function () {
-                                var location = "/pages/" + i.key + "/" + i.key + ".html";
-                                WinJS.Navigation.navigate(location, i);
-                            };
-                            i.click.supportedForProcessing = true;
+                            //i.tileColor = colors[Math.floor(Math.random() * colors.length)];
+                            i.tileColor = "#336666";
                         });
                         result.forEach(function (r) { App.demosList.push(r); });
                         c();
@@ -133,6 +137,7 @@
 })();
 
 var q = Ocho.Utilities.query;
+var format = Ocho.Utilities.format;
     
 String.prototype.startsWith = Ocho.String.startsWith;
 String.prototype.endsWith = Ocho.String.endsWith;
