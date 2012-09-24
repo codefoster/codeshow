@@ -11,7 +11,7 @@
     window.onkeyup = function (e) {
         //TODO: check to be sure we're not in an input box before we capture some (any?) keystrokes (like home and backspace)
         switch(e.key) {
-            case "Home": WinJS.Navigation.navigate("/pages/home/home.html"); break;
+            //case "Home": WinJS.Navigation.navigate("/pages/home/home.html"); break;
             case "BrowserBack": WinJS.Navigation.back(); break;
             case "BrowserForward": WinJS.Navigation.forward(); break;
         }
@@ -111,7 +111,7 @@
                                 .then(function (xhr) {
                                     var keywords = q("meta[name='keywords']", xhr.response);
                                     keywords = (keywords ? keywords.content : "");
-                                    
+
                                     result.push({
                                         key: f.name,
                                         name: q("title", xhr.response).innerText,
