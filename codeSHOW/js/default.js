@@ -9,7 +9,7 @@
     WinJS.strictProcessing();
 
     window.onkeyup = function (e) {
-        //TODO: check to be sure we're not in an input box before we capture some keystrokes (like home and backspace)
+        //TODO: check to be sure we're not in an input box before we capture some (any?) keystrokes (like home and backspace)
         switch(e.key) {
             case "Home": WinJS.Navigation.navigate("/pages/home/home.html"); break;
             case "BrowserBack": WinJS.Navigation.back(); break;
