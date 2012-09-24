@@ -96,6 +96,9 @@
     <Content Include="pages\classes\classes.css" />
     <Content Include="pages\classes\classes.html" />
     <Content Include="pages\classes\classes.js" />
+    <Content Include="pages\code\code.css" />
+    <Content Include="pages\code\code.html" />
+    <Content Include="pages\code\code.js" />
     <Content Include="pages\context\context.css" />
     <Content Include="pages\context\context.html" />
     <Content Include="pages\context\context.js" />

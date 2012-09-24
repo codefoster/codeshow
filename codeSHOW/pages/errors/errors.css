@@ -21,9 +21,10 @@
     }
         .errors #grid > div > div {
             text-align: center;
-            padding-top: 35%;
-            width: 100%;
-            height: 100%;
+            display: table-cell;
+            vertical-align: middle;
+            min-width: 295px;
+            min-height: 195px;
             background-color: #121111;
             border: solid 2px blue;
             transition: all 0.25s;
