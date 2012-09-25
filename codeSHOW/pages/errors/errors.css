@@ -20,8 +20,8 @@
         
     }
         .errors #grid > div > div {
-            text-align: center;
             display: table-cell;
+            text-align: center;
             vertical-align: middle;
             min-width: 295px;
             min-height: 195px;

@@ -51,7 +51,16 @@ TODO:
                     if (arguments[i].hasOwnProperty(key))
                         result[key] = arguments[i][key];
             return result;
-        }
+        },
+
+        isTypeOf: function (obj, type) {
+            // inspired by http://mrrena.blogspot.com/2012/05/javascript-better-typeof-accurately.html
+            // call returns "[object ????]"
+            // slice returns the ???? of the previous line (8th postion, take off closing brace)
+            // type values: Object, Null, Undefined, String, Number, Boolean, Date, Array, RegExp, Function...  
+            return (Object.prototype.toString.call(obj).slice(8, -1) === type);
+        },
+
 
     });
 

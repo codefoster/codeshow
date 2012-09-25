@@ -3,6 +3,8 @@
 (function () {
     "use strict";
 
+    var util = Ocho.Utilities;
+
     WinJS.UI.Pages.define("/pages/errors/errors.html", {
 
         stateOfLog: null,
@@ -22,15 +24,18 @@
             this.stateOfLog = WinJS.log;
             // define custom log method
             WinJS.log = function (msg, tags, type) {
-                if (!msg) return;
-                type = type || "info";
-                if (tags && tags.match && tags.match(/demo/gi)) {
-                    output.innerText = msg + " [" + tags + "]";
-                }
-                if (type === "error") {
-                    output.setAttribute("class", "error");
-                } else {
-                    output.removeAttribute("class");
+                // require message only if string
+                if (msg && util.isTypeOf(msg,"String")) {
+                    // assign "info" if not provided
+                    type = type || "info";
+                    if (tags && tags.match && tags.match(/demo/gi)) {
+                        output.innerText = msg + " [" + tags + "]";
+                    }
+                    if (type === "error") {
+                        output.setAttribute("class", "error");
+                    } else {
+                        output.removeAttribute("class");
+                    }
                 }
             };
 
