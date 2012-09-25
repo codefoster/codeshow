@@ -22,6 +22,11 @@
             q(".appbar #sticky").onchange = function (e) {
                 q("#appbar").winControl.sticky = e.target.checked;
             };
+        },
+
+        unload: function () {
+            Ocho.AppBar.set();
+            q("#appbar").winControl.hide();
         }
     });
     

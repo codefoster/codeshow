@@ -1,19 +1,24 @@
-﻿.homepage section[role=main] {
-}
-
-    .homepage section[role=main] #list {
-        height: 100%;    
-        margin-left: 120px;
+﻿    .homepage .pagetitle img {
+        height: 70px;
     }
 
-    .homepage section[role=main] #list .win-groupheader h2 {
+.homepage section[role=main] > * {
+        margin-left: 120px;
+}
+
+    .homepage #zoom {
+        height: 100%;
+    }
+
+    .homepage #demosLV {
+        height: 100%;    
+    }
+
+    .homepage #demosLV .win-groupheader h2 {
         width: 200px;
     }
 
-    .homepage .pagetitle img {
-        height: 70px;
-    }
-    .homepage section[role=main] .win-item .tile {
+    .homepage #demosLV .win-item .tile {
         width: 190px;
         height: 62px;
         background-color: slategrey;
@@ -21,9 +26,21 @@
         color: white;
     }
 
-        .homepage section[role=main] .win-item h3 {
+        .homepage #demosLV .win-item h3 {
             font-size: 22px;
         }
+
+.homepage #tagsLV {
+    height: 100%;
+}
+
+.homepage #tagsLV .win-item > div {
+    width: 100px;
+    height: 40px;
+    background-color: darkorange;
+    padding: 5px;
+}
+
 @media screen and (-ms-view-state: snapped) {
     .homepage section[role=main] {
         margin-left: 20px;

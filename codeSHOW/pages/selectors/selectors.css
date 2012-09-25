@@ -3,9 +3,10 @@
 }
 
 .selectors #grid {
+    height: 600px;
     display: -ms-grid;
     -ms-grid-columns: 1fr 1fr;
-    -ms-grid-rows: 100px 1fr;
+    -ms-grid-rows: 160px 1fr;
 }
 
 .selectors #grid > div.section {
@@ -18,7 +19,7 @@
     position: relative;
     font-size: 80px;
     font-weight: bold;
-    color: rgba(255,255,255,0.01);
+    color: rgba(255,255,255,0.05);
     top: -8px;
     left: 14px;
     z-index: -100;
@@ -28,6 +29,17 @@
     -ms-grid-row: 1;
     -ms-grid-column: 1;
     -ms-grid-column-span: 2;
+    font-size: 32px;
+}
+
+.selectors .watermark {
+    opacity: .6;
+    color: white;
+    font-style: italic;
+}
+
+.selectors #grid #html {
+    overflow: scroll;
 }
 
 .selectors #grid #labelHTML,

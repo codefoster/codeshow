@@ -7,7 +7,6 @@
                 WinJS.xhr({ url: "http://odata.netflix.com/catalog/Titles?$top=500&$select=Id", headers: {Accept: "application/json"} })
                     .then(
                         function (xhr) {
-                            //TODO: add a "working" spinner
                             var result = JSON.parse(xhr.response).d
                                 .map(function (r) { return r.Id; })[parseInt(Math.random() * 500)];
                             return result;
@@ -20,6 +19,29 @@
                                 });
                         }
                     );
+            };
+
+            q("#btn2").onclick = function(e) {
+                WinJS.xhr({ url: "http://www.microsoft.com", responseType: "document" }).then(function(xhr) {
+                    var img = document.createElement("img");
+                    img.src = q("img[Alt='Microsoft']", xhr.response)[0].src;
+                    q(".xhr #results2").appendChild(img);
+                });
+            };
+
+            q("#btn3").onclick = function(e) {
+                WinJS.xhr({ url: "/pages/xhr/fetchme.html", responseType: "document" }).then(function(xhr) {
+                    q(".xhr #results3").innerText = q("#fetchText", xhr.response).innerText;
+                });
+            };
+
+            q("#btn4").onclick = function(e) {
+                WinJS.xhr({ url: "http://pluralsight.com/odata/Courses?$select=Title&$top=5", headers: { Accept: "application/json" } })
+                    .then(function (xhr) {
+                        q(".xhr #results4").innerText = JSON.parse(xhr.response).d
+                            .map(function (i) { return i.Title; })
+                            .join(",");
+                    });
             };
         }
     });

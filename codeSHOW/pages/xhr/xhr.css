@@ -24,4 +24,16 @@
         -ms-grid-column: 2;
         -ms-grid-row: 1;
     }
+    .xhr #results2 {
+        -ms-grid-column: 2;
+        -ms-grid-row: 2;
+    }
+    .xhr #results3 {
+        -ms-grid-column: 2;
+        -ms-grid-row: 3;
+    }
+    .xhr #results4 {
+        -ms-grid-column: 2;
+        -ms-grid-row: 4;
+    }
 

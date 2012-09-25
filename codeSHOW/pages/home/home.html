@@ -23,7 +23,11 @@
             </h1>
         </header>
         <section aria-label="Main content" role="main">
-            <div id="list" data-win-control="WinJS.UI.ListView"></div>
+            <!-- Disabling semantic zoom until grouping on the demos is implemented -->
+            <!--<div id="zoom" data-win-control="WinJS.UI.SemanticZoom">-->
+                <div id="demosLV" data-win-control="WinJS.UI.ListView"></div>
+                <!--<div id="tagsLV" data-win-control="WinJS.UI.ListView"></div>-->
+            <!--</div>-->
         </section>
 
         <!--Templates-->
@@ -32,12 +36,17 @@
                 <h3 data-win-bind="innerText:name;"></h3>
             </div>
         </div>
+
+        <div id="headerTemplate" data-win-control="WinJS.Binding.Template">
+            <h2 data-win-bind="onclick:click;innerText:this"></h2>
+        </div>
+
+        <div id="tagTemplate" data-win-control="WinJS.Binding.Template">
+            <div data-win-bind="innerText:this"></div>
+        </div>
     </div>
     
     
-    <div id="headerTemplate" data-win-control="WinJS.Binding.Template">
-        <h2 data-win-bind="onclick:click;innerText:this"></h2>
-    </div>
 </body>
 </html>
 
