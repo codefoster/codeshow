@@ -1,0 +1,8 @@
+﻿The files below can be distributed as described in the MICROSOFT REACTIVE EXTENSTIONS FOR JAVASCRIPT AND .NET LIBRARIES License.
+
+rx.min.js
+rx.aggregates.min.js
+rx.joinpatterns.min.js
+rx.coincidence.min.js
+rx.time.min.js
+rx.experimental.min.js

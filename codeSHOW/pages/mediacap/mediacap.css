@@ -1,18 +1,20 @@
-﻿.cameracap section[role=main] > div {
+﻿.mediacap section[role=main] > div {
     margin-left: 120px;
 }
 
-.cameracap .item {
+.mediacap .item {
     display: -ms-grid;
     -ms-grid-columns: 300px 30px 340px;
 }
 
-    .cameracap .item :nth-child(1) {
+    .mediacap .item :nth-child(1) {
         
     }
 
-    .cameracap .item :nth-child(2) {
+    .mediacap .item :nth-child(2) {
         width: 320px;
         height: 180px;
         -ms-grid-column: 3;
     }
+
+    .recording { border: 2px solid red;}
