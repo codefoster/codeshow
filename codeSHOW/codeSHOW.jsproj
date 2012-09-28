@@ -247,6 +247,9 @@
     <Content Include="pages\transforms\transforms.css" />
     <Content Include="pages\transforms\transforms.html" />
     <Content Include="pages\transforms\transforms.js" />
+    <Content Include="pages\transitions\transitions.css" />
+    <Content Include="pages\transitions\transitions.html" />
+    <Content Include="pages\transitions\transitions.js" />
     <Content Include="pages\viewbox\viewbox.css" />
     <Content Include="pages\viewbox\viewbox.html" />
     <Content Include="pages\viewbox\viewbox.js" />

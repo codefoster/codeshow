@@ -1,0 +1,19 @@
+﻿.transitions section[role=main] {
+    margin-left: 120px;
+}
+
+.page-header {
+     /* recommended header size */
+     font-size : 42pt;
+    font-family: 'Segoe UI';
+          color: rgba(255,255,255,1.0);
+     transition: font-size ease 0.3s;
+}
+
+@media (-ms-view-state: snapped) {
+    .page-header {
+        /* recommended header size for snapped */
+        font-size: 20pt;
+    }
+}
+
