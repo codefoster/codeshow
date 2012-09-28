@@ -9,6 +9,7 @@
                         if (file) q("#capturedImage").src = URL.createObjectURL(file);
                     });
             };
+            
             q(".video button").onclick = function () {
                 var dialog = new Windows.Media.Capture.CameraCaptureUI();
                 dialog.videoSettings.format = Windows.Media.Capture.CameraCaptureUIVideoFormat.mp4;
