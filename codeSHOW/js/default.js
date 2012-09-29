@@ -59,6 +59,11 @@
         addSearchContract();
     };
 
+    app.onsettings = function(e) {
+        e.detail.applicationcommands = { "preferencesDiv": { title: "Preferences", href: "/pages/settings/settings.html" } };
+        WinJS.UI.SettingsFlyout.populateSettings(e);
+    };
+
     WinJS.Namespace.define("App", {
         //loadDemos: loadDemos,
         demosList: null,

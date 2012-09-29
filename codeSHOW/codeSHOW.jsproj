@@ -223,6 +223,9 @@
     <Content Include="pages\semanticzoom\semanticzoom.css" />
     <Content Include="pages\semanticzoom\semanticzoom.html" />
     <Content Include="pages\semanticzoom\semanticzoom.js" />
+    <Content Include="pages\settings\settings.css" />
+    <Content Include="pages\settings\settings.html" />
+    <Content Include="pages\settings\settings.js" />
     <Content Include="pages\share\share.css" />
     <Content Include="pages\share\share.html" />
     <Content Include="pages\share\share.js" />
