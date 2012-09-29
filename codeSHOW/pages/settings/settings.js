@@ -2,7 +2,7 @@
     "use strict";
 
     var appdata = Windows.Storage.ApplicationData.current;
-    var tileColors = q("#tileColors > div");
+    var tileColors;
     
     WinJS.UI.Pages.define("/pages/settings/settings.html", {
         ready: function (element, options) {
@@ -12,6 +12,8 @@
     });
 
     function init() {
+        tileColors = q("#tileColors > div");
+        
         q("#showPrefs").onclick = function (e) {
             WinJS.UI.SettingsFlyout.showSettings("preferencesDiv", "/pages/settings/settings.html");
         };
