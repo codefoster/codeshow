@@ -196,6 +196,9 @@
     <Content Include="pages\mediaqueries\mediaqueries.css" />
     <Content Include="pages\mediaqueries\mediaqueries.html" />
     <Content Include="pages\mediaqueries\mediaqueries.js" />
+    <Content Include="pages\mscssmatrix\mscssmatrix.css" />
+    <Content Include="pages\mscssmatrix\mscssmatrix.html" />
+    <Content Include="pages\mscssmatrix\mscssmatrix.js" />
     <Content Include="pages\netflix10\netflix10.css" />
     <Content Include="pages\netflix10\netflix10.html" />
     <Content Include="pages\netflix10\netflix10.js" />

@@ -1,0 +1,7 @@
+﻿.mscssmatrix section[role=main] > * {
+    margin-left: 120px;
+}
+
+.mscssmatrix #hello {
+    width:140px;
+}
