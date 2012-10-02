@@ -101,6 +101,9 @@
     <Content Include="pages\adtypes\adtypes.css" />
     <Content Include="pages\adtypes\adtypes.html" />
     <Content Include="pages\adtypes\adtypes.js" />
+    <Content Include="pages\animations\animations.css" />
+    <Content Include="pages\animations\animations.html" />
+    <Content Include="pages\animations\animations.js" />
     <Content Include="pages\appbar2\appbar2.css" />
     <Content Include="pages\appbar2\appbar2.html" />
     <Content Include="pages\appbar2\appbar2.js" />
