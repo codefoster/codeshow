@@ -8,3 +8,6 @@
     display: block;
     margin-bottom: 10px;
 }
+.promises #concept > div > div {
+    margin-top: 20px;
+}
