@@ -294,6 +294,9 @@
     <Content Include="pages\viewbox\viewbox.css" />
     <Content Include="pages\viewbox\viewbox.html" />
     <Content Include="pages\viewbox\viewbox.js" />
+    <Content Include="pages\viewstates\viewstates.css" />
+    <Content Include="pages\viewstates\viewstates.html" />
+    <Content Include="pages\viewstates\viewstates.js" />
     <Content Include="pages\webworker\task.js" />
     <Content Include="pages\webworker\webworker.css" />
     <Content Include="pages\webworker\webworker.html" />

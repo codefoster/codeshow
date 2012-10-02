@@ -1,0 +1,16 @@
+﻿.viewstates #list {
+    margin-left: 120px;
+    height: 100%;
+}
+
+    .viewstates #list .img {
+        width: 280px;
+        height: 210px;
+    }
+
+@media (-ms-view-state: snapped) {
+    .viewstates #list {
+        margin-left: 20px;
+        height: 100%;
+    }
+}
