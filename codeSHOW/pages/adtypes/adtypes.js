@@ -2,7 +2,7 @@
     "use strict";
 
     WinJS.UI.Pages.define("/pages/adtypes/adtypes.html", {
-        ready: function (element, options) {
+        ready: function (element, demo) {
             var units = [
                 { unit: 'Image_160x600' },
                 { unit: 'Image_250x250' },

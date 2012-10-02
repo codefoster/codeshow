@@ -20,12 +20,12 @@
     app.addEventListener("activated", function (args) {
 
         //set up the demos list (empty for now)
-        App.demosList = new WinJS.Binding.List()
+        app.demosList = new WinJS.Binding.List()
             .createGrouped(function (i) { return i.group; }, function (i) { return i.group; })
             .createSorted(function (a, b) { return (a.name < b.name ? -1 : 1); });
 
         //start loading the demos
-        App.demosLoaded = loadDemos();
+        app.demosLoaded = loadDemos();
         
         if (args.detail.kind === activation.ActivationKind.launch) {
             if (args.detail.previousExecutionState !== activation.ApplicationExecutionState.terminated) {
@@ -57,26 +57,26 @@
 
     app.onready = function (e) {
         addSearchContract();
+        addSettingsContract();
     };
 
-    app.onsettings = function(e) {
-        e.detail.applicationcommands = { "preferencesDiv": { title: "Preferences", href: "/pages/settings/settings.html" } };
-        WinJS.UI.SettingsFlyout.populateSettings(e);
-    };
-
-    WinJS.Namespace.define("App", {
-        //loadDemos: loadDemos,
-        demosList: null,
-        demosLoaded: null
-    });
+    app.tileColor = "#0098ab";
+    app.demosList = null;
+    app.demosLoaded = null;
+    
+    //WinJS.Namespace.define("App", {
+    //    tileColor: "#0098ab",
+    //    demosList: null,
+    //    demosLoaded: null
+    //});
     
     function addSearchContract() {
         var searchPane = Windows.ApplicationModel.Search.SearchPane.getForCurrentView();
 
         //make sure demos have been loaded and then make search terms out of their keywords
-        App.demosLoaded.then(function () {
+        app.demosLoaded.then(function () {
             var tags = [];
-            App.demosList.forEach(function (d) {
+            app.demosList.forEach(function (d) {
                 if (d.tags)
                     d.tags.split(" ").forEach(function (t) {
                         tags.push(t);
@@ -90,16 +90,17 @@
             };
 
             searchPane.onquerysubmitted = function (e) {
-                //App.demosList = App.demosList.createFiltered(function (i) {
-                //    var result = i.tags && i.tags.split(" ").contains(e.queryText);
-                //    return result;
-                //});
                 WinJS.Navigation.navigate("/pages/home/home.html", { queryText: e.queryText });
             };
             
         });
     }
-    
+    function addSettingsContract() {
+        app.onsettings = function (e) {
+            e.detail.applicationcommands = { "preferencesDiv": { title: "Preferences", href: "/pages/settings/settings.html" } };
+            WinJS.UI.SettingsFlyout.populateSettings(e);
+        };
+    }
     function loadDemos() {
         return new WinJS.Promise(function(c, e, p) {
             Windows.ApplicationModel.Package.current.installedLocation.getFolderAsync("pages")
@@ -132,7 +133,7 @@
                             //i.tileColor = colors[Math.floor(Math.random() * colors.length)];
                             i.tileColor = "#336666";
                         });
-                        result.forEach(function (r) { App.demosList.push(r); });
+                        result.forEach(function (r) { app.demosList.push(r); });
                         c();
                     });
                 });
