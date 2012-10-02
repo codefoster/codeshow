@@ -1,4 +1,5 @@
-﻿.settings #preferencesDiv {
+﻿.settings section[role=main] > h2 { margin-bottom: 20px; }
+.settings #preferencesDiv {
 }
 
 .settings #preferencesDiv #tileColors {

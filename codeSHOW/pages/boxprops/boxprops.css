@@ -7,13 +7,11 @@
 }
 
 .boxprops section[role=main] > div h2 {
-    margin-top: 12px; 
-    color: bisque;
-    font-weight: bold;
+    margin-top: 20px; 
 }
 
 .boxprops .box {
     width: 120px;
     height: 40px;
-    border: solid 1px white;
+    border: solid 1px;
 }

@@ -12,7 +12,7 @@
             function draw() {
                 c.clearRect(0, 0, c.canvas.width, c.canvas.height);
                 c.beginPath();
-                c.fillStyle = "white";
+                c.fillStyle = "darkorange";
                 c.arc(x, y, r, 0, Math.PI * 2, true);
                 c.closePath();
                 c.fill();

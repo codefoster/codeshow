@@ -19,7 +19,7 @@
     position: relative;
     font-size: 80px;
     font-weight: bold;
-    color: rgba(255,255,255,0.05);
+    color: rgba(0,0,0,0.05);
     top: -8px;
     left: 14px;
     z-index: -100;
@@ -33,8 +33,7 @@
 }
 
 .selectors .watermark {
-    opacity: .6;
-    color: white;
+    color: hsla(0,0%,0%,.6);
     font-style: italic;
 }
 

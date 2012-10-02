@@ -6,7 +6,7 @@
     <meta name="keywords" content="settings preferences"/>
 
     <!-- WinJS references -->
-    <link href="//Microsoft.WinJS.1.0/css/ui-dark.css" rel="stylesheet" />
+    <link href="//Microsoft.WinJS.1.0/css/ui-light.css" rel="stylesheet" />
     <script src="//Microsoft.WinJS.1.0/js/base.js"></script>
     <script src="//Microsoft.WinJS.1.0/js/ui.js"></script>
 
@@ -103,10 +103,11 @@
         <header aria-label="Header content" role="banner">
             <button class="win-backbutton" aria-label="Back" disabled type="button"></button>
             <h1 class="titlearea win-type-ellipsis">
-                <span class="pagetitle">Welcome to settings</span>
+                <span class="pagetitle">Settings</span>
             </h1>
         </header>
         <section aria-label="Main content" role="main">
+            <h2>Instructions to implement sharing</h2>
             <h3>Step 1 - Add handler for onsettings in default.js</h3>
             <pre>
 app.onsettings = function(e) {

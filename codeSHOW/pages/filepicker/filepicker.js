@@ -10,12 +10,14 @@
 
             q(".filepicker #open").onclick = function (e) {
                 openPicker.pickSingleFileAsync().then(function (file) {
+                    var result = q(".filepicker #result");
                     if (file) {
-                        // Application now has read/write access to the picked file
-                        //WinJS.log && WinJS.log("Picked photo: " + file.name, "sample", "status");
+                        var img = q(".filepicker img");
+                        img.src = URL.createObjectURL(file);
+                        img.style.display = "block";
+                        result.innerText = "";
                     } else {
-                        // The picker was dismissed with no selected file
-                        //WinJS.log && WinJS.log("Operation cancelled.", "sample", "status");
+                        result.innerText = "No file picked";
                     }
                 });
             };

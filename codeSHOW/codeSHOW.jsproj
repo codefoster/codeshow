@@ -136,6 +136,7 @@
     <Content Include="pages\dragndrop\dragndrop.css" />
     <Content Include="pages\dragndrop\dragndrop.html" />
     <Content Include="pages\dragndrop\dragndrop.js" />
+    <Content Include="pages\html5audio\apollo_11_dsc2.mp3" />
     <Content Include="pages\mediacap\mediacap.css" />
     <Content Include="pages\mediacap\mediacap.html" />
     <Content Include="pages\mediacap\mediacap.js" />
@@ -210,7 +211,6 @@
     <Content Include="pages\html5audio\html5audio.css" />
     <Content Include="pages\html5audio\html5audio.html" />
     <Content Include="pages\html5audio\html5audio.js" />
-    <Content Include="pages\html5audio\kickdrumheart.mp3" />
     <Content Include="pages\html5video\butterfly.mp4" />
     <Content Include="pages\html5video\html5video.css" />
     <Content Include="pages\html5video\html5video.html" />

@@ -6,7 +6,7 @@
     <meta name="keywords" content="file pick picker open save" />
 
     <!-- WinJS references -->
-    <link href="//Microsoft.WinJS.1.0/css/ui-dark.css" rel="stylesheet" />
+    <link href="//Microsoft.WinJS.1.0/css/ui-light.css" rel="stylesheet" />
     <script src="//Microsoft.WinJS.1.0/js/base.js"></script>
     <script src="//Microsoft.WinJS.1.0/js/ui.js"></script>
 
@@ -22,7 +22,10 @@
             </h1>
         </header>
         <section aria-label="Main content" role="main">
-            <button id="open">Open File</button>
+            <div class="explanation">Open a picture from anywhere on your computer or within your apps that provide FilePicker functionality</div>
+            <button id="open">Open Picture</button>
+            <div id="result"></div>
+            <img />
         </section>
     </div>
 </body>

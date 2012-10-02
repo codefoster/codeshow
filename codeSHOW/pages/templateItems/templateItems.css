@@ -4,7 +4,7 @@
 
 .templateItems section[role=main] > #alphabet {
     display: -ms-flexbox;
-    border: 1px solid white;
+    border: 1px solid;
     -ms-flex-wrap: wrap;
 }
 
@@ -16,4 +16,4 @@
     padding: 10px;
 }
 
-.templateItems #reset { color: white; }
+.templateItems #reset { color: orange; }

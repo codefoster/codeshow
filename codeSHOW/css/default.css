@@ -61,8 +61,7 @@
 .swiper > * {
     box-sizing: border-box;
     width: 80%;
-    padding-left: 120px;
-    padding-right: 120px;
+    padding-right:80px;
 }
 
     .swiper > * > h2 {
