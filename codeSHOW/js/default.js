@@ -64,12 +64,6 @@
     app.demosList = null;
     app.demosLoaded = null;
     
-    //WinJS.Namespace.define("App", {
-    //    tileColor: "#0098ab",
-    //    demosList: null,
-    //    demosLoaded: null
-    //});
-    
     function addSearchContract() {
         var searchPane = Windows.ApplicationModel.Search.SearchPane.getForCurrentView();
 
@@ -118,7 +112,10 @@
                                     var keywords = q("meta[name='keywords']", xhr.response);
                                     keywords = (keywords ? keywords.content : "");
 
-                                    result.push({
+                                    var enabled = q("meta[name='enabled']", xhr.response);
+                                    enabled = (enabled ? enabled.content == "true" : "true");
+
+                                    if(enabled) result.push({
                                         key: f.name,
                                         name: q("title", xhr.response).innerText,
                                         tags: keywords,
