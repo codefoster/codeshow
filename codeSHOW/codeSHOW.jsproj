@@ -116,6 +116,8 @@
     <Content Include="pages\autocomplete\autocomplete.css" />
     <Content Include="pages\autocomplete\autocomplete.html" />
     <Content Include="pages\autocomplete\autocomplete.js" />
+    <Content Include="pages\autocomplete\rxautocomplete.html" />
+    <Content Include="pages\autocomplete\rxautocomplete.js" />
     <Content Include="pages\basicad\basicad.css" />
     <Content Include="pages\basicad\basicad.html" />
     <Content Include="pages\basicad\basicad.js" />
@@ -177,9 +179,6 @@
     <Content Include="pages\filepicker\filepicker.css" />
     <Content Include="pages\filepicker\filepicker.html" />
     <Content Include="pages\filepicker\filepicker.js" />
-    <Content Include="pages\flexboxwrap\flexboxwrap.css" />
-    <Content Include="pages\flexboxwrap\flexboxwrap.html" />
-    <Content Include="pages\flexboxwrap\flexboxwrap.js" />
     <Content Include="pages\flexbox\flexbox.css" />
     <Content Include="pages\flexbox\flexbox.html" />
     <Content Include="pages\flexbox\flexbox.js" />
