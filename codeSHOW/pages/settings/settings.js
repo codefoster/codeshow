@@ -12,6 +12,7 @@
     });
 
     function init() {
+        //TODO
         tileColors = q("#tileColors > div");
         
         q("#showPrefs").onclick = function (e) {
@@ -24,6 +25,7 @@
             d.onclick = function (e) {
                 tileColors.forEach(function (d) { d.classList.remove("selected"); });
                 e.target.classList.add("selected");
+                
             };
         });
     }
