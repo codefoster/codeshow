@@ -89,21 +89,11 @@
         this.patterns = patterns;
     }
     Pattern.prototype.and = function (other) {
-        /// <summary>
-        /// Creates a pattern that matches the current plan matches and when the specified observable sequences has an available value.
-        /// </summary>
-        /// <param name="other">Observable sequence to match in addition to the current pattern.</param>
-        /// <returns>Pattern object that matches when all observable sequences in the pattern have an available value.</returns>
         var patterns = this.patterns.slice(0);
         patterns.push(other);
         return new Pattern(patterns);
     };
     Pattern.prototype.then = function (selector) {
-        /// <summary>
-        /// Matches when all observable sequences in the pattern (specified using a chain of and operators) have an available value and projects the values.
-        /// </summary>
-        /// <param name="selector">Selector that will be invoked with available values from the source sequences, in the same order of the sequences in the pattern.</param>
-        /// <returns>Plan that produces the projected values, to be fed (with other plans) to the when operator.</returns>
         return new Plan(this, selector);
     };
 
@@ -254,27 +244,12 @@
 
     // Observable extensions
     observableProto.and = function (right) {
-        /// <summary>
-        /// Creates a pattern that matches when both observable sequences have an available value.
-        /// </summary>
-        /// <param name="right">Observable sequence to match with the current sequence.</param>
-        /// <returns>Pattern object that matches when both observable sequences have an available value.</returns>
         return new Pattern([this, right]);
     };
     observableProto.then = function (selector) {
-        /// <summary>
-        /// Matches when the observable sequence has an available value and projects the value.
-        /// </summary>
-        /// <param name="selector">Selector that will be invoked for values in the source sequence.</param>
-        /// <returns>Plan that produces the projected values, to be fed (with other plans) to the when operator.</returns>
         return new Pattern([this]).then(selector);
     };
     Observable.when = function () {
-        /// <summary>
-        /// Joins together the results from several patterns.
-        /// </summary>
-        /// <param name="plans">A series of plans (specified as an Array of as a series of arguments) created by use of the Then operator on patterns.</param>
-        /// <returns>Observable sequence with the results form matching several patterns.</returns>
         var plans = argsOrArray(arguments, 0);
         return new AnonymousObservable(function (observer) {
             var activePlans = [],
@@ -314,7 +289,6 @@
             return group;
         });
     };
-    
 
     return root;
 }));
