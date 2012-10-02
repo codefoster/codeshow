@@ -1,0 +1,7 @@
+﻿.canvaspaint section[role=main] > * {
+    margin-left: 120px;
+}
+
+.canvaspaint #tutorial {
+    border: 2px solid white;
+}

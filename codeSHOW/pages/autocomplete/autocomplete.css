@@ -1,0 +1,13 @@
+﻿.autocomplete p {
+    margin-left: 120px;
+    font-size: 18px;
+}
+
+.autocomplete .suggestions {
+    margin-left: 120px;
+}
+
+.autocomplete .resultItem {
+    font-size: 18px;
+    width: 500px;
+}
