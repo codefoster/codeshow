@@ -3,21 +3,41 @@
 
     WinJS.UI.Pages.define("/pages/templateItems/templateItems.html", {
         ready: function (element, options) {
-            var flexbox = document.querySelector("section[role=main] > div");
+            var flexbox = document.querySelector("section[role=main] > #alphabet");
 
-            var letters = [];
-            for (var i = 65; i <= 90; i++) letters.push(String.fromCharCode(i));
+            loadPage();
+            
+            q("#reset").onclick = function (e) {
+                q("div", flexbox).forEach(function(d) { removeItem(d); });
+                loadPage();
+            };
 
-            letters.forEach(function (l) {
-                var e = document.createElement("div");
-                var template = document.querySelector("#template").winControl;
-                template.render({ name: l }, e).then(function (item) {
-                    var addToList = WinJS.UI.Animation.createAddToListAnimation(item, flexbox);
-                    flexbox.insertBefore(item);
-                    addToList.execute();
+            function loadPage() {
+
+                var letters = [];
+                for (var i = 65; i <= 90; i++) letters.push(String.fromCharCode(i));
+
+                letters.forEach(function (l) {
+                    var e = document.createElement("div");
+                    var template = q("#template").winControl;
+                    template.render({ name: l }, e).then(function (item) {
+                        item.onclick = function (e) { removeItem(e.target); };
+                        var addToList = WinJS.UI.Animation.createAddToListAnimation(item, q("div", flexbox));
+                        flexbox.insertBefore(item);
+                        addToList.execute();
+                    });
                 });
-            });
+
+            }
+
+            function removeItem(item) {
+                var removeFromList = WinJS.UI.Animation.createDeleteFromListAnimation(item, q("div", flexbox));
+                flexbox.removeChild(item);
+                removeFromList.execute();
+            }
 
         }
     });
+    
+
 })();
