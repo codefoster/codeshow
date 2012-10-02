@@ -1,7 +1,4 @@
-﻿/*.swipeSections section[role=main] {
-    margin-left: 120px;
-}*/
-
+﻿/* the .swiper functionality is in default.css too, but I would like to leave it here for clarity */
 .swipeSections .swiper {
     width:100%;
     display: -ms-flexbox;

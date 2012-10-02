@@ -1,23 +1,4 @@
-﻿ /*
-     a snap interval of 80% means that some content from the next swipe section will always
-     be peeking onto the page
-*/
-.flexbox .swiper {
-    width:100%;
-    display: -ms-flexbox;
-    -ms-scroll-snap-x: mandatory snapInterval(0%, 80%);
-    overflow-x: scroll;
-    overflow-y: hidden;
-}
-
-.flexbox .swiper > * {
-    box-sizing: border-box;
-    width: 80%;
-    padding-left: 120px;
-    padding-right: 120px;
-}
-
-/*Section One*/
+﻿/*Section One*/
 .flexbox #flexbox1 {
     margin-top: 20px;
     display: -ms-flexbox;

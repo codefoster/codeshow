@@ -25,10 +25,10 @@
         var mouseDiffs = mouseMoves.bufferWithCount(2, 1).select(function (x) {
             return { first: getOffset(x[0]), second: getOffset(x[1]) };
         });
-        var mouseButton = Rx.Observable.fromEvent(canvas, 'mousedown').select(function (x) { return true; })
-            .merge(Rx.Observable.fromEvent(canvas, 'mouseup').select(function (x) { return false; }))
+        var mouseButton = Rx.Observable.fromEvent(canvas, 'mousedown').select(function() { return true; })
+            .merge(Rx.Observable.fromEvent(canvas, 'mouseup').select(function() { return false; }));
 
-        var paint = mouseButton.select(function (down) { return down ? mouseDiffs : mouseDiffs.take(0) }).switchLatest();
+        var paint = mouseButton.select(function (down) { return down ? mouseDiffs : mouseDiffs.take(0); }).switchLatest();
 
         subscription.setDisposable(paint.subscribe(function (x) {
             ctx.moveTo(x.first.offsetX, x.first.offsetY);

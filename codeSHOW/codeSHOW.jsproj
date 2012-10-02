@@ -155,9 +155,9 @@
     <Content Include="pages\csscolumns\csscolumns.css" />
     <Content Include="pages\csscolumns\csscolumns.html" />
     <Content Include="pages\csscolumns\csscolumns.js" />
-    <Content Include="pages\custom_promise\custom_promise.css" />
-    <Content Include="pages\custom_promise\custom_promise.html" />
-    <Content Include="pages\custom_promise\custom_promise.js" />
+    <Content Include="pages\promises\promises.css" />
+    <Content Include="pages\promises\promises.html" />
+    <Content Include="pages\promises\promises.js" />
     <Content Include="pages\datejs\date.js" />
     <Content Include="pages\datejs\datejs.css" />
     <Content Include="pages\datejs\datejs.html" />

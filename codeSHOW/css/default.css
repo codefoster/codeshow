@@ -48,6 +48,27 @@
         color: slateblue;
         margin-bottom: 20px;
     }
+
+/*Swipers*/
+.swiper {
+    width:100%;
+    display: -ms-flexbox;
+    -ms-scroll-snap-x: mandatory snapInterval(0%, 80%);
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+
+.swiper > * {
+    box-sizing: border-box;
+    width: 80%;
+    padding-left: 120px;
+    padding-right: 120px;
+}
+
+    .swiper > * > h2 {
+        margin-bottom: 20px;
+    }
+
 @media screen and (-ms-view-state: snapped) {
     .fragment header[role=banner] {
         -ms-grid-columns: auto 1fr;
