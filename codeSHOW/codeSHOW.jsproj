@@ -116,8 +116,6 @@
     <Content Include="pages\autocomplete\autocomplete.css" />
     <Content Include="pages\autocomplete\autocomplete.html" />
     <Content Include="pages\autocomplete\autocomplete.js" />
-    <Content Include="pages\autocomplete\rxautocomplete.html" />
-    <Content Include="pages\autocomplete\rxautocomplete.js" />
     <Content Include="pages\basicad\basicad.css" />
     <Content Include="pages\basicad\basicad.html" />
     <Content Include="pages\basicad\basicad.js" />
