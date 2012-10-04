@@ -1,3 +1,4 @@
-﻿.fragment section[role=main] > * {
+﻿/* NOTE: be careful of the style prefix on this one... had to call it "fragmentPage" so it doesn't conflict with the 'fragment' class that the navigation framework puts on all pages */
+.fragmentPage section[role=main] > * {
     margin-left: 120px;
 }

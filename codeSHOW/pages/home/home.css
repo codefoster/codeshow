@@ -1,17 +1,20 @@
-﻿    .homepage .pagetitle img {
+﻿.homepage {
+    background-image: url(/images/bits.png);
+}
+    .homepage .pagetitle img {
         height: 70px;
     }
-
-.homepage section[role=main] > * {
-        margin-left: 120px;
-}
 
     .homepage #zoom {
         height: 100%;
     }
 
     .homepage #demosLV {
-        height: 100%;    
+        height: 100%;
+    }
+
+    .homepage #demosLV .win-surface {
+        margin-left: 120px;
     }
 
     .homepage #demosLV .win-groupheader h2 {

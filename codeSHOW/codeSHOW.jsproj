@@ -57,6 +57,7 @@
     </AppxManifest>
     <None Include="codeSHOW_StoreKey.pfx" />
     <Content Include="css\default.css" />
+    <Content Include="images\bits.png" />
     <Content Include="images\headerlogo.png" />
     <Content Include="images\logo.png" />
     <Content Include="images\smalllogo.png" />

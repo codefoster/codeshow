@@ -132,7 +132,7 @@ TODO:
             //programmatically add buttons to the appbar
             var ab;
             options.buttons.forEach(function (i, index) {
-                i.options = i.options || {};
+                i = i || {};
                 i.id = i.id || "button" + index;
                 i.label = i.label || "button" + index;
                 i.section = i.section || "global";
@@ -154,9 +154,9 @@ TODO:
 
                 //onSelectionOf can be passed in with the dom element of a listview (or any other control with a numeric
                 //'selection' property and the button will only be visible when that control has a selection
-                if (i.options.onSelectionOf) {
-                    i.options.onSelectionOf.winControl.addEventListener("selectionchanged", function (args) {
-                        if (i.options.onSelectionOf.winControl.selection.count() > 0) {
+                if (i.onSelectionOf) {
+                    i.onSelectionOf.winControl.addEventListener("selectionchanged", function (args) {
+                        if (i.onSelectionOf.winControl.selection.count() > 0) {
                             b.style.display = "block";
                             appbar.winControl.sticky = true;
                             appbar.winControl.show();

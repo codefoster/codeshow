@@ -115,13 +115,16 @@
                                     var enabled = q("meta[name='enabled']", xhr.response);
                                     enabled = (enabled ? enabled.content == "true" : "true");
 
-                                    if(enabled) result.push({
-                                        key: f.name,
-                                        name: q("title", xhr.response).innerText,
-                                        tags: keywords,
-                                        group: "html",
-                                        difficulty: 0
-                                    });
+                                    if (enabled) {
+                                        var pageTitle = (q("title", xhr.response) ? q("title", xhr.response).innerText : (q(".pagetitle", xhr.response) ? q(".pagetitle", xhr.response).innerText : "Unnamed"));
+                                        result.push({
+                                            key: f.name,
+                                            name: pageTitle,
+                                            tags: keywords,
+                                            group: "html",
+                                            difficulty: 0
+                                        });
+                                    }
                                 }));
                         });
                     WinJS.Promise.join(promises).then(function () {

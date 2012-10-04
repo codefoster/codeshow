@@ -22,6 +22,7 @@
 
         var demosLV = q(".homepage #demosLV").winControl;
         demosLV.itemDataSource = demosList.dataSource;
+        demosLV.selectionMode = "single";
         demosLV.itemTemplate = q(".homepage #itemTemplate");
         demosLV.oniteminvoked = function(e) {
             e.detail.itemPromise.then(function(x) {
@@ -29,5 +30,12 @@
                 WinJS.Navigation.navigate(location, x.data);
             });
         };
+        Ocho.AppBar.set({
+           buttons: [{ label: "See the Code", icon: "page2", onSelectionOf: q(".homepage #demosLV"), click: seeTheCodeClick }]
+        });
+        
+        function seeTheCodeClick(e) {
+            Windows.UI.Popups.MessageDialog("Not done yet. Eventually, this should open a flyout with a code viewer").showAsync();
+        }
     }
 })();
