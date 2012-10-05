@@ -163,6 +163,7 @@ TODO:
                         }
                         else
                             b.style.display = "none";
+                            //TODO: this may need to hide the app bar too... need to store whether it was the cause for it showing
                     });
                     //i.options.onSelectionOf.winControl.selectionchanged();
                 }

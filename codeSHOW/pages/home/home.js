@@ -8,7 +8,10 @@
     WinJS.UI.Pages.define("/pages/home/home.html", {
         ready: function (element, options) {
             bindList(options);
-        }
+        },
+        //unload: function () {
+        //    Ocho.AppBar.set();
+        //}
     });
 
     function bindList(options) {
@@ -30,9 +33,9 @@
                 WinJS.Navigation.navigate(location, x.data);
             });
         };
-        Ocho.AppBar.set({
-           buttons: [{ label: "See the Code", icon: "page2", onSelectionOf: q(".homepage #demosLV"), click: seeTheCodeClick }]
-        });
+        //Ocho.AppBar.set({
+        //   buttons: [{ label: "See the Code", icon: "page2", onSelectionOf: q(".homepage #demosLV"), click: seeTheCodeClick }]
+        //});
         
         function seeTheCodeClick(e) {
             Windows.UI.Popups.MessageDialog("Not done yet. Eventually, this should open a flyout with a code viewer").showAsync();
