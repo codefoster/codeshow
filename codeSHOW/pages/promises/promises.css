@@ -11,3 +11,9 @@
 .promises .section > div > div {
     margin-top: 20px;
 }
+
+.promises .section div.explanation { width: 500px; }
+
+.promises #uses > div {
+    columns: 2;
+}
