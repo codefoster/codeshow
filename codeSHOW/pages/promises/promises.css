@@ -2,12 +2,12 @@
     margin-left: 120px;
 }
 .promises #concept h3 { margin-top: 20px; }
-.promises #concept progress {
+.promises progress {
     width: 400px;
     height: 20px;
     display: block;
     margin-bottom: 10px;
 }
-.promises #concept > div > div {
+.promises .section > div > div {
     margin-top: 20px;
 }

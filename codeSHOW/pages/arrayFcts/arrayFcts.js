@@ -57,6 +57,17 @@
             log("sort");
             var sorted = aReversed.sort();
             log(sorted.join(","));
+            
+            //splice
+            log();
+            log("splice");
+            var aSpliced = a;
+            aSpliced.splice(2, 2, "20", "21");
+            log(aSpliced);
+            
+            //slice
+            //TODO: provide example for slice
+            //TODO: improve the layout of this page
         }
 
     });

@@ -311,9 +311,12 @@
     <None Include="codeSHOW_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
+    <SDKReference Include="Bing.Maps.JavaScript, Version=1.0" />
     <SDKReference Include="LiveSDKHTML, Version=5.0" />
     <SDKReference Include="Microsoft.WinJS.1.0, Version=1.0" />
+    <SDKReference Include="MobileServicesJavaScriptClient, Version=0.2.0.0" />
     <SDKReference Include="MSAdvertisingJS, Version=6.1" />
+    <SDKReference Include="Telerik.UI, Version=2012.1.912" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\$(WMSJSProjectDirectory)\Microsoft.VisualStudio.$(WMSJSProject).targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
