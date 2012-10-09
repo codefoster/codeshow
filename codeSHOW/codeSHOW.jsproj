@@ -132,6 +132,9 @@
     <Content Include="pages\canvaspaint\canvaspaint.css" />
     <Content Include="pages\canvaspaint\canvaspaint.html" />
     <Content Include="pages\canvaspaint\canvaspaint.js" />
+    <Content Include="pages\input\input.css" />
+    <Content Include="pages\input\input.html" />
+    <Content Include="pages\input\input.js" />
     <Content Include="pages\iframes\helloworld.html" />
     <Content Include="pages\crop\crop.css" />
     <Content Include="pages\crop\crop.html" />
@@ -160,6 +163,9 @@
     <Content Include="pages\csscolumns\csscolumns.css" />
     <Content Include="pages\csscolumns\csscolumns.html" />
     <Content Include="pages\csscolumns\csscolumns.js" />
+    <Content Include="pages\progressbar\progressbar.css" />
+    <Content Include="pages\progressbar\progressbar.html" />
+    <Content Include="pages\progressbar\progressbar.js" />
     <Content Include="pages\promises\promises.css" />
     <Content Include="pages\promises\promises.html" />
     <Content Include="pages\promises\promises.js" />
@@ -222,9 +228,9 @@
     <Content Include="pages\jsonFcts\jsonFcts.css" />
     <Content Include="pages\jsonFcts\jsonFcts.html" />
     <Content Include="pages\jsonFcts\jsonFcts.js" />
-    <Content Include="pages\local\local.css" />
-    <Content Include="pages\local\local.html" />
-    <Content Include="pages\local\local.js" />
+    <Content Include="pages\listviews\listviews.css" />
+    <Content Include="pages\listviews\listviews.html" />
+    <Content Include="pages\listviews\listviews.js" />
     <Content Include="pages\mediaqueries\mediaqueries.css" />
     <Content Include="pages\mediaqueries\mediaqueries.html" />
     <Content Include="pages\mediaqueries\mediaqueries.js" />

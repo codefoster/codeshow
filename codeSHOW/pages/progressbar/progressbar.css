@@ -1,0 +1,18 @@
+﻿.progressbar section[role=main] {
+    margin-left: 120px;
+}
+
+.progressbar #determinate progress {
+    width:400px;
+    height: 15px;
+    margin-bottom: 20px;
+}
+
+.progressbar #indeterminate h3 {
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+    
+.progressbar #determinate button {
+    margin: 5px;
+}

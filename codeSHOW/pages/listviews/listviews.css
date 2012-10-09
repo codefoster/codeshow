@@ -1,0 +1,25 @@
+﻿.listviews section[role=main] {
+    margin-left: 120px;
+}
+
+/*Simple*/
+.listviews #simple .win-listview {
+    height: 100%;
+}
+
+.listviews #simple .win-item img  {
+    border:1px solid green;
+    width: 280px;
+    height: 210px;
+}
+
+
+/*Grouped*/
+.listviews #grouped .win-listview {
+    height: 100%;
+}
+
+.listviews #grouped .win-item img {
+    width: 280px;
+    height: 210px;
+}
