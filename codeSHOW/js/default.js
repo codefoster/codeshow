@@ -22,7 +22,7 @@
         //set up the demos list (empty for now)
         app.demosList = new WinJS.Binding.List()
             .createGrouped(function (i) { return i.group; }, function (i) { return i.group; })
-            .createSorted(function (a, b) { return (a.name < b.name ? -1 : 1); });
+            .createSorted(function (a, b) { return (a.name.toLowerCase() < b.name.toLowerCase() ? -1 : 1); });
 
         //start loading the demos
         app.demosLoaded = loadDemos();
