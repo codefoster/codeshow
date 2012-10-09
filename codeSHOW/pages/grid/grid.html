@@ -2,8 +2,8 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <title>Basic Grid</title>
-    <meta name="keywords" content="basic grid layout css" />
+    <title>CSS Grid</title>
+    <meta name="keywords" content="grid layout css" />
 
     <!-- WinJS references -->
     <link href="//Microsoft.WinJS.1.0/css/ui-light.css" rel="stylesheet" />
@@ -21,12 +21,39 @@
                 <span class="pagetitle">Grid</span>
             </h1>
         </header>
-        <section aria-label="Main content" role="main">
-            <div id="grid">
-                <div id="child1">child1</div>
-                <div id="child2">child2</div>
-                <div id="child3">child3</div>
+        <section aria-label="Main content" role="main" class="swiper">
+            <div id="simple">
+                <h2>Simple</h2>
+                <div>
+                    <div>A</div>
+                    <div>B</div>
+                    <div>C</div>
+                    <div>D</div>
+                </div>
             </div>
+
+            <div id="rowspans">
+                <h2>Rowspans</h2>
+                <div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+
+            <div id="fancyGrid">
+                <h2>Fancy</h2>
+                <div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+            <div></div>
         </section>
     </div>
 </body>
