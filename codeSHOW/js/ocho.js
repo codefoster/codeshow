@@ -27,6 +27,7 @@ TODO:
         },
 
         query: function (query, context, options) {
+            //TODO: if the query is a simple id selector then use getelementbyid
             //context should be a dom element... defaults to document
             context = context || document;
             var result = context.querySelectorAll(query);
@@ -70,6 +71,8 @@ TODO:
                 if (this[i] === elem) return true;
             return false;
         },
+        
+        //TODO: see if 'unique' is a more common name for this one
         distinct: function (keyFct) {
             var result = [];
             if (!keyFct) keyFct = function (d) { return d; };
@@ -80,9 +83,24 @@ TODO:
             }
             return result;
         },
+        
+        //TODO: consider naming this one removeById
         remove: function (id) {
             for (var i = 0; i < this.length; i++)
                 if (this[i].id === id) return this.splice(i, 1);
+        },
+        
+        //TODO: implement
+        //return 'count' random array values
+        random: function(count) {
+            count = count | 1; //default count to 1
+            throw "not yet implemented";
+        },
+        
+        //TODO: implement
+        //scrambles the order of the elements in the array
+        shuffle: function() {
+            throw "not yet implemented";
         }
     });
 
@@ -199,6 +217,7 @@ TODO:
             msg = msg != undefined ? msg : "";
             //TODO: if a div#log does not exist then create one and put it at the end of the body
             //TODO: allow a selector to specify what element(s) will be logged to but default to div#log
+            //TODO: consider replacing with WinJS built-in logging
             document.querySelector("div#log").innerHTML += msg + "<br/>";
         },
     });
