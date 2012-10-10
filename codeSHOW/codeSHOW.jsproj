@@ -132,6 +132,9 @@
     <Content Include="pages\canvaspaint\canvaspaint.css" />
     <Content Include="pages\canvaspaint\canvaspaint.html" />
     <Content Include="pages\canvaspaint\canvaspaint.js" />
+    <Content Include="pages\dom\dom.css" />
+    <Content Include="pages\dom\dom.html" />
+    <Content Include="pages\dom\dom.js" />
     <Content Include="pages\input\input.css" />
     <Content Include="pages\input\input.html" />
     <Content Include="pages\input\input.js" />
