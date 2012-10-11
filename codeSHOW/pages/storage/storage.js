@@ -105,7 +105,26 @@
 
 
             //azure mobile services
-            
+            var client = new Microsoft.WindowsAzure.MobileServices.MobileServiceClient(
+                "https://codeshow.azure-mobile.net/",
+                "xGQqIbWxzyzXCCofsFrgdhLPYMCqKn57"
+            );
+
+            var inputAzure = q(".storage #azureMobile input");
+            var storagedemo;
+            client.getTable("appSupport").read()
+                .then(
+                    function(table) { storagedemo = table.filter(function(r) { return r.key === "storagedemo"; })[0]; },
+                    function() { storagedemo = { value: "" }; }
+                )
+                .then(
+                    function () { inputAzure.value = storagedemo.value; }
+                );
+            q(".storage #azureMobile button").onclick = function(e) {
+                storagedemo.value = inputAzure.value;
+                client.getTable("appSupport").update(storagedemo);
+            };
+
 
         },
 
