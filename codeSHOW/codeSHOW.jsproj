@@ -255,6 +255,9 @@
     <Content Include="pages\pushscroll\pushscroll.css" />
     <Content Include="pages\pushscroll\pushscroll.html" />
     <Content Include="pages\pushscroll\pushscroll.js" />
+    <Content Include="pages\search\search.css" />
+    <Content Include="pages\search\search.html" />
+    <Content Include="pages\search\search.js" />
     <Content Include="pages\selectors\selectors.css" />
     <Content Include="pages\selectors\selectors.html" />
     <Content Include="pages\selectors\selectors.js" />
@@ -280,6 +283,9 @@
     <Content Include="pages\stocks\stocks.css" />
     <Content Include="pages\stocks\stocks.html" />
     <Content Include="pages\stocks\stocks.js" />
+    <Content Include="pages\storage\storage.css" />
+    <Content Include="pages\storage\storage.html" />
+    <Content Include="pages\storage\storage.js" />
     <Content Include="pages\swipeSections\swipeSections.css" />
     <Content Include="pages\swipeSections\swipeSections.html" />
     <Content Include="pages\swipeSections\swipeSections.js" />
