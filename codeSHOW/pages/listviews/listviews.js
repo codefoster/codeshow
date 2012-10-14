@@ -40,6 +40,26 @@
             lv.itemTemplate = q(".listviews #grouped .itemtemplate");
             lv.groupDataSource = groupedList.groups.dataSource;
             lv.itemHeaderTemplate = q(".listviews #grouped .headertemplate");
+            
+            //asymmetric
+            var images = [
+                { url: "/pages/listviews/images/01.jpg", type: "bigsquare" },
+                { url: "/pages/listviews/images/02.jpg", type: "square" },
+                { url: "/pages/listviews/images/03.jpg", type: "square" },
+                { url: "/pages/listviews/images/04.jpg", type: "tall" },
+                { url: "/pages/listviews/images/05.jpg", type: "square" },
+                { url: "/pages/listviews/images/06.jpg", type: "square" },
+                { url: "/pages/listviews/images/07.jpg", type: "square" },
+                { url: "/pages/listviews/images/08.jpg", type: "wide" },
+                { url: "/pages/listviews/images/09.jpg", type: "square" },
+                { url: "/pages/listviews/images/10.jpg", type: "square" }
+            ];
+
+            lv = q(".listviews #asymmetric .win-listview").winControl;
+            lv.itemDataSource = new WinJS.Binding.List(images).dataSource;
+            lv.itemTemplate = q(".listviews #asymmetric #imageTemplate");
+            lv.layout.groupInfo = function () { return { enableCellSpanning: true, cellWidth: 180, cellHeight: 180 }; };
+
         },
     });
 })();

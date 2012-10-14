@@ -33,6 +33,7 @@
                     </div>
                 </div>
             </div>
+
             <div id="grouped">
                 <h2>Grouped</h2>
                 <div data-win-control="WinJS.UI.ListView"></div>
@@ -44,6 +45,16 @@
                 </div>
                 <div class="headertemplate" data-win-control="WinJS.Binding.Template">
                     <div data-win-bind="innerText:name"></div>
+                </div>
+            </div>
+
+            <div id="asymmetric">
+                <h2>Asymmetric</h2>
+                <div data-win-control="WinJS.UI.ListView"></div>
+                <div id="imageTemplate" data-win-control="WinJS.Binding.Template">
+                    <div data-win-bind="className:type;">
+                        <img data-win-bind="src:url;className:type;" />
+                    </div>
                 </div>
             </div>
             <div></div>

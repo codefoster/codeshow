@@ -2,6 +2,10 @@
     margin-left: 120px;
 }
 
+.listviews .win-listview {
+    border: 2px solid lightgray;
+}
+
 /*Simple*/
 .listviews #simple .win-listview {
     height: 100%;
@@ -20,6 +24,18 @@
 }
 
 .listviews #grouped .win-item img {
-    width: 280px;
-    height: 210px;
+    width: 252px;
+    height: 189px;
 }
+
+/* Asymmetrical */
+
+.listviews #asymmetric .win-listview {
+    height: 570px;
+    width: 950px;
+}
+
+.listviews #asymmetric .win-item .square { width: 180px; height: 180px; }
+.listviews #asymmetric .win-item .tall { width: 180px; height: 370px; }
+.listviews #asymmetric .win-item .wide { width: 370px; height: 180px; }
+.listviews #asymmetric .win-item .bigsquare { width: 370px; height: 370px; }
