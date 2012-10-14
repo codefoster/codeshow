@@ -214,9 +214,6 @@
     <Content Include="pages\grid\grid.css" />
     <Content Include="pages\grid\grid.html" />
     <Content Include="pages\grid\grid.js" />
-    <Content Include="pages\heroimages\heroimages.css" />
-    <Content Include="pages\heroimages\heroimages.html" />
-    <Content Include="pages\heroimages\heroimages.js" />
     <Content Include="pages\home\home.css" />
     <Content Include="pages\home\home.html" />
     <Content Include="pages\home\home.js" />
