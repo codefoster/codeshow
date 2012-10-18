@@ -1,13 +1,3 @@
-﻿.textprops section[role=main] > div {
+﻿.textprops section[role=main] {
     margin-left: 120px;
-    height: 600px;
-    column-width: 300px;
-    column-fill: auto;
-    overflow-x: scroll;
-}
-
-.textprops section[role=main] > div h2 {
-    margin-top: 12px; 
-    color: bisque;
-    font-weight: bold;
 }
