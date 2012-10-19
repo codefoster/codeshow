@@ -29,6 +29,8 @@ TODO:
         query: function (query, context, options) {
             //TODO: if the query is a simple id selector then use getelementbyid
             //context should be a dom element... defaults to document
+            //TODO: see if "element" exists and (if context was not provided) use "element" instead of document
+            //because it's scoped inside of ready/updateLayout/etc. functions
             context = context || document;
             var result = context.querySelectorAll(query);
             if (result.length > 1) return Array.prototype.slice.call(result);

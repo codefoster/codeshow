@@ -7,14 +7,15 @@
 
     WinJS.UI.Pages.define("/pages/home/home.html", {
         ready: function (element, options) {
-            bindList(options);
+            bindList(element, options);
         },
-        //unload: function () {
-        //    Ocho.AppBar.set();
-        //}
+        unload: function () {
+            q("#appbar").winControl.sticky = false;
+            q("#appbar").winControl.hide();
+        }
     });
 
-    function bindList(options) {
+    function bindList(element, options) {
         var demosList = app.demosList;
         options = options || { };
         if (options.queryText)
@@ -23,22 +24,36 @@
                 return result;
             });
 
-        var demosLV = q(".homepage #demosLV").winControl;
+        var demosLV = q("#demosLV", element).winControl;
         demosLV.itemDataSource = demosList.dataSource;
         demosLV.selectionMode = "single";
-        demosLV.itemTemplate = q(".homepage #itemTemplate");
+        demosLV.itemTemplate = q("#itemTemplate", element);
         demosLV.oniteminvoked = function(e) {
             e.detail.itemPromise.then(function(x) {
-                var location = format("/pages/{0}/{0}.html", x.data.key);
+                var location = format("/demos/{0}/{0}.html", x.data.key);
                 WinJS.Navigation.navigate(location, x.data);
             });
         };
-        //Ocho.AppBar.set({
-        //   buttons: [{ label: "See the Code", icon: "page2", onSelectionOf: q(".homepage #demosLV"), click: seeTheCodeClick }]
-        //});
+        demosLV.onselectionchanged = function(e) {
+            if (demosLV.selection.count() > 0) {
+                q("#appbar").winControl.sticky = true;
+                q("#appbar").winControl.show();
+            } else {
+                q("#appbar").winControl.sticky = false;
+                q("#appbar").winControl.hide();
+            }
+        };
+        Ocho.AppBar.set({
+           buttons: [{ label: "See the Code", icon: "page2", click: seeTheCodeClick }]
+        });
         
         function seeTheCodeClick(e) {
-            Windows.UI.Popups.MessageDialog("Not done yet. Eventually, this should open a flyout with a code viewer").showAsync();
+            //get the selected item and pass the demo name in to the navigate function below
+            var demo;
+            q("#demosLV").winControl.selection.getItems().then(function (selectedItems) {
+                demo = selectedItems[0].data;
+            });
+            WinJS.Navigation.navigate("/pages/demoCode/demoCode.html", demo);
         }
     }
 })();

@@ -97,7 +97,7 @@
     }
     function loadDemos() {
         return new WinJS.Promise(function(c, e, p) {
-            Windows.ApplicationModel.Package.current.installedLocation.getFolderAsync("pages")
+            Windows.ApplicationModel.Package.current.installedLocation.getFolderAsync("demos")
                 .then(function (pagesFolder) {
                     return pagesFolder.getFoldersAsync();
                 })
@@ -105,9 +105,9 @@
                     var result = [];
                     var promises = [];
                     folders
-                        .filter(function (f) { return f.name !== "home"; })
+                        //.filter(function (f) { return f.name !== "home"; })
                         .forEach(function (f) {
-                            promises.push(WinJS.xhr({ url: "/pages/" + f.name + "/" + f.name + ".html", responseType: "document" })
+                            promises.push(WinJS.xhr({ url: "/demos/" + f.name + "/" + f.name + ".html", responseType: "document" })
                                 .then(function (xhr) {
                                     var keywords = q("meta[name='keywords']", xhr.response);
                                     keywords = (keywords ? keywords.content : "");
