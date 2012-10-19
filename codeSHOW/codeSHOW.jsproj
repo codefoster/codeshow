@@ -57,9 +57,9 @@
     </AppxManifest>
     <None Include="codeSHOW_StoreKey.pfx" />
     <Content Include="css\default.css" />
-    <Content Include="demos\adtypes\adtypes.css" />
-    <Content Include="demos\adtypes\adtypes.html" />
-    <Content Include="demos\adtypes\adtypes.js" />
+    <Content Include="demos\ads\ads.css" />
+    <Content Include="demos\ads\ads.html" />
+    <Content Include="demos\ads\ads.js" />
     <Content Include="demos\animations\animations.css" />
     <Content Include="demos\animations\animations.html" />
     <Content Include="demos\animations\animations.js" />
@@ -78,9 +78,6 @@
     <Content Include="demos\autocomplete\autocomplete.css" />
     <Content Include="demos\autocomplete\autocomplete.html" />
     <Content Include="demos\autocomplete\autocomplete.js" />
-    <Content Include="demos\basicad\basicad.css" />
-    <Content Include="demos\basicad\basicad.html" />
-    <Content Include="demos\basicad\basicad.js" />
     <Content Include="demos\binding\binding.css" />
     <Content Include="demos\binding\binding.html" />
     <Content Include="demos\binding\binding.js" />
@@ -323,6 +320,9 @@
     <Content Include="pages\home\home.html" />
     <Content Include="pages\home\home.js" />
     <Content Include="default.html" />
+    <Content Include="pages\hub\hub.css" />
+    <Content Include="pages\hub\hub.html" />
+    <Content Include="pages\hub\hub.js" />
     <Content Include="Scripts\datajs-1.0.3.js" />
     <Content Include="Scripts\datajs-1.0.3.min.js" />
     <None Include="codeSHOW_TemporaryKey.pfx" />

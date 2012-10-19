@@ -112,6 +112,9 @@
                                     var keywords = q("meta[name='keywords']", xhr.response);
                                     keywords = (keywords ? keywords.content : "");
 
+                                    var description = q("meta[name='description']", xhr.response);
+                                    description = (description ? description.content : "");
+
                                     var enabled = q("meta[name='enabled']", xhr.response);
                                     enabled = (enabled ? enabled.content == "true" : "true");
 
@@ -120,6 +123,7 @@
                                         result.push({
                                             key: f.name,
                                             name: pageTitle,
+                                            description: description,
                                             tags: keywords,
                                             group: "html",
                                             difficulty: 0

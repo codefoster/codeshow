@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Windows Ad SDK</title>
+    <meta name="keywords" content="advertising advertise ads ad basic" />
+    <meta name="description" content="See how to implement ads from the Windows Ad SDK." />
+
+    <!-- WinJS references -->
+    <link href="//Microsoft.WinJS.1.0/css/ui-dark.css" rel="stylesheet" />
+    <script src="//Microsoft.WinJS.1.0/js/base.js"></script>
+    <script src="//Microsoft.WinJS.1.0/js/ui.js"></script>
+
+    <link href="ads.css" rel="stylesheet" />
+    <script src="ads.js"></script>
+</head>
+<body>
+    <div class="ads fragment">
+        <header aria-label="Header content" role="banner">
+            <button class="win-backbutton" aria-label="Back" disabled type="button"></button>
+            <h1 class="titlearea win-type-ellipsis">
+                <span class="pagetitle">Windows Ad SDK</span>
+            </h1>
+        </header>
+        <section aria-label="Main content" role="main" class="swiper">
+            <div>
+                <h2>Basic ad inclusion</h2>
+                <div style="width:250px; height:250px;" data-win-control="MicrosoftNSJS.Advertising.AdControl" data-win-options="{ applicationId: 'test_client', adUnitId: 'Image_250x250' }"></div>
+            </div>
+            <div>
+                <h2>All ad types</h2>
+                <div id="list"></div>
+            </div>
+            <div></div>
+        </section>
+    </div>
+</body>
+</html>

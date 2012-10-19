@@ -1,13 +1,13 @@
-﻿.adtypes section[role=main] > * {
+﻿.ads section[role=main] {
     margin-left: 120px;
 }
 
-.adtypes #list {
+.ads #list {
     display:-ms-flexbox;
     overflow-x: scroll;
     overflow-y: hidden;
 }
 
-.adtypes #list > div {
+.ads #list > div {
     margin: 10px;
 }
