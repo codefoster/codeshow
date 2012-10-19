@@ -91,7 +91,7 @@
     }
     function addSettingsContract() {
         app.onsettings = function (e) {
-            e.detail.applicationcommands = { "preferencesDiv": { title: "Preferences", href: "/pages/settings/settings.html" } };
+            e.detail.applicationcommands = { "preferencesDiv": { title: "Preferences", href: "/demos/settings/settings.html" } };
             WinJS.UI.SettingsFlyout.populateSettings(e);
         };
     }

@@ -135,6 +135,9 @@
     <Content Include="demos\flexbox\flexbox.css" />
     <Content Include="demos\flexbox\flexbox.html" />
     <Content Include="demos\flexbox\flexbox.js" />
+    <Content Include="demos\flipview\flipview.css" />
+    <Content Include="demos\flipview\flipview.html" />
+    <Content Include="demos\flipview\flipview.js" />
     <Content Include="demos\fragment\fragment.css" />
     <Content Include="demos\fragment\fragment.html" />
     <Content Include="demos\fragment\fragment.js" />
