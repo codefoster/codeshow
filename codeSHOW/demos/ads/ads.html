@@ -7,7 +7,7 @@
     <meta name="description" content="See how to implement ads from the Windows Ad SDK." />
 
     <!-- WinJS references -->
-    <link href="//Microsoft.WinJS.1.0/css/ui-dark.css" rel="stylesheet" />
+    <link href="//Microsoft.WinJS.1.0/css/ui-light.css" rel="stylesheet" />
     <script src="//Microsoft.WinJS.1.0/js/base.js"></script>
     <script src="//Microsoft.WinJS.1.0/js/ui.js"></script>
 
@@ -25,10 +25,12 @@
         <section aria-label="Main content" role="main" class="swiper">
             <div>
                 <h2>Basic ad inclusion</h2>
+                <div class="explanation">After installing the ad SDK, including an ad in your app isn't rocket science.</div>
                 <div style="width:250px; height:250px;" data-win-control="MicrosoftNSJS.Advertising.AdControl" data-win-options="{ applicationId: 'test_client', adUnitId: 'Image_250x250' }"></div>
             </div>
             <div>
                 <h2>All ad types</h2>
+                <div class="explanation">Following is a list of all of the Windows Ad SDK ad types. Click one to see its default behavior. Some are links. Others are full screen videos.</div>
                 <div id="list"></div>
             </div>
             <div></div>
