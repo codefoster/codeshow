@@ -6,6 +6,7 @@
     WinJS.UI.Pages.define("/pages/home/home.html", {
         ready: function (element, options) {
             bindList(element, options);
+            applySettings();
         },
         unload: function () {
             q("#appbar").winControl.sticky = false;
@@ -55,6 +56,14 @@
             });
             WinJS.Navigation.navigate("/pages/demoCode/demoCode.html", demo);
         }
+    }
+    
+    function applySettings() {
+        document.styleSheets.toArray()
+            .first(function (ss) { return ss.href.endsWith("home.css"); })
+            .rules.toArray()
+            .first(function (r) { return r.selectorText == ".homepage #demosLV .win-item"; })
+            .style.backgroundColor = appdata.roamingSettings.values["tileColor"];
     }
 
     WinJS.Namespace.define("codeSHOW.Pages.Home", {

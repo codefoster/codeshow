@@ -115,6 +115,16 @@ TODO:
         //scrambles the order of the elements in the array
         shuffle: function() {
             throw "not yet implemented";
+        },
+        
+        toArray: function() {
+            return Array.prototype.slice.call(this);
+        },
+        
+        first: function(fct) {
+            fct || (fct = function (item) { return item; });
+            var result = this.filter(fct);
+            if(result.length > 0) return result[0];
         }
     });
 

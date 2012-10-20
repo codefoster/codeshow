@@ -146,9 +146,12 @@ var nav = WinJS.Navigation;
 
 var q = Ocho.Utilities.query;
 var format = Ocho.Utilities.format;
-    
+
 String.prototype.startsWith = Ocho.String.startsWith;
 String.prototype.endsWith = Ocho.String.endsWith;
 String.prototype.trim = Ocho.String.trim;
 Array.prototype.contains = Ocho.Array.contains;
 Array.prototype.distinct = Ocho.Array.distinct;
+Array.prototype.first = Ocho.Array.first;
+StyleSheetList.prototype.toArray = Ocho.Array.toArray;
+MSCSSRuleList.prototype.toArray = Ocho.Array.toArray;
