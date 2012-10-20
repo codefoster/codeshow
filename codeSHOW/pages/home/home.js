@@ -19,7 +19,7 @@
         options = options || { };
         if (options.queryText)
             demosList = demosList.createFiltered(function(i) {
-                var result = i.tags && i.tags.split(" ").contains(options.queryText);
+                var result = i.keywords && i.keywords.split(" ").contains(options.queryText);
                 return result;
             });
 

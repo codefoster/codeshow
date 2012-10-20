@@ -69,17 +69,17 @@ var nav = WinJS.Navigation;
 
         //make sure demos have been loaded and then make search terms out of their keywords
         app.demosLoaded.then(function () {
-            var tags = [];
+            var keywords = [];
             app.demosList.forEach(function (d) {
-                if (d.tags)
-                    d.tags.split(" ").forEach(function (t) {
-                        tags.push(t);
+                if (d.keywords)
+                    d.keywords.split(" ").forEach(function (k) {
+                        keywords.push(k);
                     });
             });
             
             searchPane.onsuggestionsrequested = function (e) {
                 e.request.searchSuggestionCollection.appendQuerySuggestions(
-                    tags.distinct().filter(function (t) { return t.startsWith(e.queryText); })
+                    keywords.distinct().filter(function (k) { return k.startsWith(e.queryText); })
                 );
             };
 
@@ -112,6 +112,9 @@ var nav = WinJS.Navigation;
                                     var keywords = q("meta[name='keywords']", xhr.response);
                                     keywords = (keywords ? keywords.content : "");
 
+                                    var tags = q("meta[name='tags']", xhr.response);
+                                    tags = (tags ? tags.content : "");
+
                                     var description = q("meta[name='description']", xhr.response);
                                     description = (description ? description.content : "");
 
@@ -124,9 +127,8 @@ var nav = WinJS.Navigation;
                                             key: f.name,
                                             name: pageTitle,
                                             description: description,
-                                            tags: keywords,
-                                            group: "html",
-                                            difficulty: 0
+                                            keywords: keywords,
+                                            tags: tags
                                         });
                                     }
                                 }));
