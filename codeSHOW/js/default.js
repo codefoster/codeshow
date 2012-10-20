@@ -91,7 +91,10 @@ var nav = WinJS.Navigation;
     }
     function addSettingsContract() {
         app.onsettings = function (e) {
-            e.detail.applicationcommands = { "preferencesDiv": { title: "Preferences", href: "/demos/settings/settings.html" } };
+            e.detail.applicationcommands = {
+                 "preferencesDiv": { title: "Preferences", href: "/demos/settings/settings.html" },
+                 "aboutDiv": { title: "About", href: "/pages/about/about.html" }
+            };
             WinJS.UI.SettingsFlyout.populateSettings(e);
         };
     }
