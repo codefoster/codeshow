@@ -3,8 +3,6 @@
 (function () {
     "use strict";
 
-    var app = WinJS.Application;
-
     WinJS.UI.Pages.define("/pages/home/home.html", {
         ready: function (element, options) {
             bindList(element, options);
@@ -12,6 +10,7 @@
         unload: function () {
             q("#appbar").winControl.sticky = false;
             q("#appbar").winControl.hide();
+            Ocho.AppBar.set();
         }
     });
 
@@ -43,8 +42,9 @@
                 q("#appbar").winControl.hide();
             }
         };
+
         Ocho.AppBar.set({
-           buttons: [{ label: "See the Code", icon: "page2", click: seeTheCodeClick }]
+           buttons: [{ label: "See the Code", section: "selection", icon: "page2", click: seeTheCodeClick }]
         });
         
         function seeTheCodeClick(e) {
@@ -56,4 +56,12 @@
             WinJS.Navigation.navigate("/pages/demoCode/demoCode.html", demo);
         }
     }
+
+    WinJS.Namespace.define("codeSHOW.Pages.Home", {
+        changeColor: function(color) {
+            q("#demosLV .win-item").forEach(function(i) {
+                i.style.backgroundColor = color;
+            });
+        }
+    });
 })();

@@ -29,8 +29,24 @@
                 <div class="win-settings-section">
                     <h3>Tile Color</h3>
                     <p>Choose the tile color for your home page</p>
-                    <div id="tileColors"><div class="selected"></div><div></div><div></div><div></div><div></div><div></div></div>
+                    <div id="tileColors"><div></div><div></div><div></div><div></div><div></div><div></div></div>
                 </div>
+                <div class="win-settings-section">
+                    <h3>Group by tag</h3>
+                    <div id="tglTagGroup" data-win-control="WinJS.UI.ToggleSwitch" 
+                        data-win-options="{checked:false}">
+                    </div>
+                </div>
+                <div class="win-settings-section">
+                    <h3>Sort order</h3>
+                    <select id="sortBy" aria-label="Demo sort order select control">
+                        <option value="name" selected>Name</option>
+                        <option value="date">Date added</option>
+                        <option value="rating">Rating</option>
+                    </select>
+                </div>
+
+
                 <div class="win-settings-section" style="display:none;">
                     <h3>Toggle switch</h3>
                     <p>Use toggle switches to let users set Boolean values.</p>
@@ -100,6 +116,7 @@
                 </div>
             </div>
         </div>
+        <!-- ENDSETTINGSFLYOUT -->
 
         <!-- The following will show if this page is directly navigated to -->
         <header aria-label="Header content" role="banner">

@@ -63,6 +63,18 @@ TODO:
             // type values: Object, Null, Undefined, String, Number, Boolean, Date, Array, RegExp, Function...  
             return (Object.prototype.toString.call(obj).slice(8, -1) === type);
         },
+        
+        hex2rgb: function (col) {
+            var r, g, b;
+            if (col.charAt(0) == '#') col = col.substr(1);
+            r = col.charAt(0) + col.charAt(1);
+            g = col.charAt(2) + col.charAt(3);
+            b = col.charAt(4) + col.charAt(5);
+            r = parseInt(r, 16);
+            g = parseInt(g, 16);
+            b = parseInt(b, 16);
+            return 'rgb(' + r + ',' + g + ',' + b + ')';
+        }
 
 
     });

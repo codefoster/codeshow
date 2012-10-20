@@ -1,11 +1,11 @@
-﻿// For an introduction to the Navigation template, see the following documentation:
-// http://go.microsoft.com/fwlink/?LinkId=232506
+﻿var app = WinJS.Application;
+var appdata = Windows.Storage.ApplicationData.current;
+var activation = Windows.ApplicationModel.Activation;
+var nav = WinJS.Navigation;
+
 (function () {
     "use strict";
 
-    var app = WinJS.Application;
-    var activation = Windows.ApplicationModel.Activation;
-    var nav = WinJS.Navigation;
     WinJS.strictProcessing();
 
     window.onkeyup = function (e) {
@@ -132,11 +132,6 @@
                                 }));
                         });
                     WinJS.Promise.join(promises).then(function () {
-                        var colors = ["#0098ab", "#0070a9", "#d9532c", "#a400ac", "#009086", "#5838b4", "#ae193e", "#2c86ee", "#009c00"];
-                        result.forEach(function (i) {
-                            //i.tileColor = colors[Math.floor(Math.random() * colors.length)];
-                            i.tileColor = "#336666";
-                        });
                         result.forEach(function (r) { app.demosList.push(r); });
                         c();
                     });

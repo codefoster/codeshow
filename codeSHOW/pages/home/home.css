@@ -21,7 +21,7 @@
         width: 200px;
     }
 
-    .homepage #demosLV .win-item .tile {
+    .homepage #demosLV .win-item {
         width: 250px;
         height: 100px;
         background-color: slategrey;
@@ -37,7 +37,7 @@
     height: 100%;
 }
 
-.homepage #tagsLV .win-item > div {
+.homepage #tagsLV .win-item {
     width: 100px;
     height: 40px;
     background-color: darkorange;
