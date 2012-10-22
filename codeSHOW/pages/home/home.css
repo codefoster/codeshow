@@ -1,25 +1,10 @@
 ﻿.homepage {
-    
 }
-    .homepage .pagetitle img {
-        height: 70px;
-    }
-
-    .homepage #zoom {
-        height: 100%;
-    }
-
-    .homepage #demosLV {
-        height: 100%;
-    }
-
-    .homepage #demosLV .win-surface {
-        margin-left: 120px;
-    }
-
-    .homepage #demosLV .win-groupheader h2 {
-        width: 200px;
-    }
+    .homepage .pagetitle img { height: 70px; }
+    .homepage #zoom { height: 100%; }
+    .homepage #demosLV { height: 100%; }
+    .homepage #demosLV .win-surface { margin-left: 120px; }
+.homepage #demosLV .win-groupheader h2 { width: 200px; }
 
     .homepage #demosLV .win-item {
         width: 250px;
@@ -29,13 +14,9 @@
         color: white;
     }
 
-        .homepage #demosLV .win-item h3 {
-            font-size: 22px;
-        }
+        .homepage #demosLV .win-item h3 { font-size: 22px; }
 
-.homepage #tagsLV {
-    height: 100%;
-}
+.homepage #tagsLV { height: 100%; }
 
 .homepage #tagsLV .win-item {
     width: 100px;
@@ -45,13 +26,9 @@
 }
 
 @media screen and (-ms-view-state: snapped) {
-    .homepage section[role=main] {
-        margin-left: 20px;
-    }
+    .homepage section[role=main] { margin-left: 20px; }
 }
 
 @media screen and (-ms-view-state: portrait) {
-    .homepage section[role=main] {
-        margin-left: 100px;
-    }
+    .homepage section[role=main] { margin-left: 100px; }
 }

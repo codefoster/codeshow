@@ -18,7 +18,7 @@
         };
 
         //tile color
-        var colors = ["#0098ab", "#0070a9", "#d9532c", "#a400ac", "#009086", "#5838b4", "#ae193e", "#2c86ee", "#009c00"];
+        var colors = ["#020410", "#436580", "#6294ad", "#d9532c", "#a400ac", "#009086"];
         r["tileColor"] || (r["tileColor"] = colors[0]); //default
         tileColors = q("#tileColors > div");
         tileColors.forEach(function (d, i) {

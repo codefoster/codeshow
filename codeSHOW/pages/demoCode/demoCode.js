@@ -22,6 +22,7 @@
                             divSection.appendChild(h2);
 
                             var divCode = document.createElement("div");
+                            divCode.id = "divCode";
                             divCode.style.overflowY = "auto";
                             divCode.style.paddingRight = "20px";
                             divCode.style.height = "calc(100% - 70px)";

@@ -12,7 +12,7 @@
 
     function init() {
         initSection1();
-        //initSection2();
+        initSection2();
     }
 
     function initSection1() {

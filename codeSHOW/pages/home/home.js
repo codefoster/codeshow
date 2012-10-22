@@ -67,6 +67,6 @@
     }
 
     WinJS.Namespace.define("codeSHOW.Pages.Home", {
-        applySettings: applySettings
+        applySettings: applySettings //allow the settings pane to call this to change the tile color
     });
 })();
