@@ -14,6 +14,7 @@
     <script src="//Microsoft.WinJS.1.0/js/ui.js"></script>
 
     <link href="authentication.css" rel="stylesheet" />
+    <script src="/MobileServicesJavaScriptClient/MobileServices.js"></script>
     <script src="authentication.js"></script>
 </head>
 <body>
@@ -24,10 +25,13 @@
                 <span class="pagetitle">Authentication</span>
             </h1>
         </header>
-        <section aria-label="Main content" role="main">
-            <div class="explanation">Click the button below to sign in to your Microsoft account.</div>
-            <button id="btn">Sign in to Live</button>
-            <div id="log"></div>
+        <section aria-label="Main content" role="main" class="swiper">
+            <div id="section1">
+                <h2>Windows Live SDK</h2>
+                <div class="explanation">Click the button below to sign in to your Microsoft account.</div>
+                <button id="btn">Sign in to Live</button>
+                <div id="log"></div>
+            </div>
         </section>
     </div>
 </body>

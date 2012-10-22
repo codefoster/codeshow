@@ -27,7 +27,7 @@
                 tileColors.forEach(function (d) { d.classList.remove("selected"); });
                 e.target.classList.add("selected");
                 r["tileColor"] = e.target.style.backgroundColor;
-                codeSHOW.Pages.Home.changeColor(e.target.style.backgroundColor);
+                codeSHOW.Pages.Home.applySettings();
             };
         });
         

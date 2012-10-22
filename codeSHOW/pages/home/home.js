@@ -67,10 +67,6 @@
     }
 
     WinJS.Namespace.define("codeSHOW.Pages.Home", {
-        changeColor: function(color) {
-            q("#demosLV .win-item").forEach(function(i) {
-                i.style.backgroundColor = color;
-            });
-        }
+        applySettings: applySettings
     });
 })();
