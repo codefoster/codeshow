@@ -1,8 +1,4 @@
-﻿.dragndrop p {
-    margin-left: 120px;
-}
-
-.dragndrop #dragTarget {
+﻿.dragndrop #dragTarget {
     background-image: url(/images/logo.png);
     background-repeat: no-repeat;
     background-size: contain;

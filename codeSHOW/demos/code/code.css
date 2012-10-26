@@ -1,8 +1,4 @@
-﻿.code section[role=main] {
-    margin-left: 120px;
-}
-
-.code #codeViewer {
+﻿.code #codeViewer {
     height: 600px;
     overflow: scroll;
 }

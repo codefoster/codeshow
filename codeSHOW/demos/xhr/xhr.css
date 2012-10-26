@@ -1,8 +1,4 @@
-﻿.xhr section[role=main] > * {
-    margin-left: 120px;
-}
-
-.xhr section[role=main] > div {
+﻿.xhr section[role=main] > div {
     display: -ms-grid;
     -ms-grid-rows: 1fr 1fr 1fr 1fr;
     -ms-grid-columns: 1fr 1fr;

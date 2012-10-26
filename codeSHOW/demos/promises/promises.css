@@ -1,7 +1,4 @@
-﻿.promises section[role=main] {
-    margin-left: 120px;
-}
-.promises #concept h3 { margin-top: 20px; }
+﻿.promises #concept h3 { margin-top: 20px; }
 .promises progress {
     width: 400px;
     height: 20px;

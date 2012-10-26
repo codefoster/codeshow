@@ -1,8 +1,4 @@
-﻿.grid section[role=main] {
-    margin-left: 120px;
-}
-
-/* Simple */
+﻿/* Simple */
 .grid #simple > div { display: -ms-grid; -ms-grid-columns: 250px 250px; -ms-grid-rows: 250px 250px; }
 .grid #simple > div > div { border: 1px solid gray; }
 .grid #simple > div > div:nth-child(2) { -ms-grid-column: 2; -ms-grid-row: 1; }

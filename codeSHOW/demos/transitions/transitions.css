@@ -1,8 +1,4 @@
-﻿.transitions section[role=main] {
-    margin-left: 120px;
-}
-
-.transitions .box {
+﻿.transitions .box {
     display: table-cell;
     text-align: center;
     vertical-align: middle;

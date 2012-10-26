@@ -2,41 +2,58 @@
 
 (function () {
     "use strict";
-
+    var _element, _options,_demosLV;
     WinJS.UI.Pages.define("/pages/home/home.html", {
         ready: function (element, options) {
-            bindList(element, options);
+            _element = element;
+            _options = options;
+            _demosLV = q("#demosLV", _element).winControl;
+            bindList();
+            layoutList(Windows.UI.ViewManagement.ApplicationView.value);
             applySettings();
         },
         unload: function () {
             q("#appbar").winControl.sticky = false;
             q("#appbar").winControl.hide();
             Ocho.AppBar.set();
+        },
+        updateLayout: function (element, viewState, lastViewState) {
+            layoutList(viewState);
         }
     });
 
-    function bindList(element, options) {
+    function layoutList(viewState) {
+        if (viewState == Windows.UI.ViewManagement.ApplicationViewState.snapped) {
+            _demosLV.itemTemplate = q("#snappedItemTemplate", _element);
+            _demosLV.layout = new WinJS.UI.ListLayout();
+        }
+        else {
+            _demosLV.itemTemplate = q("#itemTemplate", _element);
+            _demosLV.layout = new WinJS.UI.GridLayout();
+            _demosLV.layout.groupInfo = function () { return { enableCellSpanning: true, cellWidth: 250, cellHeight: 120 }; };
+        }
+    }
+    
+    function bindList() {
         var demosList = app.demosList;
-        options = options || { };
+        var options = _options || {};
         if (options.queryText)
             demosList = demosList.createFiltered(function(i) {
                 var result = i.keywords && i.keywords.split(" ").contains(options.queryText);
                 return result;
             });
 
-        var demosLV = q("#demosLV", element).winControl;
-        demosLV.itemDataSource = demosList.dataSource;
-        demosLV.selectionMode = "single";
-        demosLV.itemTemplate = q("#itemTemplate", element);
-        demosLV.layout.groupInfo = function () { return { enableCellSpanning: true, cellWidth: 250, cellHeight: 120 }; };
-        demosLV.oniteminvoked = function (e) {
+        _demosLV.itemDataSource = demosList.dataSource;
+        _demosLV.selectionMode = "single";
+        _demosLV.oniteminvoked = function (e) {
             e.detail.itemPromise.then(function(x) {
                 var location = format("/demos/{0}/{0}.html", x.data.key);
+                Windows.UI.ViewManagement.ApplicationView.tryUnsnap();
                 WinJS.Navigation.navigate(location, x.data);
             });
         };
-        demosLV.onselectionchanged = function(e) {
-            if (demosLV.selection.count() > 0) {
+        _demosLV.onselectionchanged = function (e) {
+            if (_demosLV.selection.count() > 0) {
                 q("#appbar").winControl.sticky = true;
                 q("#appbar").winControl.show();
             } else {

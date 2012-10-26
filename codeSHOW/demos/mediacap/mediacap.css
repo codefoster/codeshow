@@ -1,15 +1,7 @@
-﻿.mediacap section[role=main] > div {
-    margin-left: 120px;
-}
-
-.mediacap .item {
+﻿.mediacap .item {
     display: -ms-grid;
     -ms-grid-columns: 300px 30px 340px;
 }
-
-    .mediacap .item :nth-child(1) {
-        
-    }
 
     .mediacap .item :nth-child(2) {
         width: 320px;

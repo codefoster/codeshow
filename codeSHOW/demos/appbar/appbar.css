@@ -1,8 +1,4 @@
-﻿.appbar section[role=main] > * {
-    margin-left: 120px;
-}
-
-.appbar #controls {
+﻿.appbar #controls {
     margin-bottom: 30px;
 }
 

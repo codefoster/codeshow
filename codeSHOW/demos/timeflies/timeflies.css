@@ -1,8 +1,4 @@
-﻿.timeflies p {
-    margin-left: 120px;
-}
-
-.timeflies .timeFliesText {
+﻿.timeflies .timeFliesText {
     font-size: 48px;
     color: red;
     font-family: Consolas, monospace;

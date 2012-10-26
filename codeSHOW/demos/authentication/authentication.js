@@ -53,13 +53,13 @@
             //var message = "You are now logged in as: " + userId;
             //var dialog = new Windows.UI.Popups.MessageDialog(message);
             //dialog.showAsync().done(complete);
-            debugger;
+            
         }, function (error) {
             //userId = null;
             //var dialog = new Windows.UI.Popups
             //    .MessageDialog("An error occurred during login", "Login Required");
             //dialog.showAsync().done(complete);
-            debugger;
+            
         });
     };
 })();

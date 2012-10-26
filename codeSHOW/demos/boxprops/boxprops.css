@@ -1,5 +1,4 @@
 ﻿.boxprops section[role=main] > div {
-    margin-left: 120px;
     height: 600px;
     column-width: 300px;
     column-fill: auto;

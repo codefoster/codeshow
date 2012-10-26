@@ -1,8 +1,4 @@
-﻿.progressbar section[role=main] {
-    margin-left: 120px;
-}
-
-.progressbar #determinate progress {
+﻿.progressbar #determinate progress {
     width:400px;
     height: 15px;
     margin-bottom: 20px;

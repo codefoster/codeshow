@@ -1,8 +1,4 @@
-﻿.eventHandlers section[role=main] > div {
-    margin-left: 120px;
-}
-
-.eventHandlers #container {
+﻿.eventHandlers #container {
     display: -ms-grid;
     -ms-grid-rows: 200px 40px 40px 1fr;
     -ms-grid-columns: 1fr 20px 1fr 20px 1fr;

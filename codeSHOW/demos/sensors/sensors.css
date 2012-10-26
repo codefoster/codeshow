@@ -1,14 +1,9 @@
-﻿.sensors p {
-    margin-left: 120px;
-}
-
-.sensors .resultText {
+﻿.sensors .resultText {
     font-weight: bold;
     color: red;
 }
 
 .sensors .dataSections {
-    margin-left: 120px;
     font-size: 24px;
 }
 

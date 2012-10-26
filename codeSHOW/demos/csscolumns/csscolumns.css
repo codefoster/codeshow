@@ -1,9 +1,4 @@
-﻿.csscolumns section[role=main] > div {
-    margin-left: 120px;
-}
-
-
-.csscolumns .columns {
+﻿.csscolumns .columns {
     columns: 400px;
     overflow-x: scroll;
     height: 600px;

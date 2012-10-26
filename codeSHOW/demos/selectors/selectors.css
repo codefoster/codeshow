@@ -1,8 +1,4 @@
-﻿.selectors section[role=main] > * {
-    margin-left: 120px;
-}
-
-.selectors #grid {
+﻿.selectors #grid {
     height: 600px;
     display: -ms-grid;
     -ms-grid-columns: 1fr 1fr;

@@ -2,7 +2,9 @@
     "use strict";
 
     WinJS.UI.Pages.define("/pages/demoCode/demoCode.html", {
-        ready: function(element, options) {
+        ready: function (element, options) {
+            //TODO: add ability to copy code (ideally to highlight text and copy)
+            
             //fetch code files in this folder
             var main = q("section[role=main]", element);
             var demo = options;

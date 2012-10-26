@@ -1,24 +1,25 @@
-﻿.homepage {
-}
-    .homepage .pagetitle img { height: 70px; }
-    .homepage #zoom { height: 100%; }
-    .homepage #demosLV { height: 95%; }
-    .homepage #demosLV .win-surface { margin-left: 120px; }
-    .homepage #demosLV .win-groupheader h2 { width: 200px; }
+﻿/* on this page we want the tiles to scroll all the way to the left side of the screen */
 
-        .homepage #demosLV .win-item {
-            width: 250px;
-            height: 120px;
-            box-sizing: border-box;
-            background-color: #6294ad;
-            padding: 10px;
-            color: white;
-        }
-        .win-listview:not(.win-selectionstylefilled) .win-container.win-selected .win-selectionborder { border-color: #ef6541; } /*border around the selected item (not hovering)*/
-        .win-listview:not(.win-selectionstylefilled) .win-container.win-selected:hover .win-selectionborder { border-color: #ef6541; } /*border around the selected item (hovering)*/
-        .win-listview:not(.win-selectionstylefilled) .win-selectioncheckmarkbackground { border-top-color: #ef6541; border-right-color: #ef6541; } /*triangle behind the checkmark for selected items (not hovering)*/
-        .win-listview:not(.win-selectionstylefilled) .win-container.win-selected:hover .win-selectioncheckmarkbackground { border-top-color: #ef6541; border-right-color: #ef6541; } /*triangle behind the checkmark for selected items (hovering)*/
-        .homepage #demosLV .win-item h3 { font-size: 22px; }
+.homepage section[role=main] > * { margin-left: 0px !important;} 
+.homepage .pagetitle img { height: 70px; }
+.homepage #zoom { height: 100%; }
+.homepage #demosLV { height: 95%; }
+.homepage #demosLV .win-surface { margin-left: 120px; }
+.homepage #demosLV .win-groupheader h2 { width: 200px; }
+
+    .homepage #demosLV .win-item {
+        width: 250px;
+        height: 120px;
+        box-sizing: border-box;
+        background-color: #6294ad;
+        padding: 10px;
+        color: white;
+    }
+    .win-listview:not(.win-selectionstylefilled) .win-container.win-selected .win-selectionborder { border-color: #ef6541; } /*border around the selected item (not hovering)*/
+    .win-listview:not(.win-selectionstylefilled) .win-container.win-selected:hover .win-selectionborder { border-color: #ef6541; } /*border around the selected item (hovering)*/
+    .win-listview:not(.win-selectionstylefilled) .win-selectioncheckmarkbackground { border-top-color: #ef6541; border-right-color: #ef6541; } /*triangle behind the checkmark for selected items (not hovering)*/
+    .win-listview:not(.win-selectionstylefilled) .win-container.win-selected:hover .win-selectioncheckmarkbackground { border-top-color: #ef6541; border-right-color: #ef6541; } /*triangle behind the checkmark for selected items (hovering)*/
+    .homepage #demosLV .win-item h3 { font-size: 22px; }
 
 .homepage #tagsLV { height: 100%; }
 
@@ -30,10 +31,21 @@
 }
 
 @media screen and (-ms-view-state: snapped) {
+    .homepage .pagetitle img { height: 48px; }
     .homepage section[role=main] { margin-left: 20px; }
+    .homepage section[role=main] > * { margin-left:0px; }
+    .homepage #demosLV .win-surface { margin-left: 20px; }
+    .homepage #demosLV .win-container { width: 180px; background-color:transparent;}
+    .homepage #demosLV .win-item {
+        width: 240px;
+        height: 40px;
+        box-sizing: border-box;
+        background-color: #6294ad;
+        padding: 5px;
+        color: white;
+    }
 }
 
 @media screen and (-ms-view-state: portrait) {
     .homepage section[role=main] { margin-left: 100px; }
 }
-

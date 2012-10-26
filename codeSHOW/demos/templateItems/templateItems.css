@@ -1,8 +1,4 @@
-﻿.templateItems section[role=main] > * {
-    margin-left: 120px;
-}
-
-.templateItems section[role=main] > #alphabet {
+﻿.templateItems section[role=main] > #alphabet {
     display: -ms-flexbox;
     border: 1px solid;
     -ms-flex-wrap: wrap;

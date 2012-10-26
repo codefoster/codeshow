@@ -1,8 +1,4 @@
-﻿.listviews section[role=main] {
-    margin-left: 120px;
-}
-
-.listviews .win-listview {
+﻿.listviews .win-listview {
     border: 2px solid lightgray;
     background-color: white;
 }

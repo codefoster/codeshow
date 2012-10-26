@@ -1,8 +1,4 @@
-﻿.semanticzoom section[role=main] > * {
-    margin-left: 120px;
-}
-
-.semanticzoom .win-listview {
+﻿.semanticzoom .win-listview {
     height: 100%;
 }
 

@@ -18,7 +18,3 @@
     .settings #preferencesDiv #tileColors > div.selected {
         border: 3px solid red;
     }
-
-.settings section[role=main] > * {
-    margin-left: 120px;
-}

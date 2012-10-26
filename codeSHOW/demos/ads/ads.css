@@ -1,8 +1,4 @@
-﻿.ads section[role=main] {
-    margin-left: 120px;
-}
-
-.ads #list {
+﻿.ads #list {
     display:-ms-flexbox;
     border: 2px solid lightgray;
     overflow-x: scroll;

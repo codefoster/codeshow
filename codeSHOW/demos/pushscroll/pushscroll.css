@@ -1,8 +1,4 @@
-﻿.pushscroll section[role=main] > * {
-    /*margin-left: 120px;*/
-}
-
-.pushscroll .win-listview {
+﻿.pushscroll .win-listview {
     height: 600px;
 }
 

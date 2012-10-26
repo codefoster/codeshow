@@ -1,8 +1,4 @@
-﻿.demoCode section[role=main] {
-    margin-left: 120px;
-}
-
-.demoCode {
+﻿.demoCode {
     background-image: linear-gradient(to bottom, #e0e7eb 0%, #f6f6f6 100%);
 }
 

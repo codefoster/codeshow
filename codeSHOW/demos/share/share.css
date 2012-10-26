@@ -1,7 +1,3 @@
-﻿.share section[role=main] > * {
-    margin-left: 120px;
-}
-
-.share #sharetypes > div {
+﻿.share #sharetypes > div {
     margin-bottom: 20px;
 }

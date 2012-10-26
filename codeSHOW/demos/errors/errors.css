@@ -1,8 +1,4 @@
-﻿.errors section[role=main] {
-    margin-left: 120px;
-}
-
-.errors #grid {
+﻿.errors #grid {
     display: -ms-flexbox;
     -ms-flex-align: center;
     -ms-flex-pack: start;

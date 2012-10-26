@@ -1,4 +1,5 @@
 ﻿/* the .swiper functionality is in default.css too, but I would like to leave it here for clarity */
+/* TODO: upgrade to match the one in default.css which has been improved */
 .swipeSections .swiper {
     width:100%;
     display: -ms-flexbox;

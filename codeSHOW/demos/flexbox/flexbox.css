@@ -1,8 +1,4 @@
-﻿.flexbox section[role=main] {
-    margin-left: 120px;
-}
-
-/*Section One*/
+﻿/*Section One*/
 .flexbox #flexbox1 {
     margin-top: 20px;
     display: -ms-flexbox;

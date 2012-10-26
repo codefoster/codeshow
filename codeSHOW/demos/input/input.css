@@ -1,8 +1,4 @@
-﻿.input section[role=main] {
-    margin-left: 120px;
-}
-
-.input #parent {
+﻿.input #parent {
     display:-ms-flexbox;
 }
 

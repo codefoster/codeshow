@@ -1,8 +1,4 @@
-﻿.fancygrid section[role=main] > * {
-    margin-left: 120px;
-}
-
-.fancygrid #grid {
+﻿.fancygrid #grid {
     height:540px;
     display: -ms-grid;
     -ms-grid-columns: 240px 300px 240px;
