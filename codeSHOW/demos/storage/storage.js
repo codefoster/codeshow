@@ -61,7 +61,7 @@
 
             //restore roaming file contents
             appData.roamingFolder.getFileAsync("storagedemo.txt")
-                .then(function (file) { Windows.Storage.FileIO.readTextAsync(file); })
+                .then(function (file) { return Windows.Storage.FileIO.readTextAsync(file); })
                 .then(function (contents) { q(".storage #appData input:nth-of-type(3)").value = contents; });
             
             //save to roaming file

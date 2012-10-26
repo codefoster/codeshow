@@ -95,12 +95,7 @@ body {
 
 @media screen and (-ms-view-state: snapped) {
     .fragment section[role=main]:not(.swiper) > * { margin-left: 20px; }
-    .fragment section[role=main].swiper,
-    .swiper {
-        margin-left: 20px;
-    }
-
-    /*.fragment section[role=main]:not(.swiper) > * { margin-left: 20px; }*/
+    .fragment section[role=main].swiper, .swiper { margin-left: 20px; }
 
     .fragment header[role=banner] {
         -ms-grid-columns: auto 1fr;
