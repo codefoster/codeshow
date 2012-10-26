@@ -7,9 +7,6 @@
 		// Constructor
 		function (codePath, codeViewerElement) {
 			var that = this;
-
-			//that._element = codeViewerElement;
-			//that._codePath = !codePath.match(/\/$/) ? codePath + "/" : codePath;
 			that._codeContentElement = codeViewerElement;
 		    that._loadFile(codePath); //
 		},
@@ -68,12 +65,6 @@
 				if (this.codeViewer == null) {
 				    this.codeViewer = new CodeViewer(this._codePath, element);
 				}
-
-				//var codeContent = q(".codeContent");
-				//if (codeContent) {
-				//    var newHeight = window.innerHeight - WinJS.Utilities.getPosition(codeContent).top;
-				//    codeContent.style.height = newHeight + "px";
-				//}
             }
 		}
 	});

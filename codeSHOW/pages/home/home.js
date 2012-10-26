@@ -28,7 +28,8 @@
         demosLV.itemDataSource = demosList.dataSource;
         demosLV.selectionMode = "single";
         demosLV.itemTemplate = q("#itemTemplate", element);
-        demosLV.oniteminvoked = function(e) {
+        demosLV.layout.groupInfo = function () { return { enableCellSpanning: true, cellWidth: 250, cellHeight: 120 }; };
+        demosLV.oniteminvoked = function (e) {
             e.detail.itemPromise.then(function(x) {
                 var location = format("/demos/{0}/{0}.html", x.data.key);
                 WinJS.Navigation.navigate(location, x.data);
@@ -45,7 +46,8 @@
         };
 
         Ocho.AppBar.set({
-           buttons: [{ label: "See the Code", section: "selection", icon: "page2", click: seeTheCodeClick }]
+           buttons: [{ label: "See the Code", section: "selection", icon: "page2", click: seeTheCodeClick }],
+           addClass: "win-ui-dark"
         });
         
         function seeTheCodeClick(e) {

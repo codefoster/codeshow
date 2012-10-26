@@ -165,6 +165,10 @@ TODO:
             // create an appbar if the caller didn't reference one
             var appbar = (options.appbar ? options.appbar : make());
 
+            if (options.addClass) {
+                appbar.classList.add(options.addClass);
+            }
+
             //clearFirst will clear the appbar and recreate (defaults to true)
             if (options.clearFirst) {
                 var eb = q("button", appbar, { forceArray: true });

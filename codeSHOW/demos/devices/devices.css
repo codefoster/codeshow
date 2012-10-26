@@ -1,11 +1,13 @@
-﻿.devices #list {
+﻿.devices .win-listview {
     margin-left: 120px;
-    height: 600px;
+    height: 95%
 }
 
     .devices #list .win-item {
-        background-color: brown;
+        background-color: #375369;
         width: 260px;
+        padding:10px;
+        color:white;
     }
 
 .devices .itemgrid {

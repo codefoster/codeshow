@@ -15,9 +15,9 @@
   </Resources>
   <Applications>
     <Application Id="App" StartPage="default.html">
-      <VisualElements DisplayName="codeSHOW" Logo="images\logo.png" SmallLogo="images\smalllogo.png" Description="codeSHOW" ForegroundText="light" BackgroundColor="#336666">
+      <VisualElements DisplayName="codeSHOW" Logo="images\logo.png" SmallLogo="images\smalllogo.png" Description="codeSHOW" ForegroundText="light" BackgroundColor="#5e83a2">
         <DefaultTile ShowName="noLogos" WideLogo="images\widelogo.png" />
-        <SplashScreen Image="images\splashscreen.png" BackgroundColor="#336666" />
+        <SplashScreen Image="images\splashscreen.png" BackgroundColor="#6294ad" />
       </VisualElements>
       <Extensions>
         <Extension Category="windows.fileOpenPicker">

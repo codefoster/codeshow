@@ -3,13 +3,17 @@
 }
 
 body {
-    background-image: linear-gradient(to bottom, #e0e7eb 0%, #f6f6f6 100%);
+    background-image: linear-gradient(to bottom, #dfe7eb 0%, #f6f6f6 30%);
+}
+
+.win-appbar.win-ui-dark {
+    background-color: #375369;
 }
 
 #colorbar {
     height: 10px;
     -ms-grid-column-span: 3;
-    background-image: linear-gradient(to right, #020410 0px, #020410 120px, #436580 121px, #436580 400px, #6294ad 401px );
+    background-image: linear-gradient(to right, #020410 0px, #020410 10%, #436580 10%, #436580 35%, #6294ad 35% );
 }
 
 #contenthost {
