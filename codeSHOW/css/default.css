@@ -59,8 +59,9 @@ body {
 
     .explanation {
         font-size: larger;
-        color: slateblue;
+        color: #375369;
         margin-bottom: 20px;
+        font-style:italic;
     }
 
 /*Swipers*/

@@ -267,6 +267,7 @@
     <Content Include="demos\viewstates\viewstates.css" />
     <Content Include="demos\viewstates\viewstates.html" />
     <Content Include="demos\viewstates\viewstates.js" />
+    <Content Include="demos\webworker\diagram.png" />
     <Content Include="demos\webworker\task.js" />
     <Content Include="demos\webworker\webworker.css" />
     <Content Include="demos\webworker\webworker.html" />

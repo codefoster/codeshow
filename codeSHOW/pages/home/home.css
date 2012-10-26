@@ -14,10 +14,10 @@
             padding: 10px;
             color: white;
         }
-        .win-listview:not(.win-selectionstylefilled) .win-container.win-selected .win-selectionborder { border-color: #375369; } /*border around the selected item (not hovering)*/
-        .win-listview:not(.win-selectionstylefilled) .win-container.win-selected:hover .win-selectionborder { border-color: #375369; } /*border around the selected item (hovering)*/
-        .win-listview:not(.win-selectionstylefilled) .win-selectioncheckmarkbackground { border-top-color: #375369; border-right-color: #375369; } /*triangle behind the checkmark for selected items (not hovering)*/
-        .win-listview:not(.win-selectionstylefilled) .win-container.win-selected:hover .win-selectioncheckmarkbackground { border-top-color: #375369; border-right-color: #375369; } /*triangle behind the checkmark for selected items (hovering)*/
+        .win-listview:not(.win-selectionstylefilled) .win-container.win-selected .win-selectionborder { border-color: #ef6541; } /*border around the selected item (not hovering)*/
+        .win-listview:not(.win-selectionstylefilled) .win-container.win-selected:hover .win-selectionborder { border-color: #ef6541; } /*border around the selected item (hovering)*/
+        .win-listview:not(.win-selectionstylefilled) .win-selectioncheckmarkbackground { border-top-color: #ef6541; border-right-color: #ef6541; } /*triangle behind the checkmark for selected items (not hovering)*/
+        .win-listview:not(.win-selectionstylefilled) .win-container.win-selected:hover .win-selectioncheckmarkbackground { border-top-color: #ef6541; border-right-color: #ef6541; } /*triangle behind the checkmark for selected items (hovering)*/
         .homepage #demosLV .win-item h3 { font-size: 22px; }
 
 .homepage #tagsLV { height: 100%; }

@@ -1,3 +1,4 @@
 ﻿.webworker section[role=main] > * {
-    margin-left: 120px;
+    margin: 20px 0px 20px 120px;
+
 }
