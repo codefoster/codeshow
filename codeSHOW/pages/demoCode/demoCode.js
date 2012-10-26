@@ -11,7 +11,9 @@
                 .then(function(demosFolder) { return demosFolder.getFolderAsync(demo.key); })
                 .then(function(folder) { return folder.getFilesAsync(); })
                 .then(function(files) {
+                    files = Array.prototype.slice.call(files);
                     files
+                        .sort(function (fileA, fileB) { return fileTypeSortOrder(fileA.fileType) - fileTypeSortOrder(fileB.fileType); })
                         .forEach(function(file) {
                             //for each, create a div
                             var divSection = document.createElement("div");
@@ -44,13 +46,13 @@
         }
     });
 
-    //function fileTypeSortOrder(type) {
-    //    switch(type){
-    //        case ".html": return 1;
-    //        case ".js": return 2;
-    //        case ".css": return 3;
-    //        default: return 100;
-    //    }
-    //}
+    function fileTypeSortOrder(type) {
+        switch(type){
+            case ".html": return 1;
+            case ".css": return 2;
+            case ".js": return 3;
+            default: return 100;
+        }
+    }
     
 })();
