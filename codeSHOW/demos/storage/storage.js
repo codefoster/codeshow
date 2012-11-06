@@ -107,7 +107,7 @@
             //azure mobile services
             var client = new Microsoft.WindowsAzure.MobileServices.MobileServiceClient(
                 "https://codeshow.azure-mobile.net/",
-                "xGQqIbWxzyzXCCofsFrgdhLPYMCqKn57"
+                codeSHOW.Config.amskey
             );
 
             var inputAzure = q(".storage #azureMobile input");

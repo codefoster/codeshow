@@ -104,6 +104,9 @@
     <Content Include="demos\csscolumns\csscolumns.css" />
     <Content Include="demos\csscolumns\csscolumns.html" />
     <Content Include="demos\csscolumns\csscolumns.js" />
+    <Content Include="demos\customControl\customControl.css" />
+    <Content Include="demos\customControl\customControl.html" />
+    <Content Include="demos\customControl\customControl.js" />
     <Content Include="demos\datejs\date.js" />
     <Content Include="demos\datejs\datejs.css" />
     <Content Include="demos\datejs\datejs.html" />
@@ -284,6 +287,8 @@
     <Content Include="images\storelogo.png" />
     <Content Include="images\widelogo.png" />
     <Content Include="images\win8logo.png" />
+    <Content Include="js\codeviewer.js" />
+    <Content Include="js\config.js" />
     <Content Include="js\default.js" />
     <Content Include="js\navigator.js" />
     <Content Include="js\ocho.js" />
@@ -318,6 +323,9 @@
     <Content Include="js\RxJS\Test\rx.testing-vsdoc.js" />
     <Content Include="js\RxJS\Test\rx.testing.min.js" />
     <Content Include="packages.config" />
+    <Content Include="pages\about\about.css" />
+    <Content Include="pages\about\about.html" />
+    <Content Include="pages\about\about.js" />
     <Content Include="pages\demoCode\demoCode.css" />
     <Content Include="pages\demoCode\demoCode.html" />
     <Content Include="pages\demoCode\demoCode.js" />
@@ -333,8 +341,6 @@
     <Content Include="pages\hub\hub.css" />
     <Content Include="pages\hub\hub.html" />
     <Content Include="pages\hub\hub.js" />
-    <Content Include="Scripts\datajs-1.0.3.js" />
-    <Content Include="Scripts\datajs-1.0.3.min.js" />
     <None Include="codeSHOW_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>

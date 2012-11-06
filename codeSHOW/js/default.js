@@ -93,8 +93,6 @@ var nav = WinJS.Navigation;
         app.onsettings = function (e) {
             e.detail.applicationcommands = {
                  "preferencesDiv": { title: "Preferences", href: "/demos/settings/settings.html" },
-                 "feedbackDiv": { title: "Feedback", href: "/pages/feedback/feedback.html" },
-                 "helpDiv": { title: "Help", href: "/pages/help/help.html" },
                  "aboutDiv": { title: "About", href: "/pages/about/about.html" }
             };
             WinJS.UI.SettingsFlyout.populateSettings(e);
