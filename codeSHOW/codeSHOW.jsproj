@@ -50,6 +50,7 @@
     <DefaultLanguage>en-US</DefaultLanguage>
     <PackageCertificateKeyFile>codeSHOW_StoreKey.pfx</PackageCertificateKeyFile>
     <PackageCertificateThumbprint>9EA50C041309030C2072092E879B4C243E44971F</PackageCertificateThumbprint>
+    <AppxAutoIncrementPackageRevision>True</AppxAutoIncrementPackageRevision>
   </PropertyGroup>
   <ItemGroup>
     <AppxManifest Include="package.appxmanifest">
@@ -75,9 +76,6 @@
     <Content Include="demos\authentication\authentication.css" />
     <Content Include="demos\authentication\authentication.html" />
     <Content Include="demos\authentication\authentication.js" />
-    <Content Include="demos\autocomplete\autocomplete.css" />
-    <Content Include="demos\autocomplete\autocomplete.html" />
-    <Content Include="demos\autocomplete\autocomplete.js" />
     <Content Include="demos\binding\binding.css" />
     <Content Include="demos\binding\binding.html" />
     <Content Include="demos\binding\binding.js" />
@@ -87,20 +85,12 @@
     <Content Include="demos\canvasball\canvasball.css" />
     <Content Include="demos\canvasball\canvasball.html" />
     <Content Include="demos\canvasball\canvasball.js" />
-    <Content Include="demos\canvaspaint\canvaspaint.css" />
-    <Content Include="demos\canvaspaint\canvaspaint.html" />
-    <Content Include="demos\canvaspaint\canvaspaint.js" />
     <Content Include="demos\classes\classes.css" />
     <Content Include="demos\classes\classes.html" />
     <Content Include="demos\classes\classes.js" />
     <Content Include="demos\code\code.css" />
     <Content Include="demos\code\code.html" />
     <Content Include="demos\code\code.js" />
-    <Content Include="demos\crop\crop.css" />
-    <Content Include="demos\crop\crop.html" />
-    <Content Include="demos\crop\crop.js" />
-    <Content Include="demos\crop\images\attribution.txt" />
-    <Content Include="demos\crop\images\leaf twirl.jpg" />
     <Content Include="demos\csscolumns\csscolumns.css" />
     <Content Include="demos\csscolumns\csscolumns.html" />
     <Content Include="demos\csscolumns\csscolumns.js" />
@@ -224,9 +214,6 @@
     <Content Include="demos\semanticzoom\semanticzoom.css" />
     <Content Include="demos\semanticzoom\semanticzoom.html" />
     <Content Include="demos\semanticzoom\semanticzoom.js" />
-    <Content Include="demos\sensors\sensors.css" />
-    <Content Include="demos\sensors\sensors.html" />
-    <Content Include="demos\sensors\sensors.js" />
     <Content Include="demos\settings\settings.css" />
     <Content Include="demos\settings\settings.html" />
     <Content Include="demos\settings\settings.js" />
@@ -239,10 +226,6 @@
     <Content Include="demos\snappoints\snappoints.css" />
     <Content Include="demos\snappoints\snappoints.html" />
     <Content Include="demos\snappoints\snappoints.js" />
-    <Content Include="demos\stocks\smoothie.js" />
-    <Content Include="demos\stocks\stocks.css" />
-    <Content Include="demos\stocks\stocks.html" />
-    <Content Include="demos\stocks\stocks.js" />
     <Content Include="demos\storage\storage.css" />
     <Content Include="demos\storage\storage.html" />
     <Content Include="demos\storage\storage.js" />
@@ -255,9 +238,6 @@
     <Content Include="demos\textprops\textprops.css" />
     <Content Include="demos\textprops\textprops.html" />
     <Content Include="demos\textprops\textprops.js" />
-    <Content Include="demos\timeflies\timeflies.css" />
-    <Content Include="demos\timeflies\timeflies.html" />
-    <Content Include="demos\timeflies\timeflies.js" />
     <Content Include="demos\transforms\transforms.css" />
     <Content Include="demos\transforms\transforms.html" />
     <Content Include="demos\transforms\transforms.js" />
@@ -293,35 +273,6 @@
     <Content Include="js\navigator.js" />
     <Content Include="js\ocho.js" />
     <None Include="Package.StoreAssociation.xml" />
-    <Content Include="js\RxJS\redist.txt" />
-    <Content Include="js\RxJS\rx-vsdoc.js" />
-    <Content Include="js\RxJS\rx.aggregates-vsdoc.js" />
-    <Content Include="js\RxJS\rx.aggregates.js" />
-    <Content Include="js\RxJS\rx.aggregates.min.js" />
-    <Content Include="js\RxJS\rx.binding-vsdoc.js" />
-    <Content Include="js\RxJS\rx.binding.js" />
-    <Content Include="js\RxJS\rx.binding.min.js" />
-    <Content Include="js\RxJS\rx.coincidence-vsdoc.js" />
-    <Content Include="js\RxJS\rx.coincidence.js" />
-    <Content Include="js\RxJS\rx.coincidence.min.js" />
-    <Content Include="js\RxJS\rx.experimental-vsdoc.js" />
-    <Content Include="js\RxJS\rx.experimental.js" />
-    <Content Include="js\RxJS\rx.experimental.min.js" />
-    <Content Include="js\RxJS\rx.joinpatterns-vsdoc.js" />
-    <Content Include="js\RxJS\rx.joinpatterns.js" />
-    <Content Include="js\RxJS\rx.joinpatterns.min.js" />
-    <Content Include="js\RxJS\rx.js" />
-    <Content Include="js\RxJS\rx.min.js" />
-    <Content Include="js\RxJS\rx.node.js" />
-    <Content Include="js\RxJS\rx.testing-vsdoc.js" />
-    <Content Include="js\RxJS\rx.testing.js" />
-    <Content Include="js\RxJS\rx.testing.min.js" />
-    <Content Include="js\RxJS\rx.time-vsdoc.js" />
-    <Content Include="js\RxJS\rx.time.js" />
-    <Content Include="js\RxJS\rx.time.min.js" />
-    <Content Include="js\RxJS\rx.winjs.js" />
-    <Content Include="js\RxJS\Test\rx.testing-vsdoc.js" />
-    <Content Include="js\RxJS\Test\rx.testing.min.js" />
     <Content Include="packages.config" />
     <Content Include="pages\about\about.css" />
     <Content Include="pages\about\about.html" />
