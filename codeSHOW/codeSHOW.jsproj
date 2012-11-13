@@ -56,6 +56,9 @@
     <AppxManifest Include="package.appxmanifest">
       <SubType>Designer</SubType>
     </AppxManifest>
+    <Content Include="pages\privacy\privacy.css" />
+    <Content Include="pages\privacy\privacy.html" />
+    <Content Include="pages\privacy\privacy.js" />
     <None Include="codeSHOW_StoreKey.pfx" />
     <Content Include="css\default.css" />
     <Content Include="demos\ads\ads.css" />
@@ -97,10 +100,6 @@
     <Content Include="demos\customControl\customControl.css" />
     <Content Include="demos\customControl\customControl.html" />
     <Content Include="demos\customControl\customControl.js" />
-    <Content Include="demos\datejs\date.js" />
-    <Content Include="demos\datejs\datejs.css" />
-    <Content Include="demos\datejs\datejs.html" />
-    <Content Include="demos\datejs\datejs.js" />
     <Content Include="demos\devices\devices.css" />
     <Content Include="demos\devices\devices.html" />
     <Content Include="demos\devices\devices.js" />
@@ -300,7 +299,12 @@
     <SDKReference Include="Microsoft.WinJS.1.0, Version=1.0" />
     <SDKReference Include="MobileServicesJavaScriptClient, Version=0.2.0.0" />
     <SDKReference Include="MSAdvertisingJS, Version=6.1" />
-    <SDKReference Include="Telerik.UI, Version=2012.1.912" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="NotificationsExtensions">
+      <HintPath>NotificationsExtensions.winmd</HintPath>
+      <IsWinMDFile>true</IsWinMDFile>
+    </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\$(WMSJSProjectDirectory)\Microsoft.VisualStudio.$(WMSJSProject).targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -58,7 +58,22 @@ var nav = WinJS.Navigation;
     app.onready = function (e) {
         addSearchContract();
         addSettingsContract();
+        //sendTileTextNotification("Hello World! My very own tile notification");
     };
+
+    function sendTileTextNotification(message) {
+        // create the wide template
+        var tileContent = NotificationsExtensions.TileContent.TileContentFactory.createTileWideText03();
+        tileContent.textHeadingWrap.text = message;
+
+        // create the square template and attach it to the wide template
+        var squareTileContent = NotificationsExtensions.TileContent.TileContentFactory.createTileSquareText04();
+        squareTileContent.textBodyWrap.text = message;
+        tileContent.squareContent = squareTileContent;
+
+        // send the notification
+        Windows.UI.Notifications.TileUpdateManager.createTileUpdaterForApplication().update(tileContent.createNotification());
+    }
 
     app.tileColor = "#0098ab";
     app.demosList = null;
@@ -93,7 +108,8 @@ var nav = WinJS.Navigation;
         app.onsettings = function (e) {
             e.detail.applicationcommands = {
                  "preferencesDiv": { title: "Preferences", href: "/demos/settings/settings.html" },
-                 "aboutDiv": { title: "About", href: "/pages/about/about.html" }
+                 "aboutDiv": { title: "About", href: "/pages/about/about.html" },
+                 "privacyDiv": { title: "Privacy Policy", href: "/pages/privacy/privacy.html" }
             };
             WinJS.UI.SettingsFlyout.populateSettings(e);
         };
