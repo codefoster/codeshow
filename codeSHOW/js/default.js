@@ -116,7 +116,7 @@ var r = appdata.roamingSettings.values;
         };
     }
     function loadDemosAsync() {
-        r["lastLoaded"] = Date.today().add(-14).days();
+        
         return new WinJS.Promise(function (c, e, p) {
             Windows.ApplicationModel.Package.current.installedLocation.getFolderAsync("demos")
                 .then(function (pagesFolder) {
