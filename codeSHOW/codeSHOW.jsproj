@@ -56,6 +56,8 @@
     <AppxManifest Include="package.appxmanifest">
       <SubType>Designer</SubType>
     </AppxManifest>
+    <Content Include="js\converters.js" />
+    <Content Include="js\date.js" />
     <Content Include="pages\privacy\privacy.css" />
     <Content Include="pages\privacy\privacy.html" />
     <Content Include="pages\privacy\privacy.js" />

@@ -2,6 +2,7 @@
 var appdata = Windows.Storage.ApplicationData.current;
 var activation = Windows.ApplicationModel.Activation;
 var nav = WinJS.Navigation;
+var r = appdata.roamingSettings.values;
 
 (function () {
     "use strict";
@@ -25,7 +26,7 @@ var nav = WinJS.Navigation;
             .createSorted(function (a, b) { return (a.name.toLowerCase() < b.name.toLowerCase() ? -1 : 1); });
 
         //start loading the demos
-        app.demosLoaded = loadDemos();
+        app.demosLoaded = loadDemosAsync();
         
         if (args.detail.kind === activation.ActivationKind.launch) {
             if (args.detail.previousExecutionState !== activation.ApplicationExecutionState.terminated) {
@@ -114,8 +115,9 @@ var nav = WinJS.Navigation;
             WinJS.UI.SettingsFlyout.populateSettings(e);
         };
     }
-    function loadDemos() {
-        return new WinJS.Promise(function(c, e, p) {
+    function loadDemosAsync() {
+        r["lastLoaded"] = Date.today().add(-14).days();
+        return new WinJS.Promise(function (c, e, p) {
             Windows.ApplicationModel.Package.current.installedLocation.getFolderAsync("demos")
                 .then(function (pagesFolder) {
                     return pagesFolder.getFoldersAsync();
@@ -140,6 +142,9 @@ var nav = WinJS.Navigation;
                                     var enabled = q("meta[name='enabled']", xhr.response);
                                     enabled = (enabled ? enabled.content == "true" : "true");
 
+                                    var dateCreated = q("meta[name='dateCreated']", xhr.response);
+                                    dateCreated = (dateCreated ? Date.parse(dateCreated.content) : f.dateCreated);
+                                    
                                     if (enabled) {
                                         var pageTitle = (q("title", xhr.response) ? q("title", xhr.response).innerText : (q(".pagetitle", xhr.response) ? q(".pagetitle", xhr.response).innerText : "Unnamed"));
                                         result.push({
@@ -147,7 +152,8 @@ var nav = WinJS.Navigation;
                                             name: pageTitle,
                                             description: description,
                                             keywords: keywords,
-                                            tags: tags
+                                            tags: tags,
+                                            dateCreated: dateCreated
                                         });
                                     }
                                 }));
