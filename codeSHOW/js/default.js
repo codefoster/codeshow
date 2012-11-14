@@ -19,7 +19,6 @@ var r = appdata.roamingSettings.values;
     };
     
     app.addEventListener("activated", function (args) {
-
         //set up the demos list (empty for now)
         app.demosList = new WinJS.Binding.List()
             .createGrouped(function (i) { return i.group; }, function (i) { return i.group; })
@@ -28,6 +27,7 @@ var r = appdata.roamingSettings.values;
         //start loading the demos
         app.demosLoaded = loadDemosAsync();
         
+        //standard launch
         if (args.detail.kind === activation.ActivationKind.launch) {
             if (args.detail.previousExecutionState !== activation.ApplicationExecutionState.terminated) {
                 // TODO: This application has been newly launched. Initialize
@@ -48,6 +48,21 @@ var r = appdata.roamingSettings.values;
                     return nav.navigate(Application.navigator.home);
                 }
             }));
+        }
+        
+        //launched by protocol activation
+        if (args.detail.kind === activation.ActivationKind.protocol) {
+            var demo = null;
+            try { demo = args.detail.uri.queryParsed.getFirstValueByName("demo"); }
+            catch(exc) {}
+            if (demo)
+                args.setPromise(WinJS.UI.processAll().then(function() {
+                    app.demosLoaded.done(function() {
+                        var location = format("/demos/{0}/{0}.html", demo);
+                        Windows.UI.ViewManagement.ApplicationView.tryUnsnap();
+                        WinJS.Navigation.navigate(location, { });
+                    });
+                }));
         }
     });
 
@@ -105,6 +120,7 @@ var r = appdata.roamingSettings.values;
             
         });
     }
+
     function addSettingsContract() {
         app.onsettings = function (e) {
             e.detail.applicationcommands = {
@@ -115,6 +131,7 @@ var r = appdata.roamingSettings.values;
             WinJS.UI.SettingsFlyout.populateSettings(e);
         };
     }
+
     function loadDemosAsync() {
         
         return new WinJS.Promise(function (c, e, p) {

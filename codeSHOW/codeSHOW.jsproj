@@ -58,6 +58,7 @@
     </AppxManifest>
     <Content Include="js\converters.js" />
     <Content Include="js\date.js" />
+    <Content Include="NotificationsExtensions.winmd" />
     <Content Include="pages\privacy\privacy.css" />
     <Content Include="pages\privacy\privacy.html" />
     <Content Include="pages\privacy\privacy.js" />

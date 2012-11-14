@@ -3,7 +3,7 @@
 
     WinJS.UI.Pages.define("/demos/ads/ads.html", {
         ready: function (element, options) {
-            initAdTypes();
+            //initAdTypes();
         }
     });
     
@@ -28,7 +28,7 @@
             adDiv.style.height = u.unit.match("x(\\d*)$")[1] + "px";
             q("#list").appendChild(adDiv);
             var ad = new MicrosoftNSJS.Advertising.AdControl(adDiv);
-            ad.applicationId = 'test_client';
+            ad.applicationId = '9d39ecda-af49-4715-ba31-5f32f89d39ecda-af49-4715-ba31-5f32f87022fb022fb';
             ad.adUnitId = u.unit;
         });
     }

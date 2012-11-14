@@ -25,22 +25,27 @@
         <section aria-label="Main content" role="main">
             <!-- Disabling semantic zoom until grouping on the demos is implemented -->
             <!--<div id="zoom" data-win-control="WinJS.UI.SemanticZoom">-->
-                <div id="demosLV" data-win-control="WinJS.UI.ListView"></div>
+                <div id="demosListView" data-win-control="WinJS.UI.ListView"></div>
                 <!--<div id="tagsLV" data-win-control="WinJS.UI.ListView"></div>-->
             <!--</div>-->
         </section>
 
         <!--Templates-->
         <div id="itemTemplate" data-win-control="WinJS.Binding.Template">
-            <div class="tile">
+            <div class="itemTile">
                 <h3 data-win-bind="innerText:name;"></h3>
                 <h6 data-win-bind="innerText:description"></h6>
             </div>
         </div>
 
         <div id="snappedItemTemplate" data-win-control="WinJS.Binding.Template">
-            <div class="tile">
-                <h4 data-win-bind="innerText:name;"></h4>
+            <h4 data-win-bind="innerText:name;"></h4>
+        </div>
+
+        <div id="adItemTemplate" data-win-control="WinJS.Binding.Template">
+            <div class="adTile" 
+                data-win-control="MicrosoftNSJS.Advertising.AdControl" 
+                data-win-options="{applicationId: 'd25517cb-12d4-4699-8bdc-52040c712cab', adUnitId: '10043105'}">
             </div>
         </div>
 
