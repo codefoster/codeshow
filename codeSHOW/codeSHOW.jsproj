@@ -299,7 +299,6 @@
     <Content Include="js\navigator.js" />
     <Content Include="js\ocho.js" />
     <None Include="Package.StoreAssociation.xml" />
-    <Content Include="packages.config" />
     <Content Include="pages\about\about.css" />
     <Content Include="pages\about\about.html" />
     <Content Include="pages\about\about.js" />
