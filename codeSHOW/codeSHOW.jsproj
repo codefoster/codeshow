@@ -56,8 +56,32 @@
     <AppxManifest Include="package.appxmanifest">
       <SubType>Designer</SubType>
     </AppxManifest>
+    <Content Include="demos\autocomplete\autocomplete.css" />
+    <Content Include="demos\autocomplete\autocomplete.html" />
+    <Content Include="demos\autocomplete\autocomplete.js" />
+    <Content Include="demos\canvaspaint\canvaspaint.css" />
+    <Content Include="demos\canvaspaint\canvaspaint.html" />
+    <Content Include="demos\canvaspaint\canvaspaint.js" />
+    <Content Include="demos\crop\crop.css" />
+    <Content Include="demos\crop\crop.html" />
+    <Content Include="demos\crop\crop.js" />
+    <Content Include="demos\crop\images\attribution.txt" />
+    <Content Include="demos\crop\images\leaf twirl.jpg" />
+    <Content Include="demos\datejs\date.js" />
+    <Content Include="demos\datejs\datejs.css" />
+    <Content Include="demos\datejs\datejs.html" />
+    <Content Include="demos\datejs\datejs.js" />
+    <Content Include="demos\location\location.css" />
+    <Content Include="demos\location\location.html" />
+    <Content Include="demos\location\location.js" />
+    <Content Include="demos\timeflies\timeflies.css" />
+    <Content Include="demos\timeflies\timeflies.html" />
+    <Content Include="demos\timeflies\timeflies.js" />
     <Content Include="js\converters.js" />
     <Content Include="js\date.js" />
+    <Content Include="js\rx.js" />
+    <Content Include="js\rx.time.js" />
+    <Content Include="js\rx.winjs.js" />
     <Content Include="NotificationsExtensions.winmd" />
     <Content Include="pages\privacy\privacy.css" />
     <Content Include="pages\privacy\privacy.html" />

@@ -40,7 +40,6 @@
         }
     }
     
-    var adHasBeenUsed = false;
     function selectItemTemplate(itemPromise) {
         return itemPromise.then(function (item) {
             //get the right item template, render the item data into it and return the result
@@ -49,9 +48,8 @@
             if(Windows.UI.ViewManagement.ApplicationView.value === Windows.UI.ViewManagement.ApplicationViewState.snapped){
                 itemTemplate = q("#snappedItemTemplate", _element);
             }
-            else if (!adHasBeenUsed && Math.random() < .1) {
+            else if (item.data.key === "ad") {
                 //return ad template
-                adHasBeenUsed = true;
                 itemTemplate = q("#adItemTemplate", _element);
             }
             else {

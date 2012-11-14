@@ -23,7 +23,7 @@ var r = appdata.roamingSettings.values;
         app.demosList = new WinJS.Binding.List()
             .createGrouped(function (i) { return i.group; }, function (i) { return i.group; })
             .createSorted(function (a, b) { return (a.name.toLowerCase() < b.name.toLowerCase() ? -1 : 1); });
-
+        
         //start loading the demos
         app.demosLoaded = loadDemosAsync();
         
@@ -176,7 +176,11 @@ var r = appdata.roamingSettings.values;
                                 }));
                         });
                     WinJS.Promise.join(promises).then(function () {
-                        result.forEach(function (r) { app.demosList.push(r); });
+                        result.forEach(function (r, index) {
+                            app.demosList.push(r);
+                        });
+                        //TODO: improve this... for now it just renderes an ad with a special key and a name of 'b'... should be random 
+                        app.demosList.push({ key: "ad", name: "b", description: "", keywords: "", tags: "", dateCreated: "" });
                         c();
                     });
                 });
