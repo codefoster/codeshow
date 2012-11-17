@@ -71,6 +71,9 @@
     <Content Include="demos\datejs\datejs.css" />
     <Content Include="demos\datejs\datejs.html" />
     <Content Include="demos\datejs\datejs.js" />
+    <Content Include="demos\notifications\notifications.css" />
+    <Content Include="demos\notifications\notifications.html" />
+    <Content Include="demos\notifications\notifications.js" />
     <Content Include="demos\location\location.css" />
     <Content Include="demos\location\location.html" />
     <Content Include="demos\location\location.js" />

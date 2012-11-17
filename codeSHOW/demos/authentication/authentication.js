@@ -40,14 +40,8 @@
     }
 
     function initSection2() {
-        //TODO: login() is failing
-        var client = new Microsoft.WindowsAzure.MobileServices.MobileServiceClient(
-            "https://codeshow.azure-mobile.net/",
-            "xGQqIbWxzyzXCCofsFrgdhLPYMCqKn57"
-        );
-
         var userId = null;
-        client.login("microsoftaccount").done(function (results) {
+        app.client.login("microsoftaccount").done(function (results) {
             //userId = results.userId;
             //refreshTodoItems();
             //var message = "You are now logged in as: " + userId;

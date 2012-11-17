@@ -1,5 +1,5 @@
 ﻿(function () {
     WinJS.Namespace.define("codeSHOW.Config", {
-        amskey: "xGQqIbWxzyzXCCofsFrgdhLPYMCqKn57"
+        wamskey: "xGQqIbWxzyzXCCofsFrgdhLPYMCqKn57"
     });
 })()

@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/2010/manifest">
-  <Identity Name="36805codefoster.codeSHOW" Version="1.0.0.7" Publisher="CN=603A18C8-7F37-48CF-B16C-FED79B9AEA66" />
+  <Identity Name="36805codefoster.codeSHOW" Version="1.0.0.9" Publisher="CN=603A18C8-7F37-48CF-B16C-FED79B9AEA66" />
   <Properties>
     <DisplayName>codeSHOW</DisplayName>
     <PublisherDisplayName>codefoster</PublisherDisplayName>
@@ -15,7 +15,7 @@
   </Resources>
   <Applications>
     <Application Id="App" StartPage="default.html">
-      <VisualElements DisplayName="codeSHOW" Logo="images\logo.png" SmallLogo="images\smalllogo.png" Description="codeSHOW" ForegroundText="light" BackgroundColor="#5e83a2">
+      <VisualElements DisplayName="codeSHOW" Logo="images\logo.png" SmallLogo="images\smalllogo.png" Description="codeSHOW" ForegroundText="light" BackgroundColor="#5e83a2" ToastCapable="true">
         <DefaultTile ShowName="noLogos" WideLogo="images\widelogo.png" />
         <SplashScreen Image="images\splashscreen.png" BackgroundColor="#6294ad" />
       </VisualElements>

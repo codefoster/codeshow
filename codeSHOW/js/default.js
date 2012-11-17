@@ -17,7 +17,6 @@ var r = appdata.roamingSettings.values;
             case "BrowserForward": WinJS.Navigation.forward(); break;
         }
     };
-    
     app.addEventListener("activated", function (args) {
         //set up the demos list (empty for now)
         app.demosList = new WinJS.Binding.List()
@@ -30,11 +29,9 @@ var r = appdata.roamingSettings.values;
         //standard launch
         if (args.detail.kind === activation.ActivationKind.launch) {
             if (args.detail.previousExecutionState !== activation.ApplicationExecutionState.terminated) {
-                // TODO: This application has been newly launched. Initialize
-                // your application here.
+                // TODO: This application has been newly launched. Initialize your application here.
             } else {
-                // TODO: This application has been reactivated from suspension.
-                // Restore application state here.
+                // TODO: This application has been reactivated from suspension. Restore application state here.
             }
 
             if (app.sessionState.history) {
@@ -72,10 +69,18 @@ var r = appdata.roamingSettings.values;
     };
 
     app.onready = function (e) {
+        setupWamsClient();
         addSearchContract();
         addSettingsContract();
-        //sendTileTextNotification("Hello World! My very own tile notification");
     };
+
+    //add WAMS client reference to app so it's available everywhere
+    function setupWamsClient() {
+        var client = new Microsoft.WindowsAzure.MobileServices.MobileServiceClient(
+            "https://codeshow.azure-mobile.net/",
+            codeSHOW.Config.wamskey
+        );
+    }
 
     function sendTileTextNotification(message) {
         // create the wide template
