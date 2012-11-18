@@ -67,10 +67,6 @@
     <Content Include="demos\crop\crop.js" />
     <Content Include="demos\crop\images\attribution.txt" />
     <Content Include="demos\crop\images\leaf twirl.jpg" />
-    <Content Include="demos\datejs\date.js" />
-    <Content Include="demos\datejs\datejs.css" />
-    <Content Include="demos\datejs\datejs.html" />
-    <Content Include="demos\datejs\datejs.js" />
     <Content Include="demos\notifications\notifications.css" />
     <Content Include="demos\notifications\notifications.html" />
     <Content Include="demos\notifications\notifications.js" />
