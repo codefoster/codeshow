@@ -8,7 +8,6 @@
             var appData = Windows.Storage.ApplicationData.current;
 
 
-
             //application state
             var appStateInput = q(".storage #appState input");
             app.sessionState.storagedemo && (appStateInput.value = app.sessionState.storagedemo); //restore value
