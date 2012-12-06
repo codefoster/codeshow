@@ -12,7 +12,7 @@
     <link href="//Microsoft.WinJS.1.0/css/ui-light.css" rel="stylesheet" />
     <script src="//Microsoft.WinJS.1.0/js/base.js"></script>
     <script src="//Microsoft.WinJS.1.0/js/ui.js"></script>
-    
+
     <link href="boxprops.css" rel="stylesheet" />
     <script src="boxprops.js"></script>
 </head>
@@ -25,33 +25,77 @@
             </h1>
         </header>
         <section aria-label="Main content" role="main">
-            <div>
-
-                <h2>Border</h2>
-                <div class="box" style="border: solid 1px black;">
-                    border: solid 1px black
+            <div class="swiper">
+                <div class="borderbox">
+                    <h2>Border</h2>
+                    <div class="l1">
+                        <div class="l2">
+                            <div class="l3">
+                                <div class="l4">
+                                    <div class="l5">
+                                        <div class="l6">
+                                            <div class="explanation">HTML elements can be granted all kinds of borders with the border properties. You can choose from a variety of border styles, colors, and widths.</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="box" style="border: dashed 3px black;">
-                    border: dashed 3px black
+                <div class="marginbox">
+                    <h2>Margin</h2>
+                    <div class="explanation">All of these div's have the same style rule applied to them and it includes 5 pixels of margin. That means that there is going to be 10 pixels between them. Margin is space outside the border and keeps an element from running into other elements. It's very important for implementing Windows 8 design.</div>
+                    <div class="flex">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
                 </div>
-                <div class="box" style="border:ridge 10px black;">
-                    ridge 10px black
+                <div class="paddingbox">
+                    <h2>Padding</h2>
+                    <div>
+                        <div class="explanation">This div has 60 pixels of padding all the way around. Padding keeps an element's content from butting up against the border.</div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce pulvinar, urna vehicula condimentum venenatis, risus sapien elementum elit, eget malesuada nibh nisl vitae ipsum. Curabitur velit metus, aliquet a laoreet vel, consectetur eget nulla. Integer convallis, lacus in ultricies elementum, dolor tortor tincidunt ligula, et lobortis metus ipsum et neque. Aliquam ultrices cursus tincidunt. Donec odio est, fermentum porttitor pulvinar sed, fermentum nec ligula. Nam fringilla porttitor eros, eu accumsan dui posuere ac. Maecenas id sem justo. Donec mollis mattis ligula, sed suscipit quam egestas non. </p>
+                    </div>
                 </div>
-
-                <h2>Margin</h2>
-                <div class="box border" style="margin: 20px;">
-                    margin: 20px
+                <div class="overflowbox">
+                    <h2>Overflow</h2>
+                    <div>
+                        <div class="explanation">By default when an element has too much content to fit inside, the content spills out and is visible. Often times it looks bad. You can set the overflow, though to determine how you want it to behave.</div>
+                        <div class="flex">
+                            <div>
+                                <h3>visible (default)</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce pulvinar, urna vehicula condimentum venenatis, risus sapien elementum elit, eget malesuada nibh nisl vitae ipsum. Curabitur velit metus, aliquet a laoreet vel, consectetur eget nulla. Integer convallis, lacus in ultricies elementum, dolor tortor tincidunt ligula, et lobortis metus ipsum et neque. Aliquam ultrices cursus tincidunt. Donec odio est, fermentum porttitor pulvinar sed, fermentum nec ligula. Nam fringilla porttitor eros, eu accumsan dui posuere ac. Maecenas id sem justo. Donec mollis mattis ligula, sed suscipit quam egestas non. </p>
+                            </div>
+                            <div id="hidden">
+                                <h3>hidden</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce pulvinar, urna vehicula condimentum venenatis, risus sapien elementum elit, eget malesuada nibh nisl vitae ipsum. Curabitur velit metus, aliquet a laoreet vel, consectetur eget nulla. Integer convallis, lacus in ultricies elementum, dolor tortor tincidunt ligula, et lobortis metus ipsum et neque. Aliquam ultrices cursus tincidunt. Donec odio est, fermentum porttitor pulvinar sed, fermentum nec ligula. Nam fringilla porttitor eros, eu accumsan dui posuere ac. Maecenas id sem justo. Donec mollis mattis ligula, sed suscipit quam egestas non. </p>
+                            </div>
+                            <div id="scroll">
+                                <h3>scroll</h3>
+                                <div class="explanation">You can also use auto instead of scroll which will only render the scroll bars if the element is overflowing and needs them.</div>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce pulvinar, urna vehicula condimentum venenatis, risus sapien elementum elit, eget malesuada nibh nisl vitae ipsum. Curabitur velit metus, aliquet a laoreet vel, consectetur eget nulla. Integer convallis, lacus in ultricies elementum, dolor tortor tincidunt ligula, et lobortis metus ipsum et neque. Aliquam ultrices cursus tincidunt. Donec odio est, fermentum porttitor pulvinar sed, fermentum nec ligula. Nam fringilla porttitor eros, eu accumsan dui posuere ac. Maecenas id sem justo. Donec mollis mattis ligula, sed suscipit quam egestas non. </p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-
-                <div class="box border" style="margin: 10px 30px 20px -10px;">
-                    margin: 10px 30px 20px -10px
-                </div>
-                
-                <h2>Padding</h2>
-                <div class="box border" style="padding: 20px 150px 5px 10px;">
-                    padding: 20px 150px 5px 10px
-                </div>
-
             </div>
         </section>
     </div>
