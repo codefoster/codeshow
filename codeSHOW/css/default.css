@@ -68,15 +68,13 @@ body {
         font-style:italic;
     }
 
-    
 /*Swipers*/
 .fragment section[role=main].swiper,
 .swiper {
     width:100%;
     display: -ms-flexbox;
     -ms-scroll-snap-x: mandatory snapInterval(0%, 80%);
-    overflow-x: scroll;
-    overflow-y: hidden;
+    overflow-x: auto;
     margin-left: 120px;
 }
 
@@ -84,7 +82,14 @@ body {
 .swiper > * {
     box-sizing: border-box;
     width: 80%;
+    height: 100%;
     padding-right:80px;
+}
+
+/* the last swiper section has to be full width to be able to swipe to it */
+.fragment section[role=main].swiper > *:last-child,
+.swiper > *:last-child {
+    width: 100%;
 }
 
     .fragment section[role=main].swiper > * > h2,
