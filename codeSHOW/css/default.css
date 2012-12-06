@@ -72,6 +72,7 @@ body {
 .fragment section[role=main].swiper,
 .swiper {
     width:100%;
+    height:400px;
     display: -ms-flexbox;
     -ms-scroll-snap-x: mandatory snapInterval(0%, 80%);
     overflow-x: auto;

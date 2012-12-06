@@ -2,10 +2,10 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <title>Flyouts</title>
+    <title>Flyouts and Menus</title>
     <meta name="tags" content="" />
-    <meta name="keywords" content="flyout flyouts dialog" />
-    <meta name="description" content="Create transient, easily dismissable dialogs for information or user input" />
+    <meta name="keywords" content="flyout flyouts dialog menu menus" />
+    <meta name="description" content="Create transient, easily dismissable dialogs and menus for information or user input" />
     <meta name="author" content="Jeremy Foster" />
 
     <!-- WinJS references -->
@@ -21,16 +21,48 @@
         <header aria-label="Header content" role="banner">
             <button class="win-backbutton" aria-label="Back" disabled type="button"></button>
             <h1 class="titlearea win-type-ellipsis">
-                <span class="pagetitle">Flyouts</span>
+                <span class="pagetitle">Flyouts and Menus</span>
+                <span class="chevron win-type-x-large">&#xe099</span>
             </h1>
         </header>
         <section aria-label="Main content" role="main">
-            <button id="showFlyout">Flyout &gt;</button>
+            <div class="swiper">
+                <div>
+                    <h2>Menus</h2>
+                    <div class="explanation">
+                        A menu has been implemented for the title of this page and is represented by the chevron symbol. Click the title to see the menu. Touching the menu items won't have any effect.
+                    </div>
+
+                    <!--Header Menu-->
+                    <div id="headerMenu" data-win-control="WinJS.UI.Menu">
+                        <button data-win-control="WinJS.UI.MenuCommand" data-win-options="{id:'mi1',label:'Menu Item 1'}"></button>
+                        <button data-win-control="WinJS.UI.MenuCommand" data-win-options="{id:'mi2',label:'Menu Item 2'}"></button>
+                        <button data-win-control="WinJS.UI.MenuCommand" data-win-options="{id:'mi3',label:'Menu Item 3'}"></button>
+                        <hr data-win-control="WinJS.UI.MenuCommand" data-win-options="{id:'separator',type:'separator'}" />
+                        <button data-win-control="WinJS.UI.MenuCommand" data-win-options="{id:'sHome',label:'Home'}"></button>
+                    </div>
+
+                </div>
+                <div>
+                    <h2>Flyouts</h2>
+                    <div class="explanation">
+                        Flyouts are very customizable and end up being a great user experience because a user can dismiss it my just touching outside the flyout. It's called a "light dismiss".
+                    </div>
+                    <div>
+                        <button id="showFlyout">Flyout &gt;</button>
+                    </div>
+                    
+                    <!--Flyout-->
+                    <div id="flyout1" data-win-control="WinJS.UI.Flyout" data-win-options="{placement:'right'}">
+                        <label for="input">Input</label>
+                        <input type="text" />
+                    </div>
+                </div>
+            </div>
+
         </section>
 
-        <div id="flyout1" data-win-control="WinJS.UI.Flyout" data-win-options="{placement:'right'}">
-            <label for="input">Input</label> <input type="text" />
-        </div>
+
     </div>
 </body>
 </html>

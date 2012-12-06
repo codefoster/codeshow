@@ -1,1 +1,12 @@
-﻿
+﻿.swiper {
+    height:100%;
+    box-sizing:border-box;
+}
+
+.flyouts .explanation {
+    margin-right: 120px;
+}
+
+.flyouts .chevron {
+    vertical-align:8px;
+}
