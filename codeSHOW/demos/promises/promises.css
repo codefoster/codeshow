@@ -14,3 +14,7 @@
 .promises #uses > div {
     columns: 2;
 }
+
+.promises .section button {
+    margin-right: 10px;
+}
