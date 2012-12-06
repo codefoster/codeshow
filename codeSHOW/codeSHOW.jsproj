@@ -62,6 +62,9 @@
     <Content Include="demos\canvaspaint\canvaspaint.css" />
     <Content Include="demos\canvaspaint\canvaspaint.html" />
     <Content Include="demos\canvaspaint\canvaspaint.js" />
+    <Content Include="demos\classes\classes.css" />
+    <Content Include="demos\classes\classes.html" />
+    <Content Include="demos\classes\classes.js" />
     <Content Include="demos\crop\crop.css" />
     <Content Include="demos\crop\crop.html" />
     <Content Include="demos\crop\crop.js" />
@@ -114,9 +117,6 @@
     <Content Include="demos\canvasball\canvasball.css" />
     <Content Include="demos\canvasball\canvasball.html" />
     <Content Include="demos\canvasball\canvasball.js" />
-    <Content Include="demos\classes\classes.css" />
-    <Content Include="demos\classes\classes.html" />
-    <Content Include="demos\classes\classes.js" />
     <Content Include="demos\code\code.css" />
     <Content Include="demos\code\code.html" />
     <Content Include="demos\code\code.js" />
@@ -203,9 +203,6 @@
     <Content Include="demos\mediaqueries\mediaqueries.css" />
     <Content Include="demos\mediaqueries\mediaqueries.html" />
     <Content Include="demos\mediaqueries\mediaqueries.js" />
-    <Content Include="demos\menus\menus.css" />
-    <Content Include="demos\menus\menus.html" />
-    <Content Include="demos\menus\menus.js" />
     <Content Include="demos\mscssmatrix\mscssmatrix.css" />
     <Content Include="demos\mscssmatrix\mscssmatrix.html" />
     <Content Include="demos\mscssmatrix\mscssmatrix.js" />
