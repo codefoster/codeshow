@@ -15,6 +15,7 @@
             applySettings();
         },
         unload: function () {
+            app.sessionState.homeScrollPosition = demosListView.scrollPosition;
             q("#appbar").winControl.sticky = false;
             q("#appbar").winControl.hide();
             Ocho.AppBar.set();
@@ -79,18 +80,16 @@
                 WinJS.Navigation.navigate(location, {});
             });
         };
-        demosListView.onselectionchanged = function (e) {
-            if (demosListView.selection.count() > 0) {
-                q("#appbar").winControl.sticky = true;
-                q("#appbar").winControl.show();
-            } else {
-                q("#appbar").winControl.sticky = false;
-                q("#appbar").winControl.hide();
-            }
+        demosListView.onloadingstatechanged = function(e) {
+            
         };
+        if (app.sessionState.homeScrollPosition)
+            demosListView.scrollPosition = app.sessionState.homeScrollPosition;
+
+        demosListView.onselectionchanged = setCommandVisibility;
 
         Ocho.AppBar.set({
-           buttons: [{ label: "See the Code", section: "selection", icon: "page2", click: seeTheCodeClick }],
+           buttons: [{ id:"seeTheCode", label: "See the Code", section: "selection", icon: "page2", click: seeTheCodeClick }],
            addClass: "win-ui-dark"
         });
         
@@ -101,6 +100,19 @@
                 demo = selectedItems[0].data;
             });
             WinJS.Navigation.navigate("/pages/demoCode/demoCode.html", demo);
+        }
+    }
+
+    function setCommandVisibility() {
+        var appbar = q("#appbar").winControl;
+        if (demosListView.selection.count() > 0) {
+            appbar.sticky = true;
+            appbar.show();
+            appbar.showCommands(["seeTheCode"]);
+        } else {
+            appbar.sticky = false;
+            appbar.hide();
+            appbar.hideCommands(["seeTheCode"]);
         }
     }
     
