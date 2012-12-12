@@ -59,6 +59,9 @@
     <Content Include="demos\autocomplete\autocomplete.css" />
     <Content Include="demos\autocomplete\autocomplete.html" />
     <Content Include="demos\autocomplete\autocomplete.js" />
+    <Content Include="demos\bingmaps\bingmaps.css" />
+    <Content Include="demos\bingmaps\bingmaps.html" />
+    <Content Include="demos\bingmaps\bingmaps.js" />
     <Content Include="demos\canvaspaint\canvaspaint.css" />
     <Content Include="demos\canvaspaint\canvaspaint.html" />
     <Content Include="demos\canvaspaint\canvaspaint.js" />
@@ -76,6 +79,9 @@
     <Content Include="demos\location\location.css" />
     <Content Include="demos\location\location.html" />
     <Content Include="demos\location\location.js" />
+    <Content Include="demos\test\test.css" />
+    <Content Include="demos\test\test.html" />
+    <Content Include="demos\test\test.js" />
     <Content Include="demos\timeflies\timeflies.css" />
     <Content Include="demos\timeflies\timeflies.html" />
     <Content Include="demos\timeflies\timeflies.js" />

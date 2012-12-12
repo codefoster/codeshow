@@ -64,8 +64,7 @@
                     }
                 },
 
-                // This function responds to navigation by adding new pages
-                // to the DOM.
+                // This function responds to navigation by adding new pages to the DOM.
                 _navigated: function (args) {
                     var that = this;
                     var oldElement = that.pageElement;
@@ -85,6 +84,21 @@
                             oldElement.innerText = "";
                             that.navigated();
                             parentedComplete();
+
+                            //add the "see the code" link next to the page title
+                            if (args.detail.location.startsWith("/demos")) {
+                                var seeCodeSpan = document.createElement("span");
+                                seeCodeSpan.className = "seecode win-type-x-large win-type-interactive";
+                                seeCodeSpan.textContent = "see the code";
+                                q(".pagetitle").parentElement.appendChild(seeCodeSpan);
+                                
+                                q(".seecode", null, { forceArray: true }).forEach(function(elem) {
+                                    elem.onclick = function () {
+                                        WinJS.Navigation.navigate("/pages/demoCode/demoCode.html", args.detail.state);
+                                    };
+                                });
+                            }
+
                         })
                     );
                 },
@@ -96,8 +110,7 @@
                     this.lastViewstate = appView.value;
                 },
 
-                // This function updates application controls once a navigation
-                // has completed.
+                // This function updates application controls once a navigation has completed.
                 navigated: function () {
                     // Do application specific on-navigated work here
                     var backButton = this.pageElement.querySelector("header[role=banner] .win-backbutton");

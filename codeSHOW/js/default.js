@@ -17,6 +17,7 @@ var r = appdata.roamingSettings.values;
             case "BrowserForward": WinJS.Navigation.forward(); break;
         }
     };
+    
     app.addEventListener("activated", function (args) {
         //set up the demos list (empty for now)
         app.demosList = new WinJS.Binding.List()
@@ -146,11 +147,11 @@ var r = appdata.roamingSettings.values;
                 })
                 .done(function (folders) {
                     var result = [];
-                    var promises = [];
+                    var localFetchPromises = [];
+                    var wamsFetchPromies = [];
                     folders
-                        //.filter(function (f) { return f.name !== "home"; })
                         .forEach(function (f) {
-                            promises.push(WinJS.xhr({ url: "/demos/" + f.name + "/" + f.name + ".html", responseType: "document" })
+                            localFetchPromises.push(WinJS.xhr({ url: "/demos/" + f.name + "/" + f.name + ".html", responseType: "document" })
                                 .then(function (xhr) {
                                     var keywords = q("meta[name='keywords']", xhr.response);
                                     keywords = (keywords ? keywords.content : "");
@@ -168,6 +169,9 @@ var r = appdata.roamingSettings.values;
                                     dateCreated = (dateCreated ? Date.parse(dateCreated.content) : f.dateCreated);
                                     
                                     if (enabled) {
+                                        
+                                        var wamsData = fetchWamsData(f.name);
+
                                         var pageTitle = (q("title", xhr.response) ? q("title", xhr.response).innerText : (q(".pagetitle", xhr.response) ? q(".pagetitle", xhr.response).innerText : "Unnamed"));
                                         result.push({
                                             key: f.name,
@@ -175,12 +179,14 @@ var r = appdata.roamingSettings.values;
                                             description: description,
                                             keywords: keywords,
                                             tags: tags,
-                                            dateCreated: dateCreated
+                                            dateCreated: dateCreated,
+                                            rating: wamsData.averageRating
                                         });
                                     }
                                 }));
+                            
                         });
-                    WinJS.Promise.join(promises).then(function () {
+                    WinJS.Promise.join(localFetchPromises).then(function () {
                         result.forEach(function (r, index) {
                             app.demosList.push(r);
                         });
@@ -190,6 +196,11 @@ var r = appdata.roamingSettings.values;
                     });
                 });
         });
+    }
+    
+    function fetchWamsData(key) {
+        app.client;
+        return { "key":key, "averageRating": 3.4 };
     }
     
     app.start();

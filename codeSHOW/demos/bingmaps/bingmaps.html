@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Bing Maps</title>
+    <meta name="tags" content="" />
+    <meta name="keywords" content="bing maps map directions earth drive" />
+    <meta name="description" content="Get ready for easy and powerful maps in apps!" />
+    <meta name="author" content="Jeremy Foster" />
+
+    <!-- WinJS references -->
+    <link href="//Microsoft.WinJS.1.0/css/ui-light.css" rel="stylesheet" />
+    <script src="//Microsoft.WinJS.1.0/js/base.js"></script>
+    <script src="//Microsoft.WinJS.1.0/js/ui.js"></script>
+
+    <link href="bingmaps.css" rel="stylesheet" />
+    <script src="bingmaps.js"></script>
+    <script type="text/javascript" src="ms-appx:///Bing.Maps.JavaScript/js/veapicore.js"></script>
+</head>
+<body>
+    <div class="bingmaps fragment">
+        <header aria-label="Header content" role="banner">
+            <button class="win-backbutton" aria-label="Back" disabled type="button"></button>
+            <h1 class="titlearea win-type-ellipsis">
+                <span class="pagetitle">Bing Maps</span>
+            </h1>
+        </header>
+        <section aria-label="Main content" role="main" class="swiper">
+            <div id="basicMap">
+                <h2>Basic Map</h2>
+                <div id="basicMap_map"></div>
+            </div>
+            <div id="moveAround">
+                <h2>Move Around</h2>
+                <button class="seattle">Go to Seattle</button>
+                <button class="kauai">Go to Kauai</button>
+                <div id="moveAround_map"></div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

@@ -70,6 +70,11 @@
                 var result = i.keywords && i.keywords.split(" ").contains(options.queryText);
                 return result;
             });
+        demosList.forEach(function (item) {
+            item.onchangefct = WinJS.Utilities.markSupportedForProcessing(function(e) {
+                new Windows.UI.Popups.MessageDialog("hi").showAsync();
+            });
+        });
 
         demosListView.itemDataSource = demosList.dataSource;
         demosListView.selectionMode = "single";
@@ -77,7 +82,7 @@
             e.detail.itemPromise.then(function(x) {
                 var location = format("/demos/{0}/{0}.html", x.data.key);
                 Windows.UI.ViewManagement.ApplicationView.tryUnsnap();
-                WinJS.Navigation.navigate(location, {});
+                WinJS.Navigation.navigate(location, x.data);
             });
         };
         demosListView.onloadingstatechanged = function(e) {
