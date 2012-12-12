@@ -1,8 +1,6 @@
 ﻿.bingmaps section[role=main] {
 }
 
-.win-type-interactive { cursor: pointer; }
-
 @media screen and (-ms-view-state: snapped) {
     .bingmaps section[role=main] {
         margin-left: 20px;
