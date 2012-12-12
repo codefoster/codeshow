@@ -87,16 +87,25 @@
 
                             //add the "see the code" link next to the page title
                             if (args.detail.location.startsWith("/demos")) {
-                                var seeCodeSpan = document.createElement("span");
-                                seeCodeSpan.className = "seecode win-type-x-large win-type-interactive";
-                                seeCodeSpan.textContent = "see the code";
-                                q(".pagetitle").parentElement.appendChild(seeCodeSpan);
+                                var span = document.createElement("span");
+                                span.className = "seecode win-type-x-large win-type-interactive";
+                                span.textContent = "see the code";
+                                q(".pagetitle").parentElement.appendChild(span);
                                 
-                                q(".seecode", null, { forceArray: true }).forEach(function(elem) {
-                                    elem.onclick = function () {
-                                        WinJS.Navigation.navigate("/pages/demoCode/demoCode.html", args.detail.state);
-                                    };
-                                });
+                                span.onclick = function () {
+                                    WinJS.Navigation.navigate("/pages/demoCode/demoCode.html", args.detail.state);
+                                };
+                            }
+                            else if (args.detail.location = "/pages/demoCode/demoCode.html") {
+                                var span = document.createElement("span");
+                                span.className = "seedemo win-type-x-large win-type-interactive";
+                                span.textContent = "see the demo";
+                                q(".pagetitle").parentElement.appendChild(span);
+
+                                span.onclick = function () {
+                                    var location = format("/demos/{0}/{0}.html", args.detail.state.key);
+                                    WinJS.Navigation.navigate(location, args.detail.state);
+                                };
                             }
 
                         })
