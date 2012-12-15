@@ -96,7 +96,7 @@
                                     WinJS.Navigation.navigate("/pages/demoCode/demoCode.html", args.detail.state);
                                 };
                             }
-                            else if (args.detail.location = "/pages/demoCode/demoCode.html") {
+                            else if (args.detail.location == "/pages/demoCode/demoCode.html") {
                                 var span = document.createElement("span");
                                 span.className = "seedemo win-type-x-large win-type-interactive";
                                 span.textContent = "see the demo";

@@ -1,6 +1,9 @@
 ﻿.bingmaps section[role=main] {
 }
 
+.bingmaps .explanation {
+    width:640px;
+}
 @media screen and (-ms-view-state: snapped) {
     .bingmaps section[role=main] {
         margin-left: 20px;

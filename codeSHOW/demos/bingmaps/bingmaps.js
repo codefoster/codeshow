@@ -21,10 +21,20 @@
                     map.setView(kauai);
                 };
 
-                //addPushPin
-                map = new Microsoft.Maps.Map(element.querySelector("#addPushPin_map"), mapOptions);
-                q("#addPushPin > button", element).onclick = function (e) {
+                //addPushpin
+                map = new Microsoft.Maps.Map(element.querySelector("#addPushpin_map"), mapOptions);
+                q("#addPushpin > button", element).onclick = function (e) {
                     map.entities.push(new Microsoft.Maps.Pushpin(map.getCenter(), null));
+                };
+                
+                //customPushpin
+                map = new Microsoft.Maps.Map(element.querySelector("#customPushpin_map"), mapOptions);
+                q("#customPushpin > button", element).onclick = function (e) {
+                    map.entities.push(new Microsoft.Maps.Pushpin(map.getCenter(), {
+                        width: null,
+                        height: null,
+                        htmlContent: "<div style='padding:5px;font-size:12px;font-weight:bold;border:solid 2px;background-color:gray;color:white;width:100px;border-radius:12px;border-top-left-radius:0px;'>Custom Pushpin</div>"
+                    }));
                 };
             }
 

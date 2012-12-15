@@ -27,17 +27,20 @@ TODO:
         },
 
         query: function (query, context, options) {
+            //defaults
+            context = context || document;
             options = options || {};
             options.forceArray = options.forceArray || false;
-            //TODO: if the query is a simple id selector then use getelementbyid
-            //context should be a dom element... defaults to document
-            //TODO: see if "element" exists and (if context was not provided) use "element" instead of document
-            //because it's scoped inside of ready/updateLayout/etc. functions
-            context = context || document;
-            var result = context.querySelectorAll(query);
-            if (result.length > 1 || options.forceArray) return Array.prototype.slice.call(result);
-            else if (result.length == 1) return (options.forceArray ? [result[0]] : result[0]);
-            else return null;
+
+            var result;
+            var match = query.match(/^#([^\s,\.,#,\[]+)$/); //if #elementId then use getElementById
+            if (match) return document.getElementById(match[1]);
+            else {
+                result = context.querySelectorAll(query);
+                if (result.length > 1 || options.forceArray) return Array.prototype.slice.call(result);
+                else if (result.length == 1) return (options.forceArray ? [result[0]] : result[0]);
+                else return null;
+            }
         },
 
         format: function (s) {
