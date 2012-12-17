@@ -6,16 +6,14 @@
 
     WinJS.UI.Pages.define("/demos/authentication/authentication.html", {
         ready: function (element, options) {
-            init();
+            initSection1();
+            initSection2();
         }
     });
 
-    function init() {
-        initSection1();
-        initSection2();
-    }
-
     function initSection1() {
+        var section1 = q(".authentication #liveSDK");
+        
         WL.init();
 
         WL.Event.subscribe("auth.login", function () {
@@ -26,34 +24,56 @@
             if (WL.getSession()) log("Your session has changed.");
         });
 
-        q(".authentication #btn").onclick = function (e) {
+        q("#signIn", section1).onclick = function (e) {
             if (WL.getSession()) log("You are already signed in!");
             else WL.login({ scope: "wl.signin" });
         };
 
         function log(message) {
             var child = document.createTextNode(message);
-            var logDiv = q(".authentication #log");
+            var logDiv = q("#log", section1);
             logDiv.appendChild(child);
             logDiv.appendChild(document.createElement("br"));
         }
     }
 
     function initSection2() {
-        var userId = null;
-        app.client.login("microsoftaccount").done(function (results) {
-            //userId = results.userId;
-            //refreshTodoItems();
-            //var message = "You are now logged in as: " + userId;
-            //var dialog = new Windows.UI.Popups.MessageDialog(message);
-            //dialog.showAsync().done(complete);
-            
-        }, function (error) {
-            //userId = null;
-            //var dialog = new Windows.UI.Popups
-            //    .MessageDialog("An error occurred during login", "Login Required");
-            //dialog.showAsync().done(complete);
-            
-        });
+
+        //microsoft
+        var microsoftSection = q(".authentication #wams #microsoft");
+        q("button", microsoftSection).onclick = function(e) {
+            app.client.login("microsoftaccount")
+                .done(function (results) {
+                        q("div", microsoftSection).innerText += "User ID: " + results.userId;
+                }, function (error) { /* gulp */ });
+        };
+        
+        ////facebook
+        //var facebookSection = q(".authentication #wams #facebook");
+        //q("button", facebookSection).onclick = function (e) {
+        //    app.client.login("facebook")
+        //        .done(function (results) {
+        //                q("div", facebookSection).innerText += "User ID: " + results.userId;
+        //        }, function (error) { debugger;  });
+        //};
+
+        ////twitter
+        //var twitterSection = q(".authentication #wams #twitter");
+        //q("button", twitterSection).onclick = function (e) {
+        //    app.client.login("twitter")
+        //        .done(function (results) {
+        //            q("div", twitterSection).innerText += "User ID: " + results.userId;
+        //        }, function (error) { debugger; });
+        //};
+
+        ////google
+        //var googleSection = q(".authentication #wams #google");
+        //q("button", googleSection).onclick = function (e) {
+        //    app.client.login("google")
+        //        .done(function (results) {
+        //            q("div", googleSection).innerText += "User ID: " + results.userId;
+        //        }, function (error) { debugger; });
+        //};
+
     };
 })();
