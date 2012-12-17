@@ -6,6 +6,7 @@ body {
     background-image: linear-gradient(to bottom, #dfe7eb 0%, #f6f6f6 30%);
 }
 
+.seedemo,.seecode { color:gray; }
 .win-type-interactive { cursor: pointer; }
 
 .win-appbar.win-ui-dark {
