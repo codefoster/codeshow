@@ -21,7 +21,7 @@
                             .forEach(function (profile) { profilesList.push(profile); });
 
                     },
-                    function () {
+                    function (error) {
                         //no internet connection... stop progress and show the offline div
                         q("progress", element).style.display = "none";
                         q("#offlineVersion", element).style.display = "block";
@@ -31,30 +31,34 @@
     });
     
     function getTwitterProfiles(handles) {
-        return new WinJS.Promise(function (c, e, p) {
-            //get promises for all of the twitter.com calls
-            var resultPromises = handles.map(function (handle) {
-                return WinJS.xhr({ url: format("http://www.twitter.com/{0}", handle), responseType: "document" });
-            });
-            
-            //join the promises and map the responses into local objects
-            WinJS.Promise.join(resultPromises)
-                .then(
-                    function(results) {
-                        c(results.map(function(result) {
-                            return {
-                                imageUrl: result.response.querySelector("img.avatar.size128").src,
-                                name: result.response.querySelector("h1.fullname").innerText,
-                                handle: result.response.querySelector(".screen-name").innerText,
-                                bio: result.response.querySelector("p.bio").innerHTML,
-                                website: result.response.querySelector(".url a").href
-                            };
-                        }));
-                    },
-                    function() {
-                        e();
-                    }
-                );
+        return new WinJS.Promise(function(c, e, p) {
+            try {
+                //get promises for all of the twitter.com calls
+                var resultPromises = handles.map(function(handle) {
+                    return WinJS.xhr({ url: format("http://www.twitter.com/{0}", handle), responseType: "document" });
+                });
+
+                //join the promises and map the responses into local objects
+                WinJS.Promise.join(resultPromises)
+                    .then(
+                        function(results) {
+                            c(results.map(function(result) {
+                                return {
+                                    imageUrl: result.response.querySelector("img.avatar.size73").src,
+                                    name: result.response.querySelector("h1.fullname").innerText,
+                                    handle: result.response.querySelector(".screen-name").innerText,
+                                    bio: result.response.querySelector("p.bio").innerHTML,
+                                    website: result.response.querySelector(".url a").href
+                                };
+                            }));
+                        },
+                        function() {
+                            e();
+                        }
+                    );
+            } catch(error) {
+                e(error);
+            }
         });
     }
 })();
