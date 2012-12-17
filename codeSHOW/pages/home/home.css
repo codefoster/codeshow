@@ -12,8 +12,15 @@
         background-color: #6294ad;
         color: white;
     }
-    .homepage #demosListView .itemTile { height:115px;width:240px;padding:5px; }
+    .homepage #demosListView .itemTile {
+         width:250px;
+         height:125px;
+         padding:4px 8px;
+         box-sizing:border-box;
+    }
     .homepage #demosListView .adTile { width: 250px; height: 125px; }
+    .homepage #demosListView .itemTile h3 { line-height: 110%; }
+    .homepage #demosListView .itemTile p { margin-top: 5px; }
 
     .win-listview:not(.win-selectionstylefilled) .win-container.win-selected .win-selectionborder { border-color: #ef6541; } /*border around the selected item (not hovering)*/
     .win-listview:not(.win-selectionstylefilled) .win-container.win-selected:hover .win-selectionborder { border-color: #ef6541; } /*border around the selected item (hovering)*/
