@@ -9,9 +9,12 @@
 }
 
 .listviews #simple .win-item img  {
-    border:1px solid green;
-    width: 280px;
-    height: 210px;
+    width: 239px;
+    height: 170px;
+}
+
+.listviews #simple .win-item h3 {
+    height: 50px;
 }
 
 
@@ -21,18 +24,21 @@
 }
 
 .listviews #grouped .win-item img {
-    width: 252px;
-    height: 189px;
+    width: 239px;
+    height: 170px;
+}
+
+.listviews #grouped .win-item h3 {
+    height: 50px;
 }
 
 /* Asymmetrical */
-
 .listviews #asymmetric .win-listview {
     height: 540px;
-    width: 950px;
+    width: 900px;
 }
 
-.listviews #asymmetric .win-item .square { width: 180px; height: 180px; }
-.listviews #asymmetric .win-item .tall { width: 180px; height: 370px; }
-.listviews #asymmetric .win-item .wide { width: 370px; height: 180px; }
-.listviews #asymmetric .win-item .bigsquare { width: 370px; height: 370px; }
+.listviews #asymmetric .win-item .square { width: 160px; height: 160px; }
+.listviews #asymmetric .win-item .tall { width: 160px; height: 330px; }
+.listviews #asymmetric .win-item .wide { width: 330px; height: 160px; }
+.listviews #asymmetric .win-item .bigsquare { width: 330px; height: 330px; }

@@ -15,7 +15,9 @@ body {
 
 #colorbar {
     height: 10px;
-    -ms-grid-column-span: 3;
+    position: absolute;
+    top:0px;
+    width:100%;
     background-image: linear-gradient(to right, #020410 0px, #020410 10%, #436580 10%, #436580 35%, #6294ad 35% );
 }
 
@@ -85,7 +87,6 @@ body {
 .swiper > * {
     box-sizing: border-box;
     width: 80%;
-    height: 100%;
     padding-right:80px;
     margin-bottom:16px; /* room for vertical scrollbar */
 }

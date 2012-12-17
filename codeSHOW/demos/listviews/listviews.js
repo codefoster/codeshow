@@ -58,7 +58,7 @@
             lv = q(".listviews #asymmetric .win-listview").winControl;
             lv.itemDataSource = new WinJS.Binding.List(images).dataSource;
             lv.itemTemplate = q(".listviews #asymmetric #imageTemplate");
-            lv.layout.groupInfo = function () { return { enableCellSpanning: true, cellWidth: 180, cellHeight: 180 }; };
+            lv.layout.groupInfo = function () { return { enableCellSpanning: true, cellWidth: 160, cellHeight: 160 }; };
 
         },
     });

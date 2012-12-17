@@ -27,12 +27,11 @@
         <section aria-label="Main content" role="main" class="swiper">
             <div id="simple">
                 <h2>Simple</h2>
-
                 <div data-win-control="WinJS.UI.ListView"></div>
                 <div class="itemtemplate" data-win-control="WinJS.Binding.Template">
                     <div>
                         <img data-win-bind="src:imageUrl" />
-                        <div data-win-bind="innerText:name"></div>
+                        <h3 data-win-bind="innerText:name"></h3>
                     </div>
                 </div>
             </div>
@@ -43,7 +42,7 @@
                 <div class="itemtemplate" data-win-control="WinJS.Binding.Template">
                     <div>
                         <img class="img" data-win-bind="src:imageUrl" />
-                        <p class="name" data-win-bind="innerText:name"></p>
+                        <h3 class="name" data-win-bind="innerText:name"></h3>
                     </div>
                 </div>
                 <div class="headertemplate" data-win-control="WinJS.Binding.Template">
