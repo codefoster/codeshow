@@ -38,7 +38,7 @@
                         q(".xhr #results4").innerText = JSON.parse(xhr.response).d
                             .map(function (i) { return i.Title; })
                             .join(",");
-                    });
+                    }, function (error) { debugger; });
             };
         }
     });
