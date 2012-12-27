@@ -34,8 +34,10 @@ TODO:
 
             var result;
             var match = query.match(/^#([^\s,\.,#,\[]+)$/); //if #elementId then use getElementById
-            if (match) return document.getElementById(match[1]);
-            else {
+            if (match) {
+                if (!context.getElementById) context = document;
+                return context.getElementById(match[1]);
+            } else {
                 result = context.querySelectorAll(query);
                 if (result.length > 1 || options.forceArray) return Array.prototype.slice.call(result);
                 else if (result.length == 1) return (options.forceArray ? [result[0]] : result[0]);
@@ -79,9 +81,13 @@ TODO:
             g = parseInt(g, 16);
             b = parseInt(b, 16);
             return 'rgb(' + r + ',' + g + ',' + b + ')';
+        },
+
+        wait: function (seconds) {
+            return new WinJS.Promise(function (complete) {
+                setInterval(function () { complete(); }, seconds * 1000);
+            });
         }
-
-
     });
 
     WinJS.Namespace.define("Ocho.Array", {
@@ -112,7 +118,15 @@ TODO:
         //TODO: implement
         //return 'count' random array values
         random: function(count) {
-            count = count | 1; //default count to 1
+            count = count || 1; //default count to 1
+            throw "not yet implemented";
+        },
+
+        //TODO: implement
+        //return all items the two lists have in common
+        //take optional parameter to specify how to compare the items
+        union: function (b) {
+            b = b || []; //default
             throw "not yet implemented";
         },
         
@@ -122,21 +136,49 @@ TODO:
             throw "not yet implemented";
         },
         
-        toArray: function() {
-            return Array.prototype.slice.call(this);
+        toArray: function () {
+            //method 1 (I think this is safer)
+            if (!(Array.isArray(this) || this.length)) throw "The object cannot be converted to an array";
+            var result = new Array();
+            for (var i = 0; i < this.length; i++)
+                result.push(this[i]);
+            return result;
+            
+            //method 2 (keeping it around in case it has some advantages)
+            //return Array.prototype.slice.call(this);
         },
         
         first: function(fct) {
             fct || (fct = function (item) { return item; });
             var result = this.filter(fct);
             if(result.length > 0) return result[0];
+        },
+        
+        repeat: function (item, repetitions) {
+            if ((repetitions == null) || isNaN(repetitions)) repetitions = 1;
+            var result = [];
+            for (var i = 0; i < repetitions; i++) result.push(item);
+            return result;
+        },
+        removeById: function (id) {
+            for (var i = 0; i < this.length; i++)
+                if (this[i].id === id) return this.splice(i, 1);
+        },
+        selectMany: function(fct) {
+            var result = [];
+            this.forEach(function(item) {
+                fct(item).forEach(function (i) { result.push(i); });
+            });
+            return result;
         }
     });
 
     WinJS.Namespace.define("Ocho.String", {
         startsWith: function (str) { return (this.match("^" + str) == str); },
         endsWith: function (str) { return (this.match(str + "$") == str); },
-        trim: function () { return (this.replace(/^[\s\xA0]+/, "").replace(/[\s\xA0]+$/, "")); }
+        contains: function(str) { return (this.match(str) == str); },
+        trim: function () { return (this.replace(/^[\s\xA0]+/, "").replace(/[\s\xA0]+$/, "")); },
+        pad: function () { throw "not yet implemented"; }
     });
 
     var q = Ocho.Utilities.query; //make this available to the rest of the library
@@ -190,6 +232,7 @@ TODO:
                 i.extraClass = i.extraClass || '';
                 i.tooltip = i.tooltip || i.label;
                 i.icon = i.icon || 'cancel';
+                i.hidden = i.hidden || false;
 
                 var b = document.createElement("button");
                 if (i.click)
@@ -228,7 +271,8 @@ TODO:
                     icon: i.icon,
                     section: i.section,
                     extraClass: i.extraClass,
-                    tooltip: i.tooltip
+                    tooltip: i.tooltip,
+                    hidden: i.hidden
                 });
                 appbar.appendChild(b);
             });
@@ -236,6 +280,27 @@ TODO:
             //disable the appbar if it has no buttons
             appbar.disabled = (options.buttons.length == 0);
         },
+    });
+
+    WinJS.Namespace.define("Ocho.WAMS", {
+        //delete all records from a WAMS table with a certain id (can also specify an array of ids)
+        deleteById: function (table, ids) {
+            if (!ids.length) id = [ids];
+            ids.forEach(function (id) {
+                table
+                    .where({ id: id })
+                    .read().then(function (results) {
+                        results.forEach(function (record) { table.del(record); });
+                    });
+            });
+        }
+
+    });
+    WinJS.Namespace.define("Ocho.List", {
+        deleteSelected: function (selection, list) {
+            var indicesList = selection.getIndices().sort(function (a, b) { return a - b });
+            for (var j = indicesList.length - 1; j >= 0; j--) list.splice(indicesList[j], 1);
+        }
     });
 
     WinJS.Namespace.define("Ocho.Navigation", {
