@@ -86,7 +86,7 @@
                             parentedComplete();
 
                             //add the "see the code" link next to the page title
-                            if (args.detail.location.startsWith("/demos")) {
+                            if (args.detail.location.startsWith("/demos") && q(".pagetitle").parentElement) {
                                 var span = document.createElement("span");
                                 span.className = "seecode win-type-x-large win-type-interactive";
                                 span.textContent = "see the code";
