@@ -1,12 +1,7 @@
-﻿.mediacap .item {
-    display: -ms-grid;
-    -ms-grid-columns: 300px 30px 340px;
+﻿.mediacap .item img, .mediacap .item video {
+    width: 640px;
+    height: 360px;
+    border:solid 1px gray;
 }
 
-    .mediacap .item :nth-child(2) {
-        width: 320px;
-        height: 180px;
-        -ms-grid-column: 3;
-    }
-
-    .recording { border: 2px solid red;}
+.recording { border: 2px solid red;}

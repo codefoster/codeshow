@@ -53,7 +53,7 @@
                                         capture.startRecordToStorageFileAsync(profile, newFile).then(function(result) {
                                             recording = true;
                                             fileName = newFile.name;
-                                            q(".audio button").innerText = "Stop capturing audio";
+                                            q(".audio button").innerText = "Stop";
                                             q(".audio button").classList.add("recording");
                                         });
                                     });
@@ -64,7 +64,7 @@
                 else {
                     capture.stopRecordAsync();
                     recording = false;
-                    q(".audio button").innerText = "Start capturing audio";
+                    q(".audio button").innerText = "Capture";
                     q(".audio button").classList.remove("recording");
                     Windows.Storage.KnownFolders.musicLibrary.getFileAsync(fileName).then(function (captureFile) {
                         var audioBlobUrl = URL.createObjectURL(captureFile, { oneTimeOnly: true });
