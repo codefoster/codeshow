@@ -1,11 +1,10 @@
 ﻿.transitions .box {
-    display: table-cell;
     text-align: center;
     vertical-align: middle;
-    min-width: 295px;
-    min-height: 195px;
+    width: 295px;
+    height: 195px;
     font-size: 20pt;
-    background-color: #121111;
+    background-color: lightgray;
     border: solid 2px blue;
     transition: all 4s;
 }
