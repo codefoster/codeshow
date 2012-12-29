@@ -86,11 +86,12 @@
                             parentedComplete();
 
                             //add the "see the code" link next to the page title
-                            if (args.detail.location.startsWith("/demos") && q(".pagetitle").parentElement) {
+                            var pageTitle = q(".pagetitle", null, { forceArray: true })[0];
+                            if (args.detail.location.startsWith("/demos") && pageTitle.parentElement) {
                                 var span = document.createElement("span");
                                 span.className = "seecode win-type-x-large win-type-interactive";
                                 span.textContent = "see the code";
-                                q(".pagetitle").parentElement.appendChild(span);
+                                pageTitle.parentElement.appendChild(span);
                                 
                                 span.onclick = function () {
                                     WinJS.Navigation.navigate("/pages/demoCode/demoCode.html", args.detail.state);
@@ -100,7 +101,7 @@
                                 var span = document.createElement("span");
                                 span.className = "seedemo win-type-x-large win-type-interactive";
                                 span.textContent = "see the demo";
-                                q(".pagetitle").parentElement.appendChild(span);
+                                pageTitle.parentElement.appendChild(span);
 
                                 span.onclick = function () {
                                     var backStack = WinJS.Navigation.history.backStack;
