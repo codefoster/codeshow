@@ -1,14 +1,18 @@
-﻿/// <reference path="///Microsoft.WinJS.1.0/js/wl.js" />
+﻿/// <reference path="//Microsoft.WinJS.1.0/js/ui.js" />
+/// <reference path="//Microsoft.WinJS.1.0/js/base.js" />
+/// <reference path="../../js/ocho.js" />
+/// <reference path="///Microsoft.WinJS.1.0/js/wl.js" />
+/// <reference path="/js/default.js" />
 
 (function () {
     "use strict";
-    var _element, _options;
+    var element, options;
     var demosListView;
 
     WinJS.UI.Pages.define("/pages/home/home.html", {
-        ready: function (element, options) {
-            _element = element;
-            _options = options;
+        ready: function (e, o) {
+            element = e;
+            options = o;
             demosListView = q("#demosListView", element).winControl;
             this.bindList();
             this.layoutList();
@@ -23,22 +27,22 @@
             q("#appbar").winControl.hide();
             Ocho.AppBar.set();
         },
-        updateLayout: function (element, viewState, lastViewState) {
+        updateLayout: function (e, viewState, lastViewState) {
             this.layoutList(viewState);
         },
         bindList: function () {
             var demosList = app.demosList;
-            var options = _options || {};
-            if (options.queryText)
+            var o = options || {};
+            if (o.queryText)
                 demosList = demosList.createFiltered(function (i) {
-                    var result = i.keywords && i.keywords.split(" ").contains(options.queryText);
+                    var result = i.keywords && i.keywords.split(" ").contains(o.queryText);
                     return result;
                 });
-            demosList.forEach(function (item) {
-                item.onchangefct = WinJS.Utilities.markSupportedForProcessing(function (e) {
-                    new Windows.UI.Popups.MessageDialog("hi").showAsync();
-                });
-            });
+            //demosList.forEach(function (item) {
+            //    item.onchangefct = WinJS.Utilities.markSupportedForProcessing(function () {
+            //        new Windows.UI.Popups.MessageDialog("hi").showAsync();
+            //    });
+            //});
 
             demosListView.itemDataSource = demosList.dataSource;
             demosListView.selectionMode = "single";
@@ -50,7 +54,7 @@
                 });
             };
             
-            demosListView.onloadingstatechanged = function (e) {
+            demosListView.onloadingstatechanged = function () {
                 if (app.sessionState.homeScrollPosition && demosListView.loadingState == "viewPortLoaded") {
                     demosListView.scrollPosition = app.sessionState.homeScrollPosition;
                     app.sessionState.homeScrollPosition = null;
@@ -66,7 +70,7 @@
             });
             this.setCommandVisibility();
 
-            function seeTheCodeClick(e) {
+            function seeTheCodeClick() {
                 //get the selected item and pass the demo name in to the navigate function below
                 var demo;
                 q("#demosListView").winControl.selection.getItems().then(function (selectedItems) {
@@ -95,17 +99,12 @@
             return itemPromise.then(function (item) {
                 //get the right item template, render the item data into it and return the result
                 var itemTemplate;
-                var i = item.index;
-                if (Windows.UI.ViewManagement.ApplicationView.value === Windows.UI.ViewManagement.ApplicationViewState.snapped) {
-                    itemTemplate = q("#snappedItemTemplate", _element);
-                }
-                else if (item.data.key === "ad") {
-                    //return ad template
-                    itemTemplate = q("#adItemTemplate", _element);
-                }
-                else {
-                    itemTemplate = q("#itemTemplate", _element);
-                }
+                if (Windows.UI.ViewManagement.ApplicationView.value === Windows.UI.ViewManagement.ApplicationViewState.snapped)
+                    itemTemplate = q("#snappedItemTemplate", element);
+                else if (item.data.key === "ad")
+                    itemTemplate = q("#adItemTemplate", element);//return ad template
+                else
+                    itemTemplate = q("#itemTemplate", element);
                 return itemTemplate.winControl.render(item.data);
 
             });

@@ -1,3 +1,6 @@
-﻿.notifications .section {
+﻿.notifications .explanation {
+    width:640px;
+}
+.notifications .section {
     margin-top:20px;
 }
