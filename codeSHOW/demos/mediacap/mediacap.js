@@ -33,32 +33,33 @@
             var fileName;
             q(".audio button").onclick = function () {
                 if (!recording) {
-                    Windows.Devices.Enumeration.DeviceInformation.findAllAsync(Windows.Devices.Enumeration.DeviceClass.audioCapture).then(function(devices) {
-                        var captureInitSettings;
-                        captureInitSettings = new Windows.Media.Capture.MediaCaptureInitializationSettings();
-                        captureInitSettings.audioDeviceId = "";
-                        captureInitSettings.streamingCaptureMode = Windows.Media.Capture.StreamingCaptureMode.audio;
-                        captureInitSettings.realTimeModeEnabled = true;
+                    Windows.Devices.Enumeration.DeviceInformation.findAllAsync(Windows.Devices.Enumeration.DeviceClass.audioCapture)
+                        .then(function(devices) {
+                            var captureInitSettings;
+                            captureInitSettings = new Windows.Media.Capture.MediaCaptureInitializationSettings();
+                            captureInitSettings.audioDeviceId = "";
+                            captureInitSettings.streamingCaptureMode = Windows.Media.Capture.StreamingCaptureMode.audio;
+                            captureInitSettings.realTimeModeEnabled = true;
 
-                        var MY_HEADPHONES_ID = 1;
-                        captureInitSettings.audioDeviceId = devices[MY_HEADPHONES_ID].id;
+                            var DEVICE_0 = 0;
+                            if (devices[DEVICE_0]) {
+                                captureInitSettings.audioDeviceId = devices[DEVICE_0].id;
 
-
-                        capture = new Windows.Media.Capture.MediaCapture();
-                        var profile;
-                        capture.initializeAsync(captureInitSettings).then(function(result) {
-                            profile = Windows.Media.MediaProperties.MediaEncodingProfile.createWma(Windows.Media.MediaProperties.AudioEncodingQuality.high);
-                            Windows.Storage.KnownFolders.musicLibrary.createFileAsync("capture.wma", Windows.Storage.CreationCollisionOption.generateUniqueName).then(function (newFile) {
-                                capture.startRecordToStorageFileAsync(profile, newFile).then(function (result) {
-                                    recording = true;
-                                    fileName = newFile.name;
-                                    q(".audio button").innerText = "Stop capturing audio";
-                                    q(".audio button").classList.add("recording");
+                                capture = new Windows.Media.Capture.MediaCapture();
+                                var profile;
+                                capture.initializeAsync(captureInitSettings).then(function(result) {
+                                    profile = Windows.Media.MediaProperties.MediaEncodingProfile.createWma(Windows.Media.MediaProperties.AudioEncodingQuality.high);
+                                    Windows.Storage.KnownFolders.musicLibrary.createFileAsync("capture.wma", Windows.Storage.CreationCollisionOption.generateUniqueName).then(function(newFile) {
+                                        capture.startRecordToStorageFileAsync(profile, newFile).then(function(result) {
+                                            recording = true;
+                                            fileName = newFile.name;
+                                            q(".audio button").innerText = "Stop capturing audio";
+                                            q(".audio button").classList.add("recording");
+                                        });
+                                    });
                                 });
-                            });
+                            }
                         });
-
-                    });
                 }
                 else {
                     capture.stopRecordAsync();

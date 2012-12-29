@@ -147,9 +147,6 @@
     <Content Include="demos\eventHandlers\eventHandlers.css" />
     <Content Include="demos\eventHandlers\eventHandlers.html" />
     <Content Include="demos\eventHandlers\eventHandlers.js" />
-    <Content Include="demos\fancygrid\fancygrid.css" />
-    <Content Include="demos\fancygrid\fancygrid.html" />
-    <Content Include="demos\fancygrid\fancygrid.js" />
     <Content Include="demos\filepicker\fileOpenPicker.css" />
     <Content Include="demos\filepicker\fileOpenPicker.html" />
     <Content Include="demos\filepicker\fileOpenPicker.js" />

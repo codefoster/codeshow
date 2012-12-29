@@ -25,7 +25,18 @@
             </h1>
         </header>
         <section aria-label="Main content" role="main">
-            <div id="headertemplate" data-win-control="WinJS.Binding.Template">
+            <div class="explanation">
+                Do a pinch zoom or CTRL + mouse wheel on the list below and see it semantically zoom out. Click an item, do a stretch zoom (opposite of a pinch), or CTRL + mouse wheel again to zoom back in.
+            </div>
+            <div data-win-control="WinJS.UI.SemanticZoom">
+                <div id="zoomedinlist" data-win-control="WinJS.UI.ListView"></div>
+                <div id="zoomedoutlist" data-win-control="WinJS.UI.ListView"></div>
+            </div>
+
+        </section>
+        
+        <!--Templates-->
+                    <div id="headertemplate" data-win-control="WinJS.Binding.Template">
                 <div data-win-bind="innerText:category"></div>
             </div>
             <div id="zoomedintemplate" data-win-control="WinJS.Binding.Template">
@@ -37,12 +48,7 @@
             <div id="zoomedouttemplate" data-win-control="WinJS.Binding.Template">
                 <div class="sz-category" data-win-bind="innerText:category"></div>
             </div>
-            <div data-win-control="WinJS.UI.SemanticZoom">
-                <div id="zoomedinlist" data-win-control="WinJS.UI.ListView"></div>
-                <div id="zoomedoutlist" data-win-control="WinJS.UI.ListView"></div>
-            </div>
 
-        </section>
     </div>
 </body>
 </html>

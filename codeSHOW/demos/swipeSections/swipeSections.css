@@ -1,6 +1,4 @@
 ﻿/* the .swiper functionality is in default.css too, but duplicated here so it's available to see */
-.swipeSections section[role=main]:not(.swiper) > * { margin-left: 120px; }
-.swipeSections section[role=main].swiper,
 .swipeSections .swiper {
     width:100%;
     display: -ms-flexbox;
@@ -10,59 +8,25 @@
     margin-left: 120px;
 }
 
-.swipeSections section[role=main].swiper > *,
 .swipeSections .swiper > * {
     box-sizing: border-box;
     width: 80%;
     padding-right:80px;
+    margin-bottom:16px; /* room for scrollbar */
 }
 
-    .swipeSections section[role=main].swiper > * > h2,
-    .swipeSections .swiper > * > h2 {
-        margin-bottom: 20px;
+    .swipeSections .swiper > div {
+        border:solid 1px gray;
+        font-size:x-large;
+        color:gray;
+        padding-left:30px;
+        padding-top:30px;
     }
 /* end swiper section */
-
-/*Section One - Grid*/
-.swipeSections #grid {
-    display: -ms-grid;
-    -ms-grid-rows: 2fr 6fr 2fr;
-    -ms-grid-columns: 1fr 5fr 4fr;
-    height: calc(100% - 120px);
-    width: 100%;
-}
-    .swipeSections #grid > div { border: 1px solid; margin: 5px; }
-    .swipeSections #grid > div:nth-of-type(1) { -ms-grid-column-span: 2; }
-    .swipeSections #grid > div:nth-of-type(2) { -ms-grid-column: 3; -ms-grid-row-span: 2; }
-    .swipeSections #grid > div:nth-of-type(3) { -ms-grid-row: 2; }
-    .swipeSections #grid > div:nth-of-type(4) { -ms-grid-row: 2; -ms-grid-column: 2; }
-    .swipeSections #grid > div:nth-of-type(5) { -ms-grid-row: 3; -ms-grid-column-span: 3; }
-
-/*Wrapping Flexbox*/
-.swipeSections #wrappingFlexbox {
-    margin-top: 20px;
-    display: -ms-flexbox;
-    -ms-flex-wrap:wrap;
-    width: 100%;
-}
-
-.swipeSections #wrappingFlexbox > div {
-    min-width: 140px;
-    min-height: 140px;
-    background-color: gray;
-    margin:5px;
-    font-size: 60px;
-    padding:15px;
-}
-
-    .swipeSections #wrappingFlexbox > div:nth-child(7) {
-        background-color: red;
-    }
 
 @media screen and (-ms-view-state: snapped) {
     /* the .swiper functionality is in default.css too, but duplicated here so it's available to see */
     .swipeSections section[role=main]:not(.swiper) > * { margin-left: 20px; }
-    .swipeSections section[role=main].swiper,
     .swipeSections .swiper { margin-left: 20px; }
     /* end swiper section */
 }

@@ -8,14 +8,16 @@
             //fetch code files in this folder
             var main = q("section[role=main]", element);
             var demo = options;
-            q(".pagetitle",element).innerText = demo.name;
+            q(".pagetitle", element).innerText = demo.name;
+
             Windows.ApplicationModel.Package.current.installedLocation.getFolderAsync("demos")
                 .then(function(demosFolder) { return demosFolder.getFolderAsync(demo.key); })
                 .then(function(folder) { return folder.getFilesAsync(); })
                 .then(function(files) {
                     files = Array.prototype.slice.call(files);
                     files
-                        .sort(function (fileA, fileB) { return fileTypeSortOrder(fileA.fileType) - fileTypeSortOrder(fileB.fileType); })
+                        .filter(function(file) { return [".html", ".css", ".js"].contains(file.fileType); })
+                        .sort(function(fileA, fileB) { return fileTypeSortOrder(fileA.fileType) - fileTypeSortOrder(fileB.fileType); })
                         .forEach(function(file) {
                             //for each, create a div
                             var divSection = document.createElement("div");
@@ -40,10 +42,6 @@
                             main.appendChild(divSection);
 
                         });
-                })
-                .then(function() {
-                    var chaser = document.createElement("div");
-                    main.appendChild(chaser); //chaser to make the swiping work right
                 });
         }
     });

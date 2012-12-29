@@ -7,6 +7,7 @@
         ready: function (element, options) {
             new Windows.Devices.Geolocation.Geolocator()
                 .onpositionchanged = this.bindPosition;
+            this.bindPosition;
         },
         bindPosition: function(e) {
             result.lat = e.position.coordinate.latitude;

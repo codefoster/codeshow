@@ -103,8 +103,10 @@
                                 q(".pagetitle").parentElement.appendChild(span);
 
                                 span.onclick = function () {
+                                    var backStack = WinJS.Navigation.history.backStack;
                                     var location = format("/demos/{0}/{0}.html", args.detail.state.key);
-                                    WinJS.Navigation.navigate(location, args.detail.state);
+                                    if (backStack[backStack.length - 1].location == location) WinJS.Navigation.back();
+                                    else WinJS.Navigation.navigate(location, args.detail.state);
                                 };
                             }
 

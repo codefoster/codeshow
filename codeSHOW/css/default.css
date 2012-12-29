@@ -88,7 +88,7 @@ body {
     box-sizing: border-box;
     width: 80%;
     padding-right:80px;
-    margin-bottom:16px; /* room for vertical scrollbar */
+    margin-bottom:16px; /* room for scrollbar */
 }
 
 /* the last swiper section has to be full width to be able to swipe to it */

@@ -49,8 +49,14 @@
                     WinJS.Navigation.navigate(location, x.data);
                 });
             };
-            if (app.sessionState.homeScrollPosition)
-                demosListView.scrollPosition = app.sessionState.homeScrollPosition;
+            
+            demosListView.onloadingstatechanged = function (e) {
+                if (app.sessionState.homeScrollPosition && demosListView.loadingState == "viewPortLoaded") {
+                    demosListView.scrollPosition = app.sessionState.homeScrollPosition;
+                    app.sessionState.homeScrollPosition = null;
+                }
+            };
+            
             
             demosListView.onselectionchanged = this.setCommandVisibility;
             
@@ -118,7 +124,7 @@
         },
         applySettings: function () {
             document.styleSheets.toArray()
-                .first(function (ss) { return ss.href.endsWith("home.css"); })
+                .first(function (ss) { return ss.href && ss.href.endsWith("home.css"); })
                 .rules.toArray()
                 .first(function (r) { return r.selectorText == ".homepage #demosListView .win-item"; })
                 .style.backgroundColor = appdata.roamingSettings.values["tileColor"];
