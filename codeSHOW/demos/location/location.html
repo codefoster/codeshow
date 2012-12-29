@@ -25,12 +25,14 @@
             </h1>
         </header>
         <section aria-label="Main content" role="main">
+            <div class="explanation">This example uses the onstatuschanged event of a Geolocator object to determine when the location is available and binds all of the position attributes. Then it subscribes to the onpositionchanged and does the same so that if you're moving you'll see the number update in near real time.</div>
             <div class="win-type-x-large">Latitude</div>
             <div data-win-bind="innerText:lat"></div>
             <div class="win-type-x-large">Longitude</div>
             <div data-win-bind="innerText:lon"></div>
             <div class="win-type-x-large">Accuracy</div>
             <div data-win-bind="innerText:accuracy"></div>
+            <div id="msg"></div>
         </section>
     </div>
 </body>
