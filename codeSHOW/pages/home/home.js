@@ -45,25 +45,28 @@
             //});
 
             demosListView.itemDataSource = demosList.dataSource;
+            demosListView.loadingBehavior = "incremental";
             demosListView.selectionMode = "single";
             demosListView.oniteminvoked = function (e) {
                 e.detail.itemPromise.then(function (x) {
-                    var location = format("/demos/{0}/{0}.html", x.data.key);
-                    Windows.UI.ViewManagement.ApplicationView.tryUnsnap();
-                    WinJS.Navigation.navigate(location, x.data);
+                    if (x.data.key != "ad") { //'ad' is the embedded advertisement and should not navigate
+                        var location = format("/demos/{0}/{0}.html", x.data.key);
+                        Windows.UI.ViewManagement.ApplicationView.tryUnsnap();
+                        WinJS.Navigation.navigate(location, x.data);
+                    }
                 });
             };
-            
+
+            //TODO: look at why this causes weird behavior. Ad near beginning of listview doesn't load
             demosListView.onloadingstatechanged = function () {
                 if (app.sessionState.homeScrollPosition && demosListView.loadingState == "viewPortLoaded") {
                     demosListView.scrollPosition = app.sessionState.homeScrollPosition;
                     app.sessionState.homeScrollPosition = null;
                 }
             };
-            
-            
+
             demosListView.onselectionchanged = this.setCommandVisibility;
-            
+
             Ocho.AppBar.set({
                 buttons: [{ id: "seeTheCode", label: "See the Code", section: "selection", icon: "page2", click: seeTheCodeClick, hidden: true }],
                 addClass: "win-ui-dark"
