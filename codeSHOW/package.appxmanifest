@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/2010/manifest">
-  <Identity Name="36805codefoster.codeSHOW" Version="1.0.0.19" Publisher="CN=603A18C8-7F37-48CF-B16C-FED79B9AEA66" />
+  <Identity Name="36805codefoster.codeSHOW" Version="1.0.0.22" Publisher="CN=603A18C8-7F37-48CF-B16C-FED79B9AEA66" />
   <Properties>
     <DisplayName>codeSHOW</DisplayName>
     <PublisherDisplayName>codefoster</PublisherDisplayName>

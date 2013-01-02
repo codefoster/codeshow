@@ -139,7 +139,6 @@ var r = appdata.roamingSettings.values;
     }
 
     function loadDemosAsync() {
-        
         return new WinJS.Promise(function (c, e, p) {
             Windows.ApplicationModel.Package.current.installedLocation.getFolderAsync("demos")
                 .then(function (pagesFolder) {
@@ -170,7 +169,7 @@ var r = appdata.roamingSettings.values;
                                     
                                     if (enabled) {
                                         
-                                        var wamsData = fetchWamsData(f.name);
+                                        //var wamsData = fetchWamsData(f.name);
 
                                         var pageTitle = (q("title", xhr.response) ? q("title", xhr.response).innerText : (q(".pagetitle", xhr.response) ? q(".pagetitle", xhr.response).innerText : "Unnamed"));
                                         result.push({
@@ -180,7 +179,7 @@ var r = appdata.roamingSettings.values;
                                             keywords: keywords,
                                             tags: tags,
                                             dateCreated: dateCreated,
-                                            rating: wamsData.averageRating
+                                            //rating: wamsData.averageRating
                                         });
                                     }
                                 }));
