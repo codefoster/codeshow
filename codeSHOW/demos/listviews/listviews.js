@@ -58,7 +58,18 @@
             lv = q(".listviews #asymmetric .win-listview").winControl;
             lv.itemDataSource = new WinJS.Binding.List(images).dataSource;
             lv.itemTemplate = q(".listviews #asymmetric #imageTemplate");
-            lv.layout.groupInfo = function () { return { enableCellSpanning: true, cellWidth: 160, cellHeight: 160 }; };
+            lv.layout.groupInfo = function () { return { enableCellSpanning: true, cellWidth: 120, cellHeight: 120 }; };
+
+            //loading states
+            var statesList = new WinJS.Binding.List(attractions);
+            lv = q(".listviews #states .win-listview").winControl;
+            lv.itemDataSource = statesList.dataSource;
+            lv.itemTemplate = q(".listviews #states .itemtemplate");
+            var output = q(".listviews #states .output");
+            lv.onloadingstatechanged = function(e) {
+                output.innerHTML += lv.loadingState + "<br/>";
+                output.scrollTop = output.scrollHeight;
+            };
 
         },
     });
