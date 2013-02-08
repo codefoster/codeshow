@@ -190,7 +190,7 @@ var r = appdata.roamingSettings.values;
                             app.demosList.push(r);
                         });
                         //TODO: improve this... for now it just renderes an ad with a special key and a name of 'b'... should be random 
-                        app.demosList.push({ key: "ad", name: "b", description: "", keywords: "", tags: "", dateCreated: "" });
+                        app.demosList.push({ key: "ad", name: "", description: "", keywords: "", tags: "", dateCreated: "" });
                         c();
                     });
                 });
