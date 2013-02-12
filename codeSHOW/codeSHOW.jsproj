@@ -79,6 +79,9 @@
     <Content Include="demos\location\location.css" />
     <Content Include="demos\location\location.html" />
     <Content Include="demos\location\location.js" />
+    <Content Include="demos\playerframework\playerframework.css" />
+    <Content Include="demos\playerframework\playerframework.html" />
+    <Content Include="demos\playerframework\playerframework.js" />
     <Content Include="demos\slidingdiv\slidingdiv.css" />
     <Content Include="demos\slidingdiv\slidingdiv.html" />
     <Content Include="demos\slidingdiv\slidingdiv.js" />
@@ -321,6 +324,7 @@
   <ItemGroup>
     <SDKReference Include="Bing.Maps.JavaScript, Version=1.0" />
     <SDKReference Include="LiveSDKHTML, Version=5.0" />
+    <SDKReference Include="Microsoft.PlayerFramework.Js, Version=1.8.0.5" />
     <SDKReference Include="Microsoft.WinJS.1.0, Version=1.0" />
     <SDKReference Include="MobileServicesJavaScriptClient, Version=0.2.0.0" />
     <SDKReference Include="MSAdvertisingJS, Version=6.1" />
