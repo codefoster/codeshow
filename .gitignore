@@ -5,3 +5,4 @@ bld/
 obj/
 ipch/
 *.suo
+*.user
