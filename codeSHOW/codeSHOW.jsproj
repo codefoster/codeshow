@@ -68,6 +68,9 @@
     <Content Include="demos\classes\classes.css" />
     <Content Include="demos\classes\classes.html" />
     <Content Include="demos\classes\classes.js" />
+    <Content Include="demos\components\components.css" />
+    <Content Include="demos\components\components.html" />
+    <Content Include="demos\components\components.js" />
     <Content Include="demos\crop\crop.css" />
     <Content Include="demos\crop\crop.html" />
     <Content Include="demos\crop\crop.js" />
@@ -334,6 +337,10 @@
       <HintPath>NotificationsExtensions.winmd</HintPath>
       <IsWinMDFile>true</IsWinMDFile>
     </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CalculatorCPP\CalculatorCPP.vcxproj" />
+    <ProjectReference Include="..\CalculatorCS\CalculatorCS.csproj" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\$(WMSJSProjectDirectory)\Microsoft.VisualStudio.$(WMSJSProject).targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
