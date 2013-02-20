@@ -1,4 +1,7 @@
 $ cat .gitignore
+Debug/
 bin/
 bld/
+obj/
+ipch/
 *.suo
