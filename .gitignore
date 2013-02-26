@@ -6,3 +6,5 @@ obj/
 ipch/
 *.suo
 *.user
+codeshow.sdf
+codeshow.opensdf

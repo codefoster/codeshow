@@ -335,6 +335,10 @@ TODO:
                 listview.lastScreenX = ev.screenX;
 
             };
+        },
+        getEnumValue: function(value, e) {
+            for (var p in e) 
+                if (e[p] === value) return p;
         }
     });
 })();

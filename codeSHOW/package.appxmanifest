@@ -45,6 +45,7 @@
     </Application>
   </Applications>
   <Capabilities>
+    <Capability Name="removableStorage" />
     <Capability Name="musicLibrary" />
     <Capability Name="internetClient" />
     <DeviceCapability Name="webcam" />

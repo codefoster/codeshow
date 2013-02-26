@@ -76,6 +76,9 @@
     <Content Include="demos\crop\crop.js" />
     <Content Include="demos\crop\images\attribution.txt" />
     <Content Include="demos\crop\images\leaf twirl.jpg" />
+    <Content Include="demos\discover\discover.css" />
+    <Content Include="demos\discover\discover.html" />
+    <Content Include="demos\discover\discover.js" />
     <Content Include="demos\notifications\notifications.css" />
     <Content Include="demos\notifications\notifications.html" />
     <Content Include="demos\notifications\notifications.js" />
@@ -91,6 +94,9 @@
     <Content Include="demos\timeflies\timeflies.css" />
     <Content Include="demos\timeflies\timeflies.html" />
     <Content Include="demos\timeflies\timeflies.js" />
+    <Content Include="demos\wamspush\wamspush.css" />
+    <Content Include="demos\wamspush\wamspush.html" />
+    <Content Include="demos\wamspush\wamspush.js" />
     <Content Include="js\converters.js" />
     <Content Include="js\date.js" />
     <Content Include="js\rx.js" />
