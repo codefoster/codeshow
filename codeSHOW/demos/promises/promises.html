@@ -25,24 +25,26 @@
             </h1>
         </header>
         <section aria-label="Main content" role="main" class="swiper">
+
+            <!-- Concept -->
             <div id="concept" class="section">
                 <h2>Concept</h2>
                 <div>
-                    <div id="method1">
+                    <div class="method1">
                         <h3>Long Sync Task</h3>
                         <div class="explanation">This task blocks the UI. Notice the button state freezes. This is not an acceptable user experience.</div>
                         <progress value="0" max="100"></progress>
                         <button class="start">Start</button><button class="reset">Reset</button>
                     </div>
 
-                    <div id="method2">
+                    <div class="method2">
                         <h3>Long Async Task (no Promise)</h3>
                         <div class="explanation">This task does not block the UI, but our progress bar reports immediately that it's complete even though it's not.</div>
                         <progress value="0" max="100"></progress>
                         <button class="start">Start</button><button class="reset">Reset</button>
                     </div>
 
-                    <div id="method3">
+                    <div class="method3">
                         <h3>Long Async Task (using a Promise)</h3>
                         <div class="explanation">Now with promises we can not only wait until the task is done to update our progress, but we can update it along the way as progress is reported.</div>
                         <progress value="0" max="100"></progress>
@@ -50,37 +52,47 @@
                     </div>
                 </div>
             </div>
+
+            <!-- Uses -->
             <div id="uses" class="section">
                 <h2>Uses</h2>
                 <div>
-                    <div id="method1">
+                    <div class="method1">
                         <h3>Consuming a promise</h3>
                         <div class="explanation">Implement the common scenario of consuming a promise and defining a function to be called when the promise is complete.</div>
                         <progress value="0" max="100"></progress>
                         <button class="start">Start</button><button class="reset">Reset</button>
                     </div>
 
-                    <div id="method2">
+                    <div class="method2">
                         <h3>Passing on a promise</h3>
                         <div class="explanation">Create a function that is async because it itself calls an async function and merely passes its promise to the caller.</div>
                         <progress value="0" max="100"></progress>
                         <button class="start">Start</button><button class="reset">Reset</button>
                     </div>
 
-                    <div id="method3">
+                    <div class="method3">
                         <h3>Creating a promise</h3>
                         <div class="explanation">Create and return a new promise from a function and get complete control over it.</div>
                         <progress value="0" max="100"></progress>
                         <button class="start">Start</button><button class="reset">Reset</button>
                     </div>
 
-                    <div id="method4">
+                    <div class="method4">
                         <h3>Storing a promise</h3>
                         <div class="explanation">Store a promise returned by an async function and later access that stored promise.</div>
                         <progress value="0" max="100"></progress>
                         <button class="start">Start</button><button class="reset">Reset</button>
                     </div>
                 </div>
+            </div>
+
+            <!-- Chaining -->
+            <div id="chaining" class="section">
+                <h2>Chaining</h2>
+                <div class="explanation">Press Start to see the numbers 1-4 appear with a pause between each. If you look at the code for this demo, you'll see that chained promises are being used to accomplish this and you'll see the wrong way and the right way to chain your promises.</div>
+                <button class="start">Start</button><button class="reset">Reset</button>
+                <div class="log"></div>
             </div>
         </section>
     </div>

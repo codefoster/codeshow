@@ -88,6 +88,14 @@
     <Content Include="demos\playerframework\playerframework.css" />
     <Content Include="demos\playerframework\playerframework.html" />
     <Content Include="demos\playerframework\playerframework.js" />
+    <Content Include="demos\scaling\ketch_small.png" />
+    <Content Include="demos\scaling\ketch.scale-180.png" />
+    <Content Include="demos\scaling\ketch_big.png" />
+    <Content Include="demos\scaling\ketch.scale-100.png" />
+    <Content Include="demos\scaling\ketch.scale-140.png" />
+    <Content Include="demos\scaling\scaling.css" />
+    <Content Include="demos\scaling\scaling.html" />
+    <Content Include="demos\scaling\scaling.js" />
     <Content Include="demos\slidingdiv\slidingdiv.css" />
     <Content Include="demos\slidingdiv\slidingdiv.html" />
     <Content Include="demos\slidingdiv\slidingdiv.js" />
