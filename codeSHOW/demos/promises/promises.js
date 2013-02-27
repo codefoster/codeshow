@@ -118,7 +118,7 @@
         var log = q(".log", chaining);
 
         q("button.start", chaining).onclick = function (e) {
-            ////WRONG! (even though it works just fine)
+            ////WRONG! (even though it works just fine) nested promises are very difficult to maintain
             //log.innerHTML += "1<br/>";
             //longTaskAsyncPromise()
             //    .then(function () {

@@ -67,7 +67,6 @@
             q(".storage #appData button:nth-of-type(3)").onclick = function (e) {
                 appData.roamingFolder.createFileAsync("storagedemo.txt", Windows.Storage.CreationCollisionOption.replaceExisting)
                     .then(function (file) { Windows.Storage.FileIO.writeTextAsync(file, q(".storage #appData input:nth-of-type(3)").value); });
-
             };
 
 
