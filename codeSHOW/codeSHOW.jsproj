@@ -63,6 +63,10 @@
     <Content Include="demos\autocomplete\autocomplete.css" />
     <Content Include="demos\autocomplete\autocomplete.html" />
     <Content Include="demos\autocomplete\autocomplete.js" />
+    <Content Include="demos\backgroundtask\zonetask.js" />
+    <Content Include="demos\backgroundtask\backgroundtask.css" />
+    <Content Include="demos\backgroundtask\backgroundtask.html" />
+    <Content Include="demos\backgroundtask\backgroundtask.js" />
     <Content Include="demos\bingmaps\bingmaps.css" />
     <Content Include="demos\bingmaps\bingmaps.html" />
     <Content Include="demos\bingmaps\bingmaps.js" />
@@ -95,6 +99,9 @@
     <Content Include="demos\playerframework\playerframework.css" />
     <Content Include="demos\playerframework\playerframework.html" />
     <Content Include="demos\playerframework\playerframework.js" />
+    <Content Include="demos\print\print.css" />
+    <Content Include="demos\print\print.html" />
+    <Content Include="demos\print\print.js" />
     <Content Include="demos\scaling\ketch_small.png" />
     <Content Include="demos\scaling\ketch.scale-180.png" />
     <Content Include="demos\scaling\ketch_big.png" />

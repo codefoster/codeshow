@@ -4,6 +4,7 @@
     -ms-flex-pack: start;
     -ms-flex-direction: row;
     width: 100%;
+    color: #fff;
 }
 
     .errors #grid > div {

@@ -38,6 +38,11 @@
         <Extension Category="windows.protocol">
           <Protocol Name="codefoster" />
         </Extension>
+        <Extension Category="windows.backgroundTasks" StartPage="demos\backgroundtask\zonetask.js">
+          <BackgroundTasks>
+            <Task Type="systemEvent" />
+          </BackgroundTasks>
+        </Extension>
       </Extensions>
       <ApplicationContentUriRules>
         <Rule Match="http://www.microsoft.com" Type="include" />
