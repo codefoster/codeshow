@@ -9,8 +9,8 @@
             var geo = new Windows.Devices.Geolocation.Geolocator();
             geo.onpositionchanged = function (e) { self.bindPosition(e.position); };
             geo.onstatuschanged = function (e) {
-                q("#msg", e).innerText = self.getStatusString(e.status);
-                if (e.status == 0) {
+                q(".location #msg").innerText = self.getStatusString(e.status);
+                if (e.status == Windows.Devices.Geolocation.PositionStatus.ready) {
                     geo.getGeopositionAsync().then(function (pos) {
                         self.bindPosition(pos);
                     });

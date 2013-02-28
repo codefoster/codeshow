@@ -3,7 +3,10 @@
 
     WinJS.UI.Pages.define("/demos/customControl/customControl.html", {
         ready: function (element, options) {
-
+            //create a green box imperatively
+            var div = document.createElement("div");
+            new CustomControlNamespace.BigBox(div,{backgroundColor:'green'});
+            q("section[role=main]", element).appendChild(div);
         }
     });
 
@@ -29,8 +32,8 @@
             },
             _createVisualTree: function () {
                 var child = document.createElement("div");
-                child.style.height = "400px";
-                child.style.width = "400px";
+                child.style.height = "200px";
+                child.style.width = "200px";
                 child.style.padding = "10px";
                 child.style.color = "white";
                 child.style.backgroundColor = this._backgroundColor;
