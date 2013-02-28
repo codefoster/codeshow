@@ -4,6 +4,8 @@ bin/
 bld/
 obj/
 ipch/
+*.vspx
+*.psess
 *.suo
 *.user
 codeshow.sdf
