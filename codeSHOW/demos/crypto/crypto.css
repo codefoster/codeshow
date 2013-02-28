@@ -1,0 +1,13 @@
+﻿.crypto #base64 .converter {
+    border: solid 10px green;
+    height:500px;
+    display: -ms-grid;
+    -ms-grid-rows: 1fr 1fr;
+    -ms-grid-columns: 2fr 1fr 2fr;
+}
+
+    .crypto #base64 .converter > * { border: solid 1px gray; }
+    .crypto #base64 .converter input { -ms-grid-row-span: 2; }
+    .crypto #base64 .converter button { -ms-grid-column: 2; }
+    .crypto #base64 .converter .decrypt { -ms-grid-row: 2; }
+    .crypto #base64 .converter .encrypted { -ms-grid-column: 3; }

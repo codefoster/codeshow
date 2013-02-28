@@ -16,13 +16,7 @@
                 dialog.captureFileAsync(Windows.Media.Capture.CameraCaptureUIMode.video)
                     .done(
                         function (file) {
-                            if (file) {
-                                var videoBlobUrl = URL.createObjectURL(file, { oneTimeOnly: true });
-                                q("#capturedVideo").src = videoBlobUrl;
-                            }
-                        },
-                        function (err) {
-                            debugger;
+                            if (file) q("#capturedVideo").src = URL.createObjectURL(file, { oneTimeOnly: true });
                         }
                     );
             };
@@ -41,9 +35,9 @@
                             captureInitSettings.streamingCaptureMode = Windows.Media.Capture.StreamingCaptureMode.audio;
                             captureInitSettings.realTimeModeEnabled = true;
 
-                            var DEVICE_0 = 0;
-                            if (devices[DEVICE_0]) {
-                                captureInitSettings.audioDeviceId = devices[DEVICE_0].id;
+                            var DEVICE_INDEX = 0;
+                            if (devices[DEVICE_INDEX]) {
+                                captureInitSettings.audioDeviceId = devices[DEVICE_INDEX].id;
 
                                 capture = new Windows.Media.Capture.MediaCapture();
                                 var profile;

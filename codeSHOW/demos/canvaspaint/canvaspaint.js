@@ -18,7 +18,7 @@
 
         var canvas = document.getElementById('tutorial');
         var ctx = canvas.getContext('2d');
-        ctx.strokeStyle = 'yellow';
+        ctx.strokeStyle = 'darkblue';
         ctx.beginPath();
 
         var mouseMoves = Rx.Observable.fromEvent(canvas, 'mousemove');
