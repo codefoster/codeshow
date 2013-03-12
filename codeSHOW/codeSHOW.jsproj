@@ -122,6 +122,10 @@
     <Content Include="demos\wamspush\wamspush.css" />
     <Content Include="demos\wamspush\wamspush.html" />
     <Content Include="demos\wamspush\wamspush.js" />
+    <Content Include="demos\zoom\oceanrocks.jpg" />
+    <Content Include="demos\zoom\zoom.css" />
+    <Content Include="demos\zoom\zoom.html" />
+    <Content Include="demos\zoom\zoom.js" />
     <Content Include="js\converters.js" />
     <Content Include="js\date.js" />
     <Content Include="js\rx.js" />
