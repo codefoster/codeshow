@@ -99,6 +99,9 @@
     <Content Include="demos\playerframework\playerframework.css" />
     <Content Include="demos\playerframework\playerframework.html" />
     <Content Include="demos\playerframework\playerframework.js" />
+    <Content Include="demos\playto\playto.css" />
+    <Content Include="demos\playto\playto.html" />
+    <Content Include="demos\playto\playto.js" />
     <Content Include="demos\print\print.css" />
     <Content Include="demos\print\print.html" />
     <Content Include="demos\print\print.js" />
