@@ -5,6 +5,8 @@ bin/
 bld/
 obj/
 ipch/
+x64/
+ARM/
 *.vspx
 *.psess
 *.suo
