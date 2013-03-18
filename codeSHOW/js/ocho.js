@@ -153,6 +153,14 @@ TODO:
             var result = this.filter(fct);
             if(result.length > 0) return result[0];
         },
+
+        take: function(count) {
+            count = count || 1;
+            var result = [];
+            for (var i = 0; i < count; i++)
+                result.push(this[i]);
+            return result;
+        },
         
         repeat: function (item, repetitions) {
             if ((repetitions == null) || isNaN(repetitions)) repetitions = 1;

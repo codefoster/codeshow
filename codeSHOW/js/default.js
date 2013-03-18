@@ -214,5 +214,6 @@ String.prototype.trim = Ocho.String.trim;
 Array.prototype.contains = Ocho.Array.contains;
 Array.prototype.distinct = Ocho.Array.distinct;
 Array.prototype.first = Ocho.Array.first;
+Array.prototype.take = Ocho.Array.take;
 StyleSheetList.prototype.toArray = Ocho.Array.toArray;
 MSCSSRuleList.prototype.toArray = Ocho.Array.toArray;
