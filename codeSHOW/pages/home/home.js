@@ -62,6 +62,11 @@
                 if (app.sessionState.homeScrollPosition && demosListView.loadingState == "viewPortLoaded") {
                     demosListView.scrollPosition = app.sessionState.homeScrollPosition;
                     app.sessionState.homeScrollPosition = null;
+                    debugger;
+                }
+                var ad = q(".adTile").winControl;
+                if (ad) {
+                    ad.onerror
                 }
             };
 
@@ -104,8 +109,9 @@
                 var itemTemplate;
                 if (Windows.UI.ViewManagement.ApplicationView.value === Windows.UI.ViewManagement.ApplicationViewState.snapped)
                     itemTemplate = q("#snappedItemTemplate", element);
-                else if (item.data.key === "ad")
+                else if (item.data.key === "ad") {
                     itemTemplate = q("#adItemTemplate", element);//return ad template
+                }
                 else
                     itemTemplate = q("#itemTemplate", element);
                 return itemTemplate.winControl.render(item.data);
