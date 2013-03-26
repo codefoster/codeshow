@@ -64,9 +64,19 @@
                     app.sessionState.homeScrollPosition = null;
                     debugger;
                 }
-                var ad = q(".adTile").winControl;
-                if (ad) {
-                    ad.onerror
+
+                //rotate in custom ads (from WAMS) if there are not pubcenter ads
+                if (q(".adTile") && q(".adTile").winControl) {
+                    q(".adTile").winControl.onErrorOccurred = function (sender, evt) {
+                        if (evt.errorCode === "NoAdAvailable") {
+                            app.client.getTable("adTiles").read().then(function (adTiles) {
+                                var randomAd = adTiles.takeRandom(1)[0];
+                                var img = document.createElement("img");
+                                img.src = randomAd.imageUrl;
+                                sender._domElement.appendChild(img);
+                            });
+                        }
+                    };
                 }
             };
 

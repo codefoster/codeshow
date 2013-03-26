@@ -215,5 +215,6 @@ Array.prototype.contains = Ocho.Array.contains;
 Array.prototype.distinct = Ocho.Array.distinct;
 Array.prototype.first = Ocho.Array.first;
 Array.prototype.take = Ocho.Array.take;
+Array.prototype.takeRandom = Ocho.Array.random;
 StyleSheetList.prototype.toArray = Ocho.Array.toArray;
 MSCSSRuleList.prototype.toArray = Ocho.Array.toArray;

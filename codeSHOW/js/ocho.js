@@ -117,9 +117,11 @@ TODO:
         
         //TODO: implement
         //return 'count' random array values
-        random: function(count) {
+        random: function (count) {
+            var that = this;
             count = count || 1; //default count to 1
-            throw "not yet implemented";
+            this.sort(function () { return 0.5 - Math.random() });
+            return this.slice(0, count);
         },
 
         //TODO: implement
