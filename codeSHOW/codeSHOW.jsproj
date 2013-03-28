@@ -102,6 +102,9 @@
     <Content Include="demos\playto\playto.css" />
     <Content Include="demos\playto\playto.html" />
     <Content Include="demos\playto\playto.js" />
+    <Content Include="demos\popups\popups.css" />
+    <Content Include="demos\popups\popups.html" />
+    <Content Include="demos\popups\popups.js" />
     <Content Include="demos\print\print.css" />
     <Content Include="demos\print\print.html" />
     <Content Include="demos\print\print.js" />
@@ -113,6 +116,9 @@
     <Content Include="demos\scaling\scaling.css" />
     <Content Include="demos\scaling\scaling.html" />
     <Content Include="demos\scaling\scaling.js" />
+    <Content Include="demos\secondtile\secondtile.css" />
+    <Content Include="demos\secondtile\secondtile.html" />
+    <Content Include="demos\secondtile\secondtile.js" />
     <Content Include="demos\slidingdiv\slidingdiv.css" />
     <Content Include="demos\slidingdiv\slidingdiv.html" />
     <Content Include="demos\slidingdiv\slidingdiv.js" />

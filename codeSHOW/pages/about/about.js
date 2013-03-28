@@ -9,7 +9,7 @@
             lv.itemTemplate = q("#profileTemplate", element);
             lv.layout = new WinJS.UI.ListLayout();
             
-            getTwitterProfiles(["codefoster","palermo4","valeASeattle"])
+            getTwitterProfiles(["codefoster", "palermo4", "valeASeattle", "iqaanullah"])
                 .then(
                     function (profiles) {
                         q("progress", element).style.display = "none";

@@ -351,4 +351,22 @@ TODO:
                 if (e[p] === value) return p;
         }
     });
+
+    WinJS.Namespace.define("Ocho.Popups", {
+        alert: function (message, title) {
+            title = title || "";
+            Windows.UI.Popups.MessageDialog(message, title).showAsync();
+        },
+
+        confirm: function (message, title) {
+            return new WinJS.Promise(function (c) {
+                title = title || "";
+                var msgDialog = Windows.UI.Popups.MessageDialog(message, title);
+                msgDialog.commands.append(new Windows.UI.Popups.UICommand("OK", c, 1));
+                msgDialog.commands.append(new Windows.UI.Popups.UICommand("Cancel", c, 0));
+                msgDialog.showAsync();
+            });
+        }
+    });
+
 })();

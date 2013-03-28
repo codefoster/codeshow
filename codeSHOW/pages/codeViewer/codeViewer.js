@@ -16,6 +16,7 @@
 			_element: NULL,
 			_codePath: NULL,
 			_codeContentElement: NULL,
+            _container: NULL,
 			_loadFile: function (filePath) {
 				var that = this;
 
@@ -31,12 +32,27 @@
 			                    brush: brushName,
 			                    light: true
 			                },
-			                code = "<pre>" + escapedHTML + "</pre>";
-			            config["quick-code"] = false;
 
-			            that._codeContentElement.innerHTML = code;
+                            code = "<pre>" + escapedHTML + "</pre>";
 
-			            SyntaxHighlighter.highlight(config, that._codeContentElement.firstElementChild);
+			            that._container = document.createElement("div");
+			            that._container.classList.add("codeContainer");
+			            //config["quick-code"] = false;
+
+			            that._copyLink = document.createElement("a");
+			            that._copyLink.innerHTML = "<i>copy the code</i>";
+			            that._copyLink.onclick = function () {
+			                window.clipboardData.setData("Text", result.responseText);
+			            };
+
+			            that._container.innerHTML = code;
+			            that._codeContentElement.appendChild(that._container);
+
+			            SyntaxHighlighter.highlight(config, q("pre", that._codeContentElement));
+
+			            q(".codeViewer", that._container.parentElement).appendChild(that._copyLink);
+			            q(".codeViewer", that._container.parentElement).style.textAlign = "right";
+
 			        },
 			        function(error) {
 			            that._codeContentElement.style.color = "red";
