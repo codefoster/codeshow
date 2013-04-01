@@ -13,15 +13,17 @@
     
     function onmousemove(e) {
         if (isDrag) {
-            dragElement.style.left = (e.clientX - offset.startX) + 'px';
-            dragElement.style.top = (e.clientY - offset.startY) + 'px';
+            dragElement.style.left = (e.clientX + offset.startX) + 'px';
+            dragElement.style.top = (e.clientY + offset.startY) + 'px';
         }
     }
     
     function onmousedown(e) {
         e.preventDefault();
         isDrag = true;
-        offset = { startX: e.offsetX, startY: e.offsetY };
+        offset = {
+            startX: parseInt(dragElement.style.left) - e.clientX, startY: parseInt(dragElement.style.top) - e.clientY
+        };
     }
     
     function initializeWithoutRxJs() {
@@ -77,8 +79,8 @@
         // This function is called whenever a user navigates to this page. It
         // populates the page elements with the app's data.
         ready: function (element, options) {
-            initialize();
-            //initializeWithoutRxJs();
+            //initialize();
+            initializeWithoutRxJs();
         },
 
         updateLayout: function (element, viewState, lastViewState) {
@@ -90,8 +92,8 @@
         },
 
         unload: function () {
-            teardown();
-            //teardownWithoutRxJs();
+            //teardown();
+            teardownWithoutRxJs();
         }
     });
 })();
