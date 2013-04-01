@@ -62,7 +62,6 @@
                 if (app.sessionState.homeScrollPosition && demosListView.loadingState == "viewPortLoaded") {
                     demosListView.scrollPosition = app.sessionState.homeScrollPosition;
                     app.sessionState.homeScrollPosition = null;
-                    debugger;
                 }
 
                 //rotate in custom ads (from WAMS) if there are not pubcenter ads
