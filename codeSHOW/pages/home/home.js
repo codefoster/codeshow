@@ -20,12 +20,14 @@
             WinJS.Namespace.define("codeSHOW.Pages.Home", {
                 applySettings: this.applySettings //allow the settings pane to call this to change the tile color
             });
+            Windows.ApplicationModel.Search.SearchPane.getForCurrentView().showOnKeyboardInput = true;
         },
         unload: function () {
             app.sessionState.homeScrollPosition = demosListView.scrollPosition;
             q("#appbar").winControl.sticky = false;
             q("#appbar").winControl.hide();
             Ocho.AppBar.set();
+            Windows.ApplicationModel.Search.SearchPane.getForCurrentView().showOnKeyboardInput = false;
         },
         updateLayout: function (e, viewState, lastViewState) {
             this.layoutList(viewState);
