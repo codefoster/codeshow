@@ -10,4 +10,9 @@
 
 .swiper {
     margin-right: 120px;
+    margin-left: 0px !important;
 }
+
+    .swiper > div {
+        margin-left: 120px !important;
+    }
