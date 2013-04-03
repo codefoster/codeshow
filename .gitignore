@@ -1,6 +1,7 @@
 $ cat .gitignore
 archive/
 Debug/
+Release/
 bin/
 bld/
 obj/
