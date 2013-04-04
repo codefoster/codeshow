@@ -9,7 +9,7 @@
     var element, options;
     var demosListView;
     var adTimer;
-    var AD_REFRESH_RATE = 32;
+    var AD_REFRESH_RATE = 32; //refresh every 32 seconds seems to be better than 30
     WinJS.UI.Pages.define("/pages/home/home.html", {
         ready: function (e, o) {
             element = e;
