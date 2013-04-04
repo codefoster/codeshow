@@ -9,7 +9,7 @@
     var element, options;
     var demosListView;
     var adTimer;
-    var AD_REFRESH_RATE = 5;
+    var AD_REFRESH_RATE = 32;
     WinJS.UI.Pages.define("/pages/home/home.html", {
         ready: function (e, o) {
             element = e;
@@ -89,9 +89,6 @@
                                 sender._domElement.appendChild(img);
                             });
                         }
-                    };
-                    q(".adTile").winControl.onAdRefreshed = function () {
-                        debugger;
                     };
                 }
             };
