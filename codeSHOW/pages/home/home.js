@@ -8,7 +8,8 @@
     "use strict";
     var element, options;
     var demosListView;
-
+    var adTimer;
+    var AD_REFRESH_RATE = 5;
     WinJS.UI.Pages.define("/pages/home/home.html", {
         ready: function (e, o) {
             element = e;
@@ -21,6 +22,17 @@
                 applySettings: this.applySettings //allow the settings pane to call this to change the tile color
             });
             Windows.ApplicationModel.Search.SearchPane.getForCurrentView().showOnKeyboardInput = true;
+            adTimer = setInterval(this._refreshAd, AD_REFRESH_RATE * 1000);
+
+        },
+        _refreshAd: function () {
+            //refresh ad
+            if (q(".adTile") && q(".adTile").winControl) {
+                var ad = q(".adTile").winControl;
+                ad.refresh();
+            }
+            
+            setInterval(this._refreshAd, AD_REFRESH_RATE * 1000);
         },
         unload: function () {
             app.sessionState.homeScrollPosition = demosListView.scrollPosition;
@@ -77,6 +89,9 @@
                                 sender._domElement.appendChild(img);
                             });
                         }
+                    };
+                    q(".adTile").winControl.onAdRefreshed = function () {
+                        debugger;
                     };
                 }
             };
