@@ -132,6 +132,7 @@
     <Content Include="demos\zoom\zoom.css" />
     <Content Include="demos\zoom\zoom.html" />
     <Content Include="demos\zoom\zoom.js" />
+    <Content Include="images\adtile_codeplex.png" />
     <Content Include="js\converters.js" />
     <Content Include="js\date.js" />
     <Content Include="js\rx.js" />

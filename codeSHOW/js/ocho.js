@@ -91,9 +91,21 @@ TODO:
     });
 
     WinJS.Namespace.define("Ocho.Array", {
-        contains: function (elem) {
-            for (var i = 0, length = this.length; i < length; i++)
-                if (this[i] === elem) return true;
+        contains: function (elem, options) {
+            options = options || {};
+            options.behavior = options.behavior || "exactMatch"; //exactMatch, startsWith, endsWith, contains
+            options.caseSensitive = options.caseSensitive || false;
+            var term;
+            for (var i = 0, length = this.length; i < length; i++) {
+                term = this[i];
+                if (!options.caseSensitive) { term = term.toUpperCase(); elem = elem.toUpperCase() }
+                switch (options.behavior) {
+                    case "exactMatch": if(term === elem) return true; break;
+                    case "startsWith": if(term.startsWith(elem)) return true; break;
+                    case "endsWith": if(term.endsWith(elem)) return true; break;
+                    case "contains": if(term.contains(elem)) return true; break;
+                }
+            }
             return false;
         },
         
@@ -186,7 +198,14 @@ TODO:
     WinJS.Namespace.define("Ocho.String", {
         startsWith: function (str) { return (this.match("^" + str) == str); },
         endsWith: function (str) { return (this.match(str + "$") == str); },
-        contains: function(str) { return (this.match(str) == str); },
+        contains: function (str, options) {
+            options = options || {};
+            if(options.caseSensitive === undefined) options.caseSensitive = true;
+            if (!options.caseSensitive)
+                return this.toUpperCase().search(str.toUpperCase()) >= 0;
+            else
+                return (this.search(str) >= 0);
+        },
         trim: function () { return (this.replace(/^[\s\xA0]+/, "").replace(/[\s\xA0]+$/, "")); },
         pad: function () { throw "not yet implemented"; }
     });

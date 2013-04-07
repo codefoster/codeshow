@@ -49,14 +49,13 @@
             var o = options || {};
             if (o.queryText)
                 demosList = demosList.createFiltered(function (i) {
-                    var result = i.keywords && i.keywords.split(" ").contains(o.queryText);
-                    return result;
+                    var containsOptions = { behavior: "contains", caseSensitive: "false" };
+                    var x = i.description.contains(o.queryText, { caseSensitive: false });
+                    return i.key && i.key.split(" ").contains(o.queryText, containsOptions)
+                        || i.name && (i.name.contains(o.queryText, { caseSensitive: false }) || i.name.split(" ").contains(o.queryText, containsOptions))
+                        || i.keywords && i.keywords.split(" ").contains(o.queryText, containsOptions)
+                        || i.description && (i.description.contains(o.queryText, { caseSensitive: false }) || i.description.split(" ").contains(o.queryText, containsOptions));
                 });
-            //demosList.forEach(function (item) {
-            //    item.onchangefct = WinJS.Utilities.markSupportedForProcessing(function () {
-            //        new Windows.UI.Popups.MessageDialog("hi").showAsync();
-            //    });
-            //});
 
             demosListView.itemDataSource = demosList.dataSource;
             demosListView.loadingBehavior = "incremental";
@@ -81,7 +80,16 @@
                 //rotate in custom ads (from WAMS) if there are not pubcenter ads
                 if (q(".adTile") && q(".adTile").winControl) {
                     q(".adTile").winControl.onErrorOccurred = function (sender, evt) {
-                        if (evt.errorCode === "NoAdAvailable") {
+
+                        //if there's no internet connection at all then use a local adtile
+                        if (evt.errorCode === "NetworkConnectionFailure") {
+                            var img = document.createElement("img");
+                            img.src = "/images/adtile_codeplex.png";
+                            sender._domElement.appendChild(img);
+                        }
+
+                        //if there's internet connection but no ad was served then fetch a custom tile from WAMS/blob storage
+                        else if (evt.errorCode === "NoAdAvailable") {
                             app.client.getTable("adTiles").read().then(function (adTiles) {
                                 var randomAd = adTiles.takeRandom(1)[0];
                                 var img = document.createElement("img");

@@ -108,16 +108,18 @@ var r = appdata.roamingSettings.values;
         app.demosLoaded.then(function () {
             var keywords = [];
             app.demosList.forEach(function (d) {
-                if (d.keywords)
-                    d.keywords.split(" ").forEach(function (k) {
-                        keywords.push(k);
-                    });
+                var indexFields = ["key", "name", "keywords", "description"];
+                indexFields.forEach(function (f) {
+                    if (d[f])
+                        d[f].split(" ").forEach(function (t) {
+                            keywords.push(t);
+                        });
+                });
             });
             
             searchPane.onsuggestionsrequested = function (e) {
-                e.request.searchSuggestionCollection.appendQuerySuggestions(
-                    keywords.distinct().filter(function (k) { return k.startsWith(e.queryText); })
-                );
+                var matchingKeywords = keywords.distinct().filter(function (k) { return k.startsWith(e.queryText); });
+                e.request.searchSuggestionCollection.appendQuerySuggestions(matchingKeywords);
             };
 
             searchPane.onquerysubmitted = function (e) {
@@ -210,6 +212,7 @@ var format = Ocho.Utilities.format;
 
 String.prototype.startsWith = Ocho.String.startsWith;
 String.prototype.endsWith = Ocho.String.endsWith;
+String.prototype.contains = Ocho.String.contains;
 String.prototype.trim = Ocho.String.trim;
 Array.prototype.contains = Ocho.Array.contains;
 Array.prototype.distinct = Ocho.Array.distinct;
