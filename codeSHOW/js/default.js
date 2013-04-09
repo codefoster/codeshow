@@ -1,4 +1,5 @@
 ﻿var app = WinJS.Application;
+var storeApp = Windows.ApplicationModel.Store.CurrentAppSimulator;
 var appdata = Windows.Storage.ApplicationData.current;
 var activation = Windows.ApplicationModel.Activation;
 var nav = WinJS.Navigation;
@@ -132,10 +133,13 @@ var r = appdata.roamingSettings.values;
     function addSettingsContract() {
         app.onsettings = function (e) {
             e.detail.applicationcommands = {
-                 "preferencesDiv": { title: "Preferences", href: "/demos/settings/settings.html" },
-                 "aboutDiv": { title: "About", href: "/pages/about/about.html" },
-                 "privacyDiv": { title: "Privacy Policy", href: "/pages/privacy/privacy.html" }
+                 preferencesDiv: { title: "Preferences", href: "/demos/settings/settings.html" },
+                 aboutDiv: { title: "About", href: "/pages/about/about.html" },
+                 privacyDiv: { title: "Privacy Policy", href: "/pages/privacy/privacy.html" }
             };
+            if (!storeApp.licenseInformation.productLicenses.lookup("Product1Name").isActive)
+                e.detail.applicationcommands.killAdsDiv = { title: "Kill the Ads!", href: "/pages/killads/killads.html" };
+
             WinJS.UI.SettingsFlyout.populateSettings(e);
         };
     }
@@ -191,8 +195,11 @@ var r = appdata.roamingSettings.values;
                         result.forEach(function (r, index) {
                             app.demosList.push(r);
                         });
-                        //TODO: improve this... for now it just renderes an ad with a special key and a name of 'b'... should be random 
-                        app.demosList.push({ key: "ad", name: "", description: "", keywords: "", tags: "", dateCreated: "" });
+
+                        //add an ad if the user hasn't removed them
+                        if (!storeApp.licenseInformation.productLicenses.lookup("Product1Name").isActive)
+                            app.demosList.push({ key: "ad", name: "", description: "", keywords: "", tags: "", dateCreated: "" });
+
                         c();
                     });
                 });
@@ -209,7 +216,7 @@ var r = appdata.roamingSettings.values;
 
 var q = Ocho.Utilities.query;
 var format = Ocho.Utilities.format;
-
+var launch = Ocho.Navigation.launch;
 String.prototype.startsWith = Ocho.String.startsWith;
 String.prototype.endsWith = Ocho.String.endsWith;
 String.prototype.contains = Ocho.String.contains;

@@ -86,6 +86,7 @@
                             var img = document.createElement("img");
                             img.src = "/images/adtile_codeplex.png";
                             sender._domElement.appendChild(img);
+                            img.onclick = function () { launch("http://codeshow.codeplex.com"); };
                         }
 
                         //if there's internet connection but no ad was served then fetch a custom tile from WAMS/blob storage
@@ -95,6 +96,7 @@
                                 var img = document.createElement("img");
                                 img.src = randomAd.imageUrl;
                                 sender._domElement.appendChild(img);
+                                img.onclick = function () { launch(randomAd.linkUrl); };
                             });
                         }
                     };

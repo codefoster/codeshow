@@ -139,6 +139,9 @@
     <Content Include="js\rx.time.js" />
     <Content Include="js\rx.winjs.js" />
     <Content Include="NotificationsExtensions.winmd" />
+    <Content Include="pages\killads\killads.css" />
+    <Content Include="pages\killads\killads.html" />
+    <Content Include="pages\killads\killads.js" />
     <Content Include="pages\privacy\privacy.css" />
     <Content Include="pages\privacy\privacy.html" />
     <Content Include="pages\privacy\privacy.js" />

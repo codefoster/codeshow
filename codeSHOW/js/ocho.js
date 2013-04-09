@@ -336,6 +336,9 @@ TODO:
         go: function (page, context) {
             WinJS.Navigation.navigate("/pages/" + page + "/" + page + ".html", context);
         },
+        launch: function (uri) {
+            Windows.System.Launcher.launchUriAsync(new Windows.Foundation.Uri(uri));
+        }
     });
 
     WinJS.Namespace.define("Ocho.Logging", {
