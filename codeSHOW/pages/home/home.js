@@ -19,7 +19,9 @@
             this.layoutList();
             this.applySettings();
             WinJS.Namespace.define("codeSHOW.Pages.Home", {
-                applySettings: this.applySettings //allow the settings pane to call this to change the tile color
+                applySettings: this.applySettings, //allow the settings pane to call this to change the tile color
+                bindList: this.bindList,
+                setCommandVisibility: this.setCommandVisibility
             });
             Windows.ApplicationModel.Search.SearchPane.getForCurrentView().showOnKeyboardInput = true;
             adTimer = setInterval(this._refreshAd, AD_REFRESH_RATE * 1000);
@@ -45,17 +47,18 @@
             this.layoutList(viewState);
         },
         bindList: function () {
+            var that = this;
             var demosList = app.demosList;
             var o = options || {};
-            if (o.queryText)
-                demosList = demosList.createFiltered(function (i) {
-                    var containsOptions = { behavior: "contains", caseSensitive: "false" };
-                    var x = i.description.contains(o.queryText, { caseSensitive: false });
-                    return i.key && i.key.split(" ").contains(o.queryText, containsOptions)
+            demosList = demosList.createFiltered(function (i) {
+                var containsOptions = { behavior: "contains", caseSensitive: "false" };
+                return (!app.paid || i.key != "ad")
+                    && (!o.queryText
+                        || (i.key && i.key.split(" ").contains(o.queryText, containsOptions)
                         || i.name && (i.name.contains(o.queryText, { caseSensitive: false }) || i.name.split(" ").contains(o.queryText, containsOptions))
                         || i.keywords && i.keywords.split(" ").contains(o.queryText, containsOptions)
-                        || i.description && (i.description.contains(o.queryText, { caseSensitive: false }) || i.description.split(" ").contains(o.queryText, containsOptions));
-                });
+                        || i.description && (i.description.contains(o.queryText, { caseSensitive: false }) || i.description.split(" ").contains(o.queryText, containsOptions))));
+            });
 
             demosListView.itemDataSource = demosList.dataSource;
             demosListView.loadingBehavior = "incremental";
@@ -103,13 +106,13 @@
                 }
             };
 
-            demosListView.onselectionchanged = this.setCommandVisibility;
+            demosListView.onselectionchanged = that.setCommandVisibility;
 
             Ocho.AppBar.set({
                 buttons: [{ id: "seeTheCode", label: "See the Code", section: "selection", icon: "page2", click: seeTheCodeClick, hidden: true }],
                 addClass: "win-ui-dark"
             });
-            this.setCommandVisibility();
+            that.setCommandVisibility();
 
             function seeTheCodeClick() {
                 //get the selected item and pass the demo name in to the navigate function below

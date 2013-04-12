@@ -1,5 +1,5 @@
 ﻿var app = WinJS.Application;
-var storeApp = Windows.ApplicationModel.Store.CurrentAppSimulator;
+var storeApp = Windows.ApplicationModel.Store.CurrentApp;
 var appdata = Windows.Storage.ApplicationData.current;
 var activation = Windows.ApplicationModel.Activation;
 var nav = WinJS.Navigation;
@@ -20,6 +20,8 @@ var r = appdata.roamingSettings.values;
     };
     
     app.addEventListener("activated", function (args) {
+        app.paid = storeApp.licenseInformation.productLicenses.lookup("killTheAds").isActive;
+
         //set up the demos list (empty for now)
         app.demosList = new WinJS.Binding.List()
             .createGrouped(function (i) { return i.group; }, function (i) { return i.group; })
@@ -137,7 +139,7 @@ var r = appdata.roamingSettings.values;
                  aboutDiv: { title: "About", href: "/pages/about/about.html" },
                  privacyDiv: { title: "Privacy Policy", href: "/pages/privacy/privacy.html" }
             };
-            if (!storeApp.licenseInformation.productLicenses.lookup("Product1Name").isActive)
+            if (storeApp.licenseInformation.isActive && !storeApp.licenseInformation.isTrial && !storeApp.licenseInformation.productLicenses.lookup("Product1Name").isActive)
                 e.detail.applicationcommands.killAdsDiv = { title: "Kill the Ads!", href: "/pages/killads/killads.html" };
 
             WinJS.UI.SettingsFlyout.populateSettings(e);
