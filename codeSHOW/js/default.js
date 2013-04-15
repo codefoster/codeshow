@@ -139,7 +139,7 @@ var r = appdata.roamingSettings.values;
                  aboutDiv: { title: "About", href: "/pages/about/about.html" },
                  privacyDiv: { title: "Privacy Policy", href: "/pages/privacy/privacy.html" }
             };
-            if (storeApp.licenseInformation.isActive && !storeApp.licenseInformation.isTrial && !storeApp.licenseInformation.productLicenses.lookup("Product1Name").isActive)
+            if (storeApp.licenseInformation.isActive && !storeApp.licenseInformation.isTrial && !storeApp.licenseInformation.productLicenses.lookup("killTheAds").isActive)
                 e.detail.applicationcommands.killAdsDiv = { title: "Kill the Ads!", href: "/pages/killads/killads.html" };
 
             WinJS.UI.SettingsFlyout.populateSettings(e);
@@ -199,7 +199,7 @@ var r = appdata.roamingSettings.values;
                         });
 
                         //add an ad if the user hasn't removed them
-                        if (!storeApp.licenseInformation.productLicenses.lookup("Product1Name").isActive)
+                        if (!storeApp.licenseInformation.productLicenses.lookup("killTheAds").isActive)
                             app.demosList.push({ key: "ad", name: "", description: "", keywords: "", tags: "", dateCreated: "" });
 
                         c();
