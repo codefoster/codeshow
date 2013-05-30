@@ -135,10 +135,15 @@
     <Content Include="images\adtile_codeplex.png" />
     <Content Include="js\converters.js" />
     <Content Include="js\date.js" />
+    <Content Include="js\MobileServices.intellisense.js" />
+    <Content Include="js\MobileServices.js" />
+    <Content Include="js\MobileServices.min.js" />
+    <Content Include="js\MobileServices.pri" />
     <Content Include="js\rx.js" />
     <Content Include="js\rx.time.js" />
     <Content Include="js\rx.winjs.js" />
     <Content Include="NotificationsExtensions.winmd" />
+    <Content Include="packages.config" />
     <Content Include="pages\killads\killads.css" />
     <Content Include="pages\killads\killads.html" />
     <Content Include="pages\killads\killads.js" />
@@ -372,9 +377,8 @@
   <ItemGroup>
     <SDKReference Include="Bing.Maps.JavaScript, Version=1.0" />
     <SDKReference Include="LiveSDKHTML, Version=5.0" />
-    <SDKReference Include="Microsoft.PlayerFramework.Js, Version=1.8.0.5" />
+    <SDKReference Include="Microsoft.PlayerFramework.Js, Version=1.8.1.0" />
     <SDKReference Include="Microsoft.WinJS.1.0, Version=1.0" />
-    <SDKReference Include="MobileServicesJavaScriptClient, Version=0.2.0.0" />
     <SDKReference Include="MSAdvertisingJS, Version=6.1" />
   </ItemGroup>
   <ItemGroup>

@@ -80,7 +80,7 @@ var r = appdata.roamingSettings.values;
 
     //add WAMS client reference to app so it's available everywhere
     function setupWamsClient() {
-        app.client = new Microsoft.WindowsAzure.MobileServices.MobileServiceClient(
+        app.client = new WindowsAzure.MobileServiceClient(
             "https://codeshow.azure-mobile.net/",
             codeSHOW.Config.wamskey
         );
