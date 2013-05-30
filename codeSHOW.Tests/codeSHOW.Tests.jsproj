@@ -56,12 +56,6 @@
     <Content Include="..\codeSHOW\codeSHOW.jsproj">
       <Link>codeSHOW\codeSHOW.jsproj</Link>
     </Content>
-    <Content Include="..\codeSHOW\codeSHOW.jsproj.user">
-      <Link>codeSHOW\codeSHOW.jsproj.user</Link>
-    </Content>
-    <Content Include="..\codeSHOW\codeSHOW.jsproj.vspscc">
-      <Link>codeSHOW\codeSHOW.jsproj.vspscc</Link>
-    </Content>
     <Content Include="..\codeSHOW\codeSHOW_StoreKey.pfx">
       <Link>codeSHOW\codeSHOW_StoreKey.pfx</Link>
     </Content>
