@@ -90,6 +90,12 @@
     <Content Include="demos\discover\discover.css" />
     <Content Include="demos\discover\discover.html" />
     <Content Include="demos\discover\discover.js" />
+    <Content Include="demos\htmltotext\htmltotext.css" />
+    <Content Include="demos\htmltotext\htmltotext.html" />
+    <Content Include="demos\htmltotext\htmltotext.js" />
+    <Content Include="demos\keycode\keycode.css" />
+    <Content Include="demos\keycode\keycode.html" />
+    <Content Include="demos\keycode\keycode.js" />
     <Content Include="demos\notifications\notifications.css" />
     <Content Include="demos\notifications\notifications.html" />
     <Content Include="demos\notifications\notifications.js" />
