@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Animated Translation</title>
+    <meta name="tags" content="" />
+    <meta name="keywords" content="move moving translation translate animate animation" />
+    <meta name="description" content="If you just want to move things around a little and want to animate that movement, here's one way to do it." />
+    <meta name="author" content="Jeremy Foster" />
+    <meta name="enabled" content="false" />
+
+    <!-- WinJS references -->
+    <link href="//Microsoft.WinJS.1.0/css/ui-light.css" rel="stylesheet" />
+    <script src="//Microsoft.WinJS.1.0/js/base.js"></script>
+    <script src="//Microsoft.WinJS.1.0/js/ui.js"></script>
+
+    <link href="animatedTranslation.css" rel="stylesheet" />
+    <script src="animatedTranslation.js"></script>
+</head>
+<body>
+    <div class="animatedTranslation fragment">
+        <header aria-label="Header content" role="banner">
+            <button class="win-backbutton" aria-label="Back" disabled type="button"></button>
+            <h1 class="titlearea win-type-ellipsis">
+                <span class="pagetitle">Animated Translation</span>
+            </h1>
+        </header>
+        <section aria-label="Main content" role="main">
+            <div class="explanation">Click somewhere below to move the video to the new position.</div>
+            <video src="http://smf.blob.core.windows.net/samples/videos/wildlife.mp4"></video>
+        </section>
+    </div>
+</body>
+</html>

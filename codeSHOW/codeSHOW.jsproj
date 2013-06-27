@@ -60,6 +60,9 @@
     <AppxManifest Include="package.appxmanifest">
       <SubType>Designer</SubType>
     </AppxManifest>
+    <Content Include="demos\animatedTranslation\animatedTranslation.css" />
+    <Content Include="demos\animatedTranslation\animatedTranslation.html" />
+    <Content Include="demos\animatedTranslation\animatedTranslation.js" />
     <Content Include="demos\autocomplete\autocomplete.css" />
     <Content Include="demos\autocomplete\autocomplete.html" />
     <Content Include="demos\autocomplete\autocomplete.js" />
