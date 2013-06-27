@@ -1,0 +1,27 @@
+﻿.devices .win-listview {
+    height: 95%
+}
+
+    .devices #list .win-item {
+        background-color: #375369;
+        width: 260px;
+        padding:10px;
+        color:white;
+    }
+
+.devices .itemgrid {
+    display: -ms-grid;
+    -ms-grid-rows: 60px 40px;
+    height: 100px;     
+    padding: 5px;
+}
+
+.devices .itemgrid img {
+    width: 60px;
+    height: 60px;
+}
+
+.devices .itemgrid div {
+    -ms-grid-row: 2;
+    -ms-grid-row-align: center;
+}

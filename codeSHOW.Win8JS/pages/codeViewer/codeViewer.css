@@ -1,0 +1,18 @@
+﻿.codeContent {
+	overflow-y:scroll;
+	height: auto;
+	width:100%;
+}
+
+.codeContainer {
+    cursor: text;
+}
+
+.swiper {
+    margin-right: 120px;
+    margin-left: 0px !important;
+}
+
+    .swiper > div {
+        margin-left: 120px !important;
+    }

@@ -1,0 +1,8 @@
+﻿.appbar #controls {
+    margin-bottom: 30px;
+}
+
+.appbar #controls > button {
+    margin-right: 20px;
+}
+

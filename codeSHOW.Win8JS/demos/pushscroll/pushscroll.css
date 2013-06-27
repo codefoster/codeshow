@@ -1,0 +1,19 @@
+﻿.pushscroll .win-listview {
+    height: 600px;
+}
+
+.pushscroll .win-item {
+    width: 250px;
+    height: 250px;
+    background: #0098ab;
+    color: white;
+    display: -ms-grid;
+    -ms-grid-columns: 1fr;
+    -ms-grid-rows: 1fr;
+}
+
+    .pushscroll .win-item > div {
+        -ms-grid-column-align: center;
+        -ms-grid-row-align: center;
+        font-size: 48px;
+    }

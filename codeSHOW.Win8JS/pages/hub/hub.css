@@ -1,0 +1,36 @@
+﻿.hub .pagetitle img { height: 70px; }
+
+.hub #sections {
+    display:-ms-flexbox;
+}
+
+    .hub #sections > div {
+        width:600px;
+        padding-right:80px;
+    }
+
+.hub #featuredDemos {
+    width:500px;
+    height:600px;
+}
+
+
+    .hub #featuredDemos .win-item {
+        box-sizing: border-box;
+        background-color: #6294ad;
+        color: white;
+    }
+
+    .hub #featuredDemos .itemTile {
+         width:250px;
+         height:125px;
+         padding:4px 8px;
+         box-sizing:border-box;
+    }
+    .hub #featuredDemos .adTile { width: 250px; height: 125px; }
+    .hub #featuredDemos .itemTile h3 { line-height: 110%; }
+    .hub #featuredDemos .itemTile p { margin-top: 5px; }
+
+.hub p {
+    margin-left: 120px;
+}

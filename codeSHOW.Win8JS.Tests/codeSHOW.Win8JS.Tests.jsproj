@@ -1,0 +1,1068 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|AnyCPU">
+      <Configuration>Debug</Configuration>
+      <Platform>AnyCPU</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|ARM">
+      <Configuration>Debug</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x86">
+      <Configuration>Debug</Configuration>
+      <Platform>x86</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|AnyCPU">
+      <Configuration>Release</Configuration>
+      <Platform>AnyCPU</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|ARM">
+      <Configuration>Release</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x86">
+      <Configuration>Release</Configuration>
+      <Platform>x86</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>7b3781c0-a2ff-4b9c-a967-65e673c99487</ProjectGuid>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '11.0'">
+    <VisualStudioVersion>11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\$(WMSJSProjectDirectory)\Microsoft.VisualStudio.$(WMSJSProject).Default.props" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\$(WMSJSProjectDirectory)\Microsoft.VisualStudio.$(WMSJSProject).props" />
+  <PropertyGroup>
+    <TargetPlatformIdentifier>Windows</TargetPlatformIdentifier>
+    <TargetPlatformVersion>8.0</TargetPlatformVersion>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <PackageCertificateKeyFile>codeSHOW.Tests_TemporaryKey.pfx</PackageCertificateKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppxManifest Include="package.appxmanifest">
+      <SubType>Designer</SubType>
+    </AppxManifest>
+    <Content Include="..\codeSHOW.Win8JS\codeSHOW.Win8JS.jsproj">
+      <Link>codeSHOW\codeSHOW.jsproj</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\codeSHOW_StoreKey.pfx">
+      <Link>codeSHOW\codeSHOW_StoreKey.pfx</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\codeSHOW_TemporaryKey.pfx">
+      <Link>codeSHOW\codeSHOW_TemporaryKey.pfx</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\css\default.css">
+      <Link>codeSHOW\css\default.css</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\default.html">
+      <Link>codeSHOW\default.html</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\ads\ads.css">
+      <Link>codeSHOW\demos\ads\ads.css</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\ads\ads.html">
+      <Link>codeSHOW\demos\ads\ads.html</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\ads\ads.js">
+      <Link>codeSHOW\demos\ads\ads.js</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\animations\animations.css">
+      <Link>codeSHOW\demos\animations\animations.css</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\animations\animations.html">
+      <Link>codeSHOW\demos\animations\animations.html</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\animations\animations.js">
+      <Link>codeSHOW\demos\animations\animations.js</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\appbar2\appbar2.css">
+      <Link>codeSHOW\demos\appbar2\appbar2.css</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\appbar2\appbar2.html">
+      <Link>codeSHOW\demos\appbar2\appbar2.html</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\appbar2\appbar2.js">
+      <Link>codeSHOW\demos\appbar2\appbar2.js</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\appbar\appbar.css">
+      <Link>codeSHOW\demos\appbar\appbar.css</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\appbar\appbar.html">
+      <Link>codeSHOW\demos\appbar\appbar.html</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\appbar\appbar.js">
+      <Link>codeSHOW\demos\appbar\appbar.js</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\arrayFcts\arrayFcts.css">
+      <Link>codeSHOW\demos\arrayFcts\arrayFcts.css</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\arrayFcts\arrayFcts.html">
+      <Link>codeSHOW\demos\arrayFcts\arrayFcts.html</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\arrayFcts\arrayFcts.js">
+      <Link>codeSHOW\demos\arrayFcts\arrayFcts.js</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\authentication\authentication.css">
+      <Link>codeSHOW\demos\authentication\authentication.css</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\authentication\authentication.html">
+      <Link>codeSHOW\demos\authentication\authentication.html</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\authentication\authentication.js">
+      <Link>codeSHOW\demos\authentication\authentication.js</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\autocomplete\autocomplete.css">
+      <Link>codeSHOW\demos\autocomplete\autocomplete.css</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\autocomplete\autocomplete.html">
+      <Link>codeSHOW\demos\autocomplete\autocomplete.html</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\autocomplete\autocomplete.js">
+      <Link>codeSHOW\demos\autocomplete\autocomplete.js</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\binding\binding.css">
+      <Link>codeSHOW\demos\binding\binding.css</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\binding\binding.html">
+      <Link>codeSHOW\demos\binding\binding.html</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\binding\binding.js">
+      <Link>codeSHOW\demos\binding\binding.js</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\bingmaps\bingmaps.css">
+      <Link>codeSHOW\demos\bingmaps\bingmaps.css</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\bingmaps\bingmaps.html">
+      <Link>codeSHOW\demos\bingmaps\bingmaps.html</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\bingmaps\bingmaps.js">
+      <Link>codeSHOW\demos\bingmaps\bingmaps.js</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\boxprops\boxprops.css">
+      <Link>codeSHOW\demos\boxprops\boxprops.css</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\boxprops\boxprops.html">
+      <Link>codeSHOW\demos\boxprops\boxprops.html</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\boxprops\boxprops.js">
+      <Link>codeSHOW\demos\boxprops\boxprops.js</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\canvasball\canvasball.css">
+      <Link>codeSHOW\demos\canvasball\canvasball.css</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\canvasball\canvasball.html">
+      <Link>codeSHOW\demos\canvasball\canvasball.html</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\canvasball\canvasball.js">
+      <Link>codeSHOW\demos\canvasball\canvasball.js</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\canvaspaint\canvaspaint.css">
+      <Link>codeSHOW\demos\canvaspaint\canvaspaint.css</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\canvaspaint\canvaspaint.html">
+      <Link>codeSHOW\demos\canvaspaint\canvaspaint.html</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\canvaspaint\canvaspaint.js">
+      <Link>codeSHOW\demos\canvaspaint\canvaspaint.js</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\classes\classes.css">
+      <Link>codeSHOW\demos\classes\classes.css</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\classes\classes.html">
+      <Link>codeSHOW\demos\classes\classes.html</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\classes\classes.js">
+      <Link>codeSHOW\demos\classes\classes.js</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\code\code.css">
+      <Link>codeSHOW\demos\code\code.css</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\code\code.html">
+      <Link>codeSHOW\demos\code\code.html</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\code\code.js">
+      <Link>codeSHOW\demos\code\code.js</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\components\components.css">
+      <Link>codeSHOW\demos\components\components.css</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\components\components.html">
+      <Link>codeSHOW\demos\components\components.html</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\components\components.js">
+      <Link>codeSHOW\demos\components\components.js</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\crop\crop.css">
+      <Link>codeSHOW\demos\crop\crop.css</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\crop\crop.html">
+      <Link>codeSHOW\demos\crop\crop.html</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\crop\crop.js">
+      <Link>codeSHOW\demos\crop\crop.js</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\crop\images\attribution.txt">
+      <Link>codeSHOW\demos\crop\images\attribution.txt</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\crop\images\leaf twirl.jpg">
+      <Link>codeSHOW\demos\crop\images\leaf twirl.jpg</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\crypto\crypto.css">
+      <Link>codeSHOW\demos\crypto\crypto.css</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\crypto\crypto.html">
+      <Link>codeSHOW\demos\crypto\crypto.html</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\crypto\crypto.js">
+      <Link>codeSHOW\demos\crypto\crypto.js</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\csscolumns\csscolumns.css">
+      <Link>codeSHOW\demos\csscolumns\csscolumns.css</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\csscolumns\csscolumns.html">
+      <Link>codeSHOW\demos\csscolumns\csscolumns.html</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\csscolumns\csscolumns.js">
+      <Link>codeSHOW\demos\csscolumns\csscolumns.js</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\customControl\customControl.css">
+      <Link>codeSHOW\demos\customControl\customControl.css</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\customControl\customControl.html">
+      <Link>codeSHOW\demos\customControl\customControl.html</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\customControl\customControl.js">
+      <Link>codeSHOW\demos\customControl\customControl.js</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\datejs\date.js">
+      <Link>codeSHOW\demos\datejs\date.js</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\datejs\datejs.css">
+      <Link>codeSHOW\demos\datejs\datejs.css</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\datejs\datejs.html">
+      <Link>codeSHOW\demos\datejs\datejs.html</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\datejs\datejs.js">
+      <Link>codeSHOW\demos\datejs\datejs.js</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\devices\devices.css">
+      <Link>codeSHOW\demos\devices\devices.css</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\devices\devices.html">
+      <Link>codeSHOW\demos\devices\devices.html</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\devices\devices.js">
+      <Link>codeSHOW\demos\devices\devices.js</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\discover\discover.css">
+      <Link>codeSHOW\demos\discover\discover.css</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\discover\discover.html">
+      <Link>codeSHOW\demos\discover\discover.html</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\discover\discover.js">
+      <Link>codeSHOW\demos\discover\discover.js</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\dom\dom.css">
+      <Link>codeSHOW\demos\dom\dom.css</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\dom\dom.html">
+      <Link>codeSHOW\demos\dom\dom.html</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\dom\dom.js">
+      <Link>codeSHOW\demos\dom\dom.js</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\dragndrop\dragndrop.css">
+      <Link>codeSHOW\demos\dragndrop\dragndrop.css</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\dragndrop\dragndrop.html">
+      <Link>codeSHOW\demos\dragndrop\dragndrop.html</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\dragndrop\dragndrop.js">
+      <Link>codeSHOW\demos\dragndrop\dragndrop.js</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\errors\errors.css">
+      <Link>codeSHOW\demos\errors\errors.css</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\errors\errors.html">
+      <Link>codeSHOW\demos\errors\errors.html</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\errors\errors.js">
+      <Link>codeSHOW\demos\errors\errors.js</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\eventHandlers\eventHandlers.css">
+      <Link>codeSHOW\demos\eventHandlers\eventHandlers.css</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\eventHandlers\eventHandlers.html">
+      <Link>codeSHOW\demos\eventHandlers\eventHandlers.html</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\eventHandlers\eventHandlers.js">
+      <Link>codeSHOW\demos\eventHandlers\eventHandlers.js</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\filepicker\fileOpenPicker.css">
+      <Link>codeSHOW\demos\filepicker\fileOpenPicker.css</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\filepicker\fileOpenPicker.html">
+      <Link>codeSHOW\demos\filepicker\fileOpenPicker.html</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\filepicker\fileOpenPicker.js">
+      <Link>codeSHOW\demos\filepicker\fileOpenPicker.js</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\filepicker\filepicker.css">
+      <Link>codeSHOW\demos\filepicker\filepicker.css</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\filepicker\filepicker.html">
+      <Link>codeSHOW\demos\filepicker\filepicker.html</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\filepicker\filepicker.js">
+      <Link>codeSHOW\demos\filepicker\filepicker.js</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\flexbox\flexbox.css">
+      <Link>codeSHOW\demos\flexbox\flexbox.css</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\flexbox\flexbox.html">
+      <Link>codeSHOW\demos\flexbox\flexbox.html</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\flexbox\flexbox.js">
+      <Link>codeSHOW\demos\flexbox\flexbox.js</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\flipview\flipview.css">
+      <Link>codeSHOW\demos\flipview\flipview.css</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\flipview\flipview.html">
+      <Link>codeSHOW\demos\flipview\flipview.html</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\flipview\flipview.js">
+      <Link>codeSHOW\demos\flipview\flipview.js</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\flyouts\flyouts.css">
+      <Link>codeSHOW\demos\flyouts\flyouts.css</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\flyouts\flyouts.html">
+      <Link>codeSHOW\demos\flyouts\flyouts.html</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\flyouts\flyouts.js">
+      <Link>codeSHOW\demos\flyouts\flyouts.js</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\fragment\fragment.css">
+      <Link>codeSHOW\demos\fragment\fragment.css</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\fragment\fragment.html">
+      <Link>codeSHOW\demos\fragment\fragment.html</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\fragment\fragment.js">
+      <Link>codeSHOW\demos\fragment\fragment.js</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\fragment\li.html">
+      <Link>codeSHOW\demos\fragment\li.html</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\grid\grid.css">
+      <Link>codeSHOW\demos\grid\grid.css</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\grid\grid.html">
+      <Link>codeSHOW\demos\grid\grid.html</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\grid\grid.js">
+      <Link>codeSHOW\demos\grid\grid.js</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\html5audio\apollo_11_dsc2.mp3">
+      <Link>codeSHOW\demos\html5audio\apollo_11_dsc2.mp3</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\html5audio\html5audio.css">
+      <Link>codeSHOW\demos\html5audio\html5audio.css</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\html5audio\html5audio.html">
+      <Link>codeSHOW\demos\html5audio\html5audio.html</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\html5audio\html5audio.js">
+      <Link>codeSHOW\demos\html5audio\html5audio.js</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\html5video\butterfly.mp4">
+      <Link>codeSHOW\demos\html5video\butterfly.mp4</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\html5video\html5video.css">
+      <Link>codeSHOW\demos\html5video\html5video.css</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\html5video\html5video.html">
+      <Link>codeSHOW\demos\html5video\html5video.html</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\html5video\html5video.js">
+      <Link>codeSHOW\demos\html5video\html5video.js</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\iframes\helloworld.html">
+      <Link>codeSHOW\demos\iframes\helloworld.html</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\iframes\iframes.css">
+      <Link>codeSHOW\demos\iframes\iframes.css</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\iframes\iframes.html">
+      <Link>codeSHOW\demos\iframes\iframes.html</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\iframes\iframes.js">
+      <Link>codeSHOW\demos\iframes\iframes.js</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\input\input.css">
+      <Link>codeSHOW\demos\input\input.css</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\input\input.html">
+      <Link>codeSHOW\demos\input\input.html</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\input\input.js">
+      <Link>codeSHOW\demos\input\input.js</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\jsonFcts\jsonFcts.css">
+      <Link>codeSHOW\demos\jsonFcts\jsonFcts.css</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\jsonFcts\jsonFcts.html">
+      <Link>codeSHOW\demos\jsonFcts\jsonFcts.html</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\jsonFcts\jsonFcts.js">
+      <Link>codeSHOW\demos\jsonFcts\jsonFcts.js</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\listviews\images\01.jpg">
+      <Link>codeSHOW\demos\listviews\images\01.jpg</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\listviews\images\02.jpg">
+      <Link>codeSHOW\demos\listviews\images\02.jpg</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\listviews\images\03.jpg">
+      <Link>codeSHOW\demos\listviews\images\03.jpg</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\listviews\images\04.jpg">
+      <Link>codeSHOW\demos\listviews\images\04.jpg</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\listviews\images\05.jpg">
+      <Link>codeSHOW\demos\listviews\images\05.jpg</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\listviews\images\06.jpg">
+      <Link>codeSHOW\demos\listviews\images\06.jpg</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\listviews\images\07.jpg">
+      <Link>codeSHOW\demos\listviews\images\07.jpg</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\listviews\images\08.jpg">
+      <Link>codeSHOW\demos\listviews\images\08.jpg</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\listviews\images\09.jpg">
+      <Link>codeSHOW\demos\listviews\images\09.jpg</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\listviews\images\10.jpg">
+      <Link>codeSHOW\demos\listviews\images\10.jpg</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\listviews\listviews.css">
+      <Link>codeSHOW\demos\listviews\listviews.css</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\listviews\listviews.html">
+      <Link>codeSHOW\demos\listviews\listviews.html</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\listviews\listviews.js">
+      <Link>codeSHOW\demos\listviews\listviews.js</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\location\location.css">
+      <Link>codeSHOW\demos\location\location.css</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\location\location.html">
+      <Link>codeSHOW\demos\location\location.html</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\location\location.js">
+      <Link>codeSHOW\demos\location\location.js</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\mediacap\mediacap.css">
+      <Link>codeSHOW\demos\mediacap\mediacap.css</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\mediacap\mediacap.html">
+      <Link>codeSHOW\demos\mediacap\mediacap.html</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\mediacap\mediacap.js">
+      <Link>codeSHOW\demos\mediacap\mediacap.js</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\mediaqueries\mediaqueries.css">
+      <Link>codeSHOW\demos\mediaqueries\mediaqueries.css</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\mediaqueries\mediaqueries.html">
+      <Link>codeSHOW\demos\mediaqueries\mediaqueries.html</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\mediaqueries\mediaqueries.js">
+      <Link>codeSHOW\demos\mediaqueries\mediaqueries.js</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\mscssmatrix\mscssmatrix.css">
+      <Link>codeSHOW\demos\mscssmatrix\mscssmatrix.css</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\mscssmatrix\mscssmatrix.html">
+      <Link>codeSHOW\demos\mscssmatrix\mscssmatrix.html</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\mscssmatrix\mscssmatrix.js">
+      <Link>codeSHOW\demos\mscssmatrix\mscssmatrix.js</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\netflix10\netflix10.css">
+      <Link>codeSHOW\demos\netflix10\netflix10.css</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\netflix10\netflix10.html">
+      <Link>codeSHOW\demos\netflix10\netflix10.html</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\netflix10\netflix10.js">
+      <Link>codeSHOW\demos\netflix10\netflix10.js</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\netflixTrickle\netflixTrickle.css">
+      <Link>codeSHOW\demos\netflixTrickle\netflixTrickle.css</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\netflixTrickle\netflixTrickle.html">
+      <Link>codeSHOW\demos\netflixTrickle\netflixTrickle.html</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\netflixTrickle\netflixTrickle.js">
+      <Link>codeSHOW\demos\netflixTrickle\netflixTrickle.js</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\netflix\netflix.css">
+      <Link>codeSHOW\demos\netflix\netflix.css</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\netflix\netflix.html">
+      <Link>codeSHOW\demos\netflix\netflix.html</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\netflix\netflix.js">
+      <Link>codeSHOW\demos\netflix\netflix.js</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\notifications\notifications.css">
+      <Link>codeSHOW\demos\notifications\notifications.css</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\notifications\notifications.html">
+      <Link>codeSHOW\demos\notifications\notifications.html</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\notifications\notifications.js">
+      <Link>codeSHOW\demos\notifications\notifications.js</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\playerframework\playerframework.css">
+      <Link>codeSHOW\demos\playerframework\playerframework.css</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\playerframework\playerframework.html">
+      <Link>codeSHOW\demos\playerframework\playerframework.html</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\playerframework\playerframework.js">
+      <Link>codeSHOW\demos\playerframework\playerframework.js</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\progressbar\progressbar.css">
+      <Link>codeSHOW\demos\progressbar\progressbar.css</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\progressbar\progressbar.html">
+      <Link>codeSHOW\demos\progressbar\progressbar.html</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\progressbar\progressbar.js">
+      <Link>codeSHOW\demos\progressbar\progressbar.js</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\promises\promises.css">
+      <Link>codeSHOW\demos\promises\promises.css</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\promises\promises.html">
+      <Link>codeSHOW\demos\promises\promises.html</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\promises\promises.js">
+      <Link>codeSHOW\demos\promises\promises.js</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\properties\properties.css">
+      <Link>codeSHOW\demos\properties\properties.css</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\properties\properties.html">
+      <Link>codeSHOW\demos\properties\properties.html</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\properties\properties.js">
+      <Link>codeSHOW\demos\properties\properties.js</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\pushscroll\pushscroll.css">
+      <Link>codeSHOW\demos\pushscroll\pushscroll.css</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\pushscroll\pushscroll.html">
+      <Link>codeSHOW\demos\pushscroll\pushscroll.html</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\pushscroll\pushscroll.js">
+      <Link>codeSHOW\demos\pushscroll\pushscroll.js</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\scaling\ketch.scale-100.png">
+      <Link>codeSHOW\demos\scaling\ketch.scale-100.png</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\scaling\ketch.scale-140.png">
+      <Link>codeSHOW\demos\scaling\ketch.scale-140.png</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\scaling\ketch.scale-180.png">
+      <Link>codeSHOW\demos\scaling\ketch.scale-180.png</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\scaling\ketch_big.png">
+      <Link>codeSHOW\demos\scaling\ketch_big.png</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\scaling\ketch_small.png">
+      <Link>codeSHOW\demos\scaling\ketch_small.png</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\scaling\scaling.css">
+      <Link>codeSHOW\demos\scaling\scaling.css</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\scaling\scaling.html">
+      <Link>codeSHOW\demos\scaling\scaling.html</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\scaling\scaling.js">
+      <Link>codeSHOW\demos\scaling\scaling.js</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\search\search.css">
+      <Link>codeSHOW\demos\search\search.css</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\search\search.html">
+      <Link>codeSHOW\demos\search\search.html</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\search\search.js">
+      <Link>codeSHOW\demos\search\search.js</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\selectors\selectors.css">
+      <Link>codeSHOW\demos\selectors\selectors.css</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\selectors\selectors.html">
+      <Link>codeSHOW\demos\selectors\selectors.html</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\selectors\selectors.js">
+      <Link>codeSHOW\demos\selectors\selectors.js</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\semanticzoom\semanticzoom.css">
+      <Link>codeSHOW\demos\semanticzoom\semanticzoom.css</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\semanticzoom\semanticzoom.html">
+      <Link>codeSHOW\demos\semanticzoom\semanticzoom.html</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\semanticzoom\semanticzoom.js">
+      <Link>codeSHOW\demos\semanticzoom\semanticzoom.js</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\sensors\sensors.css">
+      <Link>codeSHOW\demos\sensors\sensors.css</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\sensors\sensors.html">
+      <Link>codeSHOW\demos\sensors\sensors.html</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\sensors\sensors.js">
+      <Link>codeSHOW\demos\sensors\sensors.js</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\settings\settings.css">
+      <Link>codeSHOW\demos\settings\settings.css</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\settings\settings.html">
+      <Link>codeSHOW\demos\settings\settings.html</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\settings\settings.js">
+      <Link>codeSHOW\demos\settings\settings.js</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\share\share.css">
+      <Link>codeSHOW\demos\share\share.css</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\share\share.html">
+      <Link>codeSHOW\demos\share\share.html</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\share\share.js">
+      <Link>codeSHOW\demos\share\share.js</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\skydrive\skydrive.css">
+      <Link>codeSHOW\demos\skydrive\skydrive.css</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\skydrive\skydrive.html">
+      <Link>codeSHOW\demos\skydrive\skydrive.html</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\skydrive\skydrive.js">
+      <Link>codeSHOW\demos\skydrive\skydrive.js</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\slidingdiv\slidingdiv.css">
+      <Link>codeSHOW\demos\slidingdiv\slidingdiv.css</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\slidingdiv\slidingdiv.html">
+      <Link>codeSHOW\demos\slidingdiv\slidingdiv.html</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\slidingdiv\slidingdiv.js">
+      <Link>codeSHOW\demos\slidingdiv\slidingdiv.js</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\snappoints\snappoints.css">
+      <Link>codeSHOW\demos\snappoints\snappoints.css</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\snappoints\snappoints.html">
+      <Link>codeSHOW\demos\snappoints\snappoints.html</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\snappoints\snappoints.js">
+      <Link>codeSHOW\demos\snappoints\snappoints.js</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\stocks\smoothie.js">
+      <Link>codeSHOW\demos\stocks\smoothie.js</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\stocks\stocks.css">
+      <Link>codeSHOW\demos\stocks\stocks.css</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\stocks\stocks.html">
+      <Link>codeSHOW\demos\stocks\stocks.html</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\stocks\stocks.js">
+      <Link>codeSHOW\demos\stocks\stocks.js</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\storage\storage.css">
+      <Link>codeSHOW\demos\storage\storage.css</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\storage\storage.html">
+      <Link>codeSHOW\demos\storage\storage.html</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\storage\storage.js">
+      <Link>codeSHOW\demos\storage\storage.js</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\swipeSections\swipeSections.css">
+      <Link>codeSHOW\demos\swipeSections\swipeSections.css</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\swipeSections\swipeSections.html">
+      <Link>codeSHOW\demos\swipeSections\swipeSections.html</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\swipeSections\swipeSections.js">
+      <Link>codeSHOW\demos\swipeSections\swipeSections.js</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\templateItems\templateItems.css">
+      <Link>codeSHOW\demos\templateItems\templateItems.css</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\templateItems\templateItems.html">
+      <Link>codeSHOW\demos\templateItems\templateItems.html</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\templateItems\templateItems.js">
+      <Link>codeSHOW\demos\templateItems\templateItems.js</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\textprops\textprops.css">
+      <Link>codeSHOW\demos\textprops\textprops.css</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\textprops\textprops.html">
+      <Link>codeSHOW\demos\textprops\textprops.html</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\textprops\textprops.js">
+      <Link>codeSHOW\demos\textprops\textprops.js</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\timeflies\timeflies.css">
+      <Link>codeSHOW\demos\timeflies\timeflies.css</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\timeflies\timeflies.html">
+      <Link>codeSHOW\demos\timeflies\timeflies.html</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\timeflies\timeflies.js">
+      <Link>codeSHOW\demos\timeflies\timeflies.js</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\transforms\transforms.css">
+      <Link>codeSHOW\demos\transforms\transforms.css</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\transforms\transforms.html">
+      <Link>codeSHOW\demos\transforms\transforms.html</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\transforms\transforms.js">
+      <Link>codeSHOW\demos\transforms\transforms.js</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\transitions\transitions.css">
+      <Link>codeSHOW\demos\transitions\transitions.css</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\transitions\transitions.html">
+      <Link>codeSHOW\demos\transitions\transitions.html</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\transitions\transitions.js">
+      <Link>codeSHOW\demos\transitions\transitions.js</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\viewbox\viewbox.css">
+      <Link>codeSHOW\demos\viewbox\viewbox.css</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\viewbox\viewbox.html">
+      <Link>codeSHOW\demos\viewbox\viewbox.html</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\viewbox\viewbox.js">
+      <Link>codeSHOW\demos\viewbox\viewbox.js</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\viewstates\viewstates.css">
+      <Link>codeSHOW\demos\viewstates\viewstates.css</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\viewstates\viewstates.html">
+      <Link>codeSHOW\demos\viewstates\viewstates.html</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\viewstates\viewstates.js">
+      <Link>codeSHOW\demos\viewstates\viewstates.js</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\wamspush\wamspush.css">
+      <Link>codeSHOW\demos\wamspush\wamspush.css</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\wamspush\wamspush.html">
+      <Link>codeSHOW\demos\wamspush\wamspush.html</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\wamspush\wamspush.js">
+      <Link>codeSHOW\demos\wamspush\wamspush.js</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\webworker\diagram.png">
+      <Link>codeSHOW\demos\webworker\diagram.png</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\webworker\task.js">
+      <Link>codeSHOW\demos\webworker\task.js</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\webworker\webworker.css">
+      <Link>codeSHOW\demos\webworker\webworker.css</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\webworker\webworker.html">
+      <Link>codeSHOW\demos\webworker\webworker.html</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\webworker\webworker.js">
+      <Link>codeSHOW\demos\webworker\webworker.js</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\xhr\fetchme.html">
+      <Link>codeSHOW\demos\xhr\fetchme.html</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\xhr\xhr.css">
+      <Link>codeSHOW\demos\xhr\xhr.css</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\xhr\xhr.html">
+      <Link>codeSHOW\demos\xhr\xhr.html</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\demos\xhr\xhr.js">
+      <Link>codeSHOW\demos\xhr\xhr.js</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\images\bits.png">
+      <Link>codeSHOW\images\bits.png</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\images\headerlogo.png">
+      <Link>codeSHOW\images\headerlogo.png</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\images\logo.png">
+      <Link>codeSHOW\images\logo.png</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\images\smalllogo.png">
+      <Link>codeSHOW\images\smalllogo.png</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\images\splashscreen.png">
+      <Link>codeSHOW\images\splashscreen.png</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\images\storelogo.png">
+      <Link>codeSHOW\images\storelogo.png</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\images\widelogo.png">
+      <Link>codeSHOW\images\widelogo.png</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\images\win8logo.png">
+      <Link>codeSHOW\images\win8logo.png</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\js\codeviewer.js">
+      <Link>codeSHOW\js\codeviewer.js</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\js\config.js">
+      <Link>codeSHOW\js\config.js</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\js\converters.js">
+      <Link>codeSHOW\js\converters.js</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\js\date.js">
+      <Link>codeSHOW\js\date.js</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\js\default.js">
+      <Link>codeSHOW\js\default.js</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\js\navigator.js">
+      <Link>codeSHOW\js\navigator.js</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\js\ocho.js">
+      <Link>codeSHOW\js\ocho.js</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\js\rx.js">
+      <Link>codeSHOW\js\rx.js</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\js\rx.time.js">
+      <Link>codeSHOW\js\rx.time.js</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\js\rx.winjs.js">
+      <Link>codeSHOW\js\rx.winjs.js</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\js\RxJS\redist.txt">
+      <Link>codeSHOW\js\RxJS\redist.txt</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\js\RxJS\rx-vsdoc.js">
+      <Link>codeSHOW\js\RxJS\rx-vsdoc.js</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\js\RxJS\rx.aggregates-vsdoc.js">
+      <Link>codeSHOW\js\RxJS\rx.aggregates-vsdoc.js</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\js\RxJS\rx.aggregates.js">
+      <Link>codeSHOW\js\RxJS\rx.aggregates.js</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\js\RxJS\rx.aggregates.min.js">
+      <Link>codeSHOW\js\RxJS\rx.aggregates.min.js</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\js\RxJS\rx.binding-vsdoc.js">
+      <Link>codeSHOW\js\RxJS\rx.binding-vsdoc.js</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\js\RxJS\rx.binding.js">
+      <Link>codeSHOW\js\RxJS\rx.binding.js</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\js\RxJS\rx.binding.min.js">
+      <Link>codeSHOW\js\RxJS\rx.binding.min.js</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\js\RxJS\rx.binding.min.js.map">
+      <Link>codeSHOW\js\RxJS\rx.binding.min.js.map</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\js\RxJS\rx.coincidence-vsdoc.js">
+      <Link>codeSHOW\js\RxJS\rx.coincidence-vsdoc.js</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\js\RxJS\rx.coincidence.js">
+      <Link>codeSHOW\js\RxJS\rx.coincidence.js</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\js\RxJS\rx.coincidence.min.js">
+      <Link>codeSHOW\js\RxJS\rx.coincidence.min.js</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\js\RxJS\rx.experimental-vsdoc.js">
+      <Link>codeSHOW\js\RxJS\rx.experimental-vsdoc.js</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\js\RxJS\rx.experimental.js">
+      <Link>codeSHOW\js\RxJS\rx.experimental.js</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\js\RxJS\rx.experimental.min.js">
+      <Link>codeSHOW\js\RxJS\rx.experimental.min.js</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\js\RxJS\rx.joinpatterns-vsdoc.js">
+      <Link>codeSHOW\js\RxJS\rx.joinpatterns-vsdoc.js</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\js\RxJS\rx.joinpatterns.js">
+      <Link>codeSHOW\js\RxJS\rx.joinpatterns.js</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\js\RxJS\rx.joinpatterns.min.js">
+      <Link>codeSHOW\js\RxJS\rx.joinpatterns.min.js</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\js\RxJS\rx.js">
+      <Link>codeSHOW\js\RxJS\rx.js</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\js\RxJS\rx.min.js">
+      <Link>codeSHOW\js\RxJS\rx.min.js</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\js\RxJS\rx.node.js">
+      <Link>codeSHOW\js\RxJS\rx.node.js</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\js\RxJS\rx.testing-vsdoc.js">
+      <Link>codeSHOW\js\RxJS\rx.testing-vsdoc.js</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\js\RxJS\rx.testing.js">
+      <Link>codeSHOW\js\RxJS\rx.testing.js</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\js\RxJS\rx.testing.min.js">
+      <Link>codeSHOW\js\RxJS\rx.testing.min.js</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\js\RxJS\rx.time-vsdoc.js">
+      <Link>codeSHOW\js\RxJS\rx.time-vsdoc.js</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\js\RxJS\rx.time.js">
+      <Link>codeSHOW\js\RxJS\rx.time.js</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\js\RxJS\rx.time.min.js">
+      <Link>codeSHOW\js\RxJS\rx.time.min.js</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\js\RxJS\rx.winjs.js">
+      <Link>codeSHOW\js\RxJS\rx.winjs.js</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\js\RxJS\Test\rx.testing-vsdoc.js">
+      <Link>codeSHOW\js\RxJS\Test\rx.testing-vsdoc.js</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\js\RxJS\Test\rx.testing.min.js">
+      <Link>codeSHOW\js\RxJS\Test\rx.testing.min.js</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\NotificationsExtensions.winmd">
+      <Link>codeSHOW\NotificationsExtensions.winmd</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\package.appxmanifest">
+      <Link>codeSHOW\package.appxmanifest</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\Package.StoreAssociation.xml">
+      <Link>codeSHOW\Package.StoreAssociation.xml</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\pages\about\about.css">
+      <Link>codeSHOW\pages\about\about.css</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\pages\about\about.html">
+      <Link>codeSHOW\pages\about\about.html</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\pages\about\about.js">
+      <Link>codeSHOW\pages\about\about.js</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\pages\codeViewer\codeViewer.css">
+      <Link>codeSHOW\pages\codeViewer\codeViewer.css</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\pages\codeViewer\codeViewer.html">
+      <Link>codeSHOW\pages\codeViewer\codeViewer.html</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\pages\codeViewer\codeViewer.js">
+      <Link>codeSHOW\pages\codeViewer\codeViewer.js</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\pages\codeViewer\syntaxhighlighter\sh.css">
+      <Link>codeSHOW\pages\codeViewer\syntaxhighlighter\sh.css</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\pages\codeViewer\syntaxhighlighter\sh.js">
+      <Link>codeSHOW\pages\codeViewer\syntaxhighlighter\sh.js</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\pages\demoCode\demoCode.css">
+      <Link>codeSHOW\pages\demoCode\demoCode.css</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\pages\demoCode\demoCode.html">
+      <Link>codeSHOW\pages\demoCode\demoCode.html</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\pages\demoCode\demoCode.js">
+      <Link>codeSHOW\pages\demoCode\demoCode.js</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\pages\home\home.css">
+      <Link>codeSHOW\pages\home\home.css</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\pages\home\home.html">
+      <Link>codeSHOW\pages\home\home.html</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\pages\home\home.js">
+      <Link>codeSHOW\pages\home\home.js</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\pages\hub\hub.css">
+      <Link>codeSHOW\pages\hub\hub.css</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\pages\hub\hub.html">
+      <Link>codeSHOW\pages\hub\hub.html</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\pages\hub\hub.js">
+      <Link>codeSHOW\pages\hub\hub.js</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\pages\privacy\privacy.css">
+      <Link>codeSHOW\pages\privacy\privacy.css</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\pages\privacy\privacy.html">
+      <Link>codeSHOW\pages\privacy\privacy.html</Link>
+    </Content>
+    <Content Include="..\codeSHOW.Win8JS\pages\privacy\privacy.js">
+      <Link>codeSHOW\pages\privacy\privacy.js</Link>
+    </Content>
+    <Content Include="default.html" />
+    <Content Include="images\logo.png" />
+    <Content Include="images\smalllogo.png" />
+    <Content Include="images\splashscreen.png" />
+    <Content Include="images\storelogo.png" />
+    <Content Include="js\chai.js" />
+    <Content Include="js\default.js" />
+    <Content Include="css\default.css" />
+    <Content Include="js\mocha.css" />
+    <Content Include="js\mocha.js" />
+    <Content Include="tests\one\one.test.js" />
+    <None Include="codeSHOW.Tests_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <SDKReference Include="Microsoft.WinJS.1.0, Version=1.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="tests\Helpers\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\$(WMSJSProjectDirectory)\Microsoft.VisualStudio.$(WMSJSProject).targets" />
+  <!-- To modify your build process, add your task inside one of the targets below then uncomment
+       that target and the DisableFastUpToDateCheck PropertyGroup. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  <PropertyGroup>
+    <DisableFastUpToDateCheck>true</DisableFastUpToDateCheck>
+  </PropertyGroup>
+  -->
+</Project>
