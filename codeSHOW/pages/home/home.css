@@ -3,7 +3,7 @@
 .homepage section[role=main] > * { margin-left: 0px !important;} 
 .homepage .pagetitle img { height: 70px; }
 .homepage #zoom { height: 100%; }
-.homepage #demosListView { height: 95%; }
+.homepage #demosListView { height:100%; }
 .homepage #demosListView .win-surface { margin-left: 120px; }
 .homepage #demosListView .win-groupheader h2 { width: 200px; }
 
