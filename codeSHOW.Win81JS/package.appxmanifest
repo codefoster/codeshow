@@ -1,24 +1,23 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Package xmlns="http://schemas.microsoft.com/appx/2010/manifest">
-  <Identity Name="codeSHOW80JS" Version="1.1.0.32" Publisher="CN=603A18C8-7F37-48CF-B16C-FED79B9AEA66" />
+<Package xmlns="http://schemas.microsoft.com/appx/2010/manifest" xmlns:m2="http://schemas.microsoft.com/appx/2013/manifest">
+  <Identity Name="codeSHOWJS81" Version="2.0.0.0" Publisher="CN=603A18C8-7F37-48CF-B16C-FED79B9AEA66" />
   <Properties>
     <DisplayName>codeSHOW</DisplayName>
     <PublisherDisplayName>codefoster</PublisherDisplayName>
     <Logo>images\storelogo.png</Logo>
   </Properties>
   <Prerequisites>
-    <OSMinVersion>6.2.0</OSMinVersion>
-    <OSMaxVersionTested>6.2.0</OSMaxVersionTested>
+    <OSMinVersion>6.3.0</OSMinVersion>
+    <OSMaxVersionTested>6.3.0</OSMaxVersionTested>
   </Prerequisites>
   <Resources>
     <Resource Language="x-generate" />
   </Resources>
   <Applications>
     <Application Id="App" StartPage="default.html">
-      <VisualElements DisplayName="codeSHOW" Logo="images\logo.png" SmallLogo="images\smalllogo.png" Description="codeSHOW" ForegroundText="light" BackgroundColor="#5e83a2" ToastCapable="true">
-        <DefaultTile ShowName="noLogos" WideLogo="images\widelogo.png" />
-        <SplashScreen Image="images\splashscreen.png" BackgroundColor="#6294ad" />
-      </VisualElements>
+      <m2:VisualElements DisplayName="codeSHOW" Description="codeSHOW" ForegroundText="light" BackgroundColor="#5e83a2" Square150x150Logo="images\Logo.png" Square30x30Logo="images\SmallLogo.png">
+        <m2:SplashScreen Image="images\splashscreen.png" />
+      </m2:VisualElements>
       <Extensions>
         <Extension Category="windows.fileOpenPicker">
           <FileOpenPicker>
@@ -36,7 +35,9 @@
         </Extension>
         <Extension Category="windows.search" />
         <Extension Category="windows.protocol">
-          <Protocol Name="codefoster" />
+          <Protocol Name="codeshow">
+            <DisplayName>codeSHOW</DisplayName>
+          </Protocol>
         </Extension>
         <Extension Category="windows.backgroundTasks" StartPage="demos\backgroundtask\zonetask.js">
           <BackgroundTasks>
@@ -44,9 +45,6 @@
           </BackgroundTasks>
         </Extension>
       </Extensions>
-      <ApplicationContentUriRules>
-        <Rule Match="http://www.microsoft.com" Type="include" />
-      </ApplicationContentUriRules>
     </Application>
   </Applications>
   <Capabilities>

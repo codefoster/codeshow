@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>WindowsAzure.MobileServices.WinJS</id>
+    <version>1.0.1</version>
+    <title>Windows Azure Mobile Services for WinJS</title>
+    <authors>Microsoft</authors>
+    <owners>Microsoft</owners>
+    <licenseUrl>http://go.microsoft.com/fwlink/?LinkId=286110</licenseUrl>
+    <projectUrl>https://github.com/WindowsAzure/azure-mobile-services</projectUrl>
+    <iconUrl>http://go.microsoft.com/fwlink/?LinkID=288890</iconUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>This client library enables client applications to connect to Windows Azure Mobile Services. Mobile Services allows you to develop an app with a scalable and secure backend hosted in Windows Azure. You can incorporate structured storage, user authentication and push notifications in minutes. For more information, check out https://www.windowsazure.com/mobile.</description>
+    <summary>Windows Azure Mobile Services SDK for WinJS.</summary>
+    <releaseNotes />
+    <copyright />
+    <language>en-US</language>
+    <tags>microsoft windows azure mobile services windowsazureofficial winjs</tags>
+  </metadata>
+</package>

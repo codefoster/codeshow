@@ -1,0 +1,55 @@
+﻿.sectionpage section[role=main] {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+}
+
+.sectionpage .itemslist {
+    height: 100%;
+    position: relative;
+    width: 100%;
+    z-index: 0;
+}
+
+    /* This selector is used to prevent ui-dark/light.css from overwriting changes
+       to .win-surface. */
+    .sectionpage .itemslist .win-horizontal.win-viewport .win-surface {
+        margin-bottom: 35px;
+        margin-left: 80px;
+        margin-right: 80px;
+        margin-top: 130px;
+    }
+
+    .sectionpage .itemslist .win-container {
+        margin-bottom: 13px;
+        margin-left: 33px;
+        margin-right: 33px;
+        margin-top: 3px;
+    }
+
+    .sectionpage .itemslist .item {
+        -ms-grid-columns: 110px 10px 1fr;
+        -ms-grid-rows: 1fr;
+        display: -ms-grid;
+        height: 110px;
+        padding: 7px;
+        width: 480px;
+    }
+
+        .sectionpage .itemslist .item .item-info {
+            -ms-grid-column: 3;
+        }
+
+            .sectionpage .itemslist .item .item-info .item-title {
+                margin-top: 4px;
+                max-height: 20px;
+                overflow: hidden;
+            }
+
+            .sectionpage .itemslist .item .item-info .item-subtitle {
+                opacity: 0.6;
+            }
+
+            .sectionpage .itemslist .item .item-info .item-description {
+                max-height: 60px;
+                overflow: hidden;
+            }

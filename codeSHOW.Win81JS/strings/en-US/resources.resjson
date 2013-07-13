@@ -1,0 +1,21 @@
+﻿// For details on localizing a Windows app, see: http://go.microsoft.com/fwlink/?LinkId=212836
+
+{
+    "SourceCode": "Source code",
+    "Section1Subtext": "The complete source code for this application is available online",
+    "Section1Description": "{ describe how to get to the complete source code on codeplex and why you would want to }",
+
+    "Team": "Team",
+    "Contributors": "Contributors",
+    
+    "Section3": "Section 3",
+    "Section3Description": "Lorem ipsum dolor sit amet, consectetur ising elit, sed diam nonummy nibh uismod tincidunt ut laoreet suscipit lobortis nisl ut wisi quipexerci quis consequat minim veniam, quis nostrud. exerci tation ullam corper.",
+
+    "Section4": "Section 4",
+    "Section4ItemTitle": "Item Title",
+    "Section4ItemSubtitle": "Item Sub Title",
+    "Section4Subtext": "Quisque in porta lorem dolor amet sed consectetuer ising elit, sed diam non my nibh uis mod wisi quip.",
+    "Section4Description": "Lorem ipsum dolor sit amet, consectetur ising elit, sed diam nonummy nibh uismod tincidunt ut laoreet suscipit lobortis nisl ut wisi quipexerci quis consequat minim veniam, quis nostrud. exerci tation ullam corper.",
+    
+    "Demos": "Demos"
+}

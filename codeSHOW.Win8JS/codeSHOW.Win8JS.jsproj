@@ -362,7 +362,6 @@
     <Content Include="js\default.js" />
     <Content Include="js\navigator.js" />
     <Content Include="js\ocho.js" />
-    <None Include="Package.StoreAssociation.xml" />
     <Content Include="pages\about\about.css" />
     <Content Include="pages\about\about.html" />
     <Content Include="pages\about\about.js" />
@@ -384,7 +383,6 @@
     <None Include="codeSHOW_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
-    <SDKReference Include="Bing.Maps.JavaScript, Version=1.0" />
     <SDKReference Include="LiveSDKHTML, Version=5.0" />
     <SDKReference Include="Microsoft.PlayerFramework.Js, Version=1.8.1.0" />
     <SDKReference Include="Microsoft.WinJS.1.0, Version=1.0" />
@@ -399,6 +397,10 @@
   <ItemGroup>
     <ProjectReference Include="..\CalculatorCPP\CalculatorCPP.vcxproj" />
     <ProjectReference Include="..\CalculatorCS\CalculatorCS.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="demos\grid\section2\" />
+    <Folder Include="demos\grid\section1\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\$(WMSJSProjectDirectory)\Microsoft.VisualStudio.$(WMSJSProject).targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
