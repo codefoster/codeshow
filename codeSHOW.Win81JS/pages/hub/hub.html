@@ -24,21 +24,29 @@
         </header>
 
         <section class="hub" aria-label="Main content" role="main" data-win-control="WinJS.UI.Hub">
-            <!-- Customize the Hub control by modifying the HubSection controls here. -->
 
             <div class="hero" data-win-control="WinJS.UI.HubSection">
             </div>
 
-            <div class="section1" data-win-control="WinJS.UI.HubSection" data-win-options="{ isHeaderStatic: true }" data-win-res="{ winControl: {'header': 'SourceCode'} }">
-                <img src="/images/codeplex.png" width="420" height="280" />
-                <div class="subtext win-type-x-large secondary-text" data-win-res="{ textContent: 'Section1Subtext' }"></div>
-                <div class="win-type-small secondary-text">
-                    <span data-win-res="{ textContent: 'Section1Description' }"></span>
+            <!-- Demos section -->
+            <div class="section_demos" data-win-control="WinJS.UI.HubSection" data-win-options="{ onheaderinvoked: codeSHOW.Pages.Hub.Commands.demosNavigate }" data-win-res="{ winControl: {'header': 'Demos'} }">
+                <div class="itemTemplate" data-win-control="WinJS.Binding.Template">
+                    <img src="#" data-win-bind="src: name; alt: name" />
+                    <div class="win-type-medium" data-win-bind="textContent: name"></div>
+                    <div class="win-type-small secondary-text" data-win-bind="textContent: name"></div>
+                </div>
+                <div class="itemslist win-selectionstylefilled" data-win-control="WinJS.UI.ListView" data-win-options="{
+                        layout: {type: WinJS.UI.GridLayout},
+                        selectionMode: 'none',
+                        itemTemplate: select('.section_demos .itemTemplate'),
+                        itemDataSource: codeSHOW.Pages.Hub.demosList.dataSource,
+                        oniteminvoked: codeSHOW.Pages.Hub.Commands.demoNavigate
+                    }">
                 </div>
             </div>
 
-            <div class="section2" data-win-control="WinJS.UI.HubSection" data-win-res="{ winControl: {'header': 'Team'} }"
-                data-win-options="{ onheaderinvoked: HubPage.section2HeaderNavigate }">
+            <!-- Team section -->
+            <div class="section2" data-win-control="WinJS.UI.HubSection" data-win-options="{ isHeaderStatic: true }" data-win-res="{ winControl: {'header': 'TeamHeader'} }">
                 <div class="itemTemplate" data-win-control="WinJS.Binding.Template">
                     <img src="#" data-win-bind="src: imageUrl; alt: name" />
                     <div class="item-text">
@@ -53,12 +61,13 @@
                         selectionMode: 'none',
                         itemTemplate: select('.section2 .itemTemplate'),  
                         itemDataSource: codeSHOW.Pages.Hub.teamList.dataSource,
-                        oniteminvoked: HubPage.section2ItemNavigate
+                        oniteminvoked: codeSHOW.Pages.Hub.teamMemberNavigate
                     }">
                 </div>
             </div>
 
-            <div class="section3" data-win-control="WinJS.UI.HubSection" data-win-options="{ isHeaderStatic: true }" data-win-res="{ winControl: {'header': 'Section3'} }">
+            <!-- Apps section -->
+            <div class="section_apps" data-win-control="WinJS.UI.HubSection" data-win-options="{ onheaderinvoked: codeSHOW.Pages.Hub.Commands.appsNavigate }" data-win-res="{ winControl: {'header': 'AppsHeader'} }">
                 <div class="top-image-row">
                     <img src="/images/gray.png" />
                 </div>
@@ -88,21 +97,37 @@
                 </div>
             </div>
 
-            <div class="section5" data-win-control="WinJS.UI.HubSection" data-win-options="{ isHeaderStatic: false, onheaderinvoked: codeSHOW.Pages.Hub.demosNavigate }" data-win-res="{ winControl: {'header': 'Demos'} }">
+            <!-- Source code section -->
+            <div class="section_sourcecode" data-win-control="WinJS.UI.HubSection" data-win-options="{ isHeaderStatic: true }" data-win-res="{ winControl: {'header': 'SourceCode'} }">
+                <img src="/images/codeplex.png" width="420" height="280" />
+                <div class="subtext win-type-x-large secondary-text" data-win-res="{ textContent: 'SourceCodeSectionSubtext' }"></div>
+                <div class="win-type-small secondary-text">
+                    <span data-win-res="{ textContent: 'SourceCodeSectionDescription' }"></span>
+                </div>
+            </div>
+
+            <!-- Contributors section -->
+            <div class="section_contributors" data-win-control="WinJS.UI.HubSection" data-win-res="{ winControl: {'header': 'ContributorsHeader'} }"
+                data-win-options="{ onheaderinvoked: codeSHOW.Pages.Hub.Commands.contributorsNavigate }">
                 <div class="itemTemplate" data-win-control="WinJS.Binding.Template">
-                    <img src="#" data-win-bind="src: name; alt: name" />
-                    <div class="win-type-medium" data-win-bind="textContent: name"></div>
-                    <div class="win-type-small secondary-text" data-win-bind="textContent: name"></div>
+                    <img src="#" data-win-bind="src: imageUrl; alt: name" />
+                    <div class="item-text">
+                        <div class="win-type-medium" data-win-bind="textContent: name"></div>
+                        <div class="win-type-xx-small secondary-text" data-win-bind="textContent: twitterHandle codeSHOW.Pages.Hub.Converters.twitterHandleConverter"></div>
+                        <div class="win-type-xx-small secondary-text" data-win-bind="textContent: website"></div>
+                        <div class="win-type-small secondary-text" data-win-bind="textContent: bio"></div>
+                    </div>
                 </div>
                 <div class="itemslist win-selectionstylefilled" data-win-control="WinJS.UI.ListView" data-win-options="{
-                        layout: {type: WinJS.UI.GridLayout},
+                        layout: {type: WinJS.UI.ListLayout},
                         selectionMode: 'none',
-                        itemTemplate: select('.section5 .itemTemplate'),
-                        itemDataSource: codeSHOW.Pages.Hub.demosList.dataSource,
-                        oniteminvoked: HubPage.section5ItemNavigate
+                        itemTemplate: select('.section_contributors .itemTemplate'),  
+                        itemDataSource: codeSHOW.Pages.Hub.contributorList.dataSource,
+                        oniteminvoked: codeSHOW.Pages.Hub.Commands.contributorNavigate
                     }">
                 </div>
             </div>
+
 
         </section>
     </div>

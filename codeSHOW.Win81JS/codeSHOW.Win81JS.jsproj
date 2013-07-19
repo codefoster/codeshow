@@ -133,6 +133,9 @@
     <Content Include="pages\about\about.css" />
     <Content Include="pages\about\about.html" />
     <Content Include="pages\about\about.js" />
+    <Content Include="pages\apps\apps.css" />
+    <Content Include="pages\apps\apps.html" />
+    <Content Include="pages\apps\apps.js" />
     <Content Include="pages\codeViewer\codeViewer.css" />
     <Content Include="pages\codeViewer\codeViewer.html" />
     <Content Include="pages\codeViewer\codeViewer.js" />
@@ -141,6 +144,12 @@
     <Content Include="pages\demoCode\demoCode.css" />
     <Content Include="pages\demoCode\demoCode.html" />
     <Content Include="pages\demoCode\demoCode.js" />
+    <Content Include="pages\demos\demos.css" />
+    <Content Include="pages\demos\demos.html" />
+    <Content Include="pages\demos\demos.js" />
+    <Content Include="pages\demo\demo.css" />
+    <Content Include="pages\demo\demo.html" />
+    <Content Include="pages\demo\demo.js" />
     <Content Include="pages\home\home.css" />
     <Content Include="pages\home\home.html" />
     <Content Include="pages\home\home.js" />

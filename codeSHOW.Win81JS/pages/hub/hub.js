@@ -1,14 +1,6 @@
 ﻿(function () {
     "use strict";
 
-    var nav = WinJS.Navigation;
-    var session = WinJS.Application.sessionState;
-    var util = WinJS.Utilities;
-
-    // Get the groups used by the data-bound sections of the Hub.
-    var section2Group = Data.resolveGroupReference("group1");
-    var section5Group = Data.resolveGroupReference("group6");
-
     WinJS.UI.Pages.define("/pages/hub/hub.html", {
         ready: function (element, options) {
             var hub = element.querySelector(".hub").winControl;
@@ -59,50 +51,40 @@
                 });
         },
     });
-
-    
-    function createHeaderNavigator(group) {
-        return util.markSupportedForProcessing(function (args) {
-            nav.navigate("/pages/section/section.html", { title: this.header, groupKey: group.key });
-        });
-    }
-
-    function createItemNavigator(group) {
-        var items = Data.getItemsFromGroup(group);
-        return util.markSupportedForProcessing(function (args) {
-            var item = Data.getItemReference(items.getAt(args.detail.itemIndex));
-            nav.navigate("/pages/item/item.html", { item: item });
-        });
-    }
-
-    function getItemsDataSourceFromGroup(group) {
-        return Data.getItemsFromGroup(group).dataSource;
-    }
-
     
     WinJS.Namespace.define("codeSHOW.Pages.Hub", {
         pageDataLoaded: false,
-
-        teamList: new WinJS.Binding.List(),
         demosList: new WinJS.Binding.List(),
+        teamList: new WinJS.Binding.List(),
+        contributorList: new WinJS.Binding.List(),
 
+        //converters
         Converters: {
             twitterHandleConverter: new WinJS.Binding.converter(function(value) {
                 return "@" + value;
             })
-        }
-    });
+        },
 
-    //eventually do away with this namespace in favor of the one above
-    WinJS.Namespace.define("HubPage", {
-        //section2DataSource: getTeamAsync(),
-        section2HeaderNavigate: createHeaderNavigator(section2Group),
-        section2ItemNavigate: createItemNavigator(section2Group),
-        section5DataSource: getItemsDataSourceFromGroup(section5Group),
-        demosNavigate: function () {
-            return util.markSupportedForProcessing(function () {
-                nav.navigate("/pages/demos/demos/html");
-            });
+        //commands
+        Commands: {
+            demoNavigate: util.markSupportedForProcessing(function () {
+                nav.navigate("/pages/demo/demo.html");
+            }),
+            demosNavigate: util.markSupportedForProcessing(function () {
+                nav.navigate("/pages/demos/demos.html");
+            }),
+            teamMemberNavigate: util.markSupportedForProcessing(function() {
+                nav.navigate("/pages/teamMember/teamMember.html");
+            }),
+            appsNavigate: util.markSupportedForProcessing(function () {
+                nav.navigate("/pages/apps/apps.html");
+            }),
+            contributorNavigate: util.markSupportedForProcessing(function () {
+                nav.navigate("/pages/contributors/contributors.html");
+            }),
+            contributorsNavigate: util.markSupportedForProcessing(function () {
+                nav.navigate("/pages/contributors/contributors.html");
+            })
         }
     });
 })();

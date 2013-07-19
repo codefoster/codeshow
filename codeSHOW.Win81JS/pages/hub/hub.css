@@ -36,15 +36,15 @@
         display: none;
     }
 
-.hubpage .hub .section1 {
+.hubpage .hub .section_sourcecode {
     width: 420px;
 }
 
-    .hubpage .hub .section1 .win-hub-section-content {
+    .hubpage .hub .section_sourcecode .win-hub-section-content {
         overflow-y: hidden;
     }
 
-    .hubpage .hub .section1 .subtext {
+    .hubpage .hub .section_sourcecode .subtext {
         margin-bottom: 7px;
         margin-top: 9px;
     }
@@ -96,33 +96,33 @@
             margin-top: 4px;
         }
 
-.hubpage .hub .section3 {
+.hubpage .hub .section_apps {
     width: 400px;
 }
 
-    .hubpage .hub .section3 .win-hub-section-content {
+    .hubpage .hub .section_apps .win-hub-section-content {
         overflow-y: hidden;
     }
 
-    .hubpage .hub .section3 .top-image-row {
+    .hubpage .hub .section_apps .top-image-row {
         height: 260px;
         margin-bottom: 10px;
         width: 400px;
     }
 
-        .hubpage .hub .section3 .top-image-row img {
+        .hubpage .hub .section_apps .top-image-row img {
             height: 100%;
             width: 100%;
         }
 
-    .hubpage .hub .section3 .sub-image-row {
+    .hubpage .hub .section_apps .sub-image-row {
         margin-bottom: 20px;
         display: -ms-flexbox;
         -ms-flex-flow: row nowrap;
         -ms-flex-pack: justify;
     }
 
-        .hubpage .hub .section3 .sub-image-row img {
+        .hubpage .hub .section_apps .sub-image-row img {
             height: 95px;
             width: 130px;
         }
@@ -144,28 +144,28 @@
         margin-bottom: 15px;
     }
 
-.hubpage .hub .section5 {
+.hubpage .hub .section_demos {
 }
 
-    .hubpage .hub .section5 .itemslist {
+    .hubpage .hub .section_demos .itemslist {
         height: 100%;
         margin-left: -10px;
         margin-right: -10px;
         margin-top: -5px;
     }
 
-    .hubpage .hub .section5 .win-container {
+    .hubpage .hub .section_demos .win-container {
         margin-bottom: 36px;
         margin-left: 10px;
         margin-right: 10px;
     }
 
-    .hubpage .hub .section5 .win-item {
+    .hubpage .hub .section_demos .win-item {
         height: 229px;
         width: 310px;
     }
 
-        .hubpage .hub .section5 .win-item img {
+        .hubpage .hub .section_demos .win-item img {
             height: 150px;
             margin-bottom: 10px;
             width: 310px;
