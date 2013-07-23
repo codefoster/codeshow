@@ -36,16 +36,17 @@
             // TODO: Initialize the hub sections here.
             if (!codeSHOW.Pages.Hub.pageDataLoaded)
                 Data.loaded.then(function () {
+                    //build demos list
+                    //TODO: add logic to only take a select number of demos (8 perhaps?)
+                    Data.demos.take(10).forEach(function (demo) {
+                        codeSHOW.Pages.Hub.demosList.push(demo);
+                    });
+
                     //build team list
                     Data.team.forEach(function (member) {
                         codeSHOW.Pages.Hub.teamList.push(member);
                     });
                     
-                    //build demos list
-                    Data.demos.forEach(function (demo) {
-                        codeSHOW.Pages.Hub.demosList.push(demo);
-                    });
-
                     //mark data as loaded
                     codeSHOW.Pages.Hub.pageDataLoaded = true;
                 });

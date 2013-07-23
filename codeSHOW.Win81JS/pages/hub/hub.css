@@ -18,7 +18,7 @@
     padding-right: 0;
 }
 
-.hubpage .hub .hero {
+/*.hubpage .hub .hero {
     background-image: url(/images/apphero.png);
     background-size: cover;
     margin-left: 0;
@@ -34,46 +34,64 @@
 
     .hubpage .hub .hero .win-hub-section-header {
         display: none;
-    }
+    }*/
 
-.hubpage .hub .section_sourcecode {
-    width: 420px;
+/* Demos Section */
+.hubpage .hub .section_demos {
+    padding-left: 120px;
 }
 
-    .hubpage .hub .section_sourcecode .win-hub-section-content {
-        overflow-y: hidden;
+    .hubpage .hub .section_demos .itemslist {
+        height: 100%;
+        margin-left: -10px;
+        margin-right: -10px;
+        margin-top: -5px;
     }
 
-    .hubpage .hub .section_sourcecode .subtext {
-        margin-bottom: 7px;
-        margin-top: 9px;
+    .hubpage .hub .section_demos .win-container {
+        margin: 5px;
     }
 
-.hubpage .hub .section2 {
+    .hubpage .hub .section_demos .win-item {
+        width:250px;
+        height:125px;
+        padding:4px 8px;
+        box-sizing:border-box;
+        background-color: #6294ad;
+        color: white;
+    }
+
+/* Team Section */
+.hubpage .hub .section_team {
     padding-left: 30px;
     padding-right: 30px;
 }
 
-    .hubpage .hub .section2 .win-hub-section-header {
+    .hubpage .hub .section_team .win-hub-section-header {
         margin-left: 10px;
         margin-right: 10px;
     }
 
-    .hubpage .hub .section2 .itemslist {
+    .hubpage .hub .section_team .itemslist {
         height: 100%;
         margin-top: -10px;
     }
 
-        .hubpage .hub .section2 .itemslist .win-viewport {
+        .hubpage .hub .section_team .itemslist .win-viewport {
             overflow-y: hidden;
         }
 
-        .hubpage .hub .section2 .itemslist .win-container {
+        .hubpage .hub .section_team .itemslist .win-container {
             margin: 3px;
             margin-bottom: 16px;
         }
+        
+        .hubpage .hub .section_team .itemslist .win-itembox {
+            background-color: transparent;
+        }
 
-    .hubpage .hub .section2 .win-item {
+
+    .hubpage .hub .section_team .win-item {
         -ms-grid-columns: auto auto;
         display: -ms-grid;
         height: 110px;
@@ -81,13 +99,13 @@
         padding: 7px;
     }
 
-        .hubpage .hub .section2 .win-item img {
+        .hubpage .hub .section_team .win-item img {
             -ms-grid-column: 1;
             height: 110px;
             width: 110px;
         }
 
-        .hubpage .hub .section2 .win-item .item-text {
+        .hubpage .hub .section_team .win-item .item-text {
             -ms-grid-column: 2;
             height: 105px;
             overflow: hidden;
@@ -96,6 +114,7 @@
             margin-top: 4px;
         }
 
+/* Apps Section */
 .hubpage .hub .section_apps {
     width: 400px;
 }
@@ -127,49 +146,40 @@
             width: 130px;
         }
 
-.hubpage .hub .section4 {
-    width: 440px;
+/* Source Code Section */
+.hubpage .hub .section_sourcecode {
+    width: 420px;
 }
 
-    .hubpage .hub .section4 .win-hub-section-content {
+    .hubpage .hub .section_sourcecode .win-hub-section-content {
         overflow-y: hidden;
     }
 
-    .hubpage .hub .section4 .item-title {
+    .hubpage .hub .section_sourcecode .subtext {
+        margin-bottom: 7px;
+        margin-top: 9px;
+    }
+
+
+/* Resources Section */
+.hubpage .hub .section_resources {
+    width: 440px;
+}
+
+    .hubpage .hub .section_resources .win-hub-section-content {
+        overflow-y: hidden;
+    }
+
+    .hubpage .hub .section_resources .item-title {
         margin-top: 4px;
         margin-bottom: 10px;
     }
 
-    .hubpage .hub .section4 .article-header {
+    .hubpage .hub .section_resources .article-header {
         margin-bottom: 15px;
     }
 
-.hubpage .hub .section_demos {
-}
 
-    .hubpage .hub .section_demos .itemslist {
-        height: 100%;
-        margin-left: -10px;
-        margin-right: -10px;
-        margin-top: -5px;
-    }
-
-    .hubpage .hub .section_demos .win-container {
-        margin-bottom: 36px;
-        margin-left: 10px;
-        margin-right: 10px;
-    }
-
-    .hubpage .hub .section_demos .win-item {
-        height: 229px;
-        width: 310px;
-    }
-
-        .hubpage .hub .section_demos .win-item img {
-            height: 150px;
-            margin-bottom: 10px;
-            width: 310px;
-        }
 
 .secondary-text {
     opacity: 0.6;

@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Authentication</title>
+    <meta name="tags" content="" />
+    <meta name="keywords" content="authentication live connect" />
+    <meta name="description" content="For now we have here a simple sign in to Windows Live." />
+    <meta name="author" content="Jeremy Foster" />
+
+    <!-- WinJS references -->
+    <link href="//Microsoft.WinJS.1.0/css/ui-light.css" rel="stylesheet" />
+    <script src="//Microsoft.WinJS.1.0/js/base.js"></script>
+    <script src="//Microsoft.WinJS.1.0/js/ui.js"></script>
+
+    <link href="authentication.css" rel="stylesheet" />
+    <script src="authentication.js"></script>
+</head>
+<body>
+    <div class="authentication fragment">
+        <header aria-label="Header content" role="banner">
+            <button class="win-backbutton" aria-label="Back" disabled type="button"></button>
+            <h1 class="titlearea win-type-ellipsis">
+                <span class="pagetitle">Authentication</span>
+            </h1>
+        </header>
+        <section aria-label="Main content" role="main" class="swiper">
+            <div id="liveSDK">
+                <h2>Windows Live SDK</h2>
+                <div>
+                    <div class="explanation">The authentication in this section uses the Windows Live SDK. Click the button below to sign in to your Microsoft account.</div>
+                    <button id="signIn">Sign in to Live</button>
+                    <div id="log"></div>
+                </div>
+            </div>
+            <div id="wams">
+                <h2>Windows Azure Mobile Services</h2>
+                <div>
+                    <div class="explanation">This section uses the Windows Azure Mobile Services (WAMS). With WAMS, signing in via Microsoft, Facebook, Twitter, and Google is about has difficult as falling off a log!</div>
+                    <div id="microsoft">
+                        <h3>Microsoft</h3>
+                        <button>Sign In</button>                        
+                        <div class="log"></div>
+                    </div>
+                    <!--TODO: these are getting an error... need to troubleshoot-->
+                    <!--<div id="facebook">
+                        <h3>Facebook</h3>
+                        <button>Sign In</button>                        
+                        <div class="log"></div>
+                    </div>
+                    <div id="twitter">
+                        <h3>Twitter</h3>
+                        <button>Sign In</button>                        
+                        <div class="log"></div>
+                    </div>
+                    <div id="google">
+                        <h3>Google</h3>
+                        <button>Sign In</button>                        
+                        <div class="log"></div>
+                    </div>-->
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

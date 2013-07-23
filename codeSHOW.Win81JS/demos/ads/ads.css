@@ -1,0 +1,10 @@
+﻿.ads #list {
+    display:-ms-flexbox;
+    border: 2px solid lightgray;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+
+.ads #list > div {
+    margin: 10px;
+}

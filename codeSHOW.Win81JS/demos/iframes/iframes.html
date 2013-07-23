@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>iframes</title>
+    <meta name="tags" content="" />
+    <meta name="keywords" content="context iframe fragment" />
+    <meta name="description" content="Bring the outside in using iframes." />
+    <meta name="author" content="Jeremy Foster" />
+
+    <!-- WinJS references -->
+    <link href="//Microsoft.WinJS.1.0/css/ui-light.css" rel="stylesheet" />
+    <script src="//Microsoft.WinJS.1.0/js/base.js"></script>
+    <script src="//Microsoft.WinJS.1.0/js/ui.js"></script>
+    
+    <link href="iframes.css" rel="stylesheet" />
+    <script src="iframes.js"></script>
+</head>
+<body>
+    <div class="iframes fragment">
+        <header aria-label="Header content" role="banner">
+            <button class="win-backbutton" aria-label="Back" disabled></button>
+            <h1 class="titlearea win-type-ellipsis">
+                <span class="pagetitle">iframes</span>
+            </h1>
+        </header>
+        <section aria-label="Main content" role="main" class="swiper">
+            <div>
+                <h2>internal</h2>
+                <div class="explanation">When an iframe's src is internal (no URL scheme which defaults to ms-appx) the contents run in local context and have full access to the local device</div>
+                <iframe src="/demos/iframes/helloworld.html"></iframe>
+            </div>
+            <div>
+                <h2>external</h2>
+                <div class="explanation">When an iframe's src is external (when it uses the http scheme) the contents run in web context with limited access to the local device</div>
+                <iframe src="http://docs.webplatform.org"></iframe>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

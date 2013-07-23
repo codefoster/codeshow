@@ -1,0 +1,38 @@
+﻿.crop section[role=main] #container {
+    -ms-grid-column-align: start;
+    -ms-grid-row-align: center;
+    -ms-grid-column: 1;
+    -ms-grid-row: 2;
+    display: -ms-grid;
+    position: relative;
+}
+
+.crop section[role=main] .handle {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: rgba(255,255,255,0.5);
+    border: 1px solid rgba(0,0,0,0.5);
+    user-select: none;
+}
+
+    .crop section[role=main] .handle#tr {
+        margin-left: -20px;
+    }
+
+    .crop section[role=main] .handle#t, .crop section[role=main] .handle#b {
+        margin-left: -10px;
+    }
+
+    .crop section[role=main] .handle#r, .crop section[role=main] .handle#l {
+        margin-top: -10px;
+    }
+
+    .crop section[role=main] .handle#br {
+        margin-left: -20px;
+        margin-top: -20px;
+    }
+
+    .crop section[role=main] .handle#bl {
+        margin-top: -20px;
+    }

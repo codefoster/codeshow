@@ -46,42 +46,70 @@
     //read team from WAMS and fetch details from Twitter
     function loadTeam() {
         return app.client.getTable("team").read()
-            .then(function (team) {
-                return WinJS.Promise.join(team.map(function (member) { return populateMemberAsync(member); }));
+            .then(function(team) {
+                return WinJS.Promise.join(team.map(function(member) { return populateMemberAsync(member); }));
             })
-            .then(function (team) { Data.team = team; })
+            .then(function(team) { Data.team = team; });
     }
 
     //populate demos (from the package)
     function loadDemos() {
         //populate demos (from the package)
         return Windows.ApplicationModel.Package.current.installedLocation.getFolderAsync("demos")
-            .then(function (demosFolder) { return demosFolder.getFoldersAsync(); })
-            .then(function (demoFolders) {
-                demoFolders.forEach(function (demoFolder) {
+            .then(function(demosFolder) { return demosFolder.getFoldersAsync(); })
+            .then(function(demoFolders) {
+                demoFolders.forEach(function(demoFolder) {
                     var demo = { name: demoFolder.displayName, folder: demoFolder };
-                    demoFolder.getFileAsync(demoFolder.displayName + ".html")
+                    return demoFolder.getFileAsync(demoFolder.displayName + ".html")
                         .then(
-                            function (file) {
-                                //there was an html file so assume this is a top level demo
-                                //TODO:fill the rest of the demo properties from WAMS
-                                Data.demos.push(demo);
-                            },
-                            function () {
-                                //there was not an html file so assume this has sections
+                            null,
+                            function() {
+                                //there is not an html file, so enumerate sections
                                 demo.sections = [];
                                 demoFolder.getFoldersAsync()
-                                    .then(function (sectionFolders) {
-                                        sectionFolders.forEach(function(sectionFolder) {
-                                            demo.sections.push({ name:sectionFolder.displayName, folder:sectionFolder });
+                                    .then(function(sectionFolders) {
+                                        //TODO: if there are no section folders then this demo should not be added at all
+                                        sectionFolders.forEach(function (sectionFolder) {
+                                            var section = { name: sectionFolder.displayName, folder: sectionFolder };
+                                            getMetadataAsync(section, sectionFolder)
+                                                .then(function(result) {
+                                                    //if(result.jsonFileExists)
+                                                        demo.sections.push(section);
+                                                }, function () { debugger; });
                                         });
-                                        Data.demos.push(demo);
-                                    })
+                                    }, function () { debugger; });
                             }
                         )
-                })
-            })
-
+                        .then(function() {
+                            return getMetadataAsync(demo, demoFolder)
+                                .then(function(result) {
+                                    //if (result.jsonFileExists)
+                                        Data.demos.push(demo);
+                                }, function () { debugger;  });
+                        });
+                });
+            }, function () { debugger; });
+    }
+    
+    function getMetadataAsync(ds, folder) {
+        return folder.getFileAsync(folder.displayName + ".json")
+            .then(
+                function(file) {
+                    //there was a json file
+                    Windows.Storage.FileIO.readTextAsync(file)
+                        .then(function(text) {
+                            var m = JSON.parse(text);
+                            for (var key in m)
+                                if (m.hasOwnProperty(key))
+                                    ds[key] = m[key]; //copy all properties
+                            return { jsonFileExists: true };
+                        }, function(err) { debugger; });
+                },
+                function() {
+                    //there was not a json file
+                    return { jsonFileExists: false };
+                }
+            );
     }
 
 

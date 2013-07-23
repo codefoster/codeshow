@@ -227,8 +227,7 @@ TODO:
         }
         return result;
     }
-    
-    
+
     WinJS.Namespace.define("Ocho.AppBar", {
         set: function (options) {
             
