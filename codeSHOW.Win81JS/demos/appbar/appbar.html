@@ -3,10 +3,6 @@
 <head>
     <meta charset="utf-8" />
     <title>App Bar (imperative)</title>
-    <meta name="tags" content="" />
-    <meta name="keywords" content="app bar appbar applicationbar application"/>
-    <meta name="description" content="Create an app bar using JavaScript so it's easier to populate and manipulate conditionally." />
-    <meta name="author" content="Jeremy Foster" />
 
     <!-- WinJS references -->
     <link href="//Microsoft.WinJS.1.0/css/ui-light.css" rel="stylesheet" />
@@ -19,7 +15,7 @@
 <body>
     <div class="appbar fragment">
         <header aria-label="Header content" role="banner">
-            <button class="win-backbutton" aria-label="Back" disabled type="button"></button>
+            <button data-win-control="WinJS.UI.BackButton"></button>
             <h1 class="titlearea win-type-ellipsis">
                 <span class="pagetitle">Imperative App Bar</span>
             </h1>

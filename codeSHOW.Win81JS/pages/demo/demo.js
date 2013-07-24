@@ -1,23 +1,29 @@
-﻿// For an introduction to the Page Control template, see the following documentation:
-// http://go.microsoft.com/fwlink/?LinkId=232511
-(function () {
+﻿(function () {
     "use strict";
 
     WinJS.UI.Pages.define("/pages/demo/demo.html", {
-        // This function is called whenever a user navigates to this page. It
-        // populates the page elements with the app's data.
-        ready: function (element, options) {
-            // TODO: Initialize the page here.
+        ready: function (element, demo) {
+            if (demo.sections.length == 0)
+                WinJS.UI.Pages.render(format("/demos/{0}/{0}.html", demo.name), document.querySelector("div.demo"));
+            else {
+                var divSections = document.createElement("div");
+                divSections.style.display = "flex";
+                //var sectionFlipView = new WinJS.UI.FlipView(divSections);
+                //sectionsFlipView.winControl.dataSource
+                var divSection;
+                demo.sections.forEach(function (section) {
+                    divSection = document.createElement("div");
+                    WinJS.UI.Pages.render(format("/demos/{0}/{1}/{1}.html", demo.name, section.name), divSection);
+                    divSections.appendChild(divSection);
+                });
+                document.querySelector("div.demo").appendChild(divSections);
+            }
         },
 
         unload: function () {
-            // TODO: Respond to navigations away from this page.
         },
 
         updateLayout: function (element) {
-            /// <param name="element" domElement="true" />
-
-            // TODO: Respond to changes in layout.
         }
     });
 })();

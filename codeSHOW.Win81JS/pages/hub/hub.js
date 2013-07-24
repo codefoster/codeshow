@@ -68,8 +68,10 @@
 
         //commands
         Commands: {
-            demoNavigate: util.markSupportedForProcessing(function () {
-                nav.navigate("/pages/demo/demo.html");
+            demoNavigate: util.markSupportedForProcessing(function (data) {
+                data.detail.itemPromise.then(function(item) {
+                    nav.navigate("/pages/demo/demo.html", item.data);
+                });
             }),
             demosNavigate: util.markSupportedForProcessing(function () {
                 nav.navigate("/pages/demos/demos.html");

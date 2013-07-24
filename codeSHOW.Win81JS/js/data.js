@@ -20,7 +20,7 @@
                 member.imageUrl = result.response.querySelector("img.avatar.size73").src;
                 member.name = result.response.querySelector("h1.fullname").innerText;
                 member.bio = result.response.querySelector("p.bio").innerHTML;
-                member.website = result.response.querySelector(".url a").href;
+                member.website = result.response.querySelector(".url a").title;
                 return member;
             });
     }
@@ -55,11 +55,11 @@
     //populate demos (from the package)
     function loadDemos() {
         //populate demos (from the package)
-        return Windows.ApplicationModel.Package.current.installedLocation.getFolderAsync("demos")
+        return pkg.installedLocation.getFolderAsync("demos")
             .then(function(demosFolder) { return demosFolder.getFoldersAsync(); })
             .then(function(demoFolders) {
                 demoFolders.forEach(function(demoFolder) {
-                    var demo = { name: demoFolder.displayName, folder: demoFolder };
+                    var demo = { name: demoFolder.displayName };
                     return demoFolder.getFileAsync(demoFolder.displayName + ".html")
                         .then(
                             null,
@@ -70,10 +70,10 @@
                                     .then(function(sectionFolders) {
                                         //TODO: if there are no section folders then this demo should not be added at all
                                         sectionFolders.forEach(function (sectionFolder) {
-                                            var section = { name: sectionFolder.displayName, folder: sectionFolder };
+                                            var section = { name: sectionFolder.displayName, demoName: demo.name };
                                             getMetadataAsync(section, sectionFolder)
                                                 .then(function(result) {
-                                                    //if(result.jsonFileExists)
+                                                    //if(result.jsonFileExists && section.enabled)
                                                         demo.sections.push(section);
                                                 }, function () { debugger; });
                                         });
@@ -82,8 +82,8 @@
                         )
                         .then(function() {
                             return getMetadataAsync(demo, demoFolder)
-                                .then(function(result) {
-                                    //if (result.jsonFileExists)
+                                .then(function (result) {
+                                    //if (result.jsonFileExists && demo.enabled)
                                         Data.demos.push(demo);
                                 }, function () { debugger;  });
                         });

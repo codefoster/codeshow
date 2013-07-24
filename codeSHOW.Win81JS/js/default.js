@@ -6,6 +6,7 @@ var nav = WinJS.Navigation;
 var r = appdata.roamingSettings.values;
 var session = WinJS.Application.sessionState;
 var util = WinJS.Utilities;
+var pkg = Windows.ApplicationModel.Package.current;
 
 (function () {
     "use strict";
