@@ -1,0 +1,7 @@
+{
+    "title": "Netflix Trickle",
+    "keywords":[""],
+    "description": "Fetch Netflix data with individual xhr calls so the results appear in the UI as they come back.",
+    "author": "Jeremy Foster",
+    "dateCreated": ""
+}

@@ -1,12 +1,12 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
     <title>Settings</title>
-    <meta name="tags" content="" />
+    
     <meta name="keywords" content="settings preferences"/>
-    <meta name="description" content="Settings go in the settings pane. Here's how to do it." />
-    <meta name="author" content="Jeremy Foster" />
+    
+    
 
     <!-- WinJS references -->
     <link href="//Microsoft.WinJS.1.0/css/ui-light.css" rel="stylesheet" />
@@ -23,7 +23,7 @@
         <div id="preferencesDiv" data-win-control="WinJS.UI.SettingsFlyout" aria-label="App Settings Flyout">
             <!-- Use either 'win-ui-light' or 'win-ui-dark' depending on the contrast between the header title and background color -->
             <div class="win-ui-dark win-header">
-                <button type="button" onclick="WinJS.UI.SettingsFlyout.show()" class="win-backbutton"></button>
+                <button data-win-control="WinJS.UI.BackButton" onclick="WinJS.UI.SettingsFlyout.show()"></button>
                 <div class="win-label">Preferences</div>
             </div>
             <div class="win-content">

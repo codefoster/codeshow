@@ -1,4 +1,29 @@
 ﻿.demo section[role=main] {
-    margin-left: 120px;
-    margin-right: 120px;
+    padding-left: 120px;
 }
+
+.demo > section[role=main].demosections {
+    display: flex; /* move this to the js so it's conditional '*/
+    width: auto;
+    border: solid 1px green;
+    -ms-scroll-snap-x: mandatory snapInterval(0%, 80%);
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+
+.demo .demosection {
+    box-sizing: border-box;
+    width: 80%;
+    padding-right: 80px;
+    -ms-flex: none;
+    overflow: hidden;
+}
+
+.demo .demosection:last-child {
+    width: 100%;
+}
+
+    .demo .demosection .fragment {
+        display: block; /* don't apply the grid that most page fragments have */
+    }
+

@@ -92,6 +92,7 @@
     }
     
     function getMetadataAsync(ds, folder) {
+        //TODO: first get the HTML and get the title from that... override with .json file below if it exists
         return folder.getFileAsync(folder.displayName + ".json")
             .then(
                 function(file) {

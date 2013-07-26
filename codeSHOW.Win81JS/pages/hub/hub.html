@@ -28,8 +28,9 @@
             <!-- Demos section -->
             <div class="section_demos" data-win-control="WinJS.UI.HubSection" data-win-options="{ onheaderinvoked: codeSHOW.Pages.Hub.Commands.demosNavigate }" data-win-res="{ winControl: {'header': 'Demos'} }">
                 <div class="itemTemplate" data-win-control="WinJS.Binding.Template">
-                    <h3 data-win-bind="innerText:name;"></h3>
-                    <p data-win-bind="innerText:description" class="win-type-x-small"></p>
+                    <h3 data-win-bind="innerText:title;"></h3>
+                    <p data-win-bind="innerText:description" class="win-type-xx-small"></p>
+                    <p data-win-bind="innerText:author" class="win-type-xx-small"></p>
                     <!--<div data-win-control="WinJS.UI.Rating" class="win-small"
                         data-win-bind="winControl.averageRating: rating; onchange:onchangefct;"></div>-->
                 </div>

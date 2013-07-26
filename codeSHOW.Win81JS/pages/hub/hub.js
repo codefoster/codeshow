@@ -38,7 +38,7 @@
                 Data.loaded.then(function () {
                     //build demos list
                     //TODO: add logic to only take a select number of demos (8 perhaps?)
-                    Data.demos.take(10).forEach(function (demo) {
+                    Data.demos.forEach(function (demo) {
                         codeSHOW.Pages.Hub.demosList.push(demo);
                     });
 

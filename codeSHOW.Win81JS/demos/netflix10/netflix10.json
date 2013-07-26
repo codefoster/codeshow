@@ -1,0 +1,7 @@
+{
+    "title": "Netflix by 10",
+    "keywords":[""],
+    "description": "Use WinJS.Promise.join and individual xhr calls to get 10 Netflix movies starting with each letter of the alphabet.",
+    "author": "Jeremy Foster",
+    "dateCreated": ""
+}
