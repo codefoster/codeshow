@@ -78,6 +78,10 @@
             // initialize custom log method
             WinJS.log = function (msg, tags, type) {
 
+                // get element from errors.html.  if no longer in DOM, exit immediately
+                var output = document.querySelector("div#output");
+                if (!output) return;
+
                 // msg is required and must be a string
                 if (isTypeOf(msg, "String")) {
 
@@ -87,10 +91,10 @@
                     // only output msg if tags parameter contains demo
                     if (tags && tags.match && tags.match(/demo/gi)) {
                         // output is the id of a div on the page
-                        output.innerText = msg;
+                         output.innerText = msg;
                     }
                     if (type === "error") {
-                        output.classList.add("error");
+                         output.classList.add("error");
                     } else {
                         output.classList.remove("error");
                     }
