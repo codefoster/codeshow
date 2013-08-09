@@ -1,9 +1,11 @@
-﻿.demo > .fragment > section[role=main],
-.demo .demosections {
-    padding-left: 120px;
+﻿
+.demo > section[role=main] .demoview {
+    border:solid 1px green;
+    padding-left:120px;
+    
 }
 
-.demo > section[role=main].demosections {
+.demo .demoview {
     display: flex; /* move this to the js so it's conditional '*/
     width: auto;
     -ms-scroll-snap-x: mandatory snapInterval(0%, 80%);
@@ -15,7 +17,7 @@
     box-sizing: border-box;
     width: 80%;
     padding-right: 80px;
-    -ms-flex: none;
+    flex: none;
     overflow: hidden;
 }
 
