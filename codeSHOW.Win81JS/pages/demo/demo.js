@@ -10,16 +10,25 @@
 
             //demo view
             if (options.view == "demo") {
+                var demoview = document.querySelector(".demo .demoview");
 
                 //single demo view
                 if (!demo.sections || demo.sections.length == 0) {
-                    document.querySelector("header").style.display = "none"; //hide the header (demo page should have its own)
-                    WinJS.UI.Pages.render(format("/demos/{0}/{0}.html", demo.name), document.querySelector("div.demo"));
+                    //hide the header (demo page should have its own)
+                    //document.querySelector("header").style.display = "none";
+
+                    WinJS.UI.Pages.render(format("/demos/{0}/{0}.html", demo.name), demoview)
+                        .then(function (page) {
+                            page.element.querySelector("section[role=main]").classList.add("padleft");
+
+                            //remove the section header since the demo page has one already
+                            var header = page.element.querySelector("header");
+                            if (header) header.style.display = "none";
+                        });
                 }
 
                 //sections view
                 else {
-                    var demoview = document.querySelector(".demo .demoview");
                     var divSection, sectionHeader, sectionBody;
                     demo.sections
 
@@ -33,6 +42,7 @@
                             divSection = document.createElement("div");
                             divSection.classList.add(section.name);
                             divSection.classList.add("demosection");
+                            divSection.classList.add("padleft");
 
                             //section header
                             sectionHeader = document.createElement("h2");
@@ -42,9 +52,10 @@
                             //section body
                             sectionBody = document.createElement("div");
                             WinJS.UI.Pages.render(format("/demos/{0}/{1}/{1}.html", demo.name, section.name), sectionBody)
-                                .then(function (result) {
+                                .then(function (page) {
                                     //remove the section header since the demo page has one already
-                                    if (result.element.querySelector("header")) result.element.querySelector("header").style.display = "none";
+                                    var header = page.element.querySelector("header");
+                                    if (header) header.style.display = "none";
                                 });
                             divSection.appendChild(sectionBody);
 

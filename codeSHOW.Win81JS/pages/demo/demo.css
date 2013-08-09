@@ -1,8 +1,5 @@
-﻿
-.demo > section[role=main] .demoview {
-    border:solid 1px green;
+﻿.demo .padleft {
     padding-left:120px;
-    
 }
 
 .demo .demoview {
@@ -11,6 +8,7 @@
     -ms-scroll-snap-x: mandatory snapInterval(0%, 80%);
     overflow-x: scroll;
     overflow-y: hidden;
+    height:100%;
 }
 
 .demo .demosection {
@@ -25,7 +23,7 @@
     width: 100%;
 }
 
-    .demo .demosection .fragment {
+    .demo .fragment {
         display: block; /* don't apply the grid that most page fragments have */
     }
 
