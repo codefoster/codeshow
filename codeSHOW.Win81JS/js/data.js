@@ -59,7 +59,7 @@
             .then(function(demosFolder) { return demosFolder.getFoldersAsync(); })
             .then(function(demoFolders) {
                 demoFolders.forEach(function(demoFolder) {
-                    var demo = { name: demoFolder.displayName };
+                    var demo = { name: demoFolder.displayName, enabled: true };
                     return demoFolder.getFileAsync(demoFolder.displayName + ".html")
                         .then(
                             null,
@@ -70,10 +70,10 @@
                                     .then(function(sectionFolders) {
                                         //TODO: if there are no section folders then this demo should not be added at all
                                         sectionFolders.forEach(function (sectionFolder) {
-                                            var section = { name: sectionFolder.displayName, demoName: demo.name };
+                                            var section = { name: sectionFolder.displayName, demoName: demo.name, enabled: true };
                                             getMetadataAsync(section, sectionFolder)
                                                 .then(function(result) {
-                                                    //if(result.jsonFileExists && section.enabled)
+                                                    if(result && result.jsonFileExists && section.enabled)
                                                         demo.sections.push(section);
                                                 }, function () { debugger; });
                                         });
@@ -83,7 +83,7 @@
                         .then(function() {
                             return getMetadataAsync(demo, demoFolder)
                                 .then(function (result) {
-                                    //if (result.jsonFileExists && demo.enabled)
+                                    if (result.jsonFileExists && demo.enabled) 
                                         Data.demos.push(demo);
                                 }, function () { debugger;  });
                         });
@@ -97,7 +97,7 @@
             .then(
                 function(file) {
                     //there was a json file
-                    Windows.Storage.FileIO.readTextAsync(file)
+                    return Windows.Storage.FileIO.readTextAsync(file)
                         .then(function(text) {
                             var m = JSON.parse(text);
                             for (var key in m)

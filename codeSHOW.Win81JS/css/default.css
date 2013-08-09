@@ -1,14 +1,18 @@
-﻿#colorbar {
+﻿@font-face {
+	font-family: 39smooth;
+	src: url('../fonts/39smooth.ttf') format('truetype');
+}
+
+#colorbar {
     height: 10px;
     position: absolute;
-    top:0px;
-    width:100%;
+    top: 0px;
+    width: 100%;
     background-image: linear-gradient(to right, #020410 0px, #020410 10%, #436580 10%, #436580 35%, #6294ad 35% );
 }
 
 body {
-        background-image: linear-gradient(to bottom, #dfe7eb 0%, #f6f6f6 30%);
-
+    background-image: linear-gradient(to bottom, #dfe7eb 0%, #f6f6f6 30%);
 }
 
 #contenthost {
@@ -53,3 +57,34 @@ body {
         height: 100%;
         width: 100%;
     }
+
+/* Extended Splash Screen */
+#splash {
+    background-color: white;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    text-align: center;
+    z-index: 2;
+}
+
+    #splash.hidden {
+        display: none;
+    }
+
+#splash img {
+    position: absolute;
+}
+
+#splash progress {
+    color: #34435A;
+}
+
+
+/* Fonts */
+@font-face {
+    font-family: 'GoodDog';
+    src: url('/css/type/GoodDog.otf')
+}

@@ -1,19 +1,19 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.20617.1 PREVIEW
+VisualStudioVersion = 12.0.20623.1 VSUPREVIEW
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{262852C6-CD72-467D-83FE-5EEB1973A190}") = "codeSHOW.Win8JS", "codeSHOW.Win8JS\codeSHOW.Win8JS.jsproj", "{939B75D0-97CE-40B4-9EC7-39A56B6AEE3B}"
+Project("{262852C6-CD72-467D-83FE-5EEB1973A190}") = "codeShow.Win8JS", "codeSHOW.Win8JS\codeShow.Win8JS.jsproj", "{939B75D0-97CE-40B4-9EC7-39A56B6AEE3B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalculatorCS", "CalculatorCS\CalculatorCS.csproj", "{D2E0B595-BC06-4B97-9658-4E1431B4E659}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CalculatorCPP", "CalculatorCPP\CalculatorCPP.vcxproj", "{26727AC2-F49B-47B0-A180-0F53593D4337}"
 EndProject
-Project("{262852C6-CD72-467D-83FE-5EEB1973A190}") = "codeSHOW.Win8JS.Tests", "codeSHOW.Win8JS.Tests\codeSHOW.Win8JS.Tests.jsproj", "{7B3781C0-A2FF-4B9C-A967-65E673C99487}"
+Project("{262852C6-CD72-467D-83FE-5EEB1973A190}") = "codeShow.Win8JS.Tests", "codeSHOW.Win8JS.Tests\codeShow.Win8JS.Tests.jsproj", "{7B3781C0-A2FF-4B9C-A967-65E673C99487}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "codeSHOW.Win81CS", "codeSHOW.Win81CS\codeSHOW.Win81CS.csproj", "{849CE43E-9B5B-4B5D-AFBE-CA72B44DB399}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "codeShow.Win81CS", "codeSHOW.Win81CS\codeShow.Win81CS.csproj", "{849CE43E-9B5B-4B5D-AFBE-CA72B44DB399}"
 EndProject
-Project("{262852C6-CD72-467D-83FE-5EEB1973A190}") = "codeSHOW.Win81JS", "codeSHOW.Win81JS\codeSHOW.Win81JS.jsproj", "{DE14D4EC-AC3B-4556-A7CA-3D7A718F8832}"
+Project("{262852C6-CD72-467D-83FE-5EEB1973A190}") = "codeShow.Win81JS", "codeSHOW.Win81JS\codeShow.Win81JS.jsproj", "{DE14D4EC-AC3B-4556-A7CA-3D7A718F8832}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoConverter", "DemoConverter\DemoConverter.csproj", "{E84F6B67-C7A1-4937-A28C-D3359AF65EF7}"
 EndProject

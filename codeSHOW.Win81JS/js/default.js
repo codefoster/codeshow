@@ -18,7 +18,7 @@ var pkg = Windows.ApplicationModel.Package.current;
     //        case "BrowserForward": WinJS.Navigation.forward(); break;
     //    }
     //};
-    
+
     app.addEventListener("activated", function (args) {
         //initiate loading of app data
         setupWamsClient();
@@ -36,6 +36,9 @@ var pkg = Windows.ApplicationModel.Package.current;
         
         //standard launch
         if (args.detail.kind === activation.ActivationKind.launch) {
+            postitionSplashScreen(args);
+            //handle extended splash screen
+
             if (args.detail.previousExecutionState !== activation.ApplicationExecutionState.terminated) {
                 // TODO: This application has been newly launched. Initialize your application here.
             } else {
@@ -45,14 +48,16 @@ var pkg = Windows.ApplicationModel.Package.current;
             if (app.sessionState.history) {
                 nav.history = app.sessionState.history;
             }
-            args.setPromise(WinJS.UI.processAll().then(function () {
-                if (nav.location) {
-                    nav.history.current.initialPlaceholder = true;
-                    return nav.navigate(nav.location, nav.state);
-                } else {
-                    return nav.navigate(Application.navigator.home);
-                }
-            }));
+            args.setPromise(WinJS.UI.processAll()
+                .then(function () {
+                    if (nav.location) {
+                        nav.history.current.initialPlaceholder = true;
+                        return nav.navigate(nav.location, nav.state);
+                    } else {
+                        return nav.navigate(Application.navigator.home);
+                    }
+                })
+            );
         }
         
         //launched by protocol activation
@@ -214,6 +219,18 @@ var pkg = Windows.ApplicationModel.Package.current;
     function fetchWamsData(key) {
         app.client;
         return { "key":key, "averageRating": 3.4 };
+    }
+
+    function postitionSplashScreen(args) {
+        var i = splash.querySelector("img");
+        var p = splash.querySelector("progress");
+        var ss = args.detail.splashScreen;
+        splash.classList.remove("hidden");
+        i.style.top = ss.imageLocation.y + "px";
+        i.style.left = ss.imageLocation.x + "px";
+        i.style.height = ss.imageLocation.height + "px";
+        i.style.width = ss.imageLocation.width + "px";
+        p.style.marginTop = ss.imageLocation.y + ss.imageLocation.height + 32 + "px";
     }
     
     app.start();

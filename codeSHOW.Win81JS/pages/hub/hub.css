@@ -3,6 +3,14 @@
     z-index: 2;
 }
 
+    .hubpage .pagetitle {
+        font-family: "gooddog";
+        font-size: 70px;
+    }
+
+        .hubpage .pagetitle .titleCode { color: #34435a; }
+        .hubpage .pagetitle .titleShow { color: #5e83a2; }
+
     .hubpage .pagetitle img { height: 70px; }
 
 
@@ -53,12 +61,58 @@
     }
 
     .hubpage .hub .section_demos .win-item {
-        width:250px;
+        width:280px;
         height:125px;
-        padding:4px 8px;
-        box-sizing:border-box;
-        background-color: #6294ad;
-        color: white;
+        color: #34435a;
+    }
+        .hubpage .hub .section_demos .win-item .itemGrid {
+            display:-ms-grid;
+            -ms-grid-columns:6px 1fr;
+            -ms-grid-rows:1fr;
+            box-sizing:border-box;
+            border: solid 1px #5e83a2;
+            height:125px;
+            border-radius:2px;
+        }
+
+        .hubpage .hub .section_demos .win-item .itemHandle {
+            background-color:#5e83a2;
+        }
+        .hubpage .hub .section_demos .win-item .itemContents {
+            padding:4px 8px;
+            -ms-grid-column:2;
+            overflow:hidden;
+        }
+
+        .hubpage .hub .section_demos .win-item h3 {
+            font-family: 'GoodDog';
+            font-size:24px;
+            margin-bottom:-2px; /* in this case bring the description up a little closer */
+        }
+
+        .hubpage .hub .section_demos .win-item p.description {
+            margin-top:0px;
+            margin-left:5px;
+            font-size:13px;
+
+        }
+            
+        .hubpage .hub .section_demos .win-item div.author {
+            -ms-grid-column:2;
+            -ms-grid-row:1;
+            -ms-grid-column-align:end;
+            -ms-grid-row-align:end;
+            color:#34435a;
+            width:120px;
+            margin-bottom:4px;
+            padding:3px;
+            padding-right:7px;
+            text-align:right;
+            font-size:11px;
+        }
+    
+    .hubpage .hub .section_demos .win-listview .win-itembox {
+        background-color: rgba(0,0,0,0.03);
     }
 
 /* Team Section */
@@ -117,6 +171,7 @@
 /* Apps Section */
 .hubpage .hub .section_apps {
     width: 400px;
+    display:none;
 }
 
     .hubpage .hub .section_apps .win-hub-section-content {
@@ -149,6 +204,7 @@
 /* Source Code Section */
 .hubpage .hub .section_sourcecode {
     width: 420px;
+    display:none;
 }
 
     .hubpage .hub .section_sourcecode .win-hub-section-content {
@@ -164,6 +220,7 @@
 /* Resources Section */
 .hubpage .hub .section_resources {
     width: 440px;
+    display:none;
 }
 
     .hubpage .hub .section_resources .win-hub-section-content {
@@ -179,6 +236,11 @@
         margin-bottom: 15px;
     }
 
+    
+/* Contributors Section */
+.hubpage .hub .section_contributors {
+    display:none;
+}
 
 
 .secondary-text {
