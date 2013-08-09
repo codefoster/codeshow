@@ -68,7 +68,31 @@
     <Content Include="demos\errors\errors.json" />
     <Content Include="demos\eventHandlers\eventHandlers.json" />
     <Content Include="demos\filepicker\filepicker.json" />
+    <Content Include="demos\flexbox\distributed\distributed.css" />
+    <Content Include="demos\flexbox\distributed\distributed.html" />
+    <Content Include="demos\flexbox\distributed\distributed.js" />
+    <Content Include="demos\flexbox\distributed\distributed.json" />
     <Content Include="demos\flexbox\flexbox.json" />
+    <Content Include="demos\flexbox\flexswipe\flexswipe.css" />
+    <Content Include="demos\flexbox\flexswipe\flexswipe.html" />
+    <Content Include="demos\flexbox\flexswipe\flexswipe.js" />
+    <Content Include="demos\flexbox\flexswipe\flexswipe.json" />
+    <Content Include="demos\flexbox\flexxing\flexxing.json" />
+    <Content Include="demos\flexbox\flexxing\flexxing.css" />
+    <Content Include="demos\flexbox\flexxing\flexxing.html" />
+    <Content Include="demos\flexbox\flexxing\flexxing.js" />
+    <Content Include="demos\flexbox\simpleflex\simpleflex.css" />
+    <Content Include="demos\flexbox\simpleflex\simpleflex.html" />
+    <Content Include="demos\flexbox\simpleflex\simpleflex.js" />
+    <Content Include="demos\flexbox\simpleflex\simpleflex.json" />
+    <Content Include="demos\flexbox\verticalflex\verticalflex.json" />
+    <Content Include="demos\flexbox\verticalflex\verticalflex.css" />
+    <Content Include="demos\flexbox\verticalflex\verticalflex.html" />
+    <Content Include="demos\flexbox\verticalflex\verticalflex.js" />
+    <Content Include="demos\flexbox\wrappingflex\wrappingflex.json" />
+    <Content Include="demos\flexbox\wrappingflex\wrappingflex.css" />
+    <Content Include="demos\flexbox\wrappingflex\wrappingflex.html" />
+    <Content Include="demos\flexbox\wrappingflex\wrappingflex.js" />
     <Content Include="demos\flyouts\flyouts.json" />
     <Content Include="demos\fragment\fragment.json" />
     <Content Include="demos\grid\grid.json" />
@@ -208,9 +232,6 @@
     <Content Include="demos\filepicker\filepicker.css" />
     <Content Include="demos\filepicker\filepicker.html" />
     <Content Include="demos\filepicker\filepicker.js" />
-    <Content Include="demos\flexbox\flexbox.css" />
-    <Content Include="demos\flexbox\flexbox.html" />
-    <Content Include="demos\flexbox\flexbox.js" />
     <Content Include="demos\flipview\flipview.css" />
     <Content Include="demos\flipview\flipview.html" />
     <Content Include="demos\flipview\flipview.js" />
@@ -560,6 +581,7 @@
     <SDKReference Include="Microsoft.PlayerFramework.Js.Analytics, Version=1.8.2.1" />
     <SDKReference Include="Microsoft.PlayerFramework.Js.TimedText, Version=1.8.2.1" />
     <SDKReference Include="Microsoft.WinJS.2.0.Preview, Version=1.0" />
+    <SDKReference Include="MSAdvertisingJS, Version=8.1" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="NotificationsExtensions">

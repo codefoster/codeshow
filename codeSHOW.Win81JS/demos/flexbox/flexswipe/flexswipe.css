@@ -1,0 +1,22 @@
+﻿.flexswipe #swipeparent {
+    display:flex;
+    -ms-scroll-snap-x: mandatory snapInterval(0%, 80%);
+    overflow-x: auto;
+    width:600px;
+    height:400px;
+    border:1px solid lightgray;
+}
+
+.flexswipe #swipeparent > * {
+    box-sizing: border-box;
+    width: 80%;
+    height: 100%;
+    padding: 20px;
+    padding-right: 60px;
+    overflow-y: auto;
+    flex:none;
+}
+
+.flexswipe #swipeparent > *:last-child {
+    width: 100%;
+}
