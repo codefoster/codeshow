@@ -3,5 +3,6 @@
     "keywords":["skydrive","live","api","connect"],
     "description": "",
     "author": "Jeremy Foster",
-    "dateCreated": ""
+    "dateCreated": "",
+	"enabled":false
 }
