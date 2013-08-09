@@ -1,7 +1,8 @@
 {
     "title": "Notifications",
-    "keywords":[""],
+    "keywords":["notifications","push","background"],
     "description": "Send notifications to the user using the local method and the background task method",
     "author": "Jeremy Foster",
     "dateCreated": ""
+
 }

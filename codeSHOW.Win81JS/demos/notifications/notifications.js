@@ -16,13 +16,13 @@
 
         q("button.sendText", element).onclick = function (e) {
             // build and send the tile notification
-            var tileContent = NotificationsExtensions.TileContent.TileContentFactory.createTileWideText03();
-            tileContent.textHeadingWrap.text = q("#tileText", element).value;
-            var squareTileContent = NotificationsExtensions.TileContent.TileContentFactory.createTileSquareText04();
+
+            //tileContent.textHeadingWrap.text = q("#tileText", element).value;
+            var squareTileContent = NotificationsExtensions.TileContent.TileContentFactory.createTileSquare150x150Text04();
             squareTileContent.textBodyWrap.text = q("#tileText", element).value;
-            tileContent.squareContent = squareTileContent;
+            //tileContent.squareContent = squareTileContent;
             updater.enableNotificationQueue(q("#enableQueueing", element).winControl.checked);
-            updater.update(tileContent.createNotification());
+            updater.update(squareTileContent.createNotification());
         };
         
         q("button.clear", element).onclick = function (e) {
