@@ -10,24 +10,40 @@
             } else {
                 var mainSection = document.querySelector("section[role=main]"), divSection, sectionHeader, sectionBody;
                 mainSection.classList.add("demosections");
-                demo.sections.forEach(function (section) {
-                    divSection = document.createElement("div");
-                    divSection.classList.add(section.name);
-                    divSection.classList.add("demosection");
+                demo.sections
 
-                    //section header
-                    sectionHeader = document.createElement("h2");
-                    sectionHeader.innerText = section.title;
-                    divSection.appendChild(sectionHeader);
+                    //sort the sections by their sort order
+                    .sort(function (a,b) {
+                        return a.order - b.order;
+                    })
 
-                    //section body
-                    sectionBody = document.createElement("div");
-                    WinJS.UI.Pages.render(format("/demos/{0}/{1}/{1}.html", demo.name, section.name), sectionBody);
-                    divSection.appendChild(sectionBody);
+                    //and render them
+                    .forEach(function (section) {
+                        divSection = document.createElement("div");
+                        divSection.classList.add(section.name);
+                        divSection.classList.add("demosection");
 
-                    mainSection.appendChild(divSection);
-                });
+                        //section header
+                        sectionHeader = document.createElement("h2");
+                        sectionHeader.innerText = section.title;
+                        divSection.appendChild(sectionHeader);
+
+                        //section body
+                        sectionBody = document.createElement("div");
+                        WinJS.UI.Pages.render(format("/demos/{0}/{1}/{1}.html", demo.name, section.name), sectionBody)
+                            .then(function(result) {
+                                //remove the section header since the demo page has one already
+                                result.element.querySelector("header").style.display = "none";
+                            });
+                        divSection.appendChild(sectionBody);
+
+                        mainSection.appendChild(divSection);
+                    });
             }
+
+            //hide the extended splash screen
+            splash.classList.add("hidden");
+
         }
     });
 })();

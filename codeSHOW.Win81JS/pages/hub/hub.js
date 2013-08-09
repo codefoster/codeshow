@@ -36,6 +36,7 @@
             if (!codeSHOW.Pages.Hub.pageDataLoaded)
                 Data.loaded
                     .then(function () {
+                        //when data is finished loading then hide the extended splash screen
                         splash.classList.add("hidden");
 
                         //build demos list

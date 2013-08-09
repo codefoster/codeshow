@@ -66,11 +66,12 @@
                             function() {
                                 //there is not an html file, so enumerate sections
                                 demo.sections = [];
+                                var c = 1;
                                 demoFolder.getFoldersAsync()
                                     .then(function(sectionFolders) {
                                         //TODO: if there are no section folders then this demo should not be added at all
                                         sectionFolders.forEach(function (sectionFolder) {
-                                            var section = { name: sectionFolder.displayName, demoName: demo.name, enabled: true };
+                                            var section = { name: sectionFolder.displayName, demoName: demo.name, enabled: true, order: c++ };
                                             getMetadataAsync(section, sectionFolder)
                                                 .then(function(result) {
                                                     if(result && result.jsonFileExists && section.enabled)
