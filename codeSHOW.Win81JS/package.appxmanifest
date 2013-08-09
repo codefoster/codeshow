@@ -4,7 +4,7 @@
   <Properties>
     <DisplayName>codeSHOW</DisplayName>
     <PublisherDisplayName>codefoster</PublisherDisplayName>
-    <Logo>images\storelogo.png</Logo>
+    <Logo>images\store.png</Logo>
   </Properties>
   <Prerequisites>
     <OSMinVersion>6.3.0</OSMinVersion>
@@ -15,8 +15,9 @@
   </Resources>
   <Applications>
     <Application Id="App" StartPage="default.html">
-      <m2:VisualElements DisplayName="codeSHOW" Description="codeSHOW" ForegroundText="light" BackgroundColor="#5e83a2" Square150x150Logo="images\Logo.png" Square30x30Logo="images\SmallLogo.png">
-        <m2:SplashScreen Image="images\splashscreen.png" />
+      <m2:VisualElements DisplayName="codeSHOW" Description="codeSHOW" ForegroundText="light" BackgroundColor="#5e83a2" Square150x150Logo="images\square150.png" Square30x30Logo="images\square30.png">
+        <m2:DefaultTile Square70x70Logo="images/square70.png" />
+        <m2:SplashScreen Image="images\splashscreen.png" BackgroundColor="white" />
       </m2:VisualElements>
       <Extensions>
         <Extension Category="windows.fileOpenPicker">
