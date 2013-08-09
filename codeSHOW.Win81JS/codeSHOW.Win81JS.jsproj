@@ -553,6 +553,12 @@
   <ItemGroup>
     <SDKReference Include="Bing.Maps.JavaScript, Version=1.313.0601.0" />
     <SDKReference Include="LiveSDKHTML, Version=5.4" />
+    <SDKReference Include="Microsoft.PlayerFramework.Dash, Version=1.8.2.1" />
+    <SDKReference Include="Microsoft.PlayerFramework.Js, Version=1.8.2.1" />
+    <SDKReference Include="Microsoft.PlayerFramework.Js.Adaptive, Version=1.8.2.1" />
+    <SDKReference Include="Microsoft.PlayerFramework.Js.Advertising, Version=1.8.2.1" />
+    <SDKReference Include="Microsoft.PlayerFramework.Js.Analytics, Version=1.8.2.1" />
+    <SDKReference Include="Microsoft.PlayerFramework.Js.TimedText, Version=1.8.2.1" />
     <SDKReference Include="Microsoft.WinJS.2.0.Preview, Version=1.0" />
   </ItemGroup>
   <ItemGroup>
