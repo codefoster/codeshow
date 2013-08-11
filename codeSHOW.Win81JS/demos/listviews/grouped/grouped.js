@@ -1,10 +1,8 @@
 ﻿(function () {
     "use strict";
 
-    WinJS.UI.Pages.define("/demos/listviews/listviews.html", {
+    WinJS.UI.Pages.define("/demos/listviews/grouped/grouped.html", {
         ready: function (element, options) {
-            //WinJS.Binding.processAll(q("body"), options);
-            
             var attractions = [
                 { name: "Fern Grotto", category: "Flora", location: "East", imageUrl: "http://www.kauai.com/photos/kauai/point/98/super/fern_grotto-kauai-attraction.JPG", description: "Only accessible by boat or Kayak, the fern Grotto is located about two miles up Kauai’s Wailua River, the only navigable river in the State of Hawaii." },
                 { name: "Hanalei Valley Lookout", category: "Scenery", location: "North", imageUrl: "http://www.kauai.com/photos/kauai/point/51/super/hanalei-valley-lookout-kauai-attractions-3.jpg", description: "The Hanalei Valley is an enchanted site charmed with the likes of countless waterfalls, rainbows, fields of taro and hidden treasures waiting to be explored." },
@@ -25,52 +23,12 @@
                 { name: "Wet and Dry Caves", category: "Other", location: "North", imageUrl: "http://www.kauai.com/photos/kauai/point/111/super/wet-and-dry-caves-kauai-attractions.jpg", description: "Waikanaloa & Waikapalae Wet Caves are located off the the main road in the Haena State Park and are easy to get to. The Waikanaloa Cave is not for swimming. The Waikapale cave is located a a little further up the road and involves a quick hike to the swim" },
             ];
 
-            var lv;
-            
-            //simple
-            var simpleList = new WinJS.Binding.List(attractions);
-            lv = q(".listviews #simple .win-listview").winControl;
-            lv.itemDataSource = simpleList.dataSource;
-            lv.itemTemplate = q(".listviews #simple .itemtemplate");
-
-            //grouped
             var groupedList = new WinJS.Binding.List(attractions).createGrouped(function (i) { return i.category; }, function (i) { return i.category; });
-            lv = q(".listviews #grouped .win-listview").winControl;
+            var lv = q(".listviews .grouped .win-listview").winControl;
             lv.itemDataSource = groupedList.dataSource;
-            lv.itemTemplate = q(".listviews #grouped .itemtemplate");
+            lv.itemTemplate = q(".listviews .grouped .itemtemplate");
             lv.groupDataSource = groupedList.groups.dataSource;
-            lv.itemHeaderTemplate = q(".listviews #grouped .headertemplate");
-            
-            //asymmetric
-            var images = [
-                { url: "/demos/listviews/images/01.jpg", type: "bigsquare" },
-                { url: "/demos/listviews/images/02.jpg", type: "square" },
-                { url: "/demos/listviews/images/03.jpg", type: "square" },
-                { url: "/demos/listviews/images/04.jpg", type: "tall" },
-                { url: "/demos/listviews/images/05.jpg", type: "square" },
-                { url: "/demos/listviews/images/06.jpg", type: "square" },
-                { url: "/demos/listviews/images/07.jpg", type: "square" },
-                { url: "/demos/listviews/images/08.jpg", type: "wide" },
-                { url: "/demos/listviews/images/09.jpg", type: "square" },
-                { url: "/demos/listviews/images/10.jpg", type: "square" }
-            ];
-
-            lv = q(".listviews #asymmetric .win-listview").winControl;
-            lv.itemDataSource = new WinJS.Binding.List(images).dataSource;
-            lv.itemTemplate = q(".listviews #asymmetric #imageTemplate");
-            lv.layout.groupInfo = function () { return { enableCellSpanning: true, cellWidth: 120, cellHeight: 120 }; };
-
-            //loading states
-            var statesList = new WinJS.Binding.List(attractions);
-            lv = q(".listviews #states .win-listview").winControl;
-            lv.itemDataSource = statesList.dataSource;
-            lv.itemTemplate = q(".listviews #states .itemtemplate");
-            var output = q(".listviews #states .output");
-            lv.onloadingstatechanged = function(e) {
-                output.innerHTML += lv.loadingState + "<br/>";
-                output.scrollTop = output.scrollHeight;
-            };
-
-        },
+            lv.itemHeaderTemplate = q(".listviews .grouped .headertemplate");
+        }
     });
 })();

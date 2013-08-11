@@ -1,21 +1,24 @@
-﻿.demo > .fragment > section[role=main],
-.demo .demosections {
-    padding-left: 120px;
+﻿.demo .padleft {
+    padding-left:120px;
 }
 
-.demo > section[role=main].demosections {
-    display: flex; /* move this to the js so it's conditional '*/
+.demo .demoview {
     width: auto;
     -ms-scroll-snap-x: mandatory snapInterval(0%, 80%);
     overflow-x: scroll;
     overflow-y: hidden;
+    height:100%;
+}
+
+.demo .codeview {
+    
 }
 
 .demo .demosection {
     box-sizing: border-box;
     width: 80%;
     padding-right: 80px;
-    -ms-flex: none;
+    flex: none;
     overflow: hidden;
 }
 
@@ -23,7 +26,7 @@
     width: 100%;
 }
 
-    .demo .demosection .fragment {
+    .demo .fragment {
         display: block; /* don't apply the grid that most page fragments have */
     }
 

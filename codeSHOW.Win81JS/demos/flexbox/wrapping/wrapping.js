@@ -1,9 +1,8 @@
 ﻿(function () {
     "use strict";
 
-    WinJS.UI.Pages.define("/demos/flexbox/simpleflex/simpleflex.html", {
+    WinJS.UI.Pages.define("/demos/flexbox/wrapping/wrapping.html", {
         ready: function (element, options) {
-
         }
     });
 })();

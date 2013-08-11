@@ -1,0 +1,28 @@
+﻿.listviews .states .explanation { width: 800px; }
+
+.listviews .states .win-listview {
+    border: 2px solid lightgray;
+    background-color: white;
+}
+
+.listviews .states .win-listview {
+    height: 460px;
+    width: 800px;
+}
+
+.listviews .states .output {
+    height:100px;
+    width:800px;
+    overflow-y:scroll;
+    border:solid 1px gray;
+    padding: 5px;
+}
+
+.listviews .states .win-item img  {
+    width: 215px;
+    height: 153px;
+}
+
+.listviews .states .win-item h3 {
+    height: 50px;
+}

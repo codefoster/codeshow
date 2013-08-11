@@ -11,6 +11,13 @@
     background-image: linear-gradient(to right, #020410 0px, #020410 10%, #436580 10%, #436580 35%, #6294ad 35% );
 }
 
+.explanation {
+    font-size: larger;
+    color: #375369;
+    margin-bottom: 20px;
+    font-style:italic;
+}
+
 body {
     background-image: linear-gradient(to bottom, #dfe7eb 0%, #f6f6f6 30%);
 }
