@@ -45,7 +45,7 @@
     }
 
     function printDoc(printEvent) {
-        var printTask = printEvent.request.createPrintTask("codeSHOW Print Doc", function (args) {
+        var printTask = printEvent.request.createPrintTask("codeShow Print Doc", function (args) {
             args.setSource(MSApp.getHtmlPrintDocumentSource(document));
             // Register the handler for print task completion event
             printTask.oncompleted = printTaskCompleted;
@@ -53,7 +53,7 @@
     }
 
     function printFrag(printEvent) {
-        var printTask = printEvent.request.createPrintTask("codeSHOW Print Frag", function (args) {
+        var printTask = printEvent.request.createPrintTask("codeShow Print Frag", function (args) {
             var frag = document.createDocumentFragment();
             frag.appendChild(q(".print #printFromApp").cloneNode(true));
             args.setSource(MSApp.getHtmlPrintDocumentSource(frag));
@@ -63,7 +63,7 @@
     }
 
     function printFragWithOptions(printEvent) {
-        var printTask = printEvent.request.createPrintTask("codeSHOW Print Options", function (args) {
+        var printTask = printEvent.request.createPrintTask("codeShow Print Options", function (args) {
             var frag = document.createDocumentFragment();
             var customHeader = document.createElement("h1");
             customHeader.innerText = "CUSTOM PRINTING";

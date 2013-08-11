@@ -1,6 +1,6 @@
 ﻿(function () {
     
-    WinJS.Namespace.define("codeSHOW.UI", {
+    WinJS.Namespace.define("codeShow.UI", {
         codeViewer: WinJS.Class.define(function (element, options) {
  
                 //This is the div-element of the control
@@ -18,7 +18,7 @@
             }, {
  
                 /// <field type="HTMLElement" domElement="true" hidden="true" 
-                ///     locid="codeSHOW.UI.codeViewer.element">
+                ///     locid="codeShow.UI.codeViewer.element">
                 /// Gets the DOM element that hosts the codeViewer.
                 /// </field>
                 element: {

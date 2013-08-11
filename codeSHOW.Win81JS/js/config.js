@@ -1,5 +1,5 @@
 ﻿(function () {
-    WinJS.Namespace.define("codeSHOW.Config", {
+    WinJS.Namespace.define("codeShow.Config", {
         wamskey: "xGQqIbWxzyzXCCofsFrgdhLPYMCqKn57"
     });
 })()

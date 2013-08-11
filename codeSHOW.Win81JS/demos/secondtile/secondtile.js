@@ -19,7 +19,7 @@
                     );
                 } else {
                     //create a new secondary tile
-                    var secondaryTile = new startScreen.SecondaryTile("tileid.01", "codeSHOW ST", "codeSHOW ST", "tileArgs=01", startScreen.TileOptions.showNameOnLogo, new Windows.Foundation.Uri("ms-appx:///images/logo.png"));
+                    var secondaryTile = new startScreen.SecondaryTile("tileid.01", "codeShow ST", "codeShow ST", "tileArgs=01", startScreen.TileOptions.showNameOnLogo, new Windows.Foundation.Uri("ms-appx:///images/logo.png"));
 
                     var Rect = q("#pintile").getBoundingClientRect();
                     var bounding = { x: Rect.left, y: Rect.top, width: Rect.width, height: Rect.height }; //get the bounding rectangle coordinates for requesting creation of secodary tile
@@ -31,7 +31,7 @@
                                 var tileTemplate = notifications.TileTemplateType.tileSquareText01;
                                 var tileXml = notifications.TileUpdateManager.getTemplateContent(tileTemplate); //get XML DOM from template
 
-                                tileXml.getElementsByTagName("text")[0].appendChild(tileXml.createTextNode("codeSHOW"));
+                                tileXml.getElementsByTagName("text")[0].appendChild(tileXml.createTextNode("codeShow"));
                                 tileXml.getElementsByTagName("text")[1].appendChild(tileXml.createTextNode(q("#tiletext").value)); //write the value to tile
 
                                 tileXml.getElementsByTagName("binding")[0].setAttribute("branding", "name"); //choose branding as one of the 'name', 'logo' or 'none'

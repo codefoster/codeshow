@@ -27,7 +27,7 @@
 
             <!-- Demos section -->
             <!-- TODO: when demos page is finished, just remove the isHeaderStatic flag below -->
-            <div class="section_demos" data-win-control="WinJS.UI.HubSection" data-win-options="{ isHeaderStatic: true, onheaderinvoked: codeSHOW.Pages.Hub.Commands.demosNavigate }" data-win-res="{ winControl: {'header': 'Demos'} }">
+            <div class="section_demos" data-win-control="WinJS.UI.HubSection" data-win-options="{ isHeaderStatic: true, onheaderinvoked: codeShow.Pages.Hub.Commands.demosNavigate }" data-win-res="{ winControl: {'header': 'Demos'} }">
                 <div class="itemTemplate" data-win-control="WinJS.Binding.Template">
                     <div class="itemGrid">
                         <div class="itemHandle"></div>
@@ -44,8 +44,8 @@
                         layout: {type: WinJS.UI.GridLayout},
                         selectionMode: 'none',
                         itemTemplate: select('.section_demos .itemTemplate'),
-                        itemDataSource: codeSHOW.Pages.Hub.demosList.dataSource,
-                        oniteminvoked: codeSHOW.Pages.Hub.Commands.demoNavigate
+                        itemDataSource: codeShow.Pages.Hub.demosList.dataSource,
+                        oniteminvoked: codeShow.Pages.Hub.Commands.demoNavigate
                     }">
                 </div>
             </div>
@@ -56,7 +56,7 @@
                     <img src="#" data-win-bind="src: imageUrl; alt: name" />
                     <div class="item-text">
                         <div class="win-type-medium" data-win-bind="textContent: name"></div>
-                        <div class="win-type-xx-small secondary-text" data-win-bind="textContent: twitterHandle codeSHOW.Pages.Hub.Converters.twitterHandleConverter"></div>
+                        <div class="win-type-xx-small secondary-text" data-win-bind="textContent: twitterHandle codeShow.Pages.Hub.Converters.twitterHandleConverter"></div>
                         <div class="win-type-xx-small secondary-text" data-win-bind="textContent: website"></div>
                         <div class="win-type-xx-small secondary-text" data-win-bind="textContent: bio"></div>
                     </div>
@@ -65,14 +65,14 @@
                         layout: {type: WinJS.UI.ListLayout},
                         selectionMode: 'none',
                         itemTemplate: select('.section_team .itemTemplate'),  
-                        itemDataSource: codeSHOW.Pages.Hub.teamList.dataSource,
-                        oniteminvoked: codeSHOW.Pages.Hub.teamMemberNavigate
+                        itemDataSource: codeShow.Pages.Hub.teamList.dataSource,
+                        oniteminvoked: codeShow.Pages.Hub.teamMemberNavigate
                     }">
                 </div>
             </div>
 
             <!-- Apps section -->
-            <div class="section_apps" data-win-control="WinJS.UI.HubSection" data-win-options="{ onheaderinvoked: codeSHOW.Pages.Hub.Commands.appsNavigate }" data-win-res="{ winControl: {'header': 'AppsHeader'} }">
+            <div class="section_apps" data-win-control="WinJS.UI.HubSection" data-win-options="{ onheaderinvoked: codeShow.Pages.Hub.Commands.appsNavigate }" data-win-res="{ winControl: {'header': 'AppsHeader'} }">
                 <div class="top-image-row">
                     <img src="/images/gray.png" />
                 </div>
@@ -114,12 +114,12 @@
 
             <!-- Contributors section -->
             <div class="section_contributors" data-win-control="WinJS.UI.HubSection" data-win-res="{ winControl: {'header': 'ContributorsHeader'} }"
-                data-win-options="{ onheaderinvoked: codeSHOW.Pages.Hub.Commands.contributorsNavigate }">
+                data-win-options="{ onheaderinvoked: codeShow.Pages.Hub.Commands.contributorsNavigate }">
                 <div class="itemTemplate" data-win-control="WinJS.Binding.Template">
                     <img src="#" data-win-bind="src: imageUrl; alt: name" />
                     <div class="item-text">
                         <div class="win-type-medium" data-win-bind="textContent: name"></div>
-                        <div class="win-type-xx-small secondary-text" data-win-bind="textContent: twitterHandle codeSHOW.Pages.Hub.Converters.twitterHandleConverter"></div>
+                        <div class="win-type-xx-small secondary-text" data-win-bind="textContent: twitterHandle codeShow.Pages.Hub.Converters.twitterHandleConverter"></div>
                         <div class="win-type-xx-small secondary-text" data-win-bind="textContent: website"></div>
                         <div class="win-type-small secondary-text" data-win-bind="textContent: bio"></div>
                     </div>
@@ -128,8 +128,8 @@
                         layout: {type: WinJS.UI.ListLayout},
                         selectionMode: 'none',
                         itemTemplate: select('.section_contributors .itemTemplate'),  
-                        itemDataSource: codeSHOW.Pages.Hub.contributorList.dataSource,
-                        oniteminvoked: codeSHOW.Pages.Hub.Commands.contributorNavigate
+                        itemDataSource: codeShow.Pages.Hub.contributorList.dataSource,
+                        oniteminvoked: codeShow.Pages.Hub.Commands.contributorNavigate
                     }">
                 </div>
             </div>

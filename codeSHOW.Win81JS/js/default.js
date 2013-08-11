@@ -90,7 +90,7 @@ var pkg = Windows.ApplicationModel.Package.current;
     function setupWamsClient() {
         app.client = new WindowsAzure.MobileServiceClient(
             "https://codeshow.azure-mobile.net/",
-            codeSHOW.Config.wamskey
+            codeShow.Config.wamskey
         );
     }
 

@@ -33,7 +33,7 @@
                 hub.scrollPosition = session.hubScroll;
             }
 
-            if (!codeSHOW.Pages.Hub.pageDataLoaded)
+            if (!codeShow.Pages.Hub.pageDataLoaded)
                 Data.loaded
                     .then(function () {
                         //when data is finished loading then hide the extended splash screen
@@ -46,21 +46,21 @@
                             })
                             //.take(20)
                             .forEach(function (demo) {
-                                codeSHOW.Pages.Hub.demosList.push(demo);
+                                codeShow.Pages.Hub.demosList.push(demo);
                             });
 
                         //build team list
                         Data.team.forEach(function (member) {
-                            codeSHOW.Pages.Hub.teamList.push(member);
+                            codeShow.Pages.Hub.teamList.push(member);
                         });
                     
                         //mark data as loaded
-                        codeSHOW.Pages.Hub.pageDataLoaded = true;
+                        codeShow.Pages.Hub.pageDataLoaded = true;
                 });
         },
     });
     
-    WinJS.Namespace.define("codeSHOW.Pages.Hub", {
+    WinJS.Namespace.define("codeShow.Pages.Hub", {
         pageDataLoaded: false,
         demosList: new WinJS.Binding.List(),
         teamList: new WinJS.Binding.List(),

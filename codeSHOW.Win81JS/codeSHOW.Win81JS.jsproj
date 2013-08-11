@@ -105,7 +105,7 @@
     <Content Include="demos\grid\fancy\fancy.js" />
     <Content Include="demos\grid\fancy\fancy.json" />
     <Content Include="demos\grid\rowspans\rowspans.json" />
-    <Content Include="demos\grid\simple\simple.json" />
+    <Content Include="demos\grid\simple\simple.gjson" />
     <Content Include="demos\grid\simple\simple.css" />
     <Content Include="demos\grid\simple\simple.html" />
     <Content Include="demos\grid\simple\simple.js" />
@@ -142,6 +142,10 @@
     <Content Include="demos\jsonFcts\jsonFcts.json" />
     <Content Include="demos\keycode\keycode.json" />
     <Content Include="demos\listviews\listviews.json" />
+    <Content Include="demos\livelist\livelist.css" />
+    <Content Include="demos\livelist\livelist.html" />
+    <Content Include="demos\livelist\livelist.js" />
+    <Content Include="demos\livelist\livelist.json" />
     <Content Include="demos\location\location.json" />
     <Content Include="demos\mediacap\mediacap.json" />
     <Content Include="demos\mediaqueries\mediaqueries.json" />
@@ -532,9 +536,6 @@
     <Content Include="pages\about\about.css" />
     <Content Include="pages\about\about.html" />
     <Content Include="pages\about\about.js" />
-    <Content Include="pages\apps\apps.css" />
-    <Content Include="pages\apps\apps.html" />
-    <Content Include="pages\apps\apps.js" />
     <Content Include="pages\codeViewer\codeViewer.css" />
     <Content Include="pages\codeViewer\codeViewer.html" />
     <Content Include="pages\codeViewer\codeViewer.js" />
@@ -543,9 +544,6 @@
     <Content Include="pages\demoCode\demoCode.css" />
     <Content Include="pages\demoCode\demoCode.html" />
     <Content Include="pages\demoCode\demoCode.js" />
-    <Content Include="pages\demos\demos.css" />
-    <Content Include="pages\demos\demos.html" />
-    <Content Include="pages\demos\demos.js" />
     <Content Include="pages\demo\demo.css" />
     <Content Include="pages\demo\demo.html" />
     <Content Include="pages\demo\demo.js" />
@@ -555,9 +553,6 @@
     <Content Include="pages\hub\hub.css" />
     <Content Include="pages\hub\hub.html" />
     <Content Include="pages\hub\hub.js" />
-    <Content Include="pages\junk\junk.css" />
-    <Content Include="pages\junk\junk.html" />
-    <Content Include="pages\junk\junk.js" />
     <Content Include="pages\killads\killads.css" />
     <Content Include="pages\killads\killads.html" />
     <Content Include="pages\killads\killads.js" />

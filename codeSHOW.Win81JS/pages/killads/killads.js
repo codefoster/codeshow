@@ -11,7 +11,7 @@
                         function () {
                             Windows.UI.Popups.MessageDialog("Thank you for the purchase!").showAsync().then(function() {
                                 app.paid = true;
-                                codeSHOW.Pages.Home.bindList();
+                                codeShow.Pages.Home.bindList();
                             });
                         },
                         function () { Windows.UI.Popups.MessageDialog("There was a problem completing the purchase. If you wouldn't mind, please send me an email at jeremy.foster@live.com and let me know so I can fix it.").showAsync(); }

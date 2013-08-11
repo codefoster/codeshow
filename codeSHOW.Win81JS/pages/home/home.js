@@ -18,7 +18,7 @@
             this.bindList();
             this.layoutList();
             this.applySettings();
-            WinJS.Namespace.define("codeSHOW.Pages.Home", {
+            WinJS.Namespace.define("codeShow.Pages.Home", {
                 applySettings: this.applySettings, //allow the settings pane to call this to change the tile color
                 bindList: this.bindList,
                 setCommandVisibility: this.setCommandVisibility
