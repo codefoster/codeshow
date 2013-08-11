@@ -1,0 +1,8 @@
+{
+    "title": "Live List",
+    "keywords":["observable","binding","list","update","listview"],
+    "description": "See how updating an observable will update the UI automatically",
+    "author": "Jeremy Foster",
+    "dateCreated": "",
+	"enbabled": true
+}
