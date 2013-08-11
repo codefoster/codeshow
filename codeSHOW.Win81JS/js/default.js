@@ -153,68 +153,6 @@ var pkg = Windows.ApplicationModel.Package.current;
             WinJS.UI.SettingsFlyout.populateSettings(e);
         };
     }
-
-    function loadDemosAsync() {
-        return new WinJS.Promise(function (c, e, p) {
-            Windows.ApplicationModel.Package.current.installedLocation.getFolderAsync("demos")
-                .then(function (pagesFolder) {
-                    return pagesFolder.getFoldersAsync();
-                })
-                .done(function (folders) {
-                    var result = [];
-                    var localFetchPromises = [];
-                    var wamsFetchPromies = [];
-                    folders
-                        .forEach(function (f) {
-                            localFetchPromises.push(WinJS.xhr({ url: "/demos/" + f.name + "/" + f.name + ".html", responseType: "document" })
-                                .then(function (xhr) {
-                                    var keywords = q("meta[name='keywords']", xhr.response);
-                                    keywords = (keywords ? keywords.content : "");
-
-                                    var tags = q("meta[name='tags']", xhr.response);
-                                    tags = (tags ? tags.content : "");
-
-                                    var description = q("meta[name='description']", xhr.response);
-                                    description = (description ? description.content : "");
-
-                                    var enabled = q("meta[name='enabled']", xhr.response);
-                                    enabled = (enabled ? enabled.content == "true" : "true");
-
-                                    var dateCreated = q("meta[name='dateCreated']", xhr.response);
-                                    dateCreated = (dateCreated ? Date.parse(dateCreated.content) : f.dateCreated);
-                                    
-                                    if (enabled) {
-                                        
-                                        //var wamsData = fetchWamsData(f.name);
-
-                                        var pageTitle = (q("title", xhr.response) ? q("title", xhr.response).innerText : (q(".pagetitle", xhr.response) ? q(".pagetitle", xhr.response).innerText : "Unnamed"));
-                                        result.push({
-                                            key: f.name,
-                                            name: pageTitle,
-                                            description: description,
-                                            keywords: keywords,
-                                            tags: tags,
-                                            dateCreated: dateCreated,
-                                            //rating: wamsData.averageRating
-                                        });
-                                    }
-                                }));
-                            
-                        });
-                    WinJS.Promise.join(localFetchPromises).then(function () {
-                        result.forEach(function (r, index) {
-                            app.demosList.push(r);
-                        });
-
-                        //add an ad if the user hasn't removed them
-                        if (!storeApp.licenseInformation.productLicenses.lookup("killTheAds").isActive)
-                            app.demosList.push({ key: "ad", name: "", description: "", keywords: "", tags: "", dateCreated: "" });
-
-                        c();
-                    });
-                });
-        });
-    }
     
     function fetchWamsData(key) {
         app.client;
