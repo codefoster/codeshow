@@ -73,26 +73,26 @@
     <Content Include="demos\flexbox\distributed\distributed.js" />
     <Content Include="demos\flexbox\distributed\distributed.json" />
     <Content Include="demos\flexbox\flexbox.json" />
-    <Content Include="demos\flexbox\flexswipe\flexswipe.css" />
-    <Content Include="demos\flexbox\flexswipe\flexswipe.html" />
-    <Content Include="demos\flexbox\flexswipe\flexswipe.js" />
-    <Content Include="demos\flexbox\flexswipe\flexswipe.json" />
+    <Content Include="demos\flexbox\swipe\swipe.css" />
+    <Content Include="demos\flexbox\swipe\swipe.html" />
+    <Content Include="demos\flexbox\swipe\swipe.js" />
+    <Content Include="demos\flexbox\swipe\swipe.json" />
     <Content Include="demos\flexbox\flexxing\flexxing.json" />
     <Content Include="demos\flexbox\flexxing\flexxing.css" />
     <Content Include="demos\flexbox\flexxing\flexxing.html" />
     <Content Include="demos\flexbox\flexxing\flexxing.js" />
-    <Content Include="demos\flexbox\simpleflex\simpleflex.css" />
-    <Content Include="demos\flexbox\simpleflex\simpleflex.html" />
-    <Content Include="demos\flexbox\simpleflex\simpleflex.js" />
-    <Content Include="demos\flexbox\simpleflex\simpleflex.json" />
-    <Content Include="demos\flexbox\verticalflex\verticalflex.json" />
-    <Content Include="demos\flexbox\verticalflex\verticalflex.css" />
-    <Content Include="demos\flexbox\verticalflex\verticalflex.html" />
-    <Content Include="demos\flexbox\verticalflex\verticalflex.js" />
-    <Content Include="demos\flexbox\wrappingflex\wrappingflex.json" />
-    <Content Include="demos\flexbox\wrappingflex\wrappingflex.css" />
-    <Content Include="demos\flexbox\wrappingflex\wrappingflex.html" />
-    <Content Include="demos\flexbox\wrappingflex\wrappingflex.js" />
+    <Content Include="demos\flexbox\simple\simple.css" />
+    <Content Include="demos\flexbox\simple\simple.html" />
+    <Content Include="demos\flexbox\simple\simple.js" />
+    <Content Include="demos\flexbox\simple\simple.json" />
+    <Content Include="demos\flexbox\vertical\vertical.json" />
+    <Content Include="demos\flexbox\vertical\vertical.css" />
+    <Content Include="demos\flexbox\vertical\vertical.html" />
+    <Content Include="demos\flexbox\vertical\vertical.js" />
+    <Content Include="demos\flexbox\wrapping\wrapping.json" />
+    <Content Include="demos\flexbox\wrapping\wrapping.css" />
+    <Content Include="demos\flexbox\wrapping\wrapping.html" />
+    <Content Include="demos\flexbox\wrapping\wrapping.js" />
     <Content Include="demos\flyouts\flyouts.json" />
     <Content Include="demos\fragment\fragment.json" />
     <Content Include="demos\grid\grid.json" />
@@ -579,6 +579,9 @@
       <HintPath>NotificationsExtensions.winmd</HintPath>
       <IsWinMDFile>true</IsWinMDFile>
     </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="demos\listviews\simplelv\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\$(WMSJSProjectDirectory)\Microsoft.VisualStudio.$(WMSJSProject).targets" />
   <!-- To modify your build process, add your task inside one of the targets below then uncomment

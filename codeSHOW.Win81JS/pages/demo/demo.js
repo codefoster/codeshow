@@ -8,7 +8,7 @@
 
             document.querySelector("header .pagetitle").innerText = demo.title;
             var demoview = document.querySelector(".demo .demoview");
-            demoview.classList.add(demo.key);
+            demoview.classList.add(demo.name);
             var codeview = document.querySelector(".demo .codeview");
 
             //demo view

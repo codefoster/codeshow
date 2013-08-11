@@ -1,4 +1,4 @@
-﻿.verticalflex #verticalFlexbox {
+﻿.flexbox .vertical #verticalFlexbox {
     display: -ms-flexbox;
     -ms-flex-direction: column;
     -ms-flex-align: start;
@@ -6,7 +6,7 @@
     border: 1px solid gray;
 }
 
-.verticalflex #verticalFlexbox > div {
+.flexbox .vertical #verticalFlexbox > div {
     width: 80px;
     height: 80px;
     border: solid 1px black;
