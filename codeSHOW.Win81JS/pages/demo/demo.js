@@ -7,16 +7,17 @@
             options.view = options.view || "demo";
 
             document.querySelector("header .pagetitle").innerText = demo.title;
+            var demoview = document.querySelector(".demo .demoview");
+            demoview.classList.add(demo.key);
+            var codeview = document.querySelector(".demo .codeview");
 
             //demo view
             if (options.view == "demo") {
-                var demoview = document.querySelector(".demo .demoview");
-
+                codeview.style.display = "none";
+                demoview.style.display = "flex";
                 //single demo view
                 if (!demo.sections || demo.sections.length == 0) {
-                    //hide the header (demo page should have its own)
-                    //document.querySelector("header").style.display = "none";
-
+                    //render the demo page into the demoview div
                     WinJS.UI.Pages.render(format("/demos/{0}/{0}.html", demo.name), demoview)
                         .then(function (page) {
                             page.element.querySelector("section[role=main]").classList.add("padleft");
@@ -66,8 +67,9 @@
 
             //code view
             else if (options.view == "code") {
-                var codeview = document.querySelector(".codeview");
                 codeview.style.display = "block";
+                demoview.style.display = "none";
+                codeview.classList.add("padleft");
             }
 
 

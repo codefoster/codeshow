@@ -3,12 +3,15 @@
 }
 
 .demo .demoview {
-    display: flex; /* move this to the js so it's conditional '*/
     width: auto;
     -ms-scroll-snap-x: mandatory snapInterval(0%, 80%);
     overflow-x: scroll;
     overflow-y: hidden;
     height:100%;
+}
+
+.demo .codeview {
+    
 }
 
 .demo .demosection {
