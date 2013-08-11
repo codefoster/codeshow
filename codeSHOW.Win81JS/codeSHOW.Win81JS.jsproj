@@ -141,7 +141,37 @@
     <Content Include="demos\input\input.json" />
     <Content Include="demos\jsonFcts\jsonFcts.json" />
     <Content Include="demos\keycode\keycode.json" />
+    <Content Include="demos\listviews\asymmetric\asymmetric.css" />
+    <Content Include="demos\listviews\asymmetric\asymmetric.html" />
+    <Content Include="demos\listviews\asymmetric\asymmetric.js" />
+    <Content Include="demos\listviews\asymmetric\asymmetric.json" />
+    <Content Include="demos\listviews\asymmetric\images\01.jpg" />
+    <Content Include="demos\listviews\asymmetric\images\02.jpg" />
+    <Content Include="demos\listviews\asymmetric\images\03.jpg" />
+    <Content Include="demos\listviews\asymmetric\images\04.jpg" />
+    <Content Include="demos\listviews\asymmetric\images\05.jpg" />
+    <Content Include="demos\listviews\asymmetric\images\06.jpg" />
+    <Content Include="demos\listviews\asymmetric\images\07.jpg" />
+    <Content Include="demos\listviews\asymmetric\images\08.jpg" />
+    <Content Include="demos\listviews\asymmetric\images\09.jpg" />
+    <Content Include="demos\listviews\asymmetric\images\10.jpg" />
+    <Content Include="demos\listviews\grouped\grouped.css" />
+    <Content Include="demos\listviews\grouped\grouped.html" />
+    <Content Include="demos\listviews\grouped\grouped.js" />
+    <Content Include="demos\listviews\grouped\grouped.json" />
     <Content Include="demos\listviews\listviews.json" />
+    <Content Include="demos\listviews\live\live.css" />
+    <Content Include="demos\listviews\live\live.html" />
+    <Content Include="demos\listviews\live\live.js" />
+    <Content Include="demos\listviews\live\live.json" />
+    <Content Include="demos\listviews\simple\simple.css" />
+    <Content Include="demos\listviews\simple\simple.html" />
+    <Content Include="demos\listviews\simple\simple.js" />
+    <Content Include="demos\listviews\simple\simple.json" />
+    <Content Include="demos\listviews\states\states.css" />
+    <Content Include="demos\listviews\states\states.html" />
+    <Content Include="demos\listviews\states\states.js" />
+    <Content Include="demos\listviews\states\states.json" />
     <Content Include="demos\location\location.json" />
     <Content Include="demos\mediacap\mediacap.json" />
     <Content Include="demos\mediaqueries\mediaqueries.json" />
@@ -267,19 +297,6 @@
     <Content Include="demos\keycode\keycode.css" />
     <Content Include="demos\keycode\keycode.html" />
     <Content Include="demos\keycode\keycode.js" />
-    <Content Include="demos\listviews\images\01.jpg" />
-    <Content Include="demos\listviews\images\02.jpg" />
-    <Content Include="demos\listviews\images\03.jpg" />
-    <Content Include="demos\listviews\images\04.jpg" />
-    <Content Include="demos\listviews\images\05.jpg" />
-    <Content Include="demos\listviews\images\06.jpg" />
-    <Content Include="demos\listviews\images\07.jpg" />
-    <Content Include="demos\listviews\images\08.jpg" />
-    <Content Include="demos\listviews\images\09.jpg" />
-    <Content Include="demos\listviews\images\10.jpg" />
-    <Content Include="demos\listviews\listviews.css" />
-    <Content Include="demos\listviews\listviews.html" />
-    <Content Include="demos\listviews\listviews.js" />
     <Content Include="demos\location\location.css" />
     <Content Include="demos\location\location.html" />
     <Content Include="demos\location\location.js" />
@@ -579,9 +596,6 @@
       <HintPath>NotificationsExtensions.winmd</HintPath>
       <IsWinMDFile>true</IsWinMDFile>
     </Reference>
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="demos\listviews\simplelv\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\$(WMSJSProjectDirectory)\Microsoft.VisualStudio.$(WMSJSProject).targets" />
   <!-- To modify your build process, add your task inside one of the targets below then uncomment
