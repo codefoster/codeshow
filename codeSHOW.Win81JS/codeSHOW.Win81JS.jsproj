@@ -358,6 +358,11 @@
     <Content Include="demos\properties\properties.html" />
     <Content Include="demos\properties\properties.js" />
     <Content Include="demos\properties\properties.json" />
+    <Content Include="demos\rating\rating.json" />
+    <Content Include="demos\rating\simple\simple.json" />
+    <Content Include="demos\rating\simple\simple.css" />
+    <Content Include="demos\rating\simple\simple.html" />
+    <Content Include="demos\rating\simple\simple.js" />
     <Content Include="demos\scaling\ketch.scale-100.png" />
     <Content Include="demos\scaling\ketch.scale-140.png" />
     <Content Include="demos\scaling\ketch.scale-180.png" />
