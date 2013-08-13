@@ -1,5 +1,6 @@
 ﻿.demo .padleft {
     padding-left:120px;
+    width:calc(100% - 120px);
 }
 
 .demo .demoview {

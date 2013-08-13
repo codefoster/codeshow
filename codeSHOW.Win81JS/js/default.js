@@ -36,6 +36,8 @@ var pkg = Windows.ApplicationModel.Package.current;
         
         //standard launch
         if (args.detail.kind === activation.ActivationKind.launch) {
+            //TODO: if args.detail.arguments !== "" then it was a secondary tile launch, parse value and navigate to specific demo
+
             postitionSplashScreen(args);
             //handle extended splash screen
 
@@ -74,6 +76,7 @@ var pkg = Windows.ApplicationModel.Package.current;
                     });
                 }));
         }
+
     });
 
     app.oncheckpoint = function (args) {

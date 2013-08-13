@@ -20,7 +20,7 @@
                     //render the demo page into the demoview div
                     WinJS.UI.Pages.render(format("/demos/{0}/{0}.html", demo.name), demoview)
                         .then(function (page) {
-                            page.element.querySelector("section[role=main]").classList.add("padleft");
+                            demoview.classList.add("padleft");
 
                             //remove the section header since the demo page has one already
                             var header = page.element.querySelector("header");
@@ -72,6 +72,28 @@
                 codeview.classList.add("padleft");
             }
 
+            //setup the appbar
+            element.querySelector("#cmdPin").onclick = function (args) {
+
+            //secondary tile                
+
+            var tile = new Windows.UI.StartScreen.SecondaryTile(
+                "SecondaryTile.Demo." + demo.name,
+                demo.title,
+                "SecondaryTile.Demo." + demo.name + " WasPinnedAt=" + new Date(),
+                new Windows.Foundation.Uri("ms-appx:///images/secondary150.png"),
+                Windows.UI.StartScreen.TileSize.Square150x150
+            );
+
+            tile.visualElements.square70x70Logo = new Windows.Foundation.Uri("ms-appx:///Images/secondary70.png");
+            tile.visualElements.showNameOnSquare150x150Logo = true;
+
+            tile.requestCreateAsync().done(function (isCreated) {
+            if (isCreated) {
+                WinJS.log && WinJS.log("Secondary tile was successfully pinned.", "sample", "status");
+            }
+        });
+            };
 
             //hide the extended splash screen
             splash.classList.add("hidden");

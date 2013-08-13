@@ -484,6 +484,8 @@
     <Content Include="images\codeplex.png" />
     <Content Include="images\headerlogo.png" />
     <Content Include="images\logo.scale-100.png" />
+    <Content Include="images\secondary150.png" />
+    <Content Include="images\secondary70.png" />
     <Content Include="images\splashscreen.scale-100.png" />
     <Content Include="images\square150.scale-100.png" />
     <Content Include="images\square150.scale-140.png" />
