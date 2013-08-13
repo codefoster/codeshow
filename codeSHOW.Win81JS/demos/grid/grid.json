@@ -4,5 +4,11 @@
 	"description": "Multiple ways to use a CSS grid",
 	"author": "Jeremy Foster",
 	"dateCreated": "10/1/2013",
-	"autoRenderHeader": true
+	"autoRenderHeader": true,
+	"sections":[
+		{"name":"simple"},
+		{"name":"rowspans"},
+		{"name":"fancy"},
+		{"name":"biggrid"}
+	]
 }
