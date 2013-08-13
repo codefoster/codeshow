@@ -559,9 +559,6 @@
     <Content Include="pages\codeViewer\codeViewer.js" />
     <Content Include="pages\codeViewer\syntaxhighlighter\sh.css" />
     <Content Include="pages\codeViewer\syntaxhighlighter\sh.js" />
-    <Content Include="pages\demoCode\demoCode.css" />
-    <Content Include="pages\demoCode\demoCode.html" />
-    <Content Include="pages\demoCode\demoCode.js" />
     <Content Include="pages\demo\demo.css" />
     <Content Include="pages\demo\demo.html" />
     <Content Include="pages\demo\demo.js" />
