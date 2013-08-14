@@ -15,6 +15,12 @@
     
 }
 
+.demo .seecode {
+    color:gray;
+    cursor:pointer;
+}
+
+
 .demo .demosection {
     box-sizing: border-box;
     width: 80%;
@@ -23,6 +29,9 @@
     overflow: hidden;
 }
 
+    .demo .demosection > h2 {
+        margin-bottom:20px;
+    }
 .demo .demosection:last-child {
     width: 100%;
 }

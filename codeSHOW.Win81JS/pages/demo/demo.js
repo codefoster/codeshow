@@ -74,12 +74,28 @@
                 }
             }
 
-                //code view
+            //code view
             else if (options.view == "code") {
                 codeview.style.display = "block";
                 demoview.style.display = "none";
-                codeview.classList.add("padleft");
             }
+
+            //see the code/demo toggle
+            var codeDemoToggle = element.querySelector(".seecode");
+            codeDemoToggle.onclick = function () {
+                if (options.view == "demo") {
+                    options.view = "code";
+                    codeDemoToggle.innerText = "see the demo";
+                    codeview.style.display = "block";
+                    demoview.style.display = "none";
+                }
+                else {
+                    options.view = "demo";
+                    codeDemoToggle.innerText = "see the code";
+                    codeview.style.display = "none";
+                    demoview.style.display = "flex";
+                }
+            };
 
             //setup the appbar
             element.querySelector("#cmdPin").onclick = function (args) {
