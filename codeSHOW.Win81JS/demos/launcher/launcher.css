@@ -1,0 +1,12 @@
+﻿.launcher section[role=main] #futureAccessList {
+    height: 370px;
+}
+
+    .launcher section[role=main] #futureAccessList .dataBinder {
+        background-color: #005050;
+        width: 360px;
+        height: 60px;
+        color: white;
+        display: table-cell;
+        vertical-align: middle;
+    }
