@@ -9,7 +9,7 @@
                 member.bio = result.response.querySelector("p.bio").innerHTML;
                 member.website = result.response.querySelector(".url a").title;
                 return member;
-            });
+            }, function (err) { debugger; });
     }
 
     WinJS.Namespace.define("Data", {
@@ -28,8 +28,8 @@
         return app.client.getTable("team").read()
             .then(function(team) {
                 return WinJS.Promise.join(team.map(function(member) { return populateMemberAsync(member); }));
-            })
-            .then(function(team) { Data.team = team; });
+            }, function (err) { debugger; })
+            .then(function (team) { Data.team = team; }, function (err) { debugger; });
     }
 
     //populate demos (from the package)
@@ -43,10 +43,10 @@
 
                         //get the title from the html file
                         //(for demos without section folders, this will intentionally and silently fail)
-                        .then(function (result) { demo.title = result.response.querySelector("title").innerText; }, function () { })
+                        .then(function (result) { demo.title = result.response.querySelector("title").innerText; }, function (err) {  })
 
                         //get the metadata (from the json file) (overriding title if included)
-                        .then(function () { return getMetadataAsync(demo, demoFolder); })
+                        .then(function () { return getMetadataAsync(demo, demoFolder); }, function (err) { debugger; })
                         .then(function (result) {
                             if (result.jsonFileExists && demo.enabled){
                                 demo.sections.forEach(function (section) {
@@ -54,14 +54,14 @@
                                     WinJS.xhr({url:format("/demos/{0}/{1}/{1}.html", demo.name, section.name), responseType:"document"})
                                         .then(function (result) {
                                             section.title = result.response.querySelector("title").innerText;
-                                        })
+                                        }, function (err) {  })
                                 });
                                 Data.demos.push(demo);
                             }
-                        })
+                        }, function (err) { debugger; })
 
                 });
-            })
+            }, function (err) { debugger; })
     }
     
     function getMetadataAsync(ds, folder) {
