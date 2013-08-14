@@ -374,10 +374,13 @@
     <Content Include="demos\search\search.html" />
     <Content Include="demos\search\search.js" />
     <Content Include="demos\search\search.json" />
-    <Content Include="demos\secondtile\secondtile.css" />
-    <Content Include="demos\secondtile\secondtile.html" />
-    <Content Include="demos\secondtile\secondtile.js" />
     <Content Include="demos\secondtile\secondtile.json" />
+    <Content Include="demos\secondtile\pinandpush\pinandpush.css" />
+    <Content Include="demos\secondtile\pinandpush\pinandpush.html" />
+    <Content Include="demos\secondtile\pinandpush\pinandpush.js" />
+    <Content Include="demos\secondtile\simple\simple.css" />
+    <Content Include="demos\secondtile\simple\simple.html" />
+    <Content Include="demos\secondtile\simple\simple.js" />
     <Content Include="demos\selectors\selectors.css" />
     <Content Include="demos\selectors\selectors.html" />
     <Content Include="demos\selectors\selectors.js" />

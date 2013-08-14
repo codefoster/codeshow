@@ -1,7 +1,7 @@
 ﻿(function () {
     "use strict";
 
-    WinJS.UI.Pages.define("/demos/secondtile/secondtile.html", {
+    WinJS.UI.Pages.define("/demos/secondtile/pinandpush/pinandpush.html", {
         ready: function (element, options) {
             var startScreen = Windows.UI.StartScreen;
             var notifications = Windows.UI.Notifications;
