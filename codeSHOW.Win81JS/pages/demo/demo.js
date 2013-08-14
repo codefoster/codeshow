@@ -3,7 +3,16 @@
 
     WinJS.UI.Pages.define("/pages/demo/demo.html", {
         ready: function (element, options) {
-            var demo = options.demo;
+
+            var demo;
+
+            //passed in the complete form with a view
+            if(options.demo && options.view) demo = options.demo;
+
+            //passed in just the demo
+            else if (options.name && options.sections) demo = { demo: options, view: "demo" };
+
+            //default to demo view
             options.view = options.view || "demo";
 
             document.querySelector("header .pagetitle").innerText = demo.title;
@@ -80,7 +89,7 @@
             var tile = new Windows.UI.StartScreen.SecondaryTile(
                 "SecondaryTile.Demo." + demo.name,
                 demo.title,
-                "SecondaryTile.Demo." + demo.name + " WasPinnedAt=" + new Date(),
+                "{\"launchDemo\":\"" + demo.name + "\"}",
                 new Windows.Foundation.Uri("ms-appx:///images/secondary150.png"),
                 Windows.UI.StartScreen.TileSize.Square150x150
             );
