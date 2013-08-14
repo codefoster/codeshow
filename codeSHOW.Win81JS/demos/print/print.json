@@ -5,8 +5,8 @@
     "author": "Michael Palermo",
     "dateCreated": "",
 	"sections":[
-		{"name":"toggle", title:"some other fancy title"},
-		{"name":"fromApp", title:"some fancy title"},
+		{"name":"toggle"},
+		{"name":"fromApp"},
 		{"name":"options"}
-
-	]}
+	]
+}

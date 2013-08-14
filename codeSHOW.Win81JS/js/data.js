@@ -9,7 +9,7 @@
                 member.bio = result.response.querySelector("p.bio").innerHTML;
                 member.website = result.response.querySelector(".url a").title;
                 return member;
-            });
+            }, function (err) { debugger; });
     }
 
     WinJS.Namespace.define("Data", {
@@ -28,48 +28,40 @@
         return app.client.getTable("team").read()
             .then(function(team) {
                 return WinJS.Promise.join(team.map(function(member) { return populateMemberAsync(member); }));
-            })
-            .then(function(team) { Data.team = team; });
+            }, function (err) { debugger; })
+            .then(function (team) { Data.team = team; }, function (err) { debugger; });
     }
 
     //populate demos (from the package)
     function loadDemos() {
-        //populate demos (from the package)
         return pkg.installedLocation.getFolderAsync("demos")
             .then(function(demosFolder) { return demosFolder.getFoldersAsync(); })
             .then(function(demoFolders) {
                 demoFolders.forEach(function(demoFolder) {
-                    var demo = { name: demoFolder.displayName, enabled: true };
-                    return demoFolder.getFileAsync(demoFolder.displayName + ".html")
-                        .then(
-                            null,
-                            function() {
-                                //there is not an html file, so enumerate sections
-                                demo.sections = [];
-                                var c = 1;
-                                demoFolder.getFoldersAsync()
-                                    .then(function(sectionFolders) {
-                                        //TODO: if there are no section folders then this demo should not be added at all
-                                        sectionFolders.forEach(function (sectionFolder) {
-                                            var section = { name: sectionFolder.displayName, demoName: demo.name, enabled: true, order: c++ };
-                                            getMetadataAsync(section, sectionFolder)
-                                                .then(function(result) {
-                                                    if(result && result.jsonFileExists && section.enabled)
-                                                        demo.sections.push(section);
-                                                }, function () { debugger; });
-                                        });
-                                    }, function () { debugger; });
+                    var demo = { name: demoFolder.displayName, enabled: true, sections: [] };
+                    WinJS.xhr({ url: format("/demos/{0}/{0}.html", demo.name), responseType: "document" })
+
+                        //get the title from the html file
+                        //(for demos without section folders, this will intentionally and silently fail)
+                        .then(function (result) { demo.title = result.response.querySelector("title").innerText; }, function (err) {  })
+
+                        //get the metadata (from the json file) (overriding title if included)
+                        .then(function () { return getMetadataAsync(demo, demoFolder); }, function (err) { debugger; })
+                        .then(function (result) {
+                            if (result.jsonFileExists && demo.enabled){
+                                demo.sections.forEach(function (section) {
+                                    //get the section title and add the section to the demo
+                                    WinJS.xhr({url:format("/demos/{0}/{1}/{1}.html", demo.name, section.name), responseType:"document"})
+                                        .then(function (result) {
+                                            section.title = result.response.querySelector("title").innerText;
+                                        }, function (err) {  })
+                                });
+                                Data.demos.push(demo);
                             }
-                        )
-                        .then(function() {
-                            return getMetadataAsync(demo, demoFolder)
-                                .then(function (result) {
-                                    if (result.jsonFileExists && demo.enabled) 
-                                        Data.demos.push(demo);
-                                }, function () { debugger;  });
-                        });
+                        }, function (err) { debugger; })
+
                 });
-            }, function () { debugger; });
+            }, function (err) { debugger; })
     }
     
     function getMetadataAsync(ds, folder) {

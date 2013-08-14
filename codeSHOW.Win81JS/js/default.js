@@ -36,6 +36,7 @@ var pkg = Windows.ApplicationModel.Package.current;
         
         //standard launch
         if (args.detail.kind === activation.ActivationKind.launch) {
+
             postitionSplashScreen(args);
             //handle extended splash screen
 
@@ -50,6 +51,14 @@ var pkg = Windows.ApplicationModel.Package.current;
             }
             args.setPromise(WinJS.UI.processAll()
                 .then(function () {
+                    //navigate to launch from secondary tile
+                    if (args.detail.arguments !== "") {
+                        var launchDemo = JSON.parse(args.detail.arguments).launchDemo;
+                        Data.loaded.then(function () {
+                            var chooseDemo = Data.demos.first(function (d) { return d.name == launchDemo });
+                            nav.navigate("/pages/demo/demo.html", { demo: chooseDemo, view: "demo" });
+                        });
+                    }
                     if (nav.location) {
                         nav.history.current.initialPlaceholder = true;
                         return nav.navigate(nav.location, nav.state);
@@ -74,6 +83,7 @@ var pkg = Windows.ApplicationModel.Package.current;
                     });
                 }));
         }
+
     });
 
     app.oncheckpoint = function (args) {

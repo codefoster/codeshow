@@ -18,3 +18,4 @@ AppPackages/
 /codeSHOW.Win81CS/obj
 /codeSHOW.Win8JS/bin/x86/Debug
 /packages
+*.orig
