@@ -7,9 +7,9 @@
             var demo;
 
             //passed in the complete form with a view
-            if(options.demo && options.view) demo = options.demo;
+            if (options.demo && options.view) demo = options.demo;
 
-            //passed in just the demo
+                //passed in just the demo
             else if (options.name && options.sections) demo = { demo: options, view: "demo" };
 
             //default to demo view
@@ -37,7 +37,7 @@
                         });
                 }
 
-                //sections view
+                    //sections view
                 else {
                     var divSection, sectionHeader, sectionBody;
                     demo.sections
@@ -74,7 +74,7 @@
                 }
             }
 
-            //code view
+                //code view
             else if (options.view == "code") {
                 codeview.style.display = "block";
                 demoview.style.display = "none";
@@ -84,24 +84,24 @@
             //setup the appbar
             element.querySelector("#cmdPin").onclick = function (args) {
 
-            //secondary tile                
+                //secondary tile                
 
-            var tile = new Windows.UI.StartScreen.SecondaryTile(
-                "SecondaryTile.Demo." + demo.name,
-                demo.title,
-                "{\"launchDemo\":\"" + demo.name + "\"}",
-                new Windows.Foundation.Uri("ms-appx:///images/secondary150.png"),
-                Windows.UI.StartScreen.TileSize.Square150x150
-            );
+                var tile = new Windows.UI.StartScreen.SecondaryTile(
+                    "SecondaryTile.Demo." + demo.name,
+                    demo.title,
+                    "{\"launchDemo\":\"" + demo.name + "\"}",
+                    new Windows.Foundation.Uri("ms-appx:///images/secondary150.png"),
+                    Windows.UI.StartScreen.TileSize.Square150x150
+                );
 
-            tile.visualElements.square70x70Logo = new Windows.Foundation.Uri("ms-appx:///Images/secondary70.png");
-            tile.visualElements.showNameOnSquare150x150Logo = true;
+                tile.visualElements.square70x70Logo = new Windows.Foundation.Uri("ms-appx:///Images/secondary70.png");
+                tile.visualElements.showNameOnSquare150x150Logo = true;
 
-            tile.requestCreateAsync().done(function (isCreated) {
-            if (isCreated) {
-                WinJS.log && WinJS.log("Secondary tile was successfully pinned.", "sample", "status");
-            }
-        });
+                tile.requestCreateAsync().done(function (isCreated) {
+                    if (isCreated) {
+                        WinJS.log && WinJS.log("Secondary tile was successfully pinned.", "sample", "status");
+                    }
+                });
             };
 
             //hide the extended splash screen
