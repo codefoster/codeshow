@@ -3,5 +3,10 @@
     "keywords":["print","printing"],
     "description": "How to print from the app",
     "author": "Michael Palermo",
-    "dateCreated": ""
-}
+    "dateCreated": "",
+	"sections":[
+		{"name":"toggle", title:"some other fancy title"},
+		{"name":"fromApp", title:"some fancy title"},
+		{"name":"options"}
+
+	]}
