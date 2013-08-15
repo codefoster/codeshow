@@ -602,6 +602,12 @@
       <IsWinMDFile>true</IsWinMDFile>
     </Reference>
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="demos\bingmaps\custompushpin\" />
+    <Folder Include="demos\bingmaps\moving\" />
+    <Folder Include="demos\bingmaps\pushpin\" />
+    <Folder Include="demos\bingmaps\simple\" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\$(WMSJSProjectDirectory)\Microsoft.VisualStudio.$(WMSJSProject).targets" />
   <!-- To modify your build process, add your task inside one of the targets below then uncomment
        that target and the DisableFastUpToDateCheck PropertyGroup. 
