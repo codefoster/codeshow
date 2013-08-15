@@ -68,6 +68,10 @@
     <Content Include="demos\errors\errors.json" />
     <Content Include="demos\eventHandlers\eventHandlers.json" />
     <Content Include="demos\filepicker\filepicker.json" />
+    <Content Include="demos\files\parent\parent.css" />
+    <Content Include="demos\files\parent\parent.html" />
+    <Content Include="demos\files\parent\parent.js" />
+    <Content Include="demos\files\files.json" />
     <Content Include="demos\flexbox\distributed\distributed.css" />
     <Content Include="demos\flexbox\distributed\distributed.html" />
     <Content Include="demos\flexbox\distributed\distributed.js" />

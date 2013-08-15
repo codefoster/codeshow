@@ -52,6 +52,7 @@
     <Capability Name="removableStorage" />
     <Capability Name="musicLibrary" />
     <Capability Name="internetClient" />
+    <Capability Name="picturesLibrary" />
     <DeviceCapability Name="webcam" />
     <DeviceCapability Name="microphone" />
     <DeviceCapability Name="location" />
