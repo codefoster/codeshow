@@ -517,6 +517,7 @@
     <Content Include="js\date.js" />
     <Content Include="js\default %28started subpage concept%29.js" />
     <Content Include="js\default.js" />
+    <Content Include="js\jquery203.js" />
     <Content Include="js\MobileServices.intellisense.js" />
     <Content Include="js\MobileServices.js" />
     <Content Include="js\MobileServices.min.js" />
