@@ -3,5 +3,11 @@
 	"keywords":["bing","maps","map","directions","earth","drive"],
 	"description": "Get ready for easy and powerful maps in apps!",
 	"author": "Jeremy Foster",
-	"dateCreated": "10/1/2013"
+	"dateCreated": "10/1/2013",
+	"sections":[
+		{"name":"simple"},
+		{"name":"moving"},
+		{"name":"pushpin"},
+		{"name":"custompushpin"}
+	]
 }

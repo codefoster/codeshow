@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.20623.1 VSUPREVIEW
+VisualStudioVersion = 12.0.20617.1 PREVIEW
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{262852C6-CD72-467D-83FE-5EEB1973A190}") = "codeShow.Win8JS", "codeSHOW.Win8JS\codeShow.Win8JS.jsproj", "{939B75D0-97CE-40B4-9EC7-39A56B6AEE3B}"
 EndProject
