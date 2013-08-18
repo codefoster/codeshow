@@ -165,6 +165,10 @@
     <Content Include="demos\input\input.json" />
     <Content Include="demos\jsonFcts\jsonFcts.json" />
     <Content Include="demos\keycode\keycode.json" />
+    <Content Include="demos\launcher\launcher.css" />
+    <Content Include="demos\launcher\launcher.html" />
+    <Content Include="demos\launcher\launcher.js" />
+    <Content Include="demos\launcher\launcher.json" />
     <Content Include="demos\listviews\asymmetric\asymmetric.css" />
     <Content Include="demos\listviews\asymmetric\asymmetric.html" />
     <Content Include="demos\listviews\asymmetric\asymmetric.js" />
