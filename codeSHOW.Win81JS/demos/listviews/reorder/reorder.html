@@ -2,33 +2,40 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <title>Simple</title>
+    <title>Reorderable</title>
 
     <!-- WinJS references -->
     <link href="//Microsoft.WinJS.2.0.Preview/css/ui-light.css" rel="stylesheet" />
     <script src="//Microsoft.WinJS.2.0.Preview/js/base.js"></script>
     <script src="//Microsoft.WinJS.2.0.Preview/js/ui.js"></script>
 
-    <link href="simple.css" rel="stylesheet" />
-    <script src="simple.js"></script>
+    <link href="reorder.css" rel="stylesheet" />
+    <script src="reorder.js"></script>
 </head>
 <body>
-    <div class="simple fragment">
+    <div class="reorder fragment">
         <header aria-label="Header content" role="banner">
             <button data-win-control="WinJS.UI.BackButton"></button>
             <h1 class="titlearea win-type-ellipsis">
-                <span class="pagetitle">Welcome to simple</span>
+                <span class="pagetitle">Welcome to reorder</span>
             </h1>
         </header>
         <section aria-label="Main content" role="main">
-            <div class="explanation">Here's a super simple ListView. This uses a local JavaScript array data to populate a WinJS.Binding.List and then binds the ListView to that.</div>
+            <div class="explanation">
+                Simply setting itemsReorderable to true makes it possible to drag items around in a ListView to reorder them. Obviously, you have to capture the reorg and change your data to persist the change. Doing that is not yet demonstrated here.
+            </div>
             <div class="itemtemplate" data-win-control="WinJS.Binding.Template">
                 <div>
                     <img data-win-bind="src:imageUrl" />
                     <h3 data-win-bind="innerText:name"></h3>
                 </div>
             </div>
-            <div data-win-control="WinJS.UI.ListView"></div>
+            <div data-win-control="WinJS.UI.ListView" data-win-options="{
+                itemTemplate:select('.listviews .reorder .itemtemplate'),
+                itemDataSource:codeShow.Demos.listviews.reorder.data.dataSource,
+                itemsReorderable:true
+            }">
+            </div>
         </section>
     </div>
 </body>

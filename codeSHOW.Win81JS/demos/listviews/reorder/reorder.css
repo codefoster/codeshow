@@ -1,0 +1,17 @@
+﻿.listviews .reorder .explanation { width: 800px; }
+
+.listviews .reorder .win-listview {
+    border: 2px solid lightgray;
+    background-color: white;
+    height: 460px;
+    width: 800px;
+}
+
+.listviews .reorder .win-item img  {
+    width: 215px;
+    height: 153px;
+}
+
+.listviews .reorder .win-item h3 {
+    height: 50px;
+}

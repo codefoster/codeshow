@@ -205,6 +205,9 @@
     <Content Include="demos\listviews\live\live.css" />
     <Content Include="demos\listviews\live\live.html" />
     <Content Include="demos\listviews\live\live.js" />
+    <Content Include="demos\listviews\reorder\reorder.css" />
+    <Content Include="demos\listviews\reorder\reorder.html" />
+    <Content Include="demos\listviews\reorder\reorder.js" />
     <Content Include="demos\listviews\simple\simple.css" />
     <Content Include="demos\listviews\simple\simple.html" />
     <Content Include="demos\listviews\simple\simple.js" />
@@ -408,6 +411,10 @@
     <Content Include="demos\rating\simple\simple.css" />
     <Content Include="demos\rating\simple\simple.html" />
     <Content Include="demos\rating\simple\simple.js" />
+    <Content Include="demos\reactive\minimum\minimum.css" />
+    <Content Include="demos\reactive\minimum\minimum.html" />
+    <Content Include="demos\reactive\minimum\minimum.js" />
+    <Content Include="demos\reactive\reactive.json" />
     <Content Include="demos\repeater\repeater.json" />
     <Content Include="demos\repeater\simple\simple.css" />
     <Content Include="demos\repeater\simple\simple.html" />

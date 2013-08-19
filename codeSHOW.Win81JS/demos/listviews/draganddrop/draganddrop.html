@@ -24,12 +24,19 @@
             <div class="explanation">
                 This ListView has draggable items. They're not really anything to do with them yet though. We're working on it.
             </div>
+            <div class="itemtemplate" data-win-control="WinJS.Binding.Template">
+                <div>
+                    <img data-win-bind="src:imageUrl" />
+                    <h3 data-win-bind="innerText:name"></h3>
+                </div>
+            </div>
             <div data-win-control="WinJS.UI.ListView" data-win-options="{
-                itemTemplate:select('.itemtemplate'),
+                itemTemplate:select('.listviews .draganddrop .itemtemplate'),
                 itemDataSource:codeShow.Demos.listviews.declarative.data.dataSource,
                 itemsDraggable:true
             }">
             </div>
+
         </section>
     </div>
 </body>

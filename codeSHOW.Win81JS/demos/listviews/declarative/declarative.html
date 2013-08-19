@@ -24,10 +24,18 @@
             <div class="explanation">
                 The ListView in this section looks identical to the simple one. They're done a bit differently, though. This ListView is declared in the HTML file and the only thing that has to happen in the JavaScript file is the fetching of the data.
             </div>
+            <div class="itemtemplate" data-win-control="WinJS.Binding.Template">
+                <div>
+                    <img data-win-bind="src:imageUrl" />
+                    <h3 data-win-bind="innerText:name"></h3>
+                </div>
+            </div>
             <div data-win-control="WinJS.UI.ListView" data-win-options="{
-                itemTemplate:select('.itemtemplate'),
+                itemTemplate:select('.listviews .declarative .itemtemplate'),
                 itemDataSource:codeShow.Demos.listviews.declarative.data.dataSource    
-            }"></div>
+            }">
+            </div>
+
         </section>
     </div>
 </body>

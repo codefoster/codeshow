@@ -11,6 +11,7 @@
 		{"name":"asymmetric"},
 		{"name":"states"},
 		{"name":"live"},
-		{"name":"draganddrop"}
+		{"name":"draganddrop"},
+		{"name":"reorder"}
 	]
 }

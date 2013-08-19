@@ -1,7 +1,8 @@
 {
     "title": "Media Queries",
-    "keywords":[""],
+    "keywords":["media","query"],
     "description": "See how you can manipulate the display of a grid when the user switches among various view states.",
     "author": "Jeremy Foster",
-    "dateCreated": ""
+    "dateCreated": "2/1/2013",
+	"enabled":false
 }
