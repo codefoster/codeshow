@@ -7,11 +7,11 @@
             openPicker.viewMode = Windows.Storage.Pickers.PickerViewMode.thumbnail;
             openPicker.fileTypeFilter.replaceAll([".png", ".jpg", ".jpeg"]);
 
-            q(".parent #open").onclick = function (e) {
+            element.querySelector(".parent #open").onclick = function (e) {
                 openPicker.pickSingleFileAsync().then(function (file) {
-                    var result = q(".parent #result");
+                    var result = element.querySelector(".parent #result");
                     if (file) {
-                        var img = q(".parent #pic");
+                        var img = element.querySelector(".parent #pic");
                         img.src = URL.createObjectURL(file);
                         img.style.display = "block";
 
