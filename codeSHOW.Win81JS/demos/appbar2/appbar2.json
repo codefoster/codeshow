@@ -3,5 +3,6 @@
 	"keywords":["declarative","app","bar"],
 	"description": "Create a simple lower app bar with some command buttons.",
 	"author": "Jeremy Foster",
-	"dateCreated": "10/1/2012"
+	"dateCreated": "10/1/2012",
+	"enabled":false
 }

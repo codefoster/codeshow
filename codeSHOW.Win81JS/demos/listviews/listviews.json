@@ -6,9 +6,11 @@
     "dateCreated": "10/1/2013",
 	"sections":[
 		{"name":"simple"},
+		{"name":"declarative"},
 		{"name":"grouped"},
 		{"name":"asymmetric"},
 		{"name":"states"},
-		{"name":"live"}
+		{"name":"live"},
+		{"name":"draganddrop"}
 	]
 }

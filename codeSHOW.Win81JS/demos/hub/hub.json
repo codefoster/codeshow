@@ -1,0 +1,11 @@
+{
+    "title": "Hub",
+    "keywords":["hub"],
+    "description": "Learn to use the Hub control to make a great first page for your app",
+    "author": "Jeremy Foster",
+    "dateCreated": "8/17/2013",
+	"sections":[
+		{"name":"simple"},
+		{"name":"semanticzoom"}
+	]
+}

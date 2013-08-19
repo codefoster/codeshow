@@ -37,8 +37,10 @@
         return pkg.installedLocation.getFolderAsync("demos")
             .then(function(demosFolder) { return demosFolder.getFoldersAsync(); })
             .then(function(demoFolders) {
-                demoFolders.forEach(function(demoFolder) {
-                    var demo = { name: demoFolder.displayName, enabled: true, sections: [] };
+                demoFolders.forEach(function (demoFolder) {
+                    //initialize and set defaults
+                    var demo = { name: demoFolder.displayName, enabled: true, suppressAppBar:false, sections: [] };
+
                     WinJS.xhr({ url: format("/demos/{0}/{0}.html", demo.name), responseType: "document" })
 
                         //get the title from the html file

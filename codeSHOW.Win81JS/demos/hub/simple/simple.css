@@ -1,0 +1,7 @@
+﻿.hub .simple .win-hub {
+    border:solid 1px gray;
+    height:600px;
+}
+    .hub .simple .win-hub .win-hub-section {
+        width:600px;
+    }

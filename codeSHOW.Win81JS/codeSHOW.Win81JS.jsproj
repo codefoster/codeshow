@@ -57,6 +57,9 @@
     </AppxManifest>
     <Content Include="css\default.css" />
     <Content Include="css\type\GoodDog.otf" />
+    <Content Include="demos\appbar\appbarcommand\appbarcommand.css" />
+    <Content Include="demos\appbar\appbarcommand\appbarcommand.html" />
+    <Content Include="demos\appbar\appbarcommand\appbarcommand.js" />
     <Content Include="demos\bingmaps\custompushpin\custompushpin.css" />
     <Content Include="demos\bingmaps\custompushpin\custompushpin.html" />
     <Content Include="demos\bingmaps\custompushpin\custompushpin.js" />
@@ -161,9 +164,16 @@
     <Content Include="demos\html5audio\html5audio.json" />
     <Content Include="demos\html5video\html5video.json" />
     <Content Include="demos\htmltotext\htmltotext.json" />
+    <Content Include="demos\hub\hub.json" />
+    <Content Include="demos\hub\simple\simple.css" />
+    <Content Include="demos\hub\simple\simple.html" />
+    <Content Include="demos\hub\simple\simple.js" />
     <Content Include="demos\iframes\iframes.json" />
     <Content Include="demos\input\input.json" />
-    <Content Include="demos\jsonFcts\jsonFcts.json" />
+    <Content Include="demos\itemcontainer\itemcontainer.json" />
+    <Content Include="demos\itemcontainer\simple\simple.css" />
+    <Content Include="demos\itemcontainer\simple\simple.html" />
+    <Content Include="demos\itemcontainer\simple\simple.js" />
     <Content Include="demos\keycode\keycode.json" />
     <Content Include="demos\launcher\launcher.css" />
     <Content Include="demos\launcher\launcher.html" />
@@ -182,6 +192,12 @@
     <Content Include="demos\listviews\asymmetric\images\08.jpg" />
     <Content Include="demos\listviews\asymmetric\images\09.jpg" />
     <Content Include="demos\listviews\asymmetric\images\10.jpg" />
+    <Content Include="demos\listviews\declarative\declarative.css" />
+    <Content Include="demos\listviews\declarative\declarative.html" />
+    <Content Include="demos\listviews\declarative\declarative.js" />
+    <Content Include="demos\listviews\draganddrop\draganddrop.css" />
+    <Content Include="demos\listviews\draganddrop\draganddrop.html" />
+    <Content Include="demos\listviews\draganddrop\draganddrop.js" />
     <Content Include="demos\listviews\grouped\grouped.css" />
     <Content Include="demos\listviews\grouped\grouped.html" />
     <Content Include="demos\listviews\grouped\grouped.js" />
@@ -209,9 +225,6 @@
     <Content Include="demos\appbar2\appbar2.css" />
     <Content Include="demos\appbar2\appbar2.html" />
     <Content Include="demos\appbar2\appbar2.js" />
-    <Content Include="demos\appbar\appbar.css" />
-    <Content Include="demos\appbar\appbar.html" />
-    <Content Include="demos\appbar\appbar.js" />
     <Content Include="demos\arrayFcts\arrayFcts.css" />
     <Content Include="demos\arrayFcts\arrayFcts.html" />
     <Content Include="demos\arrayFcts\arrayFcts.js" />
@@ -333,6 +346,10 @@
     <Content Include="demos\mscssmatrix\mscssmatrix.html" />
     <Content Include="demos\mscssmatrix\mscssmatrix.js" />
     <Content Include="demos\mscssmatrix\mscssmatrix.json" />
+    <Content Include="demos\navbar\navbar.json" />
+    <Content Include="demos\navbar\simple\simple.css" />
+    <Content Include="demos\navbar\simple\simple.html" />
+    <Content Include="demos\navbar\simple\simple.js" />
     <Content Include="demos\netflix10\netflix10.css" />
     <Content Include="demos\netflix10\netflix10.html" />
     <Content Include="demos\netflix10\netflix10.js" />
@@ -496,6 +513,10 @@
     <Content Include="demos\wamspush\wamspush.html" />
     <Content Include="demos\wamspush\wamspush.js" />
     <Content Include="demos\wamspush\wamspush.json" />
+    <Content Include="demos\webview\simple\simple.css" />
+    <Content Include="demos\webview\simple\simple.html" />
+    <Content Include="demos\webview\simple\simple.js" />
+    <Content Include="demos\webview\webview.json" />
     <Content Include="demos\webworker\diagram.png" />
     <Content Include="demos\webworker\webworker.json" />
     <Content Include="demos\webworker\task.js" />

@@ -1,0 +1,10 @@
+{
+    "title": "WebView",
+    "keywords":["web","view","webview","iframe"],
+    "description": "WebView is like an iframe on steroids",
+    "author": "Jeremy Foster",
+    "dateCreated": "8/18/2013",
+	"sections":[
+		{"name":"simple"}
+	]
+}

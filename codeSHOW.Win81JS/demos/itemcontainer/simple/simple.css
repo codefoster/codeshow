@@ -1,0 +1,10 @@
+﻿.itemcontainer .simple .win-itemcontainer {
+    width:200px;
+    height:100px;
+    border:solid 1px gray;
+    margin:10px;
+}
+
+.itemcontainer .simple .win-item {
+    padding:5px;
+}

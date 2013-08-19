@@ -120,9 +120,15 @@
                 });
             };
 
+            //suppress the appbar if configured for this demo
+            if (demo.suppressAppBar) element.querySelector("#demoappbar").winControl.disabled = true;
+
             //hide the extended splash screen
             splash.classList.add("hidden");
 
+        },
+        unload: function() {
+            
         }
     });
 })();
