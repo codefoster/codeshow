@@ -432,6 +432,9 @@
     <Content Include="demos\search\search.html" />
     <Content Include="demos\search\search.js" />
     <Content Include="demos\search\search.json" />
+    <Content Include="demos\secondtile\alternate\alternate.css" />
+    <Content Include="demos\secondtile\alternate\alternate.html" />
+    <Content Include="demos\secondtile\alternate\alternate.js" />
     <Content Include="demos\secondtile\secondtile.json" />
     <Content Include="demos\secondtile\pinandpush\pinandpush.css" />
     <Content Include="demos\secondtile\pinandpush\pinandpush.html" />
@@ -548,6 +551,7 @@
     <Content Include="images\bits.png" />
     <Content Include="images\codeplex.png" />
     <Content Include="images\headerlogo.png" />
+    <Content Include="images\html5.png" />
     <Content Include="images\logo.scale-100.png" />
     <Content Include="images\secondary150.png" />
     <Content Include="images\secondary70.png" />

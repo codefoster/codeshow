@@ -18,6 +18,7 @@
       <m2:VisualElements DisplayName="codeShow" Description="codeShow" ForegroundText="light" BackgroundColor="#5e83a2" Square150x150Logo="images\square150.png" Square30x30Logo="images\square30.png">
         <m2:DefaultTile Square70x70Logo="images/square70.png" />
         <m2:SplashScreen Image="images\splashscreen.png" BackgroundColor="white" />
+        <m2:ApplicationView MinWidth="width500" />
       </m2:VisualElements>
       <Extensions>
         <Extension Category="windows.fileOpenPicker">

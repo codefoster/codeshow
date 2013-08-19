@@ -6,6 +6,8 @@
     "dateCreated": "",
 	"sections":[
 		{"name":"simple", "author":"Jeremy Foster"},
+		{"name":"alternate", "author":"Jeremy Foster"},
 		{"name":"pinandpush"}
+
 	]
 }
