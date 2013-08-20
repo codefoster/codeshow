@@ -54,10 +54,11 @@ var pkg = Windows.ApplicationModel.Package.current;
                     //navigate to launch from secondary tile
                     if (args.detail.arguments !== "") {
                         var launchDemo = JSON.parse(args.detail.arguments).launchDemo;
-                        Data.loaded.then(function () {
-                            var chooseDemo = Data.demos.first(function (d) { return d.name == launchDemo });
-                            nav.navigate("/pages/demo/demo.html", { demo: chooseDemo, view: "demo" });
-                        });
+                        if(launchDemo)
+                            Data.loaded.then(function () {
+                                var chooseDemo = Data.demos.first(function (d) { return d.name == launchDemo });
+                                nav.navigate("/pages/demo/demo.html", { demo: chooseDemo, view: "demo" });
+                            });
                     }
                     if (nav.location) {
                         nav.history.current.initialPlaceholder = true;

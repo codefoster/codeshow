@@ -13,6 +13,7 @@
                 );
 
                 tile.onvisualelementsrequested = function (args) {
+                    //add a couple of alternate logos that the user can choose to land on his start screen
                     args.request.alternateVisualElements[0].square150x150Logo = new Windows.Foundation.Uri("ms-appx:///images/secondary150.png");
                     args.request.alternateVisualElements[1].square150x150Logo = new Windows.Foundation.Uri("ms-appx:///images/html5.png");
                 };
