@@ -6,6 +6,6 @@
 	"dateCreated": "10/1/2012",
 	"suppressAppBar":true,
 	"sections":[
-		{"name":"appbarcommand"}
+		{"name":"simple"}
 	]
 }

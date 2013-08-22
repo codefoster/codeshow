@@ -60,6 +60,9 @@
     <Content Include="demos\appbar\appbarcommand\appbarcommand.css" />
     <Content Include="demos\appbar\appbarcommand\appbarcommand.html" />
     <Content Include="demos\appbar\appbarcommand\appbarcommand.js" />
+    <Content Include="demos\appbar\simple\simple.css" />
+    <Content Include="demos\appbar\simple\simple.html" />
+    <Content Include="demos\appbar\simple\simple.js" />
     <Content Include="demos\bingmaps\custompushpin\custompushpin.css" />
     <Content Include="demos\bingmaps\custompushpin\custompushpin.html" />
     <Content Include="demos\bingmaps\custompushpin\custompushpin.js" />
@@ -527,6 +530,9 @@
     <Content Include="demos\webview\simple\simple.css" />
     <Content Include="demos\webview\simple\simple.html" />
     <Content Include="demos\webview\simple\simple.js" />
+    <Content Include="demos\webview\tostring\tostring.css" />
+    <Content Include="demos\webview\tostring\tostring.html" />
+    <Content Include="demos\webview\tostring\tostring.js" />
     <Content Include="demos\webview\webview.json" />
     <Content Include="demos\webworker\diagram.png" />
     <Content Include="demos\webworker\webworker.json" />

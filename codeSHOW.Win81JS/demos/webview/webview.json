@@ -5,6 +5,7 @@
     "author": "Jeremy Foster",
     "dateCreated": "8/18/2013",
 	"sections":[
-		{"name":"simple"}
+		{"name":"simple"},
+		{"name":"tostring"}
 	]
 }
