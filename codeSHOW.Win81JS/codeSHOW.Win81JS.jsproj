@@ -165,6 +165,7 @@
     <Content Include="demos\html5video\html5video.json" />
     <Content Include="demos\htmltotext\htmltotext.json" />
     <Content Include="demos\hub\hub.json" />
+    <Content Include="demos\hub\simple\data.js" />
     <Content Include="demos\hub\simple\simple.css" />
     <Content Include="demos\hub\simple\simple.html" />
     <Content Include="demos\hub\simple\simple.js" />

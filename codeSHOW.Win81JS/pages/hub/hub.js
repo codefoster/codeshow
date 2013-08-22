@@ -50,9 +50,10 @@
                             });
 
                         //build team list
-                        Data.team.forEach(function (member) {
-                            codeShow.Pages.Hub.teamList.push(member);
-                        });
+                        if(Data.team)
+                            Data.team.forEach(function (member) {
+                                codeShow.Pages.Hub.teamList.push(member);
+                            });
                     
                         //mark data as loaded
                         codeShow.Pages.Hub.pageDataLoaded = true;

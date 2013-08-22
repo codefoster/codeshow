@@ -5,7 +5,6 @@
     "author": "Jeremy Foster",
     "dateCreated": "8/17/2013",
 	"sections":[
-		{"name":"simple"},
-		{"name":"semanticzoom"}
+		{"name":"simple"}
 	]
 }

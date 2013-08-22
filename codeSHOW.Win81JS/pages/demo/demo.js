@@ -66,7 +66,7 @@
                                     //remove the section header since the demo page has one already
                                     var header = page.element.querySelector("header");
                                     if (header) header.style.display = "none";
-                                });
+                                }, function (err) { debugger; });
                             divSection.appendChild(sectionBody);
 
                             demoview.appendChild(divSection);
