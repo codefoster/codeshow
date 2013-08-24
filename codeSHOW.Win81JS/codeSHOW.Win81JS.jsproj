@@ -63,6 +63,18 @@
     <Content Include="demos\appbar\simple\simple.css" />
     <Content Include="demos\appbar\simple\simple.html" />
     <Content Include="demos\appbar\simple\simple.js" />
+    <Content Include="demos\binding\converters\converters.css" />
+    <Content Include="demos\binding\converters\converters.html" />
+    <Content Include="demos\binding\converters\converters.js" />
+    <Content Include="demos\binding\observable\observable.css" />
+    <Content Include="demos\binding\observable\observable.html" />
+    <Content Include="demos\binding\observable\observable.js" />
+    <Content Include="demos\binding\simple\simple.css" />
+    <Content Include="demos\binding\simple\simple.html" />
+    <Content Include="demos\binding\simple\simple.js" />
+    <Content Include="demos\binding\template\template.css" />
+    <Content Include="demos\binding\template\template.html" />
+    <Content Include="demos\binding\template\template.js" />
     <Content Include="demos\bingmaps\custompushpin\custompushpin.css" />
     <Content Include="demos\bingmaps\custompushpin\custompushpin.html" />
     <Content Include="demos\bingmaps\custompushpin\custompushpin.js" />
@@ -242,9 +254,6 @@
     <Content Include="demos\backgroundtask\backgroundtask.html" />
     <Content Include="demos\backgroundtask\backgroundtask.js" />
     <Content Include="demos\backgroundtask\zonetask.js" />
-    <Content Include="demos\binding\binding.css" />
-    <Content Include="demos\binding\binding.html" />
-    <Content Include="demos\binding\binding.js" />
     <Content Include="demos\bingmaps\bingmaps.css" />
     <Content Include="demos\bingmaps\bingmaps.html" />
     <Content Include="demos\bingmaps\bingmaps.js" />
@@ -584,7 +593,6 @@
     <Content Include="js\converters.js" />
     <Content Include="js\data.js" />
     <Content Include="js\date.js" />
-    <Content Include="js\default %28started subpage concept%29.js" />
     <Content Include="js\default.js" />
     <Content Include="js\MobileServices.intellisense.js" />
     <Content Include="js\MobileServices.js" />

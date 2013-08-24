@@ -3,5 +3,11 @@
 	"keywords":["bind","binding","template","templating","templates"],
 	"description": "Bind data to your HTML or create explicit data templates to populate with binding.",
 	"author": "Jeremy Foster",
-	"dateCreated": "10/1/2012"
+	"dateCreated": "10/1/2012",
+	"sections":[
+		{"name":"simple"},
+		{"name":"template"},
+		{"name":"observable"},
+		{"name":"converters"}
+	]
 }
