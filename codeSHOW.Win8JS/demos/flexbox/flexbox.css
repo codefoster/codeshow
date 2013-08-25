@@ -64,7 +64,6 @@
     display: -ms-flexbox;
     -ms-scroll-snap-x: mandatory snapInterval(0%, 80%);
     overflow-x: auto;
-    width:600px;
     height:400px;
     border:1px solid lightgray;
 }
@@ -78,6 +77,3 @@
     overflow-y: auto;
 }
 
-#swipeparent > *:last-child {
-    width: 100%;
-}

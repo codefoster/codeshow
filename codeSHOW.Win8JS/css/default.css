@@ -76,7 +76,7 @@ body {
 /*Swipers*/
 .fragment section[role=main].swiper,
 .swiper {
-    width:100%;
+    width:auto; /*takes into account the margin set below, fits the rest*/
     display: -ms-flexbox;
     -ms-scroll-snap-x: mandatory snapInterval(0%, 80%);
     overflow-x: auto;
@@ -89,12 +89,6 @@ body {
     width: 80%;
     padding-right:80px;
     margin-bottom:16px; /* room for scrollbar */
-}
-
-/* the last swiper section has to be full width to be able to swipe to it */
-.fragment section[role=main].swiper > *:last-child,
-.swiper > *:last-child {
-    width: 100%;
 }
 
     .fragment section[role=main].swiper > * > h2,
