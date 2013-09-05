@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Circle</title>
+
+    <!-- WinJS references -->
+    <link href="//Microsoft.WinJS.2.0.Preview/css/ui-light.css" rel="stylesheet" />
+    <script src="//Microsoft.WinJS.2.0.Preview/js/base.js"></script>
+    <script src="//Microsoft.WinJS.2.0.Preview/js/ui.js"></script>
+
+    <link href="circle.css" rel="stylesheet" />
+    <script src="circle.js"></script>
+</head>
+<body>
+    <div class="circle fragment">
+        <header aria-label="Header content" role="banner">
+            <button data-win-control="WinJS.UI.BackButton"></button>
+            <h1 class="titlearea win-type-ellipsis">
+                <span class="pagetitle">Welcome to circle</span>
+            </h1>
+        </header>
+        <section aria-label="Main content" role="main">
+            <div class="explanation">...</div>
+            <div id="itemTemplate" data-win-control="WinJS.Binding.Template">
+                <img data-win-bind="src: imageUrl; title: name" height="72" width="72" draggable="false" />
+            </div>
+            <div class="list" data-win-control="WinJS.UI.ListView" data-win-options="{
+                itemTemplate: itemTemplate,
+                itemDataSource: codeShow.Demos.listviews.circle.attractionsList.dataSource,
+                layout: { type: codeShow.Demos.listviews.circle.CircleLayout }
+            }">
+            <div class="controls">
+                <button onclick="add()">Add</button>
+                <button onclick="remove()">Delete</button>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

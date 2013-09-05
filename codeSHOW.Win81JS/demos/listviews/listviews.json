@@ -12,6 +12,7 @@
 		{"name":"states"},
 		{"name":"live"},
 		{"name":"draganddrop"},
-		{"name":"reorder"}
+		{"name":"reorder"},
+		{"name":"circle"}
 	]
 }

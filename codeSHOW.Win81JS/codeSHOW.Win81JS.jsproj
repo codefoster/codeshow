@@ -208,6 +208,9 @@
     <Content Include="demos\listviews\asymmetric\images\08.jpg" />
     <Content Include="demos\listviews\asymmetric\images\09.jpg" />
     <Content Include="demos\listviews\asymmetric\images\10.jpg" />
+    <Content Include="demos\listviews\circle\circle.css" />
+    <Content Include="demos\listviews\circle\circle.html" />
+    <Content Include="demos\listviews\circle\circle.js" />
     <Content Include="demos\listviews\declarative\declarative.css" />
     <Content Include="demos\listviews\declarative\declarative.html" />
     <Content Include="demos\listviews\declarative\declarative.js" />
