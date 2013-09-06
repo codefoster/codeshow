@@ -28,7 +28,11 @@
                     <h3 data-win-bind="innerText:name"></h3>
                 </div>
             </div>
-            <div data-win-control="WinJS.UI.ListView"></div>
+            <div data-win-control="WinJS.UI.ListView" data-win-options="{
+                itemDataSource: codeShow.Demos.listviews.simple.attractionsList.dataSource,
+                itemTemplate: select('.itemtemplate')
+            }"
+                ></div>
         </section>
     </div>
 </body>

@@ -27,8 +27,8 @@
 
             WinJS.Namespace.define("codeShow.Demos.listviews.circle", {
                 attractionsList: new WinJS.Binding.List(attractions),
-                add: function () { bindingList.push(getItem()); },
-                remove: function () { bindingList.pop(); },
+                add: function () { this.attractionsList.push(attractions[Math.floor(Math.random() * attractions.length)]); },
+                remove: function () { this.attractionsList.pop(); },
                 CircleLayout: WinJS.Class.define(
                     function CircleLayout() {
                     },
@@ -50,8 +50,8 @@
                             }
                         }
 
-                        var itemWidth = 72;
-                        var itemHeight = 72;
+                        var itemWidth = 107;
+                        var itemHeight = 76;
                         var halfItemWidth = itemWidth / 2;
                         var halfItemHeight = itemHeight / 2;
                         var diameter = Math.min(site.viewportSize.height - itemHeight - halfItemHeight, site.viewportSize.width - itemWidth - halfItemWidth);

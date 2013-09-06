@@ -1,27 +1,4 @@
-﻿.listviews .circle html, body .circlepage {
-    height: 100%;
-    width: 100%;
-}
-
-.listviews .circle .circlepage {
-    display: -ms-grid;
-    -ms-grid-columns: 1fr;
-    -ms-grid-rows: auto 1fr auto;
-}
-
-.listviews .circle .heading {
-    -ms-grid-column: 1;
-    -ms-grid-row: 1;
-}
-
-.listviews .circle .list {
-    -ms-grid-column: 1;
-    -ms-grid-row: 2;
-    width: 100%;
-    height: 100%;
-}
-
-.listviews .circle .controls {
+﻿.listviews .circle .controls {
     -ms-grid-column: 1;
     -ms-grid-row: 3;
 }
@@ -40,4 +17,6 @@
 
 .listviews .circle .list img {
     display: block;
+    width: 107px;
+    height: 76px;
 }

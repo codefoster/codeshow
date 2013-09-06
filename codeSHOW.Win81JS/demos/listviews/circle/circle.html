@@ -21,7 +21,11 @@
             </h1>
         </header>
         <section aria-label="Main content" role="main">
-            <div class="explanation">...</div>
+            <div class="explanation">In Windows 8.1, you can use a custom function to lay your ListView items out however you darn well please. In this example, the items are arranged in a circle (what?!), and you can hit add and delete to see some slick animation.</div>
+            <div class="controls">
+                <button onclick="codeShow.Demos.listviews.circle.add()">Add</button>
+                <button onclick="codeShow.Demos.listviews.circle.remove()">Delete</button>
+            </div>
             <div id="itemTemplate" data-win-control="WinJS.Binding.Template">
                 <img data-win-bind="src: imageUrl; title: name" height="72" width="72" draggable="false" />
             </div>
@@ -30,10 +34,6 @@
                 itemDataSource: codeShow.Demos.listviews.circle.attractionsList.dataSource,
                 layout: { type: codeShow.Demos.listviews.circle.CircleLayout }
             }">
-            <div class="controls">
-                <button onclick="add()">Add</button>
-                <button onclick="remove()">Delete</button>
-            </div>
         </section>
     </div>
 </body>
