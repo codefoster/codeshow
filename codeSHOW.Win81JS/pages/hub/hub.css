@@ -86,12 +86,10 @@
 
         .hubpage .hub .section_demos .win-item h3 {
             font-weight:bold;
-            margin-bottom:-2px; /* in this case bring the description up a little closer */
         }
 
         .hubpage .hub .section_demos .win-item p.description {
-            margin-top:3px;
-
+            margin-top:2px;
         }
             
         .hubpage .hub .section_demos .win-item div.author {
