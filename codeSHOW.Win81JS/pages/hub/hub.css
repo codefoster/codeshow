@@ -85,15 +85,12 @@
         }
 
         .hubpage .hub .section_demos .win-item h3 {
-            font-family: 'GoodDog';
-            font-size:24px;
+            font-weight:bold;
             margin-bottom:-2px; /* in this case bring the description up a little closer */
         }
 
         .hubpage .hub .section_demos .win-item p.description {
-            margin-top:0px;
-            margin-left:5px;
-            font-size:13px;
+            margin-top:3px;
 
         }
             
