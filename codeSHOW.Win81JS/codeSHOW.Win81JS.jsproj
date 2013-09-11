@@ -211,9 +211,6 @@
     <Content Include="demos\listviews\circle\circle.css" />
     <Content Include="demos\listviews\circle\circle.html" />
     <Content Include="demos\listviews\circle\circle.js" />
-    <Content Include="demos\listviews\declarative\declarative.css" />
-    <Content Include="demos\listviews\declarative\declarative.html" />
-    <Content Include="demos\listviews\declarative\declarative.js" />
     <Content Include="demos\listviews\draganddrop\draganddrop.css" />
     <Content Include="demos\listviews\draganddrop\draganddrop.html" />
     <Content Include="demos\listviews\draganddrop\draganddrop.js" />
@@ -597,6 +594,7 @@
     <Content Include="js\data.js" />
     <Content Include="js\date.js" />
     <Content Include="js\default.js" />
+    <Content Include="js\jquery203.js" />
     <Content Include="js\MobileServices.intellisense.js" />
     <Content Include="js\MobileServices.js" />
     <Content Include="js\MobileServices.min.js" />
@@ -669,7 +667,6 @@
     <None Include="codeSHOW.Win81JS_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
-    <SDKReference Include="Bing.Maps.JavaScript, Version=1.313.0601.0" />
     <SDKReference Include="LiveSDKHTML, Version=5.4" />
     <SDKReference Include="Microsoft.PlayerFramework.Dash, Version=1.8.2.1" />
     <SDKReference Include="Microsoft.PlayerFramework.Js, Version=1.8.2.1" />
@@ -677,7 +674,7 @@
     <SDKReference Include="Microsoft.PlayerFramework.Js.Advertising, Version=1.8.2.1" />
     <SDKReference Include="Microsoft.PlayerFramework.Js.Analytics, Version=1.8.2.1" />
     <SDKReference Include="Microsoft.PlayerFramework.Js.TimedText, Version=1.8.2.1" />
-    <SDKReference Include="Microsoft.WinJS.2.0.Preview, Version=1.0" />
+    <SDKReference Include="Microsoft.WinJS.2.0, Version=1.0" />
     <SDKReference Include="MSAdvertisingJS, Version=8.1" />
   </ItemGroup>
   <ItemGroup>

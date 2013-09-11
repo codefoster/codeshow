@@ -385,7 +385,6 @@
   <ItemGroup>
     <SDKReference Include="LiveSDKHTML, Version=5.4" />
     <SDKReference Include="Microsoft.WinJS.1.0, Version=1.0" />
-    <SDKReference Include="MSAdvertisingJS, Version=6.1" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="NotificationsExtensions">

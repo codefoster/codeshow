@@ -5,9 +5,9 @@
     <title>Grouped</title>
 
     <!-- WinJS references -->
-    <link href="//Microsoft.WinJS.2.0.Preview/css/ui-light.css" rel="stylesheet" />
-    <script src="//Microsoft.WinJS.2.0.Preview/js/base.js"></script>
-    <script src="//Microsoft.WinJS.2.0.Preview/js/ui.js"></script>
+    <link href="//Microsoft.WinJS.2.0/css/ui-light.css" rel="stylesheet" />
+    <script src="//Microsoft.WinJS.2.0/js/base.js"></script>
+    <script src="//Microsoft.WinJS.2.0/js/ui.js"></script>
 
     <link href="grouped.css" rel="stylesheet" />
     <script src="grouped.js"></script>
@@ -21,14 +21,22 @@
             </h1>
         </header>
         <section aria-label="Main content" role="main">
-            <div class="explanation">The same data as the previous demo and the same binding technique as well, except now the data has been grouped and the ListView reflects that nicely.</div>
-            <div data-win-control="WinJS.UI.ListView"></div>
+            <!-- Templates -->
             <div class="itemtemplate" data-win-control="WinJS.Binding.Template">
                 <div>
                     <img class="img" data-win-bind="src:imageUrl" />
                     <h3 class="name" data-win-bind="innerText:name"></h3>
                 </div>
             </div>
+
+            <!-- Content -->
+            <div class="explanation">The same data as the previous demo and the same binding technique as well, except now the data has been grouped and the ListView reflects that nicely.</div>
+            <div data-win-control="WinJS.UI.ListView" data-win-options="{
+                itemTemplate:select('.itemtemplate'),
+                itemDataSource:codeShow.Demos.listviews.grouped.groupedList.dataSource,
+                itemHeaderTemplate:select('.headertemplate'),
+                groupDataSource:codeShow.Demos.listviews.grouped.groupedList.groups.dataSource    
+            }"></div>
             <div class="headertemplate" data-win-control="WinJS.Binding.Template">
                 <div data-win-bind="innerText:name"></div>
             </div>

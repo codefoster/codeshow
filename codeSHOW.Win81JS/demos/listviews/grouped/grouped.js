@@ -2,7 +2,7 @@
     "use strict";
 
     WinJS.UI.Pages.define("/demos/listviews/grouped/grouped.html", {
-        ready: function (element, options) {
+        init: function (element, options) {
             var attractions = [
                 { name: "Fern Grotto", category: "Flora", location: "East", imageUrl: "http://www.kauai.com/photos/kauai/point/98/super/fern_grotto-kauai-attraction.JPG", description: "Only accessible by boat or Kayak, the fern Grotto is located about two miles up Kauai’s Wailua River, the only navigable river in the State of Hawaii." },
                 { name: "Hanalei Valley Lookout", category: "Scenery", location: "North", imageUrl: "http://www.kauai.com/photos/kauai/point/51/super/hanalei-valley-lookout-kauai-attractions-3.jpg", description: "The Hanalei Valley is an enchanted site charmed with the likes of countless waterfalls, rainbows, fields of taro and hidden treasures waiting to be explored." },
@@ -23,12 +23,15 @@
                 { name: "Wet and Dry Caves", category: "Other", location: "North", imageUrl: "http://www.kauai.com/photos/kauai/point/111/super/wet-and-dry-caves-kauai-attractions.jpg", description: "Waikanaloa & Waikapalae Wet Caves are located off the the main road in the Haena State Park and are easy to get to. The Waikanaloa Cave is not for swimming. The Waikapale cave is located a a little further up the road and involves a quick hike to the swim" },
             ];
 
-            var groupedList = new WinJS.Binding.List(attractions).createGrouped(function (i) { return i.category; }, function (i) { return i.category; });
-            var lv = q(".listviews .grouped .win-listview").winControl;
-            lv.itemDataSource = groupedList.dataSource;
-            lv.itemTemplate = q(".listviews .grouped .itemtemplate");
-            lv.groupDataSource = groupedList.groups.dataSource;
-            lv.itemHeaderTemplate = q(".listviews .grouped .headertemplate");
+            WinJS.Namespace.define("codeShow.Demos.listviews.grouped", {
+                groupedList: new WinJS.Binding.List(attractions)
+                    .createGrouped(function (i) { return i.category; }, function (i) { return i.category; })
+            });
+            //var lv = q(".listviews .grouped .win-listview").winControl;
+            //lv.itemDataSource = codeShow.Demos.listviews.grouped.groupedList.dataSource;
+            //lv.itemTemplate = q(".listviews .grouped .itemtemplate");
+            //lv.groupDataSource = groupedList.groups.dataSource;
+            //lv.itemHeaderTemplate = q(".listviews .grouped .headertemplate");
         }
     });
 })();

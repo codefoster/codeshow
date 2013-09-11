@@ -5,9 +5,9 @@
     <title>States</title>
 
     <!-- WinJS references -->
-    <link href="//Microsoft.WinJS.2.0.Preview/css/ui-light.css" rel="stylesheet" />
-    <script src="//Microsoft.WinJS.2.0.Preview/js/base.js"></script>
-    <script src="//Microsoft.WinJS.2.0.Preview/js/ui.js"></script>
+    <link href="//Microsoft.WinJS.2.0/css/ui-light.css" rel="stylesheet" />
+    <script src="//Microsoft.WinJS.2.0/js/base.js"></script>
+    <script src="//Microsoft.WinJS.2.0/js/ui.js"></script>
 
     <link href="states.css" rel="stylesheet" />
     <script src="states.js"></script>
@@ -22,8 +22,12 @@
         </header>
         <section aria-label="Main content" role="main">
             <div class="explanation">This is another simple example of a ListView, but a JavaScript function has been written to handle the onloadingstatechanged event and report the loading state at every change. Being able to integrate with this loading state is rather important. Notice too that each time you scroll the ListView the events fire.</div>
-            <div data-win-control="WinJS.UI.ListView"></div>
-            <div class="output"></div>
+            <div data-win-control="WinJS.UI.ListView" data-win-options="{
+                itemTemplate:select('.itemtemplate'),
+                itemDataSource:codeShow.Demos.listviews.states.attractionsList.dataSource,
+                onloadingstatechanged:codeShow.Demos.listviews.states.stateChangedFunction
+            }"></div>
+            <div id="output"></div>
             <div class="itemtemplate" data-win-control="WinJS.Binding.Template">
                 <div data-win-bind="className:type;">
                     <img data-win-bind="src:imageUrl" />

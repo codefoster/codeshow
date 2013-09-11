@@ -5,9 +5,9 @@
     <title>Circle</title>
 
     <!-- WinJS references -->
-    <link href="//Microsoft.WinJS.2.0.Preview/css/ui-light.css" rel="stylesheet" />
-    <script src="//Microsoft.WinJS.2.0.Preview/js/base.js"></script>
-    <script src="//Microsoft.WinJS.2.0.Preview/js/ui.js"></script>
+    <link href="//Microsoft.WinJS.2.0/css/ui-light.css" rel="stylesheet" />
+    <script src="//Microsoft.WinJS.2.0/js/base.js"></script>
+    <script src="//Microsoft.WinJS.2.0/js/ui.js"></script>
 
     <link href="circle.css" rel="stylesheet" />
     <script src="circle.js"></script>
@@ -21,19 +21,22 @@
             </h1>
         </header>
         <section aria-label="Main content" role="main">
+            <!-- Templates -->
+            <div class="itemtemplate" data-win-control="WinJS.Binding.Template">
+                <img data-win-bind="src: imageUrl; title: name" height="72" width="72" draggable="false" />
+            </div>
+
+            <!-- Content -->
             <div class="explanation">In Windows 8.1, you can use a custom function to lay your ListView items out however you darn well please. In this example, the items are arranged in a circle (what?!), and you can hit add and delete to see some slick animation.</div>
             <div class="controls">
                 <button onclick="codeShow.Demos.listviews.circle.add()">Add</button>
                 <button onclick="codeShow.Demos.listviews.circle.remove()">Delete</button>
             </div>
-            <div id="itemTemplate" data-win-control="WinJS.Binding.Template">
-                <img data-win-bind="src: imageUrl; title: name" height="72" width="72" draggable="false" />
-            </div>
             <div class="list" data-win-control="WinJS.UI.ListView" data-win-options="{
-                itemTemplate: itemTemplate,
+                itemTemplate: select('.itemtemplate'),
                 itemDataSource: codeShow.Demos.listviews.circle.attractionsList.dataSource,
                 layout: { type: codeShow.Demos.listviews.circle.CircleLayout }
-            }">
+            }"></div>
         </section>
     </div>
 </body>

@@ -28,7 +28,7 @@
         return app.client.getTable("team").read()
             .then(function(team) {
                 return WinJS.Promise.join(team.map(function(member) { return populateMemberAsync(member); }));
-            }, function (err) { debugger; })
+            }, function (err) { /* gulp */ })
             .then(function (team) { Data.team = team; }, function (err) { debugger; });
     }
 
@@ -49,7 +49,7 @@
 
                         //get the metadata (from the json file) (overriding title if included)
                         .then(function () { return getMetadataAsync(demo, demoFolder); }, function (err) { debugger; })
-                        .then(function (result) {
+                        .then(function (result) {       
                             if (result.jsonFileExists && demo.enabled){
                                 demo.sections.forEach(function (section) {
                                     //get the section title and add the section to the demo

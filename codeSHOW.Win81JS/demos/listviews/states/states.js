@@ -24,15 +24,23 @@
             ];
 
             //loading states
-            var statesList = new WinJS.Binding.List(attractions);
-            var lv = q(".listviews .states .win-listview").winControl;
-            lv.itemDataSource = statesList.dataSource;
-            lv.itemTemplate = q(".listviews .states .itemtemplate");
-            var output = q(".listviews .states .output");
-            lv.onloadingstatechanged = function (e) {
-                output.innerHTML += lv.loadingState + "<br/>";
-                output.scrollTop = output.scrollHeight;
-            };
+            WinJS.Namespace.define("codeShow.Demos.listviews.states", {
+                attractionsList: new WinJS.Binding.List(attractions),
+                stateChangedFunction: WinJS.Utilities.markSupportedForProcessing(function (e) {
+                    output.innerHTML += lv.loadingState + "<br/>";
+                    output.scrollTop = output.scrollHeight;
+                })
+            });
+
+            //var statesList = new WinJS.Binding.List(attractions);
+            //var lv = q(".listviews .states .win-listview").winControl;
+            //lv.itemDataSource = statesList.dataSource;
+            //lv.itemTemplate = q(".listviews .states .itemtemplate");
+            //var output = q(".listviews .states .output");
+            //lv.onloadingstatechanged = function (e) {
+            //    output.innerHTML += lv.loadingState + "<br/>";
+            //    output.scrollTop = output.scrollHeight;
+            //};
         }
     });
 })();

@@ -5,14 +5,13 @@
     "author": "Jeremy Foster",
     "dateCreated": "10/1/2013",
 	"sections":[
-		{"name":"simple"},
 		{"name":"grouped"},
 		{"name":"asymmetric"},
-		{"name":"states"},
 		{"name":"live"},
 		{"name":"draganddrop"},
 		{"name":"reorder"},
 		{"name":"circle"}
+		
 
 	]
 }
