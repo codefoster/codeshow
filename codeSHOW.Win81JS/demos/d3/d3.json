@@ -6,8 +6,8 @@
     "dateCreated": "",
 	"enabled":true,
 	"sections":[
+		{"name":"forcedirected"},
 		{"name":"alaska"},
-		{"name":"chorddiagram"},
-		{"name":"forcedirected"}
+		{"name":"chorddiagram"}
 	]
 }

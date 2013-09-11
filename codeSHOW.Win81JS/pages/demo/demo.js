@@ -3,7 +3,7 @@
 
     WinJS.UI.Pages.define("/pages/demo/demo.html", {
         ready: function (element, options) {
-
+            
             var demo;
 
             //passed in the complete form with a view
@@ -27,20 +27,22 @@
                 //single demo view
                 if (!demo.sections || demo.sections.length == 0) {
                     //render the demo page into the demoview div
-                    WinJS.UI.Pages.render(format("/demos/{0}/{0}.html", demo.name), demoview)
+                    WinJS.Namespace.define("codeShow.Pages.Demo", {
+                        pageRenderComplete: WinJS.UI.Pages.render(format("/demos/{0}/{0}.html", demo.name), demoview)
                         .then(function (page) {
                             demoview.classList.add("padleft");
 
                             //remove the section header since the demo page has one already
                             var header = page.element.querySelector("header");
                             if (header) header.style.display = "none";
-                        });
+                        })
+                    });
                 }
 
-                    //sections view
+                //sections view
                 else {
                     var divSection, sectionHeader, sectionBody;
-                    demo.sections
+                    return WinJS.Promise.join(demo.sections
 
                         //sort the sections by their sort order
                         .sort(function (a, b) {
@@ -48,7 +50,7 @@
                         })
 
                         //and render them
-                        .forEach(function (section) {
+                        .map(function (section) {
                             divSection = document.createElement("div");
                             divSection.classList.add(section.name);
                             divSection.classList.add("demosection");
@@ -61,16 +63,16 @@
 
                             //section body
                             sectionBody = document.createElement("div");
-                            WinJS.UI.Pages.render(format("/demos/{0}/{1}/{1}.html", demo.name, section.name), sectionBody)
+                            divSection.appendChild(sectionBody);
+                            demoview.appendChild(divSection);
+
+                            return WinJS.UI.Pages.render(format("/demos/{0}/{1}/{1}.html", demo.name, section.name), sectionBody)
                                 .then(function (page) {
                                     //remove the section header since the demo page has one already
                                     var header = page.element.querySelector("header");
                                     if (header) header.style.display = "none";
                                 }, function (err) { debugger; });
-                            divSection.appendChild(sectionBody);
-
-                            demoview.appendChild(divSection);
-                        });
+                        }));
                 }
             }
 
