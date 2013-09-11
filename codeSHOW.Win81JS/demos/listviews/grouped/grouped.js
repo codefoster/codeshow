@@ -27,11 +27,6 @@
                 groupedList: new WinJS.Binding.List(attractions)
                     .createGrouped(function (i) { return i.category; }, function (i) { return i.category; })
             });
-            //var lv = q(".listviews .grouped .win-listview").winControl;
-            //lv.itemDataSource = codeShow.Demos.listviews.grouped.groupedList.dataSource;
-            //lv.itemTemplate = q(".listviews .grouped .itemtemplate");
-            //lv.groupDataSource = groupedList.groups.dataSource;
-            //lv.itemHeaderTemplate = q(".listviews .grouped .headertemplate");
         }
     });
 })();
