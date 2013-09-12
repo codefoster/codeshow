@@ -7,7 +7,7 @@
             var recording = false;
             var capture;
             var fileName;
-            var btn = element.querySelector("section[role=main] button");
+            var btn = element.querySelector("#captureButton");
             btn.onclick = function () {
                 if (!recording) {
                     Windows.Devices.Enumeration.DeviceInformation.findAllAsync(Windows.Devices.Enumeration.DeviceClass.audioCapture)

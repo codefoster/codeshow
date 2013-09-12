@@ -3,7 +3,7 @@
 
     WinJS.UI.Pages.define("/demos/mediacap/video/video.html", {
         ready: function (element, options) {
-            element.querySelector("section[role=main] button").onclick = function () {
+            element.querySelector("#captureButton").onclick = function () {
                 var dialog = new Windows.Media.Capture.CameraCaptureUI();
                 dialog.videoSettings.format = Windows.Media.Capture.CameraCaptureUIVideoFormat.mp4;
                 dialog.captureFileAsync(Windows.Media.Capture.CameraCaptureUIMode.video)

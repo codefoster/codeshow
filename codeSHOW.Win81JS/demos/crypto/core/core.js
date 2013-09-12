@@ -12,8 +12,7 @@
 
             this.logLine("Enter a value and Create SHA-1...");
 
-            element.querySelector("button").onclick = function (e) {
-                //BUG: this is not firing... I don't know why
+            element.querySelector("#shaButton").onclick = function (e) {
                 that.logLine(that.hash(element.querySelector("input").value));
             };
         },
