@@ -10,7 +10,7 @@
 
             var force = d3.layout.force()
                 .charge(-120)
-                .linkDistance(30)
+                .linkDistance(90)
                 .size([width, height]);
 
             var svg = d3.select(".d3 .forcedirected .result").append("svg")
@@ -35,9 +35,9 @@
                         .data(graph.nodes)
                         .enter().append("circle")
                         .attr("class", "node")
-                        .attr("r", 5)
+                        .attr("r", 10)
                         .style("fill", function (d) { return color(d.group); })
-                        .call(force.drag);
+                        .call(force.drag)
 
                     node.append("title")
                         .text(function (d) { return d.name; });
