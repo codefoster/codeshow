@@ -1,42 +1,71 @@
-﻿.demo .padleft {
-    padding-left:120px;
-    width:calc(100% - 120px);
+﻿.demo .fragment {
+    display: block; /* don't apply the grid that most page fragments have */
 }
 
-.demo .demoview {
-    width: auto;
-    -ms-scroll-snap-x: mandatory snapInterval(0%, 80%);
-    overflow-x: scroll;
-    overflow-y: hidden;
-    height:100%;
-}
-
-.demo .codeview {
-    
-}
-
-.demo .seecode {
+.demo .viewtoggle {
     color:gray;
     cursor:pointer;
 }
 
-
-.demo .demosection {
-    box-sizing: border-box;
-    width: 80%;
-    padding-right: 80px;
-    flex: none;
-    overflow: hidden;
+.demo .padleft {
+    padding-left:120px;
+    width:calc(100% - 120px);
 }
 
-    .demo .demosection > h2 {
-        margin-bottom:20px;
+/* Swipe sections */
+.demo .swipeContainer {
+    display:flex;
+    width: auto;
+    -ms-scroll-snap-x: mandatory snapInterval(0%, 80%);
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+
+    .demo .swipeContainer .swipeSection {
+        box-sizing: border-box; /* include padding in section size */
+        width: 80%;
+        padding-right: 80px; /* space between sections */
+        flex: none;
+        overflow: hidden;
+        padding-bottom: 20px; /* room for scrollbar */
     }
-.demo .demosection:last-child {
-    width: 100%;
+
+    .demo .swipeContainer .swipeSection:last-of-type {
+        width:100%;
+    }
+
+.demo .demoview {
+    height:100%;
 }
 
-    .demo .fragment {
-        display: block; /* don't apply the grid that most page fragments have */
+.demo .codeview {
+    height:100%;
+}
+
+.demo .codeview #codeViewNoSections {
+    height:100%;
+}
+
+    .demo .codeview #codeViewNoSections .codearea {
+        height:100%;
+    }
+
+        .demo .codeview #codeViewNoSections .codearea textarea {
+            height:80%;
+            width:100%;
+        }
+
+.demo .codeview ul.sectionmenu {
+    list-style-type:none;
+    display:flex;
+    flex-direction:row;
+    margin-left:128px;
+    margin-top:-16px;
+    padding-left:0px;
+}
+
+    .demo .codeview ul.sectionmenu li {
+        padding-left:0px;
+        padding-right:50px;
     }
 
