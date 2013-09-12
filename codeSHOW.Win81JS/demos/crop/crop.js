@@ -1,5 +1,5 @@
-﻿/// <reference path="../../js/RxJS/rx.js" />
-/// <reference path="../../js/RxJS/rx.winjs.js" />
+﻿/// <reference path="../../lib/RxJS/rx.js" />
+/// <reference path="../../lib/RxJS/rx.winjs.js" />
 
 (function () {
     'use strict';
