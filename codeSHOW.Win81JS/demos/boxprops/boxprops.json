@@ -3,5 +3,11 @@
 	"keywords":["box","properties","css","css3"],
 	"description": "The basic box properties (margin, padding, border).",
 	"author": "Jeremy Foster",
-	"dateCreated": "10/1/2013"
+	"dateCreated": "10/1/2013",
+	"sections":[
+		{"name":"border"},
+		{"name":"margin"},
+		{"name":"padding"},
+		{"name":"overflow"}
+	]
 }
