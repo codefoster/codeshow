@@ -1,7 +1,11 @@
 ﻿{
 	"title": "Authentication",
 	"keywords":["authentication","live","connect"],
-	"description": "For now we have here a simple sign in to Windows Live.",
+	"description": "There's more than one way to authenticate a user!",
 	"author": "Jeremy Foster",
-	"dateCreated": "10/1/2012"
+	"dateCreated": "10/1/2012",
+	"sections":[
+		{"name":"live"},
+		{"name":"wams"}
+	]
 }
