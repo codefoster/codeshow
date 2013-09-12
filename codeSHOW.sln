@@ -9,9 +9,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalculatorCS", "CalculatorC
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CalculatorCPP", "CalculatorCPP\CalculatorCPP.vcxproj", "{26727AC2-F49B-47B0-A180-0F53593D4337}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "codeShow.Win81CS", "codeSHOW.Win81CS\codeShow.Win81CS.csproj", "{849CE43E-9B5B-4B5D-AFBE-CA72B44DB399}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "codeShow.Win81CS", "codeShow.Win81CS\codeShow.Win81CS.csproj", "{849CE43E-9B5B-4B5D-AFBE-CA72B44DB399}"
 EndProject
-Project("{262852C6-CD72-467D-83FE-5EEB1973A190}") = "codeShow.Win81JS", "codeSHOW.Win81JS\codeShow.Win81JS.jsproj", "{DE14D4EC-AC3B-4556-A7CA-3D7A718F8832}"
+Project("{262852C6-CD72-467D-83FE-5EEB1973A190}") = "codeShow.Win81JS", "codeShow.Win81JS\codeShow.Win81JS.jsproj", "{DE14D4EC-AC3B-4556-A7CA-3D7A718F8832}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
