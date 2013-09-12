@@ -1,38 +1,10 @@
-﻿.about section[role=main] > h2 { margin-bottom: 20px; }
-.about #aboutDiv .win-header { background-color:#375369; }
-.about .win-content { padding:20px;}
-.about .win-content {  }
-.about .win-listview { height: 100%; }
-.about .win-listview .win-template { 
-    background-color:#6294ad;
+﻿.about #aboutDiv .win-header { background-color:#375369; padding-bottom:20px;}
+
+.about .title {
+    font-family: "gooddog";
+    font-size: 58px;
 }
-.about .win-item > div {
-    display: -ms-grid;
-    -ms-grid-columns: 90px 1fr;
-    padding:5px;
-    margin:5px;
-}
-    .about .win-item > div img {
-        width:80px;
-        height:80px;
-        -ms-grid-row-span:2;
-    }
-    .about .win-item > div .profileText {
-        -ms-grid-column:2;
-    }
-        .about .win-item > div .profileText h3 {
-            font-weight:bold;
-        }
-        .about .win-item > div .profileText p#bio {
-            margin-top:0px;
-            font-style: italic;
-            line-height:110%;
-        }
-        .about .win-item > div .profileText p#website {
-            margin-top:0px;
-            font-style: italic;
-            line-height:110%;
-        }
-.about #projectDescription img {
-    height:40px;
-}
+    .about .title .titleCode { color: #34435a; }
+    .about .title .titleShow { color: #5e83a2; }
+
+.about .win-content { }
