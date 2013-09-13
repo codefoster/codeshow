@@ -164,6 +164,12 @@
     <Content Include="demos\flexbox\wrapping\wrapping.js" />
     <Content Include="demos\flyouts\flyouts.json" />
     <Content Include="demos\fragment\fragment.json" />
+    <Content Include="demos\gridster\gridster.json" />
+    <Content Include="demos\gridster\simple\simple.css" />
+    <Content Include="demos\gridster\simple\simple.html" />
+    <Content Include="demos\gridster\simple\simple.js" />
+    <Content Include="demos\gridster\simple\jquery.gridster.css" />
+    <Content Include="demos\gridster\simple\jquery.gridster.js" />
     <Content Include="demos\grid\grid.json" />
     <Content Include="demos\grid\biggrid\biggrid.css" />
     <Content Include="demos\grid\biggrid\biggrid.html" />

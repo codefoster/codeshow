@@ -1,0 +1,10 @@
+{
+    "title": "Gridster.js",
+    "keywords":["grid","tile","tiles","drag and drop","listview"],
+    "description": "Plug in Gridster.js for a quick and easy tile experience",
+    "author": "Jeremy Foster",
+    "dateCreated": "9/13/2013",
+	"sections": [
+		{"name":"simple"}
+	]
+}
