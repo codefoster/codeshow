@@ -9,13 +9,15 @@
             options = o;
             var that = this;
             //passed in the complete form with a view
-            if (options.demo && options.viewMode) demo = options.demo;
+            if (options.demo) demo = options.demo;
 
-                //passed in just the demo
+            //passed in just the demo
             else if (options.name && options.sections) demo = { demo: options, viewMode: "demo" };
 
             //default to demo view mode
             options.viewMode = options.viewMode || "demo";
+            if (!options.selectedSection && demo.sections.length)
+                options.selectedSection = demo.sections[0].name;
 
             //set the page title
             document.querySelector("header .pagetitle").innerText = demo.title;
@@ -131,15 +133,9 @@
                 getDemoFolderAsync
                     .then(function (demoFolder) { return demoFolder.getFilesAsync(); })
                     .then(function (files) {
-                        files = Array.prototype.slice.call(files);
-                        files
+                        files = Array.prototype.slice.call(files)
                             .filter(function (file) { return [".html", ".css", ".js"].contains(file.fileType); })
                             .sort(function (fileA, fileB) { return fileTypeSortOrder(fileA.fileType) - fileTypeSortOrder(fileB.fileType); });
-                        files = files
-                            .map(function (file) {
-                                file.demo = demo; //BUG: this is not appending the demo as I expect (I'd like to append it so I have access in the renderCode method)
-                                return file;
-                            });
                         that.renderCode(files, element.querySelector("#codeViewNoSections .codearea"));
                     });
             }
@@ -147,33 +143,57 @@
             else {
                 element.querySelector("#codeViewNoSections").style.display = "none";
                 element.querySelector("#codeViewWithSections").style.display = "block";
+
+                var sectionMenu = element.querySelector("#codeViewWithSections .sectionmenu");
+                var codeArea = element.querySelector("#codeViewWithSections .codearea");
+
                 getDemoFolderAsync
                     .then(function (demoFolder) {
                         demo.sections
                             .forEach(function (section) {
-                                var sectionMenu = element.querySelector("#codeViewWithSections .sectionmenu");
                                 var i = document.createElement("li");
                                 i.classList.add("win-type-x-large");
                                 i.innerText = section.title;
-                                sectionMenu.appendChild(i);
-                                //add an item to the section menu
-                                //wire up the menu to switch sections
-                                //add a div to the codearea (with the swipeSection class)
-                                //renderCode passing this sections files in and the div I just created
-                            });
+                                i.attributes["data-section"] = section.name;
+                                i.onclick = function (e) {
+                                    //format the menu items
+                                    var menuItems = Array.prototype.slice.call(sectionMenu.querySelectorAll("li"));
+                                    menuItems.forEach(function (i) {
+                                        var active = e.currentTarget.attributes["data-section"] == i.attributes["data-section"];
+                                        i.style.fontWeight = ( active ? "bold" : "200");
+                                        i.style.cursor = (active ? "" : "pointer");
+                                    });
 
-                        //TODO: finish!
-                        element.querySelector("#codeViewWithSections .codearea").innerText = "coming soon!";
+                                    //format the visible code
+                                    var sections = Array.prototype.slice.call(codeArea.querySelectorAll(".sectioncode"));
+                                    sections.forEach(function (section) {
+                                        section.style.display = (e.currentTarget.attributes["data-section"] == section.attributes["data-section"] ? "flex" : "none");
+                                    });
+                                };
+                                sectionMenu.appendChild(i);
+
+                                //wire up the menu to switch sections
+
+                                var divCode = document.createElement("div");
+                                divCode.classList.add("sectioncode");
+                                divCode.classList.add("swipeContainer");
+                                divCode.attributes["data-section"] = section.name;
+                                divCode.style.display = (options.selectedSection == section.name ? "flex" : "none");
+                                
+                                demoFolder.getFolderAsync(section.name)
+                                    .then(function (sectionFolder) { return sectionFolder.getFilesAsync() })
+                                    .then(function (files) {
+                                        files = Array.prototype.slice.call(files)
+                                            .filter(function (file) { return [".html", ".css", ".js"].contains(file.fileType); })
+                                            .sort(function (fileA, fileB) { return fileTypeSortOrder(fileA.fileType) - fileTypeSortOrder(fileB.fileType); });
+                                        that.renderCode(files, divCode);
+                                        codeArea.appendChild(divCode);
+                                    });
+                            });
 
                         return demoFolder.getFoldersAsync();
                     })
             }
-
-            //var cm = CodeMirror(element.querySelector("#codeArea"), {
-            //    value: "var foo = 'bar';",
-            //    mode: "javascript",
-            //    readOnly: true
-            //});
 
             function fileTypeSortOrder(type) {
                 switch (type) {
@@ -200,26 +220,13 @@
 
                 var textArea = document.createElement("textarea");
                 divSection.appendChild(textArea);
+                
+                
+                Windows.Storage.FileIO.readTextAsync(file)
+                    .then(function (fileContents) {
+                        textArea.textContent = fileContents;
+                    });
 
-
-                //WinJS.xhr({ url: filePath })
-
-                var divCode = CodeMirror(textArea, {
-                        value: "var foo = 'bar';",
-                        mode: "javascript",
-                        readOnly: true
-                });
-                //divCode.id = "divCode";
-                //divCode.style.overflowY = "auto";
-                //divCode.style.paddingRight = "20px";
-                //divCode.style.height = "calc(100% - 70px)";
-                //divCode.style.boxSizing = "border-box";
-                //new WinJS.UI.Pages.render(
-                //    "/pages/codeViewer/codeViewer.html",
-                //    divCode,
-                //    { codePath: format("/demos/{0}/{1}", demo.name, file.name) }
-                //);
-                //divSection.appendChild(divCode);
                 renderElement.appendChild(divSection);
 
             });

@@ -51,6 +51,7 @@
     }
 
         .demo .codeview #codeViewNoSections .codearea textarea {
+            font-family: Consolas, monospace;
             height:80%;
             width:100%;
         }
@@ -73,3 +74,22 @@
         padding-right:50px;
     }
 
+
+.demo .codeview #codeViewWithSections {
+    height:100%;
+}
+
+    .demo .codeview #codeViewWithSections .codearea {
+        height:100%;
+    }
+
+        .demo .codeview #codeViewWithSections .codearea .sectioncode {
+            height:100%;
+        }
+
+        .demo .codeview #codeViewWithSections .codearea textarea {
+            font-family: Consolas, monospace;
+            height:80%;
+            width:100%;
+            overflow:scroll;
+        }
