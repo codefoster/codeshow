@@ -6,6 +6,9 @@
     "dateCreated": "9/16/2013",
 	"sections":[
 		{"name":"simple"},
-		{"name":"bar"}
+		{"name":"bar"},
+		{"name":"pie"},
+		{"name":"candlestick"},
+		{"name":"legend"}
 	]
 }

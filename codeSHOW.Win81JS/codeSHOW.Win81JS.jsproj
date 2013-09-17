@@ -169,7 +169,28 @@
     <Content Include="demos\flotr\bar\lib\canvastext.js" />
     <Content Include="demos\flotr\bar\lib\flotr-0.2.0-alpha.js" />
     <Content Include="demos\flotr\bar\lib\prototype.js" />
+    <Content Include="demos\flotr\candlestick\candlestick.css" />
+    <Content Include="demos\flotr\candlestick\candlestick.html" />
+    <Content Include="demos\flotr\candlestick\candlestick.js" />
+    <Content Include="demos\flotr\candlestick\lib\base64.js" />
+    <Content Include="demos\flotr\candlestick\lib\canvastext.js" />
+    <Content Include="demos\flotr\candlestick\lib\flotr-0.2.0-alpha.js" />
+    <Content Include="demos\flotr\candlestick\lib\prototype.js" />
     <Content Include="demos\flotr\flotr.json" />
+    <Content Include="demos\flotr\legend\legend.css" />
+    <Content Include="demos\flotr\legend\legend.html" />
+    <Content Include="demos\flotr\legend\legend.js" />
+    <Content Include="demos\flotr\legend\lib\base64.js" />
+    <Content Include="demos\flotr\legend\lib\canvastext.js" />
+    <Content Include="demos\flotr\legend\lib\flotr-0.2.0-alpha.js" />
+    <Content Include="demos\flotr\legend\lib\prototype.js" />
+    <Content Include="demos\flotr\pie\lib\base64.js" />
+    <Content Include="demos\flotr\pie\lib\canvastext.js" />
+    <Content Include="demos\flotr\pie\lib\flotr-0.2.0-alpha.js" />
+    <Content Include="demos\flotr\pie\lib\prototype.js" />
+    <Content Include="demos\flotr\pie\pie.css" />
+    <Content Include="demos\flotr\pie\pie.html" />
+    <Content Include="demos\flotr\pie\pie.js" />
     <Content Include="demos\flotr\simple\lib\base64.js" />
     <Content Include="demos\flotr\simple\lib\canvastext.js" />
     <Content Include="demos\flotr\simple\lib\flotr-0.2.0-alpha.js" />
@@ -955,6 +976,9 @@
       <HintPath>NotificationsExtensions.winmd</HintPath>
       <IsWinMDFile>true</IsWinMDFile>
     </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="lib\syntaxhighlighter\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\$(WMSJSProjectDirectory)\Microsoft.VisualStudio.$(WMSJSProject).targets" />
   <!-- To modify your build process, add your task inside one of the targets below then uncomment
