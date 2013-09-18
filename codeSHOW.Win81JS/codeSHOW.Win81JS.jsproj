@@ -933,17 +933,9 @@
     <Content Include="pages\about\about.css" />
     <Content Include="pages\about\about.html" />
     <Content Include="pages\about\about.js" />
-    <Content Include="pages\codeViewer\codeViewer.css" />
-    <Content Include="pages\codeViewer\codeViewer.html" />
-    <Content Include="pages\codeViewer\codeViewer.js" />
-    <Content Include="pages\codeViewer\syntaxhighlighter\sh.css" />
-    <Content Include="pages\codeViewer\syntaxhighlighter\sh.js" />
     <Content Include="pages\demo\demo.css" />
     <Content Include="pages\demo\demo.html" />
     <Content Include="pages\demo\demo.js" />
-    <Content Include="pages\home\home.css" />
-    <Content Include="pages\home\home.html" />
-    <Content Include="pages\home\home.js" />
     <Content Include="pages\hub\hub.css" />
     <Content Include="pages\hub\hub.html" />
     <Content Include="pages\hub\hub.js" />
