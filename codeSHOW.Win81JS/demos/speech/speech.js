@@ -3,25 +3,21 @@
 
     WinJS.UI.Pages.define("/demos/speech/speech.html", {
         ready: function (element, options) {
-            //sayit.onclick = function () {
+            var audio = new Audio();
+            var synth = new Windows.Media.SpeechSynthesis.SpeechSynthesizer();
+            say("Welcome to the text to speech demo");
 
-            //    // The object for controlling and playing audio.
-            //    var audio = new Audio();
+            sayit.onclick = function () {
+                say(textToSpeak.value);
+            };
 
-            //    // The object for controlling the speech-synthesis engine (voice).
-            //    var synth = new Windows.Media.SpeechSynthesis.SpeechSynthesizer();
-
-            //    // Generate the audio stream from plain text.
-            //    synth.synthesizeTextToStreamAsync(say.value).then(function (markersStream) {
-
-            //        // Convert the stream to a URL Blob.
-            //        var blob = MSApp.createBlobFromRandomAccessStream(markersStream.ContentType, markersStream);
-
-            //        // Send the Blob to the audio object.
-            //        audio.src = URL.createObjectURL(blob, { oneTimeOnly: true });
-            //        audio.play();
-            //    });
-            //};
+            function say(msg) {
+                synth.synthesizeTextToStreamAsync(msg).then(function (s) {
+                    var blob = MSApp.createBlobFromRandomAccessStream(s.ContentType, s);
+                    audio.src = URL.createObjectURL(blob, { oneTimeOnly: true });
+                    audio.play();
+                });
+            }
         }
     });
 })();
