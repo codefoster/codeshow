@@ -50,6 +50,14 @@
                 </div>
             </div>
 
+            <!-- Ad -->
+            <div class="section_ad" data-win-control="WinJS.UI.HubSection" data-win-options="{ isHeaderStatic:true,header:''}">
+                <div id="hubad" style="width: 300px; height: 600px; border: solid 1px gray;"
+                     data-win-control="MicrosoftNSJS.Advertising.AdControl"
+                     data-win-options="{applicationId: 'd25517cb-12d4-4699-8bdc-52040c712cab', adUnitId: '10043030'}">
+                </div>
+            </div>
+
             <!-- Team section -->
             <div class="section_team" data-win-control="WinJS.UI.HubSection" data-win-options="{ isHeaderStatic: true }" data-win-res="{ winControl: {'header': 'TeamHeader'} }">
                 <div class="itemTemplate" data-win-control="WinJS.Binding.Template">
@@ -64,7 +72,7 @@
                 <div class="itemslist win-selectionstylefilled" data-win-control="WinJS.UI.ListView" data-win-options="{
                         layout: {type: WinJS.UI.ListLayout},
                         selectionMode: 'none',
-                        itemTemplate: select('.section_team .itemTemplate'),  
+                        itemTemplate: select('.section_team .itemTemplate'),
                         itemDataSource: codeShow.Pages.Hub.teamList.dataSource,
                         oniteminvoked: codeShow.Pages.Hub.teamMemberNavigate
                     }">
@@ -114,7 +122,7 @@
 
             <!-- Contributors section -->
             <div class="section_contributors" data-win-control="WinJS.UI.HubSection" data-win-res="{ winControl: {'header': 'ContributorsHeader'} }"
-                data-win-options="{ onheaderinvoked: codeShow.Pages.Hub.Commands.contributorsNavigate }">
+                 data-win-options="{ onheaderinvoked: codeShow.Pages.Hub.Commands.contributorsNavigate }">
                 <div class="itemTemplate" data-win-control="WinJS.Binding.Template">
                     <img src="#" data-win-bind="src: imageUrl; alt: name" />
                     <div class="item-text">
@@ -127,7 +135,7 @@
                 <div class="itemslist win-selectionstylefilled" data-win-control="WinJS.UI.ListView" data-win-options="{
                         layout: {type: WinJS.UI.ListLayout},
                         selectionMode: 'none',
-                        itemTemplate: select('.section_contributors .itemTemplate'),  
+                        itemTemplate: select('.section_contributors .itemTemplate'),
                         itemDataSource: codeShow.Pages.Hub.contributorList.dataSource,
                         oniteminvoked: codeShow.Pages.Hub.Commands.contributorNavigate
                     }">
