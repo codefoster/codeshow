@@ -3,7 +3,7 @@
 	"keywords":["grid","layout","css"],
 	"description": "Multiple ways to use a CSS grid",
 	"author": "Jeremy Foster",
-	"dateCreated": "10/1/2013",
+	"dateCreated": "10/1/2012",
 	"autoRenderHeader": true,
 	"sections":[
 		{"name":"simple"},

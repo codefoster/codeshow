@@ -46,7 +46,7 @@
                         //build demos list
                         Data.demos
                             .sort(function (a,b) {
-                                return (a.title < b.title ? -1 : 1);
+                                return (!b.dateCreated || new Date(a.dateCreated) > new Date(b.dateCreated) ? -1 : 1);
                             })
                             .take(12)
                             .forEach(function (demo) {
