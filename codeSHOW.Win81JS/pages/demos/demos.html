@@ -21,15 +21,24 @@
             </h1>
         </header>
         <section aria-label="Main content" role="main">
+            <!-- Templates -->
+            <div id="demoTemplate" data-win-control="WinJS.Binding.Template">
+                <div class="itemGrid">
+                    <div class="itemHandle"></div>
+                    <div class="itemContents">
+                        <h3 data-win-bind="innerText:title;"></h3>
+                        <p class="description" data-win-bind="innerText:description"></p>
+                    </div>
+                    <div class="author" data-win-bind="innerText:author"></div>
+                </div>
+            </div>
+
+            <!-- Content -->
             <div id="demosListView" data-win-control="WinJS.UI.ListView" data-win-options="{
                 itemTemplate: select('#demoTemplate'),  
                 itemDataSource: codeSHOW.Pages.Demos.demosList.dataSource,
                 oniteminvoked: codeSHOW.Pages.Demos.Commands.demoNavigate
             }"></div>
-            <div id="demoTemplate" data-win-control="WinJS.Binding.Template" style="border:solid 1px green;width:100px;height:100px;">
-                <h2 data-win-bind="innerText:title"></h2>
-                <h3 data-win-bind="innerText:description"></h3>
-            </div>
         </section>
     </div>
 </body>

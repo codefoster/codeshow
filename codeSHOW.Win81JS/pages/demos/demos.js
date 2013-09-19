@@ -15,9 +15,6 @@
 
     WinJS.UI.Pages.define("/pages/demos/demos.html", {
         ready: function (element, options) {
-            //HERE: this doesn't seem to work here (imperatively) or in the .html (declaratively)
-            demosListView.itemTemplate = document.querySelector("#demoTemplateFoo");
-
             Data.loaded.then(function () {
                 //build demos list
                 Data.demos
