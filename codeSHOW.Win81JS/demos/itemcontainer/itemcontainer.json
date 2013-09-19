@@ -3,7 +3,7 @@
     "keywords":["item","container","ListView"],
     "description": "Using an item container is like taking one item out of a ListView",
     "author": "Jeremy Foster",
-    "dateCreated": "8/18/2013",
+    "dateCreated": "2013/08/18",
 	"sections":[
 		{"name":"simple"}
 	]

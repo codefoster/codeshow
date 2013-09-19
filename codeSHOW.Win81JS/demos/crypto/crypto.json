@@ -3,7 +3,7 @@
     "keywords":["cryptography","encryption","encode","decode","code","protect","private","rsa","key"],
     "description": "Discover what facilities Windows provides your app in the area of data protection.",
     "author": "Jeremy Foster",
-    "dateCreated": "",
+    "dateCreated": "2013/02/01",
 	"sections":[
 		{"name":"encoding"},
 		{"name":"certs"},

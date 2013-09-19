@@ -3,7 +3,7 @@
     "keywords":["repeat","repeater","list","listview"],
     "description": "Repeaters were introduced in 8.1 and allow for a much simplified data list",
     "author": "Jeremy Foster",
-    "dateCreated": "8/13/2013",
+    "dateCreated": "2013/08/13",
 	"sections": [
 		{"name":"simple"}
 	]
