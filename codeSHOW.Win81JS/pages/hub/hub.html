@@ -21,13 +21,14 @@
             <h1 class="titlearea win-type-ellipsis">
                 <span class="pagetitle"><span class="titleCode">code</span><span class="titleShow">Show()</span></span>
             </h1>
+            <div data-win-control="WinJS.UI.SearchBox"></div>
         </header>
 
         <section class="hub" aria-label="Main content" role="main" data-win-control="WinJS.UI.Hub">
 
             <!-- Demos section -->
             <!-- TODO: when demos page is finished, just remove the isHeaderStatic flag below -->
-            <div class="section_demos" data-win-control="WinJS.UI.HubSection" data-win-options="{ isHeaderStatic: true, onheaderinvoked: codeShow.Pages.Hub.Commands.demosNavigate }" data-win-res="{ winControl: {'header': 'Demos'} }">
+            <div class="section_demos" data-win-control="WinJS.UI.HubSection" data-win-options="{ isHeaderStatic: false, onheaderinvoked: codeShow.Pages.Hub.Commands.demosNavigate }" data-win-res="{ winControl: {'header': 'Demos'} }">
                 <div class="itemTemplate" data-win-control="WinJS.Binding.Template">
                     <div class="itemGrid">
                         <div class="itemHandle"></div>

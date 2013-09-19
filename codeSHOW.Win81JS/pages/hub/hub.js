@@ -15,6 +15,10 @@
                 args.detail.section.onheaderinvoked(args);
             };
 
+            //focus on the search box when the users presses CTRL+E
+            document.body.onkeypress = function (e) {
+                if(e.ctrlKey && e.key == "e") document.querySelector(".win-searchbox-input").focus();
+            };
         },
 
         unload: function () {
@@ -44,7 +48,7 @@
                             .sort(function (a,b) {
                                 return (a.title < b.title ? -1 : 1);
                             })
-                            //.take(20)
+                            .take(12)
                             .forEach(function (demo) {
                                 codeShow.Pages.Hub.demosList.push(demo);
                             });

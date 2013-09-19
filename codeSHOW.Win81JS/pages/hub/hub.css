@@ -13,6 +13,13 @@
 
     .hubpage .pagetitle img { height: 70px; }
 
+.hubpage header[role=banner] .win-searchbox {
+    -ms-grid-column: 4;
+    -ms-grid-column-align:end;
+    top: 40px;
+    margin-right:30px;
+}
+
 
 .hubpage section[role=main] {
     -ms-grid-row: 1;
@@ -241,3 +248,4 @@
 .secondary-text {
     opacity: 0.6;
 }
+

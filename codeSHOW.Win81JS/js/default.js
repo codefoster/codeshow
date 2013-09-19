@@ -93,7 +93,7 @@ var pkg = Windows.ApplicationModel.Package.current;
     };
 
     app.onready = function (e) {
-        addSearchContract();
+        //addSearchContract();
         addSettingsContract();
     };
 
