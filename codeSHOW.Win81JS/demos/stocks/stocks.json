@@ -3,5 +3,6 @@
     "keywords":[""],
     "description": "",
     "author": "Jeremy Foster",
-    "dateCreated": ""
+	"enabled": false,
+    "dateCreated": "2012/10/01"
 }
