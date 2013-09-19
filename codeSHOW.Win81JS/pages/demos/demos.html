@@ -35,9 +35,10 @@
 
             <!-- Content -->
             <div id="demosListView" data-win-control="WinJS.UI.ListView" data-win-options="{
-                itemTemplate: select('#demoTemplate'),  
+                itemTemplate: select('#demoTemplate'),
                 itemDataSource: codeSHOW.Pages.Demos.demosList.dataSource,
-                oniteminvoked: codeSHOW.Pages.Demos.Commands.demoNavigate
+                oniteminvoked: codeSHOW.Pages.Demos.Commands.demoNavigate,
+                selectionMode: 'none'
             }"></div>
         </section>
     </div>
