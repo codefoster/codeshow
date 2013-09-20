@@ -6716,7 +6716,8 @@ Form.EventObserver = Class.create(Abstract.EventObserver, {
       return createMouseEnterLeaveResponder(uid, eventName, handler);
 
     return function(event) {
-      var cacheEntry = Event.cache[uid];
+        var cacheEntry = Event.cache[uid];
+        if (!cacheEntry) return;
       var element = cacheEntry.element;
 
       Event.extend(event, element);
