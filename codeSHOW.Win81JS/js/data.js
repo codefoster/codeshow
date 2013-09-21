@@ -15,12 +15,17 @@
     WinJS.Namespace.define("Data", {
         team: [],
         demos: [],
+        apps: [],
         loaded: null,
         loadData: loadData,
     });
 
     function loadData() {
-        Data.loaded = WinJS.Promise.join([loadTeam(), loadDemos()]);
+        Data.loaded = WinJS.Promise.join([
+            loadTeam(),
+            loadDemos(),
+            loadApps()
+        ]);
     }
 
     //read team from WAMS and fetch details from Twitter
@@ -30,6 +35,61 @@
                 return WinJS.Promise.join(team.map(function(member) { return populateMemberAsync(member); }));
             }, function (err) { /* gulp */ })
             .then(function (team) { Data.team = team; }, function (err) { debugger; });
+    }
+
+    function loadApps() {
+        return app.client.getTable("apps").read()
+            .then(function (apps) {
+                return WinJS.Promise.join(apps.map(function (app) {
+                    return fetchAppDetails(app.appid);
+                }));
+            }, function (err) { /* gulp */ })
+            .then(function (apps) { Data.apps = apps; }, function (err) { debugger; });
+        function fetchAppDetails(id) {
+            var app = {};
+            WinJS.xhr({ url: format("http://apps.microsoft.com/windows/en-us/app/{0}",id), responseType: "document" })
+                .then(function (result) {
+                    var d = result.response;
+                    var e; //TODO: do all of these like subcategory to be safe
+
+                    //developer name
+                    e = d.querySelector("meta[name='MS.CList.Dev.Name']");
+                    app.devname = (e ? e.content : "");
+
+                    //category
+                    e = d.querySelector("#CategoryText a.launchStoreCategory");
+                    app.category = (e ? e.innerText : "");
+
+                    //subcategory
+                    e = d.querySelector("#CategoryText a.launchStoreCategoryWSub");
+                    app.subcategory = (e ? e.innerText : "");
+
+                    //title
+                    e = d.querySelector("meta[property='og:title']");
+                    app.title = (e ? e.content : "");
+
+                    //image url
+                    e = d.querySelector("meta[property='og:image']");
+                    app.imageurl = (e ? e.content : "");
+
+                    //description
+                    e = d.querySelector("#DescriptionText");
+                    app.description = (e ? e.innerHTML : "");
+
+                    //price
+                    e = d.querySelector("#Price");
+                    app.price = (e ? e.innerText : "");
+
+                    //screenshots
+                    app.screenshots = [];
+                    e = q("#ScreenshotImageButtons .imageButton", d);
+                    if(e) e.forEach(function (b) {
+                        app.screenshots.push({ url: q("img", b).src });
+                    });
+                });
+            return app;
+        }
+
     }
 
     //populate demos (from the package)

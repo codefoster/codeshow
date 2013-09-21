@@ -21,7 +21,20 @@
             </h1>
         </header>
         <section aria-label="Main content" role="main">
-            <p></p>
+            <!-- Templates -->
+            <div class="itemTemplate" data-win-control="WinJS.Binding.Template">
+                <img data-win-bind="src:imageurl" />
+            </div>
+
+            <!-- Content -->
+            <div data-win-control="WinJS.UI.ListView" data-win-options="{
+                 itemTemplate:select('.apps .itemTemplate'),
+                 itemDataSource:codeShow.Pages.Apps.Data.dataSource
+            }"></div>
+
+            <div data-win-control="WinJS.UI.Flyout">
+                App ID: <input type="text" id="appId" />
+            </div>
         </section>
     </div>
 </body>

@@ -85,17 +85,17 @@
             <!-- Apps section -->
             <div class="section_apps" data-win-control="WinJS.UI.HubSection" data-win-options="{ onheaderinvoked: codeShow.Pages.Hub.Commands.appsNavigate }" data-win-res="{ winControl: {'header': 'AppsHeader'} }">
                 <div class="top-image-row">
-                    <img src="/images/gray.png" />
+                    <img class="screenshot" src="/images/gray.png" />
+                    <img class="logo" src="/images/gray.png" />
                 </div>
                 <div class="sub-image-row">
-                    <img src="/images/gray.png" />
-                    <img src="/images/gray.png" />
-                    <img src="/images/gray.png" />
+                    <div data-win-control="WinJS.UI.Repeater" data-win-options="{data:codeShow.Pages.Hub.subFeaturedApps}">
+                        <img data-win-bind="src:imageurl" />
+                    </div>
                 </div>
-                <div class="win-type-medium" data-win-res="{ textContent: 'DescriptionText' }"></div>
+                <div class="win-type-large" data-win-res="{ textContent: 'AppsParagraphHeader' }"></div>
                 <div class="win-type-small secondary-text">
-                    <span data-win-res="{ textContent: 'Section3Description' }"></span>
-                    <span data-win-res="{ textContent: 'Section3Description' }"></span>
+                    <span data-win-res="{ textContent: 'AppsParagraph' }"></span>
                 </div>
             </div>
 

@@ -933,6 +933,9 @@
     <Content Include="pages\about\about.css" />
     <Content Include="pages\about\about.html" />
     <Content Include="pages\about\about.js" />
+    <Content Include="pages\apps\apps.css" />
+    <Content Include="pages\apps\apps.html" />
+    <Content Include="pages\apps\apps.js" />
     <Content Include="pages\demos\demos.css" />
     <Content Include="pages\demos\demos.html" />
     <Content Include="pages\demos\demos.js" />

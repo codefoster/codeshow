@@ -173,7 +173,6 @@
 /* Apps Section */
 .hubpage .hub .section_apps {
     width: 400px;
-    display:none;
 }
 
     .hubpage .hub .section_apps .win-hub-section-content {
@@ -184,23 +183,32 @@
         height: 260px;
         margin-bottom: 10px;
         width: 400px;
+        display:-ms-grid;
     }
 
-        .hubpage .hub .section_apps .top-image-row img {
-            height: 100%;
-            width: 100%;
+        .hubpage .hub .section_apps .top-image-row img.screenshot {
+            height: 260px;
+            width: 400px;
+        }
+
+        .hubpage .hub .section_apps .top-image-row img.logo {
+            height: 50px;
+            width: 50px;
+            position:relative;
+            top:20px;
+            left:20px;
         }
 
     .hubpage .hub .section_apps .sub-image-row {
         margin-bottom: 20px;
-        display: -ms-flexbox;
+        display: flex;
         -ms-flex-flow: row nowrap;
         -ms-flex-pack: justify;
     }
 
         .hubpage .hub .section_apps .sub-image-row img {
-            height: 95px;
-            width: 130px;
+            height: 50px;
+            width: 50px;
         }
 
 /* Source Code Section */

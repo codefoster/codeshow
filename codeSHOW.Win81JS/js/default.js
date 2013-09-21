@@ -46,9 +46,9 @@ var pkg = Windows.ApplicationModel.Package.current;
                 // TODO: This application has been reactivated from suspension. Restore application state here.
             }
 
-            if (app.sessionState.history) {
-                nav.history = app.sessionState.history;
-            }
+            //if (app.sessionState.history) {
+            //    nav.history = app.sessionState.history;
+            //}
             args.setPromise(WinJS.UI.processAll()
                 .then(function () {
                     //navigate to launch from secondary tile

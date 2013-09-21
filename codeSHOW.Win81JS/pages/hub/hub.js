@@ -59,7 +59,18 @@
                             Data.team.forEach(function (member) {
                                 codeShow.Pages.Hub.teamList.push(member);
                             });
-                    
+
+                        //build apps list
+                        if (Data.apps) {
+                            var a = Data.apps.takeRandom(8);
+                            codeShow.Pages.Hub.featuredApp = a[0];
+                            document.querySelector(".section_apps .top-image-row .screenshot").src = a[0].screenshots[0].url;
+                            document.querySelector(".section_apps .top-image-row .logo").src = a[0].imageurl;
+                            for (var i = 1; i < a.length; i++) {
+                                codeShow.Pages.Hub.subFeaturedApps.push(a[i]);
+                            }
+                        }
+
                         //mark data as loaded
                         codeShow.Pages.Hub.pageDataLoaded = true;
                     });
@@ -102,6 +113,8 @@
         pageDataLoaded: false,
         demosList: new WinJS.Binding.List(),
         teamList: new WinJS.Binding.List(),
+        featuredApp: {},
+        subFeaturedApps: new WinJS.Binding.List(),
         contributorList: new WinJS.Binding.List(),
 
         //converters
