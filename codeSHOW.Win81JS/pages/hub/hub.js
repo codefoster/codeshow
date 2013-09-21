@@ -19,6 +19,7 @@
             document.body.onkeypress = function (e) {
                 if(e.ctrlKey && e.key == "e") document.querySelector(".win-searchbox-input").focus();
             };
+
         },
 
         unload: function () {
@@ -61,8 +62,40 @@
                     
                         //mark data as loaded
                         codeShow.Pages.Hub.pageDataLoaded = true;
-                });
-        },
+                    });
+
+            //handle ad exceptions
+            hubad.winControl.onErrorOccurred = function (sender, evt) {
+                //if there's no internet connection at all then use a local adtile
+                if (evt.errorCode === "NetworkConnectionFailure") {
+                    var img = document.createElement("img");
+                    img.src = "/images/adtile_codeplex.png";
+                    sender.element.appendChild(img);
+                    img.onclick = function () { launch("http://codeshow.codeplex.com"); };
+                }
+
+                //if there's internet connection but no ad was served then fetch a custom tile from WAMS/blob storage
+                else if (evt.errorCode === "NoAdAvailable") {
+                    app.client.getTable("adTiles")
+                        .where({ size: "300x600" })
+                        .read()
+                        .then(function (tiles) {
+                            var randomAd = tiles
+                                .takeRandom(1)[0];
+                            if (randomAd) {
+                                var img = document.createElement("img");
+                                img.src = randomAd.imageUrl;
+                                sender.element.appendChild(img);
+                                img.onclick = function () { launch(randomAd.linkUrl); };
+                            }
+                            else {
+                                sender.element.style.display = "none";
+                            }
+                        });
+                }
+            };
+
+        }
     });
     
     WinJS.Namespace.define("codeShow.Pages.Hub", {
