@@ -43,11 +43,11 @@
                 return WinJS.Promise.join(apps.map(function (app) {
                     return fetchAppDetails(app.appid);
                 }));
-            }, function (err) { /* gulp */ })
+            }, function (err) { debugger; })
             .then(function (apps) { Data.apps = apps; }, function (err) { debugger; });
         function fetchAppDetails(id) {
             var app = {};
-            WinJS.xhr({ url: format("http://apps.microsoft.com/windows/en-us/app/{0}",id), responseType: "document" })
+            return WinJS.xhr({ url: format("http://apps.microsoft.com/windows/en-us/app/{0}",id), responseType: "document" })
                 .then(function (result) {
                     var d = result.response;
                     var e; //TODO: do all of these like subcategory to be safe
@@ -72,6 +72,14 @@
                     e = d.querySelector("meta[property='og:image']");
                     app.imageurl = (e ? e.content : "");
 
+                    //tile background color
+                    e = d.querySelector("#AppLogo .AppTileIcon");
+                    if (e) {
+                        var x = e.style.cssText.match(/background-color:\s?(.*);?$/)[1];
+                        app.tileBackgroundColor = x;
+                    }
+                    else app.tileBackgroundColor = "white";
+
                     //description
                     e = d.querySelector("#DescriptionText");
                     app.description = (e ? e.innerHTML : "");
@@ -86,8 +94,8 @@
                     if(e) e.forEach(function (b) {
                         app.screenshots.push({ url: q("img", b).src });
                     });
-                });
-            return app;
+                })
+                .then(function() { return app; });
         }
 
     }

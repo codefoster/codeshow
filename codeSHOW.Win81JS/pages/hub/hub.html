@@ -36,7 +36,7 @@
                             <h3 data-win-bind="innerText:title;"></h3>
                             <p class="description" data-win-bind="innerText:description"></p>
                             <!--<div data-win-control="WinJS.UI.Rating" class="win-small"
-                            data-win-bind="winControl.averageRating: rating; onchange:onchangefct;"></div>-->
+                        data-win-bind="winControl.averageRating: rating; onchange:onchangefct;"></div>-->
                         </div>
                         <div class="author" data-win-bind="innerText:author"></div>
                     </div>
@@ -85,12 +85,14 @@
             <!-- Apps section -->
             <div class="section_apps" data-win-control="WinJS.UI.HubSection" data-win-options="{ onheaderinvoked: codeShow.Pages.Hub.Commands.appsNavigate }" data-win-res="{ winControl: {'header': 'AppsHeader'} }">
                 <div class="top-image-row">
-                    <img class="screenshot" src="/images/gray.png" />
-                    <img class="logo" src="/images/gray.png" />
+                    <div class="screenshot"><img /></div>
+                    <div class="logo"><img /></div>
                 </div>
                 <div class="sub-image-row">
                     <div data-win-control="WinJS.UI.Repeater" data-win-options="{data:codeShow.Pages.Hub.subFeaturedApps}">
-                        <img data-win-bind="src:imageurl" />
+                        <div data-win-bind="style.backgroundColor:tileBackgroundColor;">
+                            <img data-win-bind="src:imageurl" />
+                        </div>
                     </div>
                 </div>
                 <div class="win-type-large" data-win-res="{ textContent: 'AppsParagraphHeader' }"></div>

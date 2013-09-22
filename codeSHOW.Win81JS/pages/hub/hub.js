@@ -2,44 +2,9 @@
     "use strict";
 
     WinJS.UI.Pages.define("/pages/hub/hub.html", {
-        ready: function (element, options) {
-            var hub = element.querySelector(".hub").winControl;
-            hub.onloadingstatechanged = function (args) {
-                if (args.srcElement === hub.element && args.detail.loadingState === "complete") {
-                    this._hubReady(hub);
-                    hub.onloadingstatechanged = null;
-                }
-            }.bind(this);
-
-            hub.onheaderinvoked = function (args) {
-                args.detail.section.onheaderinvoked(args);
-            };
-
-            //focus on the search box when the users presses CTRL+E
-            document.body.onkeypress = function (e) {
-                if(e.ctrlKey && e.key == "e") document.querySelector(".win-searchbox-input").focus();
-            };
-
-        },
-
-        unload: function () {
-            session.hubScroll = document.querySelector(".hub").winControl.scrollPosition;
-        },
-
-        updateLayout: function (element) {
-            /// <param name="element" domElement="true" />
-        },
-
-        _hubReady: function (hub) {
-            /// <param name="hub" type="WinJS.UI.Hub" />
-
-            WinJS.Resources.processAll();
-            if (typeof session.hubScroll === "number") {
-                hub.scrollPosition = session.hubScroll;
-            }
-
+        init: function (element, options) {
             if (!codeShow.Pages.Hub.pageDataLoaded)
-                Data.loaded
+                return Data.loaded
                     .then(function () {
                         //when data is finished loading then hide the extended splash screen
                         splash.classList.add("hidden");
@@ -64,8 +29,6 @@
                         if (Data.apps) {
                             var a = Data.apps.takeRandom(8);
                             codeShow.Pages.Hub.featuredApp = a[0];
-                            document.querySelector(".section_apps .top-image-row .screenshot").src = a[0].screenshots[0].url;
-                            document.querySelector(".section_apps .top-image-row .logo").src = a[0].imageurl;
                             for (var i = 1; i < a.length; i++) {
                                 codeShow.Pages.Hub.subFeaturedApps.push(a[i]);
                             }
@@ -74,6 +37,56 @@
                         //mark data as loaded
                         codeShow.Pages.Hub.pageDataLoaded = true;
                     });
+
+        },
+
+        ready: function (element, options) {
+            var hub = element.querySelector(".hub").winControl;
+            hub.onloadingstatechanged = function (args) {
+                if (args.srcElement === hub.element && args.detail.loadingState === "complete") {
+                    this._hubReady(hub);
+                    hub.onloadingstatechanged = null;
+                }
+            }.bind(this);
+
+            hub.onheaderinvoked = function (args) {
+                args.detail.section.onheaderinvoked(args);
+            };
+
+            //focus on the search box when the users presses CTRL+E
+            document.body.onkeypress = function (e) {
+                if(e.ctrlKey && e.key == "e") document.querySelector(".win-searchbox-input").focus();
+            };
+
+            //bind apps section
+            //TODO: try to get this to work more elegantly by binding... couldn't get it to work
+            document.querySelector(".section_apps .top-image-row .screenshot img").src = codeShow.Pages.Hub.featuredApp.screenshots[0].url;
+            document.querySelector(".section_apps .top-image-row .logo").style.backgroundColor += codeShow.Pages.Hub.featuredApp.tileBackgroundColor;
+            document.querySelector(".section_apps .top-image-row .logo img").src = codeShow.Pages.Hub.featuredApp.imageurl;
+
+        },
+
+        unload: function () {
+            session.hubScroll = document.querySelector(".hub").winControl.scrollPosition;
+        },
+
+        updateLayout: function (element) {
+            /// <param name="element" domElement="true" />
+        },
+
+        _hubReady: function (hub) {
+            /// <param name="hub" type="WinJS.UI.Hub" />
+
+            WinJS.Resources.processAll();
+            if (typeof session.hubScroll === "number") {
+                hub.scrollPosition = session.hubScroll;
+            }
+
+            //WinJS.Binding.processAll(document.querySelector(".section_apps .top-image-row"), codeShow.Pages.Hub.featuredApp);
+            //set app section featured app images (TODO: do this with binding instead)
+            //var r = document.querySelector(".section_apps .top-image-row");
+            //r.querySelector(".screenshot").src = codeShow.Pages.Hub.featuredApp.screenshots[0].url;
+            //r.querySelector(".logo").src = codeShow.Pages.Hub.featuredApp.imageurl;
 
             //handle ad exceptions
             hubad.winControl.onErrorOccurred = function (sender, evt) {

@@ -186,27 +186,35 @@
         display:-ms-grid;
     }
 
-        .hubpage .hub .section_apps .top-image-row img.screenshot {
+        .hubpage .hub .section_apps .top-image-row .screenshot img {
             height: 260px;
             width: 400px;
         }
 
-        .hubpage .hub .section_apps .top-image-row img.logo {
-            height: 50px;
-            width: 50px;
+        .hubpage .hub .section_apps .top-image-row div.logo {
             position:relative;
             top:20px;
             left:20px;
+            -ms-grid-column-align:start;
+            -ms-grid-row-align:start;
+        }
+
+        .hubpage .hub .section_apps .top-image-row div.logo img {
+            height: 50px;
+            width: 50px;
         }
 
     .hubpage .hub .section_apps .sub-image-row {
         margin-bottom: 20px;
-        display: flex;
-        -ms-flex-flow: row nowrap;
-        -ms-flex-pack: justify;
     }
 
-        .hubpage .hub .section_apps .sub-image-row img {
+    .hubpage .hub .section_apps .sub-image-row .win-repeater{
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between; /*BUG: not working*/
+    }
+
+        .hubpage .hub .section_apps .sub-image-row .win-repeater img {
             height: 50px;
             width: 50px;
         }
