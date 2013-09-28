@@ -57,6 +57,13 @@
     </AppxManifest>
     <Content Include="css\default.css" />
     <Content Include="css\type\GoodDog.otf" />
+    <Content Include="demos\animationlibrary\animationlibrary.json" />
+    <Content Include="demos\animationlibrary\click\click.css" />
+    <Content Include="demos\animationlibrary\click\click.html" />
+    <Content Include="demos\animationlibrary\click\click.js" />
+    <Content Include="demos\animationlibrary\enterexit\enterexit.css" />
+    <Content Include="demos\animationlibrary\enterexit\enterexit.html" />
+    <Content Include="demos\animationlibrary\enterexit\enterexit.js" />
     <Content Include="demos\appbar\appbarcommand\appbarcommand.css" />
     <Content Include="demos\appbar\appbarcommand\appbarcommand.html" />
     <Content Include="demos\appbar\appbarcommand\appbarcommand.js" />
@@ -130,6 +137,9 @@
     <Content Include="demos\d3\forcedirected\forcedirected.html" />
     <Content Include="demos\d3\forcedirected\forcedirected.js" />
     <Content Include="demos\d3\forcedirected\miserables.json" />
+    <Content Include="demos\d3\steamgraph\steamgraph.css" />
+    <Content Include="demos\d3\steamgraph\steamgraph.html" />
+    <Content Include="demos\d3\steamgraph\steamgraph.js" />
     <Content Include="demos\d3\topojson.js" />
     <Content Include="demos\datejs\datejs.json" />
     <Content Include="demos\devices\devices.json" />
