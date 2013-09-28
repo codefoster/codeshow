@@ -6,8 +6,6 @@
             if (!codeShow.Pages.Hub.pageDataLoaded)
                 return Data.loaded
                     .then(function () {
-                        //when data is finished loading then hide the extended splash screen
-                        splash.classList.add("hidden");
 
                         //build demos list
                         Data.demos
@@ -37,7 +35,6 @@
                         //mark data as loaded
                         codeShow.Pages.Hub.pageDataLoaded = true;
                     });
-
         },
 
         ready: function (element, options) {
@@ -64,6 +61,11 @@
             document.querySelector(".section_apps .top-image-row .logo").style.backgroundColor += codeShow.Pages.Hub.featuredApp.tileBackgroundColor;
             document.querySelector(".section_apps .top-image-row .logo img").src = codeShow.Pages.Hub.featuredApp.imageurl;
 
+        },
+
+        processed: function() {
+            //when data is finished loading then hide the extended splash screen
+            splash.classList.add("hidden");
         },
 
         unload: function () {
