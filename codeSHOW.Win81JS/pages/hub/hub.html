@@ -27,8 +27,7 @@
         <section class="hub" aria-label="Main content" role="main" data-win-control="WinJS.UI.Hub">
 
             <!-- Demos section -->
-            <!-- TODO: when demos page is finished, just remove the isHeaderStatic flag below -->
-            <div class="section_demos" data-win-control="WinJS.UI.HubSection" data-win-options="{ isHeaderStatic: false, onheaderinvoked: codeShow.Pages.Hub.Commands.demosNavigate }" data-win-res="{ winControl: {'header': 'Demos'} }">
+            <div class="section_demos" data-win-control="WinJS.UI.HubSection" data-win-options="{ header: 'Demos', onheaderinvoked: codeShow.Pages.Hub.Commands.demosNavigate }">
                 <div class="itemTemplate" data-win-control="WinJS.Binding.Template">
                     <div class="itemGrid">
                         <div class="itemHandle"></div>
@@ -52,7 +51,7 @@
             </div>
 
             <!-- Ad -->
-            <div class="section_ad" data-win-control="WinJS.UI.HubSection" data-win-options="{ isHeaderStatic:true,header:''}">
+            <div class="section_ad" data-win-control="WinJS.UI.HubSection" data-win-options="{ isHeaderStatic:true, header:''}">
                 <div id="hubad" style="width: 300px; height: 600px;"
                      data-win-control="MicrosoftNSJS.Advertising.AdControl"
                      data-win-options="{applicationId: 'd25517cb-12d4-4699-8bdc-52040c712cab', adUnitId: '10043030'}">
@@ -62,7 +61,7 @@
             </div>
 
             <!-- Team section -->
-            <div class="section_team" data-win-control="WinJS.UI.HubSection" data-win-options="{ isHeaderStatic: true }" data-win-res="{ winControl: {'header': 'TeamHeader'} }">
+            <div class="section_team" data-win-control="WinJS.UI.HubSection" data-win-options="{ header: 'Team', isHeaderStatic: true }">
                 <div class="itemTemplate" data-win-control="WinJS.Binding.Template">
                     <img src="#" data-win-bind="src: imageUrl; alt: name" />
                     <div class="item-text">
@@ -83,7 +82,7 @@
             </div>
 
             <!-- Apps section -->
-            <div class="section_apps" data-win-control="WinJS.UI.HubSection" data-win-options="{ onheaderinvoked: codeShow.Pages.Hub.Commands.appsNavigate }" data-win-res="{ winControl: {'header': 'AppsHeader'} }">
+            <div class="section_apps" data-win-control="WinJS.UI.HubSection" data-win-options="{ header: 'Apps', onheaderinvoked: codeShow.Pages.Hub.Commands.appsNavigate }">
                 <div class="top-image-row">
                     <div class="screenshot"><img /></div>
                     <div class="logo"><img /></div>
@@ -102,7 +101,7 @@
             </div>
 
             <!-- Source code section -->
-            <div class="section_sourcecode" data-win-control="WinJS.UI.HubSection" data-win-options="{ isHeaderStatic: true }" data-win-res="{ winControl: {'header': 'SourceCode'} }">
+            <div class="section_sourcecode" data-win-control="WinJS.UI.HubSection" data-win-options="{ header: 'Source code'}" >
                 <img src="/images/codeplex.png" width="420" height="280" />
                 <div class="subtext win-type-x-large secondary-text" data-win-res="{ textContent: 'SourceCodeSectionSubtext' }"></div>
                 <div class="win-type-small secondary-text">
@@ -111,7 +110,7 @@
             </div>
 
             <!-- Resources Section -->
-            <div class="section_resources" data-win-control="WinJS.UI.HubSection" data-win-options="{ isHeaderStatic: true }" data-win-res="{ winControl: {'header': 'Section4'} }">
+            <div class="section_resources" data-win-control="WinJS.UI.HubSection" data-win-options="{ header: 'Resources' }" >
                 <div class="item-title win-type-medium" data-win-res="{ textContent: 'Section4ItemTitle' }"></div>
                 <div class="article-header win-type-x-large secondary-text" data-win-res="{ textContent: 'Section4Subtext' }"></div>
                 <div class="win-type-xx-small secondary-text" data-win-res="{ textContent: 'Section4ItemSubTitle' }"></div>
