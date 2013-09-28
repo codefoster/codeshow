@@ -20,7 +20,7 @@
                 letters.forEach(function (l) {
                     var e = document.createElement("div");
                     var template = q("#template", element).winControl;
-                    template.render({ name: l }, e).then(function (item) {
+                    template.render(l, e).then(function (item) {
                         item.onclick = function (e) { removeItem(e.target); };
                         var addToList = WinJS.UI.Animation.createAddToListAnimation(item, q("div", flexbox));
                         flexbox.insertBefore(item);
