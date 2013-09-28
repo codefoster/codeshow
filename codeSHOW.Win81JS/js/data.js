@@ -39,12 +39,36 @@
 
     function loadApps() {
         return app.client.getTable("apps").read()
+
+            //get app details from their Store landing page
             .then(function (apps) {
                 return WinJS.Promise.join(apps.map(function (app) {
                     return fetchAppDetails(app.appid);
                 }));
+            }, function (err) {
+                //no internet so try to load from file
+                if (err.message == "Unexpected connection failure.") {
+                    return appdata.localFolder.getFileAsync("apps.json")
+                        .then(function (file) { Windows.Storage.FileIO.readTextAsync(file); })
+                        .then(function (contents) {
+                            return JSON.parse(contents);
+                        });
+
+                }
+            })
+
+            //record the apps in the Data namespace
+            .then(function (apps) {
+                Data.apps = apps;
             }, function (err) { debugger; })
-            .then(function (apps) { Data.apps = apps; }, function (err) { debugger; });
+
+            //writes apps to local storage for offline scenario
+            .then(function () {
+                appdata.localFolder.createFileAsync("apps.json", Windows.Storage.CreationCollisionOption.replaceExisting)
+                    .then(function (file) {
+                        Windows.Storage.FileIO.writeTextAsync(file, JSON.stringify(Data.apps));
+                    });
+            });
         function fetchAppDetails(id) {
             var app = {};
             return WinJS.xhr({ url: format("http://apps.microsoft.com/windows/en-us/app/{0}",id), responseType: "document" })
