@@ -1,6 +1,10 @@
 ﻿.demos .win-listview {
-    padding-left: 120px;
     height:100%;
+    padding-right:120px;
+}
+
+.demos .win-listview .win-viewport {
+    padding-left: 120px;
 }
 
 .demos .win-container {
