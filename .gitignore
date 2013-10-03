@@ -20,3 +20,4 @@ AppPackages/
 /packages
 *.orig
 Backup_of_*
+BundleArtifacts/

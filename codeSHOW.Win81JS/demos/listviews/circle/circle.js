@@ -30,8 +30,7 @@
                 add: function () { this.attractionsList.push(attractions[Math.floor(Math.random() * attractions.length)]); },
                 remove: function () { this.attractionsList.pop(); },
                 CircleLayout: WinJS.Class.define(
-                    function CircleLayout() {
-                    },
+                    function CircleLayout() {},
                     {
                     initialize: function (site) {
                         this._site = site;
@@ -41,7 +40,6 @@
                         var site = this._site;
                         var tree = site.tree;
 
-                        // Is there a faster way to get the count?
                         var count = 0;
                         for (var groupIndex = 0; groupIndex < tree.length; groupIndex++) {
                             var items = tree[groupIndex].itemsContainer.items;

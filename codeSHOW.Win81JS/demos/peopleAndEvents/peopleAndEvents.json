@@ -3,5 +3,6 @@
     "keywords":["people","event","events","person","hub","contacts","calendar","schedule"],
     "description": "Integrate the users contacts and calendar events in your app",
     "author": "Jeremy Foster",
-    "dateCreated": ""
+    "dateCreated": "5/1/2013",
+	"enabled":false
 }

@@ -9,8 +9,10 @@
 
         },
         ready: function (element, options) {
+            const ITEM_COUNT = 10;
+            const FREQUENCY = 2; //Hz
 
-            for (var i = 0; i < 10; i++) {
+            for (var i = 0; i < ITEM_COUNT; i++) {
                 codeShow.Demos.listview.live.data.push(WinJS.Binding.as({ value: 0 }));
             };
 
@@ -20,7 +22,7 @@
                 codeShow.Demos.listview.live.data.forEach(function (value, index, array) {
                     value.value = Math.floor(Math.random() * 10);
                 });
-                setTimeout(updateNumbers, 1000);
+                setTimeout(updateNumbers, 1/FREQUENCY * 1000);
             }
         }
     });
