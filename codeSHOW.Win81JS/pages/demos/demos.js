@@ -1,7 +1,7 @@
 ﻿(function () {
     "use strict";
 
-    WinJS.Namespace.define("codeSHOW.Pages.Demos", {
+    WinJS.Namespace.define("codeShow.Pages.Demos", {
         pageDataLoaded: false,
         demosList: new WinJS.Binding.List(),
         Commands: {
@@ -14,16 +14,30 @@
     });
 
     WinJS.UI.Pages.define("/pages/demos/demos.html", {
-        ready: function (element, options) {
-            Data.loaded.then(function () {
-                //build demos list
+        init: function (element, options) {
+            options = options || {};
+            return Data.loaded.then(function () {
+                //reset the demosList
+                codeShow.Pages.Demos.demosList = new WinJS.Binding.List();
+
+                //hydrate the demosList
                 Data.demos
                     .sort(function(a, b) {
                         return (a.title < b.title ? -1 : 1);
                     })
                     .forEach(function(demo) {
-                        codeSHOW.Pages.Demos.demosList.push(demo);
+                        codeShow.Pages.Demos.demosList.push(demo);
                     });
+                
+                //if a query was done, apply it
+                codeShow.Pages.Demos.demosList = codeShow.Pages.Demos.demosList.createFiltered(function (i) {
+                    var containsOptions = { behavior: "contains", caseSensitive: "false" };
+                    return !options.queryText
+                        || (i.name && (i.name.contains(options.queryText, { caseSensitive: false }) || i.name.split(" ").contains(options.queryText, containsOptions))
+                            || i.keywords && i.keywords.contains(options.queryText, containsOptions)
+                            || i.description && (i.description.contains(options.queryText, { caseSensitive: false }) || i.description.split(" ").contains(options.queryText, containsOptions)));
+                });
+
             });
         }
     });

@@ -1,8 +1,10 @@
 ﻿(function () {
     "use strict";
 
+    var page;
     WinJS.UI.Pages.define("/pages/hub/hub.html", {
         init: function (element, options) {
+            page = this;
             if (!codeShow.Pages.Hub.pageDataLoaded)
                 return Data.loaded
                     .then(function () {
@@ -41,18 +43,13 @@
             var hub = element.querySelector(".hub").winControl;
             hub.onloadingstatechanged = function (args) {
                 if (args.srcElement === hub.element && args.detail.loadingState === "complete") {
-                    this._hubReady(hub);
+                    page._hubReady(hub);
                     hub.onloadingstatechanged = null;
                 }
             }.bind(this);
 
             hub.onheaderinvoked = function (args) {
                 args.detail.section.onheaderinvoked(args);
-            };
-
-            //focus on the search box when the users presses CTRL+E
-            document.body.onkeypress = function (e) {
-                if(e.ctrlKey && e.key == "e") document.querySelector(".win-searchbox-input").focus();
             };
 
             //bind apps section
@@ -90,6 +87,8 @@
             //r.querySelector(".screenshot").src = codeShow.Pages.Hub.featuredApp.screenshots[0].url;
             //r.querySelector(".logo").src = codeShow.Pages.Hub.featuredApp.imageurl;
 
+            page._addSearchFunctionality();
+
             //handle ad exceptions
             hubad.winControl.onErrorOccurred = function (sender, evt) {
                 //if there's no internet connection at all then use a local adtile
@@ -121,6 +120,19 @@
                 }
             };
 
+        },
+        
+        _addSearchFunctionality: function() {
+            //focus on the search box when the users presses CTRL+E or starts typing
+            var s = document.querySelector(".win-searchbox");
+            s.addEventListener("querysubmitted", function (e) {
+                WinJS.Navigation.navigate("/pages/demos/demos.html", { queryText: e.detail.queryText });
+            });
+            document.body.onkeypress = function (e) {
+                if (e.ctrlKey && e.key == "e")
+                    s.querySelector(".win-searchbox-input").focus();
+            };
+            s.winControl.focusOnKeyboardInput = true;
         }
     });
     
