@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Chaining</title>
+
+    <!-- WinJS references -->
+    <link href="//Microsoft.WinJS.2.0/css/ui-light.css" rel="stylesheet" />
+    <script src="//Microsoft.WinJS.2.0/js/base.js"></script>
+    <script src="//Microsoft.WinJS.2.0/js/ui.js"></script>
+
+    <link href="chaining.css" rel="stylesheet" />
+    <script src="chaining.js"></script>
+</head>
+<body>
+    <div class="chaining fragment">
+        <header aria-label="Header content" role="banner">
+            <button data-win-control="WinJS.UI.BackButton"></button>
+            <h1 class="titlearea win-type-ellipsis">
+                <span class="pagetitle">chaining</span>
+            </h1>
+        </header>
+        <section aria-label="Main content" role="main">
+            <div class="explanation">Press Start to see the numbers 1-4 appear with a pause between each. If you look at the code for this demo, you'll see that chained promises are being used to accomplish this and you'll see the wrong way and the right way to chain your promises.</div>
+            <button class="start">Start</button><button class="reset">Reset</button>
+            <div class="log"></div>
+        </section>
+    </div>
+</body>
+</html>

@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Concept</title>
+
+    <!-- WinJS references -->
+    <link href="//Microsoft.WinJS.2.0/css/ui-light.css" rel="stylesheet" />
+    <script src="//Microsoft.WinJS.2.0/js/base.js"></script>
+    <script src="//Microsoft.WinJS.2.0/js/ui.js"></script>
+
+    <link href="concept.css" rel="stylesheet" />
+    <script src="concept.js"></script>
+</head>
+<body>
+    <div class="concept fragment">
+        <header aria-label="Header content" role="banner">
+            <button data-win-control="WinJS.UI.BackButton"></button>
+            <h1 class="titlearea win-type-ellipsis">
+                <span class="pagetitle">concept</span>
+            </h1>
+        </header>
+        <section aria-label="Main content" role="main">
+            <div class="method1">
+                <h3>Long Sync Task</h3>
+                <div class="explanation">This task blocks the UI. Notice the button state freezes. This is not an acceptable user experience.</div>
+                <progress value="0" max="100"></progress>
+                <button class="start">Start</button><button class="reset">Reset</button>
+            </div>
+
+            <div class="method2">
+                <h3>Long Async Task (no Promise)</h3>
+                <div class="explanation">This task does not block the UI, but our progress bar reports immediately that it's complete even though it's not.</div>
+                <progress value="0" max="100"></progress>
+                <button class="start">Start</button><button class="reset">Reset</button>
+            </div>
+
+            <div class="method3">
+                <h3>Long Async Task (using a Promise)</h3>
+                <div class="explanation">Now with promises we can not only wait until the task is done to update our progress, but we can update it along the way as progress is reported.</div>
+                <progress value="0" max="100"></progress>
+                <button class="start">Start</button><button class="reset">Reset</button>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

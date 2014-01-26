@@ -1,0 +1,16 @@
+﻿.uses progress {
+    width: 400px;
+    height: 20px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.uses > div {
+    columns: 2;
+}
+
+.uses section[role=main] button {
+    margin-right: 10px;
+}
+
+.uses div:not(:first-child) > h3 {margin-top: 20px; }
