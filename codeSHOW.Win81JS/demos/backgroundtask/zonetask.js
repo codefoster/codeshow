@@ -1,6 +1,6 @@
 ﻿(function () {
     "use strict";
-    importScripts("//Microsoft.WinJS.1.0/js/base.js");
+    importScripts("//Microsoft.WinJS.2.0/js/base.js");
     var message = "Time Zone Change!";
     var updater = Windows.UI.Notifications.TileUpdateManager.createTileUpdaterForApplication();
     var tileContent = NotificationsExtensions.TileContent.TileContentFactory.createTileWideText03();
