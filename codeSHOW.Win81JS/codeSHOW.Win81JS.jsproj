@@ -273,6 +273,12 @@
     <Content Include="demos\hub\simple\simple.html" />
     <Content Include="demos\hub\simple\simple.js" />
     <Content Include="demos\iframes\iframes.json" />
+    <Content Include="demos\input\clickpoint\clickpoint.css" />
+    <Content Include="demos\input\clickpoint\clickpoint.html" />
+    <Content Include="demos\input\clickpoint\clickpoint.js" />
+    <Content Include="demos\input\gesture\gesture.css" />
+    <Content Include="demos\input\gesture\gesture.html" />
+    <Content Include="demos\input\gesture\gesture.js" />
     <Content Include="demos\input\input.json" />
     <Content Include="demos\itemcontainer\itemcontainer.json" />
     <Content Include="demos\itemcontainer\simple\simple.css" />
@@ -427,9 +433,6 @@
     <Content Include="demos\iframes\iframes.css" />
     <Content Include="demos\iframes\iframes.html" />
     <Content Include="demos\iframes\iframes.js" />
-    <Content Include="demos\input\input.css" />
-    <Content Include="demos\input\input.html" />
-    <Content Include="demos\input\input.js" />
     <Content Include="demos\jsonFcts\jsonFcts.css" />
     <Content Include="demos\jsonFcts\jsonFcts.html" />
     <Content Include="demos\jsonFcts\jsonFcts.js" />
