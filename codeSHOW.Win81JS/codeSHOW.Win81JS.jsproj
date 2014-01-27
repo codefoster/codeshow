@@ -495,6 +495,12 @@
     <Content Include="demos\print\toggle\toggle.css" />
     <Content Include="demos\print\toggle\toggle.html" />
     <Content Include="demos\print\toggle\toggle.js" />
+    <Content Include="demos\progressbar\determinate\determinate.css" />
+    <Content Include="demos\progressbar\determinate\determinate.html" />
+    <Content Include="demos\progressbar\determinate\determinate.js" />
+    <Content Include="demos\progressbar\indeterminate\indeterminate.css" />
+    <Content Include="demos\progressbar\indeterminate\indeterminate.html" />
+    <Content Include="demos\progressbar\indeterminate\indeterminate.js" />
     <Content Include="demos\progressbar\progressbar.css" />
     <Content Include="demos\progressbar\progressbar.html" />
     <Content Include="demos\progressbar\progressbar.js" />
