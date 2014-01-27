@@ -218,6 +218,10 @@
     <Content Include="demos\flyouts\menus\menus.html" />
     <Content Include="demos\flyouts\menus\menus.js" />
     <Content Include="demos\fragment\fragment.json" />
+    <Content Include="demos\fragment\localhtml\li.html" />
+    <Content Include="demos\fragment\localhtml\localhtml.css" />
+    <Content Include="demos\fragment\localhtml\localhtml.html" />
+    <Content Include="demos\fragment\localhtml\localhtml.js" />
     <Content Include="demos\gridster\gridster.json" />
     <Content Include="demos\gridster\simple\simple.css" />
     <Content Include="demos\gridster\simple\simple.html" />
@@ -408,10 +412,6 @@
     <Content Include="demos\flyouts\flyouts.css" />
     <Content Include="demos\flyouts\flyouts.html" />
     <Content Include="demos\flyouts\flyouts.js" />
-    <Content Include="demos\fragment\fragment.css" />
-    <Content Include="demos\fragment\fragment.html" />
-    <Content Include="demos\fragment\fragment.js" />
-    <Content Include="demos\fragment\li.html" />
     <Content Include="demos\html5audio\apollo_11_dsc2.mp3" />
     <Content Include="demos\html5audio\html5audio.css" />
     <Content Include="demos\html5audio\html5audio.html" />

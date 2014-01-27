@@ -3,5 +3,8 @@
     "keywords":["fragment","render","winjs","page"],
     "description": "Render pages and page fragments with the great functionality built into WinJS.",
     "author": "Jeremy Foster",
-    "dateCreated": ""
+    "dateCreated": "",
+	"sections":[
+		{"name":"localhtml"}
+	]
 }
