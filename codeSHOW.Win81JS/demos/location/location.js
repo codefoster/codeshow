@@ -21,32 +21,22 @@
             result.lat = pos.coordinate.latitude;
             result.lon = pos.coordinate.longitude;
             result.accuracy = format("{0}m", pos.coordinate.accuracy);
-            WinJS.Binding.processAll(q("section[role=main]"), result);
+            WinJS.Binding.processAll(q(".location section[role=main]"), result);
         },
         getStatusString: function (locStatus) {
             switch (locStatus) {
                 case Windows.Devices.Geolocation.PositionStatus.ready:
                     return "Location is available.";
-                    break;
                 case Windows.Devices.Geolocation.PositionStatus.initializing:
                     return "Location devices are still initializing.";
-                    break;
                 case Windows.Devices.Geolocation.PositionStatus.noData:
                     return "Data from location services is currently unavailable.";
-                    break;
                 case Windows.Devices.Geolocation.PositionStatus.disabled:
-                    return "Your location is currently turned off. " +
-                        "Change your settings through the Settings charm " +
-                        " to turn it back on.";
-                    break;
+                    return "Your location is currently turned off. Change your settings through the Settings charm to turn it back on.";
                 case Windows.Devices.Geolocation.PositionStatus.notInitialized:
-                    return "Location status is not initialized because " +
-                        "the app has not requested location data.";
-                    break;
+                    return "Location status is not initialized because the app has not requested location data.";
                 case Windows.Devices.Geolocation.PositionStatus.notAvailable:
-                    return "You do not have the required location services " +
-                        "present on your system.";
-                    break;
+                    return "You do not have the required location services present on your system.";
                 default:
                     break;
             }
