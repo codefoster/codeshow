@@ -3,5 +3,6 @@
     "keywords":[""],
     "description": "Settings go in the settings pane. Here's how to do it.",
     "author": "Jeremy Foster",
+	"enabled": false,
     "dateCreated": ""
 }
