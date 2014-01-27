@@ -211,6 +211,12 @@
     <Content Include="demos\flotr\simple\simple.html" />
     <Content Include="demos\flotr\simple\simple.js" />
     <Content Include="demos\flyouts\flyouts.json" />
+    <Content Include="demos\flyouts\flyouts\flyouts.css" />
+    <Content Include="demos\flyouts\flyouts\flyouts.html" />
+    <Content Include="demos\flyouts\flyouts\flyouts.js" />
+    <Content Include="demos\flyouts\menus\menus.css" />
+    <Content Include="demos\flyouts\menus\menus.html" />
+    <Content Include="demos\flyouts\menus\menus.js" />
     <Content Include="demos\fragment\fragment.json" />
     <Content Include="demos\gridster\gridster.json" />
     <Content Include="demos\gridster\simple\simple.css" />
@@ -977,6 +983,7 @@
     <None Include="codeSHOW.Win81JS_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
+    <SDKReference Include="Bing.Maps.JavaScript, Version=1.313.0825.1" />
     <SDKReference Include="LiveSDKHTML, Version=5.4" />
     <SDKReference Include="Microsoft.PlayerFramework.Dash, Version=1.8.2.1" />
     <SDKReference Include="Microsoft.PlayerFramework.Js, Version=1.8.2.1" />
