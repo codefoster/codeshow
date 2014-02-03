@@ -64,10 +64,12 @@
 
             //writes apps to local storage for offline scenario
             .then(function () {
-                appdata.localFolder.createFileAsync("apps.json", Windows.Storage.CreationCollisionOption.replaceExisting)
-                    .then(function (file) {
-                        Windows.Storage.FileIO.writeTextAsync(file, JSON.stringify(Data.apps));
-                    });
+                if (Data.apps.length > 0) {
+                    appdata.localFolder.createFileAsync("apps.json", Windows.Storage.CreationCollisionOption.replaceExisting)
+                        .then(function(file) {
+                            Windows.Storage.FileIO.writeTextAsync(file, JSON.stringify(Data.apps));
+                        });
+                }
             });
         function fetchAppDetails(id) {
             var app = {};
