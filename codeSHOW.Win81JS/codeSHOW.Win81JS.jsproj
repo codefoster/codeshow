@@ -357,9 +357,6 @@
     <Content Include="demos\backgroundtask\backgroundtask.html" />
     <Content Include="demos\backgroundtask\backgroundtask.js" />
     <Content Include="demos\backgroundtask\zonetask.js" />
-    <Content Include="demos\bingmaps\bingmaps.css" />
-    <Content Include="demos\bingmaps\bingmaps.html" />
-    <Content Include="demos\bingmaps\bingmaps.js" />
     <Content Include="demos\canvasball\canvasball.css" />
     <Content Include="demos\canvasball\canvasball.html" />
     <Content Include="demos\canvasball\canvasball.js" />
@@ -415,9 +412,6 @@
     <Content Include="demos\flipview\flipview.html" />
     <Content Include="demos\flipview\flipview.js" />
     <Content Include="demos\flipview\flipview.json" />
-    <Content Include="demos\flyouts\flyouts.css" />
-    <Content Include="demos\flyouts\flyouts.html" />
-    <Content Include="demos\flyouts\flyouts.js" />
     <Content Include="demos\html5audio\apollo_11_dsc2.mp3" />
     <Content Include="demos\html5audio\html5audio.css" />
     <Content Include="demos\html5audio\html5audio.html" />
@@ -501,9 +495,6 @@
     <Content Include="demos\progressbar\indeterminate\indeterminate.css" />
     <Content Include="demos\progressbar\indeterminate\indeterminate.html" />
     <Content Include="demos\progressbar\indeterminate\indeterminate.js" />
-    <Content Include="demos\progressbar\progressbar.css" />
-    <Content Include="demos\progressbar\progressbar.html" />
-    <Content Include="demos\progressbar\progressbar.js" />
     <Content Include="demos\progressbar\progressbar.json" />
     <Content Include="demos\promises\chaining\chaining.css" />
     <Content Include="demos\promises\chaining\chaining.html" />
@@ -511,9 +502,6 @@
     <Content Include="demos\promises\concept\concept.css" />
     <Content Include="demos\promises\concept\concept.html" />
     <Content Include="demos\promises\concept\concept.js" />
-    <Content Include="demos\promises\promises.css" />
-    <Content Include="demos\promises\promises.html" />
-    <Content Include="demos\promises\promises.js" />
     <Content Include="demos\promises\promises.json" />
     <Content Include="demos\promises\uses\uses.css" />
     <Content Include="demos\promises\uses\uses.html" />
@@ -628,9 +616,6 @@
     <Content Include="demos\textprops\font\font.css" />
     <Content Include="demos\textprops\font\font.html" />
     <Content Include="demos\textprops\font\font.js" />
-    <Content Include="demos\textprops\textprops.css" />
-    <Content Include="demos\textprops\textprops.html" />
-    <Content Include="demos\textprops\textprops.js" />
     <Content Include="demos\textprops\textprops.json" />
     <Content Include="demos\textprops\text\text.css" />
     <Content Include="demos\textprops\text\text.html" />
