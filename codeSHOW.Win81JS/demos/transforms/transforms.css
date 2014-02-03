@@ -15,7 +15,6 @@
 #grid div h2 {
      -ms-grid-column-align: center;
      -ms-grid-row-align: center;
-    color: white;
 }
 
 #grid div:nth-of-type(2) {
