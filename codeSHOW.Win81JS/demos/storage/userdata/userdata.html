@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>User Data</title>
+
+    <!-- WinJS references -->
+    <link href="//Microsoft.WinJS.2.0/css/ui-light.css" rel="stylesheet" />
+    <script src="//Microsoft.WinJS.2.0/js/base.js"></script>
+    <script src="//Microsoft.WinJS.2.0/js/ui.js"></script>
+
+    <link href="userdata.css" rel="stylesheet" />
+    <script src="userdata.js"></script>
+</head>
+<body>
+    <div class="userdata fragment">
+        <header aria-label="Header content" role="banner">
+            <button data-win-control="WinJS.UI.BackButton"></button>
+            <h1 class="titlearea win-type-ellipsis">
+                <span class="pagetitle">Welcome to userdata</span>
+            </h1>
+        </header>
+        <section aria-label="Main content" role="main">
+            <div class="explanation">User data is data the user generated in your app that they will expect to save in their documents and have access to even outside the context of your app. When saving, they should be prompted for a location on their computer save the data.</div>
+            <div>
+                <input /><button>Save</button>
+                <div class="result"></div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
