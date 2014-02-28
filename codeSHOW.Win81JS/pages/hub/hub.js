@@ -54,9 +54,11 @@
 
             //bind apps section
             //TODO: try to get this to work more elegantly by binding... couldn't get it to work
-            if (codeShow.Pages.Hub.featuredApp.screenshots[0]) document.querySelector(".section_apps .top-image-row .screenshot img").src = codeShow.Pages.Hub.featuredApp.screenshots[0].url;
-            document.querySelector(".section_apps .top-image-row .logo").style.backgroundColor += codeShow.Pages.Hub.featuredApp.tileBackgroundColor;
-            document.querySelector(".section_apps .top-image-row .logo img").src = codeShow.Pages.Hub.featuredApp.imageurl;
+            if (codeShow.Pages.Hub.featuredApp && codeShow.Pages.Hub.featuredApp.screenshots[0]) {
+                document.querySelector(".section_apps .top-image-row .screenshot img").src = codeShow.Pages.Hub.featuredApp.screenshots[0].url;
+                document.querySelector(".section_apps .top-image-row .logo").style.backgroundColor += codeShow.Pages.Hub.featuredApp.tileBackgroundColor;
+                document.querySelector(".section_apps .top-image-row .logo img").src = codeShow.Pages.Hub.featuredApp.imageurl;
+            }
 
         },
 

@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/2010/manifest" xmlns:m2="http://schemas.microsoft.com/appx/2013/manifest">
-  <Identity Name="codeShowJS81" Version="2.0.0.0" Publisher="CN=jerfost" />
+  <Identity Name="36805codefoster.codeSHOW" Version="1.2.0.32" Publisher="CN=603A18C8-7F37-48CF-B16C-FED79B9AEA66" />
   <Properties>
-    <DisplayName>codeShow</DisplayName>
+    <DisplayName>codeSHOW</DisplayName>
     <PublisherDisplayName>codefoster</PublisherDisplayName>
     <Logo>images\store.png</Logo>
   </Properties>
@@ -15,7 +15,7 @@
   </Resources>
   <Applications>
     <Application Id="App" StartPage="default.html">
-      <m2:VisualElements DisplayName="codeShow" Description="codeShow" ForegroundText="light" BackgroundColor="#5e83a2" Square150x150Logo="images\square150.png" Square30x30Logo="images\square30.png">
+      <m2:VisualElements DisplayName="codeSHOW" Description="codeShow" ForegroundText="light" BackgroundColor="#5e83a2" Square150x150Logo="images\square150.png" Square30x30Logo="images\square30.png">
         <m2:DefaultTile Square70x70Logo="images/square70.png">
         </m2:DefaultTile>
         <m2:SplashScreen Image="images\splashscreen.png" BackgroundColor="white" />

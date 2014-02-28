@@ -49,14 +49,16 @@
     <RequiredPlatformVersion>8.1</RequiredPlatformVersion>
     <MinimumVisualStudioVersion>12.0</MinimumVisualStudioVersion>
     <DefaultLanguage>en-US</DefaultLanguage>
-    <PackageCertificateKeyFile>codeSHOW.Win81JS_TemporaryKey.pfx</PackageCertificateKeyFile>
+    <PackageCertificateKeyFile>codeShow.Win81JS_StoreKey.pfx</PackageCertificateKeyFile>
     <AppxAutoIncrementPackageRevision>True</AppxAutoIncrementPackageRevision>
     <AppxBundlePlatforms>x86|x64|arm</AppxBundlePlatforms>
+    <PackageCertificateThumbprint>B0439CC9FA1AC6D5E1A7A6EDBFADEDC6B869A70C</PackageCertificateThumbprint>
   </PropertyGroup>
   <ItemGroup>
     <AppxManifest Include="package.appxmanifest">
       <SubType>Designer</SubType>
     </AppxManifest>
+    <None Include="codeShow.Win81JS_StoreKey.pfx" />
     <Content Include="css\default.css" />
     <Content Include="css\type\GoodDog.otf" />
     <Content Include="demos\animationlibrary\animationlibrary.json" />
@@ -592,9 +594,6 @@
     <Content Include="demos\storage\appstate\appstate.css" />
     <Content Include="demos\storage\appstate\appstate.html" />
     <Content Include="demos\storage\appstate\appstate.js" />
-    <Content Include="demos\storage\storage.css" />
-    <Content Include="demos\storage\storage.html" />
-    <Content Include="demos\storage\storage.js" />
     <Content Include="demos\storage\storage.json" />
     <Content Include="demos\storage\userdata\userdata.css" />
     <Content Include="demos\storage\userdata\userdata.html" />
@@ -971,6 +970,7 @@
     <Content Include="lib\RxJS\Test\rx.testing-vsdoc.js" />
     <Content Include="lib\RxJS\Test\rx.testing.min.js" />
     <Content Include="NotificationsExtensions.winmd" />
+    <None Include="Package.StoreAssociation.xml" />
     <Content Include="packages.config" />
     <Content Include="pages\about\about.css" />
     <Content Include="pages\about\about.html" />
