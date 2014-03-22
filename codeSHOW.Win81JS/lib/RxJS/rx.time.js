@@ -1,4 +1,4 @@
-/**
+﻿/**
 * @preserve Copyright (c) Microsoft Corporation.  All rights reserved.
 * This code is licensed by Microsoft Corporation under the terms
 * of the Microsoft Reference Source License (MS-RSL).
@@ -449,14 +449,14 @@
             }
 
             return new CompositeDisposable(
-                source.subscribe(function (newValue) {
+                source.subscribe(function(newValue) {
                     hasValue = true;
                     value = newValue;
-                }, observer.onError.bind(observer), function () {
+                }, observer.onError.bind(observer), function() {
                     atEnd = true;
                 }),
                 sampler.subscribe(sampleSubscribe, observer.onError.bind(observer), sampleSubscribe)
-            )
+            );
         });
     };
 
