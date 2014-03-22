@@ -3,5 +3,6 @@
 	"keywords":["advertising","advertise","ads","ad","basic"],
 	"description": "See how to implement ads from the Windows Ad SDK",
 	"author": "Jeremy Foster",
-	"dateCreated": "2012/11/14"
+	"dateCreated": "2012/11/14",
+    "enabled":false
 }

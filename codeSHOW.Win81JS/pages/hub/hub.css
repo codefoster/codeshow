@@ -173,6 +173,7 @@
 /* Apps Section */
 .hubpage .hub .section_apps {
     width: 400px;
+    display:none;
 }
 
     .hubpage .hub .section_apps .win-hub-section-content {

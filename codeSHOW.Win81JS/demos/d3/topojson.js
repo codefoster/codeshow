@@ -1,4 +1,4 @@
-topojson = (function () {
+﻿topojson = (function () {
 
     function merge(topology, arcs) {
         var fragmentByStart = {},

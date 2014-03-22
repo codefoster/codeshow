@@ -1,7 +1,7 @@
-/**
+ï»¿/**
  * This code is released to the public domain by Jim Studt, 2007.
  * He may keep some sort of up to date copy at http://www.federated.com/~jim/canvastext/
- * It as been modified by Fabien Ménager to handle font style like size, weight, color and rotation. 
+ * It as been modified by Fabien MÃ©nager to handle font style like size, weight, color and rotation. 
  * A partial support for accentuated letters as been added too.
  */
 var CanvasText = {
@@ -106,22 +106,22 @@ var CanvasText = {
     '|': { width: 8,  points: [[4,25],[4,-7]] },
     '}': { width: 14, points: [[5,25],[7,24],[8,23],[9,21],[9,19],[8,17],[7,16],[6,14],[6,12],[8,10],null,[7,24],[8,22],[8,20],[7,18],[6,17],[5,15],[5,13],[6,11],[10,9],[6,7],[5,5],[5,3],[6,1],[7,0],[8,-2],[8,-4],[7,-6],null,[8,8],[6,6],[6,4],[7,2],[8,1],[9,-1],[9,-3],[8,-5],[7,-6],[5,-7]] },
     '~': { width: 24, points: [[3,6],[3,8],[4,11],[6,12],[8,12],[10,11],[14,8],[16,7],[18,7],[20,8],[21,10],null,[3,8],[4,10],[6,11],[8,11],[10,10],[14,7],[16,6],[18,6],[20,7],[21,10],[21,12]] },
-    'é': { diacritic: '´', letter: 'e' },
-    'è': { diacritic: '`', letter: 'e' },
-    'ê': { diacritic: '^', letter: 'e' },
-    'ë': { diacritic: '¨', letter: 'e' },
-    'à': { diacritic: '`', letter: 'a' },
-    'ç': { diacritic: '¸', letter: 'c' },
-    'ñ': { diacritic: '~', letter: 'n' },
-    'ô': { diacritic: '^', letter: 'o' },
-    'É': { diacritic: '´', letter: 'E' },
-    'È': { diacritic: '`', letter: 'E' },
-    'Ê': { diacritic: '^', letter: 'E' },
-    'Ë': { diacritic: '¨', letter: 'E' },
-    'À': { diacritic: '`', letter: 'A' },
-    'Ç': { diacritic: '¸', letter: 'C' },
-    'Ñ': { diacritic: '~', letter: 'N' },
-    'Ô': { diacritic: '^', letter: 'O' }
+    'Ã©': { diacritic: 'Â´', letter: 'e' },
+    'Ã¨': { diacritic: '`', letter: 'e' },
+    'Ãª': { diacritic: '^', letter: 'e' },
+    'Ã«': { diacritic: 'Â¨', letter: 'e' },
+    'Ã ': { diacritic: '`', letter: 'a' },
+    'Ã§': { diacritic: 'Â¸', letter: 'c' },
+    'Ã±': { diacritic: '~', letter: 'n' },
+    'Ã´': { diacritic: '^', letter: 'o' },
+    'Ã‰': { diacritic: 'Â´', letter: 'E' },
+    'Ãˆ': { diacritic: '`', letter: 'E' },
+    'ÃŠ': { diacritic: '^', letter: 'E' },
+    'Ã‹': { diacritic: 'Â¨', letter: 'E' },
+    'Ã€': { diacritic: '`', letter: 'A' },
+    'Ã‡': { diacritic: 'Â¸', letter: 'C' },
+    'Ã‘': { diacritic: '~', letter: 'N' },
+    'Ã”': { diacritic: '^', letter: 'O' }
   },
   
   specialchars: {
@@ -130,11 +130,11 @@ var CanvasText = {
   
   /** Diacritics, used to draw accentuated letters */
   diacritics: {
-    '¸': { entity: 'cedil', points: [[6,-4],[4,-6],[2,-7],[1,-7]] },
-    '´': { entity: 'acute', points: [[8,19],[13,22]] },
+    'Â¸': { entity: 'cedil', points: [[6,-4],[4,-6],[2,-7],[1,-7]] },
+    'Â´': { entity: 'acute', points: [[8,19],[13,22]] },
     '`': { entity: 'grave', points: [[7,22],[12,19]] },
     '^': { entity: 'circ',  points: [[5.5,19],[9.5,23],[12.5,19]] },
-    '¨': { entity: 'trema', points: [[5,21],[6,20],[7,21],[6,22],[5,21],null,[12,21],[13,20],[14,21],[13,22],[12,21]] },
+    'Â¨': { entity: 'trema', points: [[5,21],[6,20],[7,21],[6,22],[5,21],null,[12,21],[13,20],[14,21],[13,22],[12,21]] },
     '~': { entity: 'tilde', points: [[4,18],[7,22],[10,18],[13,22]] }
   },
   

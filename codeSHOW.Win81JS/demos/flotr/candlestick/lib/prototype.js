@@ -1,4 +1,4 @@
-/*  Prototype JavaScript framework, version 1.7.1
+﻿/*  Prototype JavaScript framework, version 1.7.1
  *  (c) 2005-2010 Sam Stephenson
  *
  *  Prototype is freely distributable under the terms of an MIT-style license.
@@ -6716,8 +6716,8 @@ Form.EventObserver = Class.create(Abstract.EventObserver, {
       return createMouseEnterLeaveResponder(uid, eventName, handler);
 
     return function(event) {
-        var cacheEntry = Event.cache[uid];
-        if (!cacheEntry) return;
+      var cacheEntry = Event.cache[uid];
+      if (!cacheEntry) return;
       var element = cacheEntry.element;
 
       Event.extend(event, element);

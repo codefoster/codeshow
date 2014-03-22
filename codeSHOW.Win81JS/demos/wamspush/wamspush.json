@@ -3,5 +3,6 @@
     "keywords":["wams","backend","windows","azure","mobile","services","push","notification","toast","alert"],
     "description": "Easy push notifications with Windows Azure Mobile Services",
     "author": "Jeremy Foster",
-    "dateCreated": ""
+    "dateCreated": "",
+    "enabled":false
 }

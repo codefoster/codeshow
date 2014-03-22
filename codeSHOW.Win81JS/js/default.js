@@ -23,8 +23,8 @@ var pkg = Windows.ApplicationModel.Package.current;
         //initiate loading of app data
         setupWamsClient();
         if (!Data.loaded) Data.loadData();
-        
-        app.paid = storeApp.licenseInformation.productLicenses.lookup("killTheAds").isActive;
+
+        app.paid = true;//storeApp.licenseInformation.productLicenses.lookup("killTheAds").isActive;
 
         //set up the demos list (empty for now)
         app.demosList = new WinJS.Binding.List()

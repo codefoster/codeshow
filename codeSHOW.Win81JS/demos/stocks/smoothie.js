@@ -1,4 +1,4 @@
-// MIT License:
+﻿// MIT License:
 //
 // Copyright (c) 2010-2011, Joe Walnes
 //
