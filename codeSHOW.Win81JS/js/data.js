@@ -24,7 +24,7 @@
         Data.loaded = WinJS.Promise.join([
             loadTeam(),
             loadDemos(),
-            loadApps()
+            //loadApps()
         ]);
     }
 

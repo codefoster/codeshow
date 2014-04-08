@@ -1,8 +1,0 @@
-{
-    "title": "Netflix by 10",
-    "keywords":["netflix","xhr","rest","fetch","mashup","service","json","listview","bind","binding"],
-    "description": "Use WinJS.Promise.join and individual xhr calls to get 10 Netflix movies starting with each letter of the alphabet.",
-    "author": "Jeremy Foster",
-    "dateCreated": "",
-	"enabled": false
-}

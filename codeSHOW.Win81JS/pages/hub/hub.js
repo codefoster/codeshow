@@ -5,6 +5,10 @@
     WinJS.UI.Pages.define("/pages/hub/hub.html", {
         init: function (element, options) {
             page = this;
+
+            //make select portions of this page's functionality available outside the page
+            createNamespace();
+
             if (!codeShow.Pages.Hub.pageDataLoaded)
                 return Data.loaded
                     .then(function () {
@@ -72,7 +76,10 @@
         },
 
         updateLayout: function (element) {
-            /// <param name="element" domElement="true" />
+            // first attempt at hiding the ad if the app has been paid for
+            // var adStyle = document.querySelector(".section_ad").style;
+            // adStyle.width = (app.paid ? "0px" : "auto");
+            // if (app.paid) adStyle.display = "none";
         },
 
         _hubReady: function (hub) {
@@ -122,6 +129,7 @@
                 }
             };
 
+            this.updateLayout();
         },
         
         _addSearchFunctionality: function() {
@@ -137,44 +145,47 @@
             s.winControl.focusOnKeyboardInput = true;
         }
     });
-    
-    WinJS.Namespace.define("codeShow.Pages.Hub", {
-        pageDataLoaded: false,
-        demosList: new WinJS.Binding.List(),
-        teamList: new WinJS.Binding.List(),
-        featuredApp: {},
-        subFeaturedApps: new WinJS.Binding.List(),
-        contributorList: new WinJS.Binding.List(),
 
-        //converters
-        Converters: {
-            twitterHandleConverter: new WinJS.Binding.converter(function(value) {
-                return "@" + value;
-            })
-        },
+    function createNamespace() {
+        WinJS.Namespace.define("codeShow.Pages.Hub", {
+            pageDataLoaded: false,
+            demosList: new WinJS.Binding.List(),
+            teamList: new WinJS.Binding.List(),
+            featuredApp: {},
+            subFeaturedApps: new WinJS.Binding.List(),
+            contributorList: new WinJS.Binding.List(),
+            updateLayout: page.updateLayout,
 
-        //commands
-        Commands: {
-            demoNavigate: util.markSupportedForProcessing(function (data) {
-                data.detail.itemPromise.then(function(item) {
-                    nav.navigate("/pages/demo/demo.html", { demo: item.data, viewMode: "demo" });
-                });
-            }),
-            demosNavigate: util.markSupportedForProcessing(function () {
-                nav.navigate("/pages/demos/demos.html");
-            }),
-            teamMemberNavigate: util.markSupportedForProcessing(function() {
-                nav.navigate("/pages/teamMember/teamMember.html");
-            }),
-            appsNavigate: util.markSupportedForProcessing(function () {
-                nav.navigate("/pages/apps/apps.html");
-            }),
-            contributorNavigate: util.markSupportedForProcessing(function () {
-                nav.navigate("/pages/contributors/contributors.html");
-            }),
-            contributorsNavigate: util.markSupportedForProcessing(function () {
-                nav.navigate("/pages/contributors/contributors.html");
-            })
-        }
-    });
+            //converters
+            Converters: {
+                twitterHandleConverter: new WinJS.Binding.converter(function (value) {
+                    return "@" + value;
+                })
+            },
+
+            //commands
+            Commands: {
+                demoNavigate: util.markSupportedForProcessing(function (data) {
+                    data.detail.itemPromise.then(function (item) {
+                        nav.navigate("/pages/demo/demo.html", { demo: item.data, viewMode: "demo" });
+                    });
+                }),
+                demosNavigate: util.markSupportedForProcessing(function () {
+                    nav.navigate("/pages/demos/demos.html");
+                }),
+                teamMemberNavigate: util.markSupportedForProcessing(function () {
+                    nav.navigate("/pages/teamMember/teamMember.html");
+                }),
+                appsNavigate: util.markSupportedForProcessing(function () {
+                    nav.navigate("/pages/apps/apps.html");
+                }),
+                contributorNavigate: util.markSupportedForProcessing(function () {
+                    nav.navigate("/pages/contributors/contributors.html");
+                }),
+                contributorsNavigate: util.markSupportedForProcessing(function () {
+                    nav.navigate("/pages/contributors/contributors.html");
+                })
+            }
+        });
+    }
 })();

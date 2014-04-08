@@ -24,7 +24,7 @@ var pkg = Windows.ApplicationModel.Package.current;
         setupWamsClient();
         if (!Data.loaded) Data.loadData();
 
-        app.paid = true;//storeApp.licenseInformation.productLicenses.lookup("killTheAds").isActive;
+        //app.paid = storeApp.licenseInformation.productLicenses.lookup("killTheAds").isActive;
 
         //set up the demos list (empty for now)
         app.demosList = new WinJS.Binding.List()
@@ -158,8 +158,8 @@ var pkg = Windows.ApplicationModel.Package.current;
                  aboutDiv: { title: "About", href: "/pages/about/about.html" },
                  privacyDiv: { title: "Privacy Policy", href: "/pages/privacy/privacy.html" }
             };
-            if (storeApp.licenseInformation.isActive && !storeApp.licenseInformation.isTrial && !storeApp.licenseInformation.productLicenses.lookup("killTheAds").isActive)
-                e.detail.applicationcommands.killAdsDiv = { title: "Kill the Ads!", href: "/pages/killads/killads.html" };
+            //if (storeApp.licenseInformation.isActive && !storeApp.licenseInformation.isTrial && !storeApp.licenseInformation.productLicenses.lookup("killTheAds").isActive)
+            //    e.detail.applicationcommands.killAdsDiv = { title: "Kill the Ads!", href: "/pages/killads/killads.html" };
 
             WinJS.UI.SettingsFlyout.populateSettings(e);
         };

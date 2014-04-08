@@ -1,8 +1,0 @@
-{
-    "title": "Netflix Data",
-    "keywords":["netflix","xhr","rest","fetch","mashup","service","json","listview","bind","binding"],
-    "description": "A basic example of fetching data from Netflix using xhr.",
-    "author": "Jeremy Foster",
-    "dateCreated": "",
-	"enabled": false
-}
