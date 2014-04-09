@@ -99,6 +99,7 @@ var pkg = Windows.ApplicationModel.Package.current;
 
     app.onerror = function (err) {
         WinJS.Navigation.navigate("/pages/hub/hub.html", { message: "Sorry, there was an error that occurred. Don't worry, we're on it. Just keep doing what you were doing." });
+        try { app.client.getTable("errors").insert({ text: err.detail.error }); } catch (e) { /* gulp */ }
         return true;
     };
 

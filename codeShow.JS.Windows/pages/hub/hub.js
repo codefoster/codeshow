@@ -44,7 +44,7 @@
         },
 
         ready: function (element, options) {
-            if (options.message) {
+            if (options && options.message) {
                 Windows.UI.Popups.MessageDialog(options.message).showAsync().then(function () {
                     options.message = null;
                 });
