@@ -44,6 +44,11 @@
         },
 
         ready: function (element, options) {
+            if (options.message) {
+                Windows.UI.Popups.MessageDialog(options.message).showAsync().then(function () {
+                    options.message = null;
+                });
+            }
             var hub = element.querySelector(".hub").winControl;
             hub.onloadingstatechanged = function (args) {
                 if (args.srcElement === hub.element && args.detail.loadingState === "complete") {

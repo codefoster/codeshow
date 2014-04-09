@@ -97,6 +97,11 @@ var pkg = Windows.ApplicationModel.Package.current;
         addSettingsContract();
     };
 
+    app.onerror = function (err) {
+        WinJS.Navigation.navigate("/pages/hub/hub.html", { message: "Sorry, there was an error that occurred. Don't worry, we're on it. Just keep doing what you were doing." });
+        return true;
+    };
+
     //add WAMS client reference to app so it's available everywhere
     function setupWamsClient() {
         app.client = new WindowsAzure.MobileServiceClient(
