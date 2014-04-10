@@ -1,0 +1,11 @@
+{
+    "title": "OneDrive (formerly SkyDrive)",
+    "keywords":["skydrive","onedrive","live","api","connect"],
+    "description": "Get to know the basics of transferring data to and from OneDrive",
+    "author": "Jeremy Foster",
+    "dateCreated": "",
+	"enabled":true,
+    "sections": [
+        { "name": "getfolders", "author": "Iqaan Ullah" }
+    ]
+}

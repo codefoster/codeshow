@@ -577,10 +577,10 @@
     <Content Include="demos\share\share.html" />
     <Content Include="demos\share\share.js" />
     <Content Include="demos\share\share.json" />
-    <Content Include="demos\skydrive\skydrive.css" />
-    <Content Include="demos\skydrive\skydrive.html" />
-    <Content Include="demos\skydrive\skydrive.js" />
-    <Content Include="demos\skydrive\skydrive.json" />
+    <Content Include="demos\onedrive\getfolders\getfolders.css" />
+    <Content Include="demos\onedrive\getfolders\getfolders.html" />
+    <Content Include="demos\onedrive\getfolders\getfolders.js" />
+    <Content Include="demos\onedrive\onedrive.json" />
     <Content Include="demos\slidingdiv\slidingdiv.css" />
     <Content Include="demos\slidingdiv\slidingdiv.html" />
     <Content Include="demos\slidingdiv\slidingdiv.js" />
