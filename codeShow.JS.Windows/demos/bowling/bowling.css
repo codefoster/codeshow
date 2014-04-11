@@ -1,11 +1,4 @@
-﻿.bowling section {
-	margin: auto 120px;
-}
-
-body {
-}
-
-.bowling .player {
+﻿.bowling .player {
     display:flex;
     padding:5px;
 }
