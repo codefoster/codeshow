@@ -1,0 +1,14 @@
+﻿/* turn off the left margin for this demo */
+.viewbox section[role=main] .win-viewbox { margin-left: 0px; }
+
+.viewbox .win-viewbox div {
+    width:500px;
+    padding: 30px;
+}
+
+    .viewbox .win-viewbox div img {
+        width: 60px;
+        height: 60px;
+        float:left;
+        margin:10px;
+    }

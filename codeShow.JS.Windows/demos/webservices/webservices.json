@@ -1,0 +1,11 @@
+{
+    "title": "Web Services",
+    "keywords":["web","service","odata","xhr","fetch","api"],
+    "description": "Fetch data from web services",
+    "author": "Jeremy Foster",
+    "dateCreated": "3/21/2014",
+    "sections":[
+        {"name":"basic"},
+        {"name":"odata"}
+    ]
+}

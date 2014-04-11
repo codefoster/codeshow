@@ -1,0 +1,8 @@
+{
+    "title": "Swipe Sections",
+    "keywords":["snap","swipe","section","page"],
+    "description": "Easy way to declaratively add sections that peek from off screen right and snap when you swipe.",
+    "author": "Jeremy Foster",
+    "dateCreated": "",
+	"enabled": false
+}

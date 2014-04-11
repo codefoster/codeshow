@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>External</title>
+
+    <!-- WinJS references -->
+    <link href="//Microsoft.WinJS.2.0/css/ui-light.css" rel="stylesheet" />
+    <script src="//Microsoft.WinJS.2.0/js/base.js"></script>
+    <script src="//Microsoft.WinJS.2.0/js/ui.js"></script>
+
+    <link href="external.css" rel="stylesheet" />
+    <script src="external.js"></script>
+</head>
+<body>
+    <div class="external fragment">
+        <header aria-label="Header content" role="banner">
+            <button data-win-control="WinJS.UI.BackButton"></button>
+            <h1 class="titlearea win-type-ellipsis">
+                <span class="pagetitle">Welcome to external</span>
+            </h1>
+        </header>
+        <section aria-label="Main content" role="main">
+            <div class="explanation">When an iframe's src is external (when it uses the http scheme) the contents run in web context with limited access to the local device</div>
+            <!-- BUG: nothing is showing up in the iframe -->
+            <iframe src="http://codefoster.com"></iframe>
+        </section>
+    </div>
+</body>
+</html>
