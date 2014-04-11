@@ -164,7 +164,7 @@
             //converters
             Converters: {
                 twitterHandleConverter: new WinJS.Binding.converter(function (value) {
-                    return "@" + value;
+                    return (value ? "@" + value : "");
                 })
             },
 
