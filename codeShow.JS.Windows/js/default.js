@@ -10,14 +10,6 @@ var pkg = Windows.ApplicationModel.Package.current;
 
 (function () {
     "use strict";
-    //window.onkeyup = function (e) {
-    //    //TODO: check to be sure we're not in an input box before we capture some (any?) keystrokes (like home and backspace)
-    //    switch(e.key) {
-    //        //case "Home": WinJS.Navigation.navigate("/pages/home/home.html"); break;
-    //        case "BrowserBack": WinJS.Navigation.back(); break;
-    //        case "BrowserForward": WinJS.Navigation.forward(); break;
-    //    }
-    //};
 
     app.addEventListener("activated", function (args) {
         //initiate loading of app data
@@ -98,9 +90,9 @@ var pkg = Windows.ApplicationModel.Package.current;
     };
 
     app.onerror = function (err) {
-        WinJS.Navigation.navigate("/pages/hub/hub.html", { message: "Sorry, there was an error that occurred. Don't worry, we're on it. Just keep doing what you were doing." });
-        try { app.client.getTable("errors").insert({ text: err.detail.error }); } catch (e) { /* gulp */ }
-        return true;
+        try { app.client.getTable("errors").insert({ text: err.detail.error }); } catch (e) { debugger; }
+        //WinJS.Navigation.navigate("/pages/hub/hub.html", { message: "Sorry, there was an error that occurred. Don't worry, we're on it. Just keep doing what you were doing." });
+        //return true;
     };
 
     //add WAMS client reference to app so it's available everywhere
