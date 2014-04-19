@@ -456,6 +456,13 @@
     <Content Include="demos\notifications\notifications.html" />
     <Content Include="demos\notifications\notifications.js" />
     <Content Include="demos\notifications\notifications.json" />
+    <Content Include="demos\onedrive\getfolders\getfolders.css" />
+    <Content Include="demos\onedrive\getfolders\getfolders.html" />
+    <Content Include="demos\onedrive\getfolders\getfolders.js" />
+    <Content Include="demos\onedrive\onedrive.json" />
+    <Content Include="demos\onedrive\pushfile\pushfile.css" />
+    <Content Include="demos\onedrive\pushfile\pushfile.html" />
+    <Content Include="demos\onedrive\pushfile\pushfile.js" />
     <Content Include="demos\peopleAndEvents\peopleAndEvents.css" />
     <Content Include="demos\peopleAndEvents\peopleAndEvents.html" />
     <Content Include="demos\peopleAndEvents\peopleAndEvents.js" />
@@ -535,7 +542,6 @@
     <Content Include="demos\secondtile\pinandpush\pinandpush.html" />
     <Content Include="demos\secondtile\pinandpush\pinandpush.js" />
     <Content Include="demos\secondtile\secondtile.json" />
-    <Content Include="demos\secondtile\simple\simple.css" />
     <Content Include="demos\secondtile\simple\simple.html" />
     <Content Include="demos\secondtile\simple\simple.js" />
     <Content Include="demos\selectors\selectors.css" />
@@ -558,10 +564,6 @@
     <Content Include="demos\share\share.html" />
     <Content Include="demos\share\share.js" />
     <Content Include="demos\share\share.json" />
-    <Content Include="demos\onedrive\getfolders\getfolders.css" />
-    <Content Include="demos\onedrive\getfolders\getfolders.html" />
-    <Content Include="demos\onedrive\getfolders\getfolders.js" />
-    <Content Include="demos\onedrive\onedrive.json" />
     <Content Include="demos\slidingdiv\slidingdiv.css" />
     <Content Include="demos\slidingdiv\slidingdiv.html" />
     <Content Include="demos\slidingdiv\slidingdiv.js" />
@@ -751,7 +753,7 @@
   </ItemGroup>
   <ItemGroup>
     <SDKReference Include="LiveSDKHTML, Version=5.4" />
-    <SDKReference Include="Microsoft.PlayerFramework.Js, Version=1.8.2.2" />
+    <SDKReference Include="Microsoft.PlayerFramework.Js, Version=1.8.2.1" />
     <SDKReference Include="Microsoft.WinJS.2.0, Version=1.0" />
     <SDKReference Include="MSAdvertisingJS, Version=8.1" />
   </ItemGroup>
