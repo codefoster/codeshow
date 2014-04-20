@@ -170,6 +170,13 @@
     <Content Include="demos\components\components.html" />
     <Content Include="demos\components\components.js" />
     <Content Include="demos\components\components.json" />
+    <Content Include="demos\convertbase\baseconv\baseconv.css" />
+    <Content Include="demos\convertbase\baseconv\baseconv.html" />
+    <Content Include="demos\convertbase\baseconv\baseconv.js" />
+    <Content Include="demos\convertbase\colorconv\colorconv.css" />
+    <Content Include="demos\convertbase\colorconv\colorconv.html" />
+    <Content Include="demos\convertbase\colorconv\colorconv.js" />
+    <Content Include="demos\convertbase\convertbase.json" />
     <Content Include="demos\crop\crop.css" />
     <Content Include="demos\crop\crop.html" />
     <Content Include="demos\crop\crop.js" />
