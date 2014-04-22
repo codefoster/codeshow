@@ -760,7 +760,6 @@
   </ItemGroup>
   <ItemGroup>
     <SDKReference Include="LiveSDKHTML, Version=5.4" />
-    <SDKReference Include="Microsoft.PlayerFramework.Js, Version=1.8.2.1" />
     <SDKReference Include="Microsoft.WinJS.2.0, Version=1.0" />
     <SDKReference Include="MSAdvertisingJS, Version=8.1" />
   </ItemGroup>
