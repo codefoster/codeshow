@@ -13,7 +13,7 @@
     });
 
     function updatePrintDisplay() {
-        q("#printStatus").innerText = isPrintTaskRequestedHandled ? "Registered" : "Unregistered";
+        printStatus.innerText = isPrintTaskRequestedHandled ? "Registered" : "Unregistered";
     }
 
     function togglePrint() {

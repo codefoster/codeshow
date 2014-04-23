@@ -13,9 +13,8 @@
             }
             var aList = new WinJS.Binding.List(a);
 
-            var list = q("#list").winControl;
-            list.itemDataSource = aList.dataSource;
-            list.itemTemplate = q("#template");
+            list.winControl.itemDataSource = aList.dataSource;
+            list.winControl.itemTemplate = template;
         },
 
         unload: function () {

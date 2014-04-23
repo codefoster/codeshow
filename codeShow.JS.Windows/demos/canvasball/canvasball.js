@@ -5,7 +5,7 @@
         ready: function (element, options) {
             var dx = 5, dy = 5, r = 20, x = r, y = r;
 
-            var c = q("#canvas").getContext("2d");
+            var c = canvas.getContext("2d");
 
             setInterval(function () { draw(); step(); }, 10);
 

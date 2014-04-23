@@ -4,9 +4,9 @@
     WinJS.UI.Pages.define("/pages/killads/killads.html", {
         ready: function (element, options) {
             app.paid = storeApp.licenseInformation.productLicenses.lookup("killTheAds").isActive;
-            q("#killem", element).disabled = app.paid;
+            killem.disabled = app.paid;
             if (!app.paid)
-                q("#killem", element).onclick = function (e) {
+                killem.onclick = function (e) {
                     storeApp.requestProductPurchaseAsync("killTheAds", false).then(
                         function () {
                             Windows.UI.Popups.MessageDialog("Thank you for the purchase!").showAsync().then(function() {

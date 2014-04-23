@@ -22,10 +22,10 @@
         ready: function (element, options) {
             // TODO: Initialize the page here.
 
-            var pbutton = q("#domButton");
-            var title = q("#domTitle");
+            var pbutton = domButton;
+            var title = domTitle;
 
-            container = q("#domContainer");
+            container = domContainer;
 
             title.addEventListener("click", function() {
                 title.innerText = "DOM [span innerText]";

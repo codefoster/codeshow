@@ -30,8 +30,8 @@
 
             var accessList = Windows.Storage.AccessCache.StorageApplicationPermissions.futureAccessList.entries;
 
-            var lv = q("#futureAccessList").winControl;
-            lv.itemTemplate = q("#FALTemplate");
+            var lv = futureAccessList.winControl;
+            lv.itemTemplate = FALTemplate;
             lv.itemDataSource = new WinJS.Binding.List([]).dataSource;
 
             for (var i = 0; i < accessList.length; i++) {

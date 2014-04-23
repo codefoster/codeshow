@@ -6,11 +6,11 @@
             var channelOperation = Windows.Networking.PushNotifications.PushNotificationChannelManager
                 .createPushNotificationChannelForApplicationAsync();
 
-            q("#push").onclick = function (e) {
+            push.onclick = function (e) {
                 channelOperation.then(function (channel) {
                     codeshowClient
                         .getTable("wamspush_notifications")
-                        .insert({ channel: channel.uri, message: q("#message").value, sent: false });
+                        .insert({ channel: channel.uri, message: message.value, sent: false });
                 });
             };
         }

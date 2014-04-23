@@ -215,7 +215,7 @@ TODO:
     // Application bar
     function make() {
         var result;
-        var existingAppBar = q("#appbar");
+        var existingAppBar = appbar;
         if (existingAppBar)
             result = existingAppBar;
         else {

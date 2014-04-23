@@ -9,7 +9,7 @@
 
     function showHeaderMenu() {
         var sampleMenu = q(".sampleMenu");
-        var menu = q("#headerMenu").winControl;
+        var menu = headerMenu.winControl;
         menu.anchor = sampleMenu;
         menu.placement = "bottom";
         menu.alignment = "left";

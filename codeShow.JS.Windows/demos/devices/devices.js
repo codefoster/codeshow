@@ -6,9 +6,8 @@
             
             var devicesList = new WinJS.Binding.List();
 
-            var list = q("#list").winControl;
-            list.itemDataSource = devicesList.dataSource;
-            list.itemTemplate = q("#template");
+            list.winControl.itemDataSource = devicesList.dataSource;
+            list.winControl.itemTemplate = template;
             
             Windows.Devices.Enumeration.DeviceInformation.findAllAsync().done(function (devices) {
                 devices

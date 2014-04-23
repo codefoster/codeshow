@@ -7,7 +7,7 @@
 
             loadPage();
             
-            q("#reset").onclick = function (e) {
+            reset.onclick = function (e) {
                 q("div", flexbox).forEach(function(d) { removeItem(d); });
                 loadPage();
             };
@@ -19,7 +19,7 @@
 
                 letters.forEach(function (l) {
                     var e = document.createElement("div");
-                    var template = q("#template", element).winControl;
+                    var template = template.winControl;
                     template.render(l, e).then(function (item) {
                         item.onclick = function (e) { removeItem(e.target); };
                         var addToList = WinJS.UI.Animation.createAddToListAnimation(item, q("div", flexbox));

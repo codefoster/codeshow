@@ -17,11 +17,11 @@
         q("button.sendText", element).onclick = function (e) {
             // build and send the tile notification
 
-            //tileContent.textHeadingWrap.text = q("#tileText", element).value;
+            //tileContent.textHeadingWrap.text = tileText.value;
             var squareTileContent = NotificationsExtensions.TileContent.TileContentFactory.createTileSquare150x150Text04();
-            squareTileContent.textBodyWrap.text = q("#tileText", element).value;
+            squareTileContent.textBodyWrap.text = tileText.value;
             //tileContent.squareContent = squareTileContent;
-            updater.enableNotificationQueue(q("#enableQueueing", element).winControl.checked);
+            updater.enableNotificationQueue(enableQueueing.winControl.checked);
             updater.update(squareTileContent.createNotification());
         };
         

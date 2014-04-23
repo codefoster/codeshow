@@ -3,11 +3,11 @@
 
     WinJS.UI.Pages.define("/demos/popups/popups.html", {
         ready: function (element, options) {
-            q("#alertMsg").onclick = function () {
+            alertMsg.onclick = function () {
                 //Simplydoes Windows.UI.Popups.MessageDialog(str).showAsync()
                 Ocho.Popups.alert("Say anything here in this message dialog", "Title");
             };
-            q("#confirmMsg").onclick = function () {
+            confirmMsg.onclick = function () {
                 //Ocho.Popups.confirm GOES HERE
                 //confirm: function (message, title) {
                 //    return new WinJS.Promise(function (c) {
@@ -21,7 +21,7 @@
                 Ocho.Popups.confirm("Would you like to use confirmation dialogs in your app?")
                     .done(
                         function (command) {
-                            q("#detailConfirm").innerText = "You pressed " + command.label + " button with commandID: " + command.id;
+                            detailConfirm.innerText = "You pressed " + command.label + " button with commandID: " + command.id;
                         }
                     );
             };

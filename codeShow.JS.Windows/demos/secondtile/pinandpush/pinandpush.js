@@ -6,22 +6,22 @@
             var startScreen = Windows.UI.StartScreen;
             var notifications = Windows.UI.Notifications;
 
-            if (startScreen.SecondaryTile.exists("tileid.01")) q("#pintile").innerText = "Unpin"; //if secondary tile exists then display "Unpin"
+            if (startScreen.SecondaryTile.exists("tileid.01")) pintile.innerText = "Unpin"; //if secondary tile exists then display "Unpin"
 
-            q("#pintile").addEventListener("click", function () {
+            pintile.addEventListener("click", function () {
                 if (startScreen.SecondaryTile.exists("tileid.01")) {
                     //request delete secondary tile, it can't be done without requesting the user to do so
                     var secondaryTile = startScreen.SecondaryTile("tileid.01");
                     secondaryTile.requestDeleteAsync().done(
                         function (isDone) {
-                            if (isDone) q("#pintile").innerText = "Pin tile";
+                            if (isDone) pintile.innerText = "Pin tile";
                         }
                     );
                 } else {
                     //create a new secondary tile
                     var secondaryTile = new startScreen.SecondaryTile("tileid.01", "codeShow ST", "codeShow ST", "tileArgs=01", startScreen.TileOptions.showNameOnLogo, new Windows.Foundation.Uri("ms-appx:///images/logo.png"));
 
-                    var Rect = q("#pintile").getBoundingClientRect();
+                    var Rect = pintile.getBoundingClientRect();
                     var bounding = { x: Rect.left, y: Rect.top, width: Rect.width, height: Rect.height }; //get the bounding rectangle coordinates for requesting creation of secodary tile
 
                     secondaryTile.requestCreateForSelectionAsync(bounding, Windows.UI.Popups.Placement.right).done(
@@ -39,7 +39,7 @@
                                 var tileNotification = notifications.TileNotification(tileXml);
                                 notifications.TileUpdateManager.createTileUpdaterForSecondaryTile("tileid.01").update(tileNotification); //update the tile
 
-                                q("#pintile").innerText = "Unpin";
+                                pintile.innerText = "Unpin";
                             }
                         }
                     );

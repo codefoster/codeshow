@@ -13,7 +13,7 @@
 
     function init(element) {
         
-        q("#showPrefs").onclick = function (e) {
+        showPrefs.onclick = function (e) {
             WinJS.UI.SettingsFlyout.showSettings("preferencesDiv", "/demos/settings/settings.html");
         };
 
@@ -33,14 +33,14 @@
         
         //group by tag
         r["groupByTag"] || (r["groupByTag"] = false); //default
-        q("#tglTagGroup").onchange = function (e) {
-            r["groupByTag"] = q("#tglTagGroup").winControl.checked;
+        tglTagGroup.onchange = function (e) {
+            r["groupByTag"] = tglTagGroup.winControl.checked;
         };
         
         //sort by
         r["sortBy"] || (r["sortBy"] = "name"); //default
-        q("#sortBy").onchange = function(e) {
-            r["sortBy"] = q("#sortBy").value;
+        sortBy.onchange = function(e) {
+            r["sortBy"] = sortBy.value;
         };
     }
     
@@ -52,11 +52,11 @@
         });
         
         //load group setting
-        q("#tglTagGroup").winControl.checked = r["groupByTag"];
+        tglTagGroup.winControl.checked = r["groupByTag"];
         //TODO: trigger this change to take effect
         
         //sort by
-        q("#sortBy").value = r["sortBy"];
+        sortBy.value = r["sortBy"];
         //TODO: trigger this change to take effect
     }
 })();

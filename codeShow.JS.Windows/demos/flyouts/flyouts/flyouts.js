@@ -3,7 +3,7 @@
 
     WinJS.UI.Pages.define("/demos/flyouts/flyouts/flyouts.html", {
         ready: function (element, options) {
-            q("#showFlyout", element).onclick = function (e) { q("#flyout1", element).winControl.show(this); };
+            showFlyout.onclick = function (e) { flyout1.winControl.show(this); };
         }
     });
 })();

@@ -9,7 +9,7 @@
             // so 'wl.skydrive_update' has been used
             WL.login({ scope: "wl.skydrive_update" });
 
-            q("#getfoldersbtn").addEventListener("click", getListOfFolders);
+            getfoldersbtn.addEventListener("click", getListOfFolders);
         }
     });
 })();
@@ -17,11 +17,11 @@
 function getListOfFolders() {
 
     if (!WL.getSession()) {
-        q("#folderStatus").innerText = "Not logged in";
+        folderStatus.innerText = "Not logged in";
         return;
     }
 
-    q("#folderStatus").innerText = "Please wait...";
+    folderStatus.innerText = "Please wait...";
 
     // path 'me' gets the basic info of the user such as name and profile picture
     // path 'me/skydrive' returns the properties of onedrive folder
@@ -32,21 +32,19 @@ function getListOfFolders() {
         method: "GET"
     }).then(
         function (response) {
-            q("#folderList").innerHTML = "";
+            folderList.innerHTML = "";
 
             // response.data depends on the call supplied to onedrive
             // in this case it will be an array of all folders
             response.data.forEach(function (directory) {
                 var l = document.createElement("li");
                 l.innerText = directory.name;
-                q("#folderList").appendChild(l);
+                folderList.appendChild(l);
             });
 
-            q("#folderStatus").innerText = "Retrieved " + response.data.length + " folders+albums";
+            folderStatus.innerText = "Retrieved " + response.data.length + " folders+albums";
         },
         function (response_error) {
-            q("#folderStatus").innerText = "Something went wrong!";
+            folderStatus.innerText = "Something went wrong!";
         }
-    );
-
-}
+    );}

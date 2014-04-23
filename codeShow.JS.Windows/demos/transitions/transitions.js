@@ -8,14 +8,13 @@
         // populates the page elements with the app's data.
         ready: function (element, options) {
             // TODO: Initialize the page here.
-            var boxE = q("#boxEvent");
-            boxE.addEventListener("transitionend",
+            boxEvent.addEventListener("transitionend",
                 function (args) {
                     if (args.elapsedTime < 4) {
-                        boxE.innerText = "Keep Pressing!";
+                        boxEvent.innerText = "Keep Pressing!";
                     } else {
-                        boxE.innerText = "Let Go!";
-                        boxE.classList.add("vanish");
+                        boxEvent.innerText = "Let Go!";
+                        boxEvent.classList.add("vanish");
                     }
                 });
         },

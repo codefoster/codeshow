@@ -9,7 +9,7 @@
             // so 'wl.skydrive_update' has been used
             WL.login({ scope: "wl.skydrive_update" });
 
-            q("#pushfilebtn").addEventListener("click", pushFile);
+            pushfilebtn.addEventListener("click", pushFile);
         }
     });
 })();
@@ -17,7 +17,7 @@
 function pushFile() {
 
     if (!WL.getSession()) {
-        q("#pushStatus").innerText = "Not logged in";
+        pushStatus.innerText = "Not logged in";
         return;
     }
 
@@ -28,7 +28,7 @@ function pushFile() {
 
     openPicker.pickSingleFileAsync().then(function (file) {
         if (file) {
-            q("#pushStatus").innerText = "Uploading...";
+            pushStatus.innerText = "Uploading...";
 
             WL.backgroundUpload({
                 path: "me/skydrive",
@@ -37,14 +37,14 @@ function pushFile() {
                 overwrite: "rename"
             }).then(
                     function (response) {
-                        q("#pushStatus").innerText = "Uploaded";
+                        pushStatus.innerText = "Uploaded";
                     },
                     function (response_error) {
-                        q("#pushStatus").innerText = "Upload failed";
+                        pushStatus.innerText = "Upload failed";
                     }
                 );
         } else {
-            q("#pushStatus").innerText = "No file picked";
+            pushStatus.innerText = "No file picked";
         }
     });
 
@@ -56,13 +56,13 @@ function pushFile() {
             response.data.forEach(function (directory) {
                 var l = document.createElement("li");
                 l.innerText = directory.name;
-                q("#folderList").appendChild(l);
+                folderList.appendChild(l);
             });
 
-            q("#folderStatus").innerText = "Retrieved " + response.data.length + " folders+albums";
+            folderStatus.innerText = "Retrieved " + response.data.length + " folders+albums";
         },
         function (response_error) {
-            q("#folderStatus").innerText = "Something went wrong!";
+            folderStatus.innerText = "Something went wrong!";
         }
     );
 
