@@ -11,6 +11,11 @@ Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "codeShow.JS.Shared", "codeS
 EndProject
 Project("{262852C6-CD72-467D-83FE-5EEB1973A190}") = "codeShow.JS.WindowsPhone", "codeShow.JS.WindowsPhone\codeShow.JS.WindowsPhone.jsproj", "{FD19AC46-C0D1-4D83-8BE7-989AA3496E49}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{3CF6EA85-DB58-401C-846C-B3501BB38ABC}"
+	ProjectSection(SolutionItems) = preProject
+		Performance1.psess = Performance1.psess
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		codeShow.JS.Shared\codeShow.JS.Shared.projitems*{fd19ac46-c0d1-4d83-8be7-989aa3496e49}*SharedItemsImports = 5
@@ -108,5 +113,8 @@ Global
 		{DE14D4EC-AC3B-4556-A7CA-3D7A718F8832} = {2174C796-8304-4B56-AB70-202930CFB511}
 		{C1939FB8-A630-423A-9512-A18E5AF452DB} = {2174C796-8304-4B56-AB70-202930CFB511}
 		{FD19AC46-C0D1-4D83-8BE7-989AA3496E49} = {2174C796-8304-4B56-AB70-202930CFB511}
+	EndGlobalSection
+	GlobalSection(Performance) = preSolution
+		HasPerformanceSessions = true
 	EndGlobalSection
 EndGlobal

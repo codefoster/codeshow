@@ -8,7 +8,7 @@
 
             q("#push").onclick = function (e) {
                 channelOperation.then(function (channel) {
-                    app.client
+                    codeshowClient
                         .getTable("wamspush_notifications")
                         .insert({ channel: channel.uri, message: q("#message").value, sent: false });
                 });

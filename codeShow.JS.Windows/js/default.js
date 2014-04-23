@@ -11,9 +11,11 @@ var pkg = Windows.ApplicationModel.Package.current;
 (function () {
     "use strict";
 
-    app.addEventListener("activated", function (args) {
+    app.demosList = null;
+    app.demosLoaded = null;
+
+    app.onactivated = function (args) {
         //initiate loading of app data
-        setupWamsClient();
         if (!Data.loaded) Data.loadData();
 
         //app.paid = storeApp.licenseInformation.productLicenses.lookup("killTheAds").isActive;
@@ -29,18 +31,13 @@ var pkg = Windows.ApplicationModel.Package.current;
         //standard launch
         if (args.detail.kind === activation.ActivationKind.launch) {
 
-            postitionSplashScreen(args);
-            //handle extended splash screen
+            //positionSplashScreen(args);
 
-            if (args.detail.previousExecutionState !== activation.ApplicationExecutionState.terminated) {
-                // TODO: This application has been newly launched. Initialize your application here.
-            } else {
-                // TODO: This application has been reactivated from suspension. Restore application state here.
-            }
+            if (args.detail.previousExecutionState !== activation.ApplicationExecutionState.terminated) { /* new launch*/ }
+            else { /* reactivated from suspension*/}
 
-            //if (app.sessionState.history) {
-            //    nav.history = app.sessionState.history;
-            //}
+            //if (app.sessionState.history) nav.history = app.sessionState.history; }
+
             args.setPromise(WinJS.UI.processAll()
                 .then(function () {
                     //navigate to launch from secondary tile
@@ -77,7 +74,7 @@ var pkg = Windows.ApplicationModel.Package.current;
                 }));
         }
 
-    });
+    };
 
     app.oncheckpoint = function (args) {
         // To complete an async operation before your app is suspended, call args.setPromise().
@@ -90,18 +87,12 @@ var pkg = Windows.ApplicationModel.Package.current;
     };
 
     app.onerror = function (err) {
-        try { app.client.getTable("errors").insert({ text: err.detail.error }); } catch (e) { debugger; }
+        //try { codeshowClient.getTable("errors").insert({ text: err.detail.error }); } catch (e) { debugger; }
         //WinJS.Navigation.navigate("/pages/hub/hub.html", { message: "Sorry, there was an error that occurred. Don't worry, we're on it. Just keep doing what you were doing." });
         //return true;
     };
 
-    //add WAMS client reference to app so it's available everywhere
-    function setupWamsClient() {
-        app.client = new WindowsAzure.MobileServiceClient(
-            "https://codeshow.azure-mobile.net/",
-            codeShow.Config.wamskey
-        );
-    }
+    app.start();
 
     function sendTileTextNotification(message) {
         // create the wide template
@@ -117,10 +108,6 @@ var pkg = Windows.ApplicationModel.Package.current;
         Windows.UI.Notifications.TileUpdateManager.createTileUpdaterForApplication().update(tileContent.createNotification());
     }
 
-    app.tileColor = "#0098ab";
-    app.demosList = null;
-    app.demosLoaded = null;
-    
     function addSearchContract() {
         var searchPane = Windows.ApplicationModel.Search.SearchPane.getForCurrentView();
 
@@ -152,23 +139,15 @@ var pkg = Windows.ApplicationModel.Package.current;
     function addSettingsContract() {
         app.onsettings = function (e) {
             e.detail.applicationcommands = {
-                 //preferencesDiv: { title: "Preferences", href: "/demos/settings/settings.html" },
                  aboutDiv: { title: "About", href: "/pages/about/about.html" },
                  privacyDiv: { title: "Privacy Policy", href: "/pages/privacy/privacy.html" }
             };
-            //if (storeApp.licenseInformation.isActive && !storeApp.licenseInformation.isTrial && !storeApp.licenseInformation.productLicenses.lookup("killTheAds").isActive)
-            //    e.detail.applicationcommands.killAdsDiv = { title: "Kill the Ads!", href: "/pages/killads/killads.html" };
 
             WinJS.UI.SettingsFlyout.populateSettings(e);
         };
     }
     
-    function fetchWamsData(key) {
-        app.client;
-        return { "key":key, "averageRating": 3.4 };
-    }
-
-    function postitionSplashScreen(args) {
+    function positionSplashScreen(args) {
         var i = splash.querySelector("img");
         var p = splash.querySelector("progress");
         var ss = args.detail.splashScreen;
@@ -180,7 +159,6 @@ var pkg = Windows.ApplicationModel.Package.current;
         p.style.marginTop = ss.imageLocation.y + ss.imageLocation.height + 32 + "px";
     }
     
-    app.start();
 })();
 
 var q = Ocho.Utilities.query;

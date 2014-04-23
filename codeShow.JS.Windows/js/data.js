@@ -4,12 +4,13 @@
     function populateMemberAsync(member) {
         return WinJS.xhr({ url: format("http://www.twitter.com/{0}", member.twitterHandle), responseType: "document" })
             .then(function (result) {
-                member.imageUrl = result.response.querySelector("img.avatar.size73").src;
-                member.name = result.response.querySelector("h1.fullname").innerText;
-                member.bio = result.response.querySelector("p.bio").innerHTML;
-                member.website = result.response.querySelector(".url a").title;
-                return member;
-            }, function (err) { debugger; });
+                return {
+                    imageUrl: result.response.querySelector("img.avatar.size73").src,
+                    name: result.response.querySelector("h1.fullname").innerText,
+                    bio: result.response.querySelector("p.bio").innerHTML,
+                    website: result.response.querySelector(".url a").title
+                }
+            });
     }
 
     WinJS.Namespace.define("Data", {
@@ -30,15 +31,20 @@
 
     //read team from WAMS and fetch details from Twitter
     function loadTeam() {
-        return app.client.getTable("team").read()
-            .then(function(team) {
-                return WinJS.Promise.join(team.map(function(member) { return populateMemberAsync(member); }));
+        var start = new Date().getTime();
+        return codeshowClient.getTable("team").read()
+            .then(function (team) {
+                return WinJS.Promise.join(team.map(function (member) { return populateMemberAsync(member); }));
             }, function (err) { /* gulp */ })
-            .then(function (team) { Data.team = team; }, function (err) { debugger; });
+            .then(function (team) { Data.team = team; }, function (err) { debugger; })
+            .then(function () {
+                var now = new Date().getTime();
+                console.info("Team profiles loaded in " + ((now - start) / 1000) + " seconds");
+            });
     }
 
     function loadApps() {
-        return app.client.getTable("apps").read()
+        return codeshowClient.getTable("apps").read()
 
             //get app details from their Store landing page
             .then(function(apps) {
@@ -129,10 +135,11 @@
 
     //populate demos (from the package)
     function loadDemos() {
+        var start = new Date().getTime();
         return pkg.installedLocation.getFolderAsync("demos")
-            .then(function(demosFolder) { return demosFolder.getFoldersAsync(); })
-            .then(function(demoFolders) {
-                demoFolders.forEach(function(demoFolder) {
+            .then(function (demosFolder) { return demosFolder.getFoldersAsync(); })
+            .then(function (demoFolders) {
+                demoFolders.forEach(function (demoFolder) {
                     //initialize and set defaults
                     var demo = { name: demoFolder.displayName, enabled: true, suppressAppBar: false, sections: [] };
 
@@ -140,25 +147,28 @@
 
                         //get the title from the html file
                         //(for demos without section folders, this will intentionally and silently fail)
-                        .then(function(result) { demo.title = result.response.querySelector("title").innerText; }, function(err) {})
+                        .then(function (result) { demo.title = result.response.querySelector("title").innerText; }, function (err) { })
 
                         //get the metadata (from the json file) (overriding title if included)
-                        .then(function() { return getMetadataAsync(demo, demoFolder); }, function(err) { debugger; })
-                        .then(function(result) {
+                        .then(function () { return getMetadataAsync(demo, demoFolder); }, function (err) { debugger; })
+                        .then(function (result) {
                             if (result.jsonFileExists && demo.enabled) {
-                                demo.sections.forEach(function(section) {
+                                demo.sections.forEach(function (section) {
                                     //get the section title and add the section to the demo
                                     WinJS.xhr({ url: format("/demos/{0}/{1}/{1}.html", demo.name, section.name), responseType: "document" })
-                                        .then(function(result) {
+                                        .then(function (result) {
                                             section.title = result.response.querySelector("title").innerText;
-                                        }, function(err) {})
+                                        }, function (err) { })
                                 });
                                 Data.demos.push(demo);
                             }
-                        }, function(err) { debugger; });
-
+                        });
                 });
-            }, function(err) { debugger; });
+            })
+            .then(function () {
+                var now = new Date().getTime();
+                console.info("Demos loaded in " + ((now - start) / 1000) + " seconds");
+            });
     }
     
     function getMetadataAsync(ds, folder) {
