@@ -4,48 +4,54 @@
 (function () {
     "use strict";
 
-    function getContributorDataAsync(member) {
-        return WinJS.xhr({ url: format("http://www.twitter.com/{0}", member.twitterHandle), responseType: "document" })
+    function getContributorDataAsync(c) {
+        return WinJS.xhr({ url: format("http://www.twitter.com/{0}", c.twitterHandle), responseType: "document" })
             .then(function (result) {
                 var r = result.response;
-                var profile = {
-                    imageUrl: "", //TODO: default to a blank man image
-                    name: "",
-                    bio: "",
-                    website: ""
-                };
+                c.imageUrl = ""; //TODO: default to a blank man image
+                c.name = "";
+                c.bio = "";
+                c.website = "";
+
                 var selectors;
 
                 //find profile image
                 selectors = ["img.avatar.size73", ".ProfileAvatar-image"];
                 selectors.forEach(function (s) {
-                    if (r.querySelector(s)) profile.imageUrl = r.querySelector(s).src;
+                    if (r.querySelector(s)) c.imageUrl = r.querySelector(s).src;
                 });
 
                 //find profile name
                 selectors = ["h1.fullname", ".ProfileHeaderCard-nameLink"];
                 selectors.forEach(function (s) {
-                    if (r.querySelector(s)) profile.name = r.querySelector(s).innerText;
+                    if (r.querySelector(s)) c.name = r.querySelector(s).innerText;
                 });
 
                 //find profile bio
                 selectors = ["p.bio", ".ProfileHeaderCard-bio"];
                 selectors.forEach(function (s) {
-                    if (r.querySelector(s)) profile.bio = r.querySelector(s).innerText;
+                    if (r.querySelector(s)) c.bio = r.querySelector(s).innerText;
                 });
 
                 //find website
                 selectors = [".url a", ".ProfileHeaderCard-urlText a"];
                 selectors.forEach(function (s) {
-                    if (r.querySelector(s)) profile.website = r.querySelector(s).title;
+                    if (r.querySelector(s)) c.website = r.querySelector(s).title;
                 });
 
-                return profile;
+                return c;
             });
     }
 
     WinJS.Namespace.define("Data", {
-        contributorsList: new WinJS.Binding.List(),
+        contributorsList: new WinJS.Binding.List().createSorted(function (a, b) {
+            //sort contributors by their twitter handle
+            a = a.twitterHandle.toLowerCase();
+            b = b.twitterHandle.toLowerCase();
+            if (a == b) return 0;
+            else if (a > b) return 1;
+            else return -1;
+        }),
         demos: [],
         apps: [],
         loaded: null,

@@ -140,10 +140,8 @@
             WinJS.Namespace.define("codeShow.Pages.Hub", {
                 pageDataLoaded: false,
                 demosList: new WinJS.Binding.List(),
-                contributorsList: new WinJS.Binding.List(),
                 featuredApp: {},
                 subFeaturedApps: new WinJS.Binding.List(),
-                contributorList: new WinJS.Binding.List(),
                 updateLayout: page.updateLayout,
 
                 //converters
