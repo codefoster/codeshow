@@ -48,8 +48,8 @@
                 </div>
             </div>
 
-            <!-- Team section -->
-            <div class="section_team" data-win-control="WinJS.UI.HubSection" data-win-options="{ header: 'Team', isHeaderStatic: true }">
+            <!-- Contributors section -->
+            <div class="section_contributors" data-win-control="WinJS.UI.HubSection" data-win-options="{ header: 'Contributors', isHeaderStatic: true }">
                 <div class="itemTemplate" data-win-control="WinJS.Binding.Template">
                     <img src="#" data-win-bind="src: imageUrl; alt: name" />
                     <div class="item-text">
@@ -62,9 +62,9 @@
                 <div class="itemslist win-selectionstylefilled" data-win-control="WinJS.UI.ListView" data-win-options="{
                         layout: {type: WinJS.UI.ListLayout},
                         selectionMode: 'none',
-                        itemTemplate: select('.section_team .itemTemplate'),
-                        itemDataSource: codeShow.Pages.Hub.teamList.dataSource,
-                        oniteminvoked: codeShow.Pages.Hub.teamMemberNavigate
+                        itemTemplate: select('.section_contributors .itemTemplate'),
+                        itemDataSource: codeShow.Pages.Hub.contributorsList.dataSource,
+                        oniteminvoked: codeShow.Pages.Hub.contributorNavigate
                     }">
                 </div>
             </div>
@@ -109,28 +109,6 @@
                     <span data-win-res="{ textContent: 'Section4Description' }"></span>
                     <span data-win-res="{ textContent: 'Section4Description' }"></span>
                     <span data-win-res="{ textContent: 'Section4Description' }"></span>
-                </div>
-            </div>
-
-            <!-- Contributors section -->
-            <div class="section_contributors" data-win-control="WinJS.UI.HubSection" data-win-res="{ winControl: {'header': 'ContributorsHeader'} }"
-                 data-win-options="{ onheaderinvoked: codeShow.Pages.Hub.Commands.contributorsNavigate }">
-                <div class="itemTemplate" data-win-control="WinJS.Binding.Template">
-                    <img src="#" data-win-bind="src: imageUrl; alt: name" />
-                    <div class="item-text">
-                        <div class="win-type-medium" data-win-bind="textContent: name"></div>
-                        <div class="win-type-xx-small secondary-text" data-win-bind="textContent: twitterHandle codeShow.Pages.Hub.Converters.twitterHandleConverter"></div>
-                        <div class="win-type-xx-small secondary-text" data-win-bind="textContent: website"></div>
-                        <div class="win-type-small secondary-text" data-win-bind="textContent: bio"></div>
-                    </div>
-                </div>
-                <div class="itemslist win-selectionstylefilled" data-win-control="WinJS.UI.ListView" data-win-options="{
-                        layout: {type: WinJS.UI.ListLayout},
-                        selectionMode: 'none',
-                        itemTemplate: select('.section_contributors .itemTemplate'),
-                        itemDataSource: codeShow.Pages.Hub.contributorList.dataSource,
-                        oniteminvoked: codeShow.Pages.Hub.Commands.contributorNavigate
-                    }">
                 </div>
             </div>
 

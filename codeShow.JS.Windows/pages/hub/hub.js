@@ -25,10 +25,10 @@
                                 codeShow.Pages.Hub.demosList.push(demo);
                             });
 
-                        //build team list
-                        if (Data.team)
-                            Data.team.forEach(function (member) {
-                                codeShow.Pages.Hub.teamList.push(member);
+                        //build contributors list
+                        if (Data.contributors)
+                            Data.contributors.forEach(function (member) {
+                                codeShow.Pages.Hub.contributorsList.push(member);
                             });
 
                         //build apps list
@@ -124,9 +124,6 @@
         },
         
         _addSearchFunctionality: function () {
-            var start = new Date().getTime();
-            console.info("hub.js _addSearchFunctionality start");
-
             //focus on the search box when the users presses CTRL+E or starts typing
             var s = document.querySelector(".win-searchbox");
             s.winControl.onquerysubmitted = function (e) {
@@ -137,16 +134,13 @@
                     s.querySelector(".win-searchbox-input").focus();
             };
             s.winControl.focusOnKeyboardInput = true;
-
-            var now = new Date().getTime();
-            console.info("hub.js _addSearchFunctionality done (" + ((now - start) / 1000) + " seconds)");
         },
 
         _createNamespace: function () {
             WinJS.Namespace.define("codeShow.Pages.Hub", {
                 pageDataLoaded: false,
                 demosList: new WinJS.Binding.List(),
-                teamList: new WinJS.Binding.List(),
+                contributorsList: new WinJS.Binding.List(),
                 featuredApp: {},
                 subFeaturedApps: new WinJS.Binding.List(),
                 contributorList: new WinJS.Binding.List(),
@@ -169,17 +163,11 @@
                     demosNavigate: util.markSupportedForProcessing(function () {
                         nav.navigate("/pages/demos/demos.html");
                     }),
-                    teamMemberNavigate: util.markSupportedForProcessing(function () {
-                        nav.navigate("/pages/teamMember/teamMember.html");
+                    contributorNavigate: util.markSupportedForProcessing(function () {
+                        nav.navigate("/pages/contributor/contributor.html");
                     }),
                     appsNavigate: util.markSupportedForProcessing(function () {
                         nav.navigate("/pages/apps/apps.html");
-                    }),
-                    contributorNavigate: util.markSupportedForProcessing(function () {
-                        nav.navigate("/pages/contributors/contributors.html");
-                    }),
-                    contributorsNavigate: util.markSupportedForProcessing(function () {
-                        nav.navigate("/pages/contributors/contributors.html");
                     })
                 }
             });

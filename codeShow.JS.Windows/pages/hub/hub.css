@@ -117,37 +117,37 @@
         background-color: rgba(0,0,0,0.03);
     }
 
-/* Team Section */
-.hubpage .hub .section_team {
+/* Contributors Section */
+.hubpage .hub .section_contributors {
     padding-left: 30px;
     padding-right: 30px;
 }
 
-    .hubpage .hub .section_team .win-hub-section-header {
+    .hubpage .hub .section_contributors .win-hub-section-header {
         margin-left: 10px;
         margin-right: 10px;
     }
 
-    .hubpage .hub .section_team .itemslist {
+    .hubpage .hub .section_contributors .itemslist {
         height: 100%;
         margin-top: -10px;
     }
 
-        .hubpage .hub .section_team .itemslist .win-viewport {
+        .hubpage .hub .section_contributors .itemslist .win-viewport {
             overflow-y: hidden;
         }
 
-        .hubpage .hub .section_team .itemslist .win-container {
+        .hubpage .hub .section_contributors .itemslist .win-container {
             margin: 3px;
             margin-bottom: 16px;
         }
         
-        .hubpage .hub .section_team .itemslist .win-itembox {
+        .hubpage .hub .section_contributors .itemslist .win-itembox {
             background-color: transparent;
         }
 
 
-    .hubpage .hub .section_team .win-item {
+    .hubpage .hub .section_contributors .win-item {
         -ms-grid-columns: auto auto;
         display: -ms-grid;
         height: 110px;
@@ -155,13 +155,13 @@
         padding: 7px;
     }
 
-        .hubpage .hub .section_team .win-item img {
+        .hubpage .hub .section_contributors .win-item img {
             -ms-grid-column: 1;
             height: 110px;
             width: 110px;
         }
 
-        .hubpage .hub .section_team .win-item .item-text {
+        .hubpage .hub .section_contributors .win-item .item-text {
             -ms-grid-column: 2;
             height: 105px;
             overflow: hidden;
@@ -254,15 +254,3 @@
     .hubpage .hub .section_resources .article-header {
         margin-bottom: 15px;
     }
-
-    
-/* Contributors Section */
-.hubpage .hub .section_contributors {
-    display:none;
-}
-
-
-.secondary-text {
-    opacity: 0.6;
-}
-

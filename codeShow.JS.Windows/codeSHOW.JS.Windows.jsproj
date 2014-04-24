@@ -749,9 +749,6 @@
     <Content Include="pages\hub\hub.css" />
     <Content Include="pages\hub\hub.html" />
     <Content Include="pages\hub\hub.js" />
-    <Content Include="pages\killads\killads.css" />
-    <Content Include="pages\killads\killads.html" />
-    <Content Include="pages\killads\killads.js" />
     <Content Include="pages\privacy\privacy.css" />
     <Content Include="pages\privacy\privacy.html" />
     <Content Include="pages\privacy\privacy.js" />

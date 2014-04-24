@@ -4,7 +4,7 @@
 (function () {
     "use strict";
 
-    function populateMemberAsync(member) {
+    function getContributorDataAsync(member) {
         return WinJS.xhr({ url: format("http://www.twitter.com/{0}", member.twitterHandle), responseType: "document" })
             .then(function (result) {
                 var r = result.response;
@@ -45,7 +45,7 @@
     }
 
     WinJS.Namespace.define("Data", {
-        team: [],
+        contributors: [],
         demos: [],
         apps: [],
         loaded: null,
@@ -54,23 +54,23 @@
 
     function loadData() {
         Data.loaded = WinJS.Promise.join([
-            loadTeam(),
+            loadContributors(),
             loadDemos(),
             //loadApps()
         ]);
     }
 
-    //read team from WAMS and fetch details from Twitter
-    function loadTeam() {
+    //read contributors from WAMS and fetch details from Twitter
+    function loadContributors() {
         var start = new Date().getTime();
-        return codeshowClient.getTable("team").read()
-            .then(function (team) {
-                return WinJS.Promise.join(team.map(function (member) { return populateMemberAsync(member); }));
-            }, function (err) { /* gulp */ })
-            .then(function (team) { Data.team = team; }, function (err) { debugger; })
+        return codeshowClient.getTable("contributors").read()
+            .then(function (contributors) {
+                return WinJS.Promise.join(contributors.map(function (c) { return getContributorDataAsync(c); }));
+            })
+            .then(function (contributors) { Data.contributors = contributors; })
             .then(function () {
                 var now = new Date().getTime();
-                console.info("Team profiles loaded in " + ((now - start) / 1000) + " seconds");
+                console.info("Contributors loaded in " + ((now - start) / 1000) + " seconds");
             });
     }
 
