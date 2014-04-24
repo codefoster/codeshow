@@ -4,7 +4,7 @@
     WinJS.UI.Pages.define("/demos/components/components.html", {
         ready: function (element, options) {
             var that = this;
-            q(".input",element).forEach(function(input) {
+            element.querySelectorAll(".input").toArray().forEach(function(input) {
                 input.onchange = function (e) { that.doTheMath(); };
             })
 
@@ -12,11 +12,11 @@
         doTheMath: function () {
             //C++
             var cppcalc = new CalculatorCPP.Calculator();
-            q("#cpp .y").value = cppcalc.add(q("#cpp .a").value, q("#cpp .b").value);
+            cpp.querySelector(".y").value = cppcalc.add(cpp.querySelector(".a").value, cpp.querySelector(".b").value);
 
             //C#
             var cscalc = new CalculatorCS.Calculator();
-            q("#cs .y").value = cscalc.add(q("#cs .a").value, q("#cs .b").value);
+            cs.querySelector(".y").value = cscalc.add(cs.querySelector(".a").value, cs.querySelector(".b").value);
         }
     });
 })();

@@ -4,11 +4,10 @@
     WinJS.UI.Pages.define("/demos/authentication/wams/wams.html", {
         ready: function (element, options) {
             //microsoft
-            var microsoftSection = element.querySelector("#microsoft");
-            microsoftSection.querySelector("button").onclick = function (e) {
+            microsoft.querySelector("button").onclick = function (e) {
                 codeshowClient.login("microsoftaccount")
                     .done(function (results) {
-                        microsoftSection.querySelector("div").innerText += "User ID: " + results.userId;
+                        microsoft.querySelector("div").innerText += "User ID: " + results.userId;
                     }, function (error) { /* gulp */ });
             };
 

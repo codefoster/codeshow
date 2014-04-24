@@ -7,7 +7,7 @@
     WinJS.UI.Pages.define("/demos/crypto/certs/certs.html", {
         ready: function (element, options) {
             var that = this;
-            logElement = q(".crypto .certs .log");
+            logElement = document.querySelector(".crypto .certs .log");
             this.clearLog();
 
             this.log("Creating and importing certificates (\"see the code\" for details)...");

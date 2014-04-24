@@ -6,7 +6,7 @@
             //create a green box imperatively
             var div = document.createElement("div");
             new CustomControlNamespace.BigBox(div,{backgroundColor:'green'});
-            q("section[role=main]", element).appendChild(div);
+            element.querySelector("section[role=main]").appendChild(div);
         }
     });
 

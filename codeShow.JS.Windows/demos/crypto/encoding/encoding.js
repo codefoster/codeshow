@@ -6,7 +6,7 @@
 
     WinJS.UI.Pages.define("/demos/crypto/encoding/encoding.html", {
         ready: function (element, options) {
-            logElement = q(".crypto .encoding .log");
+            logElement = document.querySelector(".crypto .encoding .log");
             this.clearLog();
 
             this.logLine("Processing cryptography script (\"see the code\" for details)...");

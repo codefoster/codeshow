@@ -3,7 +3,7 @@
 
     WinJS.UI.Pages.define("/demos/appbar2/appbar2.html", {
         ready: function (element, options) {
-            var bar = q(".appbar2 #declarativeAppBar").winControl;
+            var bar = declarativeAppBar.winControl;
             
             //imperatively add a click handler for the add button
             var cmdAdd = bar.getCommandById("cmdAdd");
