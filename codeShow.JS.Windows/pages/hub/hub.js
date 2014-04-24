@@ -129,7 +129,7 @@
 
             //focus on the search box when the users presses CTRL+E or starts typing
             var s = document.querySelector(".win-searchbox");
-            s.onquerysubmitted = function (e) {
+            s.winControl.onquerysubmitted = function (e) {
                 WinJS.Navigation.navigate("/pages/demos/demos.html", { queryText: e.detail.queryText });
             };
             document.body.onkeypress = function (e) {
