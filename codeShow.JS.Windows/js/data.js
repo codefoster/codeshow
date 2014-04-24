@@ -45,7 +45,7 @@
     }
 
     WinJS.Namespace.define("Data", {
-        contributors: [],
+        contributorsList: new WinJS.Binding.List(),
         demos: [],
         apps: [],
         loaded: null,
@@ -65,10 +65,12 @@
         var start = new Date().getTime();
         return codeshowClient.getTable("contributors").read()
             .then(function (contributors) {
-                return WinJS.Promise.join(contributors.map(function (c) { return getContributorDataAsync(c); }));
+                return WinJS.Promise.join(contributors.map(function (c) {
+                    return getContributorDataAsync(c).then(function (cc) { Data.contributorsList.push(cc); });
+                }));
             })
-            .then(function (contributors) { Data.contributors = contributors; })
             .then(function () {
+                //when all of the details for the contributors have been gathered then log the timing
                 var now = new Date().getTime();
                 console.info("Contributors loaded in " + ((now - start) / 1000) + " seconds");
             });

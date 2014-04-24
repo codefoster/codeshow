@@ -25,11 +25,11 @@
                                 codeShow.Pages.Hub.demosList.push(demo);
                             });
 
-                        //build contributors list
-                        if (Data.contributors)
-                            Data.contributors.forEach(function (member) {
-                                codeShow.Pages.Hub.contributorsList.push(member);
-                            });
+                        ////build contributors list
+                        //if (Data.contributors)
+                        //    Data.contributors.forEach(function (member) {
+                        //        codeShow.Pages.Hub.contributorsList.push(member);
+                        //    });
 
                         //build apps list
                         if (Data.apps) {
