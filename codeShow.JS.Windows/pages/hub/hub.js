@@ -92,14 +92,11 @@
         },
 
         unload: function () {
-            ////session.hubScroll = document.querySelector(".hub").winControl.scrollPosition;
+            //TODO: reenable and test
+            //session.hubScroll = document.querySelector(".hub").winControl.scrollPosition;
         },
 
         updateLayout: function (element) {
-            // first attempt at hiding the ad if the app has been paid for
-            // var adStyle = document.querySelector(".section_ad").style;
-            // adStyle.width = (app.paid ? "0px" : "auto");
-            // if (app.paid) adStyle.display = "none";
         },
 
         _hubReady: function (hub) {
@@ -120,39 +117,6 @@
 
             page._addSearchFunctionality();
 
-            //handle ad exceptions
-            if (hubad && hubad.winControl)
-                hubad.winControl.onErrorOccurred = function (sender, evt) {
-                    //if there's no internet connection at all then use a local adtile
-                    if (evt.errorCode === "NetworkConnectionFailure") {
-                        var img = document.createElement("img");
-                        img.src = "/images/adtile_codeplex.png";
-                        sender.element.appendChild(img);
-                        img.onclick = function () { launch("http://codeshow.codeplex.com"); };
-                    }
-
-                        //if there's internet connection but no ad was served then fetch a custom tile from WAMS/blob storage
-                    else if (evt.errorCode === "NoAdAvailable") {
-                        codeshowClient.getTable("adTiles")
-                            .where({ size: "300x600" })
-                            .read()
-                            .then(function (tiles) {
-                                var randomAd = tiles
-                                    .takeRandom(1)[0];
-                                if (randomAd) {
-                                    var img = document.createElement("img");
-                                    img.src = randomAd.imageUrl;
-                                    sender.element.appendChild(img);
-                                    img.onclick = function () { launch(randomAd.linkUrl); };
-                                }
-                                else {
-                                    sender.element.style.display = "none";
-                                }
-                            });
-                    }
-                };
-
-            
             page.updateLayout();
 
             var now = new Date().getTime();
@@ -162,6 +126,7 @@
         _addSearchFunctionality: function () {
             var start = new Date().getTime();
             console.info("hub.js _addSearchFunctionality start");
+
             //focus on the search box when the users presses CTRL+E or starts typing
             var s = document.querySelector(".win-searchbox");
             s.onquerysubmitted = function (e) {

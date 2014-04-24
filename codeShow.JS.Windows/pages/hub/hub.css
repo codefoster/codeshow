@@ -117,21 +117,6 @@
         background-color: rgba(0,0,0,0.03);
     }
 
-/* Ad Section */
-.hubpage .hub .section_ad {
-    /*width:0px;
-    transition: width 1.5s;*/
-}
-
-.hubpage .hub .section_ad #hubad {
-    border:solid 1px lightgray;
-}
-
-.hubpage .hub .section_ad #hubadlabel {
-    color:lightgray;
-    font-size:smaller;
-}
-
 /* Team Section */
 .hubpage .hub .section_team {
     padding-left: 30px;

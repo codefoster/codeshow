@@ -18,15 +18,10 @@ var pkg = Windows.ApplicationModel.Package.current;
         //initiate loading of app data
         if (!Data.loaded) Data.loadData();
 
-        //app.paid = storeApp.licenseInformation.productLicenses.lookup("killTheAds").isActive;
-
         //set up the demos list (empty for now)
         app.demosList = new WinJS.Binding.List()
             .createGrouped(function (i) { return i.group; }, function (i) { return i.group; })
             .createSorted(function (a, b) { return (a.name.toLowerCase() < b.name.toLowerCase() ? -1 : 1); });
-        
-        //start loading the demos
-        //app.demosLoaded = loadDemosAsync();
         
         //standard launch
         if (args.detail.kind === activation.ActivationKind.launch) {
@@ -36,6 +31,7 @@ var pkg = Windows.ApplicationModel.Package.current;
             if (args.detail.previousExecutionState !== activation.ApplicationExecutionState.terminated) { /* new launch*/ }
             else { /* reactivated from suspension*/}
 
+            //TODO: fix... I believe I commented this out because it was not able to recover when navigated directly to a page on recovery
             //if (app.sessionState.history) nav.history = app.sessionState.history; }
 
             args.setPromise(WinJS.UI.processAll()
