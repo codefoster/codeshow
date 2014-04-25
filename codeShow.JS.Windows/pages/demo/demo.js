@@ -8,6 +8,7 @@
             element = e;
             options = o;
             var that = this;
+
             //passed in the complete form with a view
             if (options.demo) demo = options.demo;
 
@@ -18,6 +19,8 @@
             options.viewMode = options.viewMode || "demo";
             if (!options.selectedSection && demo.sections.length)
                 options.selectedSection = demo.sections[0].name;
+
+            Analytics.Increment(format("demo launched ({0})",demo.name));
 
             //set the page title
             document.querySelector("header .pagetitle").innerText = demo.title;

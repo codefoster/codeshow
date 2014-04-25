@@ -29,7 +29,10 @@ var pkg = Windows.ApplicationModel.Package.current;
 
             //positionSplashScreen(args);
 
-            if (args.detail.previousExecutionState !== activation.ApplicationExecutionState.terminated) { /* new launch*/ }
+            if (args.detail.previousExecutionState !== activation.ApplicationExecutionState.terminated) {
+                // new launch
+                Analytics.Increment("app launch");
+            }
             else { /* reactivated from suspension*/}
 
             //TODO: fix... I believe I commented this out because it was not able to recover when navigated directly to a page on recovery
@@ -94,6 +97,7 @@ var pkg = Windows.ApplicationModel.Package.current;
     app.start();
 
     //network connectivity
+    app.isConnected = false;
     net.onnetworkstatuschanged = function () {
         app.isConnected = net.getInternetConnectionProfile().getNetworkConnectivityLevel() !== 1;
     };

@@ -58,6 +58,7 @@
     <AppxManifest Include="package.appxmanifest">
       <SubType>Designer</SubType>
     </AppxManifest>
+    <Content Include="js\analytics.js" />
     <Content Include="services\mobile services\codeshow\service.js">
       <ConnectedServiceReference>codeshow</ConnectedServiceReference>
     </Content>
