@@ -48,22 +48,4 @@ function pushFile() {
         }
     });
 
-    WL.api({
-        path: "me/skydrive/files?filter=folders,albums",
-        method: "GET"
-    }).then(
-        function (response) {
-            response.data.forEach(function (directory) {
-                var l = document.createElement("li");
-                l.innerText = directory.name;
-                folderList.appendChild(l);
-            });
-
-            folderStatus.innerText = "Retrieved " + response.data.length + " folders+albums";
-        },
-        function (response_error) {
-            folderStatus.innerText = "Something went wrong!";
-        }
-    );
-
 }
