@@ -68,6 +68,8 @@
 
     //read contributors from WAMS and fetch details from Twitter
     function loadContributors() {
+        //TODO: offline the contributors in case there's no internet connection
+        if (!app.isConnected) return; //return right away
         var start = new Date().getTime();
         return codeshowClient.getTable("contributors").read()
             .then(function (contributors) {
@@ -186,7 +188,7 @@
 
                         //get the title from the html file
                         //(for demos without section folders, this will intentionally and silently fail)
-                        .then(function (result) { demo.title = result.response.querySelector("title").innerText; }, function (err) { })
+                        .then(function (result) { demo.title = result.response.querySelector("title").innerText; }, function (err) { /* GULP */ })
 
                         //get the metadata (from the json file) (overriding title if included)
                         .then(function () { return getMetadataAsync(demo, demoFolder); }, function (err) { debugger; })

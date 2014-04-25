@@ -3,6 +3,7 @@ var storeApp = Windows.ApplicationModel.Store.CurrentApp;
 var appdata = Windows.Storage.ApplicationData.current;
 var activation = Windows.ApplicationModel.Activation;
 var nav = WinJS.Navigation;
+var net = Windows.Networking.Connectivity.NetworkInformation;
 var r = appdata.roamingSettings.values;
 var session = WinJS.Application.sessionState;
 var util = WinJS.Utilities;
@@ -35,6 +36,7 @@ var pkg = Windows.ApplicationModel.Package.current;
             //if (app.sessionState.history) nav.history = app.sessionState.history; }
 
             args.setPromise(WinJS.UI.processAll()
+                .then(function() { return Data.loaded; })
                 .then(function () {
                     //navigate to launch from secondary tile
                     if (args.detail.arguments !== "") {
@@ -49,6 +51,7 @@ var pkg = Windows.ApplicationModel.Package.current;
                         nav.history.current.initialPlaceholder = true;
                         return nav.navigate(nav.location, nav.state);
                     } else {
+                        //TODO: error here when no network connection (??)
                         return nav.navigate(Application.navigator.home);
                     }
                 })
@@ -89,6 +92,11 @@ var pkg = Windows.ApplicationModel.Package.current;
     };
 
     app.start();
+
+    //network connectivity
+    net.onnetworkstatuschanged = function () {
+        app.isConnected = net.getInternetConnectionProfile().getNetworkConnectivityLevel() !== 1;
+    };
 
     function sendTileTextNotification(message) {
         // create the wide template

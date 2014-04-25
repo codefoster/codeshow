@@ -15,6 +15,7 @@
                 return Data.loaded
                     .then(function () {
 
+                        //TODO: if demos list is less than 12, then the take(12) here will use 'undefined' and spoil things, make this safer
                         //build demos list
                         Data.demos
                             .sort(function (a, b) {
@@ -24,12 +25,6 @@
                             .forEach(function (demo) {
                                 codeShow.Pages.Hub.demosList.push(demo);
                             });
-
-                        ////build contributors list
-                        //if (Data.contributors)
-                        //    Data.contributors.forEach(function (member) {
-                        //        codeShow.Pages.Hub.contributorsList.push(member);
-                        //    });
 
                         //build apps list
                         if (Data.apps) {

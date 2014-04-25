@@ -90,7 +90,7 @@
                     this._lastNavigationPromise.cancel();
 
                     this._lastNavigationPromise = WinJS.Promise.timeout().then(function () {
-                        return WinJS.UI.Pages.render(args.detail.location, newElement, args.detail.state, parented);
+                       return WinJS.UI.Pages.render(args.detail.location, newElement, args.detail.state, parented);
                     }).then(function parentElement(control) {
                         var oldElement = this.pageElement;
                         if (oldElement.winControl && oldElement.winControl.unload) {
