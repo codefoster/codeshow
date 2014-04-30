@@ -15,16 +15,14 @@
                 return Data.loaded
                     .then(function () {
 
-                        //TODO: if demos list is less than 12, then the take(12) here will use 'undefined' and spoil things, make this safer
-                        //build demos list
-                        Data.demos
-                            .sort(function (a, b) {
-                                return (!b.dateCreated || new Date(a.dateCreated) > new Date(b.dateCreated) ? -1 : 1);
-                            })
-                            .take(12)
-                            .forEach(function (demo) {
-                                codeShow.Pages.Hub.demosList.push(demo);
-                            });
+                        //build the demos list
+                        codeShow.Pages.Hub.demosList.push.apply(codeShow.Pages.Hub.demosList, 
+                            Data.demos
+                                .sort(function (a, b) {
+                                    return (!b.dateCreated || new Date(a.dateCreated) > new Date(b.dateCreated) ? -1 : 1);
+                                })
+                                .take(12)
+                        );
 
                         //build apps list
                         if (Data.apps) {
@@ -76,7 +74,7 @@
             console.info("hub.js ready done (" + ((now - start) / 1000) + " seconds)");
         },
 
-        processed: function() {
+        processed: function () {
             var start = new Date().getTime();
             console.info("hub.js processed start");
             //when data is finished loading then hide the extended splash screen
@@ -117,7 +115,7 @@
             var now = new Date().getTime();
             console.info("hub.js _hubReady done (" + ((now - start) / 1000) + " seconds)");
         },
-        
+
         _addSearchFunctionality: function () {
             //focus on the search box when the users presses CTRL+E or starts typing
             var s = document.querySelector(".win-searchbox");
@@ -167,5 +165,5 @@
         }
     });
 
-    
+
 })();
