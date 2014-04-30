@@ -45,6 +45,7 @@ var pkg = Windows.ApplicationModel.Package.current;
                     if (args.detail.arguments !== "") {
                         var launchDemo = JSON.parse(args.detail.arguments).launchDemo;
                         if(launchDemo)
+                            //make sure the demos have been loaded before navigating to the hub
                             Data.loaded.then(function () {
                                 var chooseDemo = Data.demos.first(function (d) { return d.name == launchDemo });
                                 nav.navigate("/pages/demo/demo.html", { demo: chooseDemo, view: "demo" });
@@ -97,10 +98,12 @@ var pkg = Windows.ApplicationModel.Package.current;
     app.start();
 
     //network connectivity
-    app.isConnected = false;
-    net.onnetworkstatuschanged = function () {
-        app.isConnected = net.getInternetConnectionProfile().getNetworkConnectivityLevel() !== 1;
-    };
+    app.isConnected = getIsConnected();
+    net.addEventListener("networkstatuschanged", function () { app.isConnected = getIsConnected(); });
+    function getIsConnected() {
+        return net.getInternetConnectionProfile()
+            && net.getInternetConnectionProfile().getNetworkConnectivityLevel() > 2;
+    }
 
     function sendTileTextNotification(message) {
         // create the wide template
