@@ -168,12 +168,9 @@ TODO:
             if(result.length > 0) return result[0];
         },
 
-        take: function(count) {
-            count = count || 1;
-            var result = [];
-            for (var i = 0; i < count; i++)
-                result.push(this[i]);
-            return result;
+        take: function (count) {
+            if (!count || count < 1) throw "count must be a value of 1 or more";
+            return this.slice(0,count);
         },
         
         repeat: function (item, repetitions) {
