@@ -3,7 +3,7 @@ using System.ComponentModel;
 using Windows.Storage;
 using Windows.UI.Xaml.Controls;
 
-namespace CodeShowCsXaml
+namespace CodeShow.CS
 {
     public sealed partial class SettingsFlyoutDemo : UserControl
     {

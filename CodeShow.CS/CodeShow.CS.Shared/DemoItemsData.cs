@@ -9,7 +9,7 @@ using Windows.ApplicationModel.DataTransfer;
 using Windows.UI;
 using Windows.UI.Xaml;
 
-namespace CodeShowCsXaml.Shared
+namespace CodeShow.CS.Shared
 {
     public class GridItem
     {
@@ -316,6 +316,16 @@ namespace CodeShowCsXaml.Shared
             bindingConverterDemo.ControlType = typeof(BindingConverterDemo);
             bindingConverterDemo.NavigationUrl = new Uri("http://code.msdn.microsoft.com/windowsapps/Data-Binding-7b1d67b5");
             this.mainGridItems.Add(bindingConverterDemo);
+
+            GridItem webViewControlSizingDemo = new GridItem();
+            webViewControlSizingDemo.Title = "WebView Sizing";
+            webViewControlSizingDemo.Description = "Sizes a WebView to fit its contents.";
+            webViewControlSizingDemo.ControlType = typeof(WebViewControlSizingDemo);
+            webViewControlSizingDemo.NavigationUrl = new Uri("http://code.msdn.microsoft.com/windowsapps/HTML-WebView-control-sample-56e773fa");
+#if WINDOWS_PHONE_APP
+            webViewControlSizingDemo.NavigationUrl = new Uri("http://code.msdn.microsoft.com/wpapps/XAML-WebView-control-sample-58ad63f7");
+#endif
+            this.mainGridItems.Add(webViewControlSizingDemo);
 
             List<GridItem> temp = new List<GridItem>(this.mainGridItems);
             temp.Sort(delegate(GridItem one, GridItem two)
