@@ -5,8 +5,8 @@
     WinJS.UI.Pages.define("/demos/htmltotext/htmltotext.html", {
 
         ready: function (element, options) {
-            var inpHTML = inpHTML;
-            var oupTEXT = oupTEXT;
+            var inpHTML = q("#inpHTML");
+            var oupTEXT = q("#oupTEXT");
             convertButton.onclick = function () {
                 oupTEXT.value = HTMLtoText(inpHTML.value);
             };
