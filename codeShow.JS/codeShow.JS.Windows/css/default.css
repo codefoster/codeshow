@@ -55,6 +55,12 @@ body {
             margin-top: 37px;
         }
 
+        .fragment header[role=banner] .subtitle {
+            -ms-grid-column: 3;
+            margin-top:110px;
+            margin-left:20px;
+        }
+
             .fragment header[role=banner] .titlearea .pagetitle {
                 width: calc(100% - 20px);
             }

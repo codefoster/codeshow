@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/2010/manifest" xmlns:m2="http://schemas.microsoft.com/appx/2013/manifest">
-  <Identity Name="30971ecsproull.CodeShowXAMLCS" Publisher="CN=6E2FB41A-74CD-4559-8FE7-474D50FE6A5A" Version="1.0.0.3" />
+  <Identity Name="36805codefoster.CodeShowC" Publisher="CN=603A18C8-7F37-48CF-B16C-FED79B9AEA66" Version="2.0.0.0" />
   <Properties>
-    <DisplayName>Code Show XAML/CS</DisplayName>
-    <PublisherDisplayName>ecsproull</PublisherDisplayName>
+    <DisplayName>CodeShow C#</DisplayName>
+    <PublisherDisplayName>codefoster</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
   <Prerequisites>
@@ -14,8 +14,8 @@
     <Resource Language="x-generate" />
   </Resources>
   <Applications>
-    <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="CodeShowCsXaml.Windows.App">
-      <m2:VisualElements DisplayName="CodeShowCsXaml" Square150x150Logo="Assets\Square150.png" Square30x30Logo="Assets\SmallLogo.png" Description="CodeShowCsXaml.Windows" ForegroundText="light" BackgroundColor="#464646" ToastCapable="true">
+    <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="CodeShow.CS.Windows.App">
+      <m2:VisualElements DisplayName="CodeShow C#" Square150x150Logo="Assets\Square150.png" Square30x30Logo="Assets\SmallLogo.png" Description="CodeShow C#" ForegroundText="light" BackgroundColor="#464646" ToastCapable="true">
         <m2:LockScreen Notification="badgeAndTileText" BadgeLogo="Assets\Badge24.png" />
         <m2:DefaultTile Wide310x150Logo="Assets/wide.png" Square310x310Logo="Assets/square310.png">
           <m2:ShowNameOnTiles>

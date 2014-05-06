@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StoreAssociation xmlns="http://schemas.microsoft.com/appx/2010/storeassociation">
   <Publisher>CN=603A18C8-7F37-48CF-B16C-FED79B9AEA66</Publisher>
-  <NamespacePrefix>36805codefoster</NamespacePrefix>
   <PublisherDisplayName>codefoster</PublisherDisplayName>
   <GeneratePackageHash>http://www.w3.org/2001/04/xmlenc#sha256</GeneratePackageHash>
   <SupportedLocales>
@@ -352,21 +351,19 @@
     <MainPackageIdentityName>36805codefoster.codeSHOW</MainPackageIdentityName>
     <ReservedNames>
       <ReservedName>codeSHOW</ReservedName>
+      <ReservedName>codeShow JavaScript</ReservedName>
     </ReservedNames>
   </ProductReservedInfo>
   <AccountPackageIdentityNames>
     <MainPackageIdentityName>36805codefoster.CamView</MainPackageIdentityName>
     <MainPackageIdentityName>36805codefoster.codefoster</MainPackageIdentityName>
+    <MainPackageIdentityName>36805codefoster.CodeShowC</MainPackageIdentityName>
     <MainPackageIdentityName>36805codefoster.CSSforWindows8AppDevelopment</MainPackageIdentityName>
     <MainPackageIdentityName>36805codefoster.Dribble</MainPackageIdentityName>
     <MainPackageIdentityName>36805codefoster.Everyview</MainPackageIdentityName>
-    <MainPackageIdentityName>36805codefoster.Flok</MainPackageIdentityName>
-    <MainPackageIdentityName>36805codefoster.Grow</MainPackageIdentityName>
-    <MainPackageIdentityName>36805codefoster.JeremyFoster</MainPackageIdentityName>
     <MainPackageIdentityName>36805codefoster.KidSuite</MainPackageIdentityName>
     <MainPackageIdentityName>36805codefoster.KidSuitePop</MainPackageIdentityName>
-    <MainPackageIdentityName>36805codefoster.LittlePond</MainPackageIdentityName>
-    <MainPackageIdentityName>36805codefoster.Mandible</MainPackageIdentityName>
+    <MainPackageIdentityName>36805codefoster.TaterTots</MainPackageIdentityName>
     <MainPackageIdentityName>36805codefoster.TheSailingApp</MainPackageIdentityName>
     <MainPackageIdentityName>36805codefoster.WAGE</MainPackageIdentityName>
   </AccountPackageIdentityNames>
@@ -386,5 +383,32 @@
       <PackageArchitecture>x86</PackageArchitecture>
       <PackageMaxArchitectureVersion>1.1.0.32</PackageMaxArchitectureVersion>
     </PackageInfo>
+    <BundleInfo>
+      <PackageInfo>
+        <OsMinVersion>6.3.0.0</OsMinVersion>
+        <PackageArchitecture>X86</PackageArchitecture>
+        <PackageMaxArchitectureVersion>2.0.0.27</PackageMaxArchitectureVersion>
+      </PackageInfo>
+      <PackageInfo>
+        <OsMinVersion>6.3.0.0</OsMinVersion>
+        <PackageArchitecture>X64</PackageArchitecture>
+        <PackageMaxArchitectureVersion>2.0.0.27</PackageMaxArchitectureVersion>
+      </PackageInfo>
+      <PackageInfo>
+        <OsMinVersion>6.3.0.0</OsMinVersion>
+        <PackageArchitecture>Neutral</PackageArchitecture>
+        <PackageMaxArchitectureVersion>2.0.0.27</PackageMaxArchitectureVersion>
+      </PackageInfo>
+      <PackageInfo>
+        <OsMinVersion>6.3.0.0</OsMinVersion>
+        <PackageArchitecture>Neutral</PackageArchitecture>
+        <PackageMaxArchitectureVersion>2.0.0.27</PackageMaxArchitectureVersion>
+      </PackageInfo>
+      <PackageInfo>
+        <OsMinVersion>6.3.0.0</OsMinVersion>
+        <PackageArchitecture>ARM</PackageArchitecture>
+        <PackageMaxArchitectureVersion>2.0.0.27</PackageMaxArchitectureVersion>
+      </PackageInfo>
+    </BundleInfo>
   </PackageInfoList>
 </StoreAssociation>

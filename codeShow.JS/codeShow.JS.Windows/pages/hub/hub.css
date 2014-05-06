@@ -3,15 +3,11 @@
     z-index: 2;
 }
 
-    .hubpage .pagetitle {
-        font-family: "gooddog";
-        font-size: 70px;
-    }
-
-        .hubpage .pagetitle .titleCode { color: #34435a; }
-        .hubpage .pagetitle .titleShow { color: #5e83a2; }
-
-    .hubpage .pagetitle img { height: 70px; }
+.hubpage .titlearea, .hubpage .subtitle { font-family: "gooddog"; }
+    .hubpage .titlearea { font-size: 70px; }
+        .hubpage .titlearea .titleCode { color: #34435a; }
+        .hubpage .titlearea .titleShow { color: #5e83a2; }
+    .hubpage .subtitle { font-size: 20px; color: #34435a; }
 
 .hubpage header[role=banner] .win-searchbox {
     -ms-grid-column: 4;
