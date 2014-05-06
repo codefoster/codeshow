@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StoreAssociation xmlns="http://schemas.microsoft.com/appx/2010/storeassociation">
-  <Publisher>CN=6E2FB41A-74CD-4559-8FE7-474D50FE6A5A</Publisher>
-  <PublisherDisplayName>ecsproull</PublisherDisplayName>
+  <Publisher>CN=603A18C8-7F37-48CF-B16C-FED79B9AEA66</Publisher>
+  <PublisherDisplayName>codefoster</PublisherDisplayName>
   <GeneratePackageHash>http://www.w3.org/2001/04/xmlenc#sha256</GeneratePackageHash>
   <SupportedLocales>
     <Language Code="af" InMinimumRequirementSet="false" />
@@ -348,14 +348,23 @@
     <Language Code="zu-za" InMinimumRequirementSet="false" />
   </SupportedLocales>
   <ProductReservedInfo>
-    <MainPackageIdentityName>30971ecsproull.CodeShowXAMLCS</MainPackageIdentityName>
+    <MainPackageIdentityName>36805codefoster.CodeShowC</MainPackageIdentityName>
     <ReservedNames>
-      <ReservedName>Code Show XAML/CS</ReservedName>
+      <ReservedName>CodeShow C#</ReservedName>
     </ReservedNames>
   </ProductReservedInfo>
   <AccountPackageIdentityNames>
-    <MainPackageIdentityName>30971ecsproull.GrouponLive</MainPackageIdentityName>
-    <MainPackageIdentityName>30971ecsproull.SdkSample</MainPackageIdentityName>
+    <MainPackageIdentityName>36805codefoster.CamView</MainPackageIdentityName>
+    <MainPackageIdentityName>36805codefoster.codefoster</MainPackageIdentityName>
+    <MainPackageIdentityName>36805codefoster.codeSHOW</MainPackageIdentityName>
+    <MainPackageIdentityName>36805codefoster.CSSforWindows8AppDevelopment</MainPackageIdentityName>
+    <MainPackageIdentityName>36805codefoster.Dribble</MainPackageIdentityName>
+    <MainPackageIdentityName>36805codefoster.Everyview</MainPackageIdentityName>
+    <MainPackageIdentityName>36805codefoster.KidSuite</MainPackageIdentityName>
+    <MainPackageIdentityName>36805codefoster.KidSuitePop</MainPackageIdentityName>
+    <MainPackageIdentityName>36805codefoster.TaterTots</MainPackageIdentityName>
+    <MainPackageIdentityName>36805codefoster.TheSailingApp</MainPackageIdentityName>
+    <MainPackageIdentityName>36805codefoster.WAGE</MainPackageIdentityName>
   </AccountPackageIdentityNames>
-  <PackageInfoList LandingUrl="https://appdev.microsoft.com:443/StorePortals/Developer/Catalog/ReleaseAnchor/27ebed00-404f-4d74-956e-26e5e376d24b" />
+  <PackageInfoList LandingUrl="https://appdev.microsoft.com:443/StorePortals/Developer/Catalog/ReleaseAnchor/019073a7-8c19-47f3-b9b4-f7e91280b142" />
 </StoreAssociation>

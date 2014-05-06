@@ -18,7 +18,7 @@
     <PackageCertificateKeyFile>CodeShow.CS.Windows_StoreKey.pfx</PackageCertificateKeyFile>
     <AppxAutoIncrementPackageRevision>True</AppxAutoIncrementPackageRevision>
     <AppxBundlePlatforms>x86</AppxBundlePlatforms>
-    <PackageCertificateThumbprint>61DC59FBADA8BAE9CE12796B76B1A4A016195610</PackageCertificateThumbprint>
+    <PackageCertificateThumbprint>0D413C711DF58C1F4F03E79F07AB26B3239341C6</PackageCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>

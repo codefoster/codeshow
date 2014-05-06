@@ -53,11 +53,16 @@
     <AppxAutoIncrementPackageRevision>True</AppxAutoIncrementPackageRevision>
     <AppxBundlePlatforms>x86|x64|arm</AppxBundlePlatforms>
     <PackageCertificateThumbprint>B0439CC9FA1AC6D5E1A7A6EDBFADEDC6B869A70C</PackageCertificateThumbprint>
+    <AppxBundle>Always</AppxBundle>
   </PropertyGroup>
   <ItemGroup>
     <AppxManifest Include="package.appxmanifest">
       <SubType>Designer</SubType>
     </AppxManifest>
+    <Content Include="js\MobileServices.intellisense.js" />
+    <Content Include="js\MobileServices.js" />
+    <Content Include="js\MobileServices.min.js" />
+    <Content Include="js\MobileServices.pri" />
     <Content Include="services\mobile services\codeshow\service.js">
       <ConnectedServiceReference>codeshow</ConnectedServiceReference>
     </Content>

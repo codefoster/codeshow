@@ -30,7 +30,7 @@ intellisense.annotate(WindowsAzure.MobileServiceClient.prototype, {
         /// </summary>
         /// <param name="provider" type="String" mayBeNull="true">
         /// The name of the identity provider, which instructs Mobile Services which provider to use for authentication. 
-        /// The following values are supported: 'facebook', 'twitter', 'google', 
+        /// The following values are supported: 'facebook', 'twitter', 'google', 'windowsazureactivedirectory' (can also use 'aad')
         /// or 'microsoftaccount'. If no provider is specified, the 'token' parameter
         /// is considered a Microsoft Account authentication token. If a provider is specified, 
         /// the 'token' parameter is considered a provider-specific authentication token.
@@ -73,7 +73,6 @@ intellisense.annotate(WindowsAzure, {
         /// <param name="applicationKey" type="string" mayBeNull="false">
         /// The application key of the mobile service..
         /// </param>
-        /// <field name="applicationUrl" type="string">PAV</field>
         ///</signature>		
     },
     MobileServiceTable: function () {
@@ -103,6 +102,23 @@ WindowsAzure.MobileServiceClient = (function () {
                 /// </summary>
                 /// <param name="tableName" type="string">The name of the table.</param>
                 /// <returns type="WindowsAzure.MobileServiceTable">A reference to the table.</returns>
+                /// </signature>
+            },
+            invokeApi: function () {
+                /// <signature>
+                /// <summary>
+                /// Invokes the specified custom api and returns a response object.
+                /// </summary>
+                /// <param name="apiName">
+                /// The custom api to invoke.
+                /// </param>
+                /// <param name="options" mayBeNull="true">
+                /// Contains additional parameter information, valid values are:
+                /// body: The body of the HTTP request.
+                /// method: The HTTP method to use in the request, with the default being POST,
+                /// parameters: Any additional query string parameters, 
+                /// headers: HTTP request headers, specified as an object.
+                /// </param>
                 /// </signature>
             }
         });
@@ -162,11 +178,8 @@ WindowsAzure.MobileServiceClient = (function () {
                         /// <summary>
                         /// Sorts a query against the table by the selected columns, in ascending order.
                         /// </summary>
-                        /// <param name="col1" type="string" mayBeNull="false">
-                        /// The name of the first column to use for ordering
-                        /// </param>
-                        /// <param name="col2" type="string" mayBeNull="false">
-                        /// The name of the second column to use for ordering
+                        /// <param name="col" type="string" mayBeNull="false" parameterArray="true">
+                        /// An array of the names of the columns to use for ordering
                         /// </param>
                         /// <returns type="Query">A query that can be further composed.</returns>
                         /// </signature>
@@ -174,13 +187,10 @@ WindowsAzure.MobileServiceClient = (function () {
                     orderByDescending: function () {
                         /// <signature>
                         /// <summary>
-                        /// Inserts data from the supplied JSON object into the table.
+                        /// Sorts a query against the table by the selected columns, in descending order.
                         /// </summary>
-                        /// <param name="col1" type="string" mayBeNull="false">
-                        /// The name of the first column to use for ordering
-                        /// </param>
-                        /// <param name="col2" type="string" mayBeNull="false">
-                        /// The name of the second column to use for ordering
+                        /// <param name="col" type="string" mayBeNull="false" parameterArray="true">
+                        /// An array of the names of the columns to use for ordering
                         /// </param>
                         /// <returns type="Query">A query that can be further composed.</returns>
                         /// </signature>
@@ -192,6 +202,34 @@ WindowsAzure.MobileServiceClient = (function () {
                         /// </summary>
                         /// <param name="query" type="Query" mayBeNull="true">
                         /// The query to execute. When null or undefined, all rows are returned.
+                        /// </param>
+                        /// <param name="parameters" type="Object" mayBeNull="true">
+                        /// An object of user-defined parameters and values to include in the request URI query string.
+                        /// </param>
+                        /// <returns type="WinJS.Promise">A WinJS.Promise</returns>
+                        /// </signature>
+                    },
+                    lookup: function () {
+                        /// <signature>
+                        /// <summary>
+                        /// Gets an instance from a given table.
+                        /// </summary>
+                        /// <param name="id" type="Number" integer="true">
+                        /// The id of the instance to get from the table.
+                        /// </param>
+                        /// <param name="parameters" type="Object" mayBeNull="true">
+                        /// An object of user-defined parameters and values to include in the request URI query string.
+                        /// </param>
+                        /// <returns type="WinJS.Promise">A WinJS.Promise</returns>
+                        /// </signature>
+                    },
+                    refresh: function () {
+                        /// <signature>
+                        /// <summary>
+                        /// Refresh the current instance with the latest values from the table.
+                        /// </summary>
+                        /// <param name="instance" type="Object">
+                        /// The instance to refresh.
                         /// </param>
                         /// <param name="parameters" type="Object" mayBeNull="true">
                         /// An object of user-defined parameters and values to include in the request URI query string.
