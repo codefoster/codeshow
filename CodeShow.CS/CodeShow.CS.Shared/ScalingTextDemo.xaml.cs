@@ -2,7 +2,7 @@
 
 // BeginCutPaste
 
-namespace CodeShow.CS.Shared
+namespace CodeShowCsXaml.Shared
 {
     public sealed partial class ScalingTextDemo : UserControl
     {

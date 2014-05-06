@@ -6,7 +6,7 @@ using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 
-namespace CodeShow.CS
+namespace CodeShowCsXaml
 {
     // BeginCutPaste
 

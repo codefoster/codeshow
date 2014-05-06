@@ -1,5 +1,5 @@
-﻿using CodeShow.CS.Common;
-using CodeShow.CS.Shared;
+﻿using CodeShowCsXaml.Common;
+using CodeShowCsXaml.Shared;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
@@ -7,7 +7,7 @@ using Windows.Storage;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Input;
 
-namespace CodeShow.CS
+namespace CodeShowCsXaml
 {
     public sealed partial class CodeShowPage : Page
     {

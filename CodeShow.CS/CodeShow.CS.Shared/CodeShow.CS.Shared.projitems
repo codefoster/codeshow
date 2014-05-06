@@ -49,12 +49,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)ShareWindowsDemo.xaml.cs">
       <DependentUpon>ShareWindowsDemo.xaml</DependentUpon>
     </Compile>
-    <Content Include="$(MSBuildThisFileDirectory)SourceCodeAsContent\WebViewControlSizingDemo.xaml.cs">
-      <DependentUpon>WebViewControlSizingDemo.xaml</DependentUpon>
-    </Content>
-    <Compile Include="$(MSBuildThisFileDirectory)WebViewControlSizingDemo.xaml.cs">
-      <DependentUpon>WebViewControlSizingDemo.xaml</DependentUpon>
-    </Compile>
     <Content Include="$(MSBuildThisFileDirectory)SourceCodeAsContent\BindingConverterDemo.xaml.cs">
       <DependentUpon>BindingConverterDemo.xaml</DependentUpon>
     </Content>
@@ -336,10 +330,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Content>
-    <Content Include="$(MSBuildThisFileDirectory)SourceCodeAsContent\WebViewControlSizingDemo.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Content>
     <Page Include="$(MSBuildThisFileDirectory)StaticResourceDemo.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -353,10 +343,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="$(MSBuildThisFileDirectory)ViewBoxDemo.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="$(MSBuildThisFileDirectory)WebViewControlSizingDemo.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

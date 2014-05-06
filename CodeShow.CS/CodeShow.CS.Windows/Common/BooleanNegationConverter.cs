@@ -1,7 +1,7 @@
 ﻿using System;
 using Windows.UI.Xaml.Data;
 
-namespace CodeShow.CS.Common
+namespace CodeShowCsXaml.Common
 {
     /// <summary>
     /// Value converter that translates true to false and vice versa.
