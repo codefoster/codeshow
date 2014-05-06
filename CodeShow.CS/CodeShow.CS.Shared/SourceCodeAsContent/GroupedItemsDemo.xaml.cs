@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using Windows.UI.Xaml.Controls;
 
-namespace CodeShow.CS
+namespace CodeShowCsXaml
 {
     public class Item
     {

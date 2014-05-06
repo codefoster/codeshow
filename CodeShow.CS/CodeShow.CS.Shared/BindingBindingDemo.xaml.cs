@@ -1,6 +1,6 @@
 ﻿using Windows.UI.Xaml.Controls;
 
-namespace CodeShow.CS.Shared
+namespace CodeShowCsXaml.Shared
 {
     public class BindingItem
     {

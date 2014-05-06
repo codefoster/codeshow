@@ -17,7 +17,7 @@ using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Shapes;
 using Windows.Devices.Geolocation;
 
-namespace CodeShow.CS.Shared
+namespace CodeShowCsXaml.Shared
 {
     public sealed partial class MapLocationDemo : UserControl
     {

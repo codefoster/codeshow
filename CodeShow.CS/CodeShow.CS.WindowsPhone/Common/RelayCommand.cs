@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Input;
 
-namespace CodeShow.CS.Common
+namespace CodeShowCsXaml.Common
 {
     /// <summary>
     /// A command whose sole purpose is to relay its functionality 
