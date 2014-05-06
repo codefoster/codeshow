@@ -5,7 +5,7 @@ using Windows.UI.Xaml.Input;
 using Windows.ApplicationModel.Search;
 #endif
 
-namespace CodeShowCsXaml.Shared
+namespace CodeShow.CS.Shared
 {
     public sealed partial class PropertyBindingDemo : UserControl
     {

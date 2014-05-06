@@ -1,7 +1,7 @@
 ﻿using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Input;
 
-namespace CodeShowCsXaml.Shared
+namespace CodeShow.CS.Shared
 {
     public sealed partial class TextDemo : UserControl
     {

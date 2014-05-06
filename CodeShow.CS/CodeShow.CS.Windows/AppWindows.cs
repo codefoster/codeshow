@@ -1,4 +1,4 @@
-﻿using CodeShowCsXaml.Shared;
+﻿using CodeShow.CS.Shared;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,7 +10,7 @@ using Windows.Storage;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 
-namespace CodeShowCsXaml
+namespace CodeShow.CS
 {
     sealed partial class App : Application
     {

@@ -1,12 +1,12 @@
-﻿using CodeShowCsXaml.Common;
-using CodeShowCsXaml.Shared;
+﻿using CodeShow.CS.Common;
+using CodeShow.CS.Shared;
 using System;
 using Windows.ApplicationModel.DataTransfer;
 using Windows.Foundation;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Navigation;
 
-namespace CodeShowCsXaml
+namespace CodeShow.CS
 {
     /// <summary>
     /// A basic page that provides characteristics common to most applications.

@@ -1,8 +1,8 @@
-﻿using CodeShowCsXaml.Shared;
+﻿using CodeShow.CS.Shared;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 
-namespace CodeShowCsXaml
+namespace CodeShow.CS
 {
     public sealed partial class ItemDetailGridControl : UserControl
     {
