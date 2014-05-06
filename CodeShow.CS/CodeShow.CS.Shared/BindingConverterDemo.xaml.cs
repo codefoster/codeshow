@@ -2,7 +2,7 @@
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Data;
 
-namespace CodeShowCsXaml.Shared
+namespace CodeShow.CS.Shared
 {
     public sealed partial class BindingConverterDemo : UserControl
     {

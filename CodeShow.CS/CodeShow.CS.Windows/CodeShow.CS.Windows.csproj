@@ -189,9 +189,9 @@
   <Import Project="..\CodeShow.CS.Shared\CodeShow.CS.Shared.projitems" Label="Shared" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
   <PropertyGroup>
-    <PreBuildEvent>copy /Y "$(SolutionDir)CodeShowCsXaml\CodeShow.CS.Shared\*Demo*.xaml*" "$(SolutionDir)CodeShow.CS\CodeShow.CS.Shared\SourceCodeAsContent"
-copy  /Y "$(SolutionDir)CodeShowCsXaml\CodeShow.CS.Windows\appWindows.cs" "$(SolutionDir)CodeShow.CS\CodeShow.CS.Shared\SourceCodeAsContent\app.xaml.cs"
-copy /Y  "$(SolutionDir)CodeShowCsXaml\CodeShow.CS.Windows\ItemDetailPage.xaml.cs" "$(SolutionDir)CodeShow.CS\CodeShow.CS.Shared\SourceCodeAsContent\ShareWindowsDemo.xaml.cs"
+    <PreBuildEvent>copy /Y "$(SolutionDir)CodeShow.CS\CodeShow.CS.Shared\*Demo*.xaml*" "$(SolutionDir)CodeShow.CS\CodeShow.CS.Shared\SourceCodeAsContent"
+copy  /Y "$(SolutionDir)CodeShow.CS\CodeShow.CS.Windows\appWindows.cs" "$(SolutionDir)CodeShow.CS\CodeShow.CS.Shared\SourceCodeAsContent\app.xaml.cs"
+copy /Y  "$(SolutionDir)CodeShow.CS\CodeShow.CS.Windows\ItemDetailPage.xaml.cs" "$(SolutionDir)CodeShow.CS\CodeShow.CS.Shared\SourceCodeAsContent\ShareWindowsDemo.xaml.cs"
 copy "$(SolutionDir)CodeShow.CS\CodeShow.CS.Windows\*Demo*.xaml*" "$(SolutionDir)CodeShow.CS\CodeShow.CS.Shared\SourceCodeAsContent"
 copy "$(SolutionDir)CodeShow.CS\CodeShow.CS.Windows\*SettingsFlyout*.xaml*" "$(SolutionDir)CodeShow.CS\CodeShow.CS.Shared\SourceCodeAsContent"
 copy "$(SolutionDir)CodeShow.CS\CodeShow.CS.Windows\CodeShowPage*.xaml.cs" "$(SolutionDir)CodeShow.CS\CodeShow.CS.Shared\SourceCodeAsContent\CodeShowPageWindows.Xaml.cs"

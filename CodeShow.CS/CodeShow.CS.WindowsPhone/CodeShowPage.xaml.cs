@@ -1,10 +1,10 @@
-﻿using CodeShowCsXaml.Common;
+﻿using CodeShow.CS.Common;
 using Windows.Graphics.Display;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Navigation;
 
-namespace CodeShowCsXaml
+namespace CodeShow.CS
 {
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.

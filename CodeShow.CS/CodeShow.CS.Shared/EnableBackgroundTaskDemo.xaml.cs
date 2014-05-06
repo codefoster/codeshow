@@ -3,7 +3,7 @@ using Windows.ApplicationModel.Background;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 
-namespace CodeShowCsXaml
+namespace CodeShow.CS
 {
     public sealed partial class EnableBackgroundTaskDemo : UserControl
     {

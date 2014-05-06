@@ -1,10 +1,10 @@
-﻿using CodeShowCsXaml.Shared;
+﻿using CodeShow.CS.Shared;
 using Windows.Graphics.Display;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Documents;
 using Windows.UI.Xaml.Controls;
 
-namespace CodeShowCsXaml
+namespace CodeShow.CS
 {
     public sealed partial class CodeShowControl : UserControl
     {

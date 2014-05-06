@@ -14,8 +14,8 @@
     <Resource Language="x-generate" />
   </Resources>
   <Applications>
-    <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="CodeShowCsXaml.Windows.App">
-      <m2:VisualElements DisplayName="CodeShowCsXaml" Square150x150Logo="Assets\Square150.png" Square30x30Logo="Assets\SmallLogo.png" Description="CodeShowCsXaml.Windows" ForegroundText="light" BackgroundColor="#464646" ToastCapable="true">
+    <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="CodeShow.CS.Windows.App">
+      <m2:VisualElements DisplayName="CodeShow.CS" Square150x150Logo="Assets\Square150.png" Square30x30Logo="Assets\SmallLogo.png" Description="CodeShow.CS.Windows" ForegroundText="light" BackgroundColor="#464646" ToastCapable="true">
         <m2:LockScreen Notification="badgeAndTileText" BadgeLogo="Assets\Badge24.png" />
         <m2:DefaultTile Wide310x150Logo="Assets/wide.png" Square310x310Logo="Assets/square310.png">
           <m2:ShowNameOnTiles>

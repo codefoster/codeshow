@@ -2,7 +2,7 @@
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 
-namespace CodeShowCsXaml.Shared
+namespace CodeShow.CS.Shared
 {
     // BeginCutPaste
     public sealed partial class DisplayOrientationDemo : UserControl 

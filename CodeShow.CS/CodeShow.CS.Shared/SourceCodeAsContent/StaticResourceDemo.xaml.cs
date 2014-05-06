@@ -1,7 +1,7 @@
 ﻿using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml;
 
-namespace CodeShowCsXaml.Shared
+namespace CodeShow.CS.Shared
 {
     public sealed partial class StaticResourceDemo : UserControl
     {
