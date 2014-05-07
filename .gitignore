@@ -159,3 +159,4 @@ $RECYCLE.BIN/
 *.orig
 BundleArtifacts/
 *.sln.ide/
+SourceCodeAsContent/
