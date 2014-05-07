@@ -10,7 +10,7 @@ using Windows.UI.Text;
 using Windows.UI.Xaml.Documents;
 using Windows.UI.Xaml.Media;
 
-namespace CodeShowCsXaml.Shared
+namespace CodeShow.CS.Shared
 {
     public class SyntaxHighlighter
     {

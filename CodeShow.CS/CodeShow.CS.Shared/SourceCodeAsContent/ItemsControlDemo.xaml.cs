@@ -1,7 +1,7 @@
 ﻿using System.Collections.ObjectModel;
 using Windows.UI.Xaml.Controls;
 
-namespace CodeShowCsXaml.Shared
+namespace CodeShow.CS.Shared
 {
     // BeginCutPaste
     public sealed partial class ItemsControlDemo : UserControl
