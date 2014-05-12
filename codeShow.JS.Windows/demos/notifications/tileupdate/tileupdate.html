@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>Notifications</title>
+	<meta name="keywords" content="notifications push background" />
+
+	<!-- WinJS references -->
+	<link href="//Microsoft.WinJS.2.0/css/ui-light.css" rel="stylesheet" />
+	<script src="//Microsoft.WinJS.2.0/js/base.js"></script>
+	<script src="//Microsoft.WinJS.2.0/js/ui.js"></script>
+
+	<link href="tileupdate.css" rel="stylesheet" />
+	<script src="tileupdate.js"></script>
+</head>
+<body>
+	<div class="notifications fragment">
+		<header aria-label="Header content" role="banner">
+			<button data-win-control="WinJS.UI.BackButton"></button>
+			<h1 class="titlearea win-type-ellipsis">
+				<span class="pagetitle">Notifications</span>
+			</h1>
+		</header>
+		<section aria-label="Main content" role="main" class="swiper">
+			<div>
+				<h2>Concept</h2>
+				<div class="explanation">Notifications come in a few forms: tiles, badges, toast, and raw. You can send notifications from: your app's code, a background service initiated by your app, or a push notification from an outside service via Microsoft's push notification server.</div>
+			</div>
+			<div>
+				<h2>Tile text</h2>
+				<div class="explanation">Here we're going to update the tile on the start screen from our code. Type some text and hit send. Then switch to the Windows start screen and notice that you've updated the codeShow app tile!</div>
+				<div>
+					<label>Turn on queueing (to cycle through the last five notifications)</label>
+					<div id="enableQueueing" data-win-control="WinJS.UI.ToggleSwitch" data-win-options=""></div>
+
+					<div class="section">
+						<input id="tileText" /> <button class="sendText">Send text to the tile</button>
+					</div>
+
+					<div class="section">
+						<button class="clear">Clear Tile</button>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+</body>
+</html>
