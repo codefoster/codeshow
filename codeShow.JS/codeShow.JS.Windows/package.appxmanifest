@@ -15,7 +15,7 @@
   </Resources>
   <Applications>
     <Application Id="App" StartPage="default.html">
-      <m2:VisualElements DisplayName="codeShow JavaScript" Description="codeShow JavaScript" ForegroundText="light" BackgroundColor="#5e83a2" Square150x150Logo="images\square150.png" Square30x30Logo="images\square30.png">
+      <m2:VisualElements DisplayName="codeShow JavaScript" Description="codeShow JavaScript" ForegroundText="light" BackgroundColor="#5e83a2" Square150x150Logo="images\square150.png" Square30x30Logo="images\square30.png" ToastCapable="true">
         <m2:DefaultTile Square70x70Logo="images\square70.png" Square310x310Logo="images\square310.png" Wide310x150Logo="images\wide.png">
         </m2:DefaultTile>
         <m2:SplashScreen Image="images\splashscreen.png" BackgroundColor="white" />
