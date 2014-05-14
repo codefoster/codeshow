@@ -17,7 +17,7 @@
     <ProjectTypeGuids>{BC8A1FFA-BEE3-4634-8014-F334798102B3};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <PackageCertificateKeyFile>CodeShow.CS.Windows_StoreKey.pfx</PackageCertificateKeyFile>
     <AppxAutoIncrementPackageRevision>True</AppxAutoIncrementPackageRevision>
-    <AppxBundlePlatforms>x86</AppxBundlePlatforms>
+    <AppxBundlePlatforms>x86|x64|arm</AppxBundlePlatforms>
     <PackageCertificateThumbprint>0D413C711DF58C1F4F03E79F07AB26B3239341C6</PackageCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -136,18 +136,39 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\adtile_codeplex.png" />
-    <Content Include="Assets\badge24.scale-140.png" />
+    <Content Include="Assets\badge.scale-100.png" />
+    <Content Include="Assets\badge.scale-140.png" />
+    <Content Include="Assets\badge.scale-180.png" />
     <Content Include="Assets\headerlogo.png" />
     <Content Include="Assets\logo.png" />
     <Content Include="Assets\smalllogo.png" />
+    <Content Include="Assets\splashscreen.scale-100.png" />
     <Content Include="Assets\splashscreen.scale-140.png" />
+    <Content Include="Assets\splashscreen.scale-180.png" />
+    <Content Include="Assets\square150.scale-100.png" />
     <Content Include="Assets\square150.scale-140.png" />
+    <Content Include="Assets\square150.scale-180.png" />
+    <Content Include="Assets\square150.scale-80.png" />
+    <Content Include="Assets\square30.scale-100.png" />
     <Content Include="Assets\square30.scale-140.png" />
+    <Content Include="Assets\square30.scale-180.png" />
+    <Content Include="Assets\square30.scale-80.png" />
+    <Content Include="Assets\square310.scale-100.png" />
     <Content Include="Assets\square310.scale-140.png" />
+    <Content Include="Assets\square310.scale-180.png" />
+    <Content Include="Assets\square310.scale-80.png" />
+    <Content Include="Assets\square50.scale-100.png" />
     <Content Include="Assets\square50.scale-140.png" />
+    <Content Include="Assets\square50.scale-180.png" />
+    <Content Include="Assets\square70.scale-100.png" />
     <Content Include="Assets\square70.scale-140.png" />
+    <Content Include="Assets\square70.scale-180.png" />
+    <Content Include="Assets\square70.scale-80.png" />
     <Content Include="Assets\storelogo.png" />
+    <Content Include="Assets\wide.scale-100.png" />
     <Content Include="Assets\wide.scale-140.png" />
+    <Content Include="Assets\wide.scale-180.png" />
+    <Content Include="Assets\wide.scale-80.png" />
     <Content Include="Common\ReadMe.txt" />
     <None Include="Package.StoreAssociation.xml" />
   </ItemGroup>

@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/2010/manifest" xmlns:m2="http://schemas.microsoft.com/appx/2013/manifest">
-  <Identity Name="36805codefoster.CodeShowC" Publisher="CN=603A18C8-7F37-48CF-B16C-FED79B9AEA66" Version="2.0.0.0" />
+  <Identity Name="36805codefoster.CodeShowC" Publisher="CN=603A18C8-7F37-48CF-B16C-FED79B9AEA66" Version="2.0.0.3" />
   <Properties>
     <DisplayName>CodeShow C#</DisplayName>
     <PublisherDisplayName>codefoster</PublisherDisplayName>
-    <Logo>Assets\StoreLogo.png</Logo>
+    <Logo>Assets\square50.png</Logo>
   </Properties>
   <Prerequisites>
     <OSMinVersion>6.3.0</OSMinVersion>
@@ -15,16 +15,16 @@
   </Resources>
   <Applications>
     <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="CodeShow.CS.Windows.App">
-      <m2:VisualElements DisplayName="CodeShow C#" Square150x150Logo="Assets\Square150.png" Square30x30Logo="Assets\SmallLogo.png" Description="CodeShow C#" ForegroundText="light" BackgroundColor="#464646" ToastCapable="true">
-        <m2:LockScreen Notification="badgeAndTileText" BadgeLogo="Assets\Badge24.png" />
-        <m2:DefaultTile Wide310x150Logo="Assets/wide.png" Square310x310Logo="Assets/square310.png">
+      <m2:VisualElements DisplayName="CodeShow C#" Square150x150Logo="Assets\Square150.png" Square30x30Logo="Assets\square30.png" Description="CodeShow C#" ForegroundText="light" BackgroundColor="#5e83a2" ToastCapable="true">
+        <m2:LockScreen Notification="badgeAndTileText" BadgeLogo="Assets\Badge.png" />
+        <m2:DefaultTile Wide310x150Logo="Assets/wide.png" Square310x310Logo="Assets/square310.png" Square70x70Logo="Assets\square70.png">
           <m2:ShowNameOnTiles>
             <m2:ShowOn Tile="square150x150Logo" />
             <m2:ShowOn Tile="wide310x150Logo" />
             <m2:ShowOn Tile="square310x310Logo" />
           </m2:ShowNameOnTiles>
         </m2:DefaultTile>
-        <m2:SplashScreen Image="Assets\SplashScreen.png" />
+        <m2:SplashScreen Image="Assets\SplashScreen.png" BackgroundColor="white" />
       </m2:VisualElements>
       <Extensions>
         <Extension Category="windows.search" />

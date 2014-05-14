@@ -156,6 +156,7 @@ $RECYCLE.BIN/
 .DS_Store
 
 #added by codefoster
+Backup_of_*
 *.orig
 BundleArtifacts/
 *.sln.ide/
