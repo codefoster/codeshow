@@ -59,6 +59,10 @@
     <AppxManifest Include="package.appxmanifest">
       <SubType>Designer</SubType>
     </AppxManifest>
+    <Content Include="demos\fileCreateRead\fileCreateRead.css" />
+    <Content Include="demos\fileCreateRead\fileCreateRead.html" />
+    <Content Include="demos\fileCreateRead\fileCreateRead.js" />
+    <Content Include="demos\fileCreateRead\fileCreateRead.json" />
     <Content Include="js\MobileServices.intellisense.js" />
     <Content Include="js\MobileServices.js" />
     <Content Include="js\MobileServices.min.js" />

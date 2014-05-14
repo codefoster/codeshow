@@ -338,13 +338,46 @@ TODO:
     });
 
     WinJS.Namespace.define("Ocho.Logging", {
-        clearLog: function () { document.querySelector("div#log").innerHTML = ""; },
-        log: function (msg) {
+        //This function is used to provide logging or to write output in a particular DOM element
+
+        clearLog: function () {
+            if (document.querySelector("div#log"))
+                document.querySelector("div#log").innerHTML = "";
+        },
+
+        log: function (msg, elemName) {
+
             msg = msg != undefined ? msg : "";
-            //TODO: if a div#log does not exist then create one and put it at the end of the body
-            //TODO: allow a selector to specify what element(s) will be logged to but default to div#log
+
+            //TODO: if a div#log does not exist then create one and put it at the end of the body //done by Sonal Date: 5/9/14
+            //TODO: allow a selector to specify what element(s) will be logged to but default to div#log //done by Sonal 
             //TODO: consider replacing with WinJS built-in logging
-            document.querySelector("div#log").innerHTML += msg + "<br/>";
+
+            if (elemName != undefined) {
+                elemName = "#" + elemName;
+                document.querySelector(elemName).innerHTML += msg + "<br/>";
+            } else {
+                //var targetElement = document.getElementsByTagName('body')[0];
+                if (document.querySelector("div#log")) {
+                    document.querySelector("div#log").innerHTML += msg + "<br/>";
+                } else {
+                    var targetElement = document.querySelectorAll("div.fragment");
+                    var lastChildElement = targetElement[1].lastChild;
+
+                    while (lastChildElement && lastChildElement.nodeType !== 1) {
+                        lastChildElement = lastChildElement.previousSibling;
+                        //console.log(lastChildElement);
+                    }
+
+                    var log = document.createElement('div');
+                    log.id = "log";
+
+                    if (lastChildElement) {
+                        lastChildElement.appendChild(log);
+                        document.querySelector("div#log").innerHTML += msg + "<br/>";
+                    }
+                }
+            }
         },
     });
 
