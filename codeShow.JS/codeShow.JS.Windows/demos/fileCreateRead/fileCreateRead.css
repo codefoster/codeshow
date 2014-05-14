@@ -1,7 +1,4 @@
-﻿.fileCreateRead section {
-	margin: auto 120px;
-}
-
+﻿
 .phone .fileCreateRead .page-section {
 	margin: auto 24px;
 }
@@ -17,16 +14,3 @@
 .phone .fileCreateRead .back-button {
 	display: none;
 }
-
-.fragment {
-	-ms-grid-columns: 1fr;
-	-ms-grid-rows: 128px 1fr;
-	display: -ms-grid;
-	height: 100%;
-	width: 100%;
-}
-
-	.fragment section[role=main] {
-		-ms-grid-row: 2;
-		height: 100%;
-	}
