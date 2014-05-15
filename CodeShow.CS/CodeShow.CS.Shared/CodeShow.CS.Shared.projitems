@@ -73,7 +73,9 @@
     <Content Include="$(MSBuildThisFileDirectory)SourceCodeAsContent\GroupedItemsDemo.xaml.cs">
       <DependentUpon>GroupedItemsDemo.xaml</DependentUpon>
     </Content>
-    <Content Include="$(MSBuildThisFileDirectory)SourceCodeAsContent\app.xaml.cs" />
+    <Content Include="$(MSBuildThisFileDirectory)SourceCodeAsContent\app.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Content>
     <Content Include="$(MSBuildThisFileDirectory)SourceCodeAsContent\AsyncDemo.xaml.cs">
       <DependentUpon>AsyncDemo.xaml</DependentUpon>
     </Content>
@@ -314,6 +316,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Content>
     <Content Include="$(MSBuildThisFileDirectory)SourceCodeAsContent\GroupedItemsDemo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)SourceCodeAsContent\App.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Content>
