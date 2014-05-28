@@ -327,6 +327,14 @@ namespace CodeShow.CS.Shared
 #endif
             this.mainGridItems.Add(webViewControlSizingDemo);
 
+
+            GridItem staticBindingDemo = new GridItem();
+            staticBindingDemo.Title = "Static Binding";
+            staticBindingDemo.Description = "Demonstrates static binding to the code behind clas.";
+            staticBindingDemo.ControlType = typeof(StaticBindingDemo);
+            staticBindingDemo.NavigationUrl = new Uri("http://msdn.microsoft.com/en-us/library/ms746695(v=vs.110).aspx");
+            this.mainGridItems.Add(staticBindingDemo);
+
             List<GridItem> temp = new List<GridItem>(this.mainGridItems);
             temp.Sort(delegate(GridItem one, GridItem two)
             {

@@ -213,6 +213,7 @@
     <PreBuildEvent>copy /Y "$(SolutionDir)CodeShow.CS\CodeShow.CS.Shared\*Demo*.xaml*" "$(SolutionDir)CodeShow.CS\CodeShow.CS.Shared\SourceCodeAsContent"
 copy  /Y "$(SolutionDir)CodeShow.CS\CodeShow.CS.Windows\appWindows.cs" "$(SolutionDir)CodeShow.CS\CodeShow.CS.Shared\SourceCodeAsContent\app.xaml.cs"
 copy /Y  "$(SolutionDir)CodeShow.CS\CodeShow.CS.Windows\ItemDetailPage.xaml.cs" "$(SolutionDir)CodeShow.CS\CodeShow.CS.Shared\SourceCodeAsContent\ShareWindowsDemo.xaml.cs"
+copy /Y  "$(SolutionDir)CodeShow.CS\CodeShow.CS.Shared\App.xaml" "$(SolutionDir)CodeShow.CS\CodeShow.CS.Shared\SourceCodeAsContent\App.xaml"
 copy "$(SolutionDir)CodeShow.CS\CodeShow.CS.Windows\*Demo*.xaml*" "$(SolutionDir)CodeShow.CS\CodeShow.CS.Shared\SourceCodeAsContent"
 copy "$(SolutionDir)CodeShow.CS\CodeShow.CS.Windows\*SettingsFlyout*.xaml*" "$(SolutionDir)CodeShow.CS\CodeShow.CS.Shared\SourceCodeAsContent"
 copy "$(SolutionDir)CodeShow.CS\CodeShow.CS.Windows\CodeShowPage*.xaml.cs" "$(SolutionDir)CodeShow.CS\CodeShow.CS.Shared\SourceCodeAsContent\CodeShowPageWindows.Xaml.cs"

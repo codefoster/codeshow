@@ -49,6 +49,12 @@
     <Compile Include="$(MSBuildThisFileDirectory)ShareWindowsDemo.xaml.cs">
       <DependentUpon>ShareWindowsDemo.xaml</DependentUpon>
     </Compile>
+    <Content Include="$(MSBuildThisFileDirectory)SourceCodeAsContent\StaticBindingDemo.xaml.cs">
+      <DependentUpon>StaticBindingDemo.xaml</DependentUpon>
+    </Content>
+    <Compile Include="$(MSBuildThisFileDirectory)StaticBindingDemo.xaml.cs">
+      <DependentUpon>StaticBindingDemo.xaml</DependentUpon>
+    </Compile>
     <Content Include="$(MSBuildThisFileDirectory)SourceCodeAsContent\AnimationStoryboardDemo.xaml.cs">
       <DependentUpon>AnimationStoryboardDemo.xaml</DependentUpon>
     </Content>
@@ -73,7 +79,9 @@
     <Content Include="$(MSBuildThisFileDirectory)SourceCodeAsContent\GroupedItemsDemo.xaml.cs">
       <DependentUpon>GroupedItemsDemo.xaml</DependentUpon>
     </Content>
-    <Content Include="$(MSBuildThisFileDirectory)SourceCodeAsContent\app.xaml.cs" />
+    <Content Include="$(MSBuildThisFileDirectory)SourceCodeAsContent\app.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Content>
     <Content Include="$(MSBuildThisFileDirectory)SourceCodeAsContent\AsyncDemo.xaml.cs">
       <DependentUpon>AsyncDemo.xaml</DependentUpon>
     </Content>
@@ -317,6 +325,18 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Content>
+    <Content Include="$(MSBuildThisFileDirectory)SourceCodeAsContent\App.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)SourceCodeAsContent\StaticBindingDemo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Content>
+    <Page Include="$(MSBuildThisFileDirectory)StaticBindingDemo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="$(MSBuildThisFileDirectory)StaticResourceDemo.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
