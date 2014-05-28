@@ -330,7 +330,7 @@ namespace CodeShow.CS.Shared
 
             GridItem staticBindingDemo = new GridItem();
             staticBindingDemo.Title = "Static Binding";
-            staticBindingDemo.Description = "Demonstrates static binding to the code behind clas.";
+            staticBindingDemo.Description = "Demonstrates static binding to class.";
             staticBindingDemo.ControlType = typeof(StaticBindingDemo);
             staticBindingDemo.NavigationUrl = new Uri("http://msdn.microsoft.com/en-us/library/ms746695(v=vs.110).aspx");
             this.mainGridItems.Add(staticBindingDemo);
