@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>hubPage</title>
+
+    <link href="/css/phone.css" rel="stylesheet" />
+    <link href="/pages/hub/hubphone.css" rel="stylesheet" />
+    <script src="/js/data.js"></script>
+    <script src="/pages/hub/hub.js"></script>
+    <script src="/pages/hub/section1Page.js"></script>
+    <script src="/pages/hub/section2Page.js"></script>
+    <script src="/pages/hub/section3Page.js"></script>
+    <script src="/pages/hub/section4Page.js"></script>
+</head>
+<body>
+    <div class="hubpage fragment">
+        <header aria-label="Header content" role="banner">
+            <button class="titlearea backbutton" data-win-control="WinJS.UI.BackButton"></button>
+            <h1 class="titlearea win-type-ellipsis">
+                <span class="pagetitle">HubPivotSharedApp1</span>
+            </h1>
+        </header>
+
+        <section aria-label="Main content" role="main">
+            <!-- Customize the Hub control by modifying the HubSection controls here. -->
+
+            <div class="hub" data-win-control="WinJS.UI.Pivot">
+
+                <div class="section1 section" data-win-control="WinJS.UI.PivotItem" data-win-options="{ isHeaderStatic: true }" data-win-res="{ winControl: {'header': 'Section1'} }">
+                    <div class="sectioncontrol" id="section1contenthost" data-win-control="HubApps_SectionControls.Section1Control"></div>
+                </div>
+
+                <div class="section2 section" data-win-control="WinJS.UI.PivotItem" data-win-options="{ isHeaderStatic: true }" data-win-res="{ winControl: {'header': 'Section2'} }">
+                    <div class="added pivot-item-viewport" >
+                        <div class="added pivot-item-surface" >
+                            <div class="sectioncontrol" id="section2contenthost" data-win-control="HubApps_SectionControls.Section2Control"></div>
+                        </div> 
+                    </div> 
+                </div>
+
+                <div class="section3 section" data-win-control="WinJS.UI.PivotItem" data-win-res="{ winControl: {'header': 'Section3'} }">
+                    <div class="section3contenthost sectioncontrol" id="section3contenthost" data-win-control="HubApps_SectionControls.Section3Control"
+                         data-win-options="{
+                             dataSource: select('.pagecontrol').winControl.section3DataSource,
+                             layout: {type: WinJS.UI.ListLayout},
+                             oniteminvoked: select('.pagecontrol').winControl.section3ItemNavigate
+                         }"></div>
+                </div>
+
+                <div class="section4 section" data-win-control="WinJS.UI.PivotItem" data-win-options="{ isHeaderStatic: true }" data-win-res="{ winControl: {'header': 'Section4'} }">
+                    <div class="sectioncontrol" id="section4contenthost" data-win-control="HubApps_SectionControls.Section4Control"></div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

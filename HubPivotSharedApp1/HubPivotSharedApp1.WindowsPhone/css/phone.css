@@ -1,0 +1,31 @@
+﻿#contenthost {
+	background-color: gray;
+}
+
+.fragment header[role=banner] {
+	/* Define a grid with columns for the back button and page title. */
+	-ms-grid-columns: 1fr;
+	-ms-grid-rows: 1fr;
+	display: -ms-grid;
+	height: 40px;
+}
+
+	.fragment header[role=banner] .win-navigation-backbutton {
+		visibility: hidden;
+	}
+
+	.fragment header[role=banner] .backbutton {
+		visibility: hidden;
+	}
+
+	.fragment header[role=banner] .titlearea {
+		-ms-grid-column: 1;
+		margin-top: 10px;
+		margin-left: 20px;
+		font-size: 20pt;
+		overflow: visible;
+	}
+
+		.fragment header[role=banner] .titlearea .pagetitle {
+			width: calc(100% - 20px);
+		}

@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script src="/pages/hub/section3Page.js"></script>
+</head>
+<body>
+    <div class="fragment section3page">
+        <section aria-label="Main content" role="main">
+            <div class="itemTemplate" data-win-control="WinJS.Binding.Template">
+                <img src="#" data-win-bind="src: backgroundImage; alt: title" />
+                <div class="win-type-medium" data-win-bind="textContent: title"></div>
+                <div class="win-type-small" data-win-res="{ textContent: 'Section3Description' }"></div>
+            </div>
+            <div class="itemslist win-selectionstylefilled" data-win-control="WinJS.UI.ListView" data-win-options="{
+                        selectionMode: 'none',
+                        itemTemplate: select('.itemTemplate')
+                    }">
+            </div>
+	</section>
+    </div>
+</body>
+</html>

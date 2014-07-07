@@ -1,0 +1,95 @@
+﻿.demo .fragment {
+    display: block; /* don't apply the grid that most page fragments have */
+}
+
+.demo .viewtoggle {
+    color:gray;
+    cursor:pointer;
+}
+
+.demo .padleft {
+    padding-left:120px;
+    width:calc(100% - 120px);
+}
+
+/* Swipe sections */
+.demo .swipeContainer {
+    display:flex;
+    width: auto;
+    -ms-scroll-snap-x: mandatory snapInterval(0%, 80%);
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+
+    .demo .swipeContainer .swipeSection {
+        box-sizing: border-box; /* include padding in section size */
+        width: 80%;
+        padding-right: 80px; /* space between sections */
+        flex: none;
+        overflow: hidden;
+        padding-bottom: 20px; /* room for scrollbar */
+    }
+
+    .demo .swipeContainer .swipeSection:last-of-type {
+        width:100%;
+    }
+
+.demo .demoview {
+    height:100%;
+}
+
+.demo .codeview {
+    height:100%;
+}
+
+.demo .codeview #codeViewNoSections {
+    height:100%;
+}
+
+    .demo .codeview #codeViewNoSections .codearea {
+        height:100%;
+    }
+
+        .demo .codeview #codeViewNoSections .codearea textarea {
+            font-family: Consolas, monospace;
+            height:80%;
+            width:100%;
+        }
+
+.demo .demosection > h2 {
+    margin-bottom:20px;
+}
+
+.demo .codeview ul.sectionmenu {
+    list-style-type:none;
+    display:flex;
+    flex-direction:row;
+    margin-left:128px;
+    margin-top:-16px;
+    padding-left:0px;
+}
+
+    .demo .codeview ul.sectionmenu li {
+        padding-left:0px;
+        padding-right:50px;
+    }
+
+
+.demo .codeview #codeViewWithSections {
+    height:100%;
+}
+
+    .demo .codeview #codeViewWithSections .codearea {
+        height:100%;
+    }
+
+        .demo .codeview #codeViewWithSections .codearea .sectioncode {
+            height:100%;
+        }
+
+        .demo .codeview #codeViewWithSections .codearea textarea {
+            font-family: Consolas, monospace;
+            height:80%;
+            width:100%;
+            overflow:scroll;
+        }

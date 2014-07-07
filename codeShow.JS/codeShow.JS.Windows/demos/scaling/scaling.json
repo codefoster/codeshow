@@ -3,5 +3,9 @@
     "keywords":["image","picture","scale","scaling","resize","size","high","resolution","quality"],
     "description": "Use image scaling conventions to provide high quality imagery automatically.",
     "author": "Jeremy Foster",
-    "dateCreated": ""
+    "dateCreated": "",
+    "sections": [
+        {"name": "basic"},
+        {"name": "plateau"}
+    ]
 }

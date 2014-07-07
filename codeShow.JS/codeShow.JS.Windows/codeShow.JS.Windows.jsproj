@@ -63,10 +63,20 @@
     <Content Include="demos\fileCreateRead\fileCreateRead.html" />
     <Content Include="demos\fileCreateRead\fileCreateRead.js" />
     <Content Include="demos\fileCreateRead\fileCreateRead.json" />
-    <Content Include="js\MobileServices.intellisense.js" />
-    <Content Include="js\MobileServices.js" />
-    <Content Include="js\MobileServices.min.js" />
-    <Content Include="js\MobileServices.pri" />
+    <Content Include="demos\scaling\basic\basic.css" />
+    <Content Include="demos\scaling\basic\basic.html" />
+    <Content Include="demos\scaling\basic\basic.js" />
+    <Content Include="demos\scaling\basic\ketch.scale-100.png" />
+    <Content Include="demos\scaling\basic\ketch.scale-140.png" />
+    <Content Include="demos\scaling\basic\ketch.scale-180.png" />
+    <Content Include="demos\scaling\basic\ketch_big.png" />
+    <Content Include="demos\scaling\basic\ketch_small.png" />
+    <Content Include="demos\scaling\plateau\plateau.css" />
+    <Content Include="demos\scaling\plateau\plateau.html" />
+    <Content Include="demos\scaling\plateau\plateau.js" />
+    <Content Include="demos\scaling\plateau\plateau.scale-100.png" />
+    <Content Include="demos\scaling\plateau\plateau.scale-140.png" />
+    <Content Include="demos\scaling\plateau\plateau.scale-180.png" />
     <Content Include="demos\notifications\badgeupdate\badgeupdate.css" />
     <Content Include="demos\notifications\badgeupdate\badgeupdate.html" />
     <Content Include="demos\notifications\badgeupdate\badgeupdate.js" />
@@ -76,9 +86,6 @@
     <Content Include="demos\notifications\toasts\toasts.css" />
     <Content Include="demos\notifications\toasts\toasts.html" />
     <Content Include="demos\notifications\toasts\toasts.js" />
-    <Content Include="services\mobile services\codeshow\service.js">
-      <ConnectedServiceReference>codeshow</ConnectedServiceReference>
-    </Content>
     <None Include="codeShow.Win81JS_StoreKey.pfx" />
     <Content Include="css\default.css" />
     <Content Include="css\type\GoodDog.otf" />
@@ -547,14 +554,6 @@
     <Content Include="demos\repeater\simple\simple.css" />
     <Content Include="demos\repeater\simple\simple.html" />
     <Content Include="demos\repeater\simple\simple.js" />
-    <Content Include="demos\scaling\ketch.scale-100.png" />
-    <Content Include="demos\scaling\ketch.scale-140.png" />
-    <Content Include="demos\scaling\ketch.scale-180.png" />
-    <Content Include="demos\scaling\ketch_big.png" />
-    <Content Include="demos\scaling\ketch_small.png" />
-    <Content Include="demos\scaling\scaling.css" />
-    <Content Include="demos\scaling\scaling.html" />
-    <Content Include="demos\scaling\scaling.js" />
     <Content Include="demos\scaling\scaling.json" />
     <Content Include="demos\search\search.css" />
     <Content Include="demos\search\search.html" />
@@ -769,6 +768,9 @@
       <HintPath>NotificationsExtensions.winmd</HintPath>
       <IsWinMDFile>true</IsWinMDFile>
     </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="js\" />
   </ItemGroup>
   <Import Project="..\codeShow.JS.Shared\codeShow.JS.Shared.projitems" Label="Shared" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\$(WMSJSProjectDirectory)\Microsoft.VisualStudio.$(WMSJSProject).targets" />

@@ -27,7 +27,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>fd19ac46-c0d1-4d83-8be7-989aa3496e49</ProjectGuid>
+    <ProjectGuid>30ee6c6d-95a2-4928-9a5f-ee7dbe57f0bc</ProjectGuid>
   </PropertyGroup>
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup Condition="'$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '12.0'">
@@ -49,26 +49,24 @@
       <SubType>Designer</SubType>
     </AppxManifest>
     <Content Include="css\phone.css" />
-    <Content Include="default.html" />
     <Content Include="images\Square150x150Logo.scale-240.png" />
     <Content Include="images\Square44x44Logo.scale-240.png" />
     <Content Include="images\Wide310x150Logo.scale-240.png" />
     <Content Include="images\Square71x71Logo.scale-240.png" />
     <Content Include="images\SplashScreen.scale-240.png" />
     <Content Include="images\StoreLogo.scale-240.png" />
-    <Content Include="css\default.css" />
+    <Content Include="pages\hub\hubPhone.css" />
+    <Content Include="pages\hub\hub.html" />
+    <Content Include="pages\hub\section3Page.html" />
+    <Content Include="default.html" />
     <Content Include="css\ui-themed.css" />
     <Content Include="css\ui-themed.theme-dark.css" />
     <Content Include="css\ui-themed.theme-light.css" />
-    <Content Include="pages\demo\demo.css" />
-    <Content Include="pages\demo\demo.html" />
-    <Content Include="pages\hub\hub.html" />
-    <Content Include="pages\hub\hubPhone.css" />
   </ItemGroup>
   <ItemGroup>
     <SDKReference Include="Microsoft.Phone.WinJS.2.1, Version=1.0" />
   </ItemGroup>
-  <Import Project="..\codeShow.JS.Shared\codeShow.JS.Shared.projitems" Label="Shared" />
+  <Import Project="..\HubPivotSharedApp1.Shared\HubPivotSharedApp1.Shared.projitems" Label="Shared" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\$(WMSJSProjectDirectory)\Microsoft.VisualStudio.$(WMSJSProject).targets" />
   <!-- To modify your build process, add your task inside one of the targets below then uncomment
        that target and the DisableFastUpToDateCheck PropertyGroup. 
