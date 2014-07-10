@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Still image</title>
+
+    <!-- WinJS references -->
+    <link href="//Microsoft.WinJS.2.0/css/ui-light.css" rel="stylesheet" />
+    <script src="//Microsoft.WinJS.2.0/js/base.js"></script>
+    <script src="//Microsoft.WinJS.2.0/js/ui.js"></script>
+
+    <link href="still.css" rel="stylesheet" />
+    <script src="still.js"></script>
+</head>
+<body>
+    <div class="still fragment">
+        <header aria-label="Header content" role="banner">
+            <button data-win-control="WinJS.UI.BackButton"></button>
+            <h1 class="titlearea win-type-ellipsis">
+                <span class="pagetitle">Welcome to still</span>
+            </h1>
+        </header>
+        <section aria-label="Main content" role="main">
+            <div class="explanation">Capturing an image is really simple as you can see from the simple JavaScript that does it here.</div>
+            <button id="captureButton">Capture</button><br />
+            <img id="capturedImage" />
+        </section>
+    </div>
+</body>
+</html>

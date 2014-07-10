@@ -1,0 +1,13 @@
+﻿.flexbox .wrapping #wrappingFlexbox {
+    display: -ms-flexbox;
+    -ms-flex-wrap:wrap;
+    width: 100%;
+    border: 1px solid gray;
+}
+
+.flexbox .wrapping #wrappingFlexbox > div {
+    min-width: 140px;
+    min-height: 140px;
+    border: solid 1px black;
+    margin:5px;
+}

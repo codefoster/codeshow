@@ -1,0 +1,13 @@
+{
+    "title": "Promises",
+    "keywords":["custom","promise","promises"],
+    "description": "Learn the concept behind Promises for asynchronicity and the various ways you can use them.",
+    "author": "Jeremy Foster",
+    "dateCreated": "",
+	"sections":[
+		{"name":"concept"},
+		{"name":"uses"},
+		{"name":"chaining"}
+	]
+}
+

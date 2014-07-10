@@ -1,0 +1,10 @@
+{
+    "title": "NavBar",
+    "keywords":["nav","bar","navigationbar","navigation bar","navigate","upper","top"],
+    "description": "A NavBar is like an AppBar but on top of the screen and dedicated to navigation",
+    "author": "Jeremy Foster",
+    "dateCreated": "2013/08/18",
+	"sections": [
+		{"name":"simple"}
+	]
+}

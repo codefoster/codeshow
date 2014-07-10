@@ -6,7 +6,7 @@
 
     <link href="/css/phone.css" rel="stylesheet" />
     <link href="/pages/hub/hubphone.css" rel="stylesheet" />
-    <script src="/js/data.js"></script>
+    <!--<script src="/js/data.js"></script>-->
     <script src="/pages/hub/hub.js"></script>
     <script src="/pages/hub/section1Page.js"></script>
     <script src="/pages/hub/section2Page.js"></script>
@@ -16,10 +16,12 @@
 <body>
     <div class="hubpage fragment">
         <header aria-label="Header content" role="banner">
-            <button class="titlearea backbutton" data-win-control="WinJS.UI.BackButton"></button>
             <h1 class="titlearea win-type-ellipsis">
-                <span class="pagetitle">(codeShow JavaScript)</span>
+                <span class="titleCode">code</span><span class="titleShow">Show()</span>
             </h1>
+            <h2 class="subtitle">
+                JavaScript edition
+            </h2>
         </header>
 
         <section aria-label="Main content" role="main">
@@ -27,11 +29,11 @@
 
             <span data-win-res="{innerText:DummyString}"></span>
             <div class="hub" data-win-control="WinJS.UI.Pivot">
-                <div class="section1 section" data-win-control="WinJS.UI.PivotItem" data-win-options="{ isHeaderStatic: true }" data-win-res="{ winControl: {'header': 'Section1Title'} }">
+                <div class="section1 section" data-win-control="WinJS.UI.PivotItem" data-win-options="{ isHeaderStatic: true, header: 'demo' }" >
                     (demo view)
                 </div>
 
-                <div class="section2 section" data-win-control="WinJS.UI.PivotItem" data-win-options="{ isHeaderStatic: true }" data-win-res="{ winControl: {'header': 'DummyString'} }">
+                <div class="section2 section" data-win-control="WinJS.UI.PivotItem" data-win-options="{ isHeaderStatic: true }" data-win-res="{ winControl: {'header': 'Section1Title'} }">
                     (code view)
                 </div>
 

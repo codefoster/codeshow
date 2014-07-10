@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Video</title>
+
+    <!-- WinJS references -->
+    <link href="//Microsoft.WinJS.2.0/css/ui-light.css" rel="stylesheet" />
+    <script src="//Microsoft.WinJS.2.0/js/base.js"></script>
+    <script src="//Microsoft.WinJS.2.0/js/ui.js"></script>
+
+    <link href="video.css" rel="stylesheet" />
+    <script src="video.js"></script>
+</head>
+<body>
+    <div class="video fragment">
+        <header aria-label="Header content" role="banner">
+            <button data-win-control="WinJS.UI.BackButton"></button>
+            <h1 class="titlearea win-type-ellipsis">
+                <span class="pagetitle">Welcome to video</span>
+            </h1>
+        </header>
+        <section aria-label="Main content" role="main">
+            <div class="explanation">Capturing video is just as simple as a still image. You just specify to the CameraCaptureUI object that you're interested in video.</div>
+            <button id="captureButton">Capture</button><br />
+            <video id="capturedVideo" controls />
+        </section>
+    </div>
+</body>
+</html>

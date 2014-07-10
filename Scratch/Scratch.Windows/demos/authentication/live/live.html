@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Windows Live</title>
+
+    <!-- WinJS references -->
+    <link href="//Microsoft.WinJS.2.0/css/ui-light.css" rel="stylesheet" />
+    <script src="//Microsoft.WinJS.2.0/js/base.js"></script>
+    <script src="//Microsoft.WinJS.2.0/js/ui.js"></script>
+
+    <link href="live.css" rel="stylesheet" />
+    <script src="live.js"></script>
+</head>
+<body>
+    <div class="live fragment">
+        <header aria-label="Header content" role="banner">
+            <button data-win-control="WinJS.UI.BackButton"></button>
+            <h1 class="titlearea win-type-ellipsis">
+                <span class="pagetitle">Welcome to live</span>
+            </h1>
+        </header>
+        <section aria-label="Main content" role="main">
+            <div class="explanation">The authentication in this section uses the Windows Live SDK. Click the button below to sign in to your Microsoft account.</div>
+            <button id="signIn">Sign in to Live</button>
+            <div id="log"></div>
+        </section>
+    </div>
+</body>
+</html>

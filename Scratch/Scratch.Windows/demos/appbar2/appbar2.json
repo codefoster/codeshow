@@ -1,0 +1,8 @@
+﻿{
+	"title": "App Bar (declarative)",
+	"keywords":["declarative","app","bar"],
+	"description": "Create a simple lower app bar with some command buttons.",
+	"author": "Jeremy Foster",
+	"dateCreated": "2012/10/01",
+	"enabled":false
+}

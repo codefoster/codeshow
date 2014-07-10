@@ -1,0 +1,19 @@
+﻿.boxprops .overflow .flex {
+    display: -ms-flexbox;
+}
+
+.boxprops .overflow .flex > div {
+    width:300px;
+    height:250px;
+    padding:10px;
+    margin:0px 10px;
+    border:1px solid gray;
+}
+
+.boxprops .overflow #hidden {
+    overflow-y: hidden;
+}
+
+.boxprops .overflow #scroll {
+    overflow-y: scroll;
+}

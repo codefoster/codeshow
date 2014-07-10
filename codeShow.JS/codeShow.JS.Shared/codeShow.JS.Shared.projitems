@@ -6,6 +6,7 @@
     <SharedGUID>c1939fb8-a630-423a-9512-a18e5af452db</SharedGUID>
   </PropertyGroup>
   <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)css\type\GoodDog.otf" />
     <Content Include="$(MSBuildThisFileDirectory)demos\animations\animations.css" />
     <Content Include="$(MSBuildThisFileDirectory)demos\animations\animations.html" />
     <Content Include="$(MSBuildThisFileDirectory)demos\animations\animations.js" />
@@ -24,6 +25,7 @@
     <Content Include="$(MSBuildThisFileDirectory)js\ocho.js" />
     <Content Include="$(MSBuildThisFileDirectory)js\wl.js" />
     <Content Include="$(MSBuildThisFileDirectory)pages\demo\demo.js" />
+    <Content Include="$(MSBuildThisFileDirectory)pages\hub\hub.js" />
     <Content Include="$(MSBuildThisFileDirectory)services\mobile services\codeshow\service.js">
       <ConnectedServiceReference>codeshow</ConnectedServiceReference>
     </Content>

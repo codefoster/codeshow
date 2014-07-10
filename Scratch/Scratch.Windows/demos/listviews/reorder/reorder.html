@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Reorderable</title>
+
+    <!-- WinJS references -->
+    <link href="//Microsoft.WinJS.2.0/css/ui-light.css" rel="stylesheet" />
+    <script src="//Microsoft.WinJS.2.0/js/base.js"></script>
+    <script src="//Microsoft.WinJS.2.0/js/ui.js"></script>
+
+    <link href="reorder.css" rel="stylesheet" />
+    <script src="reorder.js"></script>
+</head>
+<body>
+    <div class="reorder fragment">
+        <header aria-label="Header content" role="banner">
+            <button data-win-control="WinJS.UI.BackButton"></button>
+            <h1 class="titlearea win-type-ellipsis">
+                <span class="pagetitle">Welcome to reorder</span>
+            </h1>
+        </header>
+        <section aria-label="Main content" role="main">
+            <!-- Templates -->
+            <div class="itemtemplate" data-win-control="WinJS.Binding.Template">
+                <div>
+                    <img data-win-bind="src:imageUrl" />
+                    <h3 data-win-bind="innerText:name"></h3>
+                </div>
+            </div>
+
+            <!-- Content -->
+            <div class="explanation">
+                Simply setting itemsReorderable to true makes it possible to drag items around in a ListView to reorder them. Obviously, you have to capture the reorg and change your data to persist the change. Doing that is not yet demonstrated here.
+            </div>
+            <div data-win-control="WinJS.UI.ListView" data-win-options="{
+                itemTemplate:select('.itemtemplate'),
+                itemDataSource:codeShow.Demos.listviews.reorder.data.dataSource,
+                itemsReorderable:true
+            }">
+            </div>
+        </section>
+    </div>
+</body>
+</html>

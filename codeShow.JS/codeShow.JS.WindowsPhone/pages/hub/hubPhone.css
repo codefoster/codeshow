@@ -1,14 +1,20 @@
-﻿.win-pivot .win-pivot-surface {
+﻿.hubpage .titlearea, .hubpage .subtitle { font-family: "GoodDog"; } /* font designation is not working on the phone */
+    .hubpage .titlearea { font-size: 70px; }
+        .hubpage .titlearea .titleCode { color: #34435a; }
+        .hubpage .titlearea .titleShow { color: #5e83a2; }
+    .hubpage .subtitle { font-size: 20px; color: #34435a; }
+
+.win-pivot .win-pivot-surface {
 	height: 75vh;
 }
 
 .win-pivot .win-pivot-viewport {
-	padding-top: 0px;
+	padding-top: 0;
 	margin-top: 98px;
 }
 
 .win-pivot-item .win-pivot-item-content {
-	padding: 0px;
+	padding: 0;
 }
 
 .hubpage header[role=banner] {

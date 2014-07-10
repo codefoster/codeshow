@@ -1,0 +1,11 @@
+﻿{
+	"title": "Animation Library",
+	"keywords":["css3","animations","library"],
+	"description": "WinJS offers the animations library for easily making native looking animation goodness",
+	"author": "Jeremy Foster",
+	"dateCreated": "2013/09/27",
+	"sections": [
+		{"name":"click"},
+		{"name":"enterexit"}
+	]
+}

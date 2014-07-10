@@ -1,0 +1,6 @@
+﻿.boxprops .padding #paddingbox {
+    border: solid 1px;
+    width:500px;
+    height:300px;
+    padding:60px;
+}

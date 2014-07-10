@@ -1,0 +1,11 @@
+﻿{
+	"title": "OneDrive (formerly SkyDrive)",
+	"keywords":["onedrive","live","skydrive","cloud"],
+	"description": "Computer data wishes it could fly. Move it up to the cloud!",
+	"author": "Iqaan Ullah",
+	"dateCreated": "2014/04/19",
+	"sections":[
+		{"name":"getfolders"},
+        {"name":"pushfile"}
+	]
+}

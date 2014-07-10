@@ -88,7 +88,6 @@
     <Content Include="demos\notifications\toasts\toasts.js" />
     <None Include="codeShow.Win81JS_StoreKey.pfx" />
     <Content Include="css\default.css" />
-    <Content Include="css\type\GoodDog.otf" />
     <Content Include="demos\ads\ads.css" />
     <Content Include="demos\ads\ads.html" />
     <Content Include="demos\ads\ads.js" />
@@ -768,9 +767,6 @@
       <HintPath>NotificationsExtensions.winmd</HintPath>
       <IsWinMDFile>true</IsWinMDFile>
     </Reference>
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="js\" />
   </ItemGroup>
   <Import Project="..\codeShow.JS.Shared\codeShow.JS.Shared.projitems" Label="Shared" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\$(WMSJSProjectDirectory)\Microsoft.VisualStudio.$(WMSJSProject).targets" />

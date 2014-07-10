@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script src="/pages/hub/demosPage.js"></script>
+</head>
+<body>
+    <div class="fragment demospage">
+        <section aria-label="Main content" role="main">
+            <div class="itemTemplate" data-win-control="WinJS.Binding.Template">
+                <div class="itemGrid">
+                    <div class="itemHandle"></div>
+                    <div class="itemContents">
+                        <h3 data-win-bind="innerText:title;"></h3>
+                        <p class="description" data-win-bind="innerText:description"></p>
+                    </div>
+                    <div class="author" data-win-bind="innerText:author"></div>
+                </div>
+            </div>
+            <div class="itemslist win-selectionstylefilled" data-win-control="WinJS.UI.ListView" data-win-options="{
+                        selectionMode: 'none',
+                        itemTemplate: select('.itemTemplate')
+                    }">
+            </div>
+        </section>
+    </div>
+</body>
+</html>

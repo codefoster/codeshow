@@ -1,0 +1,11 @@
+{
+    "title": "Reactive design",
+    "keywords":["view","view state","responsive","adaptive","size","minimum","snap","snapped","full view","fill view"],
+    "description": "Learn how to handle changes to the users screen size and orientation",
+    "author": "Jeremy Foster",
+    "dateCreated": "2013/08/18",
+	"enabled":false,
+	"sections": [
+		{"name":"minimum"}
+	]
+}

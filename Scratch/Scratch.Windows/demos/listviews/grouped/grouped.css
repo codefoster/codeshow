@@ -1,0 +1,20 @@
+﻿.listviews .grouped .explanation { width: 800px; }
+
+.listviews .grouped .win-listview {
+    border: 2px solid lightgray;
+    background-color: white;
+}
+
+.listviews .grouped .win-listview {
+    height: 460px;
+    width: 800px;
+}
+
+.listviews .grouped .win-item img {
+    width: 194px;
+    height: 138px;
+}
+
+.listviews .grouped .win-item h3 {
+    height: 50px;
+}

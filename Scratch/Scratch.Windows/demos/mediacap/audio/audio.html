@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Audio</title>
+
+    <!-- WinJS references -->
+    <link href="//Microsoft.WinJS.2.0/css/ui-light.css" rel="stylesheet" />
+    <script src="//Microsoft.WinJS.2.0/js/base.js"></script>
+    <script src="//Microsoft.WinJS.2.0/js/ui.js"></script>
+
+    <link href="audio.css" rel="stylesheet" />
+    <script src="audio.js"></script>
+</head>
+<body>
+    <div class="audio fragment">
+        <header aria-label="Header content" role="banner">
+            <button data-win-control="WinJS.UI.BackButton"></button>
+            <h1 class="titlearea win-type-ellipsis">
+                <span class="pagetitle">Welcome to audio</span>
+            </h1>
+        </header>
+        <section aria-label="Main content" role="main">
+            <div class="explanation">For capturing audio here I'm utilizing a lower level API that involves more code but provides more power too.</div>
+            <button id="captureButton">Capture</button><br />
+            <audio id="capturedAudio" controls />
+        </section>
+    </div>
+</body>
+</html>

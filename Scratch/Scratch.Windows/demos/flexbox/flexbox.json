@@ -1,0 +1,19 @@
+{
+    "title": "CSS Flexbox",
+    "keywords":["flex","box","flexbox","layout","css"],
+    "description": "CSS3 brings us the flexbox and a lot of resulting joy.",
+    "author": "Jeremy Foster",
+    "dateCreated": "",
+    "platforms": [
+        "windows",
+        "windowsphone"
+    ],
+	"sections":[
+		{"name":"simple"},
+		{"name":"distributed"},
+		{"name":"flexxing"},
+		{"name":"wrapping"},
+		{"name":"vertical"},
+		{"name":"swipe"}
+	]
+}

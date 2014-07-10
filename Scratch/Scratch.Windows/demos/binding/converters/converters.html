@@ -1,0 +1,34 @@
+﻿ <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Converters</title>
+
+    <!-- WinJS references -->
+    <link href="//Microsoft.WinJS.2.0/css/ui-light.css" rel="stylesheet" />
+    <script src="//Microsoft.WinJS.2.0/js/base.js"></script>
+    <script src="//Microsoft.WinJS.2.0/js/ui.js"></script>
+
+    <link href="converters.css" rel="stylesheet" />
+    <script src="converters.js"></script>
+</head>
+<body>
+    <div class="converters fragment">
+        <header aria-label="Header content" role="banner">
+            <button data-win-control="WinJS.UI.BackButton"></button>
+            <h1 class="titlearea win-type-ellipsis">
+                <span class="pagetitle">Welcome to converters</span>
+            </h1>
+        </header>
+        <section aria-label="Main content" role="main">
+            <div class="explanation">A converter changes the value of the property of a data binding to something that makes sense in the view. For example, you may be binding a Boolean property to an input field where it should say either "Yes" or "No". The converter would convert true to "Yes" and false to "No".</div>
+            <div class="person">
+                <div data-win-bind="innerText:firstName;"></div>
+                <div data-win-bind="innerText:lastName;"></div>
+                <div data-win-bind="innerText:email;"></div>
+                <div data-win-bind="innerText:isAdult codeShow.Demos.binding.simple.Converters.isAdultConverter;"></div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

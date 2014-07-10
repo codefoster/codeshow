@@ -1,0 +1,10 @@
+﻿.slidingdiv #slidingDiv {
+    margin-left:-120px;
+    width:300px;
+    height:300px;
+    box-sizing:border-box;
+    position:relative;
+    left:-300px;
+    border:2px solid;
+    transition:0.5s;
+}

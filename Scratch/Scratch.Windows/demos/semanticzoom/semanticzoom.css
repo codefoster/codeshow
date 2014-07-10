@@ -1,0 +1,19 @@
+﻿.semanticzoom .win-semanticzoom,
+.semanticzoom .win-listview {
+    height: 100%;
+}
+
+.semanticzoom #zoomedinlist .win-item img {
+    width: 140px;
+    height: 105px;
+}
+
+.semanticzoom #zoomedoutlist .win-item {
+    width: 200px;
+    height: 200px;
+    background-color: green;
+    color: white;
+    font-weight:bold;
+    font-size: large;
+    padding: 10px;
+}

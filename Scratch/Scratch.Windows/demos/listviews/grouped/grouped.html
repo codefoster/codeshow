@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Grouped</title>
+
+    <!-- WinJS references -->
+    <link href="//Microsoft.WinJS.2.0/css/ui-light.css" rel="stylesheet" />
+    <script src="//Microsoft.WinJS.2.0/js/base.js"></script>
+    <script src="//Microsoft.WinJS.2.0/js/ui.js"></script>
+
+    <link href="grouped.css" rel="stylesheet" />
+    <script src="grouped.js"></script>
+</head>
+<body>
+    <div class="grouped fragment">
+        <header aria-label="Header content" role="banner">
+            <button data-win-control="WinJS.UI.BackButton"></button>
+            <h1 class="titlearea win-type-ellipsis">
+                <span class="pagetitle">Welcome to grouped</span>
+            </h1>
+        </header>
+        <section aria-label="Main content" role="main">
+            <!-- Templates -->
+            <div class="itemtemplate" data-win-control="WinJS.Binding.Template">
+                <div>
+                    <img class="img" data-win-bind="src:imageUrl" />
+                    <h3 class="name" data-win-bind="innerText:name"></h3>
+                </div>
+            </div>
+
+            <!-- Content -->
+            <div class="explanation">The same data as the previous demo and the same binding technique as well, except now the data has been grouped and the ListView reflects that nicely.</div>
+            <div data-win-control="WinJS.UI.ListView" data-win-options="{
+                itemTemplate:select('.itemtemplate'),
+                itemDataSource:codeShow.Demos.listviews.grouped.groupedList.dataSource,
+                itemHeaderTemplate:select('.headertemplate'),
+                groupDataSource:codeShow.Demos.listviews.grouped.groupedList.groups.dataSource    
+            }"></div>
+            <div class="headertemplate" data-win-control="WinJS.Binding.Template">
+                <div data-win-bind="innerText:name"></div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

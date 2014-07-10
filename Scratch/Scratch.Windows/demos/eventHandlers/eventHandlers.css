@@ -1,0 +1,48 @@
+﻿.eventHandlers #container {
+    display: -ms-grid;
+    -ms-grid-rows: 200px 40px 40px 1fr;
+    -ms-grid-columns: 1fr 20px 1fr 20px 1fr;
+    width: 900px;
+    height: 600px;
+}
+
+.eventHandlers #container > * {
+    margin: 5px;
+}
+
+.eventHandlers #container #theButton {
+    -ms-grid-column-span: 5;
+    background-color: #99CCFF;
+    font-size: 32px;
+}
+.eventHandlers #container #setOnclickBtn {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+}
+.eventHandlers #container #removeOnclickBtn {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+}
+.eventHandlers #container #addEventListenerBtn {
+    -ms-grid-column: 3;
+    -ms-grid-row: 2;
+}
+.eventHandlers #container #removeEventListenerBtn {
+    -ms-grid-column: 3;
+    -ms-grid-row: 3;
+}
+.eventHandlers #container #addAnonEventListenerBtn {
+    -ms-grid-column: 5;
+    -ms-grid-row: 2;
+}
+.eventHandlers #container #log {
+    -ms-grid-column: 1;
+    -ms-grid-row: 4;
+    -ms-grid-column-span: 5;
+    overflow-y: scroll;
+}
+.eventHandlers #container #clearLogBtn {
+    -ms-grid-column: 1;
+    -ms-grid-row: 5;
+    -ms-grid-column-span: 5;
+}

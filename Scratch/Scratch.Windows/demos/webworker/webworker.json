@@ -1,0 +1,7 @@
+﻿{
+	"title": "Web Worker",
+	"keywords":["web","worker","workers","parallet","task","thread","threaded","multi-threaded"],
+	"description": "JavaScript has concurrency! Use the web worker to launch a new thread and improve app performance.",
+	"author": "Jeremy Foster",
+	"dateCreated": "2013/02/01"
+}

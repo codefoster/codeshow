@@ -1,0 +1,12 @@
+﻿.grid .simplesection div.msgrid {
+    display: -ms-grid;
+    -ms-grid-columns: 250px 250px;
+    -ms-grid-rows: 250px 250px;
+}
+
+.grid .simplesection div.msgrid > div {
+    border: 1px solid gray;
+}
+.grid .simplesection div.msgrid > div:nth-child(2) { -ms-grid-column: 2; -ms-grid-row: 1; }
+.grid .simplesection div.msgrid > div:nth-child(3) { -ms-grid-row: 2; }
+.grid .simplesection div.msgrid > div:nth-child(4) { -ms-grid-column: 2; -ms-grid-row: 2; }
