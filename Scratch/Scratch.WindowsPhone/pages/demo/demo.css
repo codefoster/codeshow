@@ -1,0 +1,11 @@
+﻿.demo section {
+
+}
+
+.phone .demo .page-section {
+	margin: auto 24px;
+}
+
+.phone .demo .back-button {
+	display: none;
+}

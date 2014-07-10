@@ -24,7 +24,7 @@
             // TODO: Initialize the page here.
         },
 
-        demosDataSource: new WinJS.Binding.List().dataSource, /* DEV */
+        demosDataSource: Data.demos.dataSource,
 
         demosHeaderInvoke: util.markSupportedForProcessing(function (args) {
             debugger;
@@ -32,9 +32,9 @@
         }),
 
         demoItemInvoke: util.markSupportedForProcessing(function (args) {
-            debugger;
-            //var item = Data.getItemReference(section3Items.getAt(args.detail.itemIndex));
-            //nav.navigate("/pages/item/item.html", { item: item });
+            args.detail.itemPromise.then(function (demo) {
+                nav.navigate("/pages/demo/demo.html", { demo: demo });
+            });
         }),
 
         unload: function () {

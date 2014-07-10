@@ -1,0 +1,11 @@
+{
+    "title": "Test Demo",
+    "keywords":["test"],
+    "description": "This is a test demo",
+    "author": "Jeremy Foster",
+    "dateCreated": "",
+	"sections":[
+		{"name":"section1"},
+		{"name":"section2"}
+	]
+}

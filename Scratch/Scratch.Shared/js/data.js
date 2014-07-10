@@ -52,8 +52,8 @@
             else if (a > b) return 1;
             else return -1;
         }),
-        demos: [],
-        apps: [],
+        demos: new WinJS.Binding.List(),
+        apps: new WinJS.Binding.List(),
         loaded: null,
         loadData: loadData,
     });
@@ -164,9 +164,9 @@
 
                     //screenshots
                     app.screenshots = [];
-                    e = q("#ScreenshotImageButtons .imageButton", d);
+                    e = d.querySelector("#ScreenshotImageButtons .imageButton");
                     if(e) e.forEach(function (b) {
-                        app.screenshots.push({ url: q("img", b).src });
+                        app.screenshots.push({ url: b.querySelector("img").src });
                     });
                 })
                 .then(function() { return app; });

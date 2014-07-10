@@ -55,6 +55,10 @@
     <Content Include="images\Square71x71Logo.scale-240.png" />
     <Content Include="images\SplashScreen.scale-240.png" />
     <Content Include="images\StoreLogo.scale-240.png" />
+    <Content Include="pages\demo\demo.css" />
+    <Content Include="pages\demo\demo.html" />
+    <Content Include="pages\demo\demoControl.html" />
+    <Content Include="pages\hub\demosPage.css" />
     <Content Include="pages\hub\demosPage.html" />
     <Content Include="pages\hub\hubPhone.css" />
     <Content Include="pages\hub\hub.html" />
