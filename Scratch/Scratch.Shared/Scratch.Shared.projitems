@@ -6,9 +6,14 @@
     <SharedGUID>c7fdeb32-d509-44fb-b7d9-f4dce97beeb7</SharedGUID>
   </PropertyGroup>
   <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)demos\animations\animations.css" />
+    <Content Include="$(MSBuildThisFileDirectory)demos\animations\animations.html" />
+    <Content Include="$(MSBuildThisFileDirectory)demos\animations\animations.js" />
+    <Content Include="$(MSBuildThisFileDirectory)demos\animations\animations.json" />
     <Content Include="$(MSBuildThisFileDirectory)js\default.js" />
     <Content Include="$(MSBuildThisFileDirectory)js\data.js" />
     <Content Include="$(MSBuildThisFileDirectory)js\navigator.js" />
+    <Content Include="$(MSBuildThisFileDirectory)js\ocho.js" />
     <Content Include="$(MSBuildThisFileDirectory)pages\hub\demosPage.js" />
     <Content Include="$(MSBuildThisFileDirectory)pages\hub\hub.js" />
     <Content Include="$(MSBuildThisFileDirectory)pages\hub\section1Page.html" />
