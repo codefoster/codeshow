@@ -3,12 +3,12 @@
 
     WinJS.UI.Pages.define("/demos/flyouts/menus/menus.html", {
         ready: function (element, options) {
-            q(".sampleMenu").onclick = showHeaderMenu;
+            element.querySelector(".sampleMenu").onclick = showHeaderMenu;
         }
     });
 
     function showHeaderMenu() {
-        var sampleMenu = q(".sampleMenu");
+        var sampleMenu = document.querySelector(".sampleMenu");
         var menu = headerMenu.winControl;
         menu.anchor = sampleMenu;
         menu.placement = "bottom";

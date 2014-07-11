@@ -2,7 +2,7 @@
     "use strict";
 
     WinJS.Namespace.define("Controls", {
-        DemosControl: WinJS.UI.Pages.define("/pages/hub/demosPage.html", {
+        DemosControl: WinJS.UI.Pages.define("/pages/hub/demosListControl.html", {
             ready: function (element, options) {
                 options = options || {};
 

@@ -1,0 +1,37 @@
+﻿.demo section {
+}
+
+.phone .demo .page-section {
+	margin: auto 24px;
+}
+
+.phone .demo .page-header .titlearea {
+	-ms-grid-column: 1;
+	margin-top: 37px;
+	margin-left: 24px;
+	font-size: 28pt;
+	width: calc(100vw - 20px);
+}
+
+.phone .demo .back-button {
+	display: none;
+}
+
+.demo .fragment {
+	display: block;
+	height: 100%;
+	width: 100%;
+}
+
+	.demo .fragment section[role=main] {
+		height: 100%;
+	}
+
+.sections .win-hub-section-header {
+    margin-top:0;
+}
+
+.sections .win-hub-surface {
+    padding: 0;
+    margin-left: 80px;
+}

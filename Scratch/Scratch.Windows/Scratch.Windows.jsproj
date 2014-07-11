@@ -62,8 +62,10 @@
     <Content Include="images\storelogo.png" />
     <Content Include="css\default.css" />
     <Content Include="NotificationsExtensions.winmd" />
-    <Content Include="pages\hub\demosPage.css" />
-    <Content Include="pages\hub\demosPage.html" />
+    <Content Include="pages\demo\demo.css" />
+    <Content Include="pages\demo\demo.html" />
+    <Content Include="pages\hub\demosListControl.css" />
+    <Content Include="pages\hub\demosListControl.html" />
     <Content Include="pages\hub\hub.html" />
     <Content Include="pages\hub\hub.css" />
     <Content Include="pages\section\section.html" />
