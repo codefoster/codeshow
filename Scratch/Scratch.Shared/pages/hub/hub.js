@@ -21,14 +21,20 @@
                 }
             }
 
-            // TODO: Initialize the page here.
+            ////this was an attempt to limit the demos on the hub to the first 10, but it's not working
+            ////get the first 10 demos
+            //this.demosList = new WinJS.Binding.List(Data.demos
+            //    .splice()
+            //    .sort(function (a, b) {
+            //        return (!b.dateCreated || new Date(a.dateCreated) > new Date(b.dateCreated) ? -1 : 1);
+            //    })
+            //    .slice(0, 10)); 
         },
 
-        demosDataSource: Data.demos.dataSource,
+        demosList: Data.demos,
 
         demosHeaderInvoke: util.markSupportedForProcessing(function (args) {
-            debugger;
-            //nav.navigate("/pages/section/section.html", { title: args.detail.section.header, groupKey: section3Group.key });
+            nav.navigate("/pages/demos/demos.html", { });
         }),
 
         demoItemInvoke: util.markSupportedForProcessing(function (args) {

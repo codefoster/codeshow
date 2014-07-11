@@ -3,6 +3,13 @@
     z-index: 2;
 }
 
+.hubpage .titlearea, .hubpage .subtitle { font-family: "gooddog"; }
+    .hubpage .titlearea { font-size: 70px; }
+        .hubpage .titlearea .titleCode { color: #34435a; }
+        .hubpage .titlearea .titleShow { color: #5e83a2; }
+    .hubpage .subtitle { font-size: 20px; color: #34435a; }
+
+
 .hubpage section[role=main] {
     -ms-grid-row: 1;
     -ms-grid-row-span: 2;

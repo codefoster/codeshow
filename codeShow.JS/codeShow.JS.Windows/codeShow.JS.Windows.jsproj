@@ -729,11 +729,6 @@
     <Content Include="images\wide.scale-180.png" />
     <Content Include="images\wide.scale-80.png" />
     <Content Include="images\win8logo.png" />
-    <Content Include="lib\RxJS\rx.js" />
-    <Content Include="lib\RxJS\rx.node.js" />
-    <Content Include="lib\RxJS\rx.testing.js" />
-    <Content Include="lib\RxJS\rx.time.js" />
-    <Content Include="lib\RxJS\rx.winjs.js" />
     <Content Include="NotificationsExtensions.winmd" />
     <None Include="Package.StoreAssociation.xml" />
     <Content Include="packages.config" />

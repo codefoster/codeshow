@@ -1,0 +1,62 @@
+﻿.demos .win-listview {
+    height:100%;
+    padding-right:120px;
+}
+
+.demos .win-listview .win-viewport {
+    padding-left: 120px;
+}
+
+.demos .win-container {
+    margin: 5px;
+}
+
+.demos .win-item {
+    width:280px;
+    height:125px;
+    color: #34435a;
+}
+    .demos .win-item .itemGrid {
+        display:-ms-grid;
+        -ms-grid-columns:6px 1fr;
+        -ms-grid-rows:1fr;
+        box-sizing:border-box;
+        border: solid 1px #5e83a2;
+        height:125px;
+        border-radius:2px;
+    }
+
+    .demos .win-item .itemHandle {
+        background-color:#5e83a2;
+    }
+    .demos .win-item .itemContents {
+        padding:4px 8px;
+        -ms-grid-column:2;
+        overflow:hidden;
+    }
+
+    .demos .win-item h3 {
+        font-weight:bold;
+    }
+
+    .demos .win-item p.description {
+        margin-top:2px;
+    }
+            
+    .demos .win-item div.author {
+        -ms-grid-column:2;
+        -ms-grid-row:1;
+        -ms-grid-column-align:end;
+        -ms-grid-row-align:end;
+        color:#34435a;
+        width:120px;
+        margin-bottom:4px;
+        padding:3px;
+        padding-right:7px;
+        text-align:right;
+        font-size:11px;
+    }
+    
+.demos .win-listview .win-itembox {
+    background-color: rgba(0,0,0,0.03);
+}
