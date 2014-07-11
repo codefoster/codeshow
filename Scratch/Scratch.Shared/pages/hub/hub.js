@@ -31,20 +31,33 @@
             //    .slice(0, 10)); 
         },
 
+        //DEMOS
         demosList: Data.demos,
-
         demosHeaderInvoke: util.markSupportedForProcessing(function (args) {
             nav.navigate("/pages/demos/demos.html", { });
         }),
-
         demoItemInvoke: util.markSupportedForProcessing(function (args) {
             args.detail.itemPromise.then(function (demo) {
                 nav.navigate("/pages/demo/demo.html", { demo: demo });
             });
         }),
 
+        //CONTRIBUTORS
+        contributorsList: Data.contributors.createSorted(function (a, b) {
+            //sort contributors by their twitter handle
+            a = a.twitterHandle.toLowerCase();
+            b = b.twitterHandle.toLowerCase();
+            if (a == b) return 0;
+            else if (a > b) return 1;
+            else return -1;
+        }),
+        contributorItemInvoke: util.markSupportedForProcessing(function (args) {
+            args.detail.itemPromise.then(function (demo) {
+                //TODO: link to their URL
+            });
+        }),
+
         unload: function () {
-            // TODO: Respond to navigations away from this page.
         },
 
         updateLayout: function (element) {

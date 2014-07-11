@@ -1,62 +1,58 @@
-﻿/* Demos Section */
-.hubpage .hub .section.demos {
+﻿.demoslistcontrol .itemslist {
+    height: 100%;
 }
 
-    .hubpage .hub .section.demos .itemslist {
-        height: 100%;
-    }
+.demoslistcontrol .win-container {
+    margin: 5px;
+}
 
-    .hubpage .hub .section.demos .win-container {
-        margin: 5px;
-    }
-
-    .hubpage .hub .section.demos .win-item {
-        width:100%;
+.demoslistcontrol .win-item {
+    width:100%;
+    height:125px;
+    color: #34435a;
+}
+    .demoslistcontrol .win-item .itemGrid {
+        display:-ms-grid;
+        -ms-grid-columns:6px 1fr;
+        -ms-grid-rows:1fr;
+        box-sizing:border-box;
+        border: solid 1px #5e83a2;
         height:125px;
-        color: #34435a;
+        border-radius:0px;
+        background-color:whitesmoke;
     }
-        .hubpage .hub .section.demos .win-item .itemGrid {
-            display:-ms-grid;
-            -ms-grid-columns:6px 1fr;
-            -ms-grid-rows:1fr;
-            box-sizing:border-box;
-            border: solid 1px #5e83a2;
-            height:125px;
-            border-radius:0px;
-            background-color:whitesmoke;
-        }
 
-        .hubpage .hub .section.demos .win-item .itemHandle {
-            background-color:#5e83a2;
-        }
-        .hubpage .hub .section.demos .win-item .itemContents {
-            padding:10px;
-            -ms-grid-column:2;
-            overflow:hidden;
-        }
+    .demoslistcontrol .win-item .itemHandle {
+        background-color:#5e83a2;
+    }
+    .demoslistcontrol .win-item .itemContents {
+        padding:10px;
+        -ms-grid-column:2;
+        overflow:hidden;
+    }
 
-        .hubpage .hub .section.demos .win-item h3 {
-            font-weight:bold;
-        }
+    .demoslistcontrol .win-item h3 {
+        font-weight:bold;
+    }
 
-        .hubpage .hub .section.demos .win-item p.description {
-            margin-top:2px;
-        }
+    .demoslistcontrol .win-item p.description {
+        margin-top:2px;
+    }
             
-        .hubpage .hub .section.demos .win-item div.author {
-            -ms-grid-column:2;
-            -ms-grid-row:1;
-            -ms-grid-column-align:end;
-            -ms-grid-row-align:end;
-            color:#34435a;
-            width:120px;
-            margin-bottom:4px;
-            padding:3px;
-            padding-right:10px;
-            text-align:right;
-            font-size:11px;
-        }
-    
-    .hubpage .hub .section.demos .win-listview .win-itembox {
-        background-color: transparent;
+    .demoslistcontrol .win-item div.author {
+        -ms-grid-column:2;
+        -ms-grid-row:1;
+        -ms-grid-column-align:end;
+        -ms-grid-row-align:end;
+        color:#34435a;
+        width:120px;
+        margin-bottom:4px;
+        padding:3px;
+        padding-right:10px;
+        text-align:right;
+        font-size:11px;
     }
+    
+.demoslistcontrol .win-listview .win-itembox {
+    background-color: transparent;
+}

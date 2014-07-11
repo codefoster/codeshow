@@ -9,7 +9,7 @@
     <script src="/js/data.js"></script>
     <script src="/pages/hub/hub.js"></script>
     <script src="/pages/hub/demosListControl.js"></script>
-    <script src="/pages/hub/section1Page.js"></script>
+    <script src="/pages/hub/contributorsControl.js"></script>
 </head>
 <body>
     <div class="hubpage fragment">
@@ -34,10 +34,14 @@
                          }"></div>
                 </div>
 
-                <div class="section1 section" data-win-control="WinJS.UI.PivotItem" data-win-options="{ isHeaderStatic: true }" data-win-res="{ winControl: {'header': 'Section1'} }">
-                    <div class="sectioncontrol" id="section1contenthost" data-win-control="HubApps_SectionControls.Section1Control"></div>
+                <div class="section contributors" data-win-control="WinJS.UI.PivotItem" data-win-res="{ winControl: {'header': 'ContributorsSectionHeader'} }">
+                    <div class="contributorscontenthost sectioncontrol" id="contributorscontenthost" data-win-control="Controls.ContributorsControl"
+                         data-win-options="{
+                             dataSource: select('.pagecontrol').winControl.contributorsList.dataSource,
+                             layout: {type: WinJS.UI.ListLayout},
+                             oniteminvoked: select('.pagecontrol').winControl.contributorItemInvoke
+                         }"></div>
                 </div>
-
             </div>
         </section>
     </div>

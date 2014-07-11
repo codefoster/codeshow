@@ -671,10 +671,11 @@
     <Content Include="$(MSBuildThisFileDirectory)lib\RxJS\Test\rx.testing.min.js" />
     <Content Include="$(MSBuildThisFileDirectory)pages\demo\demo.js" />
     <Content Include="$(MSBuildThisFileDirectory)pages\demo\sectionControl.js" />
+    <Content Include="$(MSBuildThisFileDirectory)pages\hub\contributorsControl.css" />
+    <Content Include="$(MSBuildThisFileDirectory)pages\hub\contributorsControl.html" />
+    <Content Include="$(MSBuildThisFileDirectory)pages\hub\contributorsControl.js" />
     <Content Include="$(MSBuildThisFileDirectory)pages\hub\demosListControl.js" />
     <Content Include="$(MSBuildThisFileDirectory)pages\hub\hub.js" />
-    <Content Include="$(MSBuildThisFileDirectory)pages\hub\section1Page.html" />
-    <Content Include="$(MSBuildThisFileDirectory)pages\hub\section1Page.js" />
     <Content Include="$(MSBuildThisFileDirectory)pages\item\item.css" />
     <Content Include="$(MSBuildThisFileDirectory)pages\item\item.html" />
     <Content Include="$(MSBuildThisFileDirectory)pages\item\item.js" />

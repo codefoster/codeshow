@@ -1,13 +1,5 @@
-﻿// For details on localizing a Windows app, see: http://go.microsoft.com/fwlink/?LinkId=212836
-
-{
+﻿{
     "DemosSectionHeader": "Demos",
+    "ContributorsSectionHeader": "Contributors"
 
-    "Section1": "Section 1",
-	"Section1Title": "Section 1 Title",
-    "Section1Subtext": "Lorem ipsum dolor sit amet",
-    "Section1Description": "Lorem ipsum dolor sit amet, consectetur ising elit, sed diam nonummy nibh uismod tincidunt ut laoreet suscipit lobortis nisl ut wisi quipexerci quis consequat minim veniam, quis nostrud. exerci tation ullam corper.",
-
-    "DescriptionText": "Lorem ipsum dolor sit amet:",
-    "SectionSubtitle": "Section subtitle"
 }
