@@ -7,6 +7,7 @@
     function getContributorDataAsync(c) {
         return WinJS.xhr({ url: Ocho.Utilities.format("http://www.twitter.com/{0}", c.twitterHandle), responseType: "document" })
             .then(function (result) {
+                var r = result.response;
                 //BUG: not currently working... twitter does not return a real result... other sites do... weird
                 c.imageUrl = ""; //TODO: default to a blank man image
                 c.name = "";
