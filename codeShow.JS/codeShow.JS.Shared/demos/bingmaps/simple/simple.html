@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Simple map</title>
+
+    <link href="simple.css" rel="stylesheet" />
+    <script src="simple.js"></script>
+    <script src="ms-appx:///Bing.Maps.JavaScript/js/veapicore.js"></script>
+</head>
+<body>
+    <div class="simple fragment">
+        <header aria-label="Header content" role="banner">
+            <button data-win-control="WinJS.UI.BackButton"></button>
+            <h1 class="titlearea win-type-ellipsis">
+                <span class="pagetitle">Welcome to simple</span>
+            </h1>
+        </header>
+        <section aria-label="Main content" role="main">
+            <div class="explanation" style="display:none;">
+                <p>You have two good options for integrating Bing Maps into your app.</p>
+                <h3>Protocol association</h3>
+                <p>If your app doesn't do a whole lot in the way of maps, you can just create links that use the Bing Maps app protocol ("bingmaps://"). This is a pretty great solution because the Maps app launches and you can even snap it next to your app and you get some pretty great user experience without having to bring in the Maps SDK or anything.</p>
+                <p>You can find more info about this on MSDN (<a href="http://msdn.microsoft.com/en-us/library/windows/apps/jj635237.aspx">here</a>).</p>
+                    
+                <h3>Maps integration</h3>
+                <p>If you need to do some fancy stuff with your app like add custom pushpins, draw on the map, move around programmatically, or whatever, then you need to integrate it into your app. It's not hard. You just need to go get the SDK, get a developer key, and take a look at the code behind this demo. </p>
+                <p>You can find more info about this method on MSDN (<a href="http://msdn.microsoft.com/en-us/library/hh852186.aspx">here</a>)</p>
+                <p>The maps in this demo use this method.</p>
+            </div>
+            <div id="basicMap_map"></div>
+        </section>
+    </div>
+</body>
+</html>

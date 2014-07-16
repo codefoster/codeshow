@@ -1,0 +1,11 @@
+{
+    "title": "Pointer Input",
+    "keywords":["point mouse click touch input gesture manipulation mspointer"],
+    "description": "See how you can capture user pointer input in a variety of ways. Some more easy and others more powerful.",
+    "author": "Jeremy Foster",
+    "dateCreated": "",
+	"sections":[
+		{"name":"clickpoint"},
+		{"name":"gesture"}
+	]
+}

@@ -1,0 +1,11 @@
+﻿{
+	"title": "Authentication",
+	"keywords":["authentication","live","connect"],
+	"description": "There's more than one way to authenticate a user!",
+	"author": "Jeremy Foster",
+	"dateCreated": "2012/10/01",
+	"sections":[
+		{"name":"live"},
+		{"name":"wams"}
+	]
+}

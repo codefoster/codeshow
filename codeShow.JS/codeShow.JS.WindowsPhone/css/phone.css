@@ -1,5 +1,6 @@
 ﻿#contenthost {
-    background-image: linear-gradient(to bottom, #dfe7eb 0%, #f6f6f6 30%);
+    background-color: gray;
+    /* background: linear-gradient(to bottom, #dfe7eb 0%, #f6f6f6 30%); */
 }
 
 .fragment header[role=banner] {

@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Keycodes</title>
+    
+    <link href="keycode.css" rel="stylesheet" />
+    <script src="keycode.js"></script>
+</head>
+<body>
+    <div class="keycode fragment">
+        <header aria-label="Header content" role="banner">
+                        <button data-win-control="WinJS.UI.BackButton"></button>
+            <h1 class="titlearea win-type-ellipsis">
+                <span class="pagetitle">Keycodes</span>
+            </h1>
+        </header>
+        <section aria-label="Main content" role="main" class="swiper">
+            <div id="fetchcode">
+                <div class="explanation">Enter any key in the text field from keyboard to look for its ID (Keycode).</div>
+                <input type="text" id="keyField" />
+                <div id="result"></div>
+            </div>
+            <div id="generatecode">
+                <div class="explanation">Create a set of characters from their keycodes. (Here we use random keycodes mostly used to generate passwords)</div>
+                <button id="genButton">Generate</button>
+                <div id="result1"></div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

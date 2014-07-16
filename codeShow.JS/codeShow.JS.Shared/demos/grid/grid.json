@@ -1,0 +1,14 @@
+﻿{
+	"title": "CSS Grid",
+	"keywords":["grid","layout","css"],
+	"description": "Multiple ways to use a CSS grid",
+	"author": "Jeremy Foster",
+	"dateCreated": "2012/10/01",
+	"autoRenderHeader": true,
+	"sections":[
+		{"name":"simple"},
+		{"name":"rowspans"},
+		{"name":"fancy"},
+		{"name":"biggrid"}
+	]
+}

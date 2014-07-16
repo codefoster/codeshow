@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Event Handlers</title>
+    
+    <link href="eventHandlers.css" rel="stylesheet" />
+    <script src="eventHandlers.js"></script>
+</head>
+<body>
+    <div class="eventHandlers fragment">
+        <header aria-label="Header content" role="banner">
+            <button data-win-control="WinJS.UI.BackButton"></button>
+            <h1 class="titlearea win-type-ellipsis">
+                <span class="pagetitle">Event Handlers</span>
+            </h1>
+        </header>
+        <section aria-label="Main content" role="main">
+            <div id="container">
+                <button id="theButton">The Button</button>
+                <button id="setOnclickBtn">Set onclick event</button>
+                <button id="removeOnclickBtn">Remove onclick event</button>
+                <button id="addEventListenerBtn">Add click listener</button>
+                <button id="removeEventListenerBtn">Remove click listener</button>
+                <button id="addAnonEventListenerBtn">Add anonymous click listener</button>
+                <div id="log"></div>
+                <button id="clearLogBtn">Clear Log</button>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

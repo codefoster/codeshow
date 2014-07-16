@@ -1,0 +1,11 @@
+﻿.zoom #container {
+    width:1000px;
+    height:600px;
+    overflow:scroll;
+    -ms-content-zooming:zoom;
+    -ms-content-zoom-limit-max:1000%;
+    -ms-content-zoom-limit-min:20%;
+}
+
+    .zoom #container img {
+    }

@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>c1939fb8-a630-423a-9512-a18e5af452db</SharedGUID>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)css\type\GoodDog.otf" />
+    <Content Include="$(MSBuildThisFileDirectory)demos\animations\animations.css" />
+    <Content Include="$(MSBuildThisFileDirectory)demos\animations\animations.html" />
+    <Content Include="$(MSBuildThisFileDirectory)demos\animations\animations.js" />
+    <Content Include="$(MSBuildThisFileDirectory)demos\animations\animations.json" />
+    <Content Include="$(MSBuildThisFileDirectory)js\analytics.js" />
+    <Content Include="$(MSBuildThisFileDirectory)js\converters.js" />
+    <Content Include="$(MSBuildThisFileDirectory)js\data.js" />
+    <Content Include="$(MSBuildThisFileDirectory)js\date.js" />
+    <Content Include="$(MSBuildThisFileDirectory)js\default.js" />
+    <Content Include="$(MSBuildThisFileDirectory)js\jquery-2.1.1.js" />
+    <Content Include="$(MSBuildThisFileDirectory)js\MobileServices.intellisense.js" />
+    <Content Include="$(MSBuildThisFileDirectory)js\MobileServices.js" />
+    <Content Include="$(MSBuildThisFileDirectory)js\MobileServices.min.js" />
+    <Content Include="$(MSBuildThisFileDirectory)js\MobileServices.pri" />
+    <Content Include="$(MSBuildThisFileDirectory)js\navigator.js" />
+    <Content Include="$(MSBuildThisFileDirectory)js\ocho.js" />
+    <Content Include="$(MSBuildThisFileDirectory)js\wl.js" />
+    <Content Include="$(MSBuildThisFileDirectory)pages\demo\demo.js" />
+    <Content Include="$(MSBuildThisFileDirectory)pages\hub\hub.js" />
+    <Content Include="$(MSBuildThisFileDirectory)services\mobile services\codeshow\service.js">
+      <ConnectedServiceReference>codeshow</ConnectedServiceReference>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)images\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PRIResource Include="$(MSBuildThisFileDirectory)strings\en-US\resources.resjson" />
+  </ItemGroup>
+</Project>

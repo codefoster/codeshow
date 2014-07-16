@@ -1,0 +1,38 @@
+﻿.transitions .box {
+    text-align: center;
+    vertical-align: middle;
+    width: 295px;
+    height: 195px;
+    font-size: 20pt;
+    background-color: lightgray;
+    border: solid 2px blue;
+    transition: all 4s;
+}
+
+    .transitions .box:active {
+        background-color: #FF0000;
+        transform: rotate(360deg);
+    }
+
+.vanish {
+    opacity: 0.01;
+    transition-delay: 1s;
+    transform: scale(0.01);
+}
+
+.subheader {
+    margin-bottom: 25px;
+    /* recommended subheader size */
+    font-size: 20pt;
+    font-family: 'Segoe UI Light';
+    color: rgba(255,255,255,1.0);
+    /* subtle shrink|grow effect */
+    transition: font-size ease 0.3s;
+}
+
+@media (-ms-view-state: snapped) {
+    .subheader {
+        /* recommended subheader size for snapped */
+        font-size: 11pt;
+    }
+}

@@ -1,0 +1,180 @@
+﻿/*.hub .simple header[role=banner] {
+    position: relative;
+    z-index: 2;
+}*/
+
+/*.hub .simple section[role=main] {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    z-index: 1;
+}*/
+
+.hub .simple .hub {
+    /* shrink the hub so it fits in a demo section */
+    transform-origin:left top;
+    transform:scale(0.6);
+    border:solid 1px gray;
+}
+
+.hub .simple .hub .win-hub-surface {
+    height: 100%;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.hub .simple .hub .hero {
+    background-image: url(/images/gray.png);
+    background-size: cover;
+    margin-left: 0;
+    margin-right: 80px;
+    padding: 0;
+    width: 780px;
+}
+
+    .hub .simple .hub .hero:-ms-lang(ar, dv, fa, he, ku-Arab, pa-Arab, prs, ps, sd-Arab, syr, ug, ur, qps-plocm) {
+        margin-left: 80px;
+        margin-right: 0;
+    }
+
+    .hub .simple .hub .hero .win-hub-section-header {
+        display: none;
+    }
+
+.hub .simple .hub .section1 {
+    width: 420px;
+}
+
+    .hub .simple .hub .section1 .win-hub-section-content {
+        overflow-y: hidden;
+    }
+
+    .hub .simple .hub .section1 .subtext {
+        margin-bottom: 7px;
+        margin-top: 9px;
+    }
+
+.hub .simple .hub .section2 {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+    .hub .simple .hub .section2 .win-hub-section-header {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .hub .simple .hub .section2 .itemslist {
+        height: 100%;
+        margin-top: -10px;
+    }
+
+        .hub .simple .hub .section2 .itemslist .win-viewport {
+            overflow-y: hidden;
+        }
+
+        .hub .simple .hub .section2 .itemslist .win-container {
+            margin: 3px;
+            margin-bottom: 16px;
+        }
+
+    .hub .simple .hub .section2 .win-item {
+        -ms-grid-columns: auto auto;
+        display: -ms-grid;
+        height: 110px;
+        width: 420px;
+        padding: 7px;
+    }
+
+        .hub .simple .hub .section2 .win-item img {
+            -ms-grid-column: 1;
+            height: 110px;
+            width: 110px;
+        }
+
+        .hub .simple .hub .section2 .win-item .item-text {
+            -ms-grid-column: 2;
+            height: 105px;
+            overflow: hidden;
+            margin-left: 10px;
+            margin-right: 10px;
+            margin-top: 4px;
+        }
+
+.hub .simple .hub .section3 {
+    width: 400px;
+}
+
+    .hub .simple .hub .section3 .win-hub-section-content {
+        overflow-y: hidden;
+    }
+
+    .hub .simple .hub .section3 .top-image-row {
+        height: 260px;
+        margin-bottom: 10px;
+        width: 400px;
+    }
+
+        .hub .simple .hub .section3 .top-image-row img {
+            height: 100%;
+            width: 100%;
+        }
+
+    .hub .simple .hub .section3 .sub-image-row {
+        margin-bottom: 20px;
+        display: -ms-flexbox;
+        -ms-flex-flow: row nowrap;
+        -ms-flex-pack: justify;
+    }
+
+        .hub .simple .hub .section3 .sub-image-row img {
+            height: 95px;
+            width: 130px;
+        }
+
+.hub .simple .hub .section4 {
+    width: 440px;
+}
+
+    .hub .simple .hub .section4 .win-hub-section-content {
+        overflow-y: hidden;
+    }
+
+    .hub .simple .hub .section4 .item-title {
+        margin-top: 4px;
+        margin-bottom: 10px;
+    }
+
+    .hub .simple .hub .section4 .article-header {
+        margin-bottom: 15px;
+    }
+
+.hub .simple .hub .section5 {
+}
+
+    .hub .simple .hub .section5 .itemslist {
+        height: 100%;
+        margin-left: -10px;
+        margin-right: -10px;
+        margin-top: -5px;
+    }
+
+    .hub .simple .hub .section5 .win-container {
+        margin-bottom: 36px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .hub .simple .hub .section5 .win-item {
+        height: 229px;
+        width: 310px;
+    }
+
+        .hub .simple .hub .section5 .win-item img {
+            height: 150px;
+            margin-bottom: 10px;
+            width: 310px;
+        }
+
+.secondary-text {
+    opacity: 0.6;
+}

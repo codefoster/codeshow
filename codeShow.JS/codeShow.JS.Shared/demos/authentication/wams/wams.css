@@ -1,0 +1,11 @@
+﻿.authentication .wams h3 {
+    margin-top: 20px;
+}
+
+.authentication .wams .log {
+    width:600px;
+    height:60px;
+    border:solid 1px lightgray;
+    overflow: auto;
+    padding:5px;
+}

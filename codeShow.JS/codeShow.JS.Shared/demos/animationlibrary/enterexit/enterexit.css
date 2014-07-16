@@ -1,0 +1,6 @@
+﻿.animationlibrary .enterexit #target {
+    background-color: gray;
+    width: 100px;
+    height: 100px;
+    opacity: 0;
+}

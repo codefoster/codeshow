@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>About</title>
+
+    <!-- WinJS references -->
+    <link href="//Microsoft.WinJS.2.0/css/ui-light.css" rel="stylesheet" />
+    <script src="//Microsoft.WinJS.2.0/js/base.js"></script>
+    <script src="//Microsoft.WinJS.2.0/js/ui.js"></script>
+
+    <link href="about.css" rel="stylesheet" />
+    <script src="about.js"></script>
+</head>
+<body>
+    <div class="about fragment">
+        <div id="aboutDiv" data-win-control="WinJS.UI.SettingsFlyout" aria-label="About Flyout">
+            <div class="win-ui-dark win-header">
+                <button class="win-backbutton" onclick="WinJS.UI.SettingsFlyout.show()"></button>
+                <div class="win-label">About</div>
+            </div>
+            <div class="win-content">
+                <div id="projectDescription">
+                    <div class="title"><span class="titleCode">code</span><span class="titleShow">Show()</span></div>
+                    <p>codeShow is a Windows 8 HTML/JS project with the express goal of demonstrating simple development concepts for the Windows 8 platform.</p>
+                    <p>This is not necessarily a project to learn about end-to-end app architecture, but when you're looking for how to do things like access the camera, implement an asymmetric ListView, or handle errors look to codeShow.</p>
+                    <p>The complete source code to the project is available at <a href="http://codeshow.codeplex.com">http://codeshow.codeplex.com</a>.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

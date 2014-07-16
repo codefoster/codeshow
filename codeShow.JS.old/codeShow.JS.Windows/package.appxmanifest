@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Package xmlns="http://schemas.microsoft.com/appx/2010/manifest" xmlns:m2="http://schemas.microsoft.com/appx/2013/manifest">
+  <Identity Name="36805codefoster.codeSHOW" Version="2.1.1.33" Publisher="CN=603A18C8-7F37-48CF-B16C-FED79B9AEA66" />
+  <Properties>
+    <DisplayName>codeShow JavaScript</DisplayName>
+    <PublisherDisplayName>codefoster</PublisherDisplayName>
+    <Logo>images\square50.png</Logo>
+  </Properties>
+  <Prerequisites>
+    <OSMinVersion>6.3.0</OSMinVersion>
+    <OSMaxVersionTested>6.3.0</OSMaxVersionTested>
+  </Prerequisites>
+  <Resources>
+    <Resource Language="x-generate" />
+  </Resources>
+  <Applications>
+    <Application Id="App" StartPage="default.html">
+      <m2:VisualElements DisplayName="codeShow JavaScript" Description="codeShow JavaScript" ForegroundText="light" BackgroundColor="#5e83a2" Square150x150Logo="images\square150.png" Square30x30Logo="images\square30.png" ToastCapable="true">
+        <m2:DefaultTile Square70x70Logo="images\square70.png" Square310x310Logo="images\square310.png" Wide310x150Logo="images\wide.png">
+        </m2:DefaultTile>
+        <m2:SplashScreen Image="images\splashscreen.png" BackgroundColor="white" />
+        <m2:ApplicationView MinWidth="width320" />
+      </m2:VisualElements>
+      <Extensions>
+        <Extension Category="windows.fileOpenPicker">
+          <FileOpenPicker>
+            <SupportedFileTypes>
+              <SupportsAnyFileType />
+            </SupportedFileTypes>
+          </FileOpenPicker>
+        </Extension>
+        <Extension Category="windows.fileSavePicker">
+          <FileSavePicker>
+            <SupportedFileTypes>
+              <SupportsAnyFileType />
+            </SupportedFileTypes>
+          </FileSavePicker>
+        </Extension>
+        <Extension Category="windows.search" />
+        <Extension Category="windows.protocol">
+          <Protocol Name="codeshow">
+            <DisplayName>codeShow</DisplayName>
+          </Protocol>
+        </Extension>
+        <Extension Category="windows.backgroundTasks" StartPage="demos\backgroundtask\zonetask.js">
+          <BackgroundTasks>
+            <Task Type="systemEvent" />
+          </BackgroundTasks>
+        </Extension>
+      </Extensions>
+    </Application>
+  </Applications>
+  <Capabilities>
+    <Capability Name="removableStorage" />
+    <Capability Name="musicLibrary" />
+    <Capability Name="internetClient" />
+    <Capability Name="picturesLibrary" />
+    <DeviceCapability Name="webcam" />
+    <DeviceCapability Name="microphone" />
+    <DeviceCapability Name="location" />
+  </Capabilities>
+</Package>

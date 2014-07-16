@@ -1,0 +1,45 @@
+﻿.bowling .player {
+    display:flex;
+    padding:5px;
+}
+
+.bowling .frame {
+    border:solid 1px lightgray;
+    width:100px;
+    height:100px;
+    display:-ms-grid;
+    -ms-grid-columns: 1fr 1fr 1fr;
+    -ms-grid-rows: 1fr 2fr;
+    margin:2px;
+}
+
+.bowling .field {
+    color: darkslategray;
+}
+
+.bowling .field.one {
+    -ms-grid-column-span:3;
+    -ms-grid-row-span:2;
+    font-size:60px;
+    padding-top:20px;
+    padding-left:4px;
+}
+
+.bowling .field.two {
+    -ms-grid-column:2;
+}
+
+.bowling .field.three {
+    -ms-grid-column:3;
+}
+
+.bowling .field.small {
+    border:solid 1px lightgray;
+    padding:4px;
+    font-size:20px;
+    margin:1px;
+}
+
+.bowling .field.selected {
+    background-color:lightsteelblue;
+}

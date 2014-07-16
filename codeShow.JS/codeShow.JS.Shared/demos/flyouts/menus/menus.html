@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Menus</title>
+
+    <link href="menus.css" rel="stylesheet" />
+    <script src="menus.js"></script>
+</head>
+<body>
+    <div class="menus fragment">
+        <header aria-label="Header content" role="banner">
+            <button data-win-control="WinJS.UI.BackButton"></button>
+            <h1 class="titlearea win-type-ellipsis">
+                <span class="pagetitle">Menus</span>
+            </h1>
+        </header>
+        <section aria-label="Main content" role="main">
+            <div class="explanation">
+                A menu has been implemented for the title of this page and is represented by the chevron symbol. Click the title to see the menu. Touching the menu items won't have any effect as this is just a demo.
+            </div>
+            
+            <div class="sampleMenu win-type-xx-large">Sample Menu <span class="chevron win-type-x-large">&#xe099</span></div>
+            <!--Header Menu-->
+            <div id="headerMenu" data-win-control="WinJS.UI.Menu">
+                <button data-win-control="WinJS.UI.MenuCommand" data-win-options="{id:'mi1',label:'Menu Item 1'}"></button>
+                <button data-win-control="WinJS.UI.MenuCommand" data-win-options="{id:'mi2',label:'Menu Item 2'}"></button>
+                <button data-win-control="WinJS.UI.MenuCommand" data-win-options="{id:'mi3',label:'Menu Item 3'}"></button>
+                <hr data-win-control="WinJS.UI.MenuCommand" data-win-options="{id:'separator',type:'separator'}" />
+                <button data-win-control="WinJS.UI.MenuCommand" data-win-options="{id:'sHome',label:'Home'}"></button>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

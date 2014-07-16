@@ -1,0 +1,7 @@
+﻿{
+	"title": "Rx Canvas Paint",
+	"keywords":["rx","canvas","paint"],
+	"description": "Paint on an HTML5 canvas with some help from Reactive Extensions.",
+	"author": "Jeremy Foster",
+	"dateCreated": "2012/10/01"
+}

@@ -1,0 +1,17 @@
+{
+    "title": "ListViews",
+    "keywords":["list","view","items","tile","tiles","asymmetric","loading state","grouped","group","listview"],
+    "description": "The many faces of the WinJS ListView control for displaying lists of data in a Windows 8 app.",
+    "author": "Jeremy Foster",
+    "dateCreated": "2012/10/01",
+	"sections":[
+		{"name":"grouped"},
+		{"name":"asymmetric"},
+		{"name":"live"},
+		{"name":"draganddrop"},
+		{"name":"reorder"},
+		{"name":"circle"}
+		
+
+	]
+}

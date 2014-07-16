@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Determinate</title>
+
+    <link href="determinate.css" rel="stylesheet" />
+    <script src="determinate.js"></script>
+</head>
+<body>
+    <div class="determinate fragment">
+        <header aria-label="Header content" role="banner">
+            <button data-win-control="WinJS.UI.BackButton"></button>
+            <h1 class="titlearea win-type-ellipsis">
+                <span class="pagetitle">Welcome to determinate</span>
+            </h1>
+        </header>
+        <section aria-label="Main content" role="main">
+            <div class="explanation">Use a determinate progress bar when you are able to know when the task will finish.</div>
+            <div><progress value="0" max="100"></progress></div>
+            <div><button id="advance">Advance</button><button id="reset">Reset</button></div>
+        </section>
+    </div>
+</body>
+</html>

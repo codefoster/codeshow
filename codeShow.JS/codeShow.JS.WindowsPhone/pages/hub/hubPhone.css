@@ -1,20 +1,14 @@
-﻿.hubpage .titlearea, .hubpage .subtitle { font-family: "GoodDog"; } /* font designation is not working on the phone */
-    .hubpage .titlearea { font-size: 70px; }
-        .hubpage .titlearea .titleCode { color: #34435a; }
-        .hubpage .titlearea .titleShow { color: #5e83a2; }
-    .hubpage .subtitle { font-size: 20px; color: #34435a; }
-
-.win-pivot .win-pivot-surface {
+﻿.win-pivot .win-pivot-surface {
 	height: 75vh;
 }
 
 .win-pivot .win-pivot-viewport {
-	padding-top: 0;
+	padding-top: 0px;
 	margin-top: 98px;
 }
 
 .win-pivot-item .win-pivot-item-content {
-	padding: 0;
+	padding: 0px;
 }
 
 .hubpage header[role=banner] {
@@ -188,7 +182,6 @@
 		
 .label-extralarge {
 	font-size: 28pt;
-	opacity: 1.0;
 	line-height: 30pt;
 }
 

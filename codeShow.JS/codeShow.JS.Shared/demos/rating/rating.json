@@ -1,0 +1,10 @@
+{
+    "title": "Rating",
+    "keywords":["rating","rate","stars"],
+    "description": "Use the WinJS rating control to give users the ability to provide feedback",
+    "author": "Jeremy Foster",
+    "dateCreated": "2013/08/12",
+	"sections": [
+		{"name":"simple"}
+	]
+}

@@ -1,0 +1,5 @@
+﻿.binding .observable #myElement {
+    font-size:300px;
+    font-weight:bold;
+    color:darkgray;
+}

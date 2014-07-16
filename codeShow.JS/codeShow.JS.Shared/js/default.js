@@ -12,163 +12,145 @@ var pkg = Windows.ApplicationModel.Package.current;
 (function () {
     "use strict";
 
-    app.demosList = null;
-    app.demosLoaded = null;
+    var sched = WinJS.Utilities.Scheduler;
+    var ui = WinJS.UI;
 
-    app.onactivated = function (args) {
+    app.addEventListener("activated", function (args) {
         //initiate loading of app data
-        //* if (!Data.loaded) Data.loadData();
-        //* 
-        //* //set up the demos list (empty for now)
-        //* app.demosList = new WinJS.Binding.List()
-        //*     .createGrouped(function (i) { return i.group; }, function (i) { return i.group; })
-        //*     .createSorted(function (a, b) { return (a.name.toLowerCase() < b.name.toLowerCase() ? -1 : 1); });
-        
-        //standard launch
+        if (!Data.loaded) Data.loadData();
+
         if (args.detail.kind === activation.ActivationKind.launch) {
+            //* positionSplashScreen(args);
 
-            //positionSplashScreen(args);
+            if (args.detail.previousExecutionState !== activation.ApplicationExecutionState.terminated) {
+                // TODO: This application has been newly launched. Initialize
+                // your application here.
+            } else {
+                // TODO: This application has been reactivated from suspension.
+                // Restore application state here.
+            }
 
-            //* if (args.detail.previousExecutionState !== activation.ApplicationExecutionState.terminated) {
-            //*     // new launch
-            //*     Analytics.Increment("app launch");
-            //* }
-            //* else { /* reactivated from suspension*/}
+            hookUpBackButtonGlobalEventHandlers();
+            nav.history = app.sessionState.history || {};
+            nav.history.current.initialPlaceholder = true;
 
-            //TODO: fix... I believe I commented this out because it was not able to recover when navigated directly to a page on recovery
-            //if (app.sessionState.history) nav.history = app.sessionState.history; }
+            // Optimize the load of the application and while the splash screen is shown, execute high priority scheduled work.
+            ui.disableAnimations();
+            var p = ui.processAll().then(function () {
+                return nav.navigate(nav.location || Application.navigator.home, nav.state);
+            }).then(function () {
+                return sched.requestDrain(sched.Priority.aboveNormal + 1);
+            }).then(function () {
+                ui.enableAnimations();
+            });
 
-            args.setPromise(WinJS.UI.processAll()
-                //* .then(function() { return Data.loaded; })
-                .then(function () {
-                    //navigate to launch from secondary tile
-                    if (args.detail.arguments !== "") {
-                        var launchDemo = JSON.parse(args.detail.arguments).launchDemo;
-                        if(launchDemo)
-                            //make sure the demos have been loaded before navigating to the hub
-                            Data.loaded.then(function () {
-                                var chooseDemo = Data.demos.first(function (d) { return d.name == launchDemo });
-                                nav.navigate("/pages/demo/demo.html", { demo: chooseDemo, view: "demo" });
-                            });
-                    }
-                    if (nav.location) {
-                        nav.history.current.initialPlaceholder = true;
-                        return nav.navigate(nav.location, nav.state);
-                    } else {
-                        //TODO: error here when no network connection (??)
-                        return nav.navigate(Application.navigator.home);
-                    }
-                })
-            );
+            args.setPromise(p);
         }
-        
-        //* //launched by protocol activation
-        //* if (args.detail.kind === activation.ActivationKind.protocol) {
-        //*     var demo = null;
-        //*     try { demo = args.detail.uri.queryParsed.getFirstValueByName("demo"); }
-        //*     catch(exc) {}
-        //*     if (demo)
-        //*         args.setPromise(WinJS.UI.processAll().then(function() {
-        //*             app.demosLoaded.done(function() {
-        //*                 var location = format("/demos/{0}/{0}.html", demo);
-        //*                 Windows.UI.ViewManagement.ApplicationView.tryUnsnap();
-        //*                 WinJS.Navigation.navigate(location, { });
-        //*             });
-        //*         }));
-        //* }
-
-    };
+    });
 
     app.oncheckpoint = function (args) {
-        // To complete an async operation before your app is suspended, call args.setPromise().
+        // TODO: This application is about to be suspended. Save any state
+        // that needs to persist across suspensions here. If you need to 
+        // complete an asynchronous operation before your application is 
+        // suspended, call args.setPromise().
         app.sessionState.history = nav.history;
     };
-
     app.onready = function (e) {
         //addSearchContract();
-        //* addSettingsContract();
+        addSettingsContract();
     };
+    
+    function hookUpBackButtonGlobalEventHandlers() {
+        // Subscribes to global events on the window object
+        window.addEventListener('keyup', backButtonGlobalKeyUpHandler, false)
+    }
 
-    app.onerror = function (err) {
-        //try { codeshowClient.getTable("errors").insert({ text: err.detail.error }); } catch (e) { debugger; }
-        //WinJS.Navigation.navigate("/pages/hub/hub.html", { message: "Sorry, there was an error that occurred. Don't worry, we're on it. Just keep doing what you were doing." });
-        //return true;
-    };
+    // CONSTANTS
+    var KEY_LEFT = "Left";
+    var KEY_BROWSER_BACK = "BrowserBack";
+    var MOUSE_BACK_BUTTON = 3;
+
+    function backButtonGlobalKeyUpHandler(event) {
+        // Navigates back when (alt + left) or BrowserBack keys are released.
+        if ((event.key === KEY_LEFT && event.altKey && !event.shiftKey && !event.ctrlKey) || (event.key === KEY_BROWSER_BACK)) {
+            nav.back();
+        }
+    }
 
     app.start();
 
-    //* //network connectivity
-    //* app.isConnected = getIsConnected();
-    //* net.addEventListener("networkstatuschanged", function () { app.isConnected = getIsConnected(); });
-    //* function getIsConnected() {
-    //*     return net.getInternetConnectionProfile()
-    //*         && net.getInternetConnectionProfile().getNetworkConnectivityLevel() > 2;
-    //* }
-    //* 
-    //* function sendTileTextNotification(message) {
-    //*     // create the wide template
-    //*     var tileContent = NotificationsExtensions.TileContent.TileContentFactory.createTileWideText03();
-    //*     tileContent.textHeadingWrap.text = message;
-    //* 
-    //*     // create the square template and attach it to the wide template
-    //*     var squareTileContent = NotificationsExtensions.TileContent.TileContentFactory.createTileSquareText04();
-    //*     squareTileContent.textBodyWrap.text = message;
-    //*     tileContent.squareContent = squareTileContent;
-    //* 
-    //*     // send the notification
-    //*     Windows.UI.Notifications.TileUpdateManager.createTileUpdaterForApplication().update(tileContent.createNotification());
-    //* }
-    //* 
-    //* function addSearchContract() {
-    //*     var searchPane = Windows.ApplicationModel.Search.SearchPane.getForCurrentView();
-    //* 
-    //*     //make sure demos have been loaded and then make search terms out of their keywords
-    //*     Data.loaded.then(function () {
-    //*         var keywords = [];
-    //*         app.demosList.forEach(function (d) {
-    //*             var indexFields = ["key", "name", "keywords", "description"];
-    //*             indexFields.forEach(function (f) {
-    //*                 if (d[f])
-    //*                     d[f].split(" ").forEach(function (t) {
-    //*                         keywords.push(t);
-    //*                     });
-    //*             });
-    //*         });
-    //*         
-    //*         searchPane.onsuggestionsrequested = function (e) {
-    //*             var matchingKeywords = keywords.distinct().filter(function (k) { return k.startsWith(e.queryText); });
-    //*             e.request.searchSuggestionCollection.appendQuerySuggestions(matchingKeywords);
-    //*         };
-    //* 
-    //*         searchPane.onquerysubmitted = function (e) {
-    //*             WinJS.Navigation.navigate("/pages/home/home.html", { queryText: e.queryText });
-    //*         };
-    //*         
-    //*     });
-    //* }
-    //* 
-    //* function addSettingsContract() {
-    //*     app.onsettings = function (e) {
-    //*         e.detail.applicationcommands = {
-    //*              aboutDiv: { title: "About", href: "/pages/about/about.html" },
-    //*              privacyDiv: { title: "Privacy Policy", href: "/pages/privacy/privacy.html" }
-    //*         };
-    //* 
-    //*         WinJS.UI.SettingsFlyout.populateSettings(e);
-    //*     };
-    //* }
-    //* 
-    //* function positionSplashScreen(args) {
-    //*     var i = splash.querySelector("img");
-    //*     var p = splash.querySelector("progress");
-    //*     var ss = args.detail.splashScreen;
-    //*     splash.classList.remove("hidden");
-    //*     i.style.top = ss.imageLocation.y + "px";
-    //*     i.style.left = ss.imageLocation.x + "px";
-    //*     i.style.height = ss.imageLocation.height + "px";
-    //*     i.style.width = ss.imageLocation.width + "px";
-    //*     p.style.marginTop = ss.imageLocation.y + ss.imageLocation.height + 32 + "px";
-    //* }
+    //network connectivity
+    app.isConnected = getIsConnected();
+    net.addEventListener("networkstatuschanged", function () { app.isConnected = getIsConnected(); });
+    function getIsConnected() {
+        return net.getInternetConnectionProfile()
+            && net.getInternetConnectionProfile().getNetworkConnectivityLevel() > 2;
+    }
+    
+    function sendTileTextNotification(message) {
+        // create the wide template
+        var tileContent = NotificationsExtensions.TileContent.TileContentFactory.createTileWideText03();
+        tileContent.textHeadingWrap.text = message;
+    
+        // create the square template and attach it to the wide template
+        var squareTileContent = NotificationsExtensions.TileContent.TileContentFactory.createTileSquareText04();
+        squareTileContent.textBodyWrap.text = message;
+        tileContent.squareContent = squareTileContent;
+    
+        // send the notification
+        Windows.UI.Notifications.TileUpdateManager.createTileUpdaterForApplication().update(tileContent.createNotification());
+    }
+
+    function addSearchContract() {
+        var searchPane = Windows.ApplicationModel.Search.SearchPane.getForCurrentView();
+    
+        //make sure demos have been loaded and then make search terms out of their keywords
+        Data.loaded.then(function () {
+            var keywords = [];
+            app.demosList.forEach(function (d) {
+                var indexFields = ["key", "name", "keywords", "description"];
+                indexFields.forEach(function (f) {
+                    if (d[f])
+                        d[f].split(" ").forEach(function (t) {
+                            keywords.push(t);
+                        });
+                });
+            });
+            
+            searchPane.onsuggestionsrequested = function (e) {
+                var matchingKeywords = keywords.distinct().filter(function (k) { return k.startsWith(e.queryText); });
+                e.request.searchSuggestionCollection.appendQuerySuggestions(matchingKeywords);
+            };
+    
+            searchPane.onquerysubmitted = function (e) {
+                WinJS.Navigation.navigate("/pages/home/home.html", { queryText: e.queryText });
+            };
+            
+        });
+    }
+
+    function addSettingsContract() {
+        app.onsettings = function (e) {
+            e.detail.applicationcommands = {
+                 aboutDiv: { title: "About", href: "/pages/about/about.html" },
+                 privacyDiv: { title: "Privacy Policy", href: "/pages/privacy/privacy.html" }
+            };
+    
+            WinJS.UI.SettingsFlyout.populateSettings(e);
+        };
+    }
+
+    function positionSplashScreen(args) {
+        var i = splash.querySelector("img");
+        var p = splash.querySelector("progress");
+        var ss = args.detail.splashScreen;
+        splash.classList.remove("hidden");
+        i.style.top = ss.imageLocation.y + "px";
+        i.style.left = ss.imageLocation.x + "px";
+        i.style.height = ss.imageLocation.height + "px";
+        i.style.width = ss.imageLocation.width + "px";
+        p.style.marginTop = ss.imageLocation.y + ss.imageLocation.height + 32 + "px";
+    }
     
 })();
 

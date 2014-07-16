@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Template Items</title>
+
+    <link href="templateItems.css" rel="stylesheet" />
+    <script src="templateItems.js"></script>
+</head>
+<body>
+    <div class="templateItems fragment">
+        <header aria-label="Header content" role="banner">
+                        <button data-win-control="WinJS.UI.BackButton"></button>
+            <h1 class="titlearea win-type-ellipsis">
+                <span class="pagetitle">Adding Template Items</span>
+            </h1>
+        </header>
+        <section aria-label="Main content" role="main">
+            <div class="explanation">
+                Click a letter to remove it. Click <span id="reset">here</span> to reload.
+            </div>
+            <div id="alphabet">
+                
+            </div>
+        </section>
+
+        <!--Templates-->
+        <div id="template" data-win-control="WinJS.Binding.Template">
+            <span data-win-bind="innerText:this"></span>
+        </div>
+    </div>
+    
+</body>
+</html>

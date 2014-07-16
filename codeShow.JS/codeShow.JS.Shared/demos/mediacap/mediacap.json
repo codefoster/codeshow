@@ -1,0 +1,12 @@
+{
+    "title": "Media Capture",
+    "keywords":["camera","picture","capture","video","media","audio","record"],
+    "description": "Learn how to capture a still image, video, and audio.",
+    "author": "Jeremy Foster",
+    "dateCreated": "",
+	"sections":[
+		{"name":"still"},
+		{"name":"video"},
+		{"name":"audio"}
+	]
+}

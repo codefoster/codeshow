@@ -5,9 +5,10 @@
     "use strict";
 
     function getContributorDataAsync(c) {
-        return WinJS.xhr({ url: format("http://www.twitter.com/{0}", c.twitterHandle), responseType: "document" })
+        return WinJS.xhr({ url: Ocho.Utilities.format("http://www.twitter.com/{0}", c.twitterHandle), responseType: "document" })
             .then(function (result) {
                 var r = result.response;
+                //BUG: not currently working... twitter does not return a real result... other sites do... weird
                 c.imageUrl = ""; //TODO: default to a blank man image
                 c.name = "";
                 c.bio = "";
@@ -44,16 +45,9 @@
     }
 
     WinJS.Namespace.define("Data", {
-        contributorsList: new WinJS.Binding.List().createSorted(function (a, b) {
-            //sort contributors by their twitter handle
-            a = a.twitterHandle.toLowerCase();
-            b = b.twitterHandle.toLowerCase();
-            if (a == b) return 0;
-            else if (a > b) return 1;
-            else return -1;
-        }),
-        demos: [],
-        apps: [],
+        contributors: new WinJS.Binding.List(),
+        demos: new WinJS.Binding.List(),
+        apps: new WinJS.Binding.List(),
         loaded: null,
         loadData: loadData,
     });
@@ -74,7 +68,7 @@
         return codeshowClient.getTable("contributors").read()
             .then(function (contributors) {
                 return WinJS.Promise.join(contributors.map(function (c) {
-                    return getContributorDataAsync(c).then(function (cc) { Data.contributorsList.push(cc); });
+                    return getContributorDataAsync(c).then(function (cc) { Data.contributors.push(cc); });
                 }));
             })
             .then(function () {
@@ -121,7 +115,7 @@
 
         function fetchAppDetails(id) {
             var app = {};
-            return WinJS.xhr({ url: format("http://apps.microsoft.com/windows/en-us/app/{0}",id), responseType: "document" })
+            return WinJS.xhr({ url: Ocho.Utilities.format("http://apps.microsoft.com/windows/en-us/app/{0}",id), responseType: "document" })
                 .then(function (result) {
                     var d = result.response;
                     var e; //TODO: do all of these like subcategory to be safe
@@ -164,9 +158,9 @@
 
                     //screenshots
                     app.screenshots = [];
-                    e = q("#ScreenshotImageButtons .imageButton", d);
+                    e = d.querySelector("#ScreenshotImageButtons .imageButton");
                     if(e) e.forEach(function (b) {
-                        app.screenshots.push({ url: q("img", b).src });
+                        app.screenshots.push({ url: b.querySelector("img").src });
                     });
                 })
                 .then(function() { return app; });
@@ -184,7 +178,8 @@
                     //initialize and set defaults
                     var demo = { name: demoFolder.displayName, enabled: true, suppressAppBar: false, sections: [] };
 
-                    WinJS.xhr({ url: format("/demos/{0}/{0}.html", demo.name), responseType: "document" })
+                    //TODO: change this to look first at the json file and then look at files via direct file IO calls and don't do any xhr calls
+                    WinJS.xhr({ url: Ocho.Utilities.format("/demos/{0}/{0}.html", demo.name), responseType: "document" })
 
                         //get the title from the html file
                         //(for demos without section folders, this will intentionally and silently fail)
@@ -196,7 +191,7 @@
                             if (result.jsonFileExists && demo.enabled) {
                                 demo.sections.forEach(function (section) {
                                     //get the section title and add the section to the demo
-                                    WinJS.xhr({ url: format("/demos/{0}/{1}/{1}.html", demo.name, section.name), responseType: "document" })
+                                    WinJS.xhr({ url: Ocho.Utilities.format("/demos/{0}/{1}/{1}.html", demo.name, section.name), responseType: "document" })
                                         .then(function (result) {
                                             section.title = result.response.querySelector("title").innerText;
                                         }, function (err) { })

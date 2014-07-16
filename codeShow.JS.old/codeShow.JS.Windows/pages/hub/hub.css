@@ -1,0 +1,252 @@
+﻿.hubpage header[role=banner] {
+    position: relative;
+    z-index: 2;
+}
+
+.hubpage .titlearea, .hubpage .subtitle { font-family: "gooddog"; }
+    .hubpage .titlearea { font-size: 70px; }
+        .hubpage .titlearea .titleCode { color: #34435a; }
+        .hubpage .titlearea .titleShow { color: #5e83a2; }
+    .hubpage .subtitle { font-size: 20px; color: #34435a; }
+
+.hubpage header[role=banner] .win-searchbox {
+    -ms-grid-column: 4;
+    -ms-grid-column-align:end;
+    top: 40px;
+    margin-right:30px;
+}
+
+
+.hubpage section[role=main] {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    z-index: 1;
+}
+
+.hubpage .hub .win-hub-surface {
+    height: 100%;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+/*.hubpage .hub .hero {
+    background-image: url(/images/apphero.png);
+    background-size: cover;
+    margin-left: 0;
+    margin-right: 80px;
+    padding: 0;
+    width: 467px;
+}
+
+    .hubpage .hub .hero:-ms-lang(ar, dv, fa, he, ku-Arab, pa-Arab, prs, ps, sd-Arab, syr, ug, ur, qps-plocm) {
+        margin-left: 80px;
+        margin-right: 0;
+    }
+
+    .hubpage .hub .hero .win-hub-section-header {
+        display: none;
+    }*/
+
+/* Demos Section */
+.hubpage .hub .section_demos {
+    padding-left: 120px;
+}
+
+    .hubpage .hub .section_demos .itemslist {
+        height: 100%;
+        margin-left: -10px;
+        margin-right: -10px;
+        margin-top: -5px;
+    }
+
+    .hubpage .hub .section_demos .win-container {
+        margin: 5px;
+    }
+
+    .hubpage .hub .section_demos .win-item {
+        width:280px;
+        height:125px;
+        color: #34435a;
+    }
+        .hubpage .hub .section_demos .win-item .itemGrid {
+            display:-ms-grid;
+            -ms-grid-columns:6px 1fr;
+            -ms-grid-rows:1fr;
+            box-sizing:border-box;
+            border: solid 1px #5e83a2;
+            height:125px;
+            border-radius:2px;
+        }
+
+        .hubpage .hub .section_demos .win-item .itemHandle {
+            background-color:#5e83a2;
+        }
+        .hubpage .hub .section_demos .win-item .itemContents {
+            padding:4px 8px;
+            -ms-grid-column:2;
+            overflow:hidden;
+        }
+
+        .hubpage .hub .section_demos .win-item h3 {
+            font-weight:bold;
+        }
+
+        .hubpage .hub .section_demos .win-item p.description {
+            margin-top:2px;
+        }
+            
+        .hubpage .hub .section_demos .win-item div.author {
+            -ms-grid-column:2;
+            -ms-grid-row:1;
+            -ms-grid-column-align:end;
+            -ms-grid-row-align:end;
+            color:#34435a;
+            width:120px;
+            margin-bottom:4px;
+            padding:3px;
+            padding-right:7px;
+            text-align:right;
+            font-size:11px;
+        }
+    
+    .hubpage .hub .section_demos .win-listview .win-itembox {
+        background-color: rgba(0,0,0,0.03);
+    }
+
+/* Contributors Section */
+.hubpage .hub .section_contributors {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+    .hubpage .hub .section_contributors .win-hub-section-header {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .hubpage .hub .section_contributors .itemslist {
+        height: 100%;
+        margin-top: -10px;
+    }
+
+        .hubpage .hub .section_contributors .itemslist .win-viewport {
+            overflow-y: hidden;
+        }
+
+        .hubpage .hub .section_contributors .itemslist .win-container {
+            margin: 3px;
+            margin-bottom: 16px;
+        }
+        
+        .hubpage .hub .section_contributors .itemslist .win-itembox {
+            background-color: transparent;
+        }
+
+
+    .hubpage .hub .section_contributors .win-item {
+        -ms-grid-columns: auto auto;
+        display: -ms-grid;
+        height: 110px;
+        width: 420px;
+        padding: 7px;
+    }
+
+        .hubpage .hub .section_contributors .win-item img {
+            -ms-grid-column: 1;
+            height: 110px;
+            width: 110px;
+        }
+
+        .hubpage .hub .section_contributors .win-item .item-text {
+            -ms-grid-column: 2;
+            height: 105px;
+            overflow: hidden;
+            margin-left: 10px;
+            margin-right: 10px;
+            margin-top: 4px;
+        }
+
+/* Apps Section */
+.hubpage .hub .section_apps {
+    width: 400px;
+    display:none;
+}
+
+    .hubpage .hub .section_apps .win-hub-section-content {
+        overflow-y: hidden;
+    }
+
+    .hubpage .hub .section_apps .top-image-row {
+        height: 260px;
+        margin-bottom: 10px;
+        width: 400px;
+        display:-ms-grid;
+    }
+
+        .hubpage .hub .section_apps .top-image-row .screenshot img {
+            height: 260px;
+            width: 400px;
+        }
+
+        .hubpage .hub .section_apps .top-image-row div.logo {
+            position:relative;
+            top:20px;
+            left:20px;
+            -ms-grid-column-align:start;
+            -ms-grid-row-align:start;
+        }
+
+        .hubpage .hub .section_apps .top-image-row div.logo img {
+            height: 50px;
+            width: 50px;
+        }
+
+    .hubpage .hub .section_apps .sub-image-row {
+        margin-bottom: 20px;
+    }
+
+    .hubpage .hub .section_apps .sub-image-row .win-repeater{
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between; /*BUG: not working*/
+    }
+
+        .hubpage .hub .section_apps .sub-image-row .win-repeater img {
+            height: 50px;
+            width: 50px;
+        }
+
+/* Source Code Section */
+.hubpage .hub .section_sourcecode {
+    width: 420px;
+    display:none;
+}
+
+    .hubpage .hub .section_sourcecode .win-hub-section-content {
+        overflow-y: hidden;
+    }
+
+    .hubpage .hub .section_sourcecode .subtext {
+        margin-bottom: 7px;
+        margin-top: 9px;
+    }
+
+
+/* Resources Section */
+.hubpage .hub .section_resources {
+    width: 440px;
+    display:none;
+}
+
+    .hubpage .hub .section_resources .win-hub-section-content {
+        overflow-y: hidden;
+    }
+
+    .hubpage .hub .section_resources .item-title {
+        margin-top: 4px;
+        margin-bottom: 10px;
+    }
+
+    .hubpage .hub .section_resources .article-header {
+        margin-bottom: 15px;
+    }

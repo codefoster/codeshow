@@ -1,0 +1,8 @@
+﻿{
+	"title": "Components",
+	"keywords":["winmd","winrt","component","components","modular"],
+	"description": "Learn how to write C++ and C# components in a JavaScript app",
+	"author": "Jeremy Foster",
+	"dateCreated": "2013/02/01",
+    "enabled":false
+}

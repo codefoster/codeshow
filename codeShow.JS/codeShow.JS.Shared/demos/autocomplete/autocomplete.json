@@ -1,0 +1,8 @@
+﻿{
+	"title": "Rx Autocomplete",
+	"keywords":["auto","complete","autocomplete","search"],
+	"description": "A demo written by Microsoft's Rx team that uses Reactive Extensions to get search terms from Wikipedia. Impressive.",
+	"author": "Jeremy Foster",
+	"enabled": false,
+	"dateCreated": "2012/10/01"
+}

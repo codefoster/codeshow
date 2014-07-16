@@ -1,24 +1,14 @@
-﻿// For details on localizing a Windows app, see: http://go.microsoft.com/fwlink/?LinkId=212836
+﻿{
+    "DemosSectionHeader": "Demos",
+    "ContributorsSectionHeader": "Contributors",
+    "DemoSectionHeader": "demo",
+    "CodeSectionHeader": "code",
 
-{
-    "Section1": "Section 1",
-	"Section1Title": "Section 1 Title",
-    "Section1Subtext": "Lorem ipsum dolor sit amet",
-    "Section1Description": "Lorem ipsum dolor sit amet, consectetur ising elit, sed diam nonummy nibh uismod tincidunt ut laoreet suscipit lobortis nisl ut wisi quipexerci quis consequat minim veniam, quis nostrud. exerci tation ullam corper.",
+    "SourceCode": "Source code",
+    "SourceCodeSectionSubtext": "The complete source code for this application is available online",
+    "SourceCodeSectionDescription": "{ describe how to get to the complete source code on codeplex and why you would want to }",
 
-    "Section2": "Section 2",
-    "Section2ItemTitle": "Item Title",
-    "Section2ItemSubtitle": "Item Sub Title",
-    "Section2Subtext": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa.",
-    "Section2Description": "Lorem ipsum dolor sit amet, consectetur ising elit, sed diam nonummy nibh uismod tincidunt ut laoreet suscipit lobortis nisl ut wisi quipexerci quis consequat minim veniam, quis nostrud. exerci tation ullam corper.",
-    
-    "Section3": "Section 3",
-	"Section3ItemTitle": "Item Title",
-	"Section3Description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
-    
-    "Section4": "Section 4",
-    "Section4Description": "Lorem ipsum dolor sit amet, consectetur ising elit, sed diam nonummy nibh uismod tincidunt ut laoreet suscipit lobortis nisl ut wisi quipexerci quis consequat minim veniam, quis nostrud. exerci tation ullam corper.",
-
-    "DescriptionText": "Lorem ipsum dolor sit amet:",
-    "SectionSubtitle": "Section subtitle"
+    "AppsHeader": "Apps",
+    "AppsParagraphHeader": "You're done with your app... now get it seen!",
+    "AppsParagraph": "The apps section in codeShow is intended to help make your app successful. If you've created an app, you can submit your app to be included in codeShow's list and get some visibility for your app. Just visit the apps section and click to add a new one."
 }

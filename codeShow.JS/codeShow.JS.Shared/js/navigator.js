@@ -11,7 +11,7 @@
                 this._element.appendChild(this._createPageElement());
 
                 this.home = options.home;
-                
+
                 this._eventHandlerRemover = [];
 
                 var that = this;
@@ -63,6 +63,8 @@
                 _createPageElement: function () {
                     var element = document.createElement("div");
                     element.setAttribute("dir", window.getComputedStyle(this._element, null).direction);
+                    element.style.position = "absolute";
+                    element.style.visibility = "hidden";
                     element.style.width = "100%";
                     element.style.height = "100%";
                     return element;
@@ -78,30 +80,37 @@
                 },
 
                 _navigated: function () {
+                    this.pageElement.style.visibility = "";
                     WinJS.UI.Animation.enterPage(this._getAnimationElements()).done();
                 },
 
-                // Responds to navigation by adding new pages to the DOM.
+                // Responds to navigation by adding new pages to the DOM. 
                 _navigating: function (args) {
                     var newElement = this._createPageElement();
-                    var parentedComplete;
-                    var parented = new WinJS.Promise(function (c) { parentedComplete = c; });
+                    this._element.appendChild(newElement);
 
                     this._lastNavigationPromise.cancel();
 
-                    this._lastNavigationPromise = WinJS.Promise.timeout().then(function () {
-                       return WinJS.UI.Pages.render(args.detail.location, newElement, args.detail.state, parented);
-                    }).then(function parentElement(control) {
-                        var oldElement = this.pageElement;
-                        if (oldElement.winControl && oldElement.winControl.unload) {
-                            oldElement.winControl.unload();
+                    var that = this;
+
+                    function cleanup() {
+                        if (that._element.childElementCount > 1) {
+                            var oldElement = that._element.firstElementChild;
+                            // Cleanup and remove previous element 
+                            if (oldElement.winControl) {
+                                if (oldElement.winControl.unload) {
+                                    oldElement.winControl.unload();
+                                }
+                                oldElement.winControl.dispose();
+                            }
+                            oldElement.parentNode.removeChild(oldElement);
+                            oldElement.innerText = "";
                         }
-                        WinJS.Utilities.disposeSubTree(this._element);
-                        this._element.appendChild(newElement);
-                        this._element.removeChild(oldElement);
-                        oldElement.innerText = "";
-                        parentedComplete();
-                    }.bind(this));
+                    }
+
+                    this._lastNavigationPromise = WinJS.Promise.as().then(function () {
+                        return WinJS.UI.Pages.render(args.detail.location, newElement, args.detail.state);
+                    }).then(cleanup, cleanup);
 
                     args.detail.setPromise(this._lastNavigationPromise);
                 },

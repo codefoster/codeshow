@@ -1,0 +1,38 @@
+﻿.mediaqueries section[role=main] > div {
+    display:-ms-grid;
+}
+    .mediaqueries section[role=main] > div > img {
+        width:182px;
+        height:200px;
+        margin: 12px;
+    }
+
+    .mediaqueries section[role=main] > div > div:nth-of-type(1) {
+        margin: 12px;
+    }
+
+    .mediaqueries section[role=main] > div > div:nth-of-type(2) {
+        margin: 12px;
+    }
+
+
+@media screen and (-ms-view-state: fullscreen-landscape), screen and (-ms-view-state: filled) {
+    .mediaqueries section[role=main] > div { -ms-grid-columns:220px 1fr; -ms-grid-rows:1fr 1fr; }
+        .mediaqueries section[role=main] > div > img { -ms-grid-column-row:2; }
+        .mediaqueries section[role=main] > div > div:nth-of-type(1) { -ms-grid-column:2; -ms-grid-row:1; }
+        .mediaqueries section[role=main] > div > div:nth-of-type(2) { -ms-grid-column:2; -ms-grid-row:2; }
+}
+
+@media screen and (-ms-view-state: snapped) {
+    .mediaqueries section[role=main] { overflow-y: scroll; }
+    .mediaqueries section[role=main] > div { margin-left: 5px; -ms-grid-rows:3; }
+        .mediaqueries section[role=main] > div > div:nth-of-type(1) { -ms-grid-row:2; }
+        .mediaqueries section[role=main] > div > div:nth-of-type(2) { -ms-grid-row:3; }
+}
+
+@media screen and (-ms-view-state: fullscreen-portrait) {
+    .mediaqueries section[role=main] > div { margin-left: 120px; -ms-grid-columns:2; -ms-grid-rows:2; }
+        .mediaqueries section[role=main] > div > img { -ms-grid-column-span:2; -ms-grid-column-align:center; }
+        .mediaqueries section[role=main] > div > div:nth-of-type(1) { -ms-grid-column:1; -ms-grid-row:2; }
+        .mediaqueries section[role=main] > div > div:nth-of-type(2) { -ms-grid-column:2; -ms-grid-row:2; }
+}

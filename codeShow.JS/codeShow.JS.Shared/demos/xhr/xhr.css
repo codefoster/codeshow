@@ -1,0 +1,35 @@
+﻿.xhr section[role=main] > div {
+    display: -ms-grid;
+    -ms-grid-rows: 1fr 1fr 1fr 1fr;
+    -ms-grid-columns: 1fr 1fr;
+    height: 600px;
+    width: 800px;
+}
+
+.xhr section[role=main] > div > * {
+    margin: 5px;
+    -ms-grid-column-align: center;
+    -ms-grid-row-align: center;
+}
+
+    .xhr #btn1 {-ms-grid-row: 1;}
+    .xhr #btn2 {-ms-grid-row: 2;}
+    .xhr #btn3 {-ms-grid-row: 3;}
+    .xhr #btn4 {-ms-grid-row: 4;}
+    .xhr #results1 {
+        -ms-grid-column: 2;
+        -ms-grid-row: 1;
+    }
+    .xhr #results2 {
+        -ms-grid-column: 2;
+        -ms-grid-row: 2;
+    }
+    .xhr #results3 {
+        -ms-grid-column: 2;
+        -ms-grid-row: 3;
+    }
+    .xhr #results4 {
+        -ms-grid-column: 2;
+        -ms-grid-row: 4;
+    }
+

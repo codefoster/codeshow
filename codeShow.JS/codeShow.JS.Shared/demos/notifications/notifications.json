@@ -1,0 +1,13 @@
+{
+    "title": "Notifications",
+    "keywords":["notifications","push","background","tile","badge"],
+    "description": "Send notifications to the user using the local method and the background task method",
+    "author": "Jeremy Foster, Sebastián Gómez",
+    "dateCreated": "",
+	"enabled":true,
+	"sections":[
+		{"name":"tileupdate"},
+		{"name":"badgeupdate"},
+		{"name":"toasts"}
+	]
+}
