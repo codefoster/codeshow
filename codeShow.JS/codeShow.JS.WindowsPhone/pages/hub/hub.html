@@ -26,7 +26,7 @@
                 <div class="section demos" data-win-control="WinJS.UI.PivotItem" data-win-res="{ winControl: {'header': 'DemosSectionHeader'} }">
                     <div class="demoscontenthost sectioncontrol" id="demoscontenthost" data-win-control="Controls.DemosControl"
                          data-win-options="{
-                             dataSource: select('.pagecontrol').winControl.demosList.dataSource,
+                             dataSource: select('.pagecontrol').winControl.demosList,
                              layout: {type: WinJS.UI.ListLayout},
                              oniteminvoked: select('.pagecontrol').winControl.demoItemInvoke
                          }"></div>
@@ -35,7 +35,7 @@
                 <div class="section contributors" data-win-control="WinJS.UI.PivotItem" data-win-res="{ winControl: {'header': 'ContributorsSectionHeader'} }">
                     <div class="contributorscontenthost sectioncontrol" id="contributorscontenthost" data-win-control="Controls.ContributorsControl"
                          data-win-options="{
-                             dataSource: select('.pagecontrol').winControl.contributorsList.dataSource,
+                             dataSource: select('.pagecontrol').winControl.contributorsList,
                              layout: {type: WinJS.UI.ListLayout},
                              oniteminvoked: select('.pagecontrol').winControl.contributorItemInvoke
                          }"></div>

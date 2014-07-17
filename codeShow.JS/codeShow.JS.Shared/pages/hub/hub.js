@@ -29,6 +29,8 @@
             //        return (!b.dateCreated || new Date(a.dateCreated) > new Date(b.dateCreated) ? -1 : 1);
             //    })
             //    .slice(0, 10)); 
+
+            this.demosList = this.demosList.createGrouped(function (d) { return d.group; }, function (d) { return { group: d.group }; });
         },
 
         //DEMOS

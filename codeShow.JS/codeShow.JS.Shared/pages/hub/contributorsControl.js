@@ -8,7 +8,7 @@
 
                 var listView = element.querySelector(".itemslist").winControl;
 
-                listView.itemDataSource = options.dataSource;
+                listView.itemDataSource = options.dataSource.dataSource;
                 listView.layout = options.layout;
                 listView.oniteminvoked = options.oniteminvoked;
             }

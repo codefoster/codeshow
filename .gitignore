@@ -160,3 +160,4 @@ Backup_of_*
 *.orig
 BundleArtifacts/
 *.sln.ide/
+Scratch.ref/

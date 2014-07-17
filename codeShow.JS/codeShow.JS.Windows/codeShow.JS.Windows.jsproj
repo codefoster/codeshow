@@ -110,11 +110,10 @@
     <Content Include="pages\apps\apps.css" />
     <Content Include="pages\apps\apps.html" />
     <Content Include="pages\apps\apps.js" />
-    <Content Include="pages\demos\demos.css" />
-    <Content Include="pages\demos\demos.html" />
-    <Content Include="pages\demos\demos.js" />
     <Content Include="pages\demo\demo.css" />
     <Content Include="pages\demo\demo.html" />
+    <Content Include="pages\hub\demosListControl.css" />
+    <Content Include="pages\hub\demosListControl.html" />
     <Content Include="pages\hub\hub.css" />
     <Content Include="pages\hub\hub.html" />
     <Content Include="pages\privacy\privacy.css" />
@@ -135,6 +134,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="demos\" />
+    <Folder Include="pages\demos\" />
   </ItemGroup>
   <Import Project="..\codeShow.JS.Shared\codeShow.JS.Shared.projitems" Label="Shared" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\$(WMSJSProjectDirectory)\Microsoft.VisualStudio.$(WMSJSProject).targets" />

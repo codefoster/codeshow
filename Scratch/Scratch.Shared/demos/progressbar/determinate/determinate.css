@@ -1,9 +1,0 @@
-﻿.progressbar .determinate progress {
-    width:400px;
-    height: 15px;
-    margin-bottom: 20px;
-}
-
-.progressbar .determinate button {
-    margin: 5px;
-}

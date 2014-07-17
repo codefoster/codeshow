@@ -168,38 +168,77 @@
 
     }
 
+    //function loadDemos() {
+    //    var start = new Date().getTime();
+    //    return pkg.installedLocation.getFolderAsync("demos")
+    //        .then(function (demosFolder) { return demosFolder.getFoldersAsync(); })
+    //        .then(function (demoFolders) {
+    //            demoFolders.forEach(function (demoFolder) {
+    //                //initialize and set defaults
+    //                var demo = { name: demoFolder.displayName, enabled: true, suppressAppBar: false, sections: [] };
+
+    //                //TODO: change this to look first at the json file and then look at files via direct file IO calls and don't do any xhr calls
+    //                WinJS.xhr({ url: Ocho.Utilities.format("/demos/{0}/{0}.html", demo.name), responseType: "document" })
+
+    //                    //get the title from the html file
+    //                    //(for demos without section folders, this will intentionally and silently fail)
+    //                    .then(function (result) { demo.title = result.response.querySelector("title").innerText; }, function (err) { /* GULP */ })
+
+    //                    //get the metadata (from the json file) (overriding title if included)
+    //                    .then(function () { return getMetadataAsync(demo, demoFolder); }, function (err) { debugger; })
+    //                    .then(function (result) {
+    //                        if (result.jsonFileExists && demo.enabled) {
+    //                            demo.sections.forEach(function (section) {
+    //                                //get the section title and add the section to the demo
+    //                                WinJS.xhr({ url: Ocho.Utilities.format("/demos/{0}/{1}/{1}.html", demo.name, section.name), responseType: "document" })
+    //                                    .then(function (result) {
+    //                                        section.title = result.response.querySelector("title").innerText;
+    //                                    }, function (err) { })
+    //                            });
+    //                            Data.demos.push(demo);
+    //                        }
+    //                    });
+    //            });
+    //        })
+    //        .then(function () {
+    //            var now = new Date().getTime();
+    //            console.info("Demos loaded in " + ((now - start) / 1000) + " seconds");
+    //        });
+    //}
+
     //populate demos (from the package)
     function loadDemos() {
         var start = new Date().getTime();
         return pkg.installedLocation.getFolderAsync("demos")
             .then(function (demosFolder) { return demosFolder.getFoldersAsync(); })
             .then(function (demoFolders) {
-                demoFolders.forEach(function (demoFolder) {
+                return WinJS.Promise.join(demoFolders.map(function (demoFolder) {
                     //initialize and set defaults
-                    var demo = { name: demoFolder.displayName, enabled: true, suppressAppBar: false, sections: [] };
+                    var demo = { name: demoFolder.displayName, enabled: false, suppressAppBar: false, group: 'Other' }; /* DEV */
 
-                    //TODO: change this to look first at the json file and then look at files via direct file IO calls and don't do any xhr calls
-                    WinJS.xhr({ url: Ocho.Utilities.format("/demos/{0}/{0}.html", demo.name), responseType: "document" })
-
-                        //get the title from the html file
-                        //(for demos without section folders, this will intentionally and silently fail)
-                        .then(function (result) { demo.title = result.response.querySelector("title").innerText; }, function (err) { /* GULP */ })
-
-                        //get the metadata (from the json file) (overriding title if included)
-                        .then(function () { return getMetadataAsync(demo, demoFolder); }, function (err) { debugger; })
-                        .then(function (result) {
-                            if (result.jsonFileExists && demo.enabled) {
-                                demo.sections.forEach(function (section) {
-                                    //get the section title and add the section to the demo
-                                    WinJS.xhr({ url: Ocho.Utilities.format("/demos/{0}/{1}/{1}.html", demo.name, section.name), responseType: "document" })
-                                        .then(function (result) {
-                                            section.title = result.response.querySelector("title").innerText;
-                                        }, function (err) { })
-                                });
+                    return demoFolder.getFileAsync(demoFolder.displayName + ".json")
+                        .then(function (file) {
+                            //copy all properties from the json file to the demo object
+                            return Windows.Storage.FileIO.readTextAsync(file)
+                                .then(function (text) {
+                                    try {
+                                        var m = JSON.parse(text);
+                                        for (var key in m)
+                                            if (m.hasOwnProperty(key))
+                                                demo[key] = m[key];
+                                    }
+                                    catch (error) {
+                                        console.error(Ocho.Utilities.format("There was a problem reading and parsing the {}.json file", demoFolder.displayName));
+                                    }
+                                }, function(err) { });
+                        }, function () { console.error(Ocho.Utilities.format("The demo in the folder /demos/{0} must have a meta file called {0}.json", demoFolder.displayName)); })
+                        .then(function () {
+                            if (demo.enabled) {
                                 Data.demos.push(demo);
+                                console.log(Ocho.Utilities.format("Loaded demo {0}", demo.name));
                             }
                         });
-                });
+                }));
             })
             .then(function () {
                 var now = new Date().getTime();
@@ -207,25 +246,6 @@
             });
     }
     
-    function getMetadataAsync(ds, folder) {
-        //TODO: first get the HTML and get the title from that... override with .json file below if it exists
-        return folder.getFileAsync(folder.displayName + ".json")
-            .then(
-                function(file) {
-                    //there was a json file
-                    return Windows.Storage.FileIO.readTextAsync(file)
-                        .then(function(text) {
-                            var m = JSON.parse(text);
-                            for (var key in m)
-                                if (m.hasOwnProperty(key))
-                                    ds[key] = m[key]; //copy all properties
-                            return { jsonFileExists: true };
-                        }, function(err) { debugger; });
-                },
-                function() {
-                    //there was not a json file
-                    return { jsonFileExists: false };
-                }
-            );
+    function getMetadataAsync(d, folder) {
     }
 })();
