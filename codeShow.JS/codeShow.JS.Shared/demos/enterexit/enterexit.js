@@ -1,7 +1,7 @@
 ﻿(function () {
     "use strict";
 
-    WinJS.UI.Pages.define("/demos/animationlibrary/enterexit/enterexit.html", {
+    WinJS.UI.Pages.define("/demos/enterexit/enterexit.html", {
         ready: function (element, options) {
             animate.onclick = function () {
                 WinJS.UI.Animation.enterContent(target, { top: "0px", left: "350px" })

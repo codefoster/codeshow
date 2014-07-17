@@ -1,7 +1,7 @@
 ﻿(function () {
     "use strict";
 
-    WinJS.UI.Pages.define("/demos/animationlibrary/click/click.html", {
+    WinJS.UI.Pages.define("/demos/click/click.html", {
         ready: function (element, options) {
             var targets = WinJS.Utilities.query(".target",document);
             targets.listen("MSPointerDown", function (e) {

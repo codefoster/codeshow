@@ -5,7 +5,7 @@
     var COLS = 80;
     var ROWS = 40;
 
-    WinJS.UI.Pages.define("/demos/grid/biggrid/biggrid.html", {
+    WinJS.UI.Pages.define("/demos/biggrid/biggrid.html", {
         ready: function (e, o) {
             element = e;
             this.buildBigGrid(element);

@@ -1,0 +1,22 @@
+﻿.click .parent {
+    display: flex;
+    align-items:center;
+}
+
+.click .target {
+    background-color: lightgray;
+    margin:10px;
+}
+
+    .click .target:nth-child(1) {
+        width: 50px;
+        height: 50px;
+    }
+    .click .target:nth-child(2) {
+        width: 100px;
+        height: 100px;
+    }
+    .click .target:nth-child(3) {
+        width: 300px;
+        height: 300px;
+    }

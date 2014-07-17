@@ -8,7 +8,7 @@
     <script src="/js/data.js"></script>
     <script src="/pages/hub/hub.js"></script>
     <script src="/pages/hub/demosListControl.js"></script>
-    <script src="/pages/hub/section1Page.js"></script>
+    <script src="/pages/hub/contributorsControl.js"></script>
 </head>
 <body>
     <div class="hubpage fragment">
@@ -28,7 +28,7 @@
                 </div>
 
 	            <!-- Demos section -->
-                <div class="section demos" data-win-control="WinJS.UI.HubSection" data-win-options="{ header: 'Demos', onheaderinvoked: select('.pagecontrol').winControl.demosHeaderInvoke }">
+                <div class="section demos" data-win-control="WinJS.UI.HubSection" data-win-options="{ onheaderinvoked: select('.pagecontrol').winControl.demosHeaderInvoke }" data-win-res="{ winControl: {'header': 'DemosSectionHeader'} }">
                     <div class="demoscontenthost" id="demoscontenthost" data-win-control="Controls.DemosControl" style="height: 100%;"
                          data-win-options="{
                              dataSource: select('.pagecontrol').winControl.demosList,
@@ -38,8 +38,13 @@
                     </div>
                 </div>
 			
-                <div class="section1" data-win-control="WinJS.UI.HubSection" data-win-options="{ isHeaderStatic: true }" data-win-res="{ winControl: {'header': 'Section1'} }">
-                    <div id="section1contenthost" data-win-control="HubApps_SectionControls.Section1Control"></div>
+                <div class="section contributors" data-win-control="WinJS.UI.HubSection" data-win-options="{ isHeaderStatic: true }" data-win-res="{ winControl: {'header': 'ContributorsSectionHeader'} }">
+                    <div class="contributorscontenthost sectioncontrol" id="contributorscontenthost" data-win-control="Controls.ContributorsControl"
+                         data-win-options="{
+                             dataSource: select('.pagecontrol').winControl.contributorsList,
+                             layout: {type: WinJS.UI.ListLayout},
+                             oniteminvoked: select('.pagecontrol').winControl.contributorItemInvoke
+                         }"></div>
                 </div>
             </div>
         </section>

@@ -9,6 +9,10 @@
     <div class="fragment demoslistcontrol">
         <section aria-label="Main content" role="main">
             <!-- TEMPLATE -->
+            <div class="headerTemplate" data-win-control="WinJS.Binding.Template">
+                <h2 data-win-bind="innerText:group"></h2>
+            </div>
+
             <div class="itemTemplate" data-win-control="WinJS.Binding.Template">
                 <div class="itemGrid">
                     <div class="itemHandle"></div>
@@ -23,7 +27,8 @@
             <!-- LIST -->
             <div class="itemslist win-selectionstylefilled" data-win-control="WinJS.UI.ListView" data-win-options="{
 	            selectionMode: 'none',
-                itemTemplate: select('.itemTemplate')
+                itemTemplate: select('.itemTemplate'),
+                groupHeaderTemplate: select('.headerTemplate')
 	        }"></div>
         </section>
     </div>

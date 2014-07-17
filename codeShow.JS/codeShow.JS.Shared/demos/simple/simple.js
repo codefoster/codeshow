@@ -1,7 +1,7 @@
 ﻿(function () {
     "use strict";
 
-    WinJS.UI.Pages.define("/demos/grid/simple/simple.html", {
+    WinJS.UI.Pages.define("/demos/simple/simple.html", {
         ready: function (element, options) {
             
         }

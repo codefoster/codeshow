@@ -30,7 +30,7 @@
             //    })
             //    .slice(0, 10)); 
 
-            this.demosList = this.demosList.createGrouped(function (d) { return d.group; }, function (d) { return { group: d.group }; });
+            if(WinJS.Utilities.isPhone) this.demosList = this.demosList.createGrouped(function (d) { return d.group; }, function (d) { return { group: d.group }; });
         },
 
         //DEMOS

@@ -214,7 +214,7 @@
             .then(function (demoFolders) {
                 return WinJS.Promise.join(demoFolders.map(function (demoFolder) {
                     //initialize and set defaults
-                    var demo = { name: demoFolder.displayName, enabled: false, suppressAppBar: false, group: 'Other' }; /* DEV */
+                    var demo = { name: demoFolder.displayName, enabled: true, suppressAppBar: false, group: 'Other' };
 
                     return demoFolder.getFileAsync(demoFolder.displayName + ".json")
                         .then(function (file) {
@@ -230,7 +230,7 @@
                                     catch (error) {
                                         console.error(Ocho.Utilities.format("There was a problem reading and parsing the {}.json file", demoFolder.displayName));
                                     }
-                                }, function(err) { });
+                                }, function (err) { debugger; });
                         }, function () { console.error(Ocho.Utilities.format("The demo in the folder /demos/{0} must have a meta file called {0}.json", demoFolder.displayName)); })
                         .then(function () {
                             if (demo.enabled) {
