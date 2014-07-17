@@ -21,16 +21,21 @@
                 }
             }
 
-            ////this was an attempt to limit the demos on the hub to the first 10, but it's not working
-            ////get the first 10 demos
-            //this.demosList = new WinJS.Binding.List(Data.demos
-            //    .splice()
-            //    .sort(function (a, b) {
-            //        return (!b.dateCreated || new Date(a.dateCreated) > new Date(b.dateCreated) ? -1 : 1);
-            //    })
-            //    .slice(0, 10)); 
-
-            if(WinJS.Utilities.isPhone) this.demosList = this.demosList.createGrouped(function (d) { return d.group; }, function (d) { return { group: d.group }; });
+            //condition the demos list for platform particulars
+            if (!WinJS.Utilities.isPhone) {
+                this.demosList = new WinJS.Binding.List();
+                var that = this;
+                Data.demos.onreload = function () {
+                    that.demosList.length = 0;
+                    Data.demos
+                    .slice(0, 10).forEach(function (item) {
+                        that.demosList.push(item);
+                    });
+                };
+            }
+            else {
+                this.demosList = this.demosList.createGrouped(function (d) { return d.group; }, function (d) { return { group: d.group }; });
+            }
         },
 
         //DEMOS

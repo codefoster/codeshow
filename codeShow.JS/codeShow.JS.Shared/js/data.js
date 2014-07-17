@@ -241,6 +241,7 @@
                 }));
             })
             .then(function () {
+                Data.demos.notifyReload();
                 var now = new Date().getTime();
                 console.info("Demos loaded in " + ((now - start) / 1000) + " seconds");
             });
