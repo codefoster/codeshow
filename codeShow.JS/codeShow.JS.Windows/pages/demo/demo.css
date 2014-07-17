@@ -1,7 +1,39 @@
-﻿.demo section {
+﻿.demo .section {
+ }
+
+.demo .section.demo {
 }
 
-.phone .demo .page-section {
+    .demo .section.demo .explanation {
+        max-width:80vw;
+    }
+
+.demo .section.file {
+}
+    .demo .section.file textarea{
+        width:500px;
+        height:500px;
+    }
+
+.demo .section.demo header {
+    display: none;
+}
+
+.sections .win-hub-section-header {
+    margin-top:0;
+}
+
+.demo .fragment {
+	display: block;
+	height: 100%;
+	width: 100%;
+}
+
+	.demo .fragment section[role=main] {
+		height: 100%;
+	}
+
+/*.phone .demo .page-section {
 	margin: auto 24px;
 }
 
@@ -17,21 +49,9 @@
 	display: none;
 }
 
-.demo .fragment {
-	display: block;
-	height: 100%;
-	width: 100%;
-}
 
-	.demo .fragment section[role=main] {
-		height: 100%;
-	}
-
-.sections .win-hub-section-header {
-    margin-top:0;
-}
 
 .sections .win-hub-surface {
     padding: 0;
     margin-left: 80px;
-}
+}*/
