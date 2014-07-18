@@ -1,0 +1,8 @@
+{
+	"title": "Flexbox Wrapping",
+    "group": "CSS Flexbox",
+    "keywords":["flex","box","flexbox","layout","css"],
+    "description": "Items in a flexbox can wrap!",
+    "author": "Jeremy Foster",
+    "dateCreated": "2013/1/1"
+}

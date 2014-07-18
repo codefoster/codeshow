@@ -1,4 +1,4 @@
-﻿.flexbox .swipe #swipeparent {
+﻿.flexswipe #swipeparent {
     display:flex;
     -ms-scroll-snap-x: mandatory snapInterval(0%, 80%);
     overflow-x: auto;
@@ -7,7 +7,7 @@
     border:1px solid lightgray;
 }
 
-.flexbox .swipe #swipeparent > * {
+.flexswipe #swipeparent > * {
     box-sizing: border-box;
     width: 80%;
     height: 100%;
@@ -17,6 +17,6 @@
     flex:none;
 }
 
-.flexbox .swipe #swipeparent > *:last-child {
+.flexswipe #swipeparent > *:last-child {
     width: 100%;
 }

@@ -1,10 +1,10 @@
-﻿.flexbox .simple #flexboxSimple {
-    display: -ms-flexbox;
+﻿.flexsimple #flexboxSimple {
+    display: flex;
     width: 100%;
     border: 1px solid gray;
 }
 
-.flexbox .simple #flexboxSimple > div {
+.flexsimple #flexboxSimple > div {
     min-width: 80px;
     min-height: 80px;
     border: 1px solid black;

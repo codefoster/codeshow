@@ -1,0 +1,8 @@
+{
+	"title": "Flexbox Distribution",
+    "group": "CSS Flexbox",
+    "keywords":["flex","box","flexbox","layout","css","distribute","distributing","spacing","alignment","align"],
+    "description": "The flexbox can tell its items to distribute themselves evenly in the given space",
+    "author": "Jeremy Foster",
+    "dateCreated": "2013/1/1"
+}

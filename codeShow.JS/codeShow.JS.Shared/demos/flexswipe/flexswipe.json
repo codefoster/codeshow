@@ -1,0 +1,8 @@
+{
+	"title": "Swiper",
+    "group": "CSS Flexbox",
+    "keywords":["flex","box","flexbox","layout","css","swipe","swiper"],
+    "description": "Let's use a flex box for creating a nice, modern swipe panel",
+    "author": "Jeremy Foster",
+    "dateCreated": "2013/1/1"
+}
