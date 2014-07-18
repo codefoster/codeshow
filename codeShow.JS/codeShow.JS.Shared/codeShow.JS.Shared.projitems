@@ -11,10 +11,10 @@
     <Content Include="$(MSBuildThisFileDirectory)demos\ads\ads.html" />
     <Content Include="$(MSBuildThisFileDirectory)demos\ads\ads.js" />
     <Content Include="$(MSBuildThisFileDirectory)demos\ads\ads.json" />
-    <Content Include="$(MSBuildThisFileDirectory)demos\angry\angry.css" />
-    <Content Include="$(MSBuildThisFileDirectory)demos\angry\angry.html" />
-    <Content Include="$(MSBuildThisFileDirectory)demos\angry\angry.js" />
-    <Content Include="$(MSBuildThisFileDirectory)demos\angry\angry.json" />
+    <Content Include="$(MSBuildThisFileDirectory)demos\keyframeAnimation\keyframeAnimation.css" />
+    <Content Include="$(MSBuildThisFileDirectory)demos\keyframeAnimation\keyframeAnimation.html" />
+    <Content Include="$(MSBuildThisFileDirectory)demos\keyframeAnimation\keyframeAnimation.js" />
+    <Content Include="$(MSBuildThisFileDirectory)demos\keyframeAnimation\keyframeAnimation.json" />
     <Content Include="$(MSBuildThisFileDirectory)demos\animatedTranslation\animatedTranslation.css" />
     <Content Include="$(MSBuildThisFileDirectory)demos\animatedTranslation\animatedTranslation.html" />
     <Content Include="$(MSBuildThisFileDirectory)demos\animatedTranslation\animatedTranslation.js" />
