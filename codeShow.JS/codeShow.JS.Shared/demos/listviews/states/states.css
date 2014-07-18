@@ -3,9 +3,6 @@
 .listviews .states .win-listview {
     border: 2px solid lightgray;
     background-color: white;
-}
-
-.listviews .states .win-listview {
     height: 460px;
     width: 800px;
 }

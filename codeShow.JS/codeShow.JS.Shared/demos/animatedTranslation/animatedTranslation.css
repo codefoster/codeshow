@@ -2,7 +2,6 @@
     width:320px;
     transition: 1s;
     position:relative;
-    left:0px;
-    top:0px;
-    
+    left:0;
+    top:0;
 }
