@@ -6,7 +6,8 @@
             btn1.onclick = function(e) {
                 WinJS.xhr({ url: "http://www.microsoft.com", responseType: "document" }).then(function(xhr) {
                     var img = document.createElement("img");
-                    img.src = q("img[Alt='Microsoft']", xhr.response)[0].src;
+                    
+                    img.src = xhr.response.querySelector("img[Alt='Microsoft']").src;
                     results1.appendChild(img);
                 });
             };
@@ -17,14 +18,14 @@
                 });
             };
 
-            btn3.onclick = function(e) {
-                WinJS.xhr({ url: "http://pluralsight.com/odata/Courses?$select=Title&$top=5", headers: { Accept: "application/json" } })
-                    .then(function (xhr) {
-                        results3.innerText = JSON.parse(xhr.response).d
-                            .map(function (i) { return i.Title; })
-                            .join(",");
-                    }, function (error) { debugger; });
-            };
+            //btn3.onclick = function(e) {
+            //    WinJS.xhr({ url: "http://services.odata.org/V4/TripPinServiceRW.svc/Airlines", headers: { Accept: "application/json" } })
+            //        .then(function (xhr) {
+            //            results3.innerText = JSON.parse(xhr.response).document
+            //                .map(function (i) { return i.Name; })
+            //                .join(",");
+            //        }, function (error) { debugger; });
+            //};
         }
     });
 })();
