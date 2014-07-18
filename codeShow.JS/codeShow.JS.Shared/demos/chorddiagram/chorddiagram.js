@@ -24,7 +24,7 @@
                 .domain(d3.range(4))
                 .range(["#000000", "#FFDD89", "#957244", "#F26223"]);
 
-            var svg = d3.select(".d3 .chorddiagram .result").append("svg")
+            var svg = d3.select(".chorddiagram .result").append("svg")
                 .attr("width", width)
                 .attr("height", height)
               .append("g")

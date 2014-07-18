@@ -1,7 +1,8 @@
 ﻿.demo .section {
  }
 
-.demo .section.demo {
+.demo .section.demo .win-hub-section-content {
+    /*border:dashed 2px rgba(0,0,0,0.1);*/
 }
 
     .demo .section.demo .explanation {
@@ -11,8 +12,9 @@
 .demo .section.file {
 }
     .demo .section.file textarea{
-        width:500px;
-        height:500px;
+        width:700px;
+        height:100%;
+        font-family:consolas,'courier new';
     }
 
 .demo .section.demo header {

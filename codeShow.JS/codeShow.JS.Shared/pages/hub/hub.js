@@ -22,21 +22,13 @@
             }
 
             //condition the demos list for platform particulars
+            this.demosList = this.demosList.createSorted(function (a, b) { return (a.title > b.title ? 1 : (a.title < b.title ? -1 : 0)); });
             if (WinJS.Utilities.isPhone) {
                 this.demosList = this.demosList.createGrouped(function (d) { return d.group; }, function (d) { return { group: d.group }; });
             }
             else {
-                ////limit the front page demos to 10 (hacky)
-                //this.demosList = new WinJS.Binding.List();
-                //var that = this;
-                //Data.demos.onreload = function () {
-                //    that.demosList.length = 0;
-                //    Data.demos
-                //        .slice(0, 10).forEach(function (item) {
-                //            that.demosList.push(item);
-                //        });
-                //    that.hubDataLoaded = true;
-                //};
+                //var c = 0, limit = 10;
+                //this.demosList = this.demosList.createFiltered(function (d) { return (++c < limit); });
             }
         },
 

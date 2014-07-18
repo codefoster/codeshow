@@ -59,14 +59,6 @@
 
         },
 
-        updateLayout: function (element, viewState, lastViewState) {
-            /// <param name="element" domElement="true" />
-            /// <param name="viewState" value="Windows.UI.ViewManagement.ApplicationViewState" />
-            /// <param name="lastViewState" value="Windows.UI.ViewManagement.ApplicationViewState" />
-
-            // TODO: Respond to changes in viewState.
-        },
-
         unload: function () {
             if (disposables) {
                 disposables.dispose();

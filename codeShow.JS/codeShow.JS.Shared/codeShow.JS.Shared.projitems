@@ -9,7 +9,6 @@
     <Content Include="$(MSBuildThisFileDirectory)css\type\GoodDog.otf" />
     <Content Include="$(MSBuildThisFileDirectory)demos\ads\ads.css" />
     <Content Include="$(MSBuildThisFileDirectory)demos\ads\ads.html" />
-    <Content Include="$(MSBuildThisFileDirectory)demos\ads\ads.js" />
     <Content Include="$(MSBuildThisFileDirectory)demos\ads\ads.json" />
     <Content Include="$(MSBuildThisFileDirectory)demos\alaska\alaska.css" />
     <Content Include="$(MSBuildThisFileDirectory)demos\alaska\alaska.html" />
@@ -32,7 +31,6 @@
     <Content Include="$(MSBuildThisFileDirectory)demos\appbar2\appbar2.json" />
     <Content Include="$(MSBuildThisFileDirectory)demos\appbarcommand\appbarcommand.html" />
     <Content Include="$(MSBuildThisFileDirectory)demos\appbarcommand\appbarcommand.json" />
-    <Content Include="$(MSBuildThisFileDirectory)demos\arrayFcts\arrayFcts.css" />
     <Content Include="$(MSBuildThisFileDirectory)demos\arrayFcts\arrayFcts.html" />
     <Content Include="$(MSBuildThisFileDirectory)demos\arrayFcts\arrayFcts.js" />
     <Content Include="$(MSBuildThisFileDirectory)demos\arrayFcts\arrayFcts.json" />
@@ -40,7 +38,6 @@
     <Content Include="$(MSBuildThisFileDirectory)demos\autocomplete\autocomplete.html" />
     <Content Include="$(MSBuildThisFileDirectory)demos\autocomplete\autocomplete.js" />
     <Content Include="$(MSBuildThisFileDirectory)demos\autocomplete\autocomplete.json" />
-    <Content Include="$(MSBuildThisFileDirectory)demos\backgroundtask\backgroundtask.css" />
     <Content Include="$(MSBuildThisFileDirectory)demos\backgroundtask\backgroundtask.html" />
     <Content Include="$(MSBuildThisFileDirectory)demos\backgroundtask\backgroundtask.js" />
     <Content Include="$(MSBuildThisFileDirectory)demos\backgroundtask\backgroundtask.json" />
@@ -49,7 +46,6 @@
     <Content Include="$(MSBuildThisFileDirectory)demos\baseconv\baseconv.html" />
     <Content Include="$(MSBuildThisFileDirectory)demos\baseconv\baseconv.js" />
     <Content Include="$(MSBuildThisFileDirectory)demos\baseconv\baseconv.json" />
-    <Content Include="$(MSBuildThisFileDirectory)demos\biggrid\biggrid.css" />
     <Content Include="$(MSBuildThisFileDirectory)demos\biggrid\biggrid.html" />
     <Content Include="$(MSBuildThisFileDirectory)demos\biggrid\biggrid.js" />
     <Content Include="$(MSBuildThisFileDirectory)demos\biggrid\biggrid.json" />
@@ -95,6 +91,8 @@
     <Content Include="$(MSBuildThisFileDirectory)demos\canvaspaint\canvaspaint.html" />
     <Content Include="$(MSBuildThisFileDirectory)demos\canvaspaint\canvaspaint.js" />
     <Content Include="$(MSBuildThisFileDirectory)demos\canvaspaint\canvaspaint.json" />
+    <Content Include="$(MSBuildThisFileDirectory)demos\canvaspaint\rx.js" />
+    <Content Include="$(MSBuildThisFileDirectory)demos\canvaspaint\rx.winjs.js" />
     <Content Include="$(MSBuildThisFileDirectory)demos\certs\certs.html" />
     <Content Include="$(MSBuildThisFileDirectory)demos\certs\certs.js" />
     <Content Include="$(MSBuildThisFileDirectory)demos\certs\certs.json" />
@@ -173,7 +171,6 @@
     <Content Include="$(MSBuildThisFileDirectory)demos\eventHandlers\eventHandlers.json" />
     <Content Include="$(MSBuildThisFileDirectory)demos\fancy\fancy.css" />
     <Content Include="$(MSBuildThisFileDirectory)demos\fancy\fancy.html" />
-    <Content Include="$(MSBuildThisFileDirectory)demos\fancy\fancy.js" />
     <Content Include="$(MSBuildThisFileDirectory)demos\fancy\fancy.json" />
     <Content Include="$(MSBuildThisFileDirectory)demos\fileCreateRead\fileCreateRead.css" />
     <Content Include="$(MSBuildThisFileDirectory)demos\fileCreateRead\fileCreateRead.html" />
@@ -188,23 +185,17 @@
     <Content Include="$(MSBuildThisFileDirectory)demos\filepicker\filepicker.json" />
     <Content Include="$(MSBuildThisFileDirectory)demos\flexbox\distributed\distributed.css" />
     <Content Include="$(MSBuildThisFileDirectory)demos\flexbox\distributed\distributed.html" />
-    <Content Include="$(MSBuildThisFileDirectory)demos\flexbox\distributed\distributed.js" />
     <Content Include="$(MSBuildThisFileDirectory)demos\flexbox\flexbox.json" />
     <Content Include="$(MSBuildThisFileDirectory)demos\flexbox\flexxing\flexxing.css" />
     <Content Include="$(MSBuildThisFileDirectory)demos\flexbox\flexxing\flexxing.html" />
-    <Content Include="$(MSBuildThisFileDirectory)demos\flexbox\flexxing\flexxing.js" />
     <Content Include="$(MSBuildThisFileDirectory)demos\flexbox\simple\simple.css" />
     <Content Include="$(MSBuildThisFileDirectory)demos\flexbox\simple\simple.html" />
-    <Content Include="$(MSBuildThisFileDirectory)demos\flexbox\simple\simple.js" />
     <Content Include="$(MSBuildThisFileDirectory)demos\flexbox\swipe\swipe.css" />
     <Content Include="$(MSBuildThisFileDirectory)demos\flexbox\swipe\swipe.html" />
-    <Content Include="$(MSBuildThisFileDirectory)demos\flexbox\swipe\swipe.js" />
     <Content Include="$(MSBuildThisFileDirectory)demos\flexbox\vertical\vertical.css" />
     <Content Include="$(MSBuildThisFileDirectory)demos\flexbox\vertical\vertical.html" />
-    <Content Include="$(MSBuildThisFileDirectory)demos\flexbox\vertical\vertical.js" />
     <Content Include="$(MSBuildThisFileDirectory)demos\flexbox\wrapping\wrapping.css" />
     <Content Include="$(MSBuildThisFileDirectory)demos\flexbox\wrapping\wrapping.html" />
-    <Content Include="$(MSBuildThisFileDirectory)demos\flexbox\wrapping\wrapping.js" />
     <Content Include="$(MSBuildThisFileDirectory)demos\flipview\flipview.css" />
     <Content Include="$(MSBuildThisFileDirectory)demos\flipview\flipview.html" />
     <Content Include="$(MSBuildThisFileDirectory)demos\flipview\flipview.js" />
@@ -272,12 +263,10 @@
     <Content Include="$(MSBuildThisFileDirectory)demos\html5audio\apollo_11_dsc2.mp3" />
     <Content Include="$(MSBuildThisFileDirectory)demos\html5audio\html5audio.css" />
     <Content Include="$(MSBuildThisFileDirectory)demos\html5audio\html5audio.html" />
-    <Content Include="$(MSBuildThisFileDirectory)demos\html5audio\html5audio.js" />
     <Content Include="$(MSBuildThisFileDirectory)demos\html5audio\html5audio.json" />
     <Content Include="$(MSBuildThisFileDirectory)demos\html5video\butterfly.mp4" />
     <Content Include="$(MSBuildThisFileDirectory)demos\html5video\html5video.css" />
     <Content Include="$(MSBuildThisFileDirectory)demos\html5video\html5video.html" />
-    <Content Include="$(MSBuildThisFileDirectory)demos\html5video\html5video.js" />
     <Content Include="$(MSBuildThisFileDirectory)demos\html5video\html5video.json" />
     <Content Include="$(MSBuildThisFileDirectory)demos\htmltotext\htmltotext.css" />
     <Content Include="$(MSBuildThisFileDirectory)demos\htmltotext\htmltotext.html" />
@@ -290,12 +279,10 @@
     <Content Include="$(MSBuildThisFileDirectory)demos\hub\simple\simple.js" />
     <Content Include="$(MSBuildThisFileDirectory)demos\iframes\external\external.css" />
     <Content Include="$(MSBuildThisFileDirectory)demos\iframes\external\external.html" />
-    <Content Include="$(MSBuildThisFileDirectory)demos\iframes\external\external.js" />
     <Content Include="$(MSBuildThisFileDirectory)demos\iframes\helloworld.html" />
     <Content Include="$(MSBuildThisFileDirectory)demos\iframes\iframes.json" />
     <Content Include="$(MSBuildThisFileDirectory)demos\iframes\internal\internal.css" />
     <Content Include="$(MSBuildThisFileDirectory)demos\iframes\internal\internal.html" />
-    <Content Include="$(MSBuildThisFileDirectory)demos\iframes\internal\internal.js" />
     <Content Include="$(MSBuildThisFileDirectory)demos\input\clickpoint\clickpoint.css" />
     <Content Include="$(MSBuildThisFileDirectory)demos\input\clickpoint\clickpoint.html" />
     <Content Include="$(MSBuildThisFileDirectory)demos\input\clickpoint\clickpoint.js" />
@@ -306,7 +293,6 @@
     <Content Include="$(MSBuildThisFileDirectory)demos\itemcontainer\itemcontainer.json" />
     <Content Include="$(MSBuildThisFileDirectory)demos\itemcontainer\simple\simple.css" />
     <Content Include="$(MSBuildThisFileDirectory)demos\itemcontainer\simple\simple.html" />
-    <Content Include="$(MSBuildThisFileDirectory)demos\itemcontainer\simple\simple.js" />
     <Content Include="$(MSBuildThisFileDirectory)demos\jsonFcts\jsonFcts.html" />
     <Content Include="$(MSBuildThisFileDirectory)demos\jsonFcts\jsonFcts.js" />
     <Content Include="$(MSBuildThisFileDirectory)demos\jsonFcts\jsonFcts.json" />
@@ -381,7 +367,6 @@
     <Content Include="$(MSBuildThisFileDirectory)demos\navbar\navbar.json" />
     <Content Include="$(MSBuildThisFileDirectory)demos\navbar\simple\simple.css" />
     <Content Include="$(MSBuildThisFileDirectory)demos\navbar\simple\simple.html" />
-    <Content Include="$(MSBuildThisFileDirectory)demos\navbar\simple\simple.js" />
     <Content Include="$(MSBuildThisFileDirectory)demos\notifications\badgeupdate\badgeupdate.css" />
     <Content Include="$(MSBuildThisFileDirectory)demos\notifications\badgeupdate\badgeupdate.html" />
     <Content Include="$(MSBuildThisFileDirectory)demos\notifications\badgeupdate\badgeupdate.js" />
@@ -416,7 +401,6 @@
     <Content Include="$(MSBuildThisFileDirectory)demos\peopleAndEvents\peopleAndEvents.json" />
     <Content Include="$(MSBuildThisFileDirectory)demos\playerframework\playerframework.css" />
     <Content Include="$(MSBuildThisFileDirectory)demos\playerframework\playerframework.html" />
-    <Content Include="$(MSBuildThisFileDirectory)demos\playerframework\playerframework.js" />
     <Content Include="$(MSBuildThisFileDirectory)demos\playerframework\playerframework.json" />
     <Content Include="$(MSBuildThisFileDirectory)demos\playto\playto.css" />
     <Content Include="$(MSBuildThisFileDirectory)demos\playto\playto.html" />
@@ -441,7 +425,6 @@
     <Content Include="$(MSBuildThisFileDirectory)demos\progressbar\determinate\determinate.js" />
     <Content Include="$(MSBuildThisFileDirectory)demos\progressbar\indeterminate\indeterminate.css" />
     <Content Include="$(MSBuildThisFileDirectory)demos\progressbar\indeterminate\indeterminate.html" />
-    <Content Include="$(MSBuildThisFileDirectory)demos\progressbar\indeterminate\indeterminate.js" />
     <Content Include="$(MSBuildThisFileDirectory)demos\progressbar\progressbar.json" />
     <Content Include="$(MSBuildThisFileDirectory)demos\promises\chaining\chaining.css" />
     <Content Include="$(MSBuildThisFileDirectory)demos\promises\chaining\chaining.html" />
@@ -460,10 +443,8 @@
     <Content Include="$(MSBuildThisFileDirectory)demos\rating\rating.json" />
     <Content Include="$(MSBuildThisFileDirectory)demos\rating\simple\simple.css" />
     <Content Include="$(MSBuildThisFileDirectory)demos\rating\simple\simple.html" />
-    <Content Include="$(MSBuildThisFileDirectory)demos\rating\simple\simple.js" />
     <Content Include="$(MSBuildThisFileDirectory)demos\reactive\minimum\minimum.css" />
     <Content Include="$(MSBuildThisFileDirectory)demos\reactive\minimum\minimum.html" />
-    <Content Include="$(MSBuildThisFileDirectory)demos\reactive\minimum\minimum.js" />
     <Content Include="$(MSBuildThisFileDirectory)demos\reactive\reactive.json" />
     <Content Include="$(MSBuildThisFileDirectory)demos\repeater\repeater.json" />
     <Content Include="$(MSBuildThisFileDirectory)demos\repeater\simple\simple.css" />
@@ -471,11 +452,9 @@
     <Content Include="$(MSBuildThisFileDirectory)demos\repeater\simple\simple.js" />
     <Content Include="$(MSBuildThisFileDirectory)demos\rowspans\rowspans.css" />
     <Content Include="$(MSBuildThisFileDirectory)demos\rowspans\rowspans.html" />
-    <Content Include="$(MSBuildThisFileDirectory)demos\rowspans\rowspans.js" />
     <Content Include="$(MSBuildThisFileDirectory)demos\rowspans\rowspans.json" />
     <Content Include="$(MSBuildThisFileDirectory)demos\scaling\basic\basic.css" />
     <Content Include="$(MSBuildThisFileDirectory)demos\scaling\basic\basic.html" />
-    <Content Include="$(MSBuildThisFileDirectory)demos\scaling\basic\basic.js" />
     <Content Include="$(MSBuildThisFileDirectory)demos\scaling\basic\ketch.scale-100.png" />
     <Content Include="$(MSBuildThisFileDirectory)demos\scaling\basic\ketch.scale-140.png" />
     <Content Include="$(MSBuildThisFileDirectory)demos\scaling\basic\ketch.scale-180.png" />
@@ -483,7 +462,6 @@
     <Content Include="$(MSBuildThisFileDirectory)demos\scaling\basic\ketch_small.png" />
     <Content Include="$(MSBuildThisFileDirectory)demos\scaling\plateau\plateau.css" />
     <Content Include="$(MSBuildThisFileDirectory)demos\scaling\plateau\plateau.html" />
-    <Content Include="$(MSBuildThisFileDirectory)demos\scaling\plateau\plateau.js" />
     <Content Include="$(MSBuildThisFileDirectory)demos\scaling\plateau\plateau.scale-100.png" />
     <Content Include="$(MSBuildThisFileDirectory)demos\scaling\plateau\plateau.scale-140.png" />
     <Content Include="$(MSBuildThisFileDirectory)demos\scaling\plateau\plateau.scale-180.png" />
@@ -527,10 +505,9 @@
     <Content Include="$(MSBuildThisFileDirectory)demos\simplebinding\simplebinding.html" />
     <Content Include="$(MSBuildThisFileDirectory)demos\simplebinding\simplebinding.js" />
     <Content Include="$(MSBuildThisFileDirectory)demos\simplebinding\simplebinding.json" />
-    <Content Include="$(MSBuildThisFileDirectory)demos\simple\simple.css" />
-    <Content Include="$(MSBuildThisFileDirectory)demos\simple\simple.html" />
-    <Content Include="$(MSBuildThisFileDirectory)demos\simple\simple.js" />
-    <Content Include="$(MSBuildThisFileDirectory)demos\simple\simple.json" />
+    <Content Include="$(MSBuildThisFileDirectory)demos\simplegrid\simplegrid.css" />
+    <Content Include="$(MSBuildThisFileDirectory)demos\simplegrid\simplegrid.html" />
+    <Content Include="$(MSBuildThisFileDirectory)demos\simplegrid\simplegrid.json" />
     <Content Include="$(MSBuildThisFileDirectory)demos\slidingdiv\slidingdiv.css" />
     <Content Include="$(MSBuildThisFileDirectory)demos\slidingdiv\slidingdiv.html" />
     <Content Include="$(MSBuildThisFileDirectory)demos\slidingdiv\slidingdiv.js" />
@@ -570,7 +547,6 @@
     <Content Include="$(MSBuildThisFileDirectory)demos\storage\wams\wams.js" />
     <Content Include="$(MSBuildThisFileDirectory)demos\swipeSections\swipeSections.css" />
     <Content Include="$(MSBuildThisFileDirectory)demos\swipeSections\swipeSections.html" />
-    <Content Include="$(MSBuildThisFileDirectory)demos\swipeSections\swipeSections.js" />
     <Content Include="$(MSBuildThisFileDirectory)demos\swipeSections\swipeSections.json" />
     <Content Include="$(MSBuildThisFileDirectory)demos\templatebinding\templatebinding.html" />
     <Content Include="$(MSBuildThisFileDirectory)demos\templatebinding\templatebinding.js" />
@@ -581,18 +557,15 @@
     <Content Include="$(MSBuildThisFileDirectory)demos\templateItems\templateItems.json" />
     <Content Include="$(MSBuildThisFileDirectory)demos\textprops\font\font.css" />
     <Content Include="$(MSBuildThisFileDirectory)demos\textprops\font\font.html" />
-    <Content Include="$(MSBuildThisFileDirectory)demos\textprops\font\font.js" />
     <Content Include="$(MSBuildThisFileDirectory)demos\textprops\textprops.json" />
     <Content Include="$(MSBuildThisFileDirectory)demos\textprops\text\text.css" />
     <Content Include="$(MSBuildThisFileDirectory)demos\textprops\text\text.html" />
-    <Content Include="$(MSBuildThisFileDirectory)demos\textprops\text\text.js" />
     <Content Include="$(MSBuildThisFileDirectory)demos\timeflies\timeflies.css" />
     <Content Include="$(MSBuildThisFileDirectory)demos\timeflies\timeflies.html" />
     <Content Include="$(MSBuildThisFileDirectory)demos\timeflies\timeflies.js" />
     <Content Include="$(MSBuildThisFileDirectory)demos\timeflies\timeflies.json" />
     <Content Include="$(MSBuildThisFileDirectory)demos\transforms\transforms.css" />
     <Content Include="$(MSBuildThisFileDirectory)demos\transforms\transforms.html" />
-    <Content Include="$(MSBuildThisFileDirectory)demos\transforms\transforms.js" />
     <Content Include="$(MSBuildThisFileDirectory)demos\transforms\transforms.json" />
     <Content Include="$(MSBuildThisFileDirectory)demos\transitions\transitions.css" />
     <Content Include="$(MSBuildThisFileDirectory)demos\transitions\transitions.html" />
@@ -600,7 +573,6 @@
     <Content Include="$(MSBuildThisFileDirectory)demos\transitions\transitions.json" />
     <Content Include="$(MSBuildThisFileDirectory)demos\viewbox\viewbox.css" />
     <Content Include="$(MSBuildThisFileDirectory)demos\viewbox\viewbox.html" />
-    <Content Include="$(MSBuildThisFileDirectory)demos\viewbox\viewbox.js" />
     <Content Include="$(MSBuildThisFileDirectory)demos\viewbox\viewbox.json" />
     <Content Include="$(MSBuildThisFileDirectory)demos\viewstates\viewstates.css" />
     <Content Include="$(MSBuildThisFileDirectory)demos\viewstates\viewstates.html" />
@@ -623,7 +595,6 @@
     <Content Include="$(MSBuildThisFileDirectory)demos\webservices\webservices.json" />
     <Content Include="$(MSBuildThisFileDirectory)demos\webview\simple\simple.css" />
     <Content Include="$(MSBuildThisFileDirectory)demos\webview\simple\simple.html" />
-    <Content Include="$(MSBuildThisFileDirectory)demos\webview\simple\simple.js" />
     <Content Include="$(MSBuildThisFileDirectory)demos\webview\tostring\tostring.css" />
     <Content Include="$(MSBuildThisFileDirectory)demos\webview\tostring\tostring.html" />
     <Content Include="$(MSBuildThisFileDirectory)demos\webview\tostring\tostring.js" />
@@ -642,7 +613,6 @@
     <Content Include="$(MSBuildThisFileDirectory)demos\zoom\oceanrocks.jpg" />
     <Content Include="$(MSBuildThisFileDirectory)demos\zoom\zoom.css" />
     <Content Include="$(MSBuildThisFileDirectory)demos\zoom\zoom.html" />
-    <Content Include="$(MSBuildThisFileDirectory)demos\zoom\zoom.js" />
     <Content Include="$(MSBuildThisFileDirectory)demos\zoom\zoom.json" />
     <Content Include="$(MSBuildThisFileDirectory)js\analytics.js" />
     <Content Include="$(MSBuildThisFileDirectory)js\converters.js" />

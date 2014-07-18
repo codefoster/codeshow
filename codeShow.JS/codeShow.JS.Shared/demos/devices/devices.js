@@ -26,4 +26,16 @@
             });
         }
     });
+
+    //allow us to reduce a list by making it distinct on a certain key
+    Array.prototype.distinct = function (keyFct) {
+        var result = [];
+        if (!keyFct) keyFct = function (d) { return d; };
+        for (var i = 1; i < this.length; i++) {
+            var that = this;
+            if (!result.some(function (item) { return keyFct(item) === keyFct(that[i]); }))
+                result.push(that[i]);
+        }
+        return result;
+    }
 })();

@@ -4,6 +4,5 @@
 	"keywords":["grid","layout","css"],
 	"description": "An extremely basic CSS grid",
 	"author": "Jeremy Foster",
-    "dateCreated": "2012/10/01",
-    "enabled": true
+    "dateCreated": "2012/10/01"
 }

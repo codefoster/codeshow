@@ -1,13 +1,8 @@
 ﻿{
-	"title": "Box Properties",
-	"keywords":["box","properties","css","css3"],
-	"description": "The basic box properties (margin, padding, border).",
-	"author": "Jeremy Foster",
-	"dateCreated": "2012/10/01",
-	"sections":[
-		{"name":"border"},
-		{"name":"margin"},
-		{"name":"padding"},
-		{"name":"overflow"}
-	]
+    "title": "CSS Padding",
+    "group": "Box Properties",
+    "keywords": [ "box", "properties", "css", "css3" ],
+    "description": "Padding is the space between the border of a container and its content",
+    "author": "Jeremy Foster",
+    "dateCreated": "2012/10/01"
 }
