@@ -1,7 +1,7 @@
 ﻿(function () {
     "use strict";
 
-    WinJS.UI.Pages.define("/demos/mediacap/still/still.html", {
+    WinJS.UI.Pages.define("/demos/still/still.html", {
         ready: function (element, options) {
             var btn = element.querySelector("#captureButton");
             btn.onclick = function () {

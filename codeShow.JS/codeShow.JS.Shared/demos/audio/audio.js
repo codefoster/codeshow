@@ -1,7 +1,7 @@
 ﻿(function () {
     "use strict";
 
-    WinJS.UI.Pages.define("/demos/mediacap/audio/audio.html", {
+    WinJS.UI.Pages.define("/demos/audio/audio.html", {
         ready: function (element, options) {
             //TODO: consider https://github.com/katspaugh/wavesurfer.js for visualizing waveform?
             var recording = false;

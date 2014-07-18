@@ -1,7 +1,7 @@
 ﻿(function () {
     "use strict";
 
-    WinJS.UI.Pages.define("/demos/mediacap/video/video.html", {
+    WinJS.UI.Pages.define("/demos/video/video.html", {
         ready: function (element, options) {
             element.querySelector("#captureButton").onclick = function () {
                 var dialog = new Windows.Media.Capture.CameraCaptureUI();
