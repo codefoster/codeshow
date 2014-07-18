@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.30626.0
+VisualStudioVersion = 12.0.30501.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "codeShow.JS", "codeShow.JS", "{2174C796-8304-4B56-AB70-202930CFB511}"
 EndProject
@@ -214,8 +214,5 @@ Global
 		{BB5E1A55-EBC6-468B-96E3-EA5CFE7D5FDF} = {FD54CFCF-2367-46D8-8A41-3405FBA8D3C1}
 		{FE87F379-CA46-4184-B4E3-A3676F2A2BB0} = {FD54CFCF-2367-46D8-8A41-3405FBA8D3C1}
 		{4AF57A2D-5795-458B-86BB-09C1B9EE96DE} = {FD54CFCF-2367-46D8-8A41-3405FBA8D3C1}
-	EndGlobalSection
-	GlobalSection(Performance) = preSolution
-		HasPerformanceSessions = true
 	EndGlobalSection
 EndGlobal

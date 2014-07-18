@@ -1,7 +1,7 @@
 ﻿(function () {
     "use strict";
 
-    WinJS.UI.Pages.define("/demos/angry/angry.html", {
+    WinJS.UI.Pages.define("/demos/keyframeanimation/keyframeanimation.html", {
         ready: function (element, options) {
             // TODO: Initialize the page here.
             boxAngry.addEventListener("animationstart", function (arg) {

@@ -1,9 +1,9 @@
-﻿.angry .pagetitle {
+﻿.keyframeanimation .pagetitle {
     position: relative;
     animation: drop-in 1s forwards;
 }
 
-.angry .box {
+.keyframeanimation .box {
     position: relative;
     text-align: center;
     vertical-align: middle;
@@ -15,7 +15,7 @@
     border: solid 2px blue;
 }
 
-.angry .animate-get-angry {
+.keyframeanimation .animate-get-angry {
     animation: get-angry 5s forwards;
 }
 
