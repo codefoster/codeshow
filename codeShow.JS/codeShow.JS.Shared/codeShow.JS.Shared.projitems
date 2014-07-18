@@ -34,6 +34,9 @@
     <Content Include="$(MSBuildThisFileDirectory)demos\flexxing\flexxing.css" />
     <Content Include="$(MSBuildThisFileDirectory)demos\flexxing\flexxing.html" />
     <Content Include="$(MSBuildThisFileDirectory)demos\flexxing\flexxing.json" />
+    <Content Include="$(MSBuildThisFileDirectory)demos\flyouts\flyouts.html" />
+    <Content Include="$(MSBuildThisFileDirectory)demos\flyouts\flyouts.js" />
+    <Content Include="$(MSBuildThisFileDirectory)demos\flyouts\flyouts.json" />
     <Content Include="$(MSBuildThisFileDirectory)demos\keyframeAnimation\keyframeAnimation.css" />
     <Content Include="$(MSBuildThisFileDirectory)demos\keyframeAnimation\keyframeAnimation.html" />
     <Content Include="$(MSBuildThisFileDirectory)demos\keyframeAnimation\keyframeAnimation.js" />
@@ -230,12 +233,6 @@
     <Content Include="$(MSBuildThisFileDirectory)demos\flotr\simple\lib\prototype.js" />
     <Content Include="$(MSBuildThisFileDirectory)demos\flotr\simple\simple.html" />
     <Content Include="$(MSBuildThisFileDirectory)demos\flotr\simple\simple.js" />
-    <Content Include="$(MSBuildThisFileDirectory)demos\flyouts\flyouts.json" />
-    <Content Include="$(MSBuildThisFileDirectory)demos\flyouts\flyouts\flyouts.html" />
-    <Content Include="$(MSBuildThisFileDirectory)demos\flyouts\flyouts\flyouts.js" />
-    <Content Include="$(MSBuildThisFileDirectory)demos\flyouts\menus\menus.css" />
-    <Content Include="$(MSBuildThisFileDirectory)demos\flyouts\menus\menus.html" />
-    <Content Include="$(MSBuildThisFileDirectory)demos\flyouts\menus\menus.js" />
     <Content Include="$(MSBuildThisFileDirectory)demos\forcedirected\d3.js" />
     <Content Include="$(MSBuildThisFileDirectory)demos\forcedirected\forcedirected.css" />
     <Content Include="$(MSBuildThisFileDirectory)demos\forcedirected\forcedirected.html" />
@@ -351,6 +348,10 @@
     <Content Include="$(MSBuildThisFileDirectory)demos\mediaqueries\mediaqueries.html" />
     <Content Include="$(MSBuildThisFileDirectory)demos\mediaqueries\mediaqueries.js" />
     <Content Include="$(MSBuildThisFileDirectory)demos\mediaqueries\mediaqueries.json" />
+    <Content Include="$(MSBuildThisFileDirectory)demos\menus\menus.css" />
+    <Content Include="$(MSBuildThisFileDirectory)demos\menus\menus.html" />
+    <Content Include="$(MSBuildThisFileDirectory)demos\menus\menus.js" />
+    <Content Include="$(MSBuildThisFileDirectory)demos\menus\menus.json" />
     <Content Include="$(MSBuildThisFileDirectory)demos\mscssmatrix\mscssmatrix.css" />
     <Content Include="$(MSBuildThisFileDirectory)demos\mscssmatrix\mscssmatrix.html" />
     <Content Include="$(MSBuildThisFileDirectory)demos\mscssmatrix\mscssmatrix.js" />

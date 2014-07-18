@@ -1,7 +1,7 @@
 ﻿(function () {
     "use strict";
 
-    WinJS.UI.Pages.define("/demos/flyouts/menus/menus.html", {
+    WinJS.UI.Pages.define("/demos/menus/menus.html", {
         ready: function (element, options) {
             element.querySelector(".sampleMenu").onclick = showHeaderMenu;
         }

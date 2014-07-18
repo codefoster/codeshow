@@ -1,11 +1,7 @@
 {
-    "title": "Flyouts and Menus",
+    "title": "Flyouts",
     "keywords":["flyout","flyouts","dialog","menu","menus"],
-    "description": "Create transient, easily dismissable dialogs and menus for information or user input",
+    "description": "Create transient, easily dismissable dialogs for information or user input",
     "author": "Jeremy Foster",
-    "dateCreated": "",
-	"sections":[
-		{"name":"flyouts"},
-		{"name":"menus"}
-	]
+    "dateCreated": "2013/1/1"
 }
