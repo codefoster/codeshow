@@ -106,7 +106,6 @@
     <Content Include="packages.config" />
     <Content Include="pages\about\about.css" />
     <Content Include="pages\about\about.html" />
-    <Content Include="pages\about\about.js" />
     <Content Include="pages\apps\apps.css" />
     <Content Include="pages\apps\apps.html" />
     <Content Include="pages\apps\apps.js" />
@@ -116,9 +115,6 @@
     <Content Include="pages\hub\demosListControl.html" />
     <Content Include="pages\hub\hub.css" />
     <Content Include="pages\hub\hub.html" />
-    <Content Include="pages\privacy\privacy.css" />
-    <Content Include="pages\privacy\privacy.html" />
-    <Content Include="pages\privacy\privacy.js" />
     <Content Include="default.html" />
     <None Include="codeSHOW.Win81JS_TemporaryKey.pfx" />
   </ItemGroup>

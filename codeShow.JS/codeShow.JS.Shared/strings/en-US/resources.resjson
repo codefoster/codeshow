@@ -1,8 +1,7 @@
 ﻿{
     "DemosSectionHeader": "Demos",
     "ContributorsSectionHeader": "Contributors",
-    "DemoSectionHeader": "demo",
-    "CodeSectionHeader": "code",
+    "DemoSectionHeader": "live demo",
 
     "SourceCode": "Source code",
     "SourceCodeSectionSubtext": "The complete source code for this application is available online",

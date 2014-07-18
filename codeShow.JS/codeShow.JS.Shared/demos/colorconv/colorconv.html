@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Color Converter</title>
+
+    <link href="colorconv.css" rel="stylesheet" />
+    <script src="colorconv.js"></script>
+</head>
+<body>
+    <div class="colorconv fragment">
+        <section class="page-section" aria-label="Main content" role="main">
+            <div class="explanation">Convert a color value from its component bytes to hex or vice versa.</div>
+            <div>
+                R: <input type="text" class="smallbox" id="redcolor" />
+                G: <input type="text" class="smallbox" id="greencolor" />
+                B: <input type="text" class="smallbox" id="bluecolor" />
+                <br />
+                Hex: <input type="text" placeholder="RRGGBB without #" id="hexcolor" />
+            </div>
+            <div style="width:75px;height:75px;background:black;" id="outputcolor"></div>
+        </section>
+    </div>
+</body>
+</html>

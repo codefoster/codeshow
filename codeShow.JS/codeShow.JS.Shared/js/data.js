@@ -168,44 +168,6 @@
 
     }
 
-    //function loadDemos() {
-    //    var start = new Date().getTime();
-    //    return pkg.installedLocation.getFolderAsync("demos")
-    //        .then(function (demosFolder) { return demosFolder.getFoldersAsync(); })
-    //        .then(function (demoFolders) {
-    //            demoFolders.forEach(function (demoFolder) {
-    //                //initialize and set defaults
-    //                var demo = { name: demoFolder.displayName, enabled: true, suppressAppBar: false, sections: [] };
-
-    //                //TODO: change this to look first at the json file and then look at files via direct file IO calls and don't do any xhr calls
-    //                WinJS.xhr({ url: Ocho.Utilities.format("/demos/{0}/{0}.html", demo.name), responseType: "document" })
-
-    //                    //get the title from the html file
-    //                    //(for demos without section folders, this will intentionally and silently fail)
-    //                    .then(function (result) { demo.title = result.response.querySelector("title").innerText; }, function (err) { /* GULP */ })
-
-    //                    //get the metadata (from the json file) (overriding title if included)
-    //                    .then(function () { return getMetadataAsync(demo, demoFolder); }, function (err) { debugger; })
-    //                    .then(function (result) {
-    //                        if (result.jsonFileExists && demo.enabled) {
-    //                            demo.sections.forEach(function (section) {
-    //                                //get the section title and add the section to the demo
-    //                                WinJS.xhr({ url: Ocho.Utilities.format("/demos/{0}/{1}/{1}.html", demo.name, section.name), responseType: "document" })
-    //                                    .then(function (result) {
-    //                                        section.title = result.response.querySelector("title").innerText;
-    //                                    }, function (err) { })
-    //                            });
-    //                            Data.demos.push(demo);
-    //                        }
-    //                    });
-    //            });
-    //        })
-    //        .then(function () {
-    //            var now = new Date().getTime();
-    //            console.info("Demos loaded in " + ((now - start) / 1000) + " seconds");
-    //        });
-    //}
-
     //populate demos (from the package)
     function loadDemos() {
         var start = new Date().getTime();
@@ -241,7 +203,9 @@
                 }));
             })
             .then(function () {
-                Data.demos.notifyReload();
+                ////required if we use the hacky approach to picking 10 demos for the front page
+                //Data.demos.notifyReload();
+
                 var now = new Date().getTime();
                 console.info("Demos loaded in " + ((now - start) / 1000) + " seconds");
             });

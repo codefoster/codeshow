@@ -1,0 +1,8 @@
+{
+    "title": "Force Directed Graph",
+    "group": "D3",
+    "keywords": [ "data", "driven", "documents", "d3","force","directed","graph", "visualization" ],
+    "description": "Generate an impressive force directed graph very easily with the D3 JavaScript library",
+    "author": "Jeremy Foster",
+    "dateCreated": "2013/08/01"
+}

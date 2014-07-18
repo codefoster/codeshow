@@ -1,0 +1,8 @@
+﻿{
+    "title": "Binding a Template",
+    "group": "Binding and Templating",
+    "keywords": [ "bind", "binding", "template", "templating", "templates" ],
+    "description": "Bind data to a template using WinJS",
+    "author": "Jeremy Foster",
+    "dateCreated": "2012/10/01"
+}

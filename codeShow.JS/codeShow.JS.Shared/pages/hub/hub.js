@@ -22,19 +22,21 @@
             }
 
             //condition the demos list for platform particulars
-            if (!WinJS.Utilities.isPhone) {
-                this.demosList = new WinJS.Binding.List();
-                var that = this;
-                Data.demos.onreload = function () {
-                    that.demosList.length = 0;
-                    Data.demos
-                    .slice(0, 10).forEach(function (item) {
-                        that.demosList.push(item);
-                    });
-                };
+            if (WinJS.Utilities.isPhone) {
+                this.demosList = this.demosList.createGrouped(function (d) { return d.group; }, function (d) { return { group: d.group }; });
             }
             else {
-                this.demosList = this.demosList.createGrouped(function (d) { return d.group; }, function (d) { return { group: d.group }; });
+                ////limit the front page demos to 10 (hacky)
+                //this.demosList = new WinJS.Binding.List();
+                //var that = this;
+                //Data.demos.onreload = function () {
+                //    that.demosList.length = 0;
+                //    Data.demos
+                //        .slice(0, 10).forEach(function (item) {
+                //            that.demosList.push(item);
+                //        });
+                //    that.hubDataLoaded = true;
+                //};
             }
         },
 

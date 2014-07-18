@@ -1,25 +1,8 @@
-﻿.contributorscontrol {
-    padding-left: 30px;
-    padding-right: 30px;
-}
-
-    .contributorscontrol .win-hub-section-header {
-        margin-left: 10px;
-        margin-right: 10px;
+﻿    .contributorscontrol .itemslist {
     }
-
-    .contributorscontrol .itemslist {
-        height: 100%;
-        margin-top: -10px;
-    }
-
-        .contributorscontrol .itemslist .win-viewport {
-            overflow-y: hidden;
-        }
 
         .contributorscontrol .itemslist .win-container {
-            margin: 3px;
-            margin-bottom: 16px;
+            margin:5px;
         }
         
         .contributorscontrol .itemslist .win-itembox {
@@ -32,7 +15,6 @@
         display: -ms-grid;
         height: 110px;
         width: 420px;
-        padding: 7px;
     }
 
         .contributorscontrol .win-item img {

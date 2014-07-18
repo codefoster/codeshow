@@ -132,8 +132,7 @@ var pkg = Windows.ApplicationModel.Package.current;
     function addSettingsContract() {
         app.onsettings = function (e) {
             e.detail.applicationcommands = {
-                 aboutDiv: { title: "About", href: "/pages/about/about.html" },
-                 privacyDiv: { title: "Privacy Policy", href: "/pages/privacy/privacy.html" }
+                aboutDiv: { title: "About", href: "/pages/about/about.html" },
             };
     
             WinJS.UI.SettingsFlyout.populateSettings(e);

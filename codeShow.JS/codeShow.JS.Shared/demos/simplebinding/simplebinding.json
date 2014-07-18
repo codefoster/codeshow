@@ -1,0 +1,8 @@
+﻿{
+    "title": "Simple Binding",
+    "group": "Binding and Templating",
+    "keywords": [ "bind", "binding", "template", "templating", "templates" ],
+    "description": "The binding system in WinJS at its simplest",
+    "author": "Jeremy Foster",
+    "dateCreated": "2012/10/01"
+}

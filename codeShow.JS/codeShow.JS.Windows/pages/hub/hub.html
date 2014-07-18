@@ -39,10 +39,10 @@
                 </div>
 			
                 <div class="section contributors" data-win-control="WinJS.UI.HubSection" data-win-options="{ isHeaderStatic: true }" data-win-res="{ winControl: {'header': 'ContributorsSectionHeader'} }">
-                    <div class="contributorscontenthost sectioncontrol" id="contributorscontenthost" data-win-control="Controls.ContributorsControl"
+                    <div class="contributorscontenthost" id="contributorscontenthost" data-win-control="Controls.ContributorsControl"
                          data-win-options="{
                              dataSource: select('.pagecontrol').winControl.contributorsList,
-                             layout: {type: WinJS.UI.ListLayout},
+                             layout: {type: WinJS.UI.GridLayout},
                              oniteminvoked: select('.pagecontrol').winControl.contributorItemInvoke
                          }"></div>
                 </div>

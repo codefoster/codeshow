@@ -1,0 +1,8 @@
+﻿{
+    "title": "Binding Converters",
+    "group": "Binding and Templating",
+	"keywords":["bind","binding","template","templating","templates","converter","converters"],
+	"description": "Bind data to your HTML or create explicit data templates to populate with binding.",
+	"author": "Jeremy Foster",
+	"dateCreated": "2012/10/01"
+}

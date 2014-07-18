@@ -1,0 +1,19 @@
+﻿.boxoverflow .flex {
+    display: -ms-flexbox;
+}
+
+.boxoverflow .flex > div {
+    width:300px;
+    height:250px;
+    padding:10px;
+    margin:0 10px;
+    border:1px solid gray;
+}
+
+.boxoverflow #hidden {
+    overflow-y: hidden;
+}
+
+.boxoverflow #scroll {
+    overflow-y: scroll;
+}
