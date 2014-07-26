@@ -1,0 +1,361 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+  </PropertyGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="$(MSBuildThisFileDirectory)App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="$(MSBuildThisFileDirectory)AnimationStoryboardDemo.xaml.cs">
+      <DependentUpon>AnimationStoryboardDemo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)AsyncDemo.xaml.cs">
+      <DependentUpon>AsyncDemo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)BindingBindingDemo.xaml.cs">
+      <DependentUpon>BindingBindingDemo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)BindingConverterDemo.xaml.cs">
+      <DependentUpon>BindingConverterDemo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)ClassBindingDemo.xaml.cs">
+      <DependentUpon>ClassBindingDemo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)CodeShowControl.xaml.cs">
+      <DependentUpon>CodeShowControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)CreateSecondaryTileDemo.xaml.cs">
+      <DependentUpon>CreateSecondaryTileDemo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)EnableBackgroundTaskDemo.xaml.cs">
+      <DependentUpon>EnableBackgroundTaskDemo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)GroupedItemsDemo.xaml.cs">
+      <DependentUpon>GroupedItemsDemo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)MapLocationDemo.xaml.cs">
+      <DependentUpon>MapLocationDemo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)NotificationDemo.xaml.cs">
+      <DependentUpon>NotificationDemo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)SearchDemo.xaml.cs">
+      <DependentUpon>SearchDemo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)ShareWindowsDemo.xaml.cs">
+      <DependentUpon>ShareWindowsDemo.xaml</DependentUpon>
+    </Compile>
+    <Content Include="$(MSBuildThisFileDirectory)SourceCodeAsContent\StaticBindingDemo.xaml.cs">
+      <DependentUpon>StaticBindingDemo.xaml</DependentUpon>
+    </Content>
+    <Compile Include="$(MSBuildThisFileDirectory)StaticBindingDemo.xaml.cs">
+      <DependentUpon>StaticBindingDemo.xaml</DependentUpon>
+    </Compile>
+    <Content Include="$(MSBuildThisFileDirectory)SourceCodeAsContent\AnimationStoryboardDemo.xaml.cs">
+      <DependentUpon>AnimationStoryboardDemo.xaml</DependentUpon>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)SourceCodeAsContent\BindingBindingDemo.xaml.cs">
+      <DependentUpon>BindingBindingDemo.xaml</DependentUpon>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)SourceCodeAsContent\BindingConverterDemo.xaml.cs">
+      <DependentUpon>BindingConverterDemo.xaml</DependentUpon>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)SourceCodeAsContent\ClassBindingDemo.xaml.cs">
+      <DependentUpon>ClassBindingDemo.xaml</DependentUpon>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)SourceCodeAsContent\CodeShowSettingsFlyout.xaml.cs">
+      <DependentUpon>CodeShowSettingsFlyout.xaml</DependentUpon>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)SourceCodeAsContent\DisplayOrientationDemo.xaml.cs">
+      <DependentUpon>DisplayOrientationDemo.xaml</DependentUpon>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)SourceCodeAsContent\EnableBackgroundTaskDemo.xaml.cs">
+      <DependentUpon>EnableBackgroundTaskDemo.xaml</DependentUpon>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)SourceCodeAsContent\GroupedItemsDemo.xaml.cs">
+      <DependentUpon>GroupedItemsDemo.xaml</DependentUpon>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)SourceCodeAsContent\app.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)SourceCodeAsContent\AsyncDemo.xaml.cs">
+      <DependentUpon>AsyncDemo.xaml</DependentUpon>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)SourceCodeAsContent\CodeShowPageWindows.Xaml.cs" />
+    <Content Include="$(MSBuildThisFileDirectory)SourceCodeAsContent\CreateSecondaryTileDemo.xaml.cs">
+      <DependentUpon>CreateSecondaryTileDemo.xaml</DependentUpon>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)SourceCodeAsContent\GridLayoutDemo.xaml.cs">
+      <DependentUpon>GridLayoutDemo.xaml</DependentUpon>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)SourceCodeAsContent\ItemsControlDemo.xaml.cs">
+      <DependentUpon>ItemsControlDemo.xaml</DependentUpon>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)SourceCodeAsContent\MapLocationDemo.xaml.cs">
+      <DependentUpon>MapLocationDemo.xaml</DependentUpon>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)SourceCodeAsContent\NotificationDemo.xaml.cs">
+      <DependentUpon>NotificationDemo.xaml</DependentUpon>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)SourceCodeAsContent\PropertyBindingDemo.xaml.cs">
+      <DependentUpon>PropertyBindingDemo.xaml</DependentUpon>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)SourceCodeAsContent\ScalingTextDemo.xaml.cs">
+      <DependentUpon>ScalingTextDemo.xaml</DependentUpon>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)SourceCodeAsContent\SearchDemo.xaml.cs">
+      <DependentUpon>SearchDemo.xaml</DependentUpon>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)SourceCodeAsContent\SettingsFlyoutDemo.xaml.cs">
+      <DependentUpon>SettingsFlyoutDemo.xaml</DependentUpon>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)SourceCodeAsContent\ShareWindowsDemo.xaml.cs">
+      <DependentUpon>ShareWindowsDemo.xaml</DependentUpon>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)SourceCodeAsContent\StaticResourceDemo.xaml.cs">
+      <DependentUpon>StaticResourceDemo.xaml</DependentUpon>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)SourceCodeAsContent\TaskDemo.cs" />
+    <Content Include="$(MSBuildThisFileDirectory)SourceCodeAsContent\TextDemo.xaml.cs">
+      <DependentUpon>TextDemo.xaml</DependentUpon>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)SourceCodeAsContent\ToastDemo.xaml.cs">
+      <DependentUpon>ToastDemo.xaml</DependentUpon>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)SourceCodeAsContent\ViewBoxDemo.xaml.cs">
+      <DependentUpon>ViewBoxDemo.xaml</DependentUpon>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)SourceCodeAsContent\WebViewControlSizingDemo.xaml.cs">
+      <DependentUpon>WebViewControlSizingDemo.xaml</DependentUpon>
+    </Content>
+    <Compile Include="$(MSBuildThisFileDirectory)WebViewControlSizingDemo.xaml.cs">
+      <DependentUpon>WebViewControlSizingDemo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)SyntaxHighlighter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewBoxDemo.xaml.cs">
+      <DependentUpon>ViewBoxDemo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)ToastDemo.xaml.cs">
+      <DependentUpon>ToastDemo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)PropertyBindingDemo.xaml.cs">
+      <DependentUpon>PropertyBindingDemo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)ItemsControlDemo.xaml.cs">
+      <DependentUpon>ItemsControlDemo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)StaticResourceDemo.xaml.cs">
+      <DependentUpon>StaticResourceDemo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)ScalingTextDemo.xaml.cs">
+      <DependentUpon>ScalingTextDemo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)TextDemo.xaml.cs">
+      <DependentUpon>TextDemo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)DemoItemsData.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DisplayOrientationDemo.xaml.cs">
+      <DependentUpon>DisplayOrientationDemo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)GridLayoutDemo.xaml.cs">
+      <DependentUpon>GridLayoutDemo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)ItemDetailPageShared.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ItemDetailGridControl.xaml.cs">
+      <DependentUpon>ItemDetailGridControl.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="$(MSBuildThisFileDirectory)AnimationStoryboardDemo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)AsyncDemo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)BindingBindingDemo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)BindingConverterDemo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)ClassBindingDemo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)CodeShowControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)CreateSecondaryTileDemo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)DisplayOrientationDemo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)EnableBackgroundTaskDemo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)GroupedItemsDemo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)ItemsControlDemo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)GridLayoutDemo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)ItemDetailGridControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)MapLocationDemo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)NotificationDemo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)PropertyBindingDemo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)ScalingTextDemo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)SearchDemo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)ShareWindowsDemo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Content Include="$(MSBuildThisFileDirectory)SourceCodeAsContent\AnimationStoryboardDemo.xaml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)SourceCodeAsContent\AsyncDemo.xaml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)SourceCodeAsContent\CreateSecondaryTileDemo.xaml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)SourceCodeAsContent\GridLayoutDemo.xaml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)SourceCodeAsContent\ItemsControlDemo.xaml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)SourceCodeAsContent\MapLocationDemo.xaml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)SourceCodeAsContent\NotificationDemo.xaml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)SourceCodeAsContent\PropertyBindingDemo.xaml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)SourceCodeAsContent\ScalingTextDemo.xaml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)SourceCodeAsContent\SearchDemo.xaml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)SourceCodeAsContent\SettingsFlyoutDemo.xaml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)SourceCodeAsContent\ShareWindowsDemo.xaml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)SourceCodeAsContent\StaticResourceDemo.xaml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)SourceCodeAsContent\TextDemo.xaml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)SourceCodeAsContent\ToastDemo.xaml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)SourceCodeAsContent\ViewBoxDemo.xaml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)SourceCodeAsContent\WebViewControlSizingDemo.xaml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)SourceCodeAsContent\BindingBindingDemo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)SourceCodeAsContent\BindingConverterDemo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)SourceCodeAsContent\ClassBindingDemo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)SourceCodeAsContent\CodeShowSettingsFlyout.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)SourceCodeAsContent\DisplayOrientationDemo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)SourceCodeAsContent\EnableBackgroundTaskDemo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)SourceCodeAsContent\GroupedItemsDemo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)SourceCodeAsContent\App.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)SourceCodeAsContent\StaticBindingDemo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Content>
+    <Page Include="$(MSBuildThisFileDirectory)StaticBindingDemo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)StaticResourceDemo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)TextDemo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)ToastDemo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)ViewBoxDemo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)WebViewControlSizingDemo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+</Project>

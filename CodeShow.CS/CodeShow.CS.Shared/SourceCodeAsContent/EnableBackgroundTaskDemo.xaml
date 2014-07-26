@@ -1,0 +1,48 @@
+﻿<UserControl
+    x:Class="CodeShow.CS.EnableBackgroundTaskDemo"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CodeShow.CS"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="300"
+    d:DesignWidth="400"
+    RequestedTheme="Light">
+    
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="300" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Column="1">
+            <TextBlock 
+                Text=
+    "Enable a background timer that triggers every 15 minutes."
+                Height="60"
+                TextWrapping="WrapWholeWords"
+                HorizontalAlignment="Center"/>
+            <Button
+                x:Name="timerButton"
+                Content="Enable Timer"
+                Tapped="EnableTimer_Tapped"
+                Height="40"
+                HorizontalAlignment="Center"
+                Margin="0,0,0,50"/>
+            <TextBlock 
+                Text=
+    "Enable a background timer that triggers when the time zone changes."
+                Height="60"
+                TextWrapping="WrapWholeWords"
+                HorizontalAlignment="Center"/>
+            <Button
+                x:Name="timeZoneButton"
+                Content="Enable Time Zone"
+                Tapped="EnableTimeZone_Tapped"
+                Height="40"
+                HorizontalAlignment="Center"/>
+        </StackPanel>
+
+    </Grid>
+</UserControl>

@@ -1,0 +1,229 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FE87F379-CA46-4184-B4E3-A3676F2A2BB0}</ProjectGuid>
+    <OutputType>AppContainerExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CodeShow.CS</RootNamespace>
+    <AssemblyName>CodeShow.CS.Windows.Windows</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <TargetPlatformVersion>8.1</TargetPlatformVersion>
+    <MinimumVisualStudioVersion>12</MinimumVisualStudioVersion>
+    <FileAlignment>512</FileAlignment>
+    <SynthesizeLinkMetadata>true</SynthesizeLinkMetadata>
+    <ProjectTypeGuids>{BC8A1FFA-BEE3-4634-8014-F334798102B3};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <PackageCertificateKeyFile>CodeShow.CS.Windows_StoreKey.pfx</PackageCertificateKeyFile>
+    <AppxAutoIncrementPackageRevision>True</AppxAutoIncrementPackageRevision>
+    <AppxBundlePlatforms>x86|x64|arm</AppxBundlePlatforms>
+    <PackageCertificateThumbprint>0D413C711DF58C1F4F03E79F07AB26B3239341C6</PackageCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_APP</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_APP</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\ARM\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_APP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM'">
+    <OutputPath>bin\ARM\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_APP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_APP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_APP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_APP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_APP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="AppWindows.cs" />
+    <Compile Include="Common\BooleanNegationConverter.cs" />
+    <Compile Include="Common\BooleanToVisibilityConverter.cs" />
+    <Compile Include="Common\NavigationHelper.cs" />
+    <Compile Include="Common\ObservableDictionary.cs" />
+    <Compile Include="Common\RelayCommand.cs" />
+    <Compile Include="Common\SuspensionManager.cs" />
+    <Compile Include="CodeShowPage.xaml.cs">
+      <DependentUpon>CodeShowPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="CodeShowSettingsFlyout.xaml.cs">
+      <DependentUpon>CodeShowSettingsFlyout.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsFlyoutDemo.xaml.cs">
+      <DependentUpon>SettingsFlyoutDemo.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxManifest Include="Package.appxmanifest">
+      <SubType>Designer</SubType>
+    </AppxManifest>
+    <None Include="CodeShow.CS.Windows_StoreKey.pfx" />
+    <None Include="CodeShow.CS.Windows_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\adtile_codeplex.png" />
+    <Content Include="Assets\badge.scale-100.png" />
+    <Content Include="Assets\badge.scale-140.png" />
+    <Content Include="Assets\badge.scale-180.png" />
+    <Content Include="Assets\headerlogo.png" />
+    <Content Include="Assets\logo.png" />
+    <Content Include="Assets\smalllogo.png" />
+    <Content Include="Assets\splashscreen.scale-100.png" />
+    <Content Include="Assets\splashscreen.scale-140.png" />
+    <Content Include="Assets\splashscreen.scale-180.png" />
+    <Content Include="Assets\square150.scale-100.png" />
+    <Content Include="Assets\square150.scale-140.png" />
+    <Content Include="Assets\square150.scale-180.png" />
+    <Content Include="Assets\square150.scale-80.png" />
+    <Content Include="Assets\square30.scale-100.png" />
+    <Content Include="Assets\square30.scale-140.png" />
+    <Content Include="Assets\square30.scale-180.png" />
+    <Content Include="Assets\square30.scale-80.png" />
+    <Content Include="Assets\square310.scale-100.png" />
+    <Content Include="Assets\square310.scale-140.png" />
+    <Content Include="Assets\square310.scale-180.png" />
+    <Content Include="Assets\square310.scale-80.png" />
+    <Content Include="Assets\square50.scale-100.png" />
+    <Content Include="Assets\square50.scale-140.png" />
+    <Content Include="Assets\square50.scale-180.png" />
+    <Content Include="Assets\square70.scale-100.png" />
+    <Content Include="Assets\square70.scale-140.png" />
+    <Content Include="Assets\square70.scale-180.png" />
+    <Content Include="Assets\square70.scale-80.png" />
+    <Content Include="Assets\storelogo.png" />
+    <Content Include="Assets\wide.scale-100.png" />
+    <Content Include="Assets\wide.scale-140.png" />
+    <Content Include="Assets\wide.scale-180.png" />
+    <Content Include="Assets\wide.scale-80.png" />
+    <Content Include="Common\ReadMe.txt" />
+    <None Include="Package.StoreAssociation.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="CodeShowPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="CodeShowSettingsFlyout.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SettingsFlyoutDemo.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BackgroundTaskDemo\BackgroundTaskDemo.csproj">
+      <Project>{6dbec587-8726-49c9-a87b-81ab080b22eb}</Project>
+      <Name>BackgroundTaskDemo</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <SDKReference Include="Bing.Maps.Xaml, Version=1.313.0825.0">
+      <Name>Bing Maps for C#, C++, or Visual Basic</Name>
+    </SDKReference>
+    <SDKReference Include="Microsoft.VCLibs, version=12.0">
+      <Name>Microsoft Visual C++ 2013 Runtime Package for Windows</Name>
+    </SDKReference>
+  </ItemGroup>
+  <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '12.0' ">
+    <VisualStudioVersion>12.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Project="..\CodeShow.CS.Shared\CodeShow.CS.Shared.projitems" Label="Shared" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>copy /Y "$(SolutionDir)CodeShow.CS\CodeShow.CS.Shared\*Demo*.xaml*" "$(SolutionDir)CodeShow.CS\CodeShow.CS.Shared\SourceCodeAsContent"
+copy  /Y "$(SolutionDir)CodeShow.CS\CodeShow.CS.Windows\appWindows.cs" "$(SolutionDir)CodeShow.CS\CodeShow.CS.Shared\SourceCodeAsContent\app.xaml.cs"
+copy /Y  "$(SolutionDir)CodeShow.CS\CodeShow.CS.Windows\ItemDetailPage.xaml.cs" "$(SolutionDir)CodeShow.CS\CodeShow.CS.Shared\SourceCodeAsContent\ShareWindowsDemo.xaml.cs"
+copy /Y  "$(SolutionDir)CodeShow.CS\CodeShow.CS.Shared\App.xaml" "$(SolutionDir)CodeShow.CS\CodeShow.CS.Shared\SourceCodeAsContent\App.xaml"
+copy "$(SolutionDir)CodeShow.CS\CodeShow.CS.Windows\*Demo*.xaml*" "$(SolutionDir)CodeShow.CS\CodeShow.CS.Shared\SourceCodeAsContent"
+copy "$(SolutionDir)CodeShow.CS\CodeShow.CS.Windows\*SettingsFlyout*.xaml*" "$(SolutionDir)CodeShow.CS\CodeShow.CS.Shared\SourceCodeAsContent"
+copy "$(SolutionDir)CodeShow.CS\CodeShow.CS.Windows\CodeShowPage*.xaml.cs" "$(SolutionDir)CodeShow.CS\CodeShow.CS.Shared\SourceCodeAsContent\CodeShowPageWindows.Xaml.cs"
+copy "$(SolutionDir)CodeShow.CS\BackgroundTaskDemo\*.cs" "$(SolutionDir)CodeShow.CS\CodeShow.CS.Shared\SourceCodeAsContent\*.cs"</PreBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

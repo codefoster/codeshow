@@ -1,0 +1,103 @@
+﻿@font-face {
+	font-family: 39smooth;
+	src: url('../fonts/39smooth.ttf') format('truetype');
+}
+
+#colorbar {
+    height: 10px;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    background-image: linear-gradient(to right, #020410 0px, #020410 10%, #436580 10%, #436580 35%, #6294ad 35% );
+}
+
+.explanation {
+    font-size: larger;
+    color: #375369;
+    margin-bottom: 20px;
+    font-style:italic;
+}
+
+body {
+    background-image: linear-gradient(to bottom, #dfe7eb 0%, #f6f6f6 30%);
+}
+
+#contenthost {
+    height: 100%;
+    width: 100%;
+}
+
+.fragment {
+    /* Define a grid with rows for a banner and a body */
+    -ms-grid-columns: 1fr;
+    -ms-grid-rows: 128px 1fr;
+    display: -ms-grid;
+    height: 100%;
+    width: 100%;
+}
+
+    .fragment header[role=banner] {
+        /* Define a grid with columns for the back button and page title. */
+        -ms-grid-columns: 37px 83px 1fr 1fr;
+        -ms-grid-rows: 1fr;
+        display: -ms-grid;
+    }
+
+        .fragment header[role=banner] .win-navigation-backbutton {
+            -ms-grid-column: 2;
+            margin-top: 57px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .fragment header[role=banner] .titlearea {
+            -ms-grid-column: 3;
+            margin-top: 37px;
+        }
+
+        .fragment header[role=banner] .subtitle {
+            -ms-grid-column: 3;
+            margin-top:110px;
+            margin-left:20px;
+        }
+
+            .fragment header[role=banner] .titlearea .pagetitle {
+                width: calc(100% - 20px);
+            }
+
+    .fragment section[role=main] {
+        -ms-grid-row: 2;
+        height: 100%;
+        width: 100%;
+    }
+
+/* Extended Splash Screen */
+#splash {
+    background-color: white;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    text-align: center;
+    z-index: 2;
+}
+
+    #splash.hidden {
+        display: none;
+    }
+
+#splash img {
+    position: absolute;
+}
+
+#splash progress {
+    color: #34435A;
+}
+
+
+/* Fonts */
+@font-face {
+    font-family: 'GoodDog';
+    src: url('/css/type/GoodDog.otf')
+}
