@@ -7,7 +7,7 @@
         Commands: {
             demoNavigate: util.markSupportedForProcessing(function (data) {
                 data.detail.itemPromise.then(function (item) {
-                    nav.navigate("/pages/demo/demo.html", { demo: item.data, viewMode: "demo" });
+                    nav.navigate("/pages/demo/demo.html", { demo: item, viewMode: "demo" });
                 });
             }),
         }
