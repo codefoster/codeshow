@@ -1,0 +1,8 @@
+{
+	"title": "Grouped ListView",
+    "group": "ListViews",
+    "keywords":["list","view","items","tile","tiles","listview"],
+    "description": "A simple ListView with grouped items",
+    "author": "Jeremy Foster",
+    "dateCreated": "2012/10/01"
+}

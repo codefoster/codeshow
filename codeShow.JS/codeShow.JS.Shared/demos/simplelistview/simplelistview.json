@@ -1,0 +1,8 @@
+{
+	"title": "Simple ListView",
+    "group": "ListViews",
+    "keywords":["list","view","items","tile","tiles","listview"],
+    "description": "The ListView is the fundamental WinJS list control",
+    "author": "Jeremy Foster",
+    "dateCreated": "2012/10/01"
+}

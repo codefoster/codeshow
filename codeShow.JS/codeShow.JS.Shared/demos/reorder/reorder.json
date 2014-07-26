@@ -1,0 +1,8 @@
+{
+	"title": "Reorderable ListView",
+    "group": "ListViews",
+    "keywords":["list","view","items","tile","tiles","listview","reorder","sort"],
+    "description": "With a single switch, the ListView can become reorderable",
+    "author": "Jeremy Foster",
+    "dateCreated": "2012/10/01"
+}

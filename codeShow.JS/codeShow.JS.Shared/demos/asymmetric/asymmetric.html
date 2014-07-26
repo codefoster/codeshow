@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Asymmetric</title>
+
+    <link href="asymmetric.css" rel="stylesheet" />
+    <script src="asymmetric.js"></script>
+</head>
+<body>
+    <div class="asymmetric fragment">
+        <section aria-label="Main content" role="main">
+            <!-- Templates -->
+            <div class="imagetemplate" data-win-control="WinJS.Binding.Template">
+                <div data-win-bind="className:type;">
+                    <img data-win-bind="src:url;className:type;" />
+                </div>
+            </div>
+
+            <!-- Content -->
+            <div class="explanation">The ListView items don't always have to be the same size. Asymmetrical grids can be created quite easily. You can see by right clicking on some of the items in this ListView that all of the functionality offered by the ListView is still available. The way ListViews like this are implemented changed for Windows 8.1.</div>
+            <div data-win-control="WinJS.UI.ListView" data-win-options="{
+                itemTemplate:select('.imagetemplate'),
+                itemDataSource:codeShow.Demos.listviews.asymmetric.imagesList.dataSource,
+                layout:{
+                    type:CellSpanningLayout,
+                    itemInfo:codeShow.Demos.listviews.asymmetric.itemInfoFunction,
+                    groupInfo:codeShow.Demos.listviews.asymmetric.groupInfoFunction
+                }
+            }"></div>
+        </section>
+    </div>
+</body>
+</html>

@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Circle</title>
+
+    <link href="circle.css" rel="stylesheet" />
+    <script src="circle.js"></script>
+</head>
+<body>
+    <div class="circle fragment">
+        <section aria-label="Main content" role="main">
+            <!-- Templates -->
+            <div class="itemtemplate" data-win-control="WinJS.Binding.Template">
+                <img data-win-bind="src: imageUrl; title: name" height="72" width="72" draggable="false" />
+            </div>
+
+            <!-- Content -->
+            <div class="explanation">In Windows 8.1, you can use a custom function to lay your ListView items out however you darn well please. In this example, the items are arranged in a circle (what?!), and you can hit add and delete to see some slick animation.</div>
+            <div class="controls">
+                <button onclick="codeShow.Demos.circle.add()">Add</button>
+                <button onclick="codeShow.Demos.circle.remove()">Delete</button>
+            </div>
+            <div class="list" data-win-control="WinJS.UI.ListView" data-win-options="{
+                itemTemplate: select('.itemtemplate'),
+                itemDataSource: codeShow.Demos.circle.attractionsList.dataSource,
+                layout: { type: codeShow.Demos.circle.CircleLayout }
+            }"></div>
+        </section>
+    </div>
+</body>
+</html>

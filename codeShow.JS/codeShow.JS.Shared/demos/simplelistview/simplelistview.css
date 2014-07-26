@@ -1,0 +1,17 @@
+﻿.simplelistview .explanation { width: 800px; }
+
+.simplelistview .win-listview {
+    border: 2px solid lightgray;
+    background-color: white;
+    height: 460px;
+    width: 800px;
+}
+
+.simplelistview .win-item img  {
+    width: 215px;
+    height: 153px;
+}
+
+.simplelistview .win-item h3 {
+    height: 50px;
+}

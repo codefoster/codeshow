@@ -9,6 +9,12 @@
         .hubpage .titlearea .titleShow { color: #5e83a2; }
     .hubpage .subtitle { font-size: 20px; color: #34435a; }
 
+.hubpage header[role=banner] .win-searchbox {
+    -ms-grid-column: 4;
+    -ms-grid-column-align:end;
+    top: 40px;
+    margin-right:30px;
+}
 
 .hubpage section[role=main] {
     -ms-grid-row: 1;
@@ -39,96 +45,6 @@
         display: none;
     }
 
-.hubpage .hub .section1 {
-    width: 420px;
-}
-
-    .hubpage .hub .section1 .win-hub-section-content {
-        overflow-y: hidden;
-    }
-
-    .hubpage .hub .section1 .subtext {
-        margin-bottom: 7px;
-        margin-top: 9px;
-    }
-	
-	.hubpage .hub .section1 img {
-		width: 420px; height: 280px;	
-	}
-
-.hubpage .hub .section2 {
-    width: 440px;
-}
-
-    .hubpage .hub .section2 .win-hub-section-content {
-        overflow-y: hidden;
-    }
-
-    .hubpage .hub .section2 .item-title {
-        margin-top: 4px;
-        margin-bottom: 10px;
-    }
-
-    .hubpage .hub .section2 .article-header {
-        margin-bottom: 15px;
-    }
-
-.hubpage .hub .section3 {
-}
-
-    .hubpage .hub .section3 .itemslist {
-        height: 100%;
-        margin-top: -5px;
-        margin-right: 20px;
-    }
-
-    .hubpage .hub .section3 .win-container {
-        margin-bottom: 36px;
-        margin-left: 10px;
-        margin-right: 10px;
-    }
-
-    .hubpage .hub .section3 .win-item {
-        height: 229px;
-        width: 310px;
-    }
-
-        .hubpage .hub .section3 .win-item img {
-            height: 150px;
-            width: 310px;
-        }
-
-.hubpage .hub .section4 {
-    width: 400px;
-}
-
-    .hubpage .hub .section4 .win-hub-section-content {
-        overflow-y: hidden;
-    }
-
-    .hubpage .hub .section4 .top-image-row {
-        height: 260px;
-        margin-bottom: 10px;
-        width: 400px;
-    }
-
-        .hubpage .hub .section4 .top-image-row img {
-            height: 100%;
-            width: 100%;
-        }
-
-    .hubpage .hub .section4 .sub-image-row {
-        margin-bottom: 20px;
-        display: -ms-flexbox;
-        -ms-flex-flow: row nowrap;
-        -ms-flex-pack: justify;
-    }
-
-        .hubpage .hub .section4 .sub-image-row img {
-            height: 95px;
-            width: 130px;
-        }
-		
 .label-extralarge {
 	font-size: 28pt;
 	line-height: 30pt;
@@ -143,3 +59,88 @@
 	font-size: 15pt;
 	line-height: 17.5pt;
 }
+
+/* Apps Section */
+.hubpage .hub .section_apps {
+    width: 400px;
+    display:none;
+}
+
+    .hubpage .hub .section_apps .win-hub-section-content {
+        overflow-y: hidden;
+    }
+
+    .hubpage .hub .section_apps .top-image-row {
+        height: 260px;
+        margin-bottom: 10px;
+        width: 400px;
+        display:-ms-grid;
+    }
+
+        .hubpage .hub .section_apps .top-image-row .screenshot img {
+            height: 260px;
+            width: 400px;
+        }
+
+        .hubpage .hub .section_apps .top-image-row div.logo {
+            position:relative;
+            top:20px;
+            left:20px;
+            -ms-grid-column-align:start;
+            -ms-grid-row-align:start;
+        }
+
+        .hubpage .hub .section_apps .top-image-row div.logo img {
+            height: 50px;
+            width: 50px;
+        }
+
+    .hubpage .hub .section_apps .sub-image-row {
+        margin-bottom: 20px;
+    }
+
+    .hubpage .hub .section_apps .sub-image-row .win-repeater{
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between; /*BUG: not working*/
+    }
+
+        .hubpage .hub .section_apps .sub-image-row .win-repeater img {
+            height: 50px;
+            width: 50px;
+        }
+
+/* Source Code Section */
+.hubpage .hub .section_sourcecode {
+    width: 420px;
+    display:none;
+}
+
+    .hubpage .hub .section_sourcecode .win-hub-section-content {
+        overflow-y: hidden;
+    }
+
+    .hubpage .hub .section_sourcecode .subtext {
+        margin-bottom: 7px;
+        margin-top: 9px;
+    }
+
+
+/* Resources Section */
+.hubpage .hub .section_resources {
+    width: 440px;
+    display:none;
+}
+
+    .hubpage .hub .section_resources .win-hub-section-content {
+        overflow-y: hidden;
+    }
+
+    .hubpage .hub .section_resources .item-title {
+        margin-top: 4px;
+        margin-bottom: 10px;
+    }
+
+    .hubpage .hub .section_resources .article-header {
+        margin-bottom: 15px;
+    }

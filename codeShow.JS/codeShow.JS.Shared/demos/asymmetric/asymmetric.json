@@ -1,0 +1,8 @@
+{
+	"title": "Asymmetric ListView",
+    "group": "ListViews",
+    "keywords":["list","view","items","tile","tiles","listview"],
+    "description": "When you don't want or need the items in your ListView to exactly match each other in size",
+    "author": "Jeremy Foster",
+    "dateCreated": "2012/10/01"
+}

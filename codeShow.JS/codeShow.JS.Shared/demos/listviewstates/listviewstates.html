@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>States</title>
+
+    <link href="listviewstates.css" rel="stylesheet" />
+    <script src="listviewstates.js"></script>
+</head>
+<body>
+    <div class="listviewstates fragment">
+        <section aria-label="Main content" role="main">
+            <!-- TEMPLATES -->
+            <div class="itemtemplate" data-win-control="WinJS.Binding.Template">
+                <div data-win-bind="className:type;">
+                    <img data-win-bind="src:imageUrl" />
+                    <h3 data-win-bind="innerText:name"></h3>
+                </div>
+            </div>
+
+            <div class="explanation">This is another simple example of a ListView, but a JavaScript function has been written to handle the onloadingstatechanged event and report the loading state at every change. Being able to integrate with this loading state is rather important. Notice too that each time you scroll the ListView the events fire.</div>
+            <div data-win-control="WinJS.UI.ListView" data-win-options="{
+                itemTemplate:select('.itemtemplate'),
+                itemDataSource:codeShow.Demos.listviewstates.data.dataSource,
+                onloadingstatechanged:codeShow.Demos.listviewstates.stateChangedFunction
+            }"></div>
+            <div class="output"></div>
+        </section>
+    </div>
+</body>
+</html>

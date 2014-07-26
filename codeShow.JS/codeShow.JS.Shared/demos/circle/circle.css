@@ -1,0 +1,22 @@
+﻿.circle .controls {
+    -ms-grid-column: 1;
+    -ms-grid-row: 3;
+}
+
+    .circle .controls button {
+        margin: 10px;
+    }
+
+.circle .list .win-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: rotate(180deg);
+    transition: transform 167ms linear, opacity 167ms linear;
+}
+
+.circle .list img {
+    display: block;
+    width: 107px;
+    height: 76px;
+}

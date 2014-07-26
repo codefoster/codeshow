@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Live</title>
+
+    <link href="livelistview.css" rel="stylesheet" />
+    <script src="livelistview.js"></script>
+</head>
+<body>
+    <div class="livelistview fragment">
+        <header aria-label="Header content" role="banner">
+            <button data-win-control="WinJS.UI.BackButton"></button>
+            <h1 class="titlearea win-type-ellipsis">
+                <span class="pagetitle">Live List</span>
+            </h1>
+        </header>
+        <section aria-label="Main content" role="main">
+            <div class="explanation">ListView controls are based on a datasource and if the items in that datasource are observable (using the WinJS.Binding.as method) then changes to the underlying data will be reflected in the UI.</div>
+            <div class="itemTemplate" data-win-control="WinJS.Binding.Template">
+                <div data-win-bind="innerText:value"></div>
+            </div>
+            <div data-win-control="WinJS.UI.ListView" data-win-options="{
+                itemTemplate:select('.itemTemplate'),
+                itemDataSource:codeShow.Demos.livelistview.data.dataSource
+                }"></div>
+
+        </section>
+    </div>
+</body>
+</html>

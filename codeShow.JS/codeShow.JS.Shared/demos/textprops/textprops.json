@@ -1,11 +1,8 @@
 {
     "title": "Text Properties",
-    "keywords":["text","properties","css","font"],
-    "description": "Some very simple CSS text properties.",
+    "group": "Text Properties",
+    "keywords":["text","properties","css"],
+    "description": "Some very simple CSS text properties",
     "author": "Jeremy Foster",
-    "dateCreated": "",
-	"sections":[
-		{"name":"text"},
-		{"name":"font"}
-	]
+    "dateCreated": "2013/1/1"
 }

@@ -1,0 +1,13 @@
+﻿.asymmetric .explanation { width: 800px; }
+
+.asymmetric .win-listview {
+    border: 2px solid lightgray;
+    background-color: white;
+    height: 390px;
+    width: 650px;
+}
+
+.asymmetric .win-item .square { width: 120px; height: 120px; }
+.asymmetric .win-item .tall { width: 120px; height: 250px; }
+.asymmetric .win-item .wide { width: 250px; height: 120px; }
+.asymmetric .win-item .bigsquare { width: 250px; height: 250px; }
