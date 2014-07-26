@@ -56,7 +56,7 @@ var pkg = Windows.ApplicationModel.Package.current;
         app.sessionState.history = nav.history;
     };
     app.onready = function (e) {
-        //addSearchContract();
+        indexForSearch();
         addSettingsContract();
     };
     
@@ -101,31 +101,21 @@ var pkg = Windows.ApplicationModel.Package.current;
         Windows.UI.Notifications.TileUpdateManager.createTileUpdaterForApplication().update(tileContent.createNotification());
     }
 
-    function addSearchContract() {
-        var searchPane = Windows.ApplicationModel.Search.SearchPane.getForCurrentView();
-    
+    function indexForSearch() {
         //make sure demos have been loaded and then make search terms out of their keywords
         Data.loaded.then(function () {
             var keywords = [];
-            app.demosList.forEach(function (d) {
+            Data.demos.forEach(function (d) {
                 var indexFields = ["key", "name", "keywords", "description"];
                 indexFields.forEach(function (f) {
-                    if (d[f])
-                        d[f].split(" ").forEach(function (t) {
+                    if (d[f]) {
+                        var words = (Array.isArray(d[f]) ? d[f] : d[f].split(" ") )
+                        words.forEach(function (t) {
                             keywords.push(t);
                         });
+                    }
                 });
             });
-            
-            searchPane.onsuggestionsrequested = function (e) {
-                var matchingKeywords = keywords.distinct().filter(function (k) { return k.startsWith(e.queryText); });
-                e.request.searchSuggestionCollection.appendQuerySuggestions(matchingKeywords);
-            };
-    
-            searchPane.onquerysubmitted = function (e) {
-                WinJS.Navigation.navigate("/pages/home/home.html", { queryText: e.queryText });
-            };
-            
         });
     }
 

@@ -615,6 +615,7 @@
     <Content Include="$(MSBuildThisFileDirectory)lib\RxJS\rx.winjs.js" />
     <Content Include="$(MSBuildThisFileDirectory)lib\RxJS\Test\rx.testing-vsdoc.js" />
     <Content Include="$(MSBuildThisFileDirectory)lib\RxJS\Test\rx.testing.min.js" />
+    <Content Include="$(MSBuildThisFileDirectory)pages\demos\demos.js" />
     <Content Include="$(MSBuildThisFileDirectory)pages\demo\demo.js" />
     <Content Include="$(MSBuildThisFileDirectory)pages\hub\contributorsControl.css" />
     <Content Include="$(MSBuildThisFileDirectory)pages\hub\contributorsControl.html" />

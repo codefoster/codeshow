@@ -21,6 +21,7 @@
                 }
             }
 
+            this._addSearchFunctionality();
             //condition the demos list for platform particulars
             this.demosList = this.demosList.createSorted(function (a, b) { return (a.title > b.title ? 1 : (a.title < b.title ? -1 : 0)); });
             if (WinJS.Utilities.isPhone) {
@@ -66,5 +67,18 @@
 
             // TODO: Respond to changes in layout.
         },
+        _addSearchFunctionality: function () {
+            //focus on the search box when the users presses CTRL+E or starts typing
+            var s = document.querySelector(".win-searchbox");
+            s.winControl.onquerysubmitted = function (e) {
+                WinJS.Navigation.navigate("/pages/demos/demos.html", { queryText: e.detail.queryText });
+            };
+            document.body.onkeypress = function (e) {
+                if (e.ctrlKey && e.key == "e")
+                    s.querySelector(".win-searchbox-input").focus();
+            };
+            s.winControl.focusOnKeyboardInput = true;
+        },
+
     });
 })();
