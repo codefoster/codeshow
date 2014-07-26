@@ -24,6 +24,7 @@
         border: solid 1px #5e83a2;
         height:125px;
         border-radius:2px;
+        background-color:whitesmoke;
     }
 
     .demos .win-item .itemHandle {
