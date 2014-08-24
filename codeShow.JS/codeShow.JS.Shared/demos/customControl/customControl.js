@@ -21,6 +21,7 @@
             this._element = element;
             this._backgroundColor = options.backgroundColor;
             this._createVisualTree();
+            WinJS.Utilities.addClass(this._element, "win-disposable");
 
         }, {
 
@@ -39,6 +40,11 @@
                 child.style.backgroundColor = this._backgroundColor;
                 child.innerText = "BigBox control";
                 this._element.appendChild(child);
+            },
+            dispose: function () {
+                // do any cleanup necessary to avoid memory leaks
+                WinJS.Utilities.disposeSubTree(this._element);
+                this._element = null;
             }
         })
     });

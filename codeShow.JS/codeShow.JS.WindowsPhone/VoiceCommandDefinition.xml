@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<!-- 
+Note the 1.1 in the schema version instead of 1.0. This includes the 8.1
+PhraseTopic. The schema is used for better Intellisense support.
+-->
+<VoiceCommands xmlns="http://schemas.microsoft.com/voicecommands/1.1">
+    <CommandSet xml:lang="en-US">
+        <Example> codeShow JavaScript demo FlipView </Example>
+
+        <Command Name="OpenDemo">
+            <Example> demo FlipView </Example>
+            <ListenFor> demo {demoname} </ListenFor>
+            <Feedback> Opening {demoname} demo ... </Feedback>
+            <Navigate Target="/pages/demo/demo.html"/>
+        </Command>
+
+        <!-- 
+            PhraseTopic is a Windows 8.1 feature. It will use the Network Recognizer 
+            to recognize the free form text of what the App user speaks
+        -->
+        <PhraseTopic Label="demoname" Scenario="Dictation"/>
+
+        <!--<Command Name="CommandPhrase">
+            <Example> MyApp command one </Example>
+            <ListenFor> command {phrase} </ListenFor>
+            <Feedback> commanding {phrase}... </Feedback>
+            <Navigate Target="NavigationTarget" />
+        </Command>
+
+        <PhraseList Label="phrase">
+            <Item> one </Item>
+            <Item> two </Item>
+            <Item> three </Item>
+        </PhraseList>-->
+
+    </CommandSet>
+</VoiceCommands>
+

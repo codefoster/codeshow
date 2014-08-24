@@ -17,9 +17,12 @@
         </header>
         <section class="page-section" aria-label="Main content" role="main">
             <div class="sections" data-win-control="WinJS.UI.Hub">
-                <div class="section demo" data-win-control="WinJS.UI.HubSection" data-win-options="{ header:'',isHeaderStatic: true }" ></div>
+                <div class="section demo democontent" data-win-control="WinJS.UI.HubSection" data-win-options="{ header:'',isHeaderStatic: true }" ></div>
             </div>
         </section>
+    </div>
+    <div id="demoappbar" data-win-control="WinJS.UI.AppBar">
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{id:'cmdPin',label:'Pin to Start',icon:'pin',section:'global'}"></button>
     </div>
 </body>
 </html>

@@ -1,5 +1,5 @@
 ﻿{
-    "title": "Authentication",
+    "title": "Live Authentication",
     "group": "Authentication",
 	"keywords":["authentication","live","connect"],
 	"description": "Using the Live SDK to authenticate a user!",

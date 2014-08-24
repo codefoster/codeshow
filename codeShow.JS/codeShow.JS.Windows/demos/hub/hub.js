@@ -6,10 +6,10 @@
     var util = WinJS.Utilities;
 
     // Get the groups used by the data-bound sections of the Hub.
-    var section2Group = codeShow.Demos.hub.simple.data.resolveGroupReference("group1");
-    var section5Group = codeShow.Demos.hub.simple.data.resolveGroupReference("group6");
+    var section2Group = codeShow.Demos.hub.data.resolveGroupReference("group1");
+    var section5Group = codeShow.Demos.hub.data.resolveGroupReference("group6");
 
-    WinJS.UI.Pages.define("/demos/hub/simple/simple.html", {
+    WinJS.UI.Pages.define("/demos/hub/hub.html", {
         // This function is called whenever a user navigates to this page. It
         // populates the page elements with the app's data.
         ready: function (element, options) {
@@ -58,15 +58,15 @@
     }
 
     function createItemNavigator(group) {
-        var items = codeShow.Demos.hub.simple.data.getItemsFromGroup(group);
+        var items = codeShow.Demos.hub.data.getItemsFromGroup(group);
         return util.markSupportedForProcessing(function (args) {
-            var item = codeShow.Demos.hub.simple.data.getItemReference(items.getAt(args.detail.itemIndex));
+            var item = codeShow.Demos.hub.data.getItemReference(items.getAt(args.detail.itemIndex));
             nav.navigate("/pages/item/item.html", { item: item });
         });
     }
 
     function getItemsDataSourceFromGroup(group) {
-        return codeShow.Demos.hub.simple.data.getItemsFromGroup(group).dataSource;
+        return codeShow.Demos.hub.data.getItemsFromGroup(group).dataSource;
     }
 
     WinJS.Namespace.define("HubPage", {

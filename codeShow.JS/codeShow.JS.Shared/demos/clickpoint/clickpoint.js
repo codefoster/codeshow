@@ -1,10 +1,10 @@
 ﻿(function () {
     "use strict";
 
-    WinJS.UI.Pages.define("/demos/input/clickpoint/clickpoint.html", {
+    WinJS.UI.Pages.define("/demos/clickpoint/clickpoint.html", {
         ready: function (element, options) {
-            var d1 = q(".input .clickpoint #parent > div:nth-of-type(1)");
-            var d2 = q(".input .clickpoint #parent > div:nth-of-type(2)");
+            var d1 = element.querySelector("#parent > div:nth-of-type(1)");
+            var d2 = element.querySelector("#parent > div:nth-of-type(2)");
 
             d1.onclick = function (e) {
                 d1.innerHTML += "click<br/>";

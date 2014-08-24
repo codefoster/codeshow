@@ -1,0 +1,58 @@
+﻿.layout .page-section {
+    overflow-y: scroll;
+}
+
+    .layout .page-section > div {
+        border:solid 1px gray;
+        width: 80vw;
+        padding: 20px;
+    }
+
+    .layout .table td {
+        border:solid 1px gray;
+        padding:5px;
+    }
+
+    .layout .absolute .bump {
+        position:relative;
+        top:-5px;
+        font-weight:bold;
+    }
+
+    .layout .float {
+        height:100px;
+    }
+
+        .layout .float div {
+            width:40px;
+            height:40px;
+            border:solid 1px gray;
+            float:left;    
+        }
+
+    .layout .flex > div {
+        display:flex;
+    }
+
+        .layout .flex > div div {
+            width:40px;
+            height:40px;
+            border:solid 1px gray;
+        }
+
+    .layout .grid > div {
+        display:-ms-grid;
+        -ms-grid-columns:1fr 1fr;
+        -ms-grid-rows:1fr 1fr;
+        width:200px;
+        height:200px;
+    }
+
+        .layout .grid > div div {
+            border:solid 1px gray;
+        }
+        
+        .layout .grid > div div:nth-child(1) { -ms-grid-column:1; -ms-grid-row:1; }
+        .layout .grid > div div:nth-child(2) { -ms-grid-column:1; -ms-grid-row:2; }
+        .layout .grid > div div:nth-child(3) { -ms-grid-column:2; -ms-grid-row:1; }
+        .layout .grid > div div:nth-child(4) { -ms-grid-column:2; -ms-grid-row:2; }

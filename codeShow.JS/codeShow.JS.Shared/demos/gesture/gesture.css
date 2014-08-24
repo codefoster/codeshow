@@ -1,8 +1,4 @@
-﻿.input .gesture #parent {
-    display:-ms-flexbox;
-}
-
-.input .gesture .target {
+﻿.gesture .target {
     width:300px;
     height:500px;
     border:1px solid lightgray;

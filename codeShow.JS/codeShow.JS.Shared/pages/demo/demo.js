@@ -1,15 +1,43 @@
 ﻿(function () {
     "use strict";
 
+    var demo;
+
     WinJS.UI.Pages.define("/pages/demo/demo.html", {
         processed: function (element) {
             return WinJS.Resources.processAll(element);
         },
         ready: function (element, options) {
-            element.querySelector("header .pagetitle").innerText = options.demo.data.title;
-            var demoContent = element.querySelector(".section.demo").winControl.contentElement;
-            WinJS.UI.Pages.render(Ocho.Utilities.format("/demos/{0}/{0}.html", options.demo.data.name), demoContent)
-            loadCodeFiles(options.demo.data, element);
+            demo = options.demo;
+            element.querySelector("header .pagetitle").innerText = demo.title;
+            var demoContent = element.querySelector(".democontent").winControl.contentElement;
+            WinJS.UI.Pages.render(Ocho.Utilities.format("/demos/{0}/{0}.html", demo.name), demoContent)
+
+            if (!WinJS.Utilities.isPhone) {
+                //TODO: this should eventually work for Windows and phone, but just do Windows for now
+                loadCodeFiles(demo, element);
+
+                element.querySelector("#cmdPin").onclick = this.setupSecondaryTile;
+            }
+
+        },
+        setupSecondaryTile: function () {
+            var tile = new Windows.UI.StartScreen.SecondaryTile(
+                "SecondaryTile.Demo." + demo.name,
+                demo.title,
+                "{\"launchDemo\":\"" + demo.name + "\"}",
+                new Windows.Foundation.Uri("ms-appx:///images/secondary150.png"),
+                Windows.UI.StartScreen.TileSize.Square150x150
+            );
+
+            tile.visualElements.square70x70Logo = new Windows.Foundation.Uri("ms-appx:///Images/secondary70.png");
+            tile.visualElements.showNameOnSquare150x150Logo = true;
+
+            tile.requestCreateAsync().done(function (isCreated) {
+                if (isCreated) {
+                    WinJS.log && WinJS.log("Secondary tile was successfully pinned.", "sample", "status");
+                }
+            });
         }
     });
 })();
@@ -42,7 +70,8 @@ function loadCodeFiles(demo, element) {
                         var textArea = document.createElement("textarea");
                         textArea.textContent = fileContents;
                         hubSection.contentElement.appendChild(textArea);
-                        element.querySelector(".sections").winControl.sections.push(hubSection);
+                        if (element.querySelector(".sections"))
+                            element.querySelector(".sections").winControl.sections.push(hubSection);
                     });
                 });
             });

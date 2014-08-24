@@ -3,17 +3,17 @@
 
     var gr;
 
-    WinJS.UI.Pages.define("/demos/input/gesture/gesture.html", {
+    WinJS.UI.Pages.define("/demos/gesture/gesture.html", {
         ready: function (element, options) {
-            var target = q(".input .gesture .target");
-            target.addEventListener("MSPointerDown", function (e) {
+            var target = element.querySelector(".target");
+            target.addEventListener("pointerdown", function (e) {
                 gr.processDownEvent(e.currentPoint);
-                e.currentTarget.msSetPointerCapture(e.pointerId);
-                e.msTouchAction = "none";
+                e.currentTarget.setPointerCapture(e.pointerId);
+                e.touchAction = "none";
             }, false);
-            target.addEventListener("MSPointerMove", function (e) { gr.processMoveEvents(e.intermediatePoints); }, false);
-            target.addEventListener("MSPointerUp", function (e) { gr.processUpEvent(e.currentPoint); }, false);
-            target.addEventListener("MSPointerCancel", function (e) { gr.completeGesture(); }, false);
+            target.addEventListener("pointermove", function (e) { gr.processMoveEvents(e.intermediatePoints); }, false);
+            target.addEventListener("pointerup", function (e) { gr.processUpEvent(e.currentPoint); }, false);
+            target.addEventListener("pointercancel", function (e) { gr.completeGesture(); }, false);
 
             var gs = Windows.UI.Input.GestureSettings;
             gr = new Windows.UI.Input.GestureRecognizer();

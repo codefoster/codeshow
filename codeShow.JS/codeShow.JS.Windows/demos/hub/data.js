@@ -13,7 +13,7 @@
         list.push(item);
     });
 
-    WinJS.Namespace.define("codeShow.Demos.hub.simple.data", {
+    WinJS.Namespace.define("codeShow.Demos.hub.data", {
         items: groupedItems,
         groups: groupedItems.groups,
         getItemReference: getItemReference,

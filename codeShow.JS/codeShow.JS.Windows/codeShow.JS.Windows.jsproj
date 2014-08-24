@@ -61,6 +61,11 @@
     </AppxManifest>
     <None Include="codeShow.Win81JS_StoreKey.pfx" />
     <Content Include="css\default.css" />
+    <Content Include="demos\hub\data.js" />
+    <Content Include="demos\hub\hub.json" />
+    <Content Include="demos\hub\hub.css" />
+    <Content Include="demos\hub\hub.html" />
+    <Content Include="demos\hub\hub.js" />
     <Content Include="images\adtile_codeplex.png" />
     <Content Include="images\apphero.png" />
     <Content Include="images\badge24.scale-100.png" />
@@ -128,9 +133,6 @@
       <HintPath>NotificationsExtensions.winmd</HintPath>
       <IsWinMDFile>true</IsWinMDFile>
     </Reference>
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="demos\" />
   </ItemGroup>
   <Import Project="..\codeShow.JS.Shared\codeShow.JS.Shared.projitems" Label="Shared" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\$(WMSJSProjectDirectory)\Microsoft.VisualStudio.$(WMSJSProject).targets" />

@@ -1,0 +1,9 @@
+﻿{
+    "title": "Voice Command",
+    "group": "Speech Input",
+	"keywords":["speech","voice","speak","talk","command"],
+	"description": "Integrate with Cortana on Windows Phone start speaking your way around",
+	"author": "Jeremy Foster",
+	"dateCreated": "2014/08/22",
+    "enabled":false
+}

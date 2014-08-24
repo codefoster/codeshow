@@ -3,6 +3,7 @@
 
     WinJS.UI.Pages.define("/demos/bowling/bowling.html", {
         ready: function (element, options) {
+
             var frameDiv = document.querySelector(".frame");
             var playerDiv = document.querySelector(".player");
             var gameDiv = document.querySelector(".game");
@@ -28,3 +29,5 @@
         }
     });
 })();
+
+NodeList.prototype.toArray = Ocho.Array.toArray;

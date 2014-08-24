@@ -3,7 +3,7 @@
   <Identity Name="0c11ea8e-9b78-4a97-9f55-c96df246ef70" Version="1.0.0.0" Publisher="CN=jerfost" />
   <mp:PhoneIdentity PhoneProductId="0c11ea8e-9b78-4a97-9f55-c96df246ef70" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
-    <DisplayName>codeShow.JS.WindowsPhone</DisplayName>
+    <DisplayName>codeShow JavaScript</DisplayName>
     <PublisherDisplayName>jerfost</PublisherDisplayName>
     <Logo>images\StoreLogo.png</Logo>
   </Properties>
@@ -16,7 +16,7 @@
   </Resources>
   <Applications>
     <Application Id="App" StartPage="default.html">
-      <m3:VisualElements DisplayName="codeShow.JS.WindowsPhone" Square150x150Logo="images\Square150x150Logo.png" Square44x44Logo="images\Square44x44Logo.png" Description="codeShow.JS.WindowsPhone" ForegroundText="light" BackgroundColor="transparent">
+      <m3:VisualElements DisplayName="codeShow JavaScript" Square150x150Logo="images\Square150x150Logo.png" Square44x44Logo="images\Square44x44Logo.png" Description="codeShow JavaScript" ForegroundText="light" BackgroundColor="transparent">
         <m3:DefaultTile Wide310x150Logo="images\Wide310x150Logo.png" Square71x71Logo="images\Square71x71Logo.png">
         </m3:DefaultTile>
         <m3:SplashScreen Image="images\SplashScreen.png" />
@@ -25,5 +25,9 @@
   </Applications>
   <Capabilities>
     <Capability Name="internetClientServer" />
+    <m3:Capability Name="contacts" />
+    <m3:Capability Name="appointments" />
+    <DeviceCapability Name="microphone" />
+    <DeviceCapability Name="webcam" />
   </Capabilities>
 </Package>

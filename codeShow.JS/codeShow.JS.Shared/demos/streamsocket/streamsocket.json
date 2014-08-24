@@ -1,0 +1,7 @@
+{
+    "title": "StreamSocket",
+    "keywords":["socket","sockets","web sockets","web socket"],
+    "description": "Use WinRT to handle the heavy lifting of web sockets for you",
+    "author": "Jeremy Foster",
+    "dateCreated": "2014/7/28"
+}

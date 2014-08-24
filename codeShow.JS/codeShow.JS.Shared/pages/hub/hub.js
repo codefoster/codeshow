@@ -21,7 +21,7 @@
                 }
             }
 
-            this._addSearchFunctionality();
+            if (!WinJS.Utilities.isPhone) this._addSearchFunctionality();
             //condition the demos list for platform particulars
             this.demosList = this.demosList.createSorted(function (a, b) { return (a.title > b.title ? 1 : (a.title < b.title ? -1 : 0)); });
             if (WinJS.Utilities.isPhone) {
@@ -40,7 +40,7 @@
         }),
         demoItemInvoke: util.markSupportedForProcessing(function (args) {
             args.detail.itemPromise.then(function (demo) {
-                nav.navigate("/pages/demo/demo.html", { demo: demo });
+                nav.navigate("/pages/demo/demo.html", { demo: demo.data });
             });
         }),
 

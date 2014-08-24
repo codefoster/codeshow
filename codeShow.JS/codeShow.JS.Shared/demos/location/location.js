@@ -2,14 +2,15 @@
     "use strict";
 
     var result = {};
-
+    var element;
     WinJS.UI.Pages.define("/demos/location/location.html", {
         ready: function (e, o) {
             var self = this;
+            element = e;
             var geo = new Windows.Devices.Geolocation.Geolocator();
             geo.onpositionchanged = function (e) { self.bindPosition(e.position); };
             geo.onstatuschanged = function (e) {
-                q(".location #msg").innerText = self.getStatusString(e.status);
+                element.querySelector("#msg").innerText = self.getStatusString(e.status);
                 if (e.status == Windows.Devices.Geolocation.PositionStatus.ready) {
                     geo.getGeopositionAsync().then(function (pos) {
                         self.bindPosition(pos);
@@ -20,8 +21,8 @@
         bindPosition: function (pos) {
             result.lat = pos.coordinate.latitude;
             result.lon = pos.coordinate.longitude;
-            result.accuracy = format("{0}m", pos.coordinate.accuracy);
-            WinJS.Binding.processAll(q(".location section[role=main]"), result);
+            result.accuracy = Ocho.Utilities.format("{0}m", pos.coordinate.accuracy);
+            WinJS.Binding.processAll(element.querySelector("section[role=main]"), result);
         },
         getStatusString: function (locStatus) {
             switch (locStatus) {

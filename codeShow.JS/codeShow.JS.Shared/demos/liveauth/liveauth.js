@@ -3,6 +3,8 @@
 
     WinJS.UI.Pages.define("/demos/liveauth/liveauth.html", {
         ready: function (element, options) {
+
+            // the WL comes from the <script src="/js/wl.js"></script> reference in default.html
             WL.init();
 
             WL.Event.subscribe("auth.login", function () {
@@ -21,8 +23,10 @@
             function log(message) {
                 var child = document.createTextNode(message);
                 var logDiv = element.querySelector("#log");
-                logDiv.appendChild(child);
-                logDiv.appendChild(document.createElement("br"));
+                if (logDiv) {
+                    logDiv.appendChild(child);
+                    logDiv.appendChild(document.createElement("br"));
+                }
             }
         }
     });

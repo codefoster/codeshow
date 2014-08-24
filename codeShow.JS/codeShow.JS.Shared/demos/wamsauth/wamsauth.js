@@ -8,17 +8,16 @@
                 codeshowClient.login("microsoftaccount")
                     .done(function (results) {
                         microsoft.querySelector("div").innerText += "User ID: " + results.userId;
-                    }, function (error) { /* gulp */ });
+                    }, function (error) { debugger; /* gulp */ });
             };
 
-            ////facebook
-            //var facebookSection = element.querySelector("#facebook");
-            //q("button", facebookSection).onclick = function (e) {
-            //    codeshowClient.login("facebook")
-            //        .done(function (results) {
-            //                facebookSection.querySelector("div").innerText += "User ID: " + results.userId;
-            //        }, function (error) { debugger;  });
-            //};
+            //facebook
+            facebook.querySelector("button").onclick = function (e) {
+                codeshowClient.login("facebook")
+                    .done(function (results) {
+                        facebook.querySelector("div").innerText += "User ID: " + results.userId;
+                    }, function (error) { debugger;  });
+            };
 
             ////twitter
             //var twitterSection = element.querySelector("#twitter");

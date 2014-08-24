@@ -20,6 +20,13 @@ var pkg = Windows.ApplicationModel.Package.current;
         if (!Data.loaded) Data.loadData();
 
         if (args.detail.kind === activation.ActivationKind.launch) {
+
+            // initialize voice commanding for phone project
+            if (WinJS.Utilities.isPhone) {
+                Windows.Storage.StorageFile.getFileFromApplicationUriAsync(new Windows.Foundation.Uri("ms-appx:///voiceCommandDefinition.xml"))
+                    .then(function (storageFile) { return Windows.Media.SpeechRecognition.VoiceCommandManager.installCommandSetsFromStorageFileAsync(storageFile); }, function (error) { debugger; })
+            }
+
             //* positionSplashScreen(args);
 
             if (args.detail.previousExecutionState !== activation.ApplicationExecutionState.terminated) {
@@ -37,6 +44,19 @@ var pkg = Windows.ApplicationModel.Package.current;
             // Optimize the load of the application and while the splash screen is shown, execute high priority scheduled work.
             ui.disableAnimations();
             var p = ui.processAll().then(function () {
+
+                //BUG: this is supposed to simply detect the secondary tile and navigate to demo, but it fails at least intermittently
+                //navigate to demo specified in launch from secondary tile
+                if (args.detail.arguments !== "") {
+                    var launchDemo = JSON.parse(args.detail.arguments).launchDemo;
+                    if (launchDemo)
+                        //make sure the demos have been loaded before navigating to the hub
+                        Data.loaded.then(function () {
+                            var chooseDemo = Data.demos.filter(function (d) { return d.name == launchDemo })[0];
+                            return nav.navigate("/pages/demo/demo.html", { demo: chooseDemo });
+                        });
+                }
+
                 return nav.navigate(nav.location || Application.navigator.home, nav.state);
             }).then(function () {
                 return sched.requestDrain(sched.Priority.aboveNormal + 1);
@@ -45,6 +65,19 @@ var pkg = Windows.ApplicationModel.Package.current;
             });
 
             args.setPromise(p);
+        }
+
+        //if the app was launched via Cortana voice command
+        else if (args.detail.kind === activation.ActivationKind.voiceCommand) {
+            Data.loaded.then(function () {
+                //TODO:demoname as to match exactly at this point, needs to have fuzzy logic implemented
+                var chooseDemo = Data.demos.filter(function (d) { return d.name == args.detail.result.semanticInterpretation.properties.demoname[0].toLowerCase() })[0];
+                if (chooseDemo)
+                    return nav.navigate("/pages/demo/demo.html", { demo: chooseDemo });
+                else
+                    //TODO: notify the user that the demo didn't exist
+                    return nav.navigate("/pages/hub/hub.html");
+            });
         }
     });
 
