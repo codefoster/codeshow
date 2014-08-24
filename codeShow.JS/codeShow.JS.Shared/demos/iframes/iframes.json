@@ -3,10 +3,6 @@
     "keywords":["context","iframe","fragment"],
     "description": "Bring the outside in using iframes.",
     "author": "Jeremy Foster",
-    "dateCreated": "",
-    "enabled":false,
-    "sections":[
-        {"name":"internal"},
-        {"name":"external"}
-    ]
+    "dateCreated": "2013/01/01",
+    "enabled": false
 }

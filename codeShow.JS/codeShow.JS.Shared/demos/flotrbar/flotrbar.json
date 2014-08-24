@@ -1,0 +1,8 @@
+﻿{
+    "title": "Flotr Bar Chart",
+    "group": "Flotr",
+    "keywords":["flotr","graph","chart","graphs","charts","line","line graph","line chart","pie","pie graph","pie chart","series","data"],
+    "description": "Use the Flotr JavaScript library to make a bar chart",
+    "author": "Jeremy Foster",
+    "dateCreated": "2013/09/16"
+}

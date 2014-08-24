@@ -1,0 +1,18 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>External</title>
+
+    <link href="iframes.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="iframes fragment">
+        <section aria-label="Main content" role="main">
+            <div class="explanation">When an iframe's src is external (when it uses the http scheme) the contents run in web context with limited access to the local device</div>
+            <!-- BUG: nothing is showing up in the iframe -->
+            <iframe src="http://codefoster.com"></iframe>
+        </section>
+    </div>
+</body>
+</html>
