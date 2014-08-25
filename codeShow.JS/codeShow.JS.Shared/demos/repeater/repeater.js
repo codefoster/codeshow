@@ -1,9 +1,9 @@
 ﻿(function () {
     "use strict";
 
-    WinJS.UI.Pages.define("/demos/repeater/simple/simple.html", {
+    WinJS.UI.Pages.define("/demos/repeater/repeater.html", {
         init: function (element, options) {
-            WinJS.Namespace.define("codeShow.Demos.repeater.simple", {
+            WinJS.Namespace.define("codeShow.Demos.repeater", {
                 itemList: new WinJS.Binding.List([
                     {name:"Item 1"},
                     {name:"Item 2"},

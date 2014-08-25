@@ -1,0 +1,14 @@
+﻿.responsive section[role=main] .measuringsticks > div {
+    border:solid 1px gray;
+    position:relative;
+    left:-120px;
+}
+
+.responsive section[role=main] .measuringsticks > div:nth-child(1) {
+    width:320px;
+}
+
+.responsive section[role=main] .measuringsticks > div:nth-child(2) {
+    width:500px;
+    top:40px;
+}
