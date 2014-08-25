@@ -46,6 +46,9 @@
     <Content Include="$(MSBuildThisFileDirectory)demos\basicscaling\ketch.scale-180.png" />
     <Content Include="$(MSBuildThisFileDirectory)demos\basicscaling\ketch_big.png" />
     <Content Include="$(MSBuildThisFileDirectory)demos\basicscaling\ketch_small.png" />
+    <Content Include="$(MSBuildThisFileDirectory)demos\borderradius\borderradius.css" />
+    <Content Include="$(MSBuildThisFileDirectory)demos\borderradius\borderradius.html" />
+    <Content Include="$(MSBuildThisFileDirectory)demos\borderradius\borderradius.json" />
     <Content Include="$(MSBuildThisFileDirectory)demos\circle\circle.css" />
     <Content Include="$(MSBuildThisFileDirectory)demos\circle\circle.html" />
     <Content Include="$(MSBuildThisFileDirectory)demos\circle\circle.js" />
