@@ -1,0 +1,8 @@
+{
+    "title": "User Data",
+    "group": "Storage",
+    "keywords":["local storage","data","user","users"],
+    "description": "Technique for storing user data",
+    "author": "Jeremy Foster",
+    "dateCreated": "2013/01/01"
+}

@@ -1,9 +1,9 @@
 ﻿(function () {
     "use strict";
 
-    WinJS.UI.Pages.define("/demos/storage/userdata/userdata.html", {
+    WinJS.UI.Pages.define("/demos/userdata/userdata.html", {
         ready: function (element, options) {
-            var userData = document.querySelector(".storage .userdata section[role=main]");
+            var userData = element.querySelector("section[role=main]");
             userData.querySelector("button").onclick = function (e) {
                 var savePicker = new Windows.Storage.Pickers.FileSavePicker();
                 savePicker.suggestedStartLocation = Windows.Storage.Pickers.PickerLocationId.documentsLibrary;

@@ -1,0 +1,8 @@
+{
+    "title": "App Data",
+    "group": "Storage",
+    "keywords":["local storage","data"],
+    "description": "Use built-in local and roaming storage to save app data",
+    "author": "Jeremy Foster",
+    "dateCreated": "2013/01/01"
+}
