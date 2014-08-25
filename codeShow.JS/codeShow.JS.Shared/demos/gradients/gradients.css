@@ -1,0 +1,23 @@
+﻿.gradients section div {
+    border:solid 1px darkgray;
+    padding:20px;
+    width:400px;
+    height:100px;
+}
+
+.gradients section div:nth-child(1) {
+    background:-ms-linear-gradient(left,darkgray,white);
+}
+
+.gradients section div:nth-child(2) {
+    background:repeating-linear-gradient(to right,darkgray, white 30px, darkgray 50px);
+}
+
+.gradients section div:nth-child(3) {
+    background:radial-gradient(darkgray, white);
+}
+
+.gradients section div:nth-child(4) {
+    background:repeating-radial-gradient(closest-side circle at 40px 50px, lightgray, darkgray, lightgray);
+}
+

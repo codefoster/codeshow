@@ -46,6 +46,14 @@
     <Content Include="$(MSBuildThisFileDirectory)demos\basicscaling\ketch.scale-180.png" />
     <Content Include="$(MSBuildThisFileDirectory)demos\basicscaling\ketch_big.png" />
     <Content Include="$(MSBuildThisFileDirectory)demos\basicscaling\ketch_small.png" />
+    <Content Include="$(MSBuildThisFileDirectory)demos\fontface\fontface.json" />
+    <Content Include="$(MSBuildThisFileDirectory)demos\fontface\fontface.css" />
+    <Content Include="$(MSBuildThisFileDirectory)demos\fontface\fontface.html" />
+    <Content Include="$(MSBuildThisFileDirectory)demos\fontface\geobats.ttf" />
+    <Content Include="$(MSBuildThisFileDirectory)demos\fontface\GoodDog.otf" />
+    <Content Include="$(MSBuildThisFileDirectory)demos\gradients\gradients.css" />
+    <Content Include="$(MSBuildThisFileDirectory)demos\gradients\gradients.html" />
+    <Content Include="$(MSBuildThisFileDirectory)demos\gradients\gradients.json" />
     <Content Include="$(MSBuildThisFileDirectory)demos\borderradius\borderradius.css" />
     <Content Include="$(MSBuildThisFileDirectory)demos\borderradius\borderradius.html" />
     <Content Include="$(MSBuildThisFileDirectory)demos\borderradius\borderradius.json" />
@@ -652,7 +660,6 @@
     <PRIResource Include="$(MSBuildThisFileDirectory)strings\en-US\resources.resjson" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="$(MSBuildThisFileDirectory)demos\flotr\" />
     <Folder Include="$(MSBuildThisFileDirectory)demos\htmlfragment\" />
     <Folder Include="$(MSBuildThisFileDirectory)demos\responsive\" />
   </ItemGroup>
