@@ -1,9 +1,9 @@
 ﻿(function () {
     "use strict";
 
-    WinJS.UI.Pages.define("/demos/storage/wams/wams.html", {
+    WinJS.UI.Pages.define("/demos/wamsstorage/wamsstorage.html", {
         ready: function (element, options) {
-            var inputAzure = element.querySelector(".storage .wams section[role=main] input");
+            var inputAzure = element.querySelector("section[role=main] input");
             var storagedemo;
             codeshowClient.getTable("appSupport").read()
                 .then(
@@ -13,7 +13,7 @@
                 .then(
                     function () { inputAzure.value = storagedemo.value; }
                 );
-            element.querySelector(".storage .wams section[role=main] button").onclick = function (e) {
+            element.querySelector("section[role=main] button").onclick = function (e) {
                 storagedemo.value = inputAzure.value;
                 codeshowClient.getTable("appSupport").update(storagedemo);
             };

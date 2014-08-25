@@ -1,0 +1,8 @@
+{
+    "title": "Azure Mobile Services Data Storage",
+    "group": "Storage",
+    "keywords":["local storage","data","wams","azure","mobile services"],
+    "description": "Azure Mobile Services is a great place to store some shared app data",
+    "author": "Jeremy Foster",
+    "dateCreated": "2013/01/01"
+}

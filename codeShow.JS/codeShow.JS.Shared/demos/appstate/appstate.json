@@ -1,0 +1,8 @@
+{
+    "title": "Storing App State",
+    "group": "Storage",
+    "keywords":["local storage","data","state"],
+    "description": "Store app state so it can be suspended and resumed seemlessly",
+    "author": "Jeremy Foster",
+    "dateCreated": "2013/01/01"
+}
