@@ -4,16 +4,10 @@
     <meta charset="utf-8" />
     <title>Folders/Albums</title>
 
-    <script src="getfolders.js"></script>
+    <script src="onedrivefolders.js"></script>
 </head>
 <body>
-    <div class="getfolders fragment">
-        <header class="page-header" aria-label="Header content" role="banner">
-            <button class="back-button" data-win-control="WinJS.UI.BackButton"></button>
-            <h1 class="titlearea win-type-ellipsis">
-                <span class="pagetitle">Folders/Albums</span>
-            </h1>
-        </header>
+    <div class="onedrivefolders fragment">
         <section aria-label="Main content" role="main">
             <div class="explanation">Get the list of all folders/albums in your OneDrive</div>
             <div>
@@ -21,8 +15,7 @@
             </div>
             <div>
                 <p id="folderStatus"></p>
-                <ul id="folderList">
-                </ul>
+                <ul id="folderList"></ul>
             </div>
         </section>
     </div>

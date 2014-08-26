@@ -1,0 +1,8 @@
+﻿{
+    "title": "OneDrive Push File",
+    "group": "OneDrive",
+	"keywords":["onedrive","live","skydrive","cloud"],
+	"description": "Save a file up to your OneDrive",
+	"author": "Iqaan Ullah",
+	"dateCreated": "2014/04/19"
+}

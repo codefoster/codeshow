@@ -1,7 +1,7 @@
 ﻿(function () {
     "use strict";
 
-    WinJS.UI.Pages.define("/demos/onedrive/pushfile/pushfile.html", {
+    WinJS.UI.Pages.define("/demos/onedrivepushfile/onedrivepushfile.html", {
         ready: function (element, options) {
             WL.init();
 
