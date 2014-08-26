@@ -22,8 +22,8 @@
         ready: function (element, options) {
             // TODO: Initialize the page here.
 
-            var pbutton = domButton;
-            var title = domTitle;
+            var pbutton = document.getElementById("domButton");
+            var title = document.getElementById("domTitle");
 
             container = domContainer;
 
