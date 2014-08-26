@@ -52,6 +52,9 @@
     <Content Include="$(MSBuildThisFileDirectory)demos\basicscaling\ketch.scale-180.png" />
     <Content Include="$(MSBuildThisFileDirectory)demos\basicscaling\ketch_big.png" />
     <Content Include="$(MSBuildThisFileDirectory)demos\basicscaling\ketch_small.png" />
+    <Content Include="$(MSBuildThisFileDirectory)demos\webgl\webgl.html" />
+    <Content Include="$(MSBuildThisFileDirectory)demos\webgl\webgl.js" />
+    <Content Include="$(MSBuildThisFileDirectory)demos\webgl\webgl.json" />
     <Content Include="$(MSBuildThisFileDirectory)demos\localStorage\localStorage.html" />
     <Content Include="$(MSBuildThisFileDirectory)demos\localStorage\localStorage.js" />
     <Content Include="$(MSBuildThisFileDirectory)demos\localStorage\localStorage.json" />
