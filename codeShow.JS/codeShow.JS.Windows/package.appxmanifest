@@ -58,5 +58,6 @@
     <DeviceCapability Name="webcam" />
     <DeviceCapability Name="microphone" />
     <DeviceCapability Name="location" />
+    <DeviceCapability Name="proximity" />
   </Capabilities>
 </Package>

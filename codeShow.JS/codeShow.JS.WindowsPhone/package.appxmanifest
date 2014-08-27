@@ -29,5 +29,6 @@
     <m3:Capability Name="appointments" />
     <DeviceCapability Name="microphone" />
     <DeviceCapability Name="webcam" />
+    <DeviceCapability Name="proximity" />
   </Capabilities>
 </Package>

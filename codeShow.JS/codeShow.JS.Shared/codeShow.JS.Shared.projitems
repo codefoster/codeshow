@@ -52,6 +52,16 @@
     <Content Include="$(MSBuildThisFileDirectory)demos\basicscaling\ketch.scale-180.png" />
     <Content Include="$(MSBuildThisFileDirectory)demos\basicscaling\ketch_big.png" />
     <Content Include="$(MSBuildThisFileDirectory)demos\basicscaling\ketch_small.png" />
+    <Content Include="$(MSBuildThisFileDirectory)demos\httpclient\httpclient.css" />
+    <Content Include="$(MSBuildThisFileDirectory)demos\httpclient\httpclient.html" />
+    <Content Include="$(MSBuildThisFileDirectory)demos\httpclient\httpclient.js" />
+    <Content Include="$(MSBuildThisFileDirectory)demos\httpclient\httpclient.json" />
+    <Content Include="$(MSBuildThisFileDirectory)demos\itemcontainer\itemcontainer.css" />
+    <Content Include="$(MSBuildThisFileDirectory)demos\itemcontainer\itemcontainer.html" />
+    <Content Include="$(MSBuildThisFileDirectory)demos\proximity\proximity.html" />
+    <Content Include="$(MSBuildThisFileDirectory)demos\proximity\proximity.js" />
+    <Content Include="$(MSBuildThisFileDirectory)demos\proximity\proximity.json" />
+    <Content Include="$(MSBuildThisFileDirectory)demos\rating\rating.html" />
     <Content Include="$(MSBuildThisFileDirectory)demos\webgl\webgl.html" />
     <Content Include="$(MSBuildThisFileDirectory)demos\webgl\webgl.js" />
     <Content Include="$(MSBuildThisFileDirectory)demos\webgl\webgl.json" />
@@ -351,8 +361,6 @@
     <Content Include="$(MSBuildThisFileDirectory)demos\htmltotext\htmltotext.json" />
     <Content Include="$(MSBuildThisFileDirectory)demos\iframes\iframes.json" />
     <Content Include="$(MSBuildThisFileDirectory)demos\itemcontainer\itemcontainer.json" />
-    <Content Include="$(MSBuildThisFileDirectory)demos\itemcontainer\simple\simple.css" />
-    <Content Include="$(MSBuildThisFileDirectory)demos\itemcontainer\simple\simple.html" />
     <Content Include="$(MSBuildThisFileDirectory)demos\jsonFcts\jsonFcts.html" />
     <Content Include="$(MSBuildThisFileDirectory)demos\jsonFcts\jsonFcts.js" />
     <Content Include="$(MSBuildThisFileDirectory)demos\jsonFcts\jsonFcts.json" />
@@ -455,7 +463,6 @@
     <Content Include="$(MSBuildThisFileDirectory)demos\properties\properties.js" />
     <Content Include="$(MSBuildThisFileDirectory)demos\properties\properties.json" />
     <Content Include="$(MSBuildThisFileDirectory)demos\rating\rating.json" />
-    <Content Include="$(MSBuildThisFileDirectory)demos\rating\simple\simple.html" />
     <Content Include="$(MSBuildThisFileDirectory)demos\repeater\repeater.html" />
     <Content Include="$(MSBuildThisFileDirectory)demos\repeater\repeater.js" />
     <Content Include="$(MSBuildThisFileDirectory)demos\responsive\responsive.css" />
