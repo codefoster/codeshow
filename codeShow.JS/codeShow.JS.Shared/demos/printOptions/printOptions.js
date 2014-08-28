@@ -3,37 +3,20 @@
 
     var isPrintTaskRequestedHandled = false;
     var printManager = Windows.Graphics.Printing.PrintManager;
+    var pageElement = null;
 
-    WinJS.UI.Pages.define("/demos/print/toggle/toggle.html", {
+    WinJS.UI.Pages.define("/demos/printOptions/printOptions.html", {
         ready: function (element, options) {
-            q("#togglePrint").onclick = togglePrint;
-        
+            pageElement = element;
+            pageElement.querySelector("#printWithOptions").onclick = printWithOptions;
             updatePrintDisplay() 
         }
     });
 
     function updatePrintDisplay() {
-        printStatus.innerText = isPrintTaskRequestedHandled ? "Registered" : "Unregistered";
+        pageElement.querySelector("#printStatus").innerText = isPrintTaskRequestedHandled ? "Print task registered with completion task" : "No print task registered for completion event";
     }
 
-    function togglePrint() {
-        var printer = printManager.getForCurrentView();
-        isPrintTaskRequestedHandled = !isPrintTaskRequestedHandled;
-        if (isPrintTaskRequestedHandled) {
-            printer.onprinttaskrequested = printDoc;
-        } else {
-            printer.onprinttaskrequested = null;
-        }
-        updatePrintDisplay();
-    }
-
-    function invokePrint() {
-        var printer = printManager.getForCurrentView();
-        printer.onprinttaskrequested = printFrag;
-        isPrintTaskRequestedHandled = true;
-        updatePrintDisplay();
-        printManager.showPrintUIAsync();
-    }
 
     function printWithOptions() {
         var printer = printManager.getForCurrentView();
@@ -51,15 +34,6 @@
         });
     }
 
-    function printFrag(printEvent) {
-        var printTask = printEvent.request.createPrintTask("codeShow Print Frag", function (args) {
-            var frag = document.createDocumentFragment();
-            frag.appendChild(q(".print #printFromApp").cloneNode(true));
-            args.setSource(MSApp.getHtmlPrintDocumentSource(frag));
-            // Register the handler for print task completion event
-            printTask.oncompleted = printTaskCompleted;
-        });
-    }
 
     function printFragWithOptions(printEvent) {
         var printTask = printEvent.request.createPrintTask("codeShow Print Options", function (args) {
