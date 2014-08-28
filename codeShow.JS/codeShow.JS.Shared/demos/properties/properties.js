@@ -10,7 +10,7 @@
                 square2: { color: "blue", width: "200px", height: "200px" },
             };
             
-            WinJS.Binding.processAll(q("section[role=mail]"), squares);
+            WinJS.Binding.processAll(document.querySelector("section[role=mail]"), squares);
         }
     });
 })();

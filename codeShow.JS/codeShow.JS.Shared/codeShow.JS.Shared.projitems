@@ -341,7 +341,9 @@
     <Content Include="$(MSBuildThisFileDirectory)demos\html5audio\apollo_11_dsc2.mp3" />
     <Content Include="$(MSBuildThisFileDirectory)demos\html5audio\html5audio.html" />
     <Content Include="$(MSBuildThisFileDirectory)demos\html5audio\html5audio.json" />
-    <Content Include="$(MSBuildThisFileDirectory)demos\html5video\butterfly.mp4" />
+    <Content Include="$(MSBuildThisFileDirectory)demos\html5video\butterfly.mp4">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="$(MSBuildThisFileDirectory)demos\html5video\html5video.css" />
     <Content Include="$(MSBuildThisFileDirectory)demos\html5video\html5video.html" />
     <Content Include="$(MSBuildThisFileDirectory)demos\html5video\html5video.json" />
