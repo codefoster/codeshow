@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/2010/manifest" xmlns:m2="http://schemas.microsoft.com/appx/2013/manifest" xmlns:m3="http://schemas.microsoft.com/appx/2014/manifest" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest">
-  <Identity Name="0c11ea8e-9b78-4a97-9f55-c96df246ef70" Version="1.0.0.0" Publisher="CN=jerfost" />
-  <mp:PhoneIdentity PhoneProductId="0c11ea8e-9b78-4a97-9f55-c96df246ef70" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
+  <Identity Name="36805codefoster.codeSHOW" Version="1.1.0.0" Publisher="CN=603A18C8-7F37-48CF-B16C-FED79B9AEA66" />
+  <mp:PhoneIdentity PhoneProductId="509cdbe6-06d6-4cb0-b344-dfa622abdde5" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
     <DisplayName>codeShow JavaScript</DisplayName>
-    <PublisherDisplayName>jerfost</PublisherDisplayName>
+    <PublisherDisplayName>codefoster</PublisherDisplayName>
     <Logo>images\StoreLogo.png</Logo>
   </Properties>
   <Prerequisites>
