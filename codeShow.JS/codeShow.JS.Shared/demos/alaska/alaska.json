@@ -1,0 +1,8 @@
+{
+    "title": "Alaska",
+    "group": "D3",
+    "keywords": [ "data", "driven", "documents", "d3" ],
+    "description": "Use D3 to programmatically draw the state of Alaska's borders",
+    "author": "Jeremy Foster",
+    "dateCreated": "2013/08/01"
+}

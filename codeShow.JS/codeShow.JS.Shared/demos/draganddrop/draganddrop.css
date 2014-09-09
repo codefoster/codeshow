@@ -1,0 +1,17 @@
+﻿.draganddrop .explanation { width: 800px; }
+
+.draganddrop .win-listview {
+    border: 2px solid lightgray;
+    background-color: white;
+    height: 460px;
+    width: 800px;
+}
+
+.draganddrop .win-item img  {
+    width: 215px;
+    height: 153px;
+}
+
+.draganddrop .win-item h3 {
+    height: 50px;
+}

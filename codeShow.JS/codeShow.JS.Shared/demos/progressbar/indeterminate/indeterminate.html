@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Indeterminate</title>
+
+    <link href="indeterminate.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="indeterminate fragment">
+        <header aria-label="Header content" role="banner">
+            <button data-win-control="WinJS.UI.BackButton"></button>
+            <h1 class="titlearea win-type-ellipsis">
+                <span class="pagetitle">Welcome to indeterminate</span>
+            </h1>
+        </header>
+        <section aria-label="Main content" role="main">
+            <div class="explanation">Use an indeterminate progress bar or ring to indicate that a task is running when you can't be sure when it will finish.</div>
+            <h3>Bar</h3>
+            <progress></progress>
+
+            <h3>Ring</h3>
+            <progress class="win-ring"></progress>
+
+            <h3>Ring with text</h3>
+            <label class="progressRingText"><progress class="win-ring withText"></progress> Working</label>
+        </section>
+    </div>
+</body>
+</html>

@@ -1,0 +1,16 @@
+﻿.promiseuses progress {
+    width: 400px;
+    height: 20px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.promiseuses > div {
+    columns: 2;
+}
+
+.promiseuses section[role=main] button {
+    margin-right: 10px;
+}
+
+.promiseuses div:not(:first-child) > h3 {margin-top: 20px; }

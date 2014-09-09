@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>layout</title>
+
+    <link href="layout.css" rel="stylesheet" />
+    <script src="layout.js"></script>
+</head>
+<body>
+    <div class="layout fragment">
+        <section class="page-section" aria-label="Main content" role="main">
+            <div class="flow">
+                <h2>Flow Layout</h2>
+                <p>Microsoft Bob <img src="bob.png"/> was a 1995 Microsoft software product, intended to provide a more user-friendly interface for the Windows 3.1x, Windows 95 and Windows NT operating systems, supplanting the Windows Program Manager. Microsoft Bob presented screens showing a "house", with "rooms" that the user could go to containing familiar objects corresponding to computer applications – for instance, a desk with pen and paper, a checkbook, and other items. Clicking on the pen and paper would open the word processor, and so forth. A cartoon dog named Rover and other cartoon characters provided guidance using speech balloons.</p>
+            </div>
+            <div class="table">
+                <h2>Table Layout</h2>
+                <table>
+                    <tr>
+                        <td>top left</td>
+                        <td>top right</td>
+                        <td rowspan="2">merged cell</td>
+                        <td rowspan="2">
+                            <table>
+                                <tr>
+                                    <td>this</td>
+                                    <td>is a</td>
+                                </tr>
+                                <tr>
+                                    <td>nested</td>
+                                    <td>table</td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>bottom left</td>
+                        <td>bottom right</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="absolute">
+                <h2>Absolute/Relative Positioning</h2>
+                <p>In this sentence, the word <span class="bump">bump</span> is positioned relative to where it would otherwise be rendered. Press the button below to change the words layout to <i>absolute</i> instead. Notice that the position of the word is changed and that it's taken out of the flow of where it was at.</p>
+                <button class="changeBumpPosition">Absolute</button>
+            </div>
+            <div class="float">
+                <h2>Float</h2>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="flex">
+                <h2>Flex Box</h2>
+                <div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+            <div class="grid">
+                <h2>Grid</h2>
+                <div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

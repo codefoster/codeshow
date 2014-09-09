@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Click vs. MSPointer</title>
+
+    <link href="clickpoint.css" rel="stylesheet" />
+    <script src="clickpoint.js"></script>
+</head>
+<body>
+    <div class="clickpoint fragment">
+        <header aria-label="Header content" role="banner">
+            <button data-win-control="WinJS.UI.BackButton"></button>
+            <h1 class="titlearea win-type-ellipsis">
+                <span class="pagetitle">Welcome to clickpoint</span>
+            </h1>
+        </header>
+        <section aria-label="Main content" role="main">
+            <div class="explanation">
+                Use your finger, your pen, and your mouse to touch the two boxes and see how your input is captured. The first box uses a simple click DOM event. The second uses pointer events and can distinguish between input devices.
+            </div>
+            <div id="parent">
+                <div class="target"></div>
+                <div class="target"></div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

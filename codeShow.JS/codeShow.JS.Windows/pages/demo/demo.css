@@ -1,95 +1,59 @@
-﻿.demo .fragment {
-    display: block; /* don't apply the grid that most page fragments have */
+﻿.demo .section {
+ }
+
+.demo .section.demo .win-hub-section-content {
+    /*border:dashed 2px rgba(0,0,0,0.1);*/
 }
 
-.demo .viewtoggle {
-    color:gray;
-    cursor:pointer;
-}
-
-.demo .padleft {
-    padding-left:120px;
-    width:calc(100% - 120px);
-}
-
-/* Swipe sections */
-.demo .swipeContainer {
-    display:flex;
-    width: auto;
-    -ms-scroll-snap-x: mandatory snapInterval(0%, 80%);
-    overflow-x: scroll;
-    overflow-y: hidden;
-}
-
-    .demo .swipeContainer .swipeSection {
-        box-sizing: border-box; /* include padding in section size */
-        width: 80%;
-        padding-right: 80px; /* space between sections */
-        flex: none;
-        overflow: hidden;
-        padding-bottom: 20px; /* room for scrollbar */
+    .demo .section.demo .explanation {
+        max-width:80vw;
     }
 
-    .demo .swipeContainer .swipeSection:last-of-type {
-        width:100%;
-    }
-
-.demo .demoview {
-    height:100%;
+.demo .section.file {
 }
-
-.demo .codeview {
-    height:100%;
-}
-
-.demo .codeview #codeViewNoSections {
-    height:100%;
-}
-
-    .demo .codeview #codeViewNoSections .codearea {
+    .demo .section.file textarea{
+        width:700px;
         height:100%;
+        font-family:consolas,'courier new';
     }
 
-        .demo .codeview #codeViewNoSections .codearea textarea {
-            font-family: Consolas, monospace;
-            height:80%;
-            width:100%;
-        }
-
-.demo .demosection > h2 {
-    margin-bottom:20px;
+.demo .section.demo header {
+    display: none;
 }
 
-.demo .codeview ul.sectionmenu {
-    list-style-type:none;
-    display:flex;
-    flex-direction:row;
-    margin-left:128px;
-    margin-top:-16px;
-    padding-left:0px;
+.sections .win-hub-section-header {
+    margin-top:0;
 }
 
-    .demo .codeview ul.sectionmenu li {
-        padding-left:0px;
-        padding-right:50px;
-    }
-
-
-.demo .codeview #codeViewWithSections {
-    height:100%;
+.demo .fragment {
+	display: block;
+	height: 100%;
+	width: 100%;
 }
 
-    .demo .codeview #codeViewWithSections .codearea {
-        height:100%;
-    }
+	.demo .fragment section[role=main] {
+		height: 100%;
+	}
 
-        .demo .codeview #codeViewWithSections .codearea .sectioncode {
-            height:100%;
-        }
+/*.phone .demo .page-section {
+	margin: auto 24px;
+}
 
-        .demo .codeview #codeViewWithSections .codearea textarea {
-            font-family: Consolas, monospace;
-            height:80%;
-            width:100%;
-            overflow:scroll;
-        }
+.phone .demo .page-header .titlearea {
+	-ms-grid-column: 1;
+	margin-top: 37px;
+	margin-left: 24px;
+	font-size: 28pt;
+	width: calc(100vw - 20px);
+}
+
+.phone .demo .back-button {
+	display: none;
+}
+
+
+
+.sections .win-hub-surface {
+    padding: 0;
+    margin-left: 80px;
+}*/

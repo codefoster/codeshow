@@ -359,11 +359,9 @@
     <MainPackageIdentityName>36805codefoster.codefoster</MainPackageIdentityName>
     <MainPackageIdentityName>36805codefoster.CodeShowC</MainPackageIdentityName>
     <MainPackageIdentityName>36805codefoster.CSSforWindows8AppDevelopment</MainPackageIdentityName>
-    <MainPackageIdentityName>36805codefoster.Dribble</MainPackageIdentityName>
     <MainPackageIdentityName>36805codefoster.Everyview</MainPackageIdentityName>
     <MainPackageIdentityName>36805codefoster.KidSuite</MainPackageIdentityName>
     <MainPackageIdentityName>36805codefoster.KidSuitePop</MainPackageIdentityName>
-    <MainPackageIdentityName>36805codefoster.TaterTots</MainPackageIdentityName>
     <MainPackageIdentityName>36805codefoster.TheSailingApp</MainPackageIdentityName>
     <MainPackageIdentityName>36805codefoster.WAGE</MainPackageIdentityName>
   </AccountPackageIdentityNames>
@@ -387,27 +385,27 @@
       <PackageInfo>
         <OsMinVersion>6.3.0.0</OsMinVersion>
         <PackageArchitecture>X86</PackageArchitecture>
-        <PackageMaxArchitectureVersion>2.1.0.32</PackageMaxArchitectureVersion>
+        <PackageMaxArchitectureVersion>2.1.1.33</PackageMaxArchitectureVersion>
       </PackageInfo>
       <PackageInfo>
         <OsMinVersion>6.3.0.0</OsMinVersion>
         <PackageArchitecture>X64</PackageArchitecture>
-        <PackageMaxArchitectureVersion>2.1.0.32</PackageMaxArchitectureVersion>
+        <PackageMaxArchitectureVersion>2.1.1.33</PackageMaxArchitectureVersion>
       </PackageInfo>
       <PackageInfo>
         <OsMinVersion>6.3.0.0</OsMinVersion>
         <PackageArchitecture>Neutral</PackageArchitecture>
-        <PackageMaxArchitectureVersion>2.1.0.32</PackageMaxArchitectureVersion>
+        <PackageMaxArchitectureVersion>2.1.1.33</PackageMaxArchitectureVersion>
       </PackageInfo>
       <PackageInfo>
         <OsMinVersion>6.3.0.0</OsMinVersion>
         <PackageArchitecture>Neutral</PackageArchitecture>
-        <PackageMaxArchitectureVersion>2.1.0.32</PackageMaxArchitectureVersion>
+        <PackageMaxArchitectureVersion>2.1.1.33</PackageMaxArchitectureVersion>
       </PackageInfo>
       <PackageInfo>
         <OsMinVersion>6.3.0.0</OsMinVersion>
         <PackageArchitecture>ARM</PackageArchitecture>
-        <PackageMaxArchitectureVersion>2.1.0.32</PackageMaxArchitectureVersion>
+        <PackageMaxArchitectureVersion>2.1.1.33</PackageMaxArchitectureVersion>
       </PackageInfo>
     </BundleInfo>
   </PackageInfoList>

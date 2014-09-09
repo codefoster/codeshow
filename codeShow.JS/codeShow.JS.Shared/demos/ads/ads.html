@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Windows Ad SDK</title>
+</head>
+<body>
+    <div class="ads fragment">
+        <header aria-label="Header content" role="banner">
+            <button data-win-control="WinJS.UI.BackButton"></button>
+            <h1 class="titlearea win-type-ellipsis">
+                <span class="pagetitle">Ads</span>
+            </h1>
+        </header>,
+        <section aria-label="Main content" role="main">
+            <div>
+                <h2>Basic ad inclusion</h2>
+                <div class="explanation">After installing the ad SDK, including an ad in your app isn't rocket science.</div>
+                
+                <div id="Div1" style="width: 250px; height: 250px; border: solid 1px gray;"
+                     data-win-control="MicrosoftNSJS.Advertising.AdControl"
+                     data-win-options="{applicationId: '3c06b691-f5b0-435f-ae15-3aacf7ce79bb', adUnitId: '10049594'}">
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

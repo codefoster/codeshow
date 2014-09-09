@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Simple</title>
+
+    <link href="simplelistview.css" rel="stylesheet" />
+    <script src="simplelistview.js"></script>
+</head>
+<body>
+    <div class="simplelistview fragment">
+        <section aria-label="Main content" role="main">
+            <div class="explanation">Here's a super simple ListView. This uses a local JavaScript array data to populate a WinJS.Binding.List and then binds the ListView to that.</div>
+            <div class="itemtemplate" data-win-control="WinJS.Binding.Template">
+                <div>
+                    <img data-win-bind="src:imageUrl" />
+                    <h3 data-win-bind="innerText:name"></h3>
+                </div>
+            </div>
+            <div data-win-control="WinJS.UI.ListView" data-win-options="{
+                itemDataSource: codeShow.Demos.simplelistview.attractionsList.dataSource,
+                itemTemplate: select('.itemtemplate')
+            }"
+                ></div>
+        </section>
+    </div>
+</body>
+</html>

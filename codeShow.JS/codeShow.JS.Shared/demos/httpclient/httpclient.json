@@ -1,0 +1,7 @@
+{
+    "title": "HttpClient",
+    "keywords":["xhr","web service","service","ajax","http","client","request","response"],
+    "description": "The HttpClient API has some advantages over using XHR to call for network resources",
+    "author": "Jeremy Foster",
+    "dateCreated": "2014/08/20"
+}

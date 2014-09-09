@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>App Bar (declarative)</title>
+
+    <script src="appbar2.js"></script>
+</head>
+<body>
+    <div class="appbar2 fragment">
+        <header aria-label="Header content" role="banner">
+            <button data-win-control="WinJS.UI.BackButton"></button>
+            <h1 class="titlearea win-type-ellipsis">
+                <span class="pagetitle">Declarative App bar</span>
+            </h1>
+        </header>
+        <section aria-label="Main content" role="main">
+            <div class="explanation">
+                This page declares an app bar. Open your app bar to see the buttons that were created.
+            </div>
+        </section>
+
+        <div id="declarativeAppBar" data-win-control="WinJS.UI.AppBar" data-win-options="">
+            <button
+                data-win-control="WinJS.UI.AppBarCommand"
+                data-win-options="{id:'cmdAdd',label:'Add',icon:'add', section:'global',tooltip:'Add item'}"></button>
+            <button
+                data-win-control="WinJS.UI.AppBarCommand"
+                data-win-options="{id:'cmdRemove',label:'Remove',icon:'remove', section:'global',tooltip:'Remove item'}"
+                onclick="appbar2.remove()"></button>
+            <hr 
+                data-win-control="WinJS.UI.AppBarCommand" 
+                data-win-options="{type:'separator',section:'global'}" />
+            <button 
+                data-win-control="WinJS.UI.AppBarCommand" 
+                data-win-options="{id:'cmdDelete',label:'Delete',icon:'delete', section:'global',tooltip:'Delete item'}"></button>
+            <button 
+                data-win-control="WinJS.UI.AppBarCommand" 
+                data-win-options="{id:'cmdCamera',label:'Camera',icon:'camera', section:'selection',tooltip:'Take a picture'}"></button>
+        </div>
+
+    </div>
+</body>
+</html>

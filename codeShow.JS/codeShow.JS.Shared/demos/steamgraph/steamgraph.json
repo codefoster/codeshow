@@ -1,0 +1,13 @@
+{
+    "title": "D3",
+    "keywords":["data","driven","documents","d3"],
+    "description": "See some examples of the powerful D3JS JavaScript library plugged in to a Windows 8 app.",
+    "author": "Jeremy Foster",
+    "dateCreated": "2013/08/01",
+	"enabled":true,
+	"sections":[
+		{"name":"forcedirected"},
+		{"name":"alaska"},
+		{"name":"chorddiagram"}
+	]
+}

@@ -1,0 +1,9 @@
+﻿{
+    "title": "AppBar Command Buttons",
+    "group": "App Bar",
+	"keywords":["app","bar","appbar","applicationbar","application"],
+	"description": "Create an app bar using JavaScript so it's easier to populate and manipulate conditionally.",
+	"author": "Jeremy Foster",
+	"dateCreated": "2012/10/01",
+	"suppressAppBar":true
+}

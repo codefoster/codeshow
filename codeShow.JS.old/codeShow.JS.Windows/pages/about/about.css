@@ -1,0 +1,10 @@
+﻿.about #aboutDiv .win-header { background-color:#375369; padding-bottom:20px;}
+
+.about .title {
+    font-family: "gooddog";
+    font-size: 58px;
+}
+    .about .title .titleCode { color: #34435a; }
+    .about .title .titleShow { color: #5e83a2; }
+
+.about .win-content { }

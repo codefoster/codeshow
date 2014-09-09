@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Simple</title>
+</head>
+<body>
+    <div class="simple fragment">
+        <header aria-label="Header content" role="banner">
+            <button data-win-control="WinJS.UI.BackButton"></button>
+            <h1 class="titlearea win-type-ellipsis">
+                <span class="pagetitle">Welcome to simple</span>
+            </h1>
+        </header>
+        <section aria-label="Main content" role="main">
+            <div class="explanation">
+                Right click, press Win+Z, or swipe down from the top of the screen to show the simple NavBar control in action.
+            </div>
+            <div id="NavBar" data-win-control="WinJS.UI.NavBar">
+                <div id="GlobalNav" data-win-control="WinJS.UI.NavBarContainer">
+                    <div data-win-control="WinJS.UI.NavBarCommand" data-win-options="{
+                        label: 'Home',
+                        icon: WinJS.UI.AppBarIcon.home,
+                        location: '/pages/hub/hub.html',
+                        splitButton: false
+                        }">
+                    </div>
+                    <div data-win-control="WinJS.UI.NavBarCommand" data-win-options="{
+                        label: 'Demos',
+                        icon: WinJS.UI.AppBarIcon.gotostart,
+                        location: '/pages/hub/hub.html',
+                        splitButton: false
+                        }">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

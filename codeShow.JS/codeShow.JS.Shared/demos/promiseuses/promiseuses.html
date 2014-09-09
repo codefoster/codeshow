@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Uses</title>
+
+    <link href="promiseuses.css" rel="stylesheet" />
+    <script src="promiseuses.js"></script>
+</head>
+<body>
+    <div class="promiseuses fragment">
+        <section aria-label="Main content" role="main">
+            <div>
+                <div class="method1">
+                    <h3>Consuming a promise</h3>
+                    <div class="explanation">Implement the common scenario of consuming a promise and defining a function to be called when the promise is complete.</div>
+                    <progress value="0" max="100"></progress>
+                    <button class="start">Start</button><button class="reset">Reset</button>
+                </div>
+
+                <div class="method2">
+                    <h3>Passing on a promise</h3>
+                    <div class="explanation">Create a function that is async because it itself calls an async function and merely passes its promise to the caller.</div>
+                    <progress value="0" max="100"></progress>
+                    <button class="start">Start</button><button class="reset">Reset</button>
+                </div>
+
+                <div class="method3">
+                    <h3>Creating a promise</h3>
+                    <div class="explanation">Create and return a new promise from a function and get complete control over it.</div>
+                    <progress value="0" max="100"></progress>
+                    <button class="start">Start</button><button class="reset">Reset</button>
+                </div>
+
+                <div class="method4">
+                    <h3>Storing a promise</h3>
+                    <div class="explanation">Store a promise returned by an async function and later access that stored promise.</div>
+                    <progress value="0" max="100"></progress>
+                    <button class="start">Start</button><button class="reset">Reset</button>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

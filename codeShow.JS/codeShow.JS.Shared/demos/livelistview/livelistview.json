@@ -1,0 +1,8 @@
+{
+	"title": "Live Bound ListView",
+    "group": "ListViews",
+    "keywords":["list","view","items","tile","tiles","listview","live","binding","bind"],
+    "description": "Watch a ListView bound to live (changing) data",
+    "author": "Jeremy Foster",
+    "dateCreated": "2012/10/01"
+}

@@ -1,0 +1,8 @@
+{
+	"title": "Flex Your Items",
+    "group": "CSS Flexbox",
+    "keywords":["flex","box","flexbox","layout","css"],
+    "description": "In the CSS flexbox model, items can be told how and when to grow or shrink",
+    "author": "Jeremy Foster",
+    "dateCreated": "2013/1/1"
+}

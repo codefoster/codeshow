@@ -1,0 +1,7 @@
+﻿{
+    "title": "Convert Number Base",
+	"keywords":["convert","base","number","binary","decimal","color","hex"],
+	"description": "Conversion of binary, decimal, hexadecimal, octal numbers. And a color converter too",
+	"author": "Iqaan Ullah",
+	"dateCreated": "2014/04/20"
+}

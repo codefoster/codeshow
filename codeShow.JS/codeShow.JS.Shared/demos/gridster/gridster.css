@@ -1,0 +1,8 @@
+﻿.gridster .gridster { width:920px; }
+.gridster .gridster ul {
+    list-style-type:none;
+}
+
+.gridster .gridster ul li {
+    background-color:#436580;
+} 

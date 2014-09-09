@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Player Framework</title>
+
+    <!-- PlayerFramework references -->
+    <link href="/Microsoft.PlayerFramework.Js/css/PlayerFramework-light.css" rel="stylesheet">
+    <script src="/Microsoft.PlayerFramework.Js/js/PlayerFramework.js"></script>
+</head>
+<body>
+    <div class="playerframework fragment">
+        <header aria-label="Header content" role="banner">
+                        <button data-win-control="WinJS.UI.BackButton"></button>
+            <h1 class="titlearea win-type-ellipsis">
+                <span class="pagetitle">Player Framework</span>
+            </h1>
+        </header>
+        <section aria-label="Main content" role="main">
+            <div class="explanation">
+                The Media Player Framework is an open-source component available on a number of technologies including Windows 8 apps using HTML and JavaScript. It's really easy to implement and will make it really simple for you to create a flexible and intelligent video player without being forced to dive into a lot of details.
+            </div>
+            <div data-win-control="PlayerFramework.MediaPlayer"
+                 data-win-options="{ width: 640, height: 360, src: 'http://smf.blob.core.windows.net/samples/videos/wildlife.mp4' }"></div>
+        </section>
+    </div>
+</body>
+</html>

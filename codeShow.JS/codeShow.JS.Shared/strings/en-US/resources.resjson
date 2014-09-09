@@ -1,0 +1,13 @@
+﻿{
+    "DemosSectionHeader": "Demos",
+    "ContributorsSectionHeader": "Contributors",
+    "DemoSectionHeader": "live demo",
+
+    "SourceCode": "Source code",
+    "SourceCodeSectionSubtext": "The complete source code for this application is available online",
+    "SourceCodeSectionDescription": "{ describe how to get to the complete source code on codeplex and why you would want to }",
+
+    "AppsHeader": "Apps",
+    "AppsParagraphHeader": "You're done with your app... now get it seen!",
+    "AppsParagraph": "The apps section in codeShow is intended to help make your app successful. If you've created an app, you can submit your app to be included in codeShow's list and get some visibility for your app. Just visit the apps section and click to add a new one."
+}

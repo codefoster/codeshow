@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script src="/pages/hub/contributorsControl.js"></script>
+    <link href="/pages/hub/contributorsControl.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="fragment contributorscontrol">
+        <section aria-label="Main content" role="main">
+
+            <!-- TEMPLATES -->
+            <div class="contributorTemplate" data-win-control="WinJS.Binding.Template">
+                <img src="#" data-win-bind="src: imageUrl; alt: name" />
+                <div class="item-text">
+                    <div class="win-type-medium" data-win-bind="textContent: name"></div>
+                    <div class="win-type-xx-small secondary-text" data-win-bind="textContent: twitterHandle Converters.twitterHandleConverter"></div>
+                    <div class="win-type-xx-small secondary-text" data-win-bind="textContent: website"></div>
+                    <div class="win-type-xx-small secondary-text" data-win-bind="textContent: bio"></div>
+                </div>
+            </div>
+
+            <div class="itemslist win-selectionstylefilled" data-win-control="WinJS.UI.ListView" data-win-options="{
+                selectionMode: 'none',
+                itemTemplate: select('.contributorTemplate')
+            }">
+            </div>
+        </section>
+    </div>
+</body>
+</html>

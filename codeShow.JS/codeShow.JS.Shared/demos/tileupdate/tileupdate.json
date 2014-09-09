@@ -1,0 +1,8 @@
+{
+    "title": "Tile Updates",
+    "group": "Notifications",
+    "keywords":["notifications","push","background","tile","badge"],
+    "description": "Your app's tile can be updated programmatically",
+    "author": "Jeremy Foster",
+    "dateCreated": "2013/01/01"
+}

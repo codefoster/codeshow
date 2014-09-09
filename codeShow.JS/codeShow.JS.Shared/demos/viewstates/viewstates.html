@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>View States</title>
+
+    <link href="viewstates.css" rel="stylesheet" />
+    <script src="viewstates.js"></script>
+</head>
+<body>
+    <div class="viewstates fragment">
+        <header aria-label="Header content" role="banner">
+                        <button data-win-control="WinJS.UI.BackButton"></button>
+            <h1 class="titlearea win-type-ellipsis">
+                <span id="pageTitle" class="pagetitle">View States</span>
+            </h1>
+        </header>
+        <section aria-label="Main content" role="main">
+            <div id="list" data-win-control="WinJS.UI.ListView"></div>
+        </section>
+
+        <!--Templates-->
+        <div id="template" data-win-control="WinJS.Binding.Template">
+            <div>
+                <img class="img" data-win-bind="src:imageUrl" />
+                <p class="name" data-win-bind="innerText:name"></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

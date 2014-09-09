@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Base Converter</title>
+
+    <link href="baseconv.css" rel="stylesheet" />
+    <script src="baseconv.js"></script>
+</head>
+<body>
+    <div class="baseconv fragment">
+        <section class="page-section" aria-label="Main content" role="main">
+            <div class="explanation">Check how simple is to to convert the number from any base into other starting from the system base2 (binary) to base36</div>
+            <div>
+                <br />
+                <table>
+                    <tr>
+                        <td>
+                            From Base: <input type="text" class="smallbox" value="10" id="fromBase" />
+                        </td>
+                        <td>
+                            To Base: <input type="text" class="smallbox" value="2" id="toBase" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Number: <input type="text" id="inputNumber" />
+                        </td>
+                        <td>
+                            Result: <input type="text" id="resultNumber" readonly="readonly" />
+                        </td>
+                    </tr>
+                </table>
+                <br />
+                <button id="baseconvbtn">Convert</button>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

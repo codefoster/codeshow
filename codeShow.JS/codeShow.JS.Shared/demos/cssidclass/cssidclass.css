@@ -1,0 +1,29 @@
+﻿.cssidclass div {
+    border: solid 1px black;
+    margin: 2px;
+    padding: 5px;
+}
+
+.cssidclass div.active {
+    background-color: goldenrod;
+}
+
+.cssidclass div.disabled {
+    background-color: lightgray;    
+}
+
+.cssidclass #div1 {
+    font-weight:bold;
+}
+
+.cssidclass #div2 {
+    font-style: italic;
+}
+
+.cssidclass #div3 {
+    color: red;
+}
+
+.cssidclass #div4 {
+    text-transform: uppercase;
+}

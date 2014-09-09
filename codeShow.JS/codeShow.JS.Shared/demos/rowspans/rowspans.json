@@ -1,0 +1,9 @@
+﻿{
+    "title": "CSS Grid with Rowspans",
+    "group": "CSS Grid",
+	"keywords":["grid","layout","css"],
+	"description": "A CSS grid with row and column spanning",
+	"author": "Jeremy Foster",
+	"dateCreated": "2012/10/01",
+    "enabled": true
+}

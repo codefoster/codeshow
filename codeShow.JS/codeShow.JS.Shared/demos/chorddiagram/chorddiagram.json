@@ -1,0 +1,8 @@
+{
+    "title": "Chord Diagram",
+    "group": "D3",
+    "keywords": [ "data", "driven", "documents", "d3","chord","diagram"],
+    "description": "Generate a chord diagram using D3",
+    "author": "Jeremy Foster",
+    "dateCreated": "2013/08/01"
+}

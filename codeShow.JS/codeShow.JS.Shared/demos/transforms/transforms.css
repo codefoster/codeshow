@@ -1,0 +1,34 @@
+﻿.transforms #grid {
+    display: -ms-grid;
+    -ms-grid-columns: 300px 300px 300px;
+    -ms-grid-rows: 300px;
+}
+
+.transforms #grid div {
+     border: 1px solid;
+     display: -ms-grid;
+     -ms-grid-columns: 1fr;
+     -ms-grid-rows: 1fr;
+    margin: 10px;
+}
+
+.transforms #grid div h2 {
+     -ms-grid-column-align: center;
+     -ms-grid-row-align: center;
+}
+
+.transforms #grid div:nth-of-type(2) {
+    -ms-grid-column: 2;
+}
+
+.transforms #grid div:nth-of-type(2) h2 {
+    transform: scale(0.5);
+}
+
+.transforms #grid div:nth-of-type(3) {
+    -ms-grid-column: 3;
+}
+
+.transforms #grid div:nth-of-type(3) h2 {
+    transform: scale(2.0);
+}

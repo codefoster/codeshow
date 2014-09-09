@@ -1,0 +1,17 @@
+﻿.grouped .explanation { width: 800px; }
+
+.grouped .win-listview {
+    border: 2px solid lightgray;
+    background-color: white;
+    height: 460px;
+    width: 800px;
+}
+
+.grouped .win-item img {
+    width: 194px;
+    height: 138px;
+}
+
+.grouped .win-item h3 {
+    height: 50px;
+}

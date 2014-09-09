@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Basic</title>
+
+    <link href="basicscaling.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="basicscaling fragment">
+        <section aria-label="Main content" role="main">
+            <div class="explanation">Image scaling allows you to designate multiple image scales with naming conventions. Windows will automatically pick the appropriate file depending on the current display scaling. This will increase both the performance and the quality of your app.</div>
+            <div class="flex">
+                <div>
+                    <div>
+                        <h3>Resize from small (417px)</h3>
+                        <div class="explanation">This one will look great on a 1366x768 (scale 100%) screen, but the image will be pixelated on higher resolution displays.</div>
+                    </div>
+                    <img src="ketch_small.png" style="width:417px;height:417px;" />
+                </div>
+                <div>
+                    <div>
+                        <h3>Resize from large (750px)</h3>
+                        <div class="explanation">This one starts large, so it's going to have some trouble scaling down to 1366x768 displays. Additionally, it's going to be a waste of resources or bandwidth loading a large image when it's not necessary.</div>
+                    </div>
+                    <img src="ketch_big.png" style="width:417px;height:417px;" />
+                </div>
+                <div>
+                    <div>
+                        <h3>With scaling (417px/583px/750px)</h3>
+                        <div class="explanation">This one uses scaling and is going to look great on every display and only ever load the pixels that are necessary.</div>
+                    </div>
+                    <img src="ketch.png" style="width:417px;height:417px;" />
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

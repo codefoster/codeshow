@@ -1,0 +1,121 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>hubPage</title>
+
+    <!-- WinJS references -->
+    <link href="//Microsoft.WinJS.2.0/css/ui-light.css" rel="stylesheet" />
+    <script src="//Microsoft.WinJS.2.0/js/base.js"></script>
+    <script src="//Microsoft.WinJS.2.0/js/ui.js"></script>
+
+    <link href="/css/default.css" rel="stylesheet" />
+    <link href="/pages/hub/hub.css" rel="stylesheet" />
+    <script src="/js/data.js"></script>
+    <script src="/pages/hub/hub.js"></script>
+</head>
+<body>
+    <div class="hubpage fragment">
+        <header aria-label="Header content" role="banner">
+            <button data-win-control="WinJS.UI.BackButton"></button>
+            <h1 class="titlearea win-type-ellipsis">
+                <span class="titleCode">code</span><span class="titleShow">Show()</span>
+            </h1>
+            <h2 class="subtitle">
+                JavaScript edition
+            </h2>
+            <div data-win-control="WinJS.UI.SearchBox"></div>
+        </header>
+
+        <section class="hub" aria-label="Main content" role="main" data-win-control="WinJS.UI.Hub">
+
+            <!-- Demos section -->
+            <div class="section_demos" data-win-control="WinJS.UI.HubSection" data-win-options="{ header: 'Demos', onheaderinvoked: codeShow.Pages.Hub.Commands.demosNavigate }">
+                <div class="itemTemplate" data-win-control="WinJS.Binding.Template">
+                    <div class="itemGrid">
+                        <div class="itemHandle"></div>
+                        <div class="itemContents">
+                            <h3 data-win-bind="innerText:title;"></h3>
+                            <p class="description" data-win-bind="innerText:description"></p>
+                        </div>
+                        <div class="author" data-win-bind="innerText:author"></div>
+                    </div>
+                </div>
+                <div class="itemslist win-selectionstylefilled" data-win-control="WinJS.UI.ListView" data-win-options="{
+                        layout: {type: WinJS.UI.GridLayout},
+                        selectionMode: 'none',
+                        itemTemplate: select('.section_demos .itemTemplate'),
+                        itemDataSource: codeShow.Pages.Hub.demosList.dataSource,
+                        oniteminvoked: codeShow.Pages.Hub.Commands.demoNavigate
+                    }">
+                </div>
+            </div>
+
+            <!-- Contributors section -->
+            <div class="section_contributors" data-win-control="WinJS.UI.HubSection" data-win-options="{ header: 'Contributors', isHeaderStatic: true }">
+                <div class="itemTemplate" data-win-control="WinJS.Binding.Template">
+                    <img src="#" data-win-bind="src: imageUrl; alt: name" />
+                    <div class="item-text">
+                        <div class="win-type-medium" data-win-bind="textContent: name"></div>
+                        <div class="win-type-xx-small secondary-text" data-win-bind="textContent: twitterHandle codeShow.Pages.Hub.Converters.twitterHandleConverter"></div>
+                        <div class="win-type-xx-small secondary-text" data-win-bind="textContent: website"></div>
+                        <div class="win-type-xx-small secondary-text" data-win-bind="textContent: bio"></div>
+                    </div>
+                </div>
+                <div class="itemslist win-selectionstylefilled" data-win-control="WinJS.UI.ListView" data-win-options="{
+                        layout: {type: WinJS.UI.ListLayout},
+                        selectionMode: 'none',
+                        itemTemplate: select('.section_contributors .itemTemplate'),
+                        itemDataSource: Data.contributorsList.dataSource,
+                        oniteminvoked: codeShow.Pages.Hub.contributorNavigate
+                    }">
+                </div>
+            </div>
+
+            <!-- Apps section -->
+            <!--<div class="section_apps" data-win-control="WinJS.UI.HubSection" data-win-options="{ header: 'Apps', onheaderinvoked: codeShow.Pages.Hub.Commands.appsNavigate }">
+                <div class="top-image-row">
+                    <div class="screenshot"><img /></div>
+                    <div class="logo"><img /></div>
+                </div>
+                <div class="sub-image-row">
+                    <div data-win-control="WinJS.UI.Repeater" data-win-options="{data:codeShow.Pages.Hub.subFeaturedApps}">
+                        <div data-win-bind="style.backgroundColor:tileBackgroundColor;">
+                            <img data-win-bind="src:imageurl" />
+                        </div>
+                    </div>
+                </div>
+                <div class="win-type-large" data-win-res="{ textContent: 'AppsParagraphHeader' }"></div>
+                <div class="win-type-small secondary-text">
+                    <span data-win-res="{ textContent: 'AppsParagraph' }"></span>
+                </div>
+            </div>-->
+
+            <!-- Source code section -->
+            <!--<div class="section_sourcecode" data-win-control="WinJS.UI.HubSection" data-win-options="{ header: 'Source code'}" >
+                <img src="/images/codeplex.png" width="420" height="280" />
+                <div class="subtext win-type-x-large secondary-text" data-win-res="{ textContent: 'SourceCodeSectionSubtext' }"></div>
+                <div class="win-type-small secondary-text">
+                    <span data-win-res="{ textContent: 'SourceCodeSectionDescription' }"></span>
+                </div>
+            </div>-->
+
+            <!-- Resources Section -->
+            <!--<div class="section_resources" data-win-control="WinJS.UI.HubSection" data-win-options="{ header: 'Resources' }" >
+                <div class="item-title win-type-medium" data-win-res="{ textContent: 'Section4ItemTitle' }"></div>
+                <div class="article-header win-type-x-large secondary-text" data-win-res="{ textContent: 'Section4Subtext' }"></div>
+                <div class="win-type-xx-small secondary-text" data-win-res="{ textContent: 'Section4ItemSubTitle' }"></div>
+                <div class="win-type-small secondary-text">
+                    <span data-win-res="{ textContent: 'Section4Description' }"></span>
+                    <span data-win-res="{ textContent: 'Section4Description' }"></span>
+                    <span data-win-res="{ textContent: 'Section4Description' }"></span>
+                    <span data-win-res="{ textContent: 'Section4Description' }"></span>
+                    <span data-win-res="{ textContent: 'Section4Description' }"></span>
+                    <span data-win-res="{ textContent: 'Section4Description' }"></span>
+                </div>
+            </div>-->
+
+        </section>
+    </div>
+</body>
+</html>

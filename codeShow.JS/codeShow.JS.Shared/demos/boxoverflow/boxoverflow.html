@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Overflow</title>
+
+    <link href="boxoverflow.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="boxoverflow fragment">
+        <section aria-label="Main content" role="main">
+            <div class="explanation">By default when an element has too much content to fit inside, the content spills out and is visible. Often times it looks bad. You can set the overflow, though to determine how you want it to behave.</div>
+            <div class="flex">
+                <div>
+                    <h3>visible (default)</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce pulvinar, urna vehicula condimentum venenatis, risus sapien elementum elit, eget malesuada nibh nisl vitae ipsum. Curabitur velit metus, aliquet a laoreet vel, consectetur eget nulla. Integer convallis, lacus in ultricies elementum, dolor tortor tincidunt ligula, et lobortis metus ipsum et neque. Aliquam ultrices cursus tincidunt. Donec odio est, fermentum porttitor pulvinar sed, fermentum nec ligula. Nam fringilla porttitor eros, eu accumsan dui posuere ac. Maecenas id sem justo. Donec mollis mattis ligula, sed suscipit quam egestas non. </p>
+                </div>
+                <div id="hidden">
+                    <h3>hidden</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce pulvinar, urna vehicula condimentum venenatis, risus sapien elementum elit, eget malesuada nibh nisl vitae ipsum. Curabitur velit metus, aliquet a laoreet vel, consectetur eget nulla. Integer convallis, lacus in ultricies elementum, dolor tortor tincidunt ligula, et lobortis metus ipsum et neque. Aliquam ultrices cursus tincidunt. Donec odio est, fermentum porttitor pulvinar sed, fermentum nec ligula. Nam fringilla porttitor eros, eu accumsan dui posuere ac. Maecenas id sem justo. Donec mollis mattis ligula, sed suscipit quam egestas non. </p>
+                </div>
+                <div id="scroll">
+                    <h3>scroll</h3>
+                    <div class="explanation">You can also use auto instead of scroll which will only render the scroll bars if the element is overflowing and needs them.</div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce pulvinar, urna vehicula condimentum venenatis, risus sapien elementum elit, eget malesuada nibh nisl vitae ipsum. Curabitur velit metus, aliquet a laoreet vel, consectetur eget nulla. Integer convallis, lacus in ultricies elementum, dolor tortor tincidunt ligula, et lobortis metus ipsum et neque. Aliquam ultrices cursus tincidunt. Donec odio est, fermentum porttitor pulvinar sed, fermentum nec ligula. Nam fringilla porttitor eros, eu accumsan dui posuere ac. Maecenas id sem justo. Donec mollis mattis ligula, sed suscipit quam egestas non. </p>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

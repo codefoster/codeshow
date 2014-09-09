@@ -1,0 +1,9 @@
+﻿{
+    "title": "Fancy CSS Grid",
+    "group": "CSS Grid",
+	"keywords":["grid","layout","css"],
+	"description": "What looks like a modern flat interface structured using a CSS grid",
+	"author": "Jeremy Foster",
+	"dateCreated": "2012/10/01",
+    "enabled": true
+}

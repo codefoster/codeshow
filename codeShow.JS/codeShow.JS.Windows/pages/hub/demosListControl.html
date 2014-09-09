@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script src="/pages/hub/demosListControl.js"></script>
+    <link href="/pages/hub/demosListControl.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="fragment demoslistcontrol">
+        <section aria-label="Main content" role="main">
+            <!-- TEMPLATE -->
+            <div class="headerTemplate" data-win-control="WinJS.Binding.Template">
+                <h2 data-win-bind="innerText:group"></h2>
+            </div>
+
+            <div class="itemTemplate" data-win-control="WinJS.Binding.Template">
+                <div class="itemGrid">
+                    <div class="itemHandle"></div>
+                    <div class="itemContents">
+                        <h3 data-win-bind="innerText:title;"></h3>
+                        <p class="description" data-win-bind="innerText:description"></p>
+                    </div>
+                    <div class="author" data-win-bind="innerText:author"></div>
+                </div>
+            </div>
+
+            <!-- LIST -->
+            <div class="itemslist win-selectionstylefilled" data-win-control="WinJS.UI.ListView" data-win-options="{
+	            selectionMode: 'none',
+                itemTemplate: select('.itemTemplate'),
+                groupHeaderTemplate: select('.headerTemplate')
+	        }"></div>
+        </section>
+    </div>
+</body>
+</html>

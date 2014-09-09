@@ -1,0 +1,8 @@
+{
+	"title": "Circular ListView",
+    "group": "ListViews",
+    "keywords":["list","view","items","tile","tiles","listview"],
+    "description": "ListViews don't have to look like the classic list or grid",
+    "author": "Jeremy Foster",
+    "dateCreated": "2012/10/01"
+}

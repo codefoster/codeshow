@@ -1,0 +1,26 @@
+﻿.rowspans .msgrid {
+    display: -ms-grid;
+    -ms-grid-columns: 100px 1fr 100px;
+    -ms-grid-rows: 80px 1fr 80px;
+    height: 400px;
+}
+
+.rowspans .msgrid > div:nth-child(1) {
+    -ms-grid-column: 1;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    border: solid 2px blue;
+}
+
+.rowspans .msgrid > div:nth-child(2) {
+    -ms-grid-column: 2;
+    -ms-grid-row: 2;
+    -ms-grid-column-span: 2;
+    border: solid 2px green;
+}
+
+.rowspans .msgrid > div:nth-child(3) {
+    -ms-grid-column: 2;
+    -ms-grid-row: 3;
+    border: solid 2px red;
+}

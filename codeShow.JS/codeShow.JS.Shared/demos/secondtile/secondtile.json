@@ -1,0 +1,13 @@
+{
+    "title": "Secondary Tiles",
+    "keywords":["secondary","tile"],
+    "description": "Pin a secondary tile to start and control it",
+    "author": "Iqaan Ullah",
+    "dateCreated": "",
+	"sections":[
+		{"name":"simple", "author":"Jeremy Foster"},
+		{"name":"alternate", "author":"Jeremy Foster"},
+		{"name":"pinandpush"}
+
+	]
+}

@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Promises</title>
+
+    <link href="promises.css" rel="stylesheet" />
+    <script src="promises.js"></script>
+</head>
+<body>
+    <div class="promises fragment">
+        <section aria-label="Main content" role="main">
+            <div class="method1">
+                <h3>Long Sync Task</h3>
+                <div class="explanation">This task blocks the UI. Notice the button state freezes. This is not an acceptable user experience.</div>
+                <progress value="0" max="100"></progress>
+                <button class="start">Start</button><button class="reset">Reset</button>
+            </div>
+
+            <div class="method2">
+                <h3>Long Async Task (no Promise)</h3>
+                <div class="explanation">This task does not block the UI, but our progress bar reports immediately that it's complete even though it's not.</div>
+                <progress value="0" max="100"></progress>
+                <button class="start">Start</button><button class="reset">Reset</button>
+            </div>
+
+            <div class="method3">
+                <h3>Long Async Task (using a Promise)</h3>
+                <div class="explanation">Now with promises we can not only wait until the task is done to update our progress, but we can update it along the way as progress is reported.</div>
+                <progress value="0" max="100"></progress>
+                <button class="start">Start</button><button class="reset">Reset</button>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

@@ -1,0 +1,19 @@
+﻿.mediaqueries #bowline {
+    display:flex;
+    align-items:flex-start;
+}
+    .mediaqueries #bowline > * {
+        padding:10px;
+        box-sizing:border-box;
+    }
+    
+    .mediaqueries #bowline .text {
+        width:50vw;
+    }
+
+
+@media (max-width:700px) {
+    .mediaqueries #bowline {
+        flex-direction: column;
+    }
+}

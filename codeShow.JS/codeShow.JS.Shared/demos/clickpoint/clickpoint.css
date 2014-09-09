@@ -1,0 +1,14 @@
+﻿.clickpoint #parent {
+    display:-ms-flexbox;
+}
+
+.clickpoint .target {
+    width:300px;
+    height:500px;
+    border:1px solid lightgray;
+    margin:5px;
+    padding:10px;
+    overflow-x:hidden;
+    overflow-y:auto;
+}
+

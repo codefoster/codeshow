@@ -1,1 +1,5 @@
-﻿.privacy #privacyDiv .win-header { background-color:#375369; }
+﻿.privacy #privacyDiv .win-header {
+    background-color:#375369;
+}
+
+.privacy .win-content { padding:0 20px 0;}

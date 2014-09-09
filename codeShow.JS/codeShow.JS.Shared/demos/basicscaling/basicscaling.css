@@ -1,0 +1,19 @@
+﻿.basicscaling .flex {
+    display: -ms-flexbox;
+    width: 1300px;
+}
+
+    .basicscaling .flex > div {
+        display:-ms-grid;
+        -ms-grid-rows:140px 1fr;
+        width: calc(1300px / 3);
+    }
+
+        .basicscaling .flex > div > div{
+            padding: 10px;
+        }
+        
+        .basicscaling .flex > div img {
+            -ms-grid-row: 2;
+            -ms-grid-column-align:center;
+        }

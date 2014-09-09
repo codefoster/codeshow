@@ -1,0 +1,8 @@
+{
+    "title": "Pointer Input",
+    "group": "Input",
+    "keywords":["point mouse click touch input mspointer"],
+    "description": "See how you can capture user pointer input whether it's mouse, pen, or touch",
+    "author": "Jeremy Foster",
+    "dateCreated": "2014/08/18"
+}

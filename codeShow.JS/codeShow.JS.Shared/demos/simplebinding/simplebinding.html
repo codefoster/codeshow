@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Simple</title>
+
+    <script src="simplebinding.js"></script>
+</head>
+<body>
+    <div class="simplebinding fragment">
+        <header aria-label="Header content" role="banner">
+            <button data-win-control="WinJS.UI.BackButton"></button>
+            <h1 class="titlearea win-type-ellipsis">
+                <span class="pagetitle">Binding and Templating</span>
+            </h1>
+        </header>
+        <section aria-label="Main content" role="main" class="swiper">
+            <div class="person">
+                <div data-win-bind="innerText:firstName;"></div>
+                <div data-win-bind="innerText:lastName;"></div>
+                <div data-win-bind="innerText:email;"></div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

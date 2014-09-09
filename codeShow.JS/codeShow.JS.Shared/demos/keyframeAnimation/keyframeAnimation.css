@@ -1,0 +1,32 @@
+﻿.keyframeanimation .pagetitle {
+    position: relative;
+    animation: drop-in 1s forwards;
+}
+
+.keyframeanimation .box {
+    position: relative;
+    text-align: center;
+    vertical-align: middle;
+    width: 295px;
+    width: 300px;
+    height: 195px;
+    font-size: 20pt;
+    background-color: lightgray;
+    border: solid 2px blue;
+}
+
+.keyframeanimation .animate-get-angry {
+    animation: get-angry 5s forwards;
+}
+
+@keyframes get-angry {
+    0%   {box-shadow: 0 0 1px 1px #000000;text-shadow: 0 0 #ffffff;border-radius: 0%;}
+    60%  {color: #991100; font-size: 22pt; text-shadow: blue;}
+    80%  {color: #FF0000; font-size: 24pt; }
+    90%  {color: #22DD22; font-size: 16pt; }
+    100% {color: #110000; font-size: 40pt; background-color: #000000; font-weight: bold;box-shadow: 0 0 30px 15px #000000;border-color: black; text-shadow: 0 0 10px 2px #22DD22;border-radius: 50%; }
+}
+@keyframes drop-in {
+    0%   {top: -100px;}
+    100% {top: 0px;}
+}

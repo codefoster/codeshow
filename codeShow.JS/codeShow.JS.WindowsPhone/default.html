@@ -4,18 +4,22 @@
     <meta charset="utf-8" />
     <title>codeShow.JS.WindowsPhone</title>
 
-    <!-- WinJS references -->
-    <!-- At runtime, ui-themed.css resolves to ui-themed.light.css or ui-themed.dark.css 
-    based on the user’s theme setting. This is part of the MRT resource loading functionality. -->
-    <link href="/css/ui-themed.css" rel="stylesheet" />
+    <link href="//Microsoft.Phone.WinJS.2.1/css/ui-light.css" rel="stylesheet" />
     <script src="//Microsoft.Phone.WinJS.2.1/js/base.js"></script>
     <script src="//Microsoft.Phone.WinJS.2.1/js/ui.js"></script>
 
-    <!-- codeShow.JS.WindowsPhone references -->
-    <link href="/css/default.css" rel="stylesheet" />
+    <script src="/js/MobileServices.js"></script>
+    <script src="/services/mobile services/codeshow/service.js"></script>
+    <script src="js/converters.js"></script>
+    <script src="/js/jquery-2.1.1.js"></script>
+    <script src="/js/ocho.js"></script>
+    <link href="/css/phone.css" rel="stylesheet" />
     <script src="/js/default.js"></script>
+    <script src="/js/analytics.js"></script>
+    <script src="/js/data.js"></script>
+    <script src="/js/navigator.js"></script>
 </head>
 <body class="phone">
-    <p>Content goes here</p>
+    <div id="contenthost" data-win-control="Application.PageControlNavigator" data-win-options="{home: '/pages/hub/hub.html'}"></div>
 </body>
 </html>

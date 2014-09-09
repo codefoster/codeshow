@@ -1,0 +1,7 @@
+{
+    "title": "JSON Functions",
+    "keywords":["json","functions","parse","stringify","serialize","serialization","deserialize","deserialization"],
+    "description": "The JSON functions in JavaScript are great for serializing and deserializing JavaScript objects",
+    "author": "Jeremy Foster",
+    "dateCreated": "2013/08/18"
+}

@@ -1,0 +1,19 @@
+﻿.flexxing #flexxingFlexbox {
+    display: -ms-flexbox;
+    border: 1px solid gray;
+}
+
+.flexxing #flexxingFlexbox > div {
+    min-width: 80px;
+    min-height: 80px;
+    border: 1px solid black;
+    margin: 5px;
+}
+
+.flexxing #flexxingFlexbox > div:nth-child(1) {
+    -ms-flex: 1 0 auto;
+}
+
+.flexxing #flexxingFlexbox > div:nth-child(2) {
+    -ms-flex: 2 0 auto;
+}

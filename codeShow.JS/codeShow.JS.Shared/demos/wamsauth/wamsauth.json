@@ -1,0 +1,8 @@
+﻿{
+    "title": "WAMS Authentication",
+    "group": "Authentication",
+	"keywords":["authentication","live","connect"],
+	"description": "Using Windows Azure Mobile Services to authenticate a user!",
+	"author": "Jeremy Foster",
+	"dateCreated": "2012/10/01"
+}

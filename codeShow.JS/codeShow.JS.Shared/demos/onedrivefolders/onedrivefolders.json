@@ -1,0 +1,8 @@
+﻿{
+	"title": "OneDrive Folders",
+    "group": "OneDrive",
+	"keywords":["onedrive","live","skydrive","cloud"],
+	"description": "Fetch a list of the folders in your OneDrive",
+	"author": "Iqaan Ullah",
+	"dateCreated": "2014/04/19"
+}

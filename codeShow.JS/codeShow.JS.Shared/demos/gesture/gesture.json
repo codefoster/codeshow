@@ -1,0 +1,8 @@
+{
+    "title": "Gestures",
+    "group": "Input",
+    "keywords":["touch input gesture manipulation mspointer"],
+    "description": "See how you can capture the user's touch gestures for a meaningful user experience",
+    "author": "Jeremy Foster",
+    "dateCreated": "2014/08/18"
+}

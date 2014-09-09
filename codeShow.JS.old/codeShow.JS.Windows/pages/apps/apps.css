@@ -1,0 +1,19 @@
+﻿.apps section[role=main] {
+    margin-left: 120px;
+    margin-right: 120px;
+}
+
+.apps .win-listview {
+    height:100%;
+    box-sizing:border-box;
+
+}
+    .apps .win-listview .win-container {
+        width: 50px;
+        height: 50px;
+    }
+
+    .apps .win-listview .win-item img {
+        width:50px;
+        height:50px;
+    }

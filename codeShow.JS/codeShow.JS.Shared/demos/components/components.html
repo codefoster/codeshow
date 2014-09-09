@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Components</title>
+
+    <link href="components.css" rel="stylesheet" />
+    <script src="components.js"></script>
+</head>
+<body>
+    <div class="components fragment">
+        <header aria-label="Header content" role="banner">
+            <button data-win-control="WinJS.UI.BackButton"></button>
+            <h1 class="titlearea win-type-ellipsis">
+                <span class="pagetitle">Components</span>
+            </h1>
+        </header>
+        <section aria-label="Main content" role="main">
+            <div class="explanation">The simple addition below is facilitated by components referenced from the codeShow project. One is implemented using C++ and the other using C#. You won't be able to see the C++ and C# code in this demo's "see the code" since it's external, but you can download the full project source code from codeshow.codeplex.com to access it.</div>
+
+            <div id="cpp">
+                <h3>C++</h3>
+                a=<input class="input a" />
+                b=<input class="input b" />
+                y=<input class="y" readonly />
+            </div>
+
+            <div id="cs">
+                <h3>C#</h3>
+                a=<input class="input a" />
+                b=<input class="input b" />
+                y=<input class="y" readonly />
+            </div>
+        </section>
+    </div>
+</body>
+</html>

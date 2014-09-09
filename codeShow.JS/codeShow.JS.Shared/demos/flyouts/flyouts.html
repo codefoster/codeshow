@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Flyouts</title>
+
+    <script src="flyouts.js"></script>
+</head>
+<body>
+    <div class="flyouts fragment">
+
+        <section aria-label="Main content" role="main">
+            <div class="explanation">
+                Flyouts are very customizable and end up being a great user experience because a user can dismiss it my just touching outside the flyout. It's called a "light dismiss".
+            </div>
+            <div>
+                <button id="showFlyout">Flyout &gt;</button>
+            </div>
+
+            <!--Flyout-->
+            <div id="flyout1" data-win-control="WinJS.UI.Flyout" data-win-options="{placement:'right'}">
+                <label for="input">Input</label>
+                <input type="text" />
+            </div>
+
+        </section>
+    </div>
+</body>
+</html>

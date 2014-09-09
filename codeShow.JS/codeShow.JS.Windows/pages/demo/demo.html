@@ -2,56 +2,27 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <title>Demo</title>
-
-    <!-- WinJS references -->
-    <link href="//Microsoft.WinJS.2.0/css/ui-light.css" rel="stylesheet" />
-    <script src="//Microsoft.WinJS.2.0/js/base.js"></script>
-    <script src="//Microsoft.WinJS.2.0/js/ui.js"></script>
+    <title>demo</title>
 
     <link href="demo.css" rel="stylesheet" />
     <script src="demo.js"></script>
-
-    <!-- codemirror -->
-    <!--<link href="/lib/codemirror/codemirror.css" rel="stylesheet" />
-    <script src="/lib/codemirror/codemirror.js"></script>
-    <script src="/lib/codemirror/mode/javascript/javascript.js"></script>-->
-
-    <!-- syntax highlighter -->
-    <!--<script src="/lib/syntaxhighlighter/scripts/shCore.js"></script>
-    <script src="/lib/syntaxhighlighter/styles/shBrushJScript.js"></script>
-    <link href="/lib/syntaxhighlighter/styles/shCore.css" rel="stylesheet" />
-    <link href="/lib/syntaxhighlighter/styles/shThemeDefault.css" rel="stylesheet" />-->
-    
-
 </head>
 <body>
     <div class="demo fragment">
-        <header aria-label="Header content" role="banner">
-            <button data-win-control="WinJS.UI.BackButton"></button>
+        <header class="page-header" aria-label="Header content" role="banner">
+            <button class="back-button" data-win-control="WinJS.UI.BackButton"></button>
             <h1 class="titlearea win-type-ellipsis">
-                <span class="pagetitle"></span> <span class="viewtoggle win-type-x-large win-type-interactive"></span>
+                <span class="pagetitle">Welcome to demo</span>
             </h1>
         </header>
-        <section aria-label="Main content" role="main">
-            <div class="demoview">
-                <!-- demos are rendered programmatically by demo.js -->
-            </div>
-            <div class="codeview">
-                <!-- demo without sections -->
-                <div id="codeViewNoSections">
-                    <div class="codearea swipeContainer"></div>
-                </div>
-                <!-- demo with sections -->
-                <div id="codeViewWithSections">
-                    <ul class="sectionmenu"></ul>
-                    <div class="codearea"></div>
-                </div>
+        <section class="page-section" aria-label="Main content" role="main">
+            <div class="sections" data-win-control="WinJS.UI.Hub">
+                <div class="section demo democontent" data-win-control="WinJS.UI.HubSection" data-win-options="{ header:'',isHeaderStatic: true }" ></div>
             </div>
         </section>
-        <div id="demoappbar" data-win-control="WinJS.UI.AppBar">
-            <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{id:'cmdPin',label:'Pin to Start',icon:'pin',section:'global'}"></button>
-        </div>
+    </div>
+    <div id="demoappbar" data-win-control="WinJS.UI.AppBar">
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{id:'cmdPin',label:'Pin to Start',icon:'pin',section:'global'}"></button>
     </div>
 </body>
 </html>

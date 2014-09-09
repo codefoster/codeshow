@@ -1,0 +1,12 @@
+﻿.flexsimple #flexboxSimple {
+    display: flex;
+    width: 100%;
+    border: 1px solid gray;
+}
+
+.flexsimple #flexboxSimple > div {
+    min-width: 80px;
+    min-height: 80px;
+    border: 1px solid black;
+    margin: 5px;
+}

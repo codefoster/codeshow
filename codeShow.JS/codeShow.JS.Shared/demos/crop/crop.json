@@ -1,0 +1,7 @@
+﻿{
+	"title": "Rx Crop",
+	"keywords":["rx","crop","image"],
+	"description": "A Reactive Extensions example that adds image cropping to an image.",
+	"author": "Jeremy Foster",
+	"dateCreated": "2012/10/01"
+}

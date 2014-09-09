@@ -1,0 +1,8 @@
+{
+    "title": "Toast Notifications",
+    "group": "Notifications",
+    "keywords":["notifications","push","background","tile","badge"],
+    "description": "Toast notifications can be programmatically fired or scheduled for later",
+    "author": "Sebastián Gómez",
+    "dateCreated": "2014/01/01"
+}

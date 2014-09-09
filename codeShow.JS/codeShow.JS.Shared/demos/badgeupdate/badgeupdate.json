@@ -1,0 +1,8 @@
+{
+    "title": "Badge Update",
+    "group": "Notifications",
+    "keywords":["notifications","push","background","tile","badge"],
+    "description": "Update the badge notification on tiles",
+    "author": "Sebastián Gómez",
+    "dateCreated": "2014/01/01"
+}

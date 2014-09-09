@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Share</title>
+    
+    <link href="share.css" rel="stylesheet" />
+
+    <script src="share.js"></script>
+</head>
+<body>
+    <div class="share fragment">
+        <header aria-label="Header content" role="banner">
+            <button data-win-control="WinJS.UI.BackButton"></button>
+            <h1 class="titlearea win-type-ellipsis">
+                <span class="pagetitle" data-win-bind="innerText:name;">Sharing</span>
+            </h1>
+        </header>
+        <section aria-label="Main content" role="main">
+            <div class="explanation">
+                <p>This demo shows how simple it is to share something from your app.Type some text into the fields below and then slide out your Windows Charms and choose Share (or just hit WIN + H).</p>
+            </div>
+            
+            <div id="sharetypes">
+                <div id="text">
+                    <h3>Plain Text</h3>
+                    Enter some text: <input id="inputText" />
+                </div>
+                <div id="richText">
+                    <h3>Rich Text</h3>
+                    Enter some rich text: <input id="inputRichText" />
+                </div>
+            </div>
+            
+        </section>
+    </div>
+</body>
+</html>

@@ -1,0 +1,8 @@
+{
+    "title": "User Settings",
+    "group": "Storage",
+    "keywords":["local storage","data","user","users"],
+    "description": "Using built in local storage to store user settings",
+    "author": "Jeremy Foster",
+    "dateCreated": "2013/01/01"
+}

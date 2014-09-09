@@ -1,0 +1,22 @@
+﻿.livelistviews .explanation { width: 800px; }
+
+.livelistviews .win-listview {
+    border: 2px solid lightgray;
+    background-color: white;
+    height:600px;
+}
+
+    .livelistviews .win-listview .win-item {
+        display:-ms-grid;
+        background-color:slategray;
+        color:white;
+        -ms-grid-columns:200px;
+        -ms-grid-rows:200px;
+        font-size:100px;
+        font-weight:bold;
+    }
+
+        .livelistviews .win-listview .win-item div {
+            -ms-grid-column-align:center;
+            -ms-grid-row-align:center;
+        }

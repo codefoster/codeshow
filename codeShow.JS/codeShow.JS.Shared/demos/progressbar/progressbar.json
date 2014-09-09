@@ -1,0 +1,11 @@
+{
+    "title": "Progress Bar",
+    "keywords":["spinner","wait","meter","progress","bar","ring","determinate","indeterminate"],
+    "description": "See indeterminate and determinate versions of the HTML5 progress control.",
+    "author": "Jeremy Foster",
+    "dateCreated": "",
+	"sections":[
+		{"name":"indeterminate"},
+		{"name":"determinate"}
+	]
+}

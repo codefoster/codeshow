@@ -1,0 +1,13 @@
+﻿.flexdistribute #flexboxDistribute {
+    display: -ms-flexbox;
+    width: 100%;
+    -ms-flex-pack: distribute;
+    border: 1px solid gray;
+}
+
+.flexdistribute #flexboxDistribute > div {
+    min-width: 80px;
+    min-height: 80px;
+    border:1px solid black;
+    margin: 5px;
+}

@@ -1,0 +1,8 @@
+﻿{
+	"title": "Fetching Data with XHR",
+    "group": "XHR",
+	"keywords":["xhr"],
+	"description": "Learn to use the WinJS.xhr method for great control over custom HTTP requests.",
+	"author": "Jeremy Foster",
+	"dateCreated": "2012/10/01"
+}

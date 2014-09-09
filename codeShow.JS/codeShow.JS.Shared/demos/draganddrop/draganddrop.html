@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Drag and Drop</title>
+
+    <link href="draganddrop.css" rel="stylesheet" />
+    <script src="draganddrop.js"></script>
+</head>
+<body>
+    <div class="draganddrop fragment">
+        <section aria-label="Main content" role="main">
+            <!-- Templates -->
+            <div class="itemtemplate" data-win-control="WinJS.Binding.Template">
+                <div>
+                    <img data-win-bind="src:imageUrl" />
+                    <h3 data-win-bind="innerText:name"></h3>
+                </div>
+            </div>
+
+            <!-- Content -->
+            <div class="explanation">
+                This ListView has draggable items. They're not really anything to do with them yet though. We're working on it.
+            </div>
+            <div data-win-control="WinJS.UI.ListView" data-win-options="{
+                itemTemplate:select('.itemtemplate'),
+                itemDataSource:codeShow.Demos.draganddrop.data.dataSource,
+                itemsDraggable:true
+            }">
+            </div>
+
+        </section>
+    </div>
+</body>
+</html>

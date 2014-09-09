@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>privacy</title>
+
+    <!-- WinJS references -->
+    <link href="//Microsoft.WinJS.2.0/css/ui-dark.css" rel="stylesheet" />
+    <script src="//Microsoft.WinJS.2.0/js/base.js"></script>
+    <script src="//Microsoft.WinJS.2.0/js/ui.js"></script>
+
+    <link href="privacy.css" rel="stylesheet" />
+    <script src="privacy.js"></script>
+</head>
+<body>
+    <div class="privacy fragment">
+        <div id="privacyDiv" data-win-control="WinJS.UI.SettingsFlyout" aria-label="Privacy Policy Flyout">
+            <div class="win-ui-dark win-header">
+                <button class="win-backbutton" onclick="WinJS.UI.SettingsFlyout.show()"></button>
+                <div class="win-label">Privacy Policy</div>
+            </div>
+            <div class="win-content">
+                <p>The codeShow app requests access to internet to provide access for various demos in the project, but neither the app itself or any of the demos in the app collect, store, or share any identifying information from users.</p>
+                <p>Rest assured that your privacy is respected. If you would like to report any violation of this policy, you can contact any of the project team.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

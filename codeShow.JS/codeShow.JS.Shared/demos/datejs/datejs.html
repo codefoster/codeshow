@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>DateJS</title>
+
+    <link href="datejs.css" rel="stylesheet" />
+    <script src="datejs.js"></script>
+    <script src="date.js"></script>
+</head>
+<body>
+    <div class="datejs fragment">
+        <header aria-label="Header content" role="banner">
+            <button data-win-control="WinJS.UI.BackButton"></button>
+            <h1 class="titlearea win-type-ellipsis">
+                <span class="pagetitle" data-win-bind="innerText:name;">date.js</span>
+            </h1>
+        </header>
+        <section aria-label="Main content" role="main">
+            <div id="content">
+                <div id="input" class="section">
+                    <div>Enter a date statement...</div>
+                    <input/>
+                </div>
+                
+                <div id="output" class="section">
+                    <div>And you should see the interpretation here</div>
+                    <input readonly/>
+                </div>
+                
+                <div id="examples" class="section">
+                    <h2>Examples</h2>
+                    <div>
+                        <table>
+                            <tr><td>t</td><td>Returns today's date</td></tr>
+                            <tr><td>today</td><td>Returns today's date</td></tr>
+                            <tr><td>tomorrow</td><td>Returns tomorrow's date</td></tr>
+                            <tr><td>yesterday</td><td>Returns yesterday's date</td></tr>
+                            <tr><td>next friday</td><td>Returns the date of the next Friday</td></tr>
+                            <tr><td>last monday</td><td>Returns the date of the previous Monday</td></tr>
+                            <tr><td>July 8th, 2004</td><td>Thu Jul 08 2004</td></tr>
+                            <tr><td>15-Jan-2004</td><td>Thu Jan 15 2004</td></tr>
+                            <tr><td>7/1/2004</td><td>Thu Jul 01 2004</td></tr>
+                            <tr><td>7.1.2004</td><td>Thu Jul 01 2004</td></tr>
+                            <tr><td>07.15.04</td><td>Thu Jul 15 2004</td></tr>
+                            <tr><td>July 23rd 2004</td><td>Fri Jul 23 2004</td></tr>
+                            <tr><td>Sat July 3, 2004</td><td>Sat Jul 03 2004</td></tr>
+                            <tr><td>10:30 PM EST</td><td>Wed Oct 31 2007 20:30:00</td></tr>
+                            <tr><td>10PM</td><td>Wed Oct 31 2007 22:00:00</td></tr>
+                            <tr><td>t + 5d</td><td>Adds 5 days to today</td></tr>
+                            <tr><td>today - 1 month</td><td>Subtracts 1 month from today</td></tr>
+                            <tr><td>+</td><td>Add 1 day to today = tomorrow</td></tr>
+                            <tr><td>- 3months</td><td>Subtract 3 months</td></tr>
+                            <tr><td>+1year</td><td>Add a year to today</td></tr>
+                            <tr><td>-12 months</td><td>Subtract 12 months 1 year from today</td></tr>
+                            <tr><td>July 4th</td><td>July 4th of this year</td></tr>
+                            <tr><td>15</td><td>15th day of current month/year</td></tr>
+                            <tr><td>July 8th, 2004, 10:30 PM</td><td>Thu Jul 08 2004 22:30:00</td></tr>
+                            <tr><td>2004-07-15T06:45:00</td><td>Thu Jul 15 2004 06:45:00</td></tr>
+                            <tr><td>Thu, 1 July 2004 22:30:00 GMT</td><td>Thu Jul 01 2004 16:30:00</td></tr>
+                            <tr><td>1997-07-16T19:20:15</td><td>ISO 8601 Formats</td></tr>
+                            <tr><td>1997-07-16T19:20:30+01:00</td><td>ISO 8601 with Timezone offset</td></tr>
+                            <tr><td>1985-04-12T23:20:50Z</td><td>RFC 3339 Formats</td></tr>
+                        </table>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

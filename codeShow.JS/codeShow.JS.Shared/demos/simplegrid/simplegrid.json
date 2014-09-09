@@ -1,0 +1,8 @@
+﻿{
+    "title": "Simple Grid",
+    "group": "CSS Grid",
+	"keywords":["grid","layout","css"],
+	"description": "An extremely basic CSS grid",
+	"author": "Jeremy Foster",
+    "dateCreated": "2012/10/01"
+}

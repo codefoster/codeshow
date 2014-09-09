@@ -1,0 +1,12 @@
+﻿.borderradius section div:nth-child(1) {
+    border:solid 1px black;
+    border-radius:5px;
+    padding:20px;
+}
+
+.borderradius section div:nth-child(2) {
+    border:solid 1px black;
+    border-radius:40px;
+    padding:20px;
+}
+

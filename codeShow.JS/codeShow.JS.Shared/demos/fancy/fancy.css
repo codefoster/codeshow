@@ -1,0 +1,14 @@
+﻿.fancy .msgrid {
+    display: -ms-grid;
+    -ms-grid-columns: 240px 300px 240px;
+    -ms-grid-rows: 174px 174px 174px;
+}
+
+.fancy .msgrid > div { border: 1px solid; margin: 5px; }
+.fancy .msgrid > div:nth-of-type(1) { -ms-grid-row: 1; -ms-grid-column: 1; }
+.fancy .msgrid > div:nth-of-type(2) { -ms-grid-row: 2; -ms-grid-column: 1; }
+.fancy .msgrid > div:nth-of-type(3) { -ms-grid-row: 3; -ms-grid-column: 1; }
+.fancy .msgrid > div:nth-of-type(4) { -ms-grid-row: 1; -ms-grid-column: 2; -ms-grid-row-span: 3; }
+.fancy .msgrid > div:nth-of-type(5) { -ms-grid-row: 1; -ms-grid-column: 3; }
+.fancy .msgrid > div:nth-of-type(6) { -ms-grid-row: 2; -ms-grid-column: 3; }
+.fancy .msgrid > div:nth-of-type(7) { -ms-grid-row: 3; -ms-grid-column: 3; }

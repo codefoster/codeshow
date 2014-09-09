@@ -1,0 +1,9 @@
+﻿{
+    "title": "Big Colorful Grid",
+    "group": "CSS Grid",
+	"keywords":["grid","layout","css"],
+	"description": "A big colorful grid built programmatically",
+	"author": "Jeremy Foster",
+	"dateCreated": "2012/10/01",
+    "enabled": true
+}

@@ -1,0 +1,8 @@
+{
+	"title": "Drag and Drop ListView",
+    "group": "ListViews",
+    "keywords":["list","view","items","tile","tiles","listview"],
+    "description": "A ListView whose items can be dragged around",
+    "author": "Jeremy Foster",
+    "dateCreated": "2012/10/01"
+}

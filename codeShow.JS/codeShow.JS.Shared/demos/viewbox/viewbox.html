@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>ViewBox</title>
+    
+    <link href="viewbox.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="viewbox fragment">
+        <header aria-label="Header content" role="banner">
+            <button data-win-control="WinJS.UI.BackButton"></button>
+            <h1 class="titlearea win-type-ellipsis">
+                <span class="pagetitle">ViewBox</span>
+            </h1>
+        </header>
+        <section aria-label="Main content" role="main">
+            <div class="explanation">
+                Despite the actual size of the below div, it will be scaled and transformed (moved) to snap to its full space. The aspect ratio of the div's contents will not be tweaked.
+            </div>
+            <div data-win-control="WinJS.UI.ViewBox">
+                <div>
+                    <img src="/images/win8logo.png"/><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi congue orci ac tortor porttitor dignissim. Praesent non nibh sollicitudin purus tristique faucibus. Curabitur vestibulum nibh ac urna hendrerit venenatis eu vel diam. Mauris risus ligula, feugiat sit amet semper non, vehicula quis lacus. Mauris ac accumsan quam. Fusce accumsan pellentesque ligula, at tempus nisi feugiat nec. Aenean non lorem augue, in tempus velit. Praesent ut nulla vel leo suscipit rutrum at eu erat. Aliquam erat volutpat. Etiam sed augue ut enim laoreet hendrerit. Phasellus ante leo, dignissim ut vestibulum nec, tincidunt vitae quam.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

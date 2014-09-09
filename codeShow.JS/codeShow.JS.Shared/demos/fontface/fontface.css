@@ -1,0 +1,19 @@
+﻿.fontface .states {
+	font-family:'GeoBats';
+    font-size:20px;
+}
+
+.fontface .gooddog {
+	font-family:'GoodDog';
+    font-size:100px;
+}
+
+@font-face {
+    font-family:'GeoBats';
+	src:url('/demos/fontface/geobats.ttf') format('truetype');
+}
+
+@font-face {
+    font-family:'GoodDog';
+	src:url('/demos/fontface/GoodDog.otf') format('embedded-opentype');
+}

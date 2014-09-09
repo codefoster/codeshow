@@ -1,0 +1,10 @@
+﻿.boxmargin .flex {
+    display:-ms-flexbox;
+    -ms-flex-wrap:wrap;
+}
+.boxmargin .flex > div {
+    height:100px;
+    width:100px;
+    border:1px solid gray;
+    margin:5px;
+}

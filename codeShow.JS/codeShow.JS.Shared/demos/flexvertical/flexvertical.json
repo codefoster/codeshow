@@ -1,0 +1,8 @@
+{
+	"title": "Vertical Flexboxes",
+    "group": "CSS Flexbox",
+    "keywords":["flex","box","flexbox","layout","css","vertical"],
+    "description": "All of the layout features in a flexbox work vertical as well as horizontal",
+    "author": "Jeremy Foster",
+    "dateCreated": "2013/1/1"
+}

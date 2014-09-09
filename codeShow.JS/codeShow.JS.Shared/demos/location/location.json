@@ -1,0 +1,7 @@
+{
+    "title": "Location",
+    "keywords":["gps","geo"],
+    "description": "Use WinRT to access the device location using whatever location hardware is available",
+    "author": "Jeremy Foster",
+    "dateCreated": "2013/01/01"
+}

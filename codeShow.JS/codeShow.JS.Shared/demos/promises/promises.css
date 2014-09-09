@@ -1,0 +1,12 @@
+﻿.promises progress {
+    width: 400px;
+    height: 20px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.promises section[role=main] button {
+    margin-right: 10px;
+}
+
+.promises h3 { margin-top: 20px; }

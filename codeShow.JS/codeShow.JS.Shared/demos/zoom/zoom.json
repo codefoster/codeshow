@@ -1,0 +1,8 @@
+﻿{
+	"title": "Zoom",
+    "group" : "Zoom",
+	"keywords":["zoom","pinch","stretch","optical"],
+	"description": "Add pinch and stretch zoom support to your elements.",
+	"author": "Jeremy Foster",
+	"dateCreated": "2013/03/01"
+}
