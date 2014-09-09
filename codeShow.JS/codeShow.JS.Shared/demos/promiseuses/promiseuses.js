@@ -3,38 +3,38 @@
 
     var SECONDS_DELAY = 3;
 
-    WinJS.UI.Pages.define("/demos/promises/uses/uses.html", {
+    WinJS.UI.Pages.define("/demos/promiseuses/promiseuses.html", {
         ready: function (element, options) {
 
             //consuming a promise
-            var method1 = q(".uses .method1");
-            q("button.start", method1).onclick = function (e) {
+            var method1 = element.querySelector(".method1");
+            method1.querySelector("button.start").onclick = function (e) {
                 longTaskAsyncPromise().then(function () {
-                    q("progress", method1).value = 100;
+                    method1.querySelector("progress").value = 100;
                 });
             };
-            q("button.reset", method1).onclick = function (e) {
-                q("progress", method1).value = 0;
+            method1.querySelector("button.reset").onclick = function (e) {
+                method1.querySelector("progress").value = 0;
             };
 
             //passing on a promise
-            var method2 = q(".uses .method2");
-            q("button.start", method2).onclick = function (e) {
+            var method2 = element.querySelector(".method2");
+            method2.querySelector("button.start").onclick = function (e) {
                 function myAsyncFunction() {
                     return longTaskAsyncPromise();
                 }
 
                 myAsyncFunction().then(function () {
-                    q("progress", method2).value = 100;
+                    method2.querySelector("progress").value = 100;
                 });
             };
-            q("button.reset", method2).onclick = function (e) {
-                q("progress", method2).value = 0;
+            method2.querySelector("button.reset").onclick = function (e) {
+                method2.querySelector("progress").value = 0;
             };
 
             //creating a promise
-            var method3 = q(".uses .method3");
-            q("button.start", method3).onclick = function (e) {
+            var method3 = element.querySelector(".method3");
+            method3.querySelector("button.start").onclick = function (e) {
                 function myAsyncFunction() {
                     return new WinJS.Promise(function (c, e, p) {
                         //do something that might take longer than 50ms
@@ -50,25 +50,25 @@
                 }
 
                 myAsyncFunction().then(function () {
-                    q("progress", method3).value = 100;
+                    method3.querySelector("progress").value = 100;
                 });
             };
-            q("button.reset", method3).onclick = function (e) {
-                q("progress", method3).value = 0;
+            method3.querySelector("button.reset").onclick = function (e) {
+                method3.querySelector("progress").value = 0;
             };
 
             //storing a promise
-            var method4 = q(".uses .method4");
-            q("button.start", method4).onclick = function (e) {
+            var method4 = element.querySelector(".method4");
+            method4.querySelector("button.start").onclick = function (e) {
 
                 var storedPromise = longTaskAsyncPromise();
 
                 storedPromise.then(function () {
-                    q("progress", method4).value = 100;
+                    method4.querySelector("progress").value = 100;
                 });
             };
-            q("button.reset", method4).onclick = function (e) {
-                q("progress", method4).value = 0;
+            method4.querySelector("button.reset").onclick = function (e) {
+                method4.querySelector("progress").value = 0;
             };
         }
     });

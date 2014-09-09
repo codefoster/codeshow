@@ -1,0 +1,9 @@
+{
+    "title": "Promise Chaining",
+    "group": "Promises",
+    "keywords":["custom","promise","promises","chaining","chain"],
+    "description": "Promises can be chained to avoid the Christmas tree of death",
+    "author": "Jeremy Foster",
+    "dateCreated": "2012/10/01"
+}
+

@@ -1,10 +1,10 @@
-﻿.chaining progress {
+﻿.promisechaining progress {
     width: 400px;
     height: 20px;
     display: block;
     margin-bottom: 10px;
 }
 
-.chaining section[role=main] button {
+.promisechaining section[role=main] button {
     margin-right: 10px;
 }

@@ -1,12 +1,12 @@
-﻿.concept progress {
+﻿.promises progress {
     width: 400px;
     height: 20px;
     display: block;
     margin-bottom: 10px;
 }
 
-.concept section[role=main] button {
+.promises section[role=main] button {
     margin-right: 10px;
 }
 
-.concept h3 { margin-top: 20px; }
+.promises h3 { margin-top: 20px; }

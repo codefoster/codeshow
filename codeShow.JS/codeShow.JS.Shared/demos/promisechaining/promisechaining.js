@@ -3,12 +3,12 @@
 
     var SECONDS_DELAY = 3;
 
-    WinJS.UI.Pages.define("/demos/promises/chaining/chaining.html", {
+    WinJS.UI.Pages.define("/demos/promisechaining/promisechaining.html", {
         ready: function (element, options) {
-            var chaining = q(".chaining section[role=main]");
-            var log = q(".chaining .log", chaining);
+            var chaining = element.querySelector("section[role=main]");
+            var log = chaining.querySelector(".log");
 
-            q("button.start", chaining).onclick = function (e) {
+            chaining.querySelector("button.start").onclick = function (e) {
                 ////WRONG! (even though it works just fine) nested promises are very difficult to maintain
                 //log.innerHTML += "1<br/>";
                 //longTaskAsyncPromise()
@@ -39,7 +39,7 @@
                         log.innerHTML += "4<br/>";
                     });
             };
-            q("button.reset", chaining).onclick = function (e) {
+            chaining.querySelector("button.reset").onclick = function (e) {
                 log.innerHTML = "";
             };
         }
