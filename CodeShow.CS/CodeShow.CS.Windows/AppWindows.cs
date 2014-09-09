@@ -26,6 +26,32 @@ namespace CodeShow.CS
             {
                 ApplicationData.Current.RoamingSettings.Values[SettingsFlyoutHelper.DemoSettingStorageString] = false;
             }
+
+            int count = 0;
+            bool repeat = true;
+            while (repeat)
+            {
+                try
+                {
+                    count++;
+                    Windows.ApplicationModel.Search.SearchPane searchPane = SearchPane.GetForCurrentView();
+
+                    // Register QuerySubmitted handler for the window at window 
+                    // creation time and only registered once
+                    // so that the app can receive user queries at any time.
+                    searchPane.QuerySubmitted +=
+                        new TypedEventHandler<SearchPane,
+                            SearchPaneQuerySubmittedEventArgs>(this.OnQuerySubmitted);
+                    SearchPane.GetForCurrentView().ShowOnKeyboardInput = true;
+                    SearchPane.GetForCurrentView().SuggestionsRequested
+                        += OnSuggestionsRequested;
+                    repeat = false;
+                }
+                catch (Exception)
+                {
+
+                }
+            }
         }
 
         /// <summary>
@@ -63,15 +89,6 @@ namespace CodeShow.CS
         protected override void OnWindowCreated(WindowCreatedEventArgs args)
         {
 
-            // Register QuerySubmitted handler for the window at window 
-            // creation time and only registered once
-            // so that the app can receive user queries at any time.
-            SearchPane.GetForCurrentView().QuerySubmitted += 
-                new TypedEventHandler<SearchPane, 
-                    SearchPaneQuerySubmittedEventArgs>(OnQuerySubmitted);
-            SearchPane.GetForCurrentView().ShowOnKeyboardInput = true;
-            SearchPane.GetForCurrentView().SuggestionsRequested 
-                += OnSuggestionsRequested;
         }
 
         /// <summary>
