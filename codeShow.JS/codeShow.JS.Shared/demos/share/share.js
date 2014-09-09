@@ -3,7 +3,7 @@
 
     WinJS.UI.Pages.define("/demos/share/share.html", {
         ready: function (element, options) {
-            WinJS.Binding.processAll(q("body"), options);
+            WinJS.Binding.processAll(document.querySelector("body"), options);
             
             Windows.ApplicationModel.DataTransfer.DataTransferManager.getForCurrentView().ondatarequested = function(e) {
                 var inputText = document.querySelector(".share #inputText").value;
