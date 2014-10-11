@@ -1,0 +1,15 @@
+﻿{
+	"WelcomeSectionHeader": "bienvenido",
+	"CategoriesSectionHeader": "categorias",
+    "DemosSectionHeader": "demostraciones",
+    "ContributorsSectionHeader": "contribuyentes",
+    "DemoSectionHeader": "demostración en vivo",
+
+    "SourceCode": "Código fuente",
+    "SourceCodeSectionSubtext": "Todo el código fuente de esta aplicación está disponible en internet",
+    "SourceCodeSectionDescription": "{ describir cómo obtener todo el código fuente en codeplex y por uqé lo querría }",
+
+    "AppsHeader": "Aplicaciones",
+    "AppsParagraphHeader": "Terminaste tu aplicación... ahora haz que se conozca!",
+    "AppsParagraph": "The apps section in codeShow is intended to help make your app successful. If you've created an app, you can submit your app to be included in codeShow's list and get some visibility for your app. Just visit the apps section and click to add a new one."
+}

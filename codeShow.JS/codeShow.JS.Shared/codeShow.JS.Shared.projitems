@@ -658,14 +658,19 @@
     <Content Include="$(MSBuildThisFileDirectory)lib\RxJS\Test\rx.testing.min.js" />
     <Content Include="$(MSBuildThisFileDirectory)pages\demos\demos.js" />
     <Content Include="$(MSBuildThisFileDirectory)pages\demo\demo.js" />
+    <Content Include="$(MSBuildThisFileDirectory)pages\hub\categoriesControl.css" />
+    <Content Include="$(MSBuildThisFileDirectory)pages\hub\categoriesControl.js" />
+    <Content Include="$(MSBuildThisFileDirectory)pages\hub\categoriesControl.html" />
     <Content Include="$(MSBuildThisFileDirectory)pages\hub\contributorsControl.css" />
     <Content Include="$(MSBuildThisFileDirectory)pages\hub\contributorsControl.html" />
     <Content Include="$(MSBuildThisFileDirectory)pages\hub\contributorsControl.js" />
     <Content Include="$(MSBuildThisFileDirectory)pages\hub\demosListControl.js" />
     <Content Include="$(MSBuildThisFileDirectory)pages\hub\hub.js" />
     <Content Include="$(MSBuildThisFileDirectory)images\gray.png" />
+    <Content Include="$(MSBuildThisFileDirectory)pages\hub\welcomeControl.js" />
     <Content Include="$(MSBuildThisFileDirectory)services\mobile services\codeshow\service.js" />
     <PRIResource Include="$(MSBuildThisFileDirectory)strings\en-US\resources.resjson" />
+    <PRIResource Include="$(MSBuildThisFileDirectory)strings\es-ES\resources.resjson" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)demos\htmlfragment\" />

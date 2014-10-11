@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="/pages/hub/categoriesControl.js"></script>
+	<link href="/pages/hub/categoriesControl.css" rel="stylesheet" />
+</head>
+<body>
+	<div class="fragment categoriescontrol">
+		<section aria-label="Main content" role="main">
+
+			<div class="categoryTemplate" data-win-control="WinJS.Binding.Template">
+				<div class="win-groupheader">
+					<div data-win-bind="textContent: group"></div>
+				</div>
+			</div>
+
+			<div class="itemslist win-selectionstylefilled" data-win-control="WinJS.UI.ListView" data-win-options="{
+                selectionMode: 'none',
+                itemTemplate: select('.categoryTemplate')}">
+			</div>
+		</section>
+	</div>
+</body>
+</html>

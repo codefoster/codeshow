@@ -60,6 +60,9 @@
     <Content Include="images\SplashScreen.scale-240.png" />
     <Content Include="images\StoreLogo.scale-240.png" />
     <Content Include="Package.StoreAssociation.xml" />
+    <Content Include="pages\categories\category.css" />
+    <Content Include="pages\categories\category.html" />
+    <Content Include="pages\categories\category.js" />
     <Content Include="pages\demo\demo.css" />
     <Content Include="pages\demo\demo.html" />
     <Content Include="pages\hub\demosListControl.css" />
@@ -70,6 +73,7 @@
     <Content Include="css\ui-themed.css" />
     <Content Include="css\ui-themed.theme-dark.css" />
     <Content Include="css\ui-themed.theme-light.css" />
+    <Content Include="pages\hub\welcomeControl.html" />
     <Content Include="VoiceCommandDefinition.xml">
       <SubType>Designer</SubType>
     </Content>
