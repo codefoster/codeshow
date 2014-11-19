@@ -1,5 +1,13 @@
-﻿.still #capturedImage {
+﻿.still #capturedImage, #previewVideo {
     width: 640px;
     height: 360px;
     border:solid 1px gray;
 }
+
+/*
+.still #previewVideo {
+    width: 640px;
+    height: 360px;
+    border:solid 1px gray;
+}
+*/
