@@ -1,5 +1,5 @@
 ## codeShow in the Windows 8 Store ##
-Go to [url:http://aka.ms/codeshowapp] to install codeShow from the Windows 8 Store
+Go to [aka.ms/codeshowapp](http://aka.ms/codeshowapp) to install codeShow from the Windows 8 Store
 
 ## Project Description ##
 This is a Windows 8 HTML/JS project with the express goal of demonstrating simple development concepts for the Windows 8 platform. You may learn some stuff about end-to-end app architecture by looking at the source code of codeShow, but the primary goal of the project is to help you learn discrete programming tasks such as accessing the camera, implementing an asymmetric ListView, or handling errors look to codeShow. 
