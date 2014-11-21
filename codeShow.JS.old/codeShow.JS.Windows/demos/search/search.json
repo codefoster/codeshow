@@ -1,8 +1,0 @@
-{
-    "title": "Search",
-    "keywords":[""],
-    "description": "Search by implementing the Windows 8 search contract.",
-    "author": "Jeremy Foster",
-	"enabled": false,
-    "dateCreated": ""
-}

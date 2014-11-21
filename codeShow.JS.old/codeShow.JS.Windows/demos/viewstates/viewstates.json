@@ -1,8 +1,0 @@
-{
-    "title": "View States",
-    "keywords":["viewstate","snapped","fill","landscape","portrait"],
-    "description": "How to react when your user snaps your app or rotates the screen.",
-    "author": "Michael Palermo",
-    "dateCreated": "2013/02/01",
-	"enabled":false
-}

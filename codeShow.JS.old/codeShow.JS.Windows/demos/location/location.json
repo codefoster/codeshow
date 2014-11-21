@@ -1,7 +1,0 @@
-{
-    "title": "Location",
-    "keywords":["gps"],
-    "description": "Access the device location using whatever location hardware is available.",
-    "author": "Jeremy Foster",
-    "dateCreated": ""
-}

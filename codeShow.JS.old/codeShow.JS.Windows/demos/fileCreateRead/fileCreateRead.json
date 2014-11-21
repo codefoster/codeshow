@@ -1,7 +1,0 @@
-﻿{
-    "title": "Create a file, write data and read it from roamingFolder",
-    "keywords":["create file","read from file"],
-    "description": "Create a new file in the current StorageFolder, write data to it and read the same.",
-    "author": "Sonal MacDax",
-    "dateCreated": "2014/05/13"
-}

@@ -1,9 +1,0 @@
-﻿.forcedirected .node {
-  stroke: #fff;
-  stroke-width: 1.5px;
-}
-
-.forcedirected .link {
-  stroke: #999;
-  stroke-opacity: .6;
-}

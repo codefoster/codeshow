@@ -1,7 +1,0 @@
-﻿{
-    "title": "Launcher",
-    "keywords":["launcher"],
-    "description": "Launch a file or a Uri by Windows.System.Launcher and use tokens to access files",
-    "author": "Iqaan Ullah",
-    "dateCreated": "2013/08/14"
-}
