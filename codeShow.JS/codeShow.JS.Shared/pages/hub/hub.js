@@ -32,6 +32,14 @@
                 //this.demosList = this.demosList.createFiltered(function (d) { return (++c < limit); });
             }
         },
+		//CATEGORIES
+		categoriesList: Data.categories,
+
+		categoryItemInvoke: util.markSupportedForProcessing(function (args) {
+			args.detail.itemPromise.then(function (cat) {
+				nav.navigate("/pages/categories/category.html", { category: cat.data });
+			});
+		}),
 
         //DEMOS
         demosList: Data.demos,

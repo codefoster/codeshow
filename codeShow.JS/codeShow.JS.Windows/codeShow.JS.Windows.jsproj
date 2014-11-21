@@ -59,6 +59,22 @@
     <AppxManifest Include="package.appxmanifest">
       <SubType>Designer</SubType>
     </AppxManifest>
+<<<<<<< HEAD
+    <Content Include="demos\notifications\badgeupdate\badgeupdate.css" />
+    <Content Include="demos\notifications\badgeupdate\badgeupdate.html" />
+    <Content Include="demos\notifications\badgeupdate\badgeupdate.js" />
+    <Content Include="demos\notifications\tileupdate\tileupdate.css" />
+    <Content Include="demos\notifications\tileupdate\tileupdate.html" />
+    <Content Include="demos\notifications\tileupdate\tileupdate.js" />
+    <Content Include="demos\notifications\toasts\toasts.css" />
+    <Content Include="demos\notifications\toasts\toasts.html" />
+    <Content Include="demos\notifications\toasts\toasts.js" />
+    <Content Include="services\mobile services\codeshow\service.js">
+      <ConnectedServiceReference>codeshow</ConnectedServiceReference>
+    </Content>
+    <None Include="codeShow.Win81JS_StoreKey.pfx" />
+=======
+>>>>>>> a1518176c662fce9024473ce8233caf4f517fae7
     <Content Include="css\default.css" />
     <Content Include="demos\hub\data.js" />
     <Content Include="demos\hub\hub.json" />

@@ -27,6 +27,7 @@
     <Capability Name="internetClientServer" />
     <m3:Capability Name="contacts" />
     <m3:Capability Name="appointments" />
+    <Capability Name="picturesLibrary" />
     <DeviceCapability Name="microphone" />
     <DeviceCapability Name="webcam" />
     <DeviceCapability Name="proximity" />

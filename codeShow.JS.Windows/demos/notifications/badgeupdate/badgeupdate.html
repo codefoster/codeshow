@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>Badge</title>
+	<meta name="keywords" content="notifications push background" />
+
+	<!-- WinJS references -->
+	<link href="//Microsoft.WinJS.2.0/css/ui-light.css" rel="stylesheet" />
+	<script src="//Microsoft.WinJS.2.0/js/base.js"></script>
+	<script src="//Microsoft.WinJS.2.0/js/ui.js"></script>
+
+	<link href="badgeupdate.css" rel="stylesheet" />
+	<script src="badgeupdate.js"></script>
+</head>
+<body>
+	<div class="notifications fragment">
+		<header aria-label="Header content" role="banner">
+			<button data-win-control="WinJS.UI.BackButton"></button>
+			<h1 class="titlearea win-type-ellipsis">
+				<span class="pagetitle">Badges</span>
+			</h1>
+		</header>
+		<section aria-label="Main content" role="main" class="swiper">
+			<div>
+				<h2>Concept</h2>
+				<div class="explanation">Here we're going to update the badge number on the start screen from our code. Insert the number you want set as the app badge number. Then switch to the Windows start screen and notice that you've updated the codeShow app badge! (protip: insert a number higher than 99 and see what happens on your tile)</div>
+				<div>
+
+					<div class="section">
+						<input id="badgeNumber" type="number" /> <button class="sendBadge">Send number to the tile</button>
+					</div>
+
+					<div class="explanation">Appart from numbers there's a set of icons you can set as badge to your app tile.</div>
+					<div class="section">
+						<button class="status">Activity</button>
+						<button class="status">Alarm</button>
+						<button class="status">Alert</button>
+						<button class="status">Available</button>
+						<button class="status">Away</button>
+						<button class="status">Busy</button>
+						<button class="status">New Message</button>
+						<button class="status">Paused</button>
+						<button class="status">Playing</button>
+						<button class="status">Unavailable</button>
+						<button class="status">Error</button>
+						<button class="status">Attention</button>
+					</div>
+
+					<div class="section">
+						<button class="clear">Clear Badge</button>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+</body>
+</html>

@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>Local Notifications (Toasts)</title>
+	<meta name="keywords" content="local notifications background toast" />
+
+	<!-- WinJS references -->
+	<link href="//Microsoft.WinJS.2.0/css/ui-light.css" rel="stylesheet" />
+	<script src="//Microsoft.WinJS.2.0/js/base.js"></script>
+	<script src="//Microsoft.WinJS.2.0/js/ui.js"></script>
+
+	<link href="toasts.css" rel="stylesheet" />
+	<script src="toasts.js"></script>
+</head>
+<body>
+	<div class="notifications fragment">
+		<header aria-label="Header content" role="banner">
+			<button data-win-control="WinJS.UI.BackButton"></button>
+			<h1 class="titlearea win-type-ellipsis">
+				<span class="pagetitle">Local Notifications (Toasts)</span>
+			</h1>
+		</header>
+		<section aria-label="Main content" role="main" class="swiper">
+			<div>
+				<h2>Concept</h2>
+				<div class="explanation">Here we're going to fire a local notification with a toast. You can also schedule it for later at a desired time. Type some text and hit 'Fire' or select the time you want the notification to go off and hit 'Schedule'.</div>
+				<div>
+					<div class="section">
+						<input id="toastText" /> 
+						<button id="now">Fire now</button>
+						<span>or schedule for</span>
+						<div id="scheduleTime" data-win-control="WinJS.UI.TimePicker"></div>
+						<button id="schedule">Schedule</button>
+					</div>
+
+					<div class="section">
+						<button id="clear">Clear all scheduled notifications</button>
+					</div>
+
+					<div class="section">
+						<div id="messages"></div>
+					</div>
+
+					<div class="section">
+						<button id="clearMessages" style="visibility:hidden">Clear messages</button>
+					</div>
+
+				</div>
+			</div>
+		</section>
+	</div>
+</body>
+</html>

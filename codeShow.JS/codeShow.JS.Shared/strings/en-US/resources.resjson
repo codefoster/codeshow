@@ -1,6 +1,8 @@
 ﻿{
-    "DemosSectionHeader": "Demos",
-    "ContributorsSectionHeader": "Contributors",
+	"WelcomeSectionHeader": "welcome",
+	"CategoriesSectionHeader": "categories",
+    "DemosSectionHeader": "demos",
+    "ContributorsSectionHeader": "contributors",
     "DemoSectionHeader": "live demo",
 
     "SourceCode": "Source code",
