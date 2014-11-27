@@ -41,7 +41,7 @@
 			this.img.style.display = 'none';
 			this.video.style.display = '';
 
-			this.mediaCaptureMgr = new Windows.Media.Capture.MediaCapture();
+			thiscode.mediaCaptureMgr = new Windows.Media.Capture.MediaCapture();
 			var captureInitSettings = new Windows.Media.Capture.MediaCaptureInitializationSettings();
 			captureInitSettings.audioDeviceId = "";
 			captureInitSettings.videoDeviceId = "";

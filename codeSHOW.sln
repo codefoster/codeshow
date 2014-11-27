@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.30626.0
+VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "codeShow.JS", "codeShow.JS", "{2174C796-8304-4B56-AB70-202930CFB511}"
 EndProject
@@ -53,7 +53,9 @@ Global
 		{DE14D4EC-AC3B-4556-A7CA-3D7A718F8832}.Debug|ARM.ActiveCfg = Debug|ARM
 		{DE14D4EC-AC3B-4556-A7CA-3D7A718F8832}.Debug|ARM.Build.0 = Debug|ARM
 		{DE14D4EC-AC3B-4556-A7CA-3D7A718F8832}.Debug|ARM.Deploy.0 = Debug|ARM
-		{DE14D4EC-AC3B-4556-A7CA-3D7A718F8832}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{DE14D4EC-AC3B-4556-A7CA-3D7A718F8832}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{DE14D4EC-AC3B-4556-A7CA-3D7A718F8832}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{DE14D4EC-AC3B-4556-A7CA-3D7A718F8832}.Debug|Mixed Platforms.Deploy.0 = Debug|Any CPU
 		{DE14D4EC-AC3B-4556-A7CA-3D7A718F8832}.Debug|Win32.ActiveCfg = Debug|x86
 		{DE14D4EC-AC3B-4556-A7CA-3D7A718F8832}.Debug|Win32.Build.0 = Debug|x86
 		{DE14D4EC-AC3B-4556-A7CA-3D7A718F8832}.Debug|Win32.Deploy.0 = Debug|x86
@@ -87,7 +89,9 @@ Global
 		{FD19AC46-C0D1-4D83-8BE7-989AA3496E49}.Debug|ARM.ActiveCfg = Debug|ARM
 		{FD19AC46-C0D1-4D83-8BE7-989AA3496E49}.Debug|ARM.Build.0 = Debug|ARM
 		{FD19AC46-C0D1-4D83-8BE7-989AA3496E49}.Debug|ARM.Deploy.0 = Debug|ARM
-		{FD19AC46-C0D1-4D83-8BE7-989AA3496E49}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{FD19AC46-C0D1-4D83-8BE7-989AA3496E49}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{FD19AC46-C0D1-4D83-8BE7-989AA3496E49}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{FD19AC46-C0D1-4D83-8BE7-989AA3496E49}.Debug|Mixed Platforms.Deploy.0 = Debug|Any CPU
 		{FD19AC46-C0D1-4D83-8BE7-989AA3496E49}.Debug|Win32.ActiveCfg = Debug|x86
 		{FD19AC46-C0D1-4D83-8BE7-989AA3496E49}.Debug|Win32.Build.0 = Debug|x86
 		{FD19AC46-C0D1-4D83-8BE7-989AA3496E49}.Debug|Win32.Deploy.0 = Debug|x86
