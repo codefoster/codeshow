@@ -21,7 +21,13 @@ Well, should I clone or fork it? The question is, are you going to contribute to
 * when it's done click on the project and then click on the .sln file to launch it
 * now you can come back to the Commits section of Team Explorer and Sync anytime you want to get the latest changes
 
-If you want to use other tools take a look at the [Fork A Repo](https://help.github.com/articles/fork-a-repo/) GitHub Help
+If you want to use other tools take a look at the [Fork A Repo](https://help.github.com/articles/fork-a-repo/) GitHubHelp page
+
+**.then()**  
+Regardless of which method you use to get the code down to your system, you'll want to do this afterward... open the codeshow\packages folder
+install all of the SDKs included there
+now open the .sln file in Visual Studio and have fun!
+
 
 ## Privacy Policy (aka "Legal Stuff") ##
 The codeShow app requests access to internet to provide access for various demos in the project, but neither the app itself or any of the demos in the app collect, store, or share any identifying information from users. Rest assured that your privacy is respected. If you would like to report any violation of this policy, you can contact any of the project contributors.
