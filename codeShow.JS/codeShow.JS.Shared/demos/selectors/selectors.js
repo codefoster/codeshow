@@ -27,5 +27,5 @@
         }
     });
 
-    var q = Ocho.query;
+    var q = Ocho.Utilities.query;
 })();
