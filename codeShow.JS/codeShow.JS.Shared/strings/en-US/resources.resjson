@@ -5,9 +5,9 @@
     "ContributorsSectionHeader": "contributors",
     "DemoSectionHeader": "live demo",
 
-    "SourceCode": "Source code",
+    "CodeSectionHeader": "source code",
     "SourceCodeSectionSubtext": "The complete source code for this application is available online",
-    "SourceCodeSectionDescription": "{ describe how to get to the complete source code on codeplex and why you would want to }",
+    "SourceCodeSectionDescription": "{ describe how to get to the complete source code on GitHub and why you would want to }",
 
     "AppsHeader": "Apps",
     "AppsParagraphHeader": "You're done with your app... now get it seen!",
