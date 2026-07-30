@@ -1,3 +1,5 @@
+> 📼 **A note from the future (2026):** This was a Windows 8 / WinJS demo app from my Microsoft evangelism days (2012–2014). The platform is long gone, so this repo is preserved for history and nostalgia rather than practical use. Thanks to everyone who starred, forked, and learned from it back in the day!
+
 ## codeShow in the Windows 8 Store ##
 Go to [aka.ms/codeshowapp](http://aka.ms/codeshowapp) to install codeShow from the Windows 8 Store
 
